@@ -20,6 +20,7 @@ url = 'https://github.com/yuvipanda'
 [[menu.main]]
 name = 'email'
 url = 'mailto:yuvipanda@gmail.com'
+
 [social]
 twitter = "yuvipanda"
 github = "yuvipanda"
