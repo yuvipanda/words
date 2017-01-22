@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Yuvi Panda</title>
-    <link>http://words.yuvi.in/index.xml</link>
-    <description>Recent content on Yuvi Panda</description>
+    <title>Twitter on Yuvi Panda</title>
+    <link>http://words.yuvi.in/tags/twitter/index.xml</link>
+    <description>Recent content in Twitter on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>CC0</copyright>
-    <lastBuildDate>Sun, 22 Jan 2017 22:17:12 +0530</lastBuildDate>
-    <atom:link href="http://words.yuvi.in/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://words.yuvi.in/tags/twitter/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>making twitter useful again</title>

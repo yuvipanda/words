@@ -2,7 +2,6 @@
 date = "2017-01-22T22:17:12+05:30"
 title = "making twitter useful again"
 tags = ["twitter", "external-enforcement"]
-draft = true
 
 +++
 

@@ -2,7 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://words.yuvi.in/post/making-twitter-useful-again/</loc>
+    <lastmod>2017-01-22T22:17:12+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/external-enforcement/</loc>
+    <lastmod>2017-01-22T22:17:12+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/post/</loc>
+    <lastmod>2017-01-22T22:17:12+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/twitter/</loc>
+    <lastmod>2017-01-22T22:17:12+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/</loc>
+    <lastmod>2017-01-22T22:17:12+05:30</lastmod>
     <priority>0</priority>
   </url>
   
