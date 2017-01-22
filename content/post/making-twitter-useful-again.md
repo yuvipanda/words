@@ -7,7 +7,7 @@ tags = ["twitter", "external-enforcement"]
 
 I've unfollowed everyone I follow on Twitter, and am slowly starting back up from scratch. I'm only going to follow people who are:
 
-1. Minorities in Tech
+1. Underrepresented people in Tech (as broadly construed)
 2. Journalists
 
 And that's it. I'll follow back friends I'm not otherwise in contact with as well, but might take a while.
