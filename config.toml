@@ -3,7 +3,6 @@ title = "Yuvi Panda"
 baseurl = "http://words.yuvi.in/"
 theme = "hyde"
 author = "Yuvi Panda"
-publishDir = "docs"
 
 [params]
 description = "Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python"
