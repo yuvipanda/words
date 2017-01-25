@@ -17,3 +17,5 @@ I've had this for a few days and am already enjoying using it far more than I di
 If I unfollowed you, don't take it personally! DM me for a phone number you can use for Signal / WhatsApp / Telegram - that's how 90% of my social activities seem to happen these days anyway.
 
 h/t to [Jorm](http://www.gaijin.com/) for the idea of targetted following!
+
+**Update**: I've also setup [LeechBlock](https://addons.mozilla.org/en-US/firefox/addon/leechblock/) to only allow me 5mins of Twitter every 2h, and I don't have the twitter app on my phone. I wish there was a leechblock type thing for my Phone tho.
