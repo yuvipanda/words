@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Golang on Yuvi Panda</title>
+    <link>http://words.yuvi.in/categories/golang/index.xml</link>
+    <description>Recent content in Golang on Yuvi Panda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>CC0</copyright>
+    <atom:link href="http://words.yuvi.in/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>first protest</title>
+      <link>http://words.yuvi.in/post/first-protest/</link>
+      <pubDate>Fri, 03 Feb 2017 22:37:21 -0800</pubDate>
+      
+      <guid>http://words.yuvi.in/post/first-protest/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

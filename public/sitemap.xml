@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://words.yuvi.in/post/first-protest/</loc>
+    <lastmod>2017-02-03T22:37:21-08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/post/making-twitter-useful-again/</loc>
     <lastmod>2017-01-22T22:17:12+05:30</lastmod>
   </url>
@@ -13,8 +18,20 @@
   </url>
   
   <url>
+    <loc>http://words.yuvi.in/tags/personal/</loc>
+    <lastmod>2017-02-03T22:37:21-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/post/</loc>
-    <lastmod>2017-01-22T22:17:12+05:30</lastmod>
+    <lastmod>2017-02-03T22:37:21-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/resistance/</loc>
+    <lastmod>2017-02-03T22:37:21-08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -31,7 +48,7 @@
   
   <url>
     <loc>http://words.yuvi.in/</loc>
-    <lastmod>2017-01-22T22:17:12+05:30</lastmod>
+    <lastmod>2017-02-03T22:37:21-08:00</lastmod>
     <priority>0</priority>
   </url>
   
