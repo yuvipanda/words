@@ -21,6 +21,10 @@ To those who were protesting for the first time in their lives (as I was) - *tha
 
 To the fucking ACLU - *thank you*! I'll send you all the money I can :)
 
+To the people who provided infrastructure (food, water, snacks, first aid, printers, internet, etc) - *thank you*!
+
+To the journalists who covered this - *thank you*.
+
 I woke up that saturday feeling very depressed, angry, and helpless. By sunday night, I was only depressed and angry - but not helpless. The number and variety of people at the protests was very heartwarming, and made me feel distinctly not alone. Before going I was not sure what going to a protest accomplishes. I still do not know - but I know it gave me hope and restored my sense of agency.
 
 I promise I'll continue doing all I can, even and especially when it is about things that do not affect me yet. I hope you do too.
