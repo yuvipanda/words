@@ -13,9 +13,8 @@ I woke up that saturday feeling very depressed, angry, and helpless. By sunday n
 
 Everyone who was at the protest even if it does not directly affect you yet - thank you!
 
-I promise I'll continue doing all I can, even and especially when it is about things that do not affect me yet.
+I promise I'll continue doing all I can, even and especially when it is about things that do not affect me yet. I hope you do too.
 
 > First they came for the Muslims and we said "not this time, motherfucker."
-> *from a sign at the protest*
-
-
+>
+> *- from a sign at the protest*
