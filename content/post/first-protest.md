@@ -5,7 +5,7 @@ tags = ["resistance", "personal"]
 
 +++
 
-I went to the protests at SFO last weekend. It was the first real set of protests I've been to.
+I went to the protests at SFO last weekend. It was the first real set of protests I've been to. I write this to attempt to capture a sliver of what I felt that day.
 
 I was there for about 10h on day 1, and came home exhausted. I went back on Day 2, and this time stayed for much shorter period of time (~4h?) before heading back home.
 
