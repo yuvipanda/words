@@ -7,8 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>CC0</copyright>
-    <lastBuildDate>Sun, 26 Mar 2017 22:45:36 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 26 Mar 2017 23:46:17 -0700</lastBuildDate>
     <atom:link href="http://words.yuvi.in/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>moving to hugo</title>
+      <link>http://words.yuvi.in/post/moving-to-hugo/</link>
+      <pubDate>Sun, 26 Mar 2017 23:46:17 -0700</pubDate>
+      
+      <guid>http://words.yuvi.in/post/moving-to-hugo/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m attempting to now blog at &lt;a href=&#34;http://words.yuvi.in&#34;&gt;http://words.yuvi.in&lt;/a&gt;, using &lt;a href=&#34;https://gohugo.io/&#34;&gt;hugo&lt;/a&gt; rather than wordpress.&lt;/p&gt;
+
+&lt;p&gt;Over the last few years, IRC, Twitter &amp;amp; WhatsApp have ruined my public writing. I shall now slowly attempt to bring that back :)&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>liberal software</title>
