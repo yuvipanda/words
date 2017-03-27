@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Talks on Yuvi Panda</title>
+    <link>http://words.yuvi.in/tags/talks/index.xml</link>
+    <description>Recent content in Talks on Yuvi Panda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>CC0</copyright>
+    <atom:link href="http://words.yuvi.in/tags/talks/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>liberal software</title>
+      <link>http://words.yuvi.in/post/liberal-software/</link>
+      <pubDate>Sun, 26 Mar 2017 22:45:36 -0700</pubDate>
+      
+      <guid>http://words.yuvi.in/post/liberal-software/</guid>
+      <description>&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/i3nJR7PNgI4?ecver=1&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;I ran into this thought provoking though when randomly attempting to relax this weekend. There&amp;rsquo;s a summary at &lt;a href=&#34;https://lwn.net/Articles/712376/&#34;&gt;LWN&lt;/a&gt; if you do not want to watch the talk - but as the lwn summarizer admits, the video definitely conveys things that are hard to capture on text.&lt;/p&gt;
+
+&lt;p&gt;The core takeaway for me is to think about:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;what is the future of free and open-source software? The answer was: it has no future.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This seems somehow connected to &amp;lsquo;democratizing programming&amp;rsquo;, which I had earlier given a &lt;a href=&#34;https://www.youtube.com/watch?v=rEyqVXzCJJc&#34;&gt;talk about&lt;/a&gt;. Somehow, it feels like there needs to be an update / rebirth of the &lt;a href=&#34;https://www.gnu.org/philosophy/free-sw.en.html&#34;&gt;GNU Freedoms&lt;/a&gt; for the world we live in.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
