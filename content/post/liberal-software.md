@@ -1,7 +1,7 @@
 +++
 date = "2017-03-26T22:45:36-07:00"
 title = "liberal software"
-tags = ["talks","democratizing-software"]
+tags = ["talks","democratizing-programming"]
 +++
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/i3nJR7PNgI4?ecver=1" frameborder="0" allowfullscreen></iframe>
