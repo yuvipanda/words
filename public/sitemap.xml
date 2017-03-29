@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://words.yuvi.in/post/things-to-learn/</loc>
+    <lastmod>2017-03-29T15:27:57-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/post/moving-to-hugo/</loc>
     <lastmod>2017-03-26T23:46:17-07:00</lastmod>
   </url>
@@ -22,6 +27,10 @@
   </url>
   
   <url>
+    <loc>http://words.yuvi.in/post/leaving-wikimedia-foundation/</loc>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/tags/democratizing-programming/</loc>
     <lastmod>2017-03-26T22:45:36-07:00</lastmod>
     <priority>0</priority>
@@ -34,6 +43,12 @@
   </url>
   
   <url>
+    <loc>http://words.yuvi.in/tags/learning/</loc>
+    <lastmod>2017-03-29T15:27:57-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/tags/personal/</loc>
     <lastmod>2017-02-03T22:37:21-08:00</lastmod>
     <priority>0</priority>
@@ -41,7 +56,7 @@
   
   <url>
     <loc>http://words.yuvi.in/post/</loc>
-    <lastmod>2017-03-26T23:46:17-07:00</lastmod>
+    <lastmod>2017-03-29T15:27:57-07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -70,7 +85,7 @@
   
   <url>
     <loc>http://words.yuvi.in/</loc>
-    <lastmod>2017-03-26T23:46:17-07:00</lastmod>
+    <lastmod>2017-03-29T15:27:57-07:00</lastmod>
     <priority>0</priority>
   </url>
   

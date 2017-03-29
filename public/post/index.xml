@@ -7,8 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>CC0</copyright>
-    <lastBuildDate>Sun, 26 Mar 2017 23:46:17 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 29 Mar 2017 15:27:57 -0700</lastBuildDate>
     <atom:link href="http://words.yuvi.in/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>things to learn</title>
+      <link>http://words.yuvi.in/post/things-to-learn/</link>
+      <pubDate>Wed, 29 Mar 2017 15:27:57 -0700</pubDate>
+      
+      <guid>http://words.yuvi.in/post/things-to-learn/</guid>
+      <description>&lt;p&gt;Keeping a running list of things I want to learn!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;How to use org mode properly? Should I use it for notes over markdown?&lt;/li&gt;
+&lt;li&gt;How do linux network namespaces work?&lt;/li&gt;
+&lt;li&gt;How to run GUI apps with systemd?&lt;/li&gt;
+&lt;li&gt;What exactly is a &amp;lsquo;tty&amp;rsquo;?&lt;/li&gt;
+&lt;li&gt;How does HTTP2 actually work?&lt;/li&gt;
+&lt;li&gt;How do X509 / TLS certificates work?&lt;/li&gt;
+&lt;li&gt;How to use cgroups directly?&lt;/li&gt;
+&lt;li&gt;Can I just use emacs terminals for all my terminal needs?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you know of resources that&amp;rsquo;ll help me learn these things, do let me know!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>moving to hugo</title>
@@ -102,6 +125,49 @@
 &lt;p&gt;h/t to &lt;a href=&#34;http://www.gaijin.com/&#34;&gt;Jorm&lt;/a&gt; for the idea of targetted following!&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: I&amp;rsquo;ve also setup &lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/leechblock/&#34;&gt;LeechBlock&lt;/a&gt; to only allow me 5mins of Twitter every 2h, and I don&amp;rsquo;t have the twitter app on my phone. I wish there was a leechblock type thing for my Phone tho.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://words.yuvi.in/post/leaving-wikimedia-foundation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://words.yuvi.in/post/leaving-wikimedia-foundation/</guid>
+      <description>
+
+&lt;p&gt;+aptly publish update &amp;ndash;skip-signing jessie-tools
++
+tags = [&amp;ldquo;wikimedia&amp;rdquo;]
+date = &amp;ldquo;2017-03-26T23:00:38-07:00&amp;rdquo;
+title = &amp;ldquo;leaving wikimedia foundation&amp;rdquo;
+draft = true
++++&lt;/p&gt;
+
+&lt;p&gt;As of 1st April 2017, I shall no longer be an employee of the Wikimedia Foundation.&lt;/p&gt;
+
+&lt;p&gt;p&lt;/p&gt;
+
+&lt;h2 id=&#34;origin&#34;&gt;Origin&lt;/h2&gt;
+
+&lt;h2 id=&#34;impact&#34;&gt;Impact&lt;/h2&gt;
+
+&lt;h2 id=&#34;future&#34;&gt;Future&lt;/h2&gt;
+
+&lt;p&gt;About 6 years ago, my first real big contribution to mediawiki core
+&lt;a href=&#34;https://www.mediawiki.org/wiki/Special:Code/MediaWiki/84706&#34;&gt;was merged&lt;/a&gt;. It was quickly reverted - I had found an
+old, complex patch dealing with Unicode normalization, &amp;lsquo;cleaned it up&amp;rsquo; (but nowhere near good enough) and had it
+included. It was a terrible patch - it broke everything, and wouldn&amp;rsquo;t actually run. It
+was &lt;a href=&#34;https://www.mediawiki.org/wiki/Special:Code/MediaWiki/84842&#34;&gt;reverted&lt;/a&gt; 3 days later, and never re-included. Which
+is great - that code was terrible.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve very faint memories of all this. I was barely 20 but incredibly full of myself (even more than now, if you can believe
+it!). In these 6 years, being part of the Wikimedia movement (and later, the Wikimedia Foundation) has shaped me in my
+politics, my identity as a person &amp;amp; my priorities in life. I spent a crucial stage of my (still ongoing!) formative years here,
+and whatever I go on to do (good, bad or meh) will be partially a reflection of Wikimedia the community.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.harihareswara.net/&#34;&gt;Sumana Harihareswara&lt;/a&gt; has probably had the highest impact on my life among the people I&amp;rsquo;ve
+met at Wikimedia.&lt;/p&gt;
 </description>
     </item>
     
