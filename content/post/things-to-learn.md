@@ -15,5 +15,8 @@ Keeping a running list of things I want to learn!
 * How to use cgroups directly?
 * Can I just use emacs terminals for all my terminal needs?
 * How does NFS work, and why is it so crappy?
+* How does ssh work?
+* How does mosh work?
+* How do contact lenses work? HOW DO LENSES WORK?
 
 If you know of resources that'll help me learn these things, do let me know!
