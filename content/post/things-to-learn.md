@@ -14,5 +14,6 @@ Keeping a running list of things I want to learn!
 * How do X509 / TLS certificates work?
 * How to use cgroups directly?
 * Can I just use emacs terminals for all my terminal needs?
+* How does NFS work, and why is it so crappy?
 
 If you know of resources that'll help me learn these things, do let me know!
