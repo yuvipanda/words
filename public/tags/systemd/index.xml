@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Learning on Yuvi Panda</title>
-    <link>http://words.yuvi.in/tags/learning/index.xml</link>
-    <description>Recent content in Learning on Yuvi Panda</description>
+    <title>Systemd on Yuvi Panda</title>
+    <link>http://words.yuvi.in/tags/systemd/index.xml</link>
+    <description>Recent content in Systemd on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>CC0</copyright>
-    <atom:link href="http://words.yuvi.in/tags/learning/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://words.yuvi.in/tags/systemd/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>systemd gui applications</title>
@@ -84,33 +84,6 @@ exec sudo systemd-run \
 [ ] Make these work with desktop / dock icons.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;d normally have just never written this post, on account of &amp;lsquo;oh no, it is imperfect&amp;rsquo; or something like that. However, that also seems to have come in the way of ability to find joy in learning simple things :D So I shall follow &lt;a href=&#34;https://jvns.ca/&#34;&gt;b0rk&lt;/a&gt;&amp;rsquo;s lead in spending time &lt;a href=&#34;http://words.yuvi.in/post/things-to-learn/&#34;&gt;learning&lt;/a&gt; for fun again :)&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>things to learn</title>
-      <link>http://words.yuvi.in/post/things-to-learn/</link>
-      <pubDate>Wed, 29 Mar 2017 15:27:57 -0700</pubDate>
-      
-      <guid>http://words.yuvi.in/post/things-to-learn/</guid>
-      <description>&lt;p&gt;Keeping a running list of things I want to learn!&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;How to use org mode properly? Should I use it for notes over markdown?&lt;/li&gt;
-&lt;li&gt;How do linux network namespaces work?&lt;/li&gt;
-&lt;li&gt;How to run GUI apps with systemd?&lt;/li&gt;
-&lt;li&gt;What exactly is a &amp;lsquo;tty&amp;rsquo;?&lt;/li&gt;
-&lt;li&gt;How does HTTP2 actually work?&lt;/li&gt;
-&lt;li&gt;How do X509 / TLS certificates work?&lt;/li&gt;
-&lt;li&gt;How to use cgroups directly?&lt;/li&gt;
-&lt;li&gt;Can I just use emacs terminals for all my terminal needs?&lt;/li&gt;
-&lt;li&gt;How does NFS work, and why is it so crappy?&lt;/li&gt;
-&lt;li&gt;How does ssh work?&lt;/li&gt;
-&lt;li&gt;How does mosh work?&lt;/li&gt;
-&lt;li&gt;How do contact lenses work? HOW DO LENSES WORK?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;If you know of resources that&amp;rsquo;ll help me learn these things, do let me know!&lt;/p&gt;
 </description>
     </item>
     

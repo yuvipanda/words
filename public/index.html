@@ -59,6 +59,87 @@
       
   <div class="post">
     <h1 class="post-title">
+      <a href="http://words.yuvi.in/post/systemd-gui-applications/">
+        systemd gui applications
+      </a>
+    </h1>
+
+    <span class="post-date">Wed, Mar 29, 2017</span>
+
+    
+
+<p>Ever since I read Jessie Frazelle&rsquo;s amazing setup for running GUI applications in docker containers, I&rsquo;ve wanted to do something similar. However, I don&rsquo;t mind (and in fact <em>want</em>) to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&rsquo;m also not as awesome (or knowledgeable!) as Jess, so will have to naturally settle for less&hellip;</p>
+
+<p>So I am doing it in systemd!</p>
+
+<p>Before proceeding, I want to warn y&rsquo;all that I don&rsquo;t entirely know what I am doing. Don&rsquo;t take any of this as security advice, since I don&rsquo;t entirely understand X&rsquo;s security model. Works fine for me though!</p>
+
+<h2 id="gui-applications">GUI applications</h2>
+
+<p>I started out using a simple systemd templated service to launch GUI applications, but soon realized that systemd-run is probably the better way. So I&rsquo;ve a simple script, <code>/usr/local/bin/safeapp</code>:</p>
+
+<pre><code class="language-bash">#!/bin/bash
+exec sudo systemd-run  \
+    -p CPUQuota=100% \
+    -p MemoryMax=70% \
+    -p WorkingDirectory=$(pwd) \
+    -p PrivateTmp=yes \
+    -p NoNewPrivileges=yes \
+    --setenv DISPLAY=${DISPLAY} \
+    --setenv DBUS_SESSION_BUS_ADDRESS=${DBUS_SESSION_BUS_ADDRESS} \
+    --uid ${USER} \
+    --gid ${USER} \
+    --quiet \
+    &quot;$1&quot;
+</code></pre>
+
+<p>I can run <code>safeapp /opt/firefox/firefox</code> now and it&rsquo;ll start firefox inside a nice systemd unit with a 70% Memory usage cap and CPU usage of at most 1 CPU. There&rsquo;s also other minimal security stuff applied - <code>NoNewPrivileges</code> being the most important one. I want to get <code>ProtectSystem</code> + <code>ReadWriteDirectories</code> going too, but there seems to be a bug in <code>systemd-run</code> that doesn&rsquo;t let it parse <code>ProtectSystem</code> properly&hellip;</p>
+
+<p>Also, there&rsquo;s <a href="https://github.com/systemd/systemd/issues/3851">an annoying bug</a> in systemd v231 (which is what my current system has) - you can&rsquo;t set <code>CPUQuotas</code> over 100% (aka &gt; 1 CPU core). This is annoying if you want to give each application 3 of your 4 cores (which is what I want). Next version of Ubuntu has v232, so my GUI applications will just have to do with an aggregate of 1 full core until then.</p>
+
+<p>The two environment variables seem to be all that&rsquo;s necessary for X applications to work.</p>
+
+<p>And yes, this might ask you for your password. I&rsquo;ll clean this up into a nice non-bash script hopefully soon, and make all of these better.</p>
+
+<p>Anyway, <em>it works</em>! I can now open sketchy websites with scroll hijacking without fear it&rsquo;ll kill my machine!</p>
+
+<h2 id="cli">CLI</h2>
+
+<p>I wanted each tab in my terminal to be its own systemd service, so they all get equitable amount of  CPU time &amp; can&rsquo;t crash machine by themselves with OOM.</p>
+
+<p>So I&rsquo;ve this script as <code>/usr/local/bin/safeshell</code></p>
+
+<pre><code class="language-bash">`#!/bin/bash
+exec sudo systemd-run \
+    -p CPUQuota=100% \
+    -p MemoryMax=70% \
+    -p WorkingDirectory=$(pwd) \
+    --uid yuvipanda \
+    --gid yuvipanda \
+    --quiet \
+    --tty \
+    /bin/bash -i
+</code></pre>
+
+<p>The <code>--tty</code> is magic here, and does the right things wrt passing the tty that GNOME terminal is passing in all the way to the shell. Now, my login command (set under profile preferences &gt; command in gnome-terminal) is <code>sudo /usr/local/bin/safeshell</code>. In addition, I add the following line to <code>/etc/sudoers</code>:</p>
+
+<pre><code>%sudo ALL = (root) NOPASSWD:SETENV: /usr/local/bin/safeshell
+</code></pre>
+
+<p>This + just specifying the username directly in <code>safeshell</code> are both hacks that make me cringe a little. I need to either fully understand how sudo&rsquo;s <code>-E</code> works, or use this as an opportunity to learn more Go and make a setuid binary.</p>
+
+<h2 id="to-do">To do</h2>
+
+<p>[ ] Generalize this to not need hacks (either with better sudo usage or a setuid binary)
+[ ] Investigate adding more security related options.
+[ ] Make these work with desktop / dock icons.</p>
+
+<p>I&rsquo;d normally have just never written this post, on account of &lsquo;oh no, it is imperfect&rsquo; or something like that. However, that also seems to have come in the way of ability to find joy in learning simple things :D So I shall follow <a href="https://jvns.ca/">b0rk</a>&rsquo;s lead in spending time <a href="http://words.yuvi.in/post/things-to-learn/">learning</a> for fun again :)</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="http://words.yuvi.in/post/things-to-learn/">
         things to learn
       </a>

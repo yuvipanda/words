@@ -7,8 +7,86 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>CC0</copyright>
-    <lastBuildDate>Wed, 29 Mar 2017 15:27:57 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 29 Mar 2017 20:47:10 -0700</lastBuildDate>
     <atom:link href="http://words.yuvi.in/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>systemd gui applications</title>
+      <link>http://words.yuvi.in/post/systemd-gui-applications/</link>
+      <pubDate>Wed, 29 Mar 2017 20:47:10 -0700</pubDate>
+      
+      <guid>http://words.yuvi.in/post/systemd-gui-applications/</guid>
+      <description>
+
+&lt;p&gt;Ever since I read Jessie Frazelle&amp;rsquo;s amazing setup for running GUI applications in docker containers, I&amp;rsquo;ve wanted to do something similar. However, I don&amp;rsquo;t mind (and in fact &lt;em&gt;want&lt;/em&gt;) to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&amp;rsquo;m also not as awesome (or knowledgeable!) as Jess, so will have to naturally settle for less&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;So I am doing it in systemd!&lt;/p&gt;
+
+&lt;p&gt;Before proceeding, I want to warn y&amp;rsquo;all that I don&amp;rsquo;t entirely know what I am doing. Don&amp;rsquo;t take any of this as security advice, since I don&amp;rsquo;t entirely understand X&amp;rsquo;s security model. Works fine for me though!&lt;/p&gt;
+
+&lt;h2 id=&#34;gui-applications&#34;&gt;GUI applications&lt;/h2&gt;
+
+&lt;p&gt;I started out using a simple systemd templated service to launch GUI applications, but soon realized that systemd-run is probably the better way. So I&amp;rsquo;ve a simple script, &lt;code&gt;/usr/local/bin/safeapp&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+exec sudo systemd-run  \
+    -p CPUQuota=100% \
+    -p MemoryMax=70% \
+    -p WorkingDirectory=$(pwd) \
+    -p PrivateTmp=yes \
+    -p NoNewPrivileges=yes \
+    --setenv DISPLAY=${DISPLAY} \
+    --setenv DBUS_SESSION_BUS_ADDRESS=${DBUS_SESSION_BUS_ADDRESS} \
+    --uid ${USER} \
+    --gid ${USER} \
+    --quiet \
+    &amp;quot;$1&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I can run &lt;code&gt;safeapp /opt/firefox/firefox&lt;/code&gt; now and it&amp;rsquo;ll start firefox inside a nice systemd unit with a 70% Memory usage cap and CPU usage of at most 1 CPU. There&amp;rsquo;s also other minimal security stuff applied - &lt;code&gt;NoNewPrivileges&lt;/code&gt; being the most important one. I want to get &lt;code&gt;ProtectSystem&lt;/code&gt; + &lt;code&gt;ReadWriteDirectories&lt;/code&gt; going too, but there seems to be a bug in &lt;code&gt;systemd-run&lt;/code&gt; that doesn&amp;rsquo;t let it parse &lt;code&gt;ProtectSystem&lt;/code&gt; properly&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Also, there&amp;rsquo;s &lt;a href=&#34;https://github.com/systemd/systemd/issues/3851&#34;&gt;an annoying bug&lt;/a&gt; in systemd v231 (which is what my current system has) - you can&amp;rsquo;t set &lt;code&gt;CPUQuotas&lt;/code&gt; over 100% (aka &amp;gt; 1 CPU core). This is annoying if you want to give each application 3 of your 4 cores (which is what I want). Next version of Ubuntu has v232, so my GUI applications will just have to do with an aggregate of 1 full core until then.&lt;/p&gt;
+
+&lt;p&gt;The two environment variables seem to be all that&amp;rsquo;s necessary for X applications to work.&lt;/p&gt;
+
+&lt;p&gt;And yes, this might ask you for your password. I&amp;rsquo;ll clean this up into a nice non-bash script hopefully soon, and make all of these better.&lt;/p&gt;
+
+&lt;p&gt;Anyway, &lt;em&gt;it works&lt;/em&gt;! I can now open sketchy websites with scroll hijacking without fear it&amp;rsquo;ll kill my machine!&lt;/p&gt;
+
+&lt;h2 id=&#34;cli&#34;&gt;CLI&lt;/h2&gt;
+
+&lt;p&gt;I wanted each tab in my terminal to be its own systemd service, so they all get equitable amount of  CPU time &amp;amp; can&amp;rsquo;t crash machine by themselves with OOM.&lt;/p&gt;
+
+&lt;p&gt;So I&amp;rsquo;ve this script as &lt;code&gt;/usr/local/bin/safeshell&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;`#!/bin/bash
+exec sudo systemd-run \
+    -p CPUQuota=100% \
+    -p MemoryMax=70% \
+    -p WorkingDirectory=$(pwd) \
+    --uid yuvipanda \
+    --gid yuvipanda \
+    --quiet \
+    --tty \
+    /bin/bash -i
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;--tty&lt;/code&gt; is magic here, and does the right things wrt passing the tty that GNOME terminal is passing in all the way to the shell. Now, my login command (set under profile preferences &amp;gt; command in gnome-terminal) is &lt;code&gt;sudo /usr/local/bin/safeshell&lt;/code&gt;. In addition, I add the following line to &lt;code&gt;/etc/sudoers&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;%sudo ALL = (root) NOPASSWD:SETENV: /usr/local/bin/safeshell
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This + just specifying the username directly in &lt;code&gt;safeshell&lt;/code&gt; are both hacks that make me cringe a little. I need to either fully understand how sudo&amp;rsquo;s &lt;code&gt;-E&lt;/code&gt; works, or use this as an opportunity to learn more Go and make a setuid binary.&lt;/p&gt;
+
+&lt;h2 id=&#34;to-do&#34;&gt;To do&lt;/h2&gt;
+
+&lt;p&gt;[ ] Generalize this to not need hacks (either with better sudo usage or a setuid binary)
+[ ] Investigate adding more security related options.
+[ ] Make these work with desktop / dock icons.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;d normally have just never written this post, on account of &amp;lsquo;oh no, it is imperfect&amp;rsquo; or something like that. However, that also seems to have come in the way of ability to find joy in learning simple things :D So I shall follow &lt;a href=&#34;https://jvns.ca/&#34;&gt;b0rk&lt;/a&gt;&amp;rsquo;s lead in spending time &lt;a href=&#34;http://words.yuvi.in/post/things-to-learn/&#34;&gt;learning&lt;/a&gt; for fun again :)&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>things to learn</title>
