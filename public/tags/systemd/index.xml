@@ -17,7 +17,7 @@
       <guid>http://words.yuvi.in/post/systemd-gui-applications/</guid>
       <description>
 
-&lt;p&gt;Ever since I read Jessie Frazelle&amp;rsquo;s amazing setup for running GUI applications in docker containers, I&amp;rsquo;ve wanted to do something similar. However, I don&amp;rsquo;t mind (and in fact &lt;em&gt;want&lt;/em&gt;) to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&amp;rsquo;m also not as awesome (or knowledgeable!) as Jess, so will have to naturally settle for less&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Ever since I read &lt;a href=&#34;https://blog.jessfraz.com&#34;&gt;Jessie Frazelle&lt;/a&gt;&amp;rsquo;s amazing setup&lt;a href=&#34;https://blog.jessfraz.com/post/ultimate-linux-on-the-desktop/&#34;&gt;1&lt;/a&gt;&lt;a href=&#34;https://blog.jessfraz.com/post/docker-containers-on-the-desktop/&#34;&gt;2&lt;/a&gt;&lt;a href=&#34;https://blog.jessfraz.com/post/runc-containers-on-the-desktop/&#34;&gt;3&lt;/a&gt; for running GUI applications in docker containers, I&amp;rsquo;ve wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&amp;rsquo;m also not as awesome (or knowledgeable!) as Jess, so will have to naturally settle for less&amp;hellip;&lt;/p&gt;
 
 &lt;p&gt;So I am doing it in systemd!&lt;/p&gt;
 
@@ -25,7 +25,7 @@
 
 &lt;h2 id=&#34;gui-applications&#34;&gt;GUI applications&lt;/h2&gt;
 
-&lt;p&gt;I started out using a simple systemd templated service to launch GUI applications, but soon realized that systemd-run is probably the better way. So I&amp;rsquo;ve a simple script, &lt;code&gt;/usr/local/bin/safeapp&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;I started out using a simple systemd &lt;a href=&#34;https://fedoramagazine.org/systemd-template-unit-files/&#34;&gt;templated service&lt;/a&gt; to launch GUI applications, but soon realized that &lt;a href=&#34;https://www.freedesktop.org/software/systemd/man/systemd-run.html&#34;&gt;systemd-run&lt;/a&gt; is probably the better way. So I&amp;rsquo;ve a simple script, &lt;code&gt;/usr/local/bin/safeapp&lt;/code&gt;:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
 exec sudo systemd-run  \

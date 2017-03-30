@@ -6,7 +6,7 @@ Description = ""
 
 +++
 
-Ever since I read Jessie Frazelle's amazing setup for running GUI applications in docker containers, I've wanted to do something similar. However, I don't mind (and in fact *want*) to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I'm also not as awesome (or knowledgeable!) as Jess, so will have to naturally settle for less...
+Ever since I read [Jessie Frazelle](https://blog.jessfraz.com)'s amazing setup[1](https://blog.jessfraz.com/post/ultimate-linux-on-the-desktop/)[2](https://blog.jessfraz.com/post/docker-containers-on-the-desktop/)[3](https://blog.jessfraz.com/post/runc-containers-on-the-desktop/) for running GUI applications in docker containers, I've wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I'm also not as awesome (or knowledgeable!) as Jess, so will have to naturally settle for less...
 
 So I am doing it in systemd!
 
@@ -14,7 +14,7 @@ Before proceeding, I want to warn y'all that I don't entirely know what I am doi
 
 ## GUI applications ##
 
-I started out using a simple systemd templated service to launch GUI applications, but soon realized that systemd-run is probably the better way. So I've a simple script, `/usr/local/bin/safeapp`:
+I started out using a simple systemd [templated service](https://fedoramagazine.org/systemd-template-unit-files/) to launch GUI applications, but soon realized that [systemd-run](https://www.freedesktop.org/software/systemd/man/systemd-run.html) is probably the better way. So I've a simple script, `/usr/local/bin/safeapp`:
 
 ```bash
 #!/bin/bash

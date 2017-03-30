@@ -68,7 +68,7 @@
 
     
 
-<p>Ever since I read Jessie Frazelle&rsquo;s amazing setup for running GUI applications in docker containers, I&rsquo;ve wanted to do something similar. However, I don&rsquo;t mind (and in fact <em>want</em>) to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&rsquo;m also not as awesome (or knowledgeable!) as Jess, so will have to naturally settle for less&hellip;</p>
+<p>Ever since I read <a href="https://blog.jessfraz.com">Jessie Frazelle</a>&rsquo;s amazing setup<a href="https://blog.jessfraz.com/post/ultimate-linux-on-the-desktop/">1</a><a href="https://blog.jessfraz.com/post/docker-containers-on-the-desktop/">2</a><a href="https://blog.jessfraz.com/post/runc-containers-on-the-desktop/">3</a> for running GUI applications in docker containers, I&rsquo;ve wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&rsquo;m also not as awesome (or knowledgeable!) as Jess, so will have to naturally settle for less&hellip;</p>
 
 <p>So I am doing it in systemd!</p>
 
@@ -76,7 +76,7 @@
 
 <h2 id="gui-applications">GUI applications</h2>
 
-<p>I started out using a simple systemd templated service to launch GUI applications, but soon realized that systemd-run is probably the better way. So I&rsquo;ve a simple script, <code>/usr/local/bin/safeapp</code>:</p>
+<p>I started out using a simple systemd <a href="https://fedoramagazine.org/systemd-template-unit-files/">templated service</a> to launch GUI applications, but soon realized that <a href="https://www.freedesktop.org/software/systemd/man/systemd-run.html">systemd-run</a> is probably the better way. So I&rsquo;ve a simple script, <code>/usr/local/bin/safeapp</code>:</p>
 
 <pre><code class="language-bash">#!/bin/bash
 exec sudo systemd-run  \
