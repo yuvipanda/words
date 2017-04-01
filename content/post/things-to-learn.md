@@ -9,6 +9,7 @@ Keeping a running list of things I want to learn!
 * How to use org mode properly? Should I use it for notes over markdown?
 * How do linux network namespaces work?
 * How to run GUI apps with systemd?
+** I did learn! Both a [hacky version](http://words.yuvi.in/post/systemd-gui-applications/) and a [much better version](http://words.yuvi.in/post/systemd-simple-containment/) that also taught me some Go!
 * What exactly is a 'tty'?
 * How does HTTP2 actually work?
 * How do X509 / TLS certificates work?
