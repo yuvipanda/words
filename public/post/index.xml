@@ -51,6 +51,8 @@
       <guid>http://words.yuvi.in/post/systemd-gui-applications/</guid>
       <description>
 
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: There&amp;rsquo;s a &lt;a href=&#34;//words.yuvi.in/post/systemd-simple-containment/&#34;&gt;follow-up post&lt;/a&gt; with a simpler solution now.&lt;/p&gt;
+
 &lt;p&gt;Ever since I read &lt;a href=&#34;https://blog.jessfraz.com&#34;&gt;Jessie Frazelle&lt;/a&gt;&amp;rsquo;s amazing setup&lt;a href=&#34;https://blog.jessfraz.com/post/ultimate-linux-on-the-desktop/&#34;&gt;1&lt;/a&gt;&lt;a href=&#34;https://blog.jessfraz.com/post/docker-containers-on-the-desktop/&#34;&gt;2&lt;/a&gt;&lt;a href=&#34;https://blog.jessfraz.com/post/runc-containers-on-the-desktop/&#34;&gt;3&lt;/a&gt; for running GUI applications in docker containers, I&amp;rsquo;ve wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&amp;rsquo;m also not as awesome (or knowledgeable!) as Jess, so will have to naturally settle for less&amp;hellip;&lt;/p&gt;
 
 &lt;p&gt;So I am doing it in systemd!&lt;/p&gt;
