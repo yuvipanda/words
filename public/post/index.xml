@@ -135,7 +135,10 @@ exec sudo systemd-run \
 &lt;li&gt;How to use org mode properly? Should I use it for notes over markdown?&lt;/li&gt;
 &lt;li&gt;How do linux network namespaces work?&lt;/li&gt;
 &lt;li&gt;How to run GUI apps with systemd?
-** I did learn! Both a &lt;a href=&#34;http://words.yuvi.in/post/systemd-gui-applications/&#34;&gt;hacky version&lt;/a&gt; and a &lt;a href=&#34;http://words.yuvi.in/post/systemd-simple-containment/&#34;&gt;much better version&lt;/a&gt; that also taught me some Go!&lt;/li&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I did learn! Both a &lt;a href=&#34;http://words.yuvi.in/post/systemd-gui-applications/&#34;&gt;hacky version&lt;/a&gt; and a &lt;a href=&#34;http://words.yuvi.in/post/systemd-simple-containment/&#34;&gt;much better version&lt;/a&gt; that also taught me some Go!&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;What exactly is a &amp;lsquo;tty&amp;rsquo;?&lt;/li&gt;
 &lt;li&gt;How does HTTP2 actually work?&lt;/li&gt;
 &lt;li&gt;How do X509 / TLS certificates work?&lt;/li&gt;
