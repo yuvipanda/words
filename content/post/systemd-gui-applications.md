@@ -6,7 +6,7 @@ tags = ["systemd", "learning", "code"]
 +++
 **Update**: There's a [follow-up post](//words.yuvi.in/post/systemd-simple-containment/) with a simpler solution now.
 
-Ever since I read [Jessie Frazelle](https://blog.jessfraz.com)'s amazing setup[1](https://blog.jessfraz.com/post/ultimate-linux-on-the-desktop/)[2](https://blog.jessfraz.com/post/docker-containers-on-the-desktop/)[3](https://blog.jessfraz.com/post/runc-containers-on-the-desktop/) for running GUI applications in docker containers, I've wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I'm also not as awesome (or knowledgeable!) as Jess, so will have to naturally settle for less...
+Ever since I read [Jessie Frazelle](https://blog.jessfraz.com)'s amazing setup ([1](https://blog.jessfraz.com/post/ultimate-linux-on-the-desktop/), [2](https://blog.jessfraz.com/post/docker-containers-on-the-desktop/), [3](https://blog.jessfraz.com/post/runc-containers-on-the-desktop/)) for running GUI applications in docker containers, I've wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I'm also not as awesome (or knowledgeable!) as Jess, so will have to naturally settle for less...
 
 So I am doing it in systemd!
 
