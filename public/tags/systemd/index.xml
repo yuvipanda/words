@@ -10,6 +10,39 @@
     <atom:link href="http://words.yuvi.in/tags/systemd/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>systemd simple containment for GUI applications &amp; shells</title>
+      <link>http://words.yuvi.in/post/systemd-simple-containment/</link>
+      <pubDate>Fri, 31 Mar 2017 23:23:52 -0700</pubDate>
+      
+      <guid>http://words.yuvi.in/post/systemd-simple-containment/</guid>
+      <description>&lt;p&gt;I earlier had &lt;a href=&#34;http://words.yuvi.in/post/systemd-gui-applications/&#34;&gt;a vaguely working setup&lt;/a&gt; for making sure browsers, shells and other applications don&amp;rsquo;t eat all RAM / CPU on my machine with systemd + sudo + shell scripts.&lt;/p&gt;
+
+&lt;p&gt;It was a hacky solution, and also had complications when used to launch shells. It wasn&amp;rsquo;t passing in all the environment varialbes it should, causing interesting-to-debug issues. &lt;code&gt;sudo&lt;/code&gt; rules were complex, and hard to do securely.&lt;/p&gt;
+
+&lt;p&gt;I had also been looking for an excuse to learn more Golang, so I ended up writing &lt;a href=&#34;https://github.com/yuvipanda/systemd-simple-containment&#34;&gt;&lt;code&gt;systemd-simple-containment&lt;/code&gt;&lt;/a&gt; or &lt;code&gt;ssc&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s a simple golang application that produces a binary that can be &lt;a href=&#34;https://en.wikipedia.org/wiki/Setuid&#34;&gt;&lt;code&gt;setuid&lt;/code&gt;&lt;/a&gt; to &lt;code&gt;root&lt;/code&gt;, and thus get around all our &lt;code&gt;sudo&lt;/code&gt; complexity, at the price of having to be very, very careful about the code. Fortunately, it&amp;rsquo;s short enough (~100 lines) and &lt;code&gt;systemd-run&lt;/code&gt; helps it keep the following invariants:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;It will never spawn any executable as any user other than the &amp;lsquo;real&amp;rsquo; uid / gid of the user calling the binary.&lt;/li&gt;
+&lt;li&gt;It doesn&amp;rsquo;t allow arbitrary systemd &lt;code&gt;properties&lt;/code&gt; to be set, ensuring a more limited attack surface.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;However, this is the first time I&amp;rsquo;m playing with setuid and with Go, so I probably fucked something up. I feel ok enough about my understanding of real and effective uids for now to use it myself, but not to recommend it to other people. Hopefully I&amp;rsquo;ll be confident enough say that soon :)&lt;/p&gt;
+
+&lt;p&gt;By using a real programming language, I also easily get commandline flags for sharing tty or not (so I can use the same program for launching GUI &amp;amp; interactive terminal applications), pass all environment variables through (which can&amp;rsquo;t be just standard child inheritence, since &lt;code&gt;systemd-run&lt;/code&gt; doesn&amp;rsquo;t work that way) &amp;amp; the ability to setuid (you can&amp;rsquo;t do that easily to a script).&lt;/p&gt;
+
+&lt;p&gt;I was sure I&amp;rsquo;d hate writing go because of the constant &lt;code&gt;if err != nil&lt;/code&gt; checks, but it hasn&amp;rsquo;t bothered me that much. I would like to write more Go, to get a better feel for it. This code is too short to like a language, but I definitely hate it less :)&lt;/p&gt;
+
+&lt;p&gt;Anyway, now I can launch GUI applications with &lt;code&gt;ssc -tty=false -isolation=strict firefox&lt;/code&gt; and it does the right thing. I currently have available &lt;code&gt;-isolation=strict&lt;/code&gt; and &lt;code&gt;-isolation=relaxed&lt;/code&gt;, the former performing stronger sandboxing (NoNewPrivileges, PrivateTmp) than the latter (just MemoryMax). i&amp;rsquo;ll slowly add more protections here, but just keep two modes (ideally).&lt;/p&gt;
+
+&lt;p&gt;My Gnome Terminal shell command is now &lt;code&gt;ssc -isolation=relaxed /bin/bash -i&lt;/code&gt; and it works great :)&lt;/p&gt;
+
+&lt;p&gt;I am pretty happy with &lt;code&gt;ssc&lt;/code&gt; as it exists now. Only thing I now want to do is to be able to use it from the GNOME launcher (I am using GNOME3 with gnome-shell). Apparently &lt;em&gt;shortcuts&lt;/em&gt; are no longer cool and hence pretty hard to create in modern desktop environments :| I shall keep digging!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>systemd gui applications</title>
       <link>http://words.yuvi.in/post/systemd-gui-applications/</link>
       <pubDate>Wed, 29 Mar 2017 20:47:10 -0700</pubDate>

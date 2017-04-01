@@ -2,7 +2,6 @@
 date = "2017-03-29T20:47:10-07:00"
 title = "systemd gui applications"
 tags = ["systemd", "learning", "code"]
-Description = ""
 
 +++
 
