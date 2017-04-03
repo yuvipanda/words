@@ -7,6 +7,7 @@ title = "things to learn"
 Keeping a running list of things I want to learn! 
 
 * How to use org mode properly? Should I use it for notes over markdown?
+* Develop a deep understanding oh how networks work.
 * How do linux network namespaces work?
 * How to run GUI apps with systemd?
   * I did learn! Both a [hacky version](http://words.yuvi.in/post/systemd-gui-applications/) and a [much better version](http://words.yuvi.in/post/systemd-simple-containment/) that also taught me some Go!
