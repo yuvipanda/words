@@ -19,5 +19,6 @@ Keeping a running list of things I want to learn!
 * How does ssh work?
 * How does mosh work?
 * How do contact lenses work? HOW DO LENSES WORK?
+* Can I simply run a local DNS recursor on my laptop for performance & blocking me from visiting the orange website?
 
 If you know of resources that'll help me learn these things, do let me know!
