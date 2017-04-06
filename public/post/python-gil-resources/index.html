@@ -1,0 +1,111 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.19" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>python gil resources &middot; Yuvi Panda</title>
+  
+
+  
+  <link rel="stylesheet" href="http://words.yuvi.in/css/poole.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/syntax.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Raleway">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
+</head>
+
+	<body class=" ">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://words.yuvi.in/"><h1>Yuvi Panda</h1></a>
+      <p class="lead">
+       Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      
+        <li><a href="mailto:yuvipanda@gmail.com"> email </a></li>
+      
+        <li><a href="https://github.com/yuvipanda"> github </a></li>
+      
+        <li><a href="https://twitter.com/yuvipanda"> twitter </a></li>
+      
+    </ul>
+
+    <p>CC0</p>
+    <p><small><a href="mailto:yuvipanda@gmail.com">Email me</a> to ask for Signal / WhatsApp / Telegram contact!</small></p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>python gil resources</h1>
+			  <span class="post-date">Wed, Apr 5, 2017</span>
+			      
+
+<p>I was in a conversation about the Python GIL with a friend a few days ago, and realized that my understanding of the specifics of the GIL were super hand-wavy &amp; unstructured. So I spent some time collecting resources to learn more, and now have a better understanding!</p>
+
+<h4 id="python-s-infamous-gil-larry-hastings">Python&rsquo;s Infamous GIL (Larry Hastings)</h4>
+
+<p>This was a <em>great</em> introduction to the history of the GIL, why it was necessary &amp; reasons why getting rid of it is complicated.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4zeHStBowEk?ecver=1" frameborder="0" allowfullscreen></iframe>
+
+<h4 id="understanding-the-python-gil-david-beazley">Understanding the Python GIL (David Beazley)</h4>
+
+<p>This has wonderful visualizations that really helped me understand exactly <em>why</em> multi-threaded python behaves the way it does.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Obt-vMVdM8s?ecver=1" frameborder="0" allowfullscreen></iframe>
+
+<h4 id="it-isn-t-easy-to-remove-the-gil-guido-van-rossum">It isn&rsquo;t easy to remove the GIL (Guido van Rossum)</h4>
+
+<p>A <a href="http://www.artima.com/weblogs/viewpost.jsp?thread=214235">blog post</a> from the BDFL of python, after yet another request to &lsquo;just get rid of the GIL&rsquo;.</p>
+
+<p>It set the (pretty high) bar for inclusion of a GIL removal patch (that he makes clear he will not write) in Python:</p>
+
+<blockquote>
+<p>I&rsquo;d welcome a set of patches into Py3k only if the performance for a single-threaded program (and for a multi-threaded but I/O-bound program) does not decrease.</p>
+</blockquote>
+
+<h4 id="an-inside-look-at-the-gil-removal-patch-of-lore-dave-beazley">An Inside Look at the GIL Removal Patch of Lore (Dave Beazley)</h4>
+
+<p>There was an attempt in about 1999 to remove the GIL. This is a <a href="http://dabeaz.blogspot.com/2011/08/inside-look-at-gil-removal-patch-of.html">wonderful analysis</a> of that patch - what it tried to do, why it disappeared, what the performance costs of it were, etc. Something that really stood out to me and makes me feel not very hopeful about GIL removal in CPython was:</p>
+
+<blockquote>
+<p>Despite removing the GIL, I was unable to produce any performance experiment that showed a noticeable improvement on multiple cores. Really, the only benefit (ignoring the horrible performance) seen in pure Python code, was having preemptible instructions.</p>
+</blockquote>
+
+<p>This seems to be still true, even in the Gilectomy branch.</p>
+
+<h4 id="gilectomy-larry-hastings">Gilectomy (Larry Hastings)</h4>
+
+<p>This is the only talk about a recent (~2016) GIL removal attempt.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/P3AyI_u66Bw?ecver=1" frameborder="0" allowfullscreen></iframe>
+
+<p>It is amazing work, but doesn&rsquo;t give me much hope. There&rsquo;s been no new commits to the <a href="https://github.com/larryhastings/gilectomy/tree/gilectomy">public git repo</a> for about 5 months now, so am unsure what the state of it now is.</p>
+
+<p>There&rsquo;s probably many more - let me know if you know any, and I&rsquo;ll update this when I find out more!</p>
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>
