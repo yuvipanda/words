@@ -59,6 +59,29 @@
       
   <div class="post">
     <h1 class="post-title">
+      <a href="http://words.yuvi.in/post/things-to-build/">
+        things to build
+      </a>
+    </h1>
+
+    <span class="post-date">Sat, Apr 15, 2017</span>
+
+    <p>This is a running list of things I want to build!</p>
+
+<p>There&rsquo;s an analogous running list of <a href="http://words.yuvi.in/post/things-to-learn/">things I want to learn</a>. Things move between them :) I also have higher standards of documentation (other people should be able to use it) before marking these as complete.</p>
+
+<ul>
+<li><strong>kubernetes-login</strong>
+A helper to openssh that allows users to log in to a configurable user pod
+running on a kubernetes cluster. Should ideally support scp / sftp too.
+Helps get rid of SPOF login nodes
+<br /></li>
+</ul>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="http://words.yuvi.in/post/python-gil-resources/">
         python gil resources
       </a>
@@ -68,7 +91,7 @@
 
     
 
-<p>I was in a conversation about the Python GIL with a friend a few days ago, and realized that my understanding of the specifics of the GIL were super hand-wavy &amp; unstructured. So I spent some time collecting resources to learn more, and now have a better understanding!</p>
+<p>I was in a conversation about the Python GIL with friends a few days ago, and realized that my understanding of the specifics of the GIL problem were super hand-wavy &amp; unstructured. So I spent some time collecting resources to learn more, and now have a better understanding!</p>
 
 <h4 id="python-s-infamous-gil-larry-hastings">Python&rsquo;s Infamous GIL (Larry Hastings)</h4>
 
@@ -78,7 +101,7 @@
 
 <h4 id="understanding-the-python-gil-david-beazley">Understanding the Python GIL (David Beazley)</h4>
 
-<p>This has wonderful visualizations that really helped me understand exactly <em>why</em> multi-threaded python behaves the way it does.</p>
+<p>This has wonderful visualizations that really helped me understand exactly <em>why</em> multi-threaded python behaves the way it does. Multithreading decreases performance, adding more cores decreases performance &amp; disabling cores increases performance :) All of this made vague hand-wavy sense to me before, and make much more concrete sense now.</p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Obt-vMVdM8s?ecver=1" frameborder="0" allowfullscreen></iframe>
 
@@ -92,9 +115,11 @@
 <p>I&rsquo;d welcome a set of patches into Py3k only if the performance for a single-threaded program (and for a multi-threaded but I/O-bound program) does not decrease.</p>
 </blockquote>
 
+<p>Not been met yet!</p>
+
 <h4 id="an-inside-look-at-the-gil-removal-patch-of-lore-dave-beazley">An Inside Look at the GIL Removal Patch of Lore (Dave Beazley)</h4>
 
-<p>There was an attempt in about 1999 to remove the GIL. This is a <a href="http://dabeaz.blogspot.com/2011/08/inside-look-at-gil-removal-patch-of.html">wonderful analysis</a> of that patch - what it tried to do, why it disappeared, what the performance costs of it were, etc. Something that really stood out to me and makes me feel not very hopeful about GIL removal in CPython was:</p>
+<p>There was an attempt in about 1999 to remove the GIL - the &lsquo;freethreading&rsquo; patch. This is a <a href="http://dabeaz.blogspot.com/2011/08/inside-look-at-gil-removal-patch-of.html">wonderful analysis</a> of that patch - what it tried to do, why it disappeared, what the performance costs of it were, etc. Something that really stood out to me and makes me feel not very hopeful about GIL removal in CPython was:</p>
 
 <blockquote>
 <p>Despite removing the GIL, I was unable to produce any performance experiment that showed a noticeable improvement on multiple cores. Really, the only benefit (ignoring the horrible performance) seen in pure Python code, was having preemptible instructions.</p>
@@ -243,6 +268,8 @@ exec sudo systemd-run \
     <span class="post-date">Wed, Mar 29, 2017</span>
 
     <p>Keeping a running list of things I want to learn!</p>
+
+<p>There&rsquo;s also a list of <a href="http://words.yuvi.in/post/things-to-learn/">things I want to build</a>.</p>
 
 <ul>
 <li>How to use org mode properly? Should I use it for notes over markdown?</li>

@@ -17,7 +17,7 @@
       <guid>http://words.yuvi.in/post/python-gil-resources/</guid>
       <description>
 
-&lt;p&gt;I was in a conversation about the Python GIL with a friend a few days ago, and realized that my understanding of the specifics of the GIL were super hand-wavy &amp;amp; unstructured. So I spent some time collecting resources to learn more, and now have a better understanding!&lt;/p&gt;
+&lt;p&gt;I was in a conversation about the Python GIL with friends a few days ago, and realized that my understanding of the specifics of the GIL problem were super hand-wavy &amp;amp; unstructured. So I spent some time collecting resources to learn more, and now have a better understanding!&lt;/p&gt;
 
 &lt;h4 id=&#34;python-s-infamous-gil-larry-hastings&#34;&gt;Python&amp;rsquo;s Infamous GIL (Larry Hastings)&lt;/h4&gt;
 
@@ -27,7 +27,7 @@
 
 &lt;h4 id=&#34;understanding-the-python-gil-david-beazley&#34;&gt;Understanding the Python GIL (David Beazley)&lt;/h4&gt;
 
-&lt;p&gt;This has wonderful visualizations that really helped me understand exactly &lt;em&gt;why&lt;/em&gt; multi-threaded python behaves the way it does.&lt;/p&gt;
+&lt;p&gt;This has wonderful visualizations that really helped me understand exactly &lt;em&gt;why&lt;/em&gt; multi-threaded python behaves the way it does. Multithreading decreases performance, adding more cores decreases performance &amp;amp; disabling cores increases performance :) All of this made vague hand-wavy sense to me before, and make much more concrete sense now.&lt;/p&gt;
 
 &lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/Obt-vMVdM8s?ecver=1&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 
@@ -41,9 +41,11 @@
 &lt;p&gt;I&amp;rsquo;d welcome a set of patches into Py3k only if the performance for a single-threaded program (and for a multi-threaded but I/O-bound program) does not decrease.&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;Not been met yet!&lt;/p&gt;
+
 &lt;h4 id=&#34;an-inside-look-at-the-gil-removal-patch-of-lore-dave-beazley&#34;&gt;An Inside Look at the GIL Removal Patch of Lore (Dave Beazley)&lt;/h4&gt;
 
-&lt;p&gt;There was an attempt in about 1999 to remove the GIL. This is a &lt;a href=&#34;http://dabeaz.blogspot.com/2011/08/inside-look-at-gil-removal-patch-of.html&#34;&gt;wonderful analysis&lt;/a&gt; of that patch - what it tried to do, why it disappeared, what the performance costs of it were, etc. Something that really stood out to me and makes me feel not very hopeful about GIL removal in CPython was:&lt;/p&gt;
+&lt;p&gt;There was an attempt in about 1999 to remove the GIL - the &amp;lsquo;freethreading&amp;rsquo; patch. This is a &lt;a href=&#34;http://dabeaz.blogspot.com/2011/08/inside-look-at-gil-removal-patch-of.html&#34;&gt;wonderful analysis&lt;/a&gt; of that patch - what it tried to do, why it disappeared, what the performance costs of it were, etc. Something that really stood out to me and makes me feel not very hopeful about GIL removal in CPython was:&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Despite removing the GIL, I was unable to produce any performance experiment that showed a noticeable improvement on multiple cores. Really, the only benefit (ignoring the horrible performance) seen in pure Python code, was having preemptible instructions.&lt;/p&gt;
