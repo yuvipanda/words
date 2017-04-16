@@ -211,7 +211,7 @@ exec sudo systemd-run \
 
 &lt;ul&gt;
 &lt;li&gt;How to use org mode properly? Should I use it for notes over markdown?&lt;/li&gt;
-&lt;li&gt;Develop a deep understanding oh how networks work.&lt;/li&gt;
+&lt;li&gt;Develop a deep understanding of how networks work.&lt;/li&gt;
 &lt;li&gt;How do linux network namespaces work?&lt;/li&gt;
 &lt;li&gt;How to run GUI apps with systemd?
 
