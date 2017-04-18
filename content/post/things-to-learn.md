@@ -23,5 +23,8 @@ There's also a list of [things I want to build](http://words.yuvi.in/post/things
 * How does mosh work?
 * How do contact lenses work? HOW DO LENSES WORK?
 * Can I simply run a local DNS recursor on my laptop for performance & blocking me from visiting the orange website?
+* What is SELinux? Why and how would I use it?
+* What is AppArmor? Why and how would I use it, over SELinux?
+* What is seccomp, and when/why/how would I use it?
 
 If you know of resources that'll help me learn these things, do let me know!
