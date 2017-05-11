@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://words.yuvi.in/post/learning-selinux/</loc>
+    <lastmod>2017-04-18T00:01:26-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/post/things-to-build/</loc>
     <lastmod>2017-04-15T13:24:23-07:00</lastmod>
   </url>
@@ -66,7 +71,13 @@
   
   <url>
     <loc>http://words.yuvi.in/tags/learning/</loc>
-    <lastmod>2017-04-15T13:24:23-07:00</lastmod>
+    <lastmod>2017-04-18T00:01:26-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/linux/</loc>
+    <lastmod>2017-04-18T00:01:26-07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -78,7 +89,7 @@
   
   <url>
     <loc>http://words.yuvi.in/post/</loc>
-    <lastmod>2017-04-15T13:24:23-07:00</lastmod>
+    <lastmod>2017-04-18T00:01:26-07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -119,7 +130,7 @@
   
   <url>
     <loc>http://words.yuvi.in/</loc>
-    <lastmod>2017-04-15T13:24:23-07:00</lastmod>
+    <lastmod>2017-04-18T00:01:26-07:00</lastmod>
     <priority>0</priority>
   </url>
   

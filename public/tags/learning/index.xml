@@ -10,6 +10,53 @@
     <atom:link href="http://words.yuvi.in/tags/learning/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>learning selinux and apparmor</title>
+      <link>http://words.yuvi.in/post/learning-selinux/</link>
+      <pubDate>Tue, 18 Apr 2017 00:01:26 -0700</pubDate>
+      
+      <guid>http://words.yuvi.in/post/learning-selinux/</guid>
+      <description>
+
+&lt;p&gt;I am trying to understand SELinux and AppArmor, and collecting resources here as I learn. k&lt;/p&gt;
+
+&lt;h2 id=&#34;selinux-for-mere-mortals-2014&#34;&gt;SELinux for mere mortals (2014)&lt;/h2&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/MxjenQ31b70&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;This was the first video I watched, and it helped me understanding what SELinux does at a fundamental basic level. It&amp;rsquo;s probably useless in a container-filled world (where I doubt Fedora shipes pre-configured SELinux rules for my containers), but it helped me think I understood types / labels, so that seems like a positive step?&lt;/p&gt;
+
+&lt;p&gt;The fact the presenter keeps saying things like &amp;lsquo;you being a good sysadmin, ssh into the server and edit the apache config file&amp;rsquo; is freakin me out. If I&amp;rsquo;m constantly editing config files on servers manually that seems like a massive failure to me :D How times change!&lt;/p&gt;
+
+&lt;h2 id=&#34;docker-and-selinux-2014&#34;&gt;Docker and SELinux (2014)&lt;/h2&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/zWGFqMuEHdw&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;This one made a lot more sense to me as an answer to the following questions:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Aren&amp;rsquo;t containers secure enough? (Partial answer)&lt;/li&gt;
+&lt;li&gt;What does SELinux do for container security?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;It&amp;rsquo;s convinced me that container -&amp;gt; host isolation and container &amp;lt;-&amp;gt; container isolation provided by SELinux is pretty simple and super useful, and should be turned on.&lt;/p&gt;
+
+&lt;p&gt;This talk also showed me this most wonderful &lt;a href=&#34;https://people.redhat.com/duffy/selinux/selinux-coloring-book_A4-Stapled.pdf&#34;&gt;coloring book&lt;/a&gt; that tries to explain SELinux. If this is all that is to SELinux, it seems pretty simple and useful (for the container use case).&lt;/p&gt;
+
+&lt;p&gt;Also, it looks like there are more recent versions of both these two talks - I should look &amp;lsquo;em up!&lt;/p&gt;
+
+&lt;h2 id=&#34;securing-linux-applications-with-apparmor-2007&#34;&gt;Securing Linux Applications with AppArmor (2007?)&lt;/h2&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/0l21FN81je0&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;This is me trying to understand AppArmor, which seems to have lower base of support (just Ubuntu? Maybe SUSE, but idk anyone who uses SUSE) but theoretically simpler (mostly file path based). The video seems to be shot with a potato, so the slides aren&amp;rsquo;t super clear - but the content is good enough to give me a super general overview.&lt;/p&gt;
+
+&lt;p&gt;The biggest thing against SELinux it talks about seems to be &amp;lsquo;SELinux is complex&amp;rsquo;, and not much else. I don&amp;rsquo;t know how much I buy that - but then again, I haven&amp;rsquo;t actually &lt;em&gt;used&lt;/em&gt; SELinux anywhere :D&lt;/p&gt;
+
+&lt;p&gt;Unlike SELinux, I can actually see AppArmor rules on my local machine (since it is running Ubuntu). Seems fairly readable!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>things to build</title>
       <link>http://words.yuvi.in/post/things-to-build/</link>
       <pubDate>Sat, 15 Apr 2017 13:24:23 -0700</pubDate>
