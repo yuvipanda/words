@@ -10,6 +10,76 @@
     <atom:link href="http://words.yuvi.in/tags/learning/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>think os</title>
+      <link>http://words.yuvi.in/post/think-os/</link>
+      <pubDate>Sat, 13 May 2017 11:41:20 -0700</pubDate>
+      
+      <guid>http://words.yuvi.in/post/think-os/</guid>
+      <description>
+
+&lt;p&gt;Following a trail from a &lt;a href=&#34;http://jvns.ca/blog/2017/04/17/statistics-for-programmers/&#34;&gt;wonderful Julia Evans post&lt;/a&gt; led me to Allen Downey&amp;rsquo;s nice &lt;a href=&#34;http://greenteapress.com/wp/textbook-manifesto/&#34;&gt;textbook manifesto&lt;/a&gt;. Also led me to the nice &lt;a href=&#34;http://greenteapress.com/thinkos/index.html&#34;&gt;Think OS&lt;/a&gt; book, which seems like a super nice introduction to Operating System principles.&lt;/p&gt;
+
+&lt;p&gt;It is short enough (~100 pages) that I wanted to read through it. I&amp;rsquo;ve spent a good chunk of time absorbing how Operating Systems work by dint of diving into things and working through them, but it would be nice to get a refresher on the basics. There are clearly basic things I do not understand, and this seemed like a good way to explore.&lt;/p&gt;
+
+&lt;p&gt;This post is just a running series of notes from me reading it on a nice saturday morning.&lt;/p&gt;
+
+&lt;h2 id=&#34;stack-vs-heap&#34;&gt;Stack vs Heap&lt;/h2&gt;
+
+&lt;p&gt;This is something that has always bugged me. I&amp;rsquo;ve understood just enough of this by being burnt with pointers when writing C (and primitive types in the CLR, etc), but was lacking a deep understanding of wtf was going on. The fact that these are just process program segments (like text or data) was quite a revelation :D &lt;a href=&#34;http://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap&#34;&gt;This stackoverflow answer&lt;/a&gt; was also quite nice.&lt;/p&gt;
+
+&lt;p&gt;One interesting thing for me to investigate later from the book is how this program:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;stdlib.h&amp;gt;
+
+int global;
+
+int main() {
+  int local = 5;
+  void *p = malloc(128);
+
+  printf(&amp;quot;Address of main is %p\n&amp;quot;, main);
+  printf(&amp;quot;Address of local is %p\n&amp;quot;, &amp;amp;local);
+  printf(&amp;quot;Address of global is %p\n&amp;quot;, &amp;amp;global);
+  printf(&amp;quot;Address of p is %p\n&amp;quot;, p);
+
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;produces the following output for the author:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Address of main   is 0x      40057c
+Address of local  is 0x7fffd26139c4
+Address of global is 0x      60104c
+Address of p      is 0x     1c3b010
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;but for me,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Address of main   is 0x5598fc64c740
+Address of local  is 0x7ffeacfaf75c
+Address of global is 0x5598fc84d014
+Address of p      is 0x5598fc85b010
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The point of the program was to demonstrate that text (&lt;code&gt;main&lt;/code&gt;), static (&lt;code&gt;global&lt;/code&gt;) and heap (&lt;code&gt;p&lt;/code&gt;) are near beginning of memory and stack (&lt;code&gt;local&lt;/code&gt;) is towards the end. While on my laptop it does seem to be the case too, the &amp;lsquo;start&amp;rsquo; seems to be much farther out than on the author&amp;rsquo;s computer. Need to understand why this is the case. I&amp;rsquo;ve vaguely heard of address randomization &amp;amp; other security measures in OS kernels - maybe related? For another day!&lt;/p&gt;
+
+&lt;h2 id=&#34;bit-twiddling&#34;&gt;Bit twiddling&lt;/h2&gt;
+
+&lt;p&gt;I continue to find it hard to care about bit twiddling. Most things do use it of course, but it seems to be abstracted away pretty well without leaking too much (except for things that have their own nuances, like floating point representations).&lt;/p&gt;
+
+&lt;h2 id=&#34;malloc&#34;&gt;malloc&lt;/h2&gt;
+
+&lt;p&gt;Nice link to &lt;a href=&#34;http://gee.cs.oswego.edu/dl/html/malloc.html&#34;&gt;a paper&lt;/a&gt; about a common malloc implementation. I also know there are other malloc implementations that programs use (such as &lt;a href=&#34;http://jemalloc.net/&#34;&gt;jemalloc&lt;/a&gt;). Something for me to dive into when I&amp;rsquo;ve more time.&lt;/p&gt;
+
+&lt;h2 id=&#34;tbc&#34;&gt;tbc&lt;/h2&gt;
+
+&lt;p&gt;I didn&amp;rsquo;t have time to finish it all, unfortunately. But shall come back to it whenever I can!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>learning selinux and apparmor</title>
       <link>http://words.yuvi.in/post/learning-selinux/</link>
       <pubDate>Tue, 18 Apr 2017 00:01:26 -0700</pubDate>
@@ -67,11 +137,14 @@
 &lt;p&gt;There&amp;rsquo;s an analogous running list of &lt;a href=&#34;http://words.yuvi.in/post/things-to-learn/&#34;&gt;things I want to learn&lt;/a&gt;. Things move between them :) I also have higher standards of documentation (other people should be able to use it) before marking these as complete.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;kubernetes-login&lt;/strong&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;kubernetes-login&lt;/strong&gt;
 A helper to openssh that allows users to log in to a configurable user pod
 running on a kubernetes cluster. Should ideally support scp / sftp too.
-Helps get rid of SPOF login nodes
-&lt;br /&gt;&lt;/li&gt;
+Helps get rid of SPOF login nodes&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;just-enough-containment&lt;/strong&gt;
+A purely for-learning docker-ish container project written purely in python.
+Written for pedagogy and personal understanding rather than production use.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -129,6 +202,14 @@ Helps get rid of SPOF login nodes
 &lt;p&gt;It is amazing work, but doesn&amp;rsquo;t give me much hope. There&amp;rsquo;s been no new commits to the &lt;a href=&#34;https://github.com/larryhastings/gilectomy/tree/gilectomy&#34;&gt;public git repo&lt;/a&gt; for about 5 months now, so am unsure what the state of it now is.&lt;/p&gt;
 
 &lt;p&gt;There&amp;rsquo;s probably many more - let me know if you know any, and I&amp;rsquo;ll update this when I find out more!&lt;/p&gt;
+
+&lt;h4 id=&#34;gilectomy-2017-larry-hastings&#34;&gt;Gilectomy - 2017 (Larry Hastings)&lt;/h4&gt;
+
+&lt;p&gt;PyCon 2017 just happened, and Larry Hastings gave another talk!&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/pLqv11ScGsQ&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;It seems to have had a lot of intense work done on it, and the wall clock time graph in it warms my heart! I&amp;rsquo;ve a little more hope now than I did after the 2016 talk :D&lt;/p&gt;
 </description>
     </item>
     

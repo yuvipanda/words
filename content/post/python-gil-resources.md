@@ -46,3 +46,11 @@ It is amazing work, but doesn't give me much hope. There's been no new commits t
 
 
 There's probably many more - let me know if you know any, and I'll update this when I find out more!
+
+#### Gilectomy - 2017 (Larry Hastings)
+
+PyCon 2017 just happened, and Larry Hastings gave another talk!
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pLqv11ScGsQ" frameborder="0" allowfullscreen></iframe>
+
+It seems to have had a lot of intense work done on it, and the wall clock time graph in it warms my heart! I've a little more hope now than I did after the 2016 talk :D

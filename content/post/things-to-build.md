@@ -14,3 +14,6 @@ There's an analogous running list of [things I want to learn](http://words.yuvi.
   running on a kubernetes cluster. Should ideally support scp / sftp too.
   Helps get rid of SPOF login nodes
   
+* **just-enough-containment**
+  A purely for-learning docker-ish container project written purely in python.
+  Written for pedagogy and personal understanding rather than production use.
