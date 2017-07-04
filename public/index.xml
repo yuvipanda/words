@@ -7,8 +7,125 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>CC0</copyright>
-    <lastBuildDate>Sat, 13 May 2017 11:41:20 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 02 Jul 2017 22:47:06 -0700</lastBuildDate>
     <atom:link href="http://words.yuvi.in/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>designing data intensive applications</title>
+      <link>http://words.yuvi.in/post/designing-data-intensive-applications/</link>
+      <pubDate>Sun, 02 Jul 2017 22:47:06 -0700</pubDate>
+      
+      <guid>http://words.yuvi.in/post/designing-data-intensive-applications/</guid>
+      <description>
+
+&lt;p&gt;I&amp;rsquo;ve been reading &lt;a href=&#34;http://dataintensive.net/&#34;&gt;Designing Data Intensive Applications&lt;/a&gt; book &amp;amp; am using this post to keep notes!&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve picked up ideas on scaling systems through the years, but never actually sat down to actually study them semi-formally. This seems like a great start to it!&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s a pretty big book, and it&amp;rsquo;s gonna take me a while to go through it :) Will update these notes as I go! Trying to do a chapter a week!&lt;/p&gt;
+
+&lt;h2 id=&#34;chapter-1-defining-all-the-things&#34;&gt;Chapter 1: Defining all the things&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The Internet was done so well that most people think of it as a natural resource like the Pacific Ocean, rather than something that was man-made. When was the last time a technology with a scale like that was so error-free?
+Alan Kay, in &lt;a href=&#34;www.drdobbs.com/architecture-and-design/interview-with-alan-kay/240003442&#34;&gt;interview with Dr Dobb’s Journal (2012)&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I keep forgetting what an amazing marvel the internet is and how intensely (and mostly positively, thankfully) it has affected my life. This is a good reminder! However, perhaps to people who haven&amp;rsquo;t had the privileges I&amp;rsquo;ve had the Internet doesn&amp;rsquo;t feel like a natural resource? Unsure! Should ask them!&lt;/p&gt;
+
+&lt;p&gt;Lots of modern applications are data intensive, rather than CPU intensive.
+&amp;gt;  Raw CPU power is rarely a limiting factor for these applications—bigger problems are usually the amount of data, the complexity of data, and the speed at which it is changing.&lt;/p&gt;
+
+&lt;p&gt;This has borne out in the infrastructure I&amp;rsquo;ve been setting up to help teach people data science - RAM is often the bottleneck, not CPU (barring machine-learning type stuff, but they want GPUs anyway).&lt;/p&gt;
+
+&lt;p&gt;Common building blocks for data intensive applications are:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Store data so that they, or another application, can find it again later (databases)&lt;/li&gt;
+&lt;li&gt;Remember the result of an expensive operation, to speed up reads (caches)&lt;/li&gt;
+&lt;li&gt;Allow users to search data by keyword or filter it in various ways (search indexes)&lt;/li&gt;
+&lt;li&gt;Send a message to another process, to be handled asynchronously (stream processing)&lt;/li&gt;
+&lt;li&gt;Periodically crunch a large amount of accumulated data (batch processing)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;These &lt;em&gt;do&lt;/em&gt; seem to cover a large variety of bases! I feel fairly comfortable in operating, using and building on top of some of these (databases, caches) but not so much in most (never used a search index, batch processing, nor streams outside of redis). Partially I haven&amp;rsquo;t felt an intense need for these, but perhaps if I understand them more I&amp;rsquo;ll use them more? I&amp;rsquo;ve mostly strived to make everything stateless - but perhaps that&amp;rsquo;s causing me to shy away from problems that can only be solved with state? /me ponders.&lt;/p&gt;
+
+&lt;p&gt;Boundaries around &amp;lsquo;data systems&amp;rsquo; are blurring - Redis is a cache but can be a message queue, Apache Kafka is a message queue that can have durability guarantees, etc. Lots of applications also need more than can be done with just one tool (aka a &amp;lsquo;pure LAMP&amp;rsquo; stack is no longer good enough). Applications often have the job of making sure different data sources are in sync. Everyone is a &amp;lsquo;data designer&amp;rsquo;, and everyone is kinda fucked.&lt;/p&gt;
+
+&lt;p&gt;Talk about 3 things that are most important to any software system.&lt;/p&gt;
+
+&lt;h3 id=&#34;reliability&#34;&gt;Reliability&lt;/h3&gt;
+
+&lt;p&gt;Means &amp;lsquo;continue to work correctly, even when things go wrong&amp;rsquo;. Things that go wrong are &amp;lsquo;faults&amp;rsquo;, and systems need to be &amp;lsquo;fault-tolerent&amp;rsquo; or &amp;lsquo;resilient&amp;rsquo;. Can&amp;rsquo;t be tolerant of all faults, so gotta define what faults we&amp;rsquo;re tolerant of.&lt;/p&gt;
+
+&lt;p&gt;Fault isn&amp;rsquo;t failure - fault is when a component of the system &amp;lsquo;deviates from its spec&amp;rsquo;, &lt;em&gt;failure&lt;/em&gt; is when the system as a whole stops providing user server they want. Can&amp;rsquo;t reduce chances of fault to zero, but can work on reducing failures to zero.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Engineering is building reliable systems from unreliable parts.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Chaos monkeys are good, increase faults to find ways to reduce failure.&lt;/p&gt;
+
+&lt;p&gt;Hardware reliability - physical components fail. Nothing you can do about it. Fix it in software.&lt;/p&gt;
+
+&lt;p&gt;Hardware faults &lt;em&gt;usually&lt;/em&gt; not corelated - one macine failing doesn&amp;rsquo;t cause another machine to fail. To truly fuck shit up you need software - can easily cause massive large scale failure! For example, a leap second bug! Or a runaway process that slowly kills every other process on the machine. One of the microservies that 50 of your microservices depend on is slow! Cascading failures! These bugs all lie dormant, until they suddenly aren&amp;rsquo;t and wreak havok. The software makes some assumption about its environment, which is true until it isn&amp;rsquo;t. No quick solution to systematic software faults.&lt;/p&gt;
+
+&lt;p&gt;Human error is worst error. The book offers some suggestions on how to prevent these.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Minimize opportunities for errors - make it easy to do the right thing. But if it&amp;rsquo;s too restrictive, people will work around it - tricky balance.&lt;/li&gt;
+&lt;li&gt;Provide full featured sandboxes so people can fuck around without fucking shit up.&lt;/li&gt;
+&lt;li&gt;AUTOMATICALLY TEST EVERYTHING so when a human does fuck up, they know!&lt;/li&gt;
+&lt;li&gt;Set up undo functionality, so when human does fuck up, they can roll back!&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Learn about telemetry from other disciplines that have been doing this shit for far longer than us. &lt;a href=&#34;https://xkcd.com/1831/&#34;&gt;Relevant XKCD&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Reliability isn&amp;rsquo;t just for nukes &amp;amp; aircraft &amp;amp; election systems (haha). Imagine someone loses a video of their kid&amp;rsquo;s first ever step because you didn&amp;rsquo;t care. Fucking up is human and we all do it - what is important is that we care.&lt;/p&gt;
+
+&lt;p&gt;Sometimes you gotta sacrifice reliability, but make sure that is an explicit &amp;amp; conscious decision. Actually throw away your prototypes! Put FIXMEs in your code. Take a shower. Make sure hacks look, feel and sound hacky!&lt;/p&gt;
+
+&lt;h3 id=&#34;scalability&#34;&gt;Scalability&lt;/h3&gt;
+
+&lt;p&gt;System&amp;rsquo;s ability to adapt to increased &amp;lsquo;load&amp;rsquo; along some axes.&lt;/p&gt;
+
+&lt;p&gt;Load is described with various &lt;em&gt;load parameters&lt;/em&gt;, which depend on the system (req/s? active users? etc).&lt;/p&gt;
+
+&lt;p&gt;Carefully define what this means for your application, and explain your reasoning. You might have to scale in some aspects but not in other.&lt;/p&gt;
+
+&lt;p&gt;Once you have the load parameters for your app defined, figure out what happens when you increase load parameters but keep system resources unchanged. After that, try to figure out how much resources need to be increased.&lt;/p&gt;
+
+&lt;p&gt;Throughput - number of things that can be done per second. Latency is time it takes to serve a request. These are common things we care about when we move load parameters up and down.&lt;/p&gt;
+
+&lt;p&gt;You shouldn&amp;rsquo;t think of these as single numbers, since they vary a fair bit. Think of these as &lt;em&gt;probability distributions&lt;/em&gt;. Learn some statistics! Use percentiles, rather than &amp;lsquo;average&amp;rsquo; or &amp;lsquo;mean&amp;rsquo;.&lt;/p&gt;
+
+&lt;p&gt;High percentile latencies are especially important when you are a service that&amp;rsquo;s called by many other services - it can cascade down.&lt;/p&gt;
+
+&lt;p&gt;No &lt;em&gt;magic scaling sauce&lt;/em&gt; - architecture that can scale is different for each application. But there are general purpose building blocks, so worry a little less!&lt;/p&gt;
+
+&lt;h3 id=&#34;maintainability&#34;&gt;Maintainability&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Always code as if the person who ends up maintaining your code is a violent psychopath who knows where you live.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Split into three major aspects.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Operability&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Make it easy for people to operate your service! Help them monitor the health of the system, observe &amp;amp; debug problems, do capacity planning, keep the production environment stable, prevent single human points of failure (oh, only Chad knows about this system) and many other things!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Simplicity&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Don&amp;rsquo;t make your software a big ball of mud. Take into account that new engineers will have to start working on your software, and they need to understand it quickly.&lt;/p&gt;
+
+&lt;p&gt;Use standard tools &amp;amp; approaches they have a higher likelihood of knowing - look around for standard tools before inventing your own!&lt;/p&gt;
+
+&lt;p&gt;Watch out for accidental complexity, and keep it to a minimum as much as possible. Abstractions are good, but abstractions are also leaky.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Evolvability&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If your software is simple &amp;amp; has good abstractions, you can change it over time without wanting to pull all your hair out.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>think os</title>
