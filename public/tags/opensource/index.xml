@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Opensource on Yuvi Panda</title>
+    <link>http://words.yuvi.in/tags/opensource/index.xml</link>
+    <description>Recent content in Opensource on Yuvi Panda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>CC0</copyright>
+    <atom:link href="http://words.yuvi.in/tags/opensource/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>maintainerati 2017</title>
+      <link>http://words.yuvi.in/post/maintainerati-2017/</link>
+      <pubDate>Tue, 10 Oct 2017 23:15:01 -0700</pubDate>
+      
+      <guid>http://words.yuvi.in/post/maintainerati-2017/</guid>
+      <description>&lt;p&gt;I was at &lt;a href=&#34;http://maintainerati.org/&#34;&gt;maintainerati&lt;/a&gt; today, which was super fun &amp;amp; quite intense! I highly appreciate GitHub &amp;amp; the individuals involved in making it happen!&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s my key takeaways from this (and several other conversations over the last few weeks leading up to this):&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;I am now a &lt;em&gt;maintainer&lt;/em&gt;, which is quite a different thing from a &lt;em&gt;core contributor&lt;/em&gt; or just a &lt;em&gt;contributor&lt;/em&gt;. The power dynamics are very different, and so are the responsibilities. I can not ostrich myself into thinking I can just keep writing code and not do anything else - that&amp;rsquo;s a disservice to not just other folks in the project, but also myself.&lt;/li&gt;
+&lt;li&gt;Being a maintainer is quite hard emotionally &amp;amp; mentally. I&amp;rsquo;ve a lot more respect for long running OSS maintainers now than I did before. I have a lot of personal work to do before I become anything like a decent maintainer.&lt;/li&gt;
+&lt;li&gt;Lots of people love Gerrit, and they also hate Gerrit :D Gerrit is very powerful, but the UX is so user hostile - I don&amp;rsquo;t think these are unrelated. I hope that some of the power of Gerrit transfers to GitHub, but at the same time GitHub does not become anything like Gerrit! Also, people have very strong opinions about how their git histories should look like - perhaps they spend a lot more time looking through it than I do?&lt;/li&gt;
+&lt;li&gt;We are slowly developing better ways of dealing with Trolls in projects, but still have a long, long way to go. &amp;ldquo;Look for the helpers&amp;rdquo; here.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
