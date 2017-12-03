@@ -64,3 +64,5 @@ I hope this was a useful read!
 ## TLDR
 
 S2I was great for generating a best-practices production container that runs one thing and does it well, but for binder we wanted to generate container images that captured complex environments without regard to what can run in them. Forcing s2i to do what we wanted seemed like trying to get a square peg into a round hole.
+
+*Thanks to Chris Holgraf, MinRK and Carol Willing for helping read, reason about and edit this blog post*

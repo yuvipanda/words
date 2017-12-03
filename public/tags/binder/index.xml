@@ -82,6 +82,8 @@
 &lt;h2 id=&#34;tldr&#34;&gt;TLDR&lt;/h2&gt;
 
 &lt;p&gt;S2I was great for generating a best-practices production container that runs one thing and does it well, but for binder we wanted to generate container images that captured complex environments without regard to what can run in them. Forcing s2i to do what we wanted seemed like trying to get a square peg into a round hole.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks to Chris Holgraf, MinRK and Carol Willing for helping read, reason about and edit this blog post&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     
