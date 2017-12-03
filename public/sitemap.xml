@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://words.yuvi.in/post/why-not-s2i/</loc>
+    <lastmod>2017-12-03T01:23:54-08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/post/maintainerati-2017/</loc>
     <lastmod>2017-10-10T23:15:01-07:00</lastmod>
   </url>
@@ -67,8 +72,14 @@
   </url>
   
   <url>
+    <loc>http://words.yuvi.in/tags/binder/</loc>
+    <lastmod>2017-12-03T01:23:54-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/tags/code/</loc>
-    <lastmod>2017-03-31T23:23:52-07:00</lastmod>
+    <lastmod>2017-12-03T01:23:54-08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -110,7 +121,7 @@
   
   <url>
     <loc>http://words.yuvi.in/post/</loc>
-    <lastmod>2017-10-10T23:15:01-07:00</lastmod>
+    <lastmod>2017-12-03T01:23:54-08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -151,7 +162,7 @@
   
   <url>
     <loc>http://words.yuvi.in/</loc>
-    <lastmod>2017-10-10T23:15:01-07:00</lastmod>
+    <lastmod>2017-12-03T01:23:54-08:00</lastmod>
     <priority>0</priority>
   </url>
   

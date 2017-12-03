@@ -7,8 +7,84 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>CC0</copyright>
-    <lastBuildDate>Tue, 10 Oct 2017 23:15:01 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 03 Dec 2017 01:23:54 -0800</lastBuildDate>
     <atom:link href="http://words.yuvi.in/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Why repo2docker? Why not s2i?</title>
+      <link>http://words.yuvi.in/post/why-not-s2i/</link>
+      <pubDate>Sun, 03 Dec 2017 01:23:54 -0800</pubDate>
+      
+      <guid>http://words.yuvi.in/post/why-not-s2i/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://imgs.xkcd.com/comics/standards.png&#34; alt=&#34;https://xkcd.com/927/&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The wonderful &lt;a href=&#34;https://twitter.com/GrahamDumpleton&#34;&gt;Graham Dumpleton&lt;/a&gt; asked &lt;a href=&#34;https://twitter.com/GrahamDumpleton/status/936740552304836608&#34;&gt;on twitter&lt;/a&gt; why we built an entirely new tool (&lt;a href=&#34;https://github.com/jupyter/repo2docker&#34;&gt;repo2docker&lt;/a&gt;) instead of using OpenShift&amp;rsquo;s cool &lt;a href=&#34;https://github.com/openshift/source-to-image&#34;&gt;source2image&lt;/a&gt; tool.&lt;/p&gt;
+
+&lt;p&gt;This is a very good question, and not a decision we made lightly. This post lays out some history, and explains the reasons we decided to stop using s2i. s2i is still a great tool for most production use cases, and you should use it if you&amp;rsquo;re building anything like a PaaS!&lt;/p&gt;
+
+&lt;h2 id=&#34;terminology&#34;&gt;Terminology&lt;/h2&gt;
+
+&lt;p&gt;Before discussing, I want to clarify &amp;amp; define the various projects we are talking about.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/openshift/source-to-image&#34;&gt;s2i&lt;/a&gt; is a nice tool from the &lt;a href=&#34;http://openshift.org/&#34;&gt;OpenShift&lt;/a&gt; project that is used to build images out of git repositories. You can use heroku-like buildpacks to specify how the image should be built. It&amp;rsquo;s used in OpenShift, but can also be easily used standalone.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jupyterhub/binderhub&#34;&gt;BinderHub&lt;/a&gt; is the UI + scheduling component of Binder. This is what you see when you go to &lt;a href=&#34;https://mybinder.org&#34;&gt;https://mybinder.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jupyter/repo2docker&#34;&gt;repo2docker&lt;/a&gt; is a standalone python application that takes a git repository &amp;amp; converts it into a docker image containing the environment that is specified in the repository. This heavily overlaps with functionality in s2i.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;when-repo2docker-just-wrapped-s2i&#34;&gt;When repo2docker just wrapped s2i&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;When we started building &lt;a href=&#34;https://github.com/jupyterhub/binderhub&#34;&gt;BinderHub&lt;/a&gt;, I looked around for a good heroku-like &amp;lsquo;repository to container image&amp;rsquo; builder project. I first looked at Deis&amp;rsquo; &lt;a href=&#34;https://github.com/deis/slugbuilder&#34;&gt;slugbuilder&lt;/a&gt; and &lt;a href=&#34;https://github.com/deis/dockerbuilder&#34;&gt;dockerbuilder&lt;/a&gt; - they didn&amp;rsquo;t quite match our needs, and seemed a bit tied into Deis. I then found OpenShift&amp;rsquo;s &lt;a href=&#34;https://github.com/openshift/source-to-image&#34;&gt;source2image&lt;/a&gt;, and was very happy! It worked pretty well standalone, and &lt;code&gt;#openshift&lt;/code&gt; on IRC was very responsive.&lt;/p&gt;
+
+&lt;p&gt;So until July 1, we actually used s2i under the hood! &lt;code&gt;repo2docker&lt;/code&gt; was a wrapper that performed the following functions:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Detect which s2i buildpack to use for a given repository&lt;/li&gt;
+&lt;li&gt;Support building arbitrary Dockerfiles (s2i couldn&amp;rsquo;t do this)&lt;/li&gt;
+&lt;li&gt;Support the Legacy Dockerfiles that were required under the old version of mybinder.org. The older version of mybinder.org munged these Dockerfiles, and so we needed to replicate that for compatibility.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;@minrk did some wonderful work in allowing us to package the s2i binary into our python package, so users didn&amp;rsquo;t even need to download s2i separately. It worked great, and we were happy with it!&lt;/p&gt;
+
+&lt;h2 id=&#34;moving-off-s2i&#34;&gt;Moving off s2i&lt;/h2&gt;
+
+&lt;p&gt;Sometime in July, we started adding support for Julia to binder/repo2docker. This brought up an interesting &amp;amp; vital issue - composability.&lt;/p&gt;
+
+&lt;p&gt;If a user had a &lt;code&gt;requirements.txt&lt;/code&gt; in their repo &lt;em&gt;and&lt;/em&gt; a &lt;code&gt;REQUIRE&lt;/code&gt; file, then we&amp;rsquo;d have to provide both a Python3 and Julia environment. To support this in s2i, we&amp;rsquo;d have needed to make a &lt;code&gt;python3-julia&lt;/code&gt; buildpack.&lt;/p&gt;
+
+&lt;p&gt;If it had a &lt;code&gt;requirements.txt&lt;/code&gt;, a &lt;code&gt;runtime.txt&lt;/code&gt; with contents &lt;code&gt;python-2.7&lt;/code&gt; and a &lt;code&gt;REQUIRE&lt;/code&gt; file, we&amp;rsquo;d have to provide a Python3 environment, a Python2 environment, and a Julia environment. To support this in s2i, we&amp;rsquo;d have needed to make a &lt;code&gt;python3-python2-julia&lt;/code&gt; buildpack.&lt;/p&gt;
+
+&lt;p&gt;If it had an &lt;code&gt;environment.yml&lt;/code&gt; file and a &lt;code&gt;REQUIRE&lt;/code&gt; file, we&amp;rsquo;d have to provide a conda environment and a Julia environment. To do this, we&amp;rsquo;d have to make a &lt;code&gt;conda-julia&lt;/code&gt; buildpack.&lt;/p&gt;
+
+&lt;p&gt;As we add support for other languages (such as R), we&amp;rsquo;d need to keep expanding the set of buildpacks we had. It&amp;rsquo;d become a combinatorial explosion of buildpacks. This isn&amp;rsquo;t a requirement or a big deal for PaaS offerings - usually a container image should only contain one &amp;lsquo;application&amp;rsquo;, and those are usually built using only one language. If you use multiple languages, you just make them each into their own container &amp;amp; communicate over the network. However, Binder was building images that contained &lt;em&gt;environments&lt;/em&gt; that people could explore and do things in, rather than specific applications. Since a lot of scientific computing uses multiple languages (looking at you, the people who do everything in R but scrape using Python), this was a core feature / requirement for Binder. So we couldn&amp;rsquo;t restrict people to single-language buildpacks.&lt;/p&gt;
+
+&lt;p&gt;So I decided that we can &lt;em&gt;generate&lt;/em&gt; these combinatorial buildpacks in repo2docker. We can have a script that generates the buildpacks at build time, and then we can just check in the generated code. This would let us keep using s2i for doing image builds and pushes, and allow others using s2i to use our buildpacks. Win-win!&lt;/p&gt;
+
+&lt;p&gt;This had the following problems:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;I was generating bash from python. This was quite error prone, since the bash also needed to carefully support the various complex environment specifications we wanted to support.&lt;/li&gt;
+&lt;li&gt;We needed to &lt;em&gt;sometimes&lt;/em&gt; run assemble scripts as root (such as when there is an &amp;lsquo;apt.txt&amp;rsquo; requiring package installs). This would require careful usage of &lt;code&gt;sudo&lt;/code&gt; in the generated bash for security reasons.&lt;/li&gt;
+&lt;li&gt;This was very &amp;lsquo;clever&amp;rsquo; code, and after running into a few bugs here I was convinced this &amp;lsquo;generate bash with python&amp;rsquo; idea was too clever for us to use reliably.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;At this point I considered making the &lt;code&gt;assemble&lt;/code&gt; script into Python, but then I&amp;rsquo;d be either generating Python from Python, or basically writing a full library that will be invoked from inside each buildpack. We&amp;rsquo;d still need to keep repo2docker around (for Dockerfile + Legacy Dockerfile support), and the s2i buildpacks will be quite complex. This would also affect Docker image layer caching, since all activities of &lt;code&gt;assemble&lt;/code&gt; are cached as one layer. Since a lot of repositories have similar environments (or are just building successive versions of same repo), this gives up a good amount of caching.&lt;/p&gt;
+
+&lt;p&gt;So instead I decided that the right thing to do here is to dynamically generate a Dockerfile in python code, and build / push the image ourselves. S2I was great for generating a best-practices production container that runs one thing and does it well, but for binder we wanted to generate container images that captured complex environments without regard to what can run in them. Forcing s2i to do what we wanted seemed like trying to get a square peg into a round hole.&lt;/p&gt;
+
+&lt;p&gt;So in &lt;a href=&#34;https://github.com/jupyter/repo2docker/commit/38755650c28fe6c71adec5a5bf9adfdde2d9772e&#34;&gt;this heavily squashed commit&lt;/a&gt; I removed s2i, and repo2docker became stand alone. It was sad, since I really would have liked to not write extra code &amp;amp; keep leveraging s2i. But the code is cleaner, easier for people to understand and maintain, and the composing works pretty well in understandable ways after we removed it. So IMO it was the right thing to do!&lt;/p&gt;
+
+&lt;p&gt;I personally would be happy to go back to using s2i if we can find a clean way to support composability + caching there, but IMO that would make s2i too complex for its primary purpose of building images for a PaaS. I don&amp;rsquo;t see repo2docker and s2i as competitors, as much as tools of similar types in different domains. Lots of &amp;lt;3 to the s2i / openshift folks!&lt;/p&gt;
+
+&lt;p&gt;I hope this was a useful read!&lt;/p&gt;
+
+&lt;h2 id=&#34;tldr&#34;&gt;TLDR&lt;/h2&gt;
+
+&lt;p&gt;S2I was great for generating a best-practices production container that runs one thing and does it well, but for binder we wanted to generate container images that captured complex environments without regard to what can run in them. Forcing s2i to do what we wanted seemed like trying to get a square peg into a round hole.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>maintainerati 2017</title>
