@@ -1,642 +1,229 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Yuvi Panda</title>
+	<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		<meta name="description" content="Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python">
+		<meta name="generator" content="Hugo 0.31.1" />
+		<title>Yuvi Panda</title>
+		<link rel="shortcut icon" href="http://words.yuvi.in/images/favicon.ico">
+		<link rel="stylesheet" href="http://words.yuvi.in/css/style.css">
+		<link rel="stylesheet" href="http://words.yuvi.in/css/highlight.css">
 
-        <meta charset="utf-8">
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <meta name="description" content="Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
-        <meta property="og:title" content="Yuvi Panda" />
-    <meta property="og:description" content="Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:url" content="http://words.yuvi.in/" />
-    
+		
+		<link rel="stylesheet" href="http://words.yuvi.in/css/monosocialiconsfont.css">
+		
 
-    <link href="http://words.yuvi.in/index.xml" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
-    <link rel="shortcut icon" href="/favicon.png">
+		
 
-    <link href="http://words.yuvi.in/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
-    <link href="http://words.yuvi.in/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+		
+	</head>
 
-    <link rel="stylesheet" href="http://words.yuvi.in/css/style.css">
+	<body>
+    <nav class="main-nav">
+	
+	
+	<a href='http://words.yuvi.in/posts'>Archive</a>
+	<a href='http://words.yuvi.in/tags'>Tags</a>
+	<a href='http://words.yuvi.in/about'>About</a>
 
-    <link href="http://gmpg.org/xfn/11" rel="profile">
-    
-    <meta name="generator" content="Hugo 0.31.1" />
-</head>
+	
 
-<body>
-<div id="container">
-    <header id="header">
-    <div id="header-outer" class="outer">
-        <div id="header-inner" class="inner">
-            <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
-            <a id="logo" class="logo-text" href="http://words.yuvi.in/">Yuvi Panda</a>
-            <nav id="main-nav">
-                
-                <a class="main-nav-link" href="mailto:yuvipanda@gmail.com">email</a>
-                
-                <a class="main-nav-link" href="https://github.com/yuvipanda">github</a>
-                
-                <a class="main-nav-link" href="https://twitter.com/yuvipanda">twitter</a>
-                
-            </nav>
-            <nav id="sub-nav">
-                <div id="search-form-wrap">
-                </div>
-            </nav>
-        </div>
-    </div>
-</header>
-    <section id="main" class="outer">
-        
-        <article class="article article-type-post" itemscope itemprop="blogPost">
-            <div class="article-inner">
-                
-                
-                <header class="article-header">
-                    <h1 itemprop="name"><a class="article-title" href="/passing-headers-proxying-nginx/">Passing Headers along while Proxying with nginx</a></h1>
-                </header>
-                
-                <div class="article-meta">
-                    <a href="/passing-headers-proxying-nginx/" class="article-date">
-                        <time datetime='2012-02-20T20:23:35.000&#43;00:00' itemprop="datePublished">2012-02-20</time>
-                    </a>
-                    
-                    
-                    <div class="post-categories">
-                        <div class="article-category">
-                            
-                            
-                            <a class="article-category-link" href="http://words.yuvi.in//categories/code">code</a>
-                            
-                        </div>
-                    </div>
-                    
-                    
-                </div>
-                <div class="article-entry" itemprop="articleBody">
-                    <p>
-                        
-                    When you&#8217;re proxying requests via nginx, you might assume after reading [the documentation][1] that every header is forwarded, except for the Host and Connection headers.
-You&#8217;d also be wrong.
-nginx drops all headers with an underscore in them.
-This is a configurable settings. You can turn it on with a simple
-underscores_in_headers on I&#8217;m still baffled as to *why* this is a configuration parameter. And why it is turned off by default.
-                    </p>
-                    <p class="article-more-link">
-                        <a href="/passing-headers-proxying-nginx/">Read More</a>
-                    </p>
-                </div>
-
-                
-            </div>
-        </article>
-        
-        <article class="article article-type-post" itemscope itemprop="blogPost">
-            <div class="article-inner">
-                
-                
-                <header class="article-header">
-                    <h1 itemprop="name"><a class="article-title" href="/program/">My First Program</a></h1>
-                </header>
-                
-                <div class="article-meta">
-                    <a href="/program/" class="article-date">
-                        <time datetime='2012-01-07T21:39:13.000&#43;00:00' itemprop="datePublished">2012-01-07</time>
-                    </a>
-                    
-                    
-                    <div class="post-categories">
-                        <div class="article-category">
-                            
-                            
-                            <a class="article-category-link" href="http://words.yuvi.in//categories/code">code</a>
-                            
-                            
-                            <span>&gt;</span>
-                            
-                            <a class="article-category-link" href="http://words.yuvi.in//categories/personal">personal</a>
-                            
-                        </div>
-                    </div>
-                    
-                    
-                </div>
-                <div class="article-entry" itemprop="articleBody">
-                    <p>
-                        
-                    Note: These are almost a decade old. Reproduced as close to memory as possible
-My first memories of programming aren&#8217;t actually C. They were GW-BASIC, and later on, LOGO. I don&#8217;t remember any of my BASIC &#8211; but I do remember the look on my computer science teacher&#8217;s face in 5th grade when I managed to draw a flower with LOGO when everyone else was doing rectangles and lines. I vividly remember it &#8211; you draw an arc for a certain length, then stop, draw another arc in the reverse direction for the same length &#8211; and you have a petal.
-                    </p>
-                    <p class="article-more-link">
-                        <a href="/program/">Read More</a>
-                    </p>
-                </div>
-
-                
-            </div>
-        </article>
-        
-        <article class="article article-type-post" itemscope itemprop="blogPost">
-            <div class="article-inner">
-                
-                
-                <header class="article-header">
-                    <h1 itemprop="name"><a class="article-title" href="/devlog-december-26-2011/">DevLog: December 26, 2011 – Jan 3rd, 2012</a></h1>
-                </header>
-                
-                <div class="article-meta">
-                    <a href="/devlog-december-26-2011/" class="article-date">
-                        <time datetime='2012-01-04T01:05:07.000&#43;00:00' itemprop="datePublished">2012-01-04</time>
-                    </a>
-                    
-                    
-                    <div class="post-categories">
-                        <div class="article-category">
-                            
-                            
-                            <a class="article-category-link" href="http://words.yuvi.in//categories/devlog">devlog</a>
-                            
-                        </div>
-                    </div>
-                    
-                    
-                </div>
-                <div class="article-entry" itemprop="articleBody">
-                    <p>
-                        
-                    Back in Chennai
- Moving yuvi.in to my prgmr server. I want wordpress for my blog, but I don&#8217;t want to run MySQL. Solution? Keep blog where it is (with the awesome webfaction people!) and use nginx to proxy requests to blog/. Seems to work, so yay! Rewrote tawp.in to use python/flask/memcached. Available on github. Replaced older node.js version Reading through _The Art of Unix Programming_ on kindle. Amazing book so far.
-                    </p>
-                    <p class="article-more-link">
-                        <a href="/devlog-december-26-2011/">Read More</a>
-                    </p>
-                </div>
-
-                
-            </div>
-        </article>
-        
-        <article class="article article-type-post" itemscope itemprop="blogPost">
-            <div class="article-inner">
-                
-                
-                <header class="article-header">
-                    <h1 itemprop="name"><a class="article-title" href="/devlog-december-23-2011/">Devlog: December 23, 2011</a></h1>
-                </header>
-                
-                <div class="article-meta">
-                    <a href="/devlog-december-23-2011/" class="article-date">
-                        <time datetime='2011-12-23T02:13:40.000&#43;00:00' itemprop="datePublished">2011-12-23</time>
-                    </a>
-                    
-                    
-                    <div class="post-categories">
-                        <div class="article-category">
-                            
-                            
-                            <a class="article-category-link" href="http://words.yuvi.in//categories/devlog">devlog</a>
-                            
-                        </div>
-                    </div>
-                    
-                    
-                </div>
-                <div class="article-entry" itemprop="articleBody">
-                    <p>
-                        
-                    Worked the day first from Domlur bus terminus, and then from Exotel&#8217;s office (with @vijaysw).
- Incorporated search results (rather than just suggestions) into the Wikipedia app. Was a slight bitch to get right, but after that have made a bunch of variants that the others are testing out to see which one feels good (Suggestion if exists, else search, or search alone). Took up most of my time. We put out a dud as RC3 for the Wikipedia app.
-                    </p>
-                    <p class="article-more-link">
-                        <a href="/devlog-december-23-2011/">Read More</a>
-                    </p>
-                </div>
-
-                
-            </div>
-        </article>
-        
-        <article class="article article-type-post" itemscope itemprop="blogPost">
-            <div class="article-inner">
-                
-                
-                <header class="article-header">
-                    <h1 itemprop="name"><a class="article-title" href="/devlog-december-21-2011/">DevLog: December 21 2011</a></h1>
-                </header>
-                
-                <div class="article-meta">
-                    <a href="/devlog-december-21-2011/" class="article-date">
-                        <time datetime='2011-12-21T23:55:51.000&#43;00:00' itemprop="datePublished">2011-12-21</time>
-                    </a>
-                    
-                    
-                    <div class="post-categories">
-                        <div class="article-category">
-                            
-                            
-                            <a class="article-category-link" href="http://words.yuvi.in//categories/devlog">devlog</a>
-                            
-                        </div>
-                    </div>
-                    
-                    
-                </div>
-                <div class="article-entry" itemprop="articleBody">
-                    <p>
-                        
-                    livetrains work. Trying to move (minimal) build system to waf. Somewhat complicated, not as fluid as I&#8217;d like. Go to rake. Feel weird about starting from scratch, come back to waf. Not get anything done Another rake diversion. Final Makefile editing desperation. I give up &#8211; I need to spend atleast a day to get back on proper build tools. That day is not today.  Added feature to change font size to wikipedia app.
-                    </p>
-                    <p class="article-more-link">
-                        <a href="/devlog-december-21-2011/">Read More</a>
-                    </p>
-                </div>
-
-                
-            </div>
-        </article>
-        
-        <article class="article article-type-post" itemscope itemprop="blogPost">
-            <div class="article-inner">
-                
-                
-                <header class="article-header">
-                    <h1 itemprop="name"><a class="article-title" href="/devlog-december-11-2011/">DevLog: December 11, 2011</a></h1>
-                </header>
-                
-                <div class="article-meta">
-                    <a href="/devlog-december-11-2011/" class="article-date">
-                        <time datetime='2011-12-12T09:47:48.000&#43;00:00' itemprop="datePublished">2011-12-12</time>
-                    </a>
-                    
-                    
-                    <div class="post-categories">
-                        <div class="article-category">
-                            
-                            
-                            <a class="article-category-link" href="http://words.yuvi.in//categories/devlog">devlog</a>
-                            
-                        </div>
-                    </div>
-                    
-                    
-                </div>
-                <div class="article-entry" itemprop="articleBody">
-                    <p>
-                        
-                    Added UI for AssessmentLog [SelectionSifter]  Removed lots of dead code in SelectionSifter. Went to Bangalore Wikipedia Meetup. Was nice meeting people I knew online face to face. Talked about yenWikipedia, and learnt a lot about how article selection for offline wikipedia is done. Shot myself in the foot multiple times (over use of empty(), incomplete commit summaries and a tab/spaces issue). I&#8217;m rusty and it is showing. Shouldn&#8217;t be a problem anymore, though &#8211; because of you-know-what.
-                    </p>
-                    <p class="article-more-link">
-                        <a href="/devlog-december-11-2011/">Read More</a>
-                    </p>
-                </div>
-
-                
-            </div>
-        </article>
-        
-        <article class="article article-type-post" itemscope itemprop="blogPost">
-            <div class="article-inner">
-                
-                
-                <header class="article-header">
-                    <h1 itemprop="name"><a class="article-title" href="/devlog-december-10-2011/">Devlog December 10, 2011</a></h1>
-                </header>
-                
-                <div class="article-meta">
-                    <a href="/devlog-december-10-2011/" class="article-date">
-                        <time datetime='2011-12-11T18:23:51.000&#43;00:00' itemprop="datePublished">2011-12-11</time>
-                    </a>
-                    
-                    
-                    <div class="post-categories">
-                        <div class="article-category">
-                            
-                            
-                            <a class="article-category-link" href="http://words.yuvi.in//categories/devlog">devlog</a>
-                            
-                        </div>
-                    </div>
-                    
-                    
-                </div>
-                <div class="article-entry" itemprop="articleBody">
-                    <p>
-                        
-                     Looks like I&#8217;m going to be rewriting SelectionSifter&#8217;s UI a lot. No more QuickTemplates, as I found TablePager. Mediawik definitely needs to fix Bug #1 soon.  Added proper i18n for SelectionSifter. Redid FilterRatings page completely. Went through PhoneGap documentation, checked out state of its Photo handling API. Looks good. Checked out patch to official Wikipedia app that adds upload functionality. Needs lot more polish.   
-                    </p>
-                    <p class="article-more-link">
-                        <a href="/devlog-december-10-2011/">Read More</a>
-                    </p>
-                </div>
-
-                
-            </div>
-        </article>
-        
-        <article class="article article-type-post" itemscope itemprop="blogPost">
-            <div class="article-inner">
-                
-                
-                <header class="article-header">
-                    <h1 itemprop="name"><a class="article-title" href="/devlog-december-7-2011/">DevLog December 7, 2011</a></h1>
-                </header>
-                
-                <div class="article-meta">
-                    <a href="/devlog-december-7-2011/" class="article-date">
-                        <time datetime='2011-12-07T23:34:19.000&#43;00:00' itemprop="datePublished">2011-12-07</time>
-                    </a>
-                    
-                    
-                    <div class="post-categories">
-                        <div class="article-category">
-                            
-                            
-                            <a class="article-category-link" href="http://words.yuvi.in//categories/devlog">devlog</a>
-                            
-                        </div>
-                    </div>
-                    
-                    
-                </div>
-                <div class="article-entry" itemprop="articleBody">
-                    <p>
-                        
-                    Redid Blog template. Recategorized all blog posts  Finally enabled mobile banking on ICICI. Still need 8 days for Internet activation. Sigh. Ordered HyperJuice 60W battery + Airline Adapter Read through the WPBannerMeta template (and its subtemplates), figured out where to get the assessment markers in. Poof that was hard. These templates are perfect examples of &#8216;hacks&#8217; &#8211; initially &#8216;designed&#8217; for templating text, they&#8217;ve grown into homebrew programming languages that are worse than PHP.
-                    </p>
-                    <p class="article-more-link">
-                        <a href="/devlog-december-7-2011/">Read More</a>
-                    </p>
-                </div>
-
-                
-            </div>
-        </article>
-        
-        <article class="article article-type-post" itemscope itemprop="blogPost">
-            <div class="article-inner">
-                
-                
-                <header class="article-header">
-                    <h1 itemprop="name"><a class="article-title" href="/story-average-indian-techie/">Story of Average Indian ‘Techie’</a></h1>
-                </header>
-                
-                <div class="article-meta">
-                    <a href="/story-average-indian-techie/" class="article-date">
-                        <time datetime='2011-12-06T09:37:13.000&#43;00:00' itemprop="datePublished">2011-12-06</time>
-                    </a>
-                    
-                    
-                    <div class="post-categories">
-                        <div class="article-category">
-                            
-                            
-                            <a class="article-category-link" href="http://words.yuvi.in//categories/education">education</a>
-                            
-                            
-                            <span>&gt;</span>
-                            
-                            <a class="article-category-link" href="http://words.yuvi.in//categories/so-called-it">so-called-IT</a>
-                            
-                        </div>
-                    </div>
-                    
-                    
-                </div>
-                <div class="article-entry" itemprop="articleBody">
-                    <p>
-                        
-                    Note: I am just reformatting + putting this in one piece rather than have it split across multiple comments on reddit. Am not the original author
-Beautifully laid out by someone in the under-trafficked r/india:
- my state has 300+ engineering colleges and my parents decided that i am going to be an engineer. so, i wrote an exam and got into one institute (luckily i can make it into a good institute where there are campus interviews.
-                    </p>
-                    <p class="article-more-link">
-                        <a href="/story-average-indian-techie/">Read More</a>
-                    </p>
-                </div>
-
-                
-                <footer class="article-footer">
-                    <ul class="article-tag-list">
-                        
-                        <li class="article-tag-list-item">
-                            <a class="article-tag-list-link" href="http://words.yuvi.in//tags/education">education
-                            </a>
-                        </li>
-                        
-                        <li class="article-tag-list-item">
-                            <a class="article-tag-list-link" href="http://words.yuvi.in//tags/india">india
-                            </a>
-                        </li>
-                        
-                        <li class="article-tag-list-item">
-                            <a class="article-tag-list-link" href="http://words.yuvi.in//tags/reddit">reddit
-                            </a>
-                        </li>
-                        
-                    </ul>
-                </footer>
-                
-            </div>
-        </article>
-        
-        <article class="article article-type-post" itemscope itemprop="blogPost">
-            <div class="article-inner">
-                
-                
-                <header class="article-header">
-                    <h1 itemprop="name"><a class="article-title" href="/devlog-december-5-2011/">DevLog: December 5, 2011</a></h1>
-                </header>
-                
-                <div class="article-meta">
-                    <a href="/devlog-december-5-2011/" class="article-date">
-                        <time datetime='2011-12-05T20:31:14.000&#43;00:00' itemprop="datePublished">2011-12-05</time>
-                    </a>
-                    
-                    
-                    <div class="post-categories">
-                        <div class="article-category">
-                            
-                            
-                            <a class="article-category-link" href="http://words.yuvi.in//categories/devlog">devlog</a>
-                            
-                        </div>
-                    </div>
-                    
-                    
-                </div>
-                <div class="article-entry" itemprop="articleBody">
-                    <p>
-                        
-                    Am migrating to per-day posts now. More granularity + I can fit more info in. The ultimate aim of the DevLog is to keep me on my toes and make sure I don&#8217;t relapse into no-productivity hellholes. Daily DevLogs should do a better job at them.
- Spent some more time trying to get Kiwix to compile under OS X. Macports issue fixed, but more issues persist. It&#8217;s one damn complicated build system :| Not to mention that OS X sucks balls.
-                    </p>
-                    <p class="article-more-link">
-                        <a href="/devlog-december-5-2011/">Read More</a>
-                    </p>
-                </div>
-
-                
-                <footer class="article-footer">
-                    <ul class="article-tag-list">
-                        
-                        <li class="article-tag-list-item">
-                            <a class="article-tag-list-link" href="http://words.yuvi.in//tags/devlog">devlog
-                            </a>
-                        </li>
-                        
-                        <li class="article-tag-list-item">
-                            <a class="article-tag-list-link" href="http://words.yuvi.in//tags/devlog-dec-2011">devlog-dec-2011
-                            </a>
-                        </li>
-                        
-                    </ul>
-                </footer>
-                
-            </div>
-        </article>
-        
-
-        
-
-<nav id="page-nav">
-    
-    <a href="/page/12/" rel="prev" class="extend prev">&laquo; Prev</a>
-    
-    
-    
-    <a href="/">1</a>
-    
-    
-    
-    <a href="/page/2/">2</a>
-    
-    
-    
-    <a href="/page/3/">3</a>
-    
-    
-    
-    <a href="/page/4/">4</a>
-    
-    
-    
-    <a href="/page/5/">5</a>
-    
-    
-    
-    <a href="/page/6/">6</a>
-    
-    
-    
-    <a href="/page/7/">7</a>
-    
-    
-    
-    <a href="/page/8/">8</a>
-    
-    
-    
-    <a href="/page/9/">9</a>
-    
-    
-    
-    <a href="/page/10/">10</a>
-    
-    
-    
-    <a href="/page/11/">11</a>
-    
-    
-    
-    <a href="/page/12/">12</a>
-    
-    
-    
-    <span class="page-number current">13</span>
-    
-    
-    
-    <a href="/page/14/">14</a>
-    
-    
-    
-    <a href="/page/15/">15</a>
-    
-    
-    
-    <a href="/page/16/">16</a>
-    
-    
-    
-    <a href="/page/17/">17</a>
-    
-    
-    
-    <a href="/page/18/">18</a>
-    
-    
-    
-    <a href="/page/19/">19</a>
-    
-    
-    
-    <a href="/page/20/">20</a>
-    
-    
-    
-    <a href="/page/21/">21</a>
-    
-    
-    
-    <a href="/page/22/">22</a>
-    
-    
-    
-    <a href="/page/23/">23</a>
-    
-    
-    
-    <a href="/page/24/">24</a>
-    
-    
-
-    
-    <a href="/page/14/" rel="next" class="extend next">Next &raquo;</a>
-    
+	
 </nav>
 
+
+    <div class="profile">
+    <section id="wrapper">
+        <header id="header">
+            <a href='http://words.yuvi.in/about'>
+                <img id="avatar" class="2x" src="http://words.yuvi.in/images/avatar.png"/>
+            </a>
+            <h1>Yuvi Panda</h1>
+            
+        </header>
     </section>
-    <footer id="footer">
-    <div class="outer">
-        <div id="footer-info" class="inner">
-            &copy; 2017 Yuvi Panda&nbsp;
-            Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with theme <a href="https://github.com/carsonip/hugo-theme-minos">Minos</a>
-        </div>
-    </div>
-    
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow-night.min.css" integrity="sha256-2wL88NKUqvJi/ExflDzkzUumjUM73mcK2gBvBBeLvTk=" crossorigin="anonymous" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
-    
-    <script>
-        document.getElementById('main-nav-toggle').addEventListener('click', function () {
-            var header = document.getElementById('header');
-            if (header.classList.contains('mobile-on')) {
-                header.classList.remove('mobile-on');
-            } else {
-                header.classList.add('mobile-on');
-            }
-        });
-    </script>
-</footer>
 </div>
-</body>
+
+
+    <section id="wrapper" class="home">
+        <ul id="post-list">
+    
+    
+        
+            <li>
+                <aside class="dates">Feb 20</aside>
+                <a href='http://words.yuvi.in/passing-headers-proxying-nginx/'>
+                    Passing Headers along while Proxying with nginx
+                    
+                </a>
+            </li>
+        
+    
+    
+        
+            <li>
+                <aside class="dates">Jan 7</aside>
+                <a href='http://words.yuvi.in/program/'>
+                    My First Program
+                    
+                </a>
+            </li>
+        
+    
+    
+        
+            <li>
+                <aside class="dates">Jan 4</aside>
+                <a href='http://words.yuvi.in/devlog-december-26-2011/'>
+                    DevLog: December 26, 2011 – Jan 3rd, 2012
+                    
+                </a>
+            </li>
+        
+    
+    
+        
+            <li>
+                <aside class="dates">Dec 23</aside>
+                <a href='http://words.yuvi.in/devlog-december-23-2011/'>
+                    Devlog: December 23, 2011
+                    
+                </a>
+            </li>
+        
+    
+    
+        
+            <li>
+                <aside class="dates">Dec 21</aside>
+                <a href='http://words.yuvi.in/devlog-december-21-2011/'>
+                    DevLog: December 21 2011
+                    
+                </a>
+            </li>
+        
+    
+    
+        
+            <li>
+                <aside class="dates">Dec 12</aside>
+                <a href='http://words.yuvi.in/devlog-december-11-2011/'>
+                    DevLog: December 11, 2011
+                    
+                </a>
+            </li>
+        
+    
+    
+        
+            <li>
+                <aside class="dates">Dec 11</aside>
+                <a href='http://words.yuvi.in/devlog-december-10-2011/'>
+                    Devlog December 10, 2011
+                    
+                </a>
+            </li>
+        
+    
+    
+        
+            <li>
+                <aside class="dates">Dec 7</aside>
+                <a href='http://words.yuvi.in/devlog-december-7-2011/'>
+                    DevLog December 7, 2011
+                    
+                </a>
+            </li>
+        
+    
+    
+        
+            <li>
+                <aside class="dates">Dec 6</aside>
+                <a href='http://words.yuvi.in/story-average-indian-techie/'>
+                    Story of Average Indian ‘Techie’
+                    
+                </a>
+            </li>
+        
+    
+    
+        
+            <li>
+                <aside class="dates">Dec 5</aside>
+                <a href='http://words.yuvi.in/devlog-december-5-2011/'>
+                    DevLog: December 5, 2011
+                    
+                </a>
+            </li>
+        
+    
+</ul>
+
+        <nav id="post-nav">
+    
+        
+        <span class="prev">
+            <a href="/page/12/">
+                <span class="arrow">←</span> Newer Posts
+            </a>
+        </span>
+        
+        
+        <span class="next">
+            <a href="/page/14/">
+                Older Posts <span class="arrow">→</span>
+            </a>
+        </span>
+        
+    
+</nav>
+        <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="yuvipanda">
+        github
+    </a>
+    
+    <a class="symbol" href="yuvipanda">
+        twitterbird
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        CC0
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+    </section>
+
+    <script src="http://words.yuvi.in/js/jquery-2.2.4.min.js"></script>
+<script src="http://words.yuvi.in/js/main.js"></script>
+<script src="http://words.yuvi.in/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
 </html>

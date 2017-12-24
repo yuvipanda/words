@@ -1,653 +1,223 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Yuvi Panda</title>
+	<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		<meta name="description" content="Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python">
+		<meta name="generator" content="Hugo 0.31.1" />
+		<title>Yuvi Panda</title>
+		<link rel="shortcut icon" href="http://words.yuvi.in/images/favicon.ico">
+		<link rel="stylesheet" href="http://words.yuvi.in/css/style.css">
+		<link rel="stylesheet" href="http://words.yuvi.in/css/highlight.css">
 
-        <meta charset="utf-8">
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <meta name="description" content="Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
-        <meta property="og:title" content="Yuvi Panda" />
-    <meta property="og:description" content="Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:url" content="http://words.yuvi.in/" />
-    
+		
+		<link rel="stylesheet" href="http://words.yuvi.in/css/monosocialiconsfont.css">
+		
 
-    <link href="http://words.yuvi.in/index.xml" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
-    <link rel="shortcut icon" href="/favicon.png">
+		
 
-    <link href="http://words.yuvi.in/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
-    <link href="http://words.yuvi.in/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+		
+	</head>
 
-    <link rel="stylesheet" href="http://words.yuvi.in/css/style.css">
+	<body>
+    <nav class="main-nav">
+	
+	
+	<a href='http://words.yuvi.in/posts'>Archive</a>
+	<a href='http://words.yuvi.in/tags'>Tags</a>
+	<a href='http://words.yuvi.in/about'>About</a>
 
-    <link href="http://gmpg.org/xfn/11" rel="profile">
-    
-    <meta name="generator" content="Hugo 0.31.1" />
-</head>
+	
 
-<body>
-<div id="container">
-    <header id="header">
-    <div id="header-outer" class="outer">
-        <div id="header-inner" class="inner">
-            <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
-            <a id="logo" class="logo-text" href="http://words.yuvi.in/">Yuvi Panda</a>
-            <nav id="main-nav">
-                
-                <a class="main-nav-link" href="mailto:yuvipanda@gmail.com">email</a>
-                
-                <a class="main-nav-link" href="https://github.com/yuvipanda">github</a>
-                
-                <a class="main-nav-link" href="https://twitter.com/yuvipanda">twitter</a>
-                
-            </nav>
-            <nav id="sub-nav">
-                <div id="search-form-wrap">
-                </div>
-            </nav>
-        </div>
-    </div>
-</header>
-    <section id="main" class="outer">
-        
-        <article class="article article-type-post" itemscope itemprop="blogPost">
-            <div class="article-inner">
-                
-                
-                <header class="article-header">
-                    <h1 itemprop="name"><a class="article-title" href="/post/why-not-s2i/">Why repo2docker? Why not s2i?</a></h1>
-                </header>
-                
-                <div class="article-meta">
-                    <a href="/post/why-not-s2i/" class="article-date">
-                        <time datetime='2017-12-03T01:23:54.000-08:00' itemprop="datePublished">2017-12-03</time>
-                    </a>
-                    
-                    
-                    
-                </div>
-                <div class="article-entry" itemprop="articleBody">
-                    <p>
-                        
-                    The wonderful Graham Dumpleton asked on twitter why we built an entirely new tool (repo2docker) instead of using OpenShift&rsquo;s cool source2image tool.
-This is a very good question, and not a decision we made lightly. This post lays out some history, and explains the reasons we decided to stop using s2i. s2i is still a great tool for most production use cases, and you should use it if you&rsquo;re building anything like a PaaS!
-                    </p>
-                    <p class="article-more-link">
-                        <a href="/post/why-not-s2i/">Read More</a>
-                    </p>
-                </div>
-
-                
-                <footer class="article-footer">
-                    <ul class="article-tag-list">
-                        
-                        <li class="article-tag-list-item">
-                            <a class="article-tag-list-link" href="http://words.yuvi.in//tags/binder">binder
-                            </a>
-                        </li>
-                        
-                        <li class="article-tag-list-item">
-                            <a class="article-tag-list-link" href="http://words.yuvi.in//tags/code">code
-                            </a>
-                        </li>
-                        
-                    </ul>
-                </footer>
-                
-            </div>
-        </article>
-        
-        <article class="article article-type-post" itemscope itemprop="blogPost">
-            <div class="article-inner">
-                
-                
-                <header class="article-header">
-                    <h1 itemprop="name"><a class="article-title" href="/post/maintainerati-2017/">maintainerati 2017</a></h1>
-                </header>
-                
-                <div class="article-meta">
-                    <a href="/post/maintainerati-2017/" class="article-date">
-                        <time datetime='2017-10-10T23:15:01.000-07:00' itemprop="datePublished">2017-10-10</time>
-                    </a>
-                    
-                    
-                    
-                </div>
-                <div class="article-entry" itemprop="articleBody">
-                    <p>
-                        
-                    I was at maintainerati today, which was super fun &amp; quite intense! I highly appreciate GitHub &amp; the individuals involved in making it happen!
-Here&rsquo;s my key takeaways from this (and several other conversations over the last few weeks leading up to this):
- I am now a maintainer, which is quite a different thing from a core contributor or just a contributor. The power dynamics are very different, and so are the responsibilities.
-                    </p>
-                    <p class="article-more-link">
-                        <a href="/post/maintainerati-2017/">Read More</a>
-                    </p>
-                </div>
-
-                
-                <footer class="article-footer">
-                    <ul class="article-tag-list">
-                        
-                        <li class="article-tag-list-item">
-                            <a class="article-tag-list-link" href="http://words.yuvi.in//tags/opensource">opensource
-                            </a>
-                        </li>
-                        
-                    </ul>
-                </footer>
-                
-            </div>
-        </article>
-        
-        <article class="article article-type-post" itemscope itemprop="blogPost">
-            <div class="article-inner">
-                
-                
-                <header class="article-header">
-                    <h1 itemprop="name"><a class="article-title" href="/post/designing-data-intensive-applications/">designing data intensive applications</a></h1>
-                </header>
-                
-                <div class="article-meta">
-                    <a href="/post/designing-data-intensive-applications/" class="article-date">
-                        <time datetime='2017-07-02T22:47:06.000-07:00' itemprop="datePublished">2017-07-02</time>
-                    </a>
-                    
-                    
-                    
-                </div>
-                <div class="article-entry" itemprop="articleBody">
-                    <p>
-                        
-                    I&rsquo;ve been reading Designing Data Intensive Applications book &amp; am using this post to keep notes!
-I&rsquo;ve picked up ideas on scaling systems through the years, but never actually sat down to actually study them semi-formally. This seems like a great start to it!
-It&rsquo;s a pretty big book, and it&rsquo;s gonna take me a while to go through it :) Will update these notes as I go! Trying to do a chapter a week!
-                    </p>
-                    <p class="article-more-link">
-                        <a href="/post/designing-data-intensive-applications/">Read More</a>
-                    </p>
-                </div>
-
-                
-                <footer class="article-footer">
-                    <ul class="article-tag-list">
-                        
-                        <li class="article-tag-list-item">
-                            <a class="article-tag-list-link" href="http://words.yuvi.in//tags/learning">learning
-                            </a>
-                        </li>
-                        
-                    </ul>
-                </footer>
-                
-            </div>
-        </article>
-        
-        <article class="article article-type-post" itemscope itemprop="blogPost">
-            <div class="article-inner">
-                
-                
-                <header class="article-header">
-                    <h1 itemprop="name"><a class="article-title" href="/post/think-os/">think os</a></h1>
-                </header>
-                
-                <div class="article-meta">
-                    <a href="/post/think-os/" class="article-date">
-                        <time datetime='2017-05-13T11:41:20.000-07:00' itemprop="datePublished">2017-05-13</time>
-                    </a>
-                    
-                    
-                    
-                </div>
-                <div class="article-entry" itemprop="articleBody">
-                    <p>
-                        
-                    Following a trail from a wonderful Julia Evans post led me to Allen Downey&rsquo;s nice textbook manifesto. Also led me to the nice Think OS book, which seems like a super nice introduction to Operating System principles.
-It is short enough (~100 pages) that I wanted to read through it. I&rsquo;ve spent a good chunk of time absorbing how Operating Systems work by dint of diving into things and working through them, but it would be nice to get a refresher on the basics.
-                    </p>
-                    <p class="article-more-link">
-                        <a href="/post/think-os/">Read More</a>
-                    </p>
-                </div>
-
-                
-                <footer class="article-footer">
-                    <ul class="article-tag-list">
-                        
-                        <li class="article-tag-list-item">
-                            <a class="article-tag-list-link" href="http://words.yuvi.in//tags/learning">learning
-                            </a>
-                        </li>
-                        
-                    </ul>
-                </footer>
-                
-            </div>
-        </article>
-        
-        <article class="article article-type-post" itemscope itemprop="blogPost">
-            <div class="article-inner">
-                
-                
-                <header class="article-header">
-                    <h1 itemprop="name"><a class="article-title" href="/post/learning-selinux/">learning selinux and apparmor</a></h1>
-                </header>
-                
-                <div class="article-meta">
-                    <a href="/post/learning-selinux/" class="article-date">
-                        <time datetime='2017-04-18T00:01:26.000-07:00' itemprop="datePublished">2017-04-18</time>
-                    </a>
-                    
-                    
-                    
-                </div>
-                <div class="article-entry" itemprop="articleBody">
-                    <p>
-                        
-                    I am trying to understand SELinux and AppArmor, and collecting resources here as I learn. k
-SELinux for mere mortals (2014)  This was the first video I watched, and it helped me understanding what SELinux does at a fundamental basic level. It&rsquo;s probably useless in a container-filled world (where I doubt Fedora shipes pre-configured SELinux rules for my containers), but it helped me think I understood types / labels, so that seems like a positive step?
-                    </p>
-                    <p class="article-more-link">
-                        <a href="/post/learning-selinux/">Read More</a>
-                    </p>
-                </div>
-
-                
-                <footer class="article-footer">
-                    <ul class="article-tag-list">
-                        
-                        <li class="article-tag-list-item">
-                            <a class="article-tag-list-link" href="http://words.yuvi.in//tags/learning">learning
-                            </a>
-                        </li>
-                        
-                        <li class="article-tag-list-item">
-                            <a class="article-tag-list-link" href="http://words.yuvi.in//tags/linux">linux
-                            </a>
-                        </li>
-                        
-                    </ul>
-                </footer>
-                
-            </div>
-        </article>
-        
-        <article class="article article-type-post" itemscope itemprop="blogPost">
-            <div class="article-inner">
-                
-                
-                <header class="article-header">
-                    <h1 itemprop="name"><a class="article-title" href="/post/things-to-build/">things to build</a></h1>
-                </header>
-                
-                <div class="article-meta">
-                    <a href="/post/things-to-build/" class="article-date">
-                        <time datetime='2017-04-15T13:24:23.000-07:00' itemprop="datePublished">2017-04-15</time>
-                    </a>
-                    
-                    
-                    
-                </div>
-                <div class="article-entry" itemprop="articleBody">
-                    <p>
-                        
-                    This is a running list of things I want to build!
-There&rsquo;s an analogous running list of things I want to learn. Things move between them :) I also have higher standards of documentation (other people should be able to use it) before marking these as complete.
- kubernetes-login A helper to openssh that allows users to log in to a configurable user pod running on a kubernetes cluster. Should ideally support scp / sftp too.
-                    </p>
-                    <p class="article-more-link">
-                        <a href="/post/things-to-build/">Read More</a>
-                    </p>
-                </div>
-
-                
-                <footer class="article-footer">
-                    <ul class="article-tag-list">
-                        
-                        <li class="article-tag-list-item">
-                            <a class="article-tag-list-link" href="http://words.yuvi.in//tags/learning">learning
-                            </a>
-                        </li>
-                        
-                    </ul>
-                </footer>
-                
-            </div>
-        </article>
-        
-        <article class="article article-type-post" itemscope itemprop="blogPost">
-            <div class="article-inner">
-                
-                
-                <header class="article-header">
-                    <h1 itemprop="name"><a class="article-title" href="/post/python-gil-resources/">python gil resources</a></h1>
-                </header>
-                
-                <div class="article-meta">
-                    <a href="/post/python-gil-resources/" class="article-date">
-                        <time datetime='2017-04-05T23:18:19.000-07:00' itemprop="datePublished">2017-04-05</time>
-                    </a>
-                    
-                    
-                    
-                </div>
-                <div class="article-entry" itemprop="articleBody">
-                    <p>
-                        
-                    I was in a conversation about the Python GIL with friends a few days ago, and realized that my understanding of the specifics of the GIL problem were super hand-wavy &amp; unstructured. So I spent some time collecting resources to learn more, and now have a better understanding!
-Python&rsquo;s Infamous GIL (Larry Hastings) This was a great introduction to the history of the GIL, why it was necessary &amp; reasons why getting rid of it is complicated.
-                    </p>
-                    <p class="article-more-link">
-                        <a href="/post/python-gil-resources/">Read More</a>
-                    </p>
-                </div>
-
-                
-                <footer class="article-footer">
-                    <ul class="article-tag-list">
-                        
-                        <li class="article-tag-list-item">
-                            <a class="article-tag-list-link" href="http://words.yuvi.in//tags/python">python
-                            </a>
-                        </li>
-                        
-                        <li class="article-tag-list-item">
-                            <a class="article-tag-list-link" href="http://words.yuvi.in//tags/learning">learning
-                            </a>
-                        </li>
-                        
-                    </ul>
-                </footer>
-                
-            </div>
-        </article>
-        
-        <article class="article article-type-post" itemscope itemprop="blogPost">
-            <div class="article-inner">
-                
-                
-                <header class="article-header">
-                    <h1 itemprop="name"><a class="article-title" href="/post/systemd-simple-containment/">systemd simple containment for GUI applications &amp; shells</a></h1>
-                </header>
-                
-                <div class="article-meta">
-                    <a href="/post/systemd-simple-containment/" class="article-date">
-                        <time datetime='2017-03-31T23:23:52.000-07:00' itemprop="datePublished">2017-03-31</time>
-                    </a>
-                    
-                    
-                    
-                </div>
-                <div class="article-entry" itemprop="articleBody">
-                    <p>
-                        
-                    I earlier had a vaguely working setup for making sure browsers, shells and other applications don&rsquo;t eat all RAM / CPU on my machine with systemd + sudo + shell scripts.
-It was a hacky solution, and also had complications when used to launch shells. It wasn&rsquo;t passing in all the environment varialbes it should, causing interesting-to-debug issues. sudo rules were complex, and hard to do securely.
-I had also been looking for an excuse to learn more Golang, so I ended up writing systemd-simple-containment or ssc.
-                    </p>
-                    <p class="article-more-link">
-                        <a href="/post/systemd-simple-containment/">Read More</a>
-                    </p>
-                </div>
-
-                
-                <footer class="article-footer">
-                    <ul class="article-tag-list">
-                        
-                        <li class="article-tag-list-item">
-                            <a class="article-tag-list-link" href="http://words.yuvi.in//tags/systemd">systemd
-                            </a>
-                        </li>
-                        
-                        <li class="article-tag-list-item">
-                            <a class="article-tag-list-link" href="http://words.yuvi.in//tags/learning">learning
-                            </a>
-                        </li>
-                        
-                        <li class="article-tag-list-item">
-                            <a class="article-tag-list-link" href="http://words.yuvi.in//tags/code">code
-                            </a>
-                        </li>
-                        
-                    </ul>
-                </footer>
-                
-            </div>
-        </article>
-        
-        <article class="article article-type-post" itemscope itemprop="blogPost">
-            <div class="article-inner">
-                
-                
-                <header class="article-header">
-                    <h1 itemprop="name"><a class="article-title" href="/post/systemd-gui-applications/">systemd gui applications</a></h1>
-                </header>
-                
-                <div class="article-meta">
-                    <a href="/post/systemd-gui-applications/" class="article-date">
-                        <time datetime='2017-03-29T20:47:10.000-07:00' itemprop="datePublished">2017-03-29</time>
-                    </a>
-                    
-                    
-                    
-                </div>
-                <div class="article-entry" itemprop="articleBody">
-                    <p>
-                        
-                    Update: There&rsquo;s a follow-up post with a simpler solution now.
-Ever since I read Jessie Frazelle&rsquo;s amazing setup (1, 2, 3) for running GUI applications in docker containers, I&rsquo;ve wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&rsquo;m also not as awesome (or knowledgeable!
-                    </p>
-                    <p class="article-more-link">
-                        <a href="/post/systemd-gui-applications/">Read More</a>
-                    </p>
-                </div>
-
-                
-                <footer class="article-footer">
-                    <ul class="article-tag-list">
-                        
-                        <li class="article-tag-list-item">
-                            <a class="article-tag-list-link" href="http://words.yuvi.in//tags/systemd">systemd
-                            </a>
-                        </li>
-                        
-                        <li class="article-tag-list-item">
-                            <a class="article-tag-list-link" href="http://words.yuvi.in//tags/learning">learning
-                            </a>
-                        </li>
-                        
-                        <li class="article-tag-list-item">
-                            <a class="article-tag-list-link" href="http://words.yuvi.in//tags/code">code
-                            </a>
-                        </li>
-                        
-                    </ul>
-                </footer>
-                
-            </div>
-        </article>
-        
-        <article class="article article-type-post" itemscope itemprop="blogPost">
-            <div class="article-inner">
-                
-                
-                <header class="article-header">
-                    <h1 itemprop="name"><a class="article-title" href="/post/things-to-learn/">things to learn</a></h1>
-                </header>
-                
-                <div class="article-meta">
-                    <a href="/post/things-to-learn/" class="article-date">
-                        <time datetime='2017-03-29T15:27:57.000-07:00' itemprop="datePublished">2017-03-29</time>
-                    </a>
-                    
-                    
-                    
-                </div>
-                <div class="article-entry" itemprop="articleBody">
-                    <p>
-                        
-                    Keeping a running list of things I want to learn!
-There&rsquo;s also a list of things I want to build.
- How to use org mode properly? Should I use it for notes over markdown? Develop a deep understanding of how networks work. How do linux network namespaces work? How to run GUI apps with systemd?  I did learn! Both a hacky version and a much better version that also taught me some Go!
-                    </p>
-                    <p class="article-more-link">
-                        <a href="/post/things-to-learn/">Read More</a>
-                    </p>
-                </div>
-
-                
-                <footer class="article-footer">
-                    <ul class="article-tag-list">
-                        
-                        <li class="article-tag-list-item">
-                            <a class="article-tag-list-link" href="http://words.yuvi.in//tags/learning">learning
-                            </a>
-                        </li>
-                        
-                    </ul>
-                </footer>
-                
-            </div>
-        </article>
-        
-
-        
-
-<nav id="page-nav">
-    
-    
-    
-    <span class="page-number current">1</span>
-    
-    
-    
-    <a href="/page/2/">2</a>
-    
-    
-    
-    <a href="/page/3/">3</a>
-    
-    
-    
-    <a href="/page/4/">4</a>
-    
-    
-    
-    <a href="/page/5/">5</a>
-    
-    
-    
-    <a href="/page/6/">6</a>
-    
-    
-    
-    <a href="/page/7/">7</a>
-    
-    
-    
-    <a href="/page/8/">8</a>
-    
-    
-    
-    <a href="/page/9/">9</a>
-    
-    
-    
-    <a href="/page/10/">10</a>
-    
-    
-    
-    <a href="/page/11/">11</a>
-    
-    
-    
-    <a href="/page/12/">12</a>
-    
-    
-    
-    <a href="/page/13/">13</a>
-    
-    
-    
-    <a href="/page/14/">14</a>
-    
-    
-    
-    <a href="/page/15/">15</a>
-    
-    
-    
-    <a href="/page/16/">16</a>
-    
-    
-    
-    <a href="/page/17/">17</a>
-    
-    
-    
-    <a href="/page/18/">18</a>
-    
-    
-    
-    <a href="/page/19/">19</a>
-    
-    
-    
-    <a href="/page/20/">20</a>
-    
-    
-    
-    <a href="/page/21/">21</a>
-    
-    
-    
-    <a href="/page/22/">22</a>
-    
-    
-    
-    <a href="/page/23/">23</a>
-    
-    
-    
-    <a href="/page/24/">24</a>
-    
-    
-
-    
-    <a href="/page/2/" rel="next" class="extend next">Next &raquo;</a>
-    
+	
 </nav>
 
+
+    <div class="profile">
+    <section id="wrapper">
+        <header id="header">
+            <a href='http://words.yuvi.in/about'>
+                <img id="avatar" class="2x" src="http://words.yuvi.in/images/avatar.png"/>
+            </a>
+            <h1>Yuvi Panda</h1>
+            
+        </header>
     </section>
-    <footer id="footer">
-    <div class="outer">
-        <div id="footer-info" class="inner">
-            &copy; 2017 Yuvi Panda&nbsp;
-            Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with theme <a href="https://github.com/carsonip/hugo-theme-minos">Minos</a>
-        </div>
-    </div>
-    
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow-night.min.css" integrity="sha256-2wL88NKUqvJi/ExflDzkzUumjUM73mcK2gBvBBeLvTk=" crossorigin="anonymous" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
-    
-    <script>
-        document.getElementById('main-nav-toggle').addEventListener('click', function () {
-            var header = document.getElementById('header');
-            if (header.classList.contains('mobile-on')) {
-                header.classList.remove('mobile-on');
-            } else {
-                header.classList.add('mobile-on');
-            }
-        });
-    </script>
-</footer>
 </div>
-</body>
+
+
+    <section id="wrapper" class="home">
+        <ul id="post-list">
+    
+    
+        
+            <li>
+                <aside class="dates">Dec 3</aside>
+                <a href='http://words.yuvi.in/post/why-not-s2i/'>
+                    Why repo2docker? Why not s2i?
+                    
+                </a>
+            </li>
+        
+    
+    
+        
+            <li>
+                <aside class="dates">Oct 10</aside>
+                <a href='http://words.yuvi.in/post/maintainerati-2017/'>
+                    maintainerati 2017
+                    
+                </a>
+            </li>
+        
+    
+    
+        
+            <li>
+                <aside class="dates">Jul 2</aside>
+                <a href='http://words.yuvi.in/post/designing-data-intensive-applications/'>
+                    designing data intensive applications
+                    
+                </a>
+            </li>
+        
+    
+    
+        
+            <li>
+                <aside class="dates">May 13</aside>
+                <a href='http://words.yuvi.in/post/think-os/'>
+                    think os
+                    
+                </a>
+            </li>
+        
+    
+    
+        
+            <li>
+                <aside class="dates">Apr 18</aside>
+                <a href='http://words.yuvi.in/post/learning-selinux/'>
+                    learning selinux and apparmor
+                    
+                </a>
+            </li>
+        
+    
+    
+        
+            <li>
+                <aside class="dates">Apr 15</aside>
+                <a href='http://words.yuvi.in/post/things-to-build/'>
+                    things to build
+                    
+                </a>
+            </li>
+        
+    
+    
+        
+            <li>
+                <aside class="dates">Apr 5</aside>
+                <a href='http://words.yuvi.in/post/python-gil-resources/'>
+                    python gil resources
+                    
+                </a>
+            </li>
+        
+    
+    
+        
+            <li>
+                <aside class="dates">Mar 31</aside>
+                <a href='http://words.yuvi.in/post/systemd-simple-containment/'>
+                    systemd simple containment for GUI applications &amp; shells
+                    
+                </a>
+            </li>
+        
+    
+    
+        
+            <li>
+                <aside class="dates">Mar 29</aside>
+                <a href='http://words.yuvi.in/post/systemd-gui-applications/'>
+                    systemd gui applications
+                    
+                </a>
+            </li>
+        
+    
+    
+        
+            <li>
+                <aside class="dates">Mar 29</aside>
+                <a href='http://words.yuvi.in/post/things-to-learn/'>
+                    things to learn
+                    
+                </a>
+            </li>
+        
+    
+</ul>
+
+        <nav id="post-nav">
+    
+        
+        
+        <span class="next">
+            <a href="/page/2/">
+                Older Posts <span class="arrow">→</span>
+            </a>
+        </span>
+        
+    
+</nav>
+        <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="yuvipanda">
+        github
+    </a>
+    
+    <a class="symbol" href="yuvipanda">
+        twitterbird
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        CC0
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+    </section>
+
+    <script src="http://words.yuvi.in/js/jquery-2.2.4.min.js"></script>
+<script src="http://words.yuvi.in/js/main.js"></script>
+<script src="http://words.yuvi.in/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
 </html>
