@@ -1,62 +1,76 @@
-	<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<!DOCTYPE html>
+<html>
 <head>
-  <link href="http://gmpg.org/xfn/11" rel="profile">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.31.1" />
+    <title>systemd gui applications // Yuvi Panda</title>
 
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+        <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+        <meta property="og:title" content="systemd gui applications" />
+    <meta property="og:description" content="Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="http://words.yuvi.in/post/systemd-gui-applications/" />
+    
 
-  
-  <title>systemd gui applications &middot; Yuvi Panda</title>
-  
+    <link href="" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
+    <link rel="shortcut icon" href="/favicon.png">
 
-  
-  <link rel="stylesheet" href="http://words.yuvi.in/css/poole.css">
-  <link rel="stylesheet" href="http://words.yuvi.in/css/syntax.css">
-  <link rel="stylesheet" href="http://words.yuvi.in/css/hyde.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Raleway">
+    <link href="http://words.yuvi.in/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+    <link href="http://words.yuvi.in/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
 
-  
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="http://words.yuvi.in/css/style.css">
 
-  
-  <link href="" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    
+    <meta name="generator" content="Hugo 0.31.1" />
 </head>
 
-	<body class=" ">
-		<div class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <a href="http://words.yuvi.in/"><h1>Yuvi Panda</h1></a>
-      <p class="lead">
-       Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python 
-      </p>
+
+<body>
+<div id="container">
+    <header id="header">
+    <div id="header-outer" class="outer">
+        <div id="header-inner" class="inner">
+            <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+            <a id="logo" class="logo-text" href="http://words.yuvi.in/">Yuvi Panda</a>
+            <nav id="main-nav">
+                
+                <a class="main-nav-link" href="mailto:yuvipanda@gmail.com">email</a>
+                
+                <a class="main-nav-link" href="https://github.com/yuvipanda">github</a>
+                
+                <a class="main-nav-link" href="https://twitter.com/yuvipanda">twitter</a>
+                
+            </nav>
+            <nav id="sub-nav">
+                <div id="search-form-wrap">
+                </div>
+            </nav>
+        </div>
     </div>
-
-    <ul class="sidebar-nav">
-      
-        <li><a href="mailto:yuvipanda@gmail.com"> email </a></li>
-      
-        <li><a href="https://github.com/yuvipanda"> github </a></li>
-      
-        <li><a href="https://twitter.com/yuvipanda"> twitter </a></li>
-      
-    </ul>
-
-    <p>CC0</p>
-    <p><small><a href="mailto:yuvipanda@gmail.com">Email me</a> to ask for Signal / WhatsApp / Telegram contact!</small></p>
-  </div>
-</div>
-
-
-		<div class="content container">
-			<div class="post">
-			 	<h1>systemd gui applications</h1>
-			  <span class="post-date">Wed, Mar 29, 2017</span>
-			      
+</header>
+    <section id="main" class="outer">
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        <header class="article-header">
+            <h1 class="article-title" itemprop="name">systemd gui applications</h1>
+        </header>
+        
+        <div class="article-meta">
+            <a href="/post/systemd-gui-applications/" class="article-date">
+                <time datetime='2017-03-29T20:47:10.000-07:00' itemprop="datePublished">2017-03-29</time>
+            </a>
+            
+            
+            
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            
 
 <p><strong>Update</strong>: There&rsquo;s a <a href="//words.yuvi.in/post/systemd-simple-containment/">follow-up post</a> with a simpler solution now.</p>
 
@@ -128,10 +142,95 @@ exec sudo systemd-run \
 
 <p>I&rsquo;d normally have just never written this post, on account of &lsquo;oh no, it is imperfect&rsquo; or something like that. However, that also seems to have come in the way of ability to find joy in learning simple things :D So I shall follow <a href="https://jvns.ca/">b0rk</a>&rsquo;s lead in spending time <a href="http://words.yuvi.in/post/things-to-learn/">learning</a> for fun again :)</p>
 
-			</div>
+        </div>
 
-			
-		</div>
+        
+        
+        <div class="article-toc" >
+            <h3>Contents</h3>
+            <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#gui-applications">GUI applications</a></li>
+<li><a href="#cli">CLI</a></li>
+<li><a href="#to-do">To do</a></li>
+</ul></li>
+</ul>
+</nav>
+        </div>
+        
+        
 
-  </body>
+        
+
+
+        
+        <footer class="article-footer">
+            <ul class="article-tag-list">
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="http://words.yuvi.in//tags/systemd">systemd
+                    </a>
+                </li>
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="http://words.yuvi.in//tags/learning">learning
+                    </a>
+                </li>
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="http://words.yuvi.in//tags/code">code
+                    </a>
+                </li>
+                
+            </ul>
+        </footer>
+        
+    </div>
+    <nav id="article-nav">
+    
+    <a href="/post/systemd-simple-containment/" id="article-nav-newer" class="article-nav-link-wrap">
+        <div class="article-nav-title"><span>&lt;</span>&nbsp;
+            systemd simple containment for GUI applications &amp; shells
+        </div>
+    </a>
+    
+    
+    <a href="/post/things-to-learn/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">things to learn&nbsp;<span>&gt;</span></div>
+    </a>
+    
+</nav>
+</article>
+
+        
+    </section>
+    <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2017 Yuvi Panda&nbsp;
+            Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with theme <a href="https://github.com/carsonip/hugo-theme-minos">Minos</a>
+        </div>
+    </div>
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow-night.min.css" integrity="sha256-2wL88NKUqvJi/ExflDzkzUumjUM73mcK2gBvBBeLvTk=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    <script>
+        document.getElementById('main-nav-toggle').addEventListener('click', function () {
+            var header = document.getElementById('header');
+            if (header.classList.contains('mobile-on')) {
+                header.classList.remove('mobile-on');
+            } else {
+                header.classList.add('mobile-on');
+            }
+        });
+    </script>
+</footer>
+</div>
+</body>
 </html>

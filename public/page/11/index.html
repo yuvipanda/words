@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Yuvi Panda</title>
+
+        <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+        <meta property="og:title" content="Yuvi Panda" />
+    <meta property="og:description" content="Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="http://words.yuvi.in/" />
+    
+
+    <link href="http://words.yuvi.in/index.xml" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
+    <link rel="shortcut icon" href="/favicon.png">
+
+    <link href="http://words.yuvi.in/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+    <link href="http://words.yuvi.in/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="http://words.yuvi.in/css/style.css">
+
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    
+    <meta name="generator" content="Hugo 0.31.1" />
+</head>
+
+<body>
+<div id="container">
+    <header id="header">
+    <div id="header-outer" class="outer">
+        <div id="header-inner" class="inner">
+            <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+            <a id="logo" class="logo-text" href="http://words.yuvi.in/">Yuvi Panda</a>
+            <nav id="main-nav">
+                
+                <a class="main-nav-link" href="mailto:yuvipanda@gmail.com">email</a>
+                
+                <a class="main-nav-link" href="https://github.com/yuvipanda">github</a>
+                
+                <a class="main-nav-link" href="https://twitter.com/yuvipanda">twitter</a>
+                
+            </nav>
+            <nav id="sub-nav">
+                <div id="search-form-wrap">
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+    <section id="main" class="outer">
+        
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+            <div class="article-inner">
+                
+                
+                <header class="article-header">
+                    <h1 itemprop="name"><a class="article-title" href="/android-regex-bug-null-replacement-matcher-replaceall/">Android RegEx bug: ‘null’ replacement with Matcher.replaceAll</a></h1>
+                </header>
+                
+                <div class="article-meta">
+                    <a href="/android-regex-bug-null-replacement-matcher-replaceall/" class="article-date">
+                        <time datetime='2013-03-22T22:18:21.000&#43;00:00' itemprop="datePublished">2013-03-22</time>
+                    </a>
+                    
+                    
+                    <div class="post-categories">
+                        <div class="article-category">
+                            
+                            
+                            <a class="article-category-link" href="http://words.yuvi.in//categories/code">code</a>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="article-entry" itemprop="articleBody">
+                    <p>
+                        
+                    Android&#8217;s Regular Expressions engine is API compatible with the generic Java implementation, but under the hood uses ICU&#8217;s RegEx engine. This usually causes no problems, until it does and then you&#8217;re sortof fucked, but not really.
+On a recent project, a subtle bug in Android&#8217;s Matcher.replaceAll behavior bit me. When replacing values of captured groups ('$1'&lt;/code,&lt;code&gt;'$2', etc), Android&#8217;s implementation replaced a reference to an empty group with the literal string 'null' instead of just skipping it (aka replacing with empty string ''), which is what most other Java implemetations do.
+                    </p>
+                    <p class="article-more-link">
+                        <a href="/android-regex-bug-null-replacement-matcher-replaceall/">Read More</a>
+                    </p>
+                </div>
+
+                
+            </div>
+        </article>
+        
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+            <div class="article-inner">
+                
+                
+                <header class="article-header">
+                    <h1 itemprop="name"><a class="article-title" href="/file-bug-report/">How to file a bug report</a></h1>
+                </header>
+                
+                <div class="article-meta">
+                    <a href="/file-bug-report/" class="article-date">
+                        <time datetime='2013-03-22T19:24:21.000&#43;00:00' itemprop="datePublished">2013-03-22</time>
+                    </a>
+                    
+                    
+                    <div class="post-categories">
+                        <div class="article-category">
+                            
+                            
+                            <a class="article-category-link" href="http://words.yuvi.in//categories/links">links</a>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="article-entry" itemprop="articleBody">
+                    <p>
+                        
+                    Valerie, our awesome &#8216;Bug Wrangler in Training&#8217;, has written a nice blog post on how to report your first bug.
+                    </p>
+                    <p class="article-more-link">
+                        <a href="/file-bug-report/">Read More</a>
+                    </p>
+                </div>
+
+                
+            </div>
+        </article>
+        
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+            <div class="article-inner">
+                
+                
+                <header class="article-header">
+                    <h1 itemprop="name"><a class="article-title" href="/blogging-more-often-bye-bye-twitter/">Blogging more often, bye bye Twitter</a></h1>
+                </header>
+                
+                <div class="article-meta">
+                    <a href="/blogging-more-often-bye-bye-twitter/" class="article-date">
+                        <time datetime='2013-03-22T14:43:46.000&#43;00:00' itemprop="datePublished">2013-03-22</time>
+                    </a>
+                    
+                    
+                    <div class="post-categories">
+                        <div class="article-category">
+                            
+                            
+                            <a class="article-category-link" href="http://words.yuvi.in//categories/personal">personal</a>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="article-entry" itemprop="articleBody">
+                    <p>
+                        
+                    I&#8217;ve been mostly off Twitter for a while now, interacting with it rarely, and only on my Phone. While I&#8217;ve had a vague feeling of uneasiness ever since they unveiled their now business friendly developer policies, it really hit home when my favorite Android twitter app, Falcon Pro, hit Twitter&#8217;s arbitrary user token limit (and Twitter declined to care). That, plus the Google Reader saga have jolted me out of complacency a bit.
+                    </p>
+                    <p class="article-more-link">
+                        <a href="/blogging-more-often-bye-bye-twitter/">Read More</a>
+                    </p>
+                </div>
+
+                
+            </div>
+        </article>
+        
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+            <div class="article-inner">
+                
+                
+                <header class="article-header">
+                    <h1 itemprop="name"><a class="article-title" href="/mindless-television/">Mindless Television</a></h1>
+                </header>
+                
+                <div class="article-meta">
+                    <a href="/mindless-television/" class="article-date">
+                        <time datetime='2013-03-22T13:40:52.000&#43;00:00' itemprop="datePublished">2013-03-22</time>
+                    </a>
+                    
+                    
+                    <div class="post-categories">
+                        <div class="article-category">
+                            
+                            
+                            <a class="article-category-link" href="http://words.yuvi.in//categories/links">links</a>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="article-entry" itemprop="articleBody">
+                    <p>
+                        
+                    Somehow, I found http://neave.com/television earlier today. Addictive.
+P.S. Blogging from a tablet with a bluetooth keyboard is not bad at all.
+                    </p>
+                    <p class="article-more-link">
+                        <a href="/mindless-television/">Read More</a>
+                    </p>
+                </div>
+
+                
+            </div>
+        </article>
+        
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+            <div class="article-inner">
+                
+                
+                <header class="article-header">
+                    <h1 itemprop="name"><a class="article-title" href="/choices/">Choices</a></h1>
+                </header>
+                
+                <div class="article-meta">
+                    <a href="/choices/" class="article-date">
+                        <time datetime='2013-03-17T10:24:42.000&#43;00:00' itemprop="datePublished">2013-03-17</time>
+                    </a>
+                    
+                    
+                    <div class="post-categories">
+                        <div class="article-category">
+                            
+                            
+                            <a class="article-category-link" href="http://words.yuvi.in//categories/personal">personal</a>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="article-entry" itemprop="articleBody">
+                    <p>
+                        
+                    They suck. It&#8217;s easy when it is &#8216;useless test to take&#8217; vs &#8216;GSoC&#8217;. Painful for a lot of other things. Ugh.
+                    </p>
+                    <p class="article-more-link">
+                        <a href="/choices/">Read More</a>
+                    </p>
+                </div>
+
+                
+            </div>
+        </article>
+        
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+            <div class="article-inner">
+                
+                
+                <header class="article-header">
+                    <h1 itemprop="name"><a class="article-title" href="/open-license-everything/">Open License everything!</a></h1>
+                </header>
+                
+                <div class="article-meta">
+                    <a href="/open-license-everything/" class="article-date">
+                        <time datetime='2013-02-24T10:08:41.000&#43;00:00' itemprop="datePublished">2013-02-24</time>
+                    </a>
+                    
+                    
+                    <div class="post-categories">
+                        <div class="article-category">
+                            
+                            
+                            <a class="article-category-link" href="http://words.yuvi.in//categories/personal">personal</a>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="article-entry" itemprop="articleBody">
+                    <p>
+                        
+                    Should have done this a while back. Added a CC BY mark to the blog. Will add a notice to the front page as well, stating that all media I produce (when not bound to someone else&#8217;s copyright) is CC BY. I think code is already taken care of, but I&#8217;ll add a note here saying that all code I release (unless explicitly licensed otherwise) is CC0 Licensed.
+Now to actually produce something of value&#8230;
+                    </p>
+                    <p class="article-more-link">
+                        <a href="/open-license-everything/">Read More</a>
+                    </p>
+                </div>
+
+                
+            </div>
+        </article>
+        
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+            <div class="article-inner">
+                
+                
+                <header class="article-header">
+                    <h1 itemprop="name"><a class="article-title" href="/immortality-of-youth/">Immortality of Youth</a></h1>
+                </header>
+                
+                <div class="article-meta">
+                    <a href="/immortality-of-youth/" class="article-date">
+                        <time datetime='2013-02-02T20:38:48.000&#43;00:00' itemprop="datePublished">2013-02-02</time>
+                    </a>
+                    
+                    
+                    <div class="post-categories">
+                        <div class="article-category">
+                            
+                            
+                            <a class="article-category-link" href="http://words.yuvi.in//categories/personal">personal</a>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="article-entry" itemprop="articleBody">
+                    <p>
+                        
+                    Reading this blog post from Wesley CrusherWil Wheaton reminded me first of my visit to the beach a few hours before Cyclone Nilam hit landfall (at the Thiruvanmiyur Beach). The fact that I couldn&#8217;t stand in one place (wind) and was constantly being attacked by sand &#8211; it was exhilarating.
+The blog post also reminded me of how much I mis-treat my body. I&#8217;m surprised I&#8217;m not bedridden, immovable and with a host of diseases.
+                    </p>
+                    <p class="article-more-link">
+                        <a href="/immortality-of-youth/">Read More</a>
+                    </p>
+                </div>
+
+                
+            </div>
+        </article>
+        
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+            <div class="article-inner">
+                
+                
+                <header class="article-header">
+                    <h1 itemprop="name"><a class="article-title" href="/worse-worse/">Worse is Worse</a></h1>
+                </header>
+                
+                <div class="article-meta">
+                    <a href="/worse-worse/" class="article-date">
+                        <time datetime='2013-01-27T16:59:06.000&#43;00:00' itemprop="datePublished">2013-01-27</time>
+                    </a>
+                    
+                    
+                    <div class="post-categories">
+                        <div class="article-category">
+                            
+                            
+                            <a class="article-category-link" href="http://words.yuvi.in//categories/code">code</a>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="article-entry" itemprop="articleBody">
+                    <p>
+                        
+                    Richard Gabriel&#8217;s Worse is Better (falsly attributed to jwz by many), is a piece on how LISP lost out to C, despite being &#8216;better&#8217;.
+Jim Waldo&#8217;s Worse is Worse notes, quite accurately, that what us geeks consider &#8216;better&#8217; might not what is, in the context of the universe at large, &#8216;better&#8217;. To quote,
+ [&#8230;] what we see is that better is a complicated notion, and can depend on a variety of different metrics.
+                    </p>
+                    <p class="article-more-link">
+                        <a href="/worse-worse/">Read More</a>
+                    </p>
+                </div>
+
+                
+            </div>
+        </article>
+        
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+            <div class="article-inner">
+                
+                
+                <header class="article-header">
+                    <h1 itemprop="name"><a class="article-title" href="/month-awesome/">The Month of Awesome (2012 Edition)</a></h1>
+                </header>
+                
+                <div class="article-meta">
+                    <a href="/month-awesome/" class="article-date">
+                        <time datetime='2012-12-01T19:14:37.000&#43;00:00' itemprop="datePublished">2012-12-01</time>
+                    </a>
+                    
+                    
+                    <div class="post-categories">
+                        <div class="article-category">
+                            
+                            
+                            <a class="article-category-link" href="http://words.yuvi.in//categories/personal">personal</a>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="article-entry" itemprop="articleBody">
+                    <p>
+                        
+                    I left Chennai on the 3rd of November. I (will be) leaving Delhi on the 4th of December. That&#8217;s a 31 day trip. It taught me to be optimistic. It taught me in very real terms that the world is a large place, and so is life.
+A few highlights:
+ Building an app from nothing to workable state in a few days An actual first class train ride in India Running into a bunch of random french people who ended up becoming travel buddies Feeling small, and very temporary being in the ruins of Hampi.
+                    </p>
+                    <p class="article-more-link">
+                        <a href="/month-awesome/">Read More</a>
+                    </p>
+                </div>
+
+                
+            </div>
+        </article>
+        
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+            <div class="article-inner">
+                
+                
+                <header class="article-header">
+                    <h1 itemprop="name"><a class="article-title" href="/happiness-1/">Happiness #1</a></h1>
+                </header>
+                
+                <div class="article-meta">
+                    <a href="/happiness-1/" class="article-date">
+                        <time datetime='2012-10-31T19:36:33.000&#43;00:00' itemprop="datePublished">2012-10-31</time>
+                    </a>
+                    
+                    
+                    <div class="post-categories">
+                        <div class="article-category">
+                            
+                            
+                            <a class="article-category-link" href="http://words.yuvi.in//categories/code">code</a>
+                            
+                            
+                            <span>&gt;</span>
+                            
+                            <a class="article-category-link" href="http://words.yuvi.in//categories/personal">personal</a>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="article-entry" itemprop="articleBody">
+                    <p>
+                        
+                    Happiness is fixing a bug with no obvious cause with a one liner and pushing it out to five million people with wonderful support from a team sitting halfway across the world :-)
+                    </p>
+                    <p class="article-more-link">
+                        <a href="/happiness-1/">Read More</a>
+                    </p>
+                </div>
+
+                
+            </div>
+        </article>
+        
+
+        
+
+<nav id="page-nav">
+    
+    <a href="/page/10/" rel="prev" class="extend prev">&laquo; Prev</a>
+    
+    
+    
+    <a href="/">1</a>
+    
+    
+    
+    <a href="/page/2/">2</a>
+    
+    
+    
+    <a href="/page/3/">3</a>
+    
+    
+    
+    <a href="/page/4/">4</a>
+    
+    
+    
+    <a href="/page/5/">5</a>
+    
+    
+    
+    <a href="/page/6/">6</a>
+    
+    
+    
+    <a href="/page/7/">7</a>
+    
+    
+    
+    <a href="/page/8/">8</a>
+    
+    
+    
+    <a href="/page/9/">9</a>
+    
+    
+    
+    <a href="/page/10/">10</a>
+    
+    
+    
+    <span class="page-number current">11</span>
+    
+    
+    
+    <a href="/page/12/">12</a>
+    
+    
+    
+    <a href="/page/13/">13</a>
+    
+    
+    
+    <a href="/page/14/">14</a>
+    
+    
+    
+    <a href="/page/15/">15</a>
+    
+    
+    
+    <a href="/page/16/">16</a>
+    
+    
+    
+    <a href="/page/17/">17</a>
+    
+    
+    
+    <a href="/page/18/">18</a>
+    
+    
+    
+    <a href="/page/19/">19</a>
+    
+    
+    
+    <a href="/page/20/">20</a>
+    
+    
+    
+    <a href="/page/21/">21</a>
+    
+    
+    
+    <a href="/page/22/">22</a>
+    
+    
+    
+    <a href="/page/23/">23</a>
+    
+    
+    
+    <a href="/page/24/">24</a>
+    
+    
+
+    
+    <a href="/page/12/" rel="next" class="extend next">Next &raquo;</a>
+    
+</nav>
+
+    </section>
+    <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2017 Yuvi Panda&nbsp;
+            Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with theme <a href="https://github.com/carsonip/hugo-theme-minos">Minos</a>
+        </div>
+    </div>
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow-night.min.css" integrity="sha256-2wL88NKUqvJi/ExflDzkzUumjUM73mcK2gBvBBeLvTk=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    <script>
+        document.getElementById('main-nav-toggle').addEventListener('click', function () {
+            var header = document.getElementById('header');
+            if (header.classList.contains('mobile-on')) {
+                header.classList.remove('mobile-on');
+            } else {
+                header.classList.add('mobile-on');
+            }
+        });
+    </script>
+</footer>
+</div>
+</body>
+</html>
