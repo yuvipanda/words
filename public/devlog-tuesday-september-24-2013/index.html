@@ -1,0 +1,79 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.31.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>Devlog for Tuesday, September 24, 2013 &middot; Yuvi Panda</title>
+  
+
+  
+  <link rel="stylesheet" href="http://words.yuvi.in/css/poole.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/syntax.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Raleway">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
+</head>
+
+	<body class=" ">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://words.yuvi.in/"><h1>Yuvi Panda</h1></a>
+      <p class="lead">
+       Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      
+        <li><a href="mailto:yuvipanda@gmail.com"> email </a></li>
+      
+        <li><a href="https://github.com/yuvipanda"> github </a></li>
+      
+        <li><a href="https://twitter.com/yuvipanda"> twitter </a></li>
+      
+    </ul>
+
+    <p>CC0</p>
+    <p><small><a href="mailto:yuvipanda@gmail.com">Email me</a> to ask for Signal / WhatsApp / Telegram contact!</small></p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>Devlog for Tuesday, September 24, 2013</h1>
+			  <span class="post-date">Tue, Sep 24, 2013</span>
+			      <p>I&#8217;ve given up on trying to make DevLogs really comprehensive and complete, and just try to make them &#8211; even if they are incomplete. Perhaps this will help me actually write more devlogs, and thus make it more comprehensive&#8230;</p>
+
+<p>I started on the <a href="https://www.coursera.org/course/progfun">Functional Programming in Scala</a> course today. I wanted to do it the last time, but did not find the time. This time will be different &#8211; I&#8217;m in a different spot mentally, and a big drain on my emotional / time resources (&#8220;college&#8221;) is no longer a factor. I&#8217;ve already gone through the first week&#8217;s lectures (most seem straight ports from <a href="https://mitpress.mit.edu/sicp/">SICP</a>), and am <sup>2</sup>&frasl;<sub>3</sub> of my way through the assignments for the first week. Though I&#8217;m normally not fond of the typical types of exercises (&#8220;How many ways can you make change for this scenario?&#8221;), doing them functionally seems to be enough of a twist to keep me interested. The regular languages I seem to work with these days (Java, PHP, Puppet, Python and a bit of JS) aren&#8217;t exactly well tuned to the functional style of programming (except JS, but I don&#8217;t really do that much JS these days) &#8211; so going through this course and hopefully building something in Scala can exercise my &#8216;OMG HOLY SHIT THIS NEW THING IS AWESOME!!1&#8217; muscles.</p>
+
+<p>The course recommends using Scala IDE. Which is Eclipse based. Despite my deep distaste for Eclipse, I&#8217;ve given it a shot and it seems fairly stable and much less shitty than the Eclipse I&#8217;m used to! Let&#8217;s see how that goes.</p>
+
+<p>The way I learn the best seems to be to find a project I want to build, and then build it in a new language. I&#8217;m looking around for fun projects that I could build with Scala, and I&#8217;m pretty sure I&#8217;ll find one at some point. I should also try to diversify the communities I contribute to, so perhaps I should look for a non-Wikimedia project where I can contribute to in Scala. Should be fun :D</p>
+
+<p>Other than that &#8211; I&#8217;ve been <a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=54465">investigating performance problems</a> with the Campaigns API &#8211; turns out Mediawiki&#8217;s Parser is really, really slow. Who would&#8217;ve thought, eh? ;). The &#8216;solution&#8217;, of course &#8211; is to just add more caching. Which is a sortof biggish, hairy-ish problem because of the number of changes that can cause cache invalidation. The way Mediawiki handles caching is&#8230; rather complex &#8211; but that is more due to how much functionality exists rather than anything else. Needs a proper &#8216;clean&#8217; solution that is not just &#8220;Let&#8217;s cache everything for 5 minutes!!!1&#8221;. Should be fun to write up and fix!</p>
+
+<p>I&#8217;ve also been spending time integrating <a href="https://www.mediawiki.org/wiki/MediaWiki-Vagrant">Mediawiki-Vagrant</a> with <a href="https://wikitech.wikimedia.org">Wikimedia Labs</a>. This will make it easy for anyone to setup a base mediawiki installation on Labs, and save time dicking around various mundane deployment-of-test-instance issues (did I turn on caching? How do I get this extension on? etc). This is interesting because it merges two different puppet repos &#8211; operations/puppet.git and mediawiki/vagrant.git on one machine and provides different ways of managing them. Since this is also using puppet as a sort of &#8216;deployment&#8217; tool (rather than just a configuration-of-systems tool), that is an interesting / fun aspect too. Should be able to get the <a href="https://gerrit.wikimedia.org/r/#/c/85814/">patch</a> merged in a few weeks.</p>
+
+<p>I visited San Francisco for the last 2 weeks. I don&#8217;t really feel insecure anymore :)</p>
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>

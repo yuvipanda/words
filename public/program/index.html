@@ -1,0 +1,83 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.31.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>My First Program &middot; Yuvi Panda</title>
+  
+
+  
+  <link rel="stylesheet" href="http://words.yuvi.in/css/poole.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/syntax.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Raleway">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
+</head>
+
+	<body class=" ">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://words.yuvi.in/"><h1>Yuvi Panda</h1></a>
+      <p class="lead">
+       Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      
+        <li><a href="mailto:yuvipanda@gmail.com"> email </a></li>
+      
+        <li><a href="https://github.com/yuvipanda"> github </a></li>
+      
+        <li><a href="https://twitter.com/yuvipanda"> twitter </a></li>
+      
+    </ul>
+
+    <p>CC0</p>
+    <p><small><a href="mailto:yuvipanda@gmail.com">Email me</a> to ask for Signal / WhatsApp / Telegram contact!</small></p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>My First Program</h1>
+			  <span class="post-date">Sat, Jan 7, 2012</span>
+			      <p>Note: These are almost a decade old. Reproduced as close to memory as possible</p>
+
+<p>My first memories of programming aren&#8217;t actually C. They were GW-BASIC, and later on, LOGO. I don&#8217;t remember any of my BASIC &#8211; but I do remember the look on my computer science teacher&#8217;s face in 5th grade when I managed to draw a flower with LOGO when everyone else was doing rectangles and lines. I vividly remember it &#8211; you draw an arc for a certain length, then stop, draw another arc in the reverse direction for the same length &#8211; and you have a petal. Then you just offset your next arc by a few degrees, repeat the previous thing, and you have another petal. Do this a few times such that <code>offset-degreese * count = 360</code> and you have a flower. That I could just modify the variables <code>length</code> and <code>offset-degree</code> to draw flowers as big, and with as many petals as you want &#8211; it blew my mind. This was in 5th grade &#8211; and I immediately started pestering my parents to put me in a programming language class outside (I had already gone to classes for _cough_MS Office<em>cough</em> and DOS back then). And the SSI nearby happened to be teaching a reasonably cheap <code>Unix/C/C++</code> class.</p>
+
+<p>The first thing I remember still is someone telling me &#8220;you don&#8217;t need to type out clearscreen(); &#8211; clrscr() would do&#8221;. This was TurboC, and to me, at that point of time, a &#8216;good program&#8217; was one that had a <code>getch()</code> call at the end and a <code>clrscr()</code> in the beginning :)</p>
+
+<p>The <code>Unix/C/C++</code> course &#8211; I don&#8217;t remember any Unix in it. And the C++ was disinteresting to me, because I saw no point in inheriting mammal from animal or car from vehicle. So I went about writing &#8216;C++&#8217;, which was basically C but with <code>cout</code> and <code>cin</code> instead of <code>printf()</code> and <code>scanf()</code> (I wouldn&#8217;t understand classes and how/why they were useful until I read <em>Hardcore Visual Basic 5</em> and saw the ways classes are useful and how much it sucks that VB doesn&#8217;t have them).</p>
+
+<p>I had written a program called <code>DOSTutor</code> then (end of 5th grade, I guess?). It had screens and screens of text that &#8216;taught&#8217; you DOS commands, and then ones that made you type them in and &#8216;checked&#8217; it. Initially I had written it as a long series of <code>printf()</code> and <code>scanf()</code> statements. Suddenly some bulb went on and I realized I could cut my program size by about 90% if I separated code and data, and put the data (screen text and responses) into arrays. The feeling you get when you can reduce code drastically with no reduction in functionality (+ easier to make &#8216;fixes&#8217;) is quite incredible :)</p>
+
+<p>But nobody ever used that program, so I wouldn&#8217;t consider that my first &#8216;program&#8217;. I spent the next year or so messing around with random <code>sound()</code> and <code>nosound()</code> calls producing &#8216;music&#8217; (including a few times when my code hit the <code>sound()</code> call, but crashed before the <code>nosound()</code> call &#8211; thus making the PC Speaker whine constantly, without any apparent way to turn it off. I used to just reset the computer then &#8211; until I learnt what exactly a <code>DOS System Call</code> meant. Then I wrote another small program that just called <code>nosound()</code>). I also remember messing around with BGI Graphics, mostly taking the example programs for <code>graphics.h</code> and modifying them to make somewhat-pretty figures.</p>
+
+<p>My first &#8216;real&#8217; program was an implementation of a variant of <a href="http://en.wikipedia.org/wiki/Forms_of_cricket#Book_Cricket">Book Cricket</a>. It even had a stored High Scores file. It was my stint at a &#8216;programming center&#8217; (SSI, for those who remember), and I kept it in a Network Drive that I accessed using &#8216;Map Network Drive&#8217;. The amount of fun that was had when I discovered <code>rand()</code> was quite something. It even beeped when you got out!</p>
+
+<p>I lost it all in a server crash. Just do &#8216;Map Network Drive&#8217; once and it was no longer there. I think I came home and cried :(</p>
+
+<p>What was <em>your</em> first program?</p>
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>

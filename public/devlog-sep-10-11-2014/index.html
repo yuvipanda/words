@@ -1,0 +1,81 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.31.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>DevLog for Sep 10-11 2014 &middot; Yuvi Panda</title>
+  
+
+  
+  <link rel="stylesheet" href="http://words.yuvi.in/css/poole.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/syntax.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Raleway">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
+</head>
+
+	<body class=" ">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://words.yuvi.in/"><h1>Yuvi Panda</h1></a>
+      <p class="lead">
+       Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      
+        <li><a href="mailto:yuvipanda@gmail.com"> email </a></li>
+      
+        <li><a href="https://github.com/yuvipanda"> github </a></li>
+      
+        <li><a href="https://twitter.com/yuvipanda"> twitter </a></li>
+      
+    </ul>
+
+    <p>CC0</p>
+    <p><small><a href="mailto:yuvipanda@gmail.com">Email me</a> to ask for Signal / WhatsApp / Telegram contact!</small></p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>DevLog for Sep 10-11 2014</h1>
+			  <span class="post-date">Thu, Sep 11, 2014</span>
+			      <p>Back from an <em>awesome</em> vacation. Too awesome to write about, even :) Suffice it to say, England has some really pretty places.</p>
+
+<p>Some Android app work, and lots of monitoring work</p>
+
+<ul>
+<li>Fixed bugs causing the <a href="https://tools.wmflabs.org/wikipedia-android-builds/">Wikipedia Android Alpha</a> from building properly. Now it builds properly whenever there is a new commit. Hooray! This was primarily caused by me forgetting to give it lots of RAM (8G VMEM) to execute the <code>mvn</code> build commands (<a href="https://gerrit.wikimedia.org/r/#/c/159482/">https://gerrit.wikimedia.org/r/#/c/159482/</a>) and also not cleaning up previous <code>.alpha</code> subfolders (<a href="https://gerrit.wikimedia.org/r/#/c/159481/">https://gerrit.wikimedia.org/r/#/c/159481/</a>) &#8211; this causes a chain of <code>.alpha.alpha.alpha.*</code> subfolders, breaking the build.</li>
+<li>Added a <a href="https://gerrit.wikimedia.org/r/#/c/159506/">patch</a> to the Android alpha app itself that checks for updates every day or so and notifies you if there&#8217;s a new one. Was fairly trivial to write, although I was hoping to make it more seamless (i.e. download the apk myself and just pop it up for people to tap). It now requires 4 clicks to install it, should be able to bring it down to 2 at some point in the future if people care enough.</li>
+<li>Added a method to our <code>check_graphite</code> code that lets you individually check a bunch of metrics for thresholds (<a href="https://gerrit.wikimedia.org/r/#/c/159473/">https://gerrit.wikimedia.org/r/#/c/159473/</a>). This makes it much simpler to do icinga checks on a bunch of metrics that are all measuring the same thing but from different machines. BetaLabs and ToolLabs checks use this.</li>
+<li>Cleaned up a bunch of minor things with our <code>check_graphite</code> script. Also fucked up trying to replace all double quotes in it with single quotes for consistency &#8211; it replaced the double quotes being used inside single quotes, and caused all checks to fail. Fixed shortly by <a href="https://gerrit.wikimedia.org/r/#/c/159711/">https://gerrit.wikimedia.org/r/#/c/159711/</a></li>
+<li>Added more monitoring for betalabs! Now checks for stale puppet runs (<a href="https://gerrit.wikimedia.org/r/#/c/159701/">https://gerrit.wikimedia.org/r/#/c/159701/</a>) and low space on the root partition (<a href="https://gerrit.wikimedia.org/r/#/c/159694/">https://gerrit.wikimedia.org/r/#/c/159694/</a>). All are green now, thanks to some work from bd808.</li>
+<li>Added monitoring for ToolLabs! Now checks for stale puppet runs, low space on root and /var, and puppet failure events (<a href="https://gerrit.wikimedia.org/r/#/c/159709/">https://gerrit.wikimedia.org/r/#/c/159709/</a>). Also checks for high sustained CPU usage (<a href="https://gerrit.wikimedia.org/r/#/c/159751/">https://gerrit.wikimedia.org/r/#/c/159751/</a>). Then spent some time (with help from scfc_de (whose nick I kept spelling as scfe_de until today)) cleaning up the puppet failures. They are all green now as well.</li>
+<li>Did a bunch of cleaning up work around the graphite role, removing the realm branching (<a href="https://gerrit.wikimedia.org/r/#/c/159759/">https://gerrit.wikimedia.org/r/#/c/159759/</a>). Ori says everytime realm branching code is removed, an angel gets its wings, so well done there.</li>
+</ul>
+
+<p>Not a bad day, eh? I&#8217;ve been trying to wake up early, perhaps that is helping.</p>
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>

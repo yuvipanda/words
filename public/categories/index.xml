@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Yuvi Panda</title>
+    <link>http://words.yuvi.in/categories/</link>
+    <description>Recent content in Categories on Yuvi Panda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>CC0</copyright>
+    <lastBuildDate>Wed, 15 Jan 2014 18:54:34 +0000</lastBuildDate>
+    
+	<atom:link href="http://words.yuvi.in/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Books</title>
+      <link>http://words.yuvi.in/categories/books/</link>
+      <pubDate>Wed, 15 Jan 2014 18:54:34 +0000</pubDate>
+      
+      <guid>http://words.yuvi.in/categories/books/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Class Notes</title>
+      <link>http://words.yuvi.in/categories/class-notes/</link>
+      <pubDate>Sat, 09 Apr 2016 18:39:34 +0000</pubDate>
+      
+      <guid>http://words.yuvi.in/categories/class-notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Code</title>
+      <link>http://words.yuvi.in/categories/code/</link>
+      <pubDate>Mon, 28 Mar 2016 05:29:05 +0000</pubDate>
+      
+      <guid>http://words.yuvi.in/categories/code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Devlog</title>
+      <link>http://words.yuvi.in/categories/devlog/</link>
+      <pubDate>Wed, 30 Dec 2015 23:40:38 +0000</pubDate>
+      
+      <guid>http://words.yuvi.in/categories/devlog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Education</title>
+      <link>http://words.yuvi.in/categories/education/</link>
+      <pubDate>Tue, 02 Apr 2013 19:56:43 +0000</pubDate>
+      
+      <guid>http://words.yuvi.in/categories/education/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Events</title>
+      <link>http://words.yuvi.in/categories/events/</link>
+      <pubDate>Sun, 10 Apr 2011 23:02:48 +0000</pubDate>
+      
+      <guid>http://words.yuvi.in/categories/events/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Links</title>
+      <link>http://words.yuvi.in/categories/links/</link>
+      <pubDate>Thu, 11 Feb 2016 21:43:23 +0000</pubDate>
+      
+      <guid>http://words.yuvi.in/categories/links/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lol Culture</title>
+      <link>http://words.yuvi.in/categories/lol-culture/</link>
+      <pubDate>Tue, 15 Jul 2014 12:44:08 +0000</pubDate>
+      
+      <guid>http://words.yuvi.in/categories/lol-culture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Papers</title>
+      <link>http://words.yuvi.in/categories/papers/</link>
+      <pubDate>Wed, 09 Mar 2016 08:03:07 +0000</pubDate>
+      
+      <guid>http://words.yuvi.in/categories/papers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Personal</title>
+      <link>http://words.yuvi.in/categories/personal/</link>
+      <pubDate>Sun, 26 Jul 2015 00:13:29 +0000</pubDate>
+      
+      <guid>http://words.yuvi.in/categories/personal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>So Called It</title>
+      <link>http://words.yuvi.in/categories/so-called-it/</link>
+      <pubDate>Wed, 24 Jul 2013 07:12:12 +0000</pubDate>
+      
+      <guid>http://words.yuvi.in/categories/so-called-it/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Uncategorized</title>
+      <link>http://words.yuvi.in/categories/uncategorized/</link>
+      <pubDate>Sat, 19 Dec 2015 07:55:01 +0000</pubDate>
+      
+      <guid>http://words.yuvi.in/categories/uncategorized/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wiki</title>
+      <link>http://words.yuvi.in/categories/wiki/</link>
+      <pubDate>Mon, 06 Jul 2015 20:58:35 +0000</pubDate>
+      
+      <guid>http://words.yuvi.in/categories/wiki/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Systemd on Yuvi Panda</title>
-    <link>http://words.yuvi.in/tags/systemd/index.xml</link>
+    <link>http://words.yuvi.in/tags/systemd/</link>
     <description>Recent content in Systemd on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>CC0</copyright>
-    <atom:link href="http://words.yuvi.in/tags/systemd/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 31 Mar 2017 23:23:52 -0700</lastBuildDate>
+    
+	<atom:link href="http://words.yuvi.in/tags/systemd/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>systemd simple containment for GUI applications &amp; shells</title>
@@ -15,31 +18,9 @@
       <pubDate>Fri, 31 Mar 2017 23:23:52 -0700</pubDate>
       
       <guid>http://words.yuvi.in/post/systemd-simple-containment/</guid>
-      <description>&lt;p&gt;I earlier had &lt;a href=&#34;http://words.yuvi.in/post/systemd-gui-applications/&#34;&gt;a vaguely working setup&lt;/a&gt; for making sure browsers, shells and other applications don&amp;rsquo;t eat all RAM / CPU on my machine with systemd + sudo + shell scripts.&lt;/p&gt;
-
-&lt;p&gt;It was a hacky solution, and also had complications when used to launch shells. It wasn&amp;rsquo;t passing in all the environment varialbes it should, causing interesting-to-debug issues. &lt;code&gt;sudo&lt;/code&gt; rules were complex, and hard to do securely.&lt;/p&gt;
-
-&lt;p&gt;I had also been looking for an excuse to learn more Golang, so I ended up writing &lt;a href=&#34;https://github.com/yuvipanda/systemd-simple-containment&#34;&gt;&lt;code&gt;systemd-simple-containment&lt;/code&gt;&lt;/a&gt; or &lt;code&gt;ssc&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;It&amp;rsquo;s a simple golang application that produces a binary that can be &lt;a href=&#34;https://en.wikipedia.org/wiki/Setuid&#34;&gt;&lt;code&gt;setuid&lt;/code&gt;&lt;/a&gt; to &lt;code&gt;root&lt;/code&gt;, and thus get around all our &lt;code&gt;sudo&lt;/code&gt; complexity, at the price of having to be very, very careful about the code. Fortunately, it&amp;rsquo;s short enough (~100 lines) and &lt;code&gt;systemd-run&lt;/code&gt; helps it keep the following invariants:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;It will never spawn any executable as any user other than the &amp;lsquo;real&amp;rsquo; uid / gid of the user calling the binary.&lt;/li&gt;
-&lt;li&gt;It doesn&amp;rsquo;t allow arbitrary systemd &lt;code&gt;properties&lt;/code&gt; to be set, ensuring a more limited attack surface.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;However, this is the first time I&amp;rsquo;m playing with setuid and with Go, so I probably fucked something up. I feel ok enough about my understanding of real and effective uids for now to use it myself, but not to recommend it to other people. Hopefully I&amp;rsquo;ll be confident enough say that soon :)&lt;/p&gt;
-
-&lt;p&gt;By using a real programming language, I also easily get commandline flags for sharing tty or not (so I can use the same program for launching GUI &amp;amp; interactive terminal applications), pass all environment variables through (which can&amp;rsquo;t be just standard child inheritence, since &lt;code&gt;systemd-run&lt;/code&gt; doesn&amp;rsquo;t work that way) &amp;amp; the ability to setuid (you can&amp;rsquo;t do that easily to a script).&lt;/p&gt;
-
-&lt;p&gt;I was sure I&amp;rsquo;d hate writing go because of the constant &lt;code&gt;if err != nil&lt;/code&gt; checks, but it hasn&amp;rsquo;t bothered me that much. I would like to write more Go, to get a better feel for it. This code is too short to like a language, but I definitely hate it less :)&lt;/p&gt;
-
-&lt;p&gt;Anyway, now I can launch GUI applications with &lt;code&gt;ssc -tty=false -isolation=strict firefox&lt;/code&gt; and it does the right thing. I currently have available &lt;code&gt;-isolation=strict&lt;/code&gt; and &lt;code&gt;-isolation=relaxed&lt;/code&gt;, the former performing stronger sandboxing (NoNewPrivileges, PrivateTmp) than the latter (just MemoryMax). i&amp;rsquo;ll slowly add more protections here, but just keep two modes (ideally).&lt;/p&gt;
-
-&lt;p&gt;My Gnome Terminal shell command is now &lt;code&gt;ssc -isolation=relaxed /bin/bash -i&lt;/code&gt; and it works great :)&lt;/p&gt;
-
-&lt;p&gt;I am pretty happy with &lt;code&gt;ssc&lt;/code&gt; as it exists now. Only thing I now want to do is to be able to use it from the GNOME launcher (I am using GNOME3 with gnome-shell). Apparently &lt;em&gt;shortcuts&lt;/em&gt; are no longer cool and hence pretty hard to create in modern desktop environments :| I shall keep digging!&lt;/p&gt;
-</description>
+      <description>I earlier had a vaguely working setup for making sure browsers, shells and other applications don&amp;rsquo;t eat all RAM / CPU on my machine with systemd + sudo + shell scripts.
+It was a hacky solution, and also had complications when used to launch shells. It wasn&amp;rsquo;t passing in all the environment varialbes it should, causing interesting-to-debug issues. sudo rules were complex, and hard to do securely.
+I had also been looking for an excuse to learn more Golang, so I ended up writing systemd-simple-containment or ssc.</description>
     </item>
     
     <item>
@@ -48,78 +29,8 @@
       <pubDate>Wed, 29 Mar 2017 20:47:10 -0700</pubDate>
       
       <guid>http://words.yuvi.in/post/systemd-gui-applications/</guid>
-      <description>
-
-&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: There&amp;rsquo;s a &lt;a href=&#34;//words.yuvi.in/post/systemd-simple-containment/&#34;&gt;follow-up post&lt;/a&gt; with a simpler solution now.&lt;/p&gt;
-
-&lt;p&gt;Ever since I read &lt;a href=&#34;https://blog.jessfraz.com&#34;&gt;Jessie Frazelle&lt;/a&gt;&amp;rsquo;s amazing setup (&lt;a href=&#34;https://blog.jessfraz.com/post/ultimate-linux-on-the-desktop/&#34;&gt;1&lt;/a&gt;, &lt;a href=&#34;https://blog.jessfraz.com/post/docker-containers-on-the-desktop/&#34;&gt;2&lt;/a&gt;, &lt;a href=&#34;https://blog.jessfraz.com/post/runc-containers-on-the-desktop/&#34;&gt;3&lt;/a&gt;) for running GUI applications in docker containers, I&amp;rsquo;ve wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&amp;rsquo;m also not as awesome (or knowledgeable!) as Jess, so will have to naturally settle for less&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;So I am doing it in systemd!&lt;/p&gt;
-
-&lt;p&gt;Before proceeding, I want to warn y&amp;rsquo;all that I don&amp;rsquo;t entirely know what I am doing. Don&amp;rsquo;t take any of this as security advice, since I don&amp;rsquo;t entirely understand X&amp;rsquo;s security model. Works fine for me though!&lt;/p&gt;
-
-&lt;h2 id=&#34;gui-applications&#34;&gt;GUI applications&lt;/h2&gt;
-
-&lt;p&gt;I started out using a simple systemd &lt;a href=&#34;https://fedoramagazine.org/systemd-template-unit-files/&#34;&gt;templated service&lt;/a&gt; to launch GUI applications, but soon realized that &lt;a href=&#34;https://www.freedesktop.org/software/systemd/man/systemd-run.html&#34;&gt;systemd-run&lt;/a&gt; is probably the better way. So I&amp;rsquo;ve a simple script, &lt;code&gt;/usr/local/bin/safeapp&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
-exec sudo systemd-run  \
-    -p CPUQuota=100% \
-    -p MemoryMax=70% \
-    -p WorkingDirectory=$(pwd) \
-    -p PrivateTmp=yes \
-    -p NoNewPrivileges=yes \
-    --setenv DISPLAY=${DISPLAY} \
-    --setenv DBUS_SESSION_BUS_ADDRESS=${DBUS_SESSION_BUS_ADDRESS} \
-    --uid ${USER} \
-    --gid ${USER} \
-    --quiet \
-    &amp;quot;$1&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I can run &lt;code&gt;safeapp /opt/firefox/firefox&lt;/code&gt; now and it&amp;rsquo;ll start firefox inside a nice systemd unit with a 70% Memory usage cap and CPU usage of at most 1 CPU. There&amp;rsquo;s also other minimal security stuff applied - &lt;code&gt;NoNewPrivileges&lt;/code&gt; being the most important one. I want to get &lt;code&gt;ProtectSystem&lt;/code&gt; + &lt;code&gt;ReadWriteDirectories&lt;/code&gt; going too, but there seems to be a bug in &lt;code&gt;systemd-run&lt;/code&gt; that doesn&amp;rsquo;t let it parse &lt;code&gt;ProtectSystem&lt;/code&gt; properly&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Also, there&amp;rsquo;s &lt;a href=&#34;https://github.com/systemd/systemd/issues/3851&#34;&gt;an annoying bug&lt;/a&gt; in systemd v231 (which is what my current system has) - you can&amp;rsquo;t set &lt;code&gt;CPUQuotas&lt;/code&gt; over 100% (aka &amp;gt; 1 CPU core). This is annoying if you want to give each application 3 of your 4 cores (which is what I want). Next version of Ubuntu has v232, so my GUI applications will just have to do with an aggregate of 1 full core until then.&lt;/p&gt;
-
-&lt;p&gt;The two environment variables seem to be all that&amp;rsquo;s necessary for X applications to work.&lt;/p&gt;
-
-&lt;p&gt;And yes, this might ask you for your password. I&amp;rsquo;ll clean this up into a nice non-bash script hopefully soon, and make all of these better.&lt;/p&gt;
-
-&lt;p&gt;Anyway, &lt;em&gt;it works&lt;/em&gt;! I can now open sketchy websites with scroll hijacking without fear it&amp;rsquo;ll kill my machine!&lt;/p&gt;
-
-&lt;h2 id=&#34;cli&#34;&gt;CLI&lt;/h2&gt;
-
-&lt;p&gt;I wanted each tab in my terminal to be its own systemd service, so they all get equitable amount of  CPU time &amp;amp; can&amp;rsquo;t crash machine by themselves with OOM.&lt;/p&gt;
-
-&lt;p&gt;So I&amp;rsquo;ve this script as &lt;code&gt;/usr/local/bin/safeshell&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;`#!/bin/bash
-exec sudo systemd-run \
-    -p CPUQuota=100% \
-    -p MemoryMax=70% \
-    -p WorkingDirectory=$(pwd) \
-    --uid yuvipanda \
-    --gid yuvipanda \
-    --quiet \
-    --tty \
-    /bin/bash -i
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The &lt;code&gt;--tty&lt;/code&gt; is magic here, and does the right things wrt passing the tty that GNOME terminal is passing in all the way to the shell. Now, my login command (set under profile preferences &amp;gt; command in gnome-terminal) is &lt;code&gt;sudo /usr/local/bin/safeshell&lt;/code&gt;. In addition, I add the following line to &lt;code&gt;/etc/sudoers&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;%sudo ALL = (root) NOPASSWD:SETENV: /usr/local/bin/safeshell
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This + just specifying the username directly in &lt;code&gt;safeshell&lt;/code&gt; are both hacks that make me cringe a little. I need to either fully understand how sudo&amp;rsquo;s &lt;code&gt;-E&lt;/code&gt; works, or use this as an opportunity to learn more Go and make a setuid binary.&lt;/p&gt;
-
-&lt;h2 id=&#34;to-do&#34;&gt;To do&lt;/h2&gt;
-
-&lt;p&gt;[ ] Generalize this to not need hacks (either with better sudo usage or a setuid binary)
-[ ] Investigate adding more security related options.
-[ ] Make these work with desktop / dock icons.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;d normally have just never written this post, on account of &amp;lsquo;oh no, it is imperfect&amp;rsquo; or something like that. However, that also seems to have come in the way of ability to find joy in learning simple things :D So I shall follow &lt;a href=&#34;https://jvns.ca/&#34;&gt;b0rk&lt;/a&gt;&amp;rsquo;s lead in spending time &lt;a href=&#34;http://words.yuvi.in/post/things-to-learn/&#34;&gt;learning&lt;/a&gt; for fun again :)&lt;/p&gt;
-</description>
+      <description>Update: There&amp;rsquo;s a follow-up post with a simpler solution now.
+Ever since I read Jessie Frazelle&amp;rsquo;s amazing setup (1, 2, 3) for running GUI applications in docker containers, I&amp;rsquo;ve wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&amp;rsquo;m also not as awesome (or knowledgeable!</description>
     </item>
     
   </channel>

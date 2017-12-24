@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reddit on Yuvi Panda</title>
+    <link>http://words.yuvi.in/tags/reddit/</link>
+    <description>Recent content in Reddit on Yuvi Panda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>CC0</copyright>
+    <lastBuildDate>Tue, 06 Dec 2011 09:37:13 +0000</lastBuildDate>
+    
+	<atom:link href="http://words.yuvi.in/tags/reddit/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Story of Average Indian ‘Techie’</title>
+      <link>http://words.yuvi.in/story-average-indian-techie/</link>
+      <pubDate>Tue, 06 Dec 2011 09:37:13 +0000</pubDate>
+      
+      <guid>http://words.yuvi.in/story-average-indian-techie/</guid>
+      <description>Note: I am just reformatting + putting this in one piece rather than have it split across multiple comments on reddit. Am not the original author
+Beautifully laid out by someone in the under-trafficked r/india:
+ my state has 300+ engineering colleges and my parents decided that i am going to be an engineer. so, i wrote an exam and got into one institute (luckily i can make it into a good institute where there are campus interviews.</description>
+    </item>
+    
+  </channel>
+</rss>

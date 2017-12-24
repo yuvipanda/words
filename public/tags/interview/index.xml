@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Interview on Yuvi Panda</title>
+    <link>http://words.yuvi.in/tags/interview/</link>
+    <description>Recent content in Interview on Yuvi Panda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>CC0</copyright>
+    <lastBuildDate>Fri, 26 Aug 2011 15:50:55 +0000</lastBuildDate>
+    
+	<atom:link href="http://words.yuvi.in/tags/interview/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Interview with Sriram Krishnan (5 years old)</title>
+      <link>http://words.yuvi.in/interview-sriram-krishnan-5-years-old/</link>
+      <pubDate>Fri, 26 Aug 2011 15:50:55 +0000</pubDate>
+      
+      <guid>http://words.yuvi.in/interview-sriram-krishnan-5-years-old/</guid>
+      <description>5 years ago, I was in my 10th and new on the Internet. I had been coding for about 5-6 years already, but mostly with TurboC and VB6/C# (thanks to MSDN CDs I steal from Sudar). And then this interview happened and pushed me farther out into geekland :)
+Presenting a reprint from 2006, my interview with Sriram Krishnan, then Microsoftie. Note that the opinions here are of a Sriram 5 years ago, and do not necessarily represent what he thinks now :D And the questions are obviously the questions a younger, naiver (and stupider) Yuvi would&amp;#8217;ve asked, so bear with that.</description>
+    </item>
+    
+  </channel>
+</rss>

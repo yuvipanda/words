@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Learning on Yuvi Panda</title>
-    <link>http://words.yuvi.in/tags/learning/index.xml</link>
+    <link>http://words.yuvi.in/tags/learning/</link>
     <description>Recent content in Learning on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>CC0</copyright>
-    <atom:link href="http://words.yuvi.in/tags/learning/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Jul 2017 22:47:06 -0700</lastBuildDate>
+    
+	<atom:link href="http://words.yuvi.in/tags/learning/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>designing data intensive applications</title>
@@ -15,115 +18,9 @@
       <pubDate>Sun, 02 Jul 2017 22:47:06 -0700</pubDate>
       
       <guid>http://words.yuvi.in/post/designing-data-intensive-applications/</guid>
-      <description>
-
-&lt;p&gt;I&amp;rsquo;ve been reading &lt;a href=&#34;http://dataintensive.net/&#34;&gt;Designing Data Intensive Applications&lt;/a&gt; book &amp;amp; am using this post to keep notes!&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve picked up ideas on scaling systems through the years, but never actually sat down to actually study them semi-formally. This seems like a great start to it!&lt;/p&gt;
-
-&lt;p&gt;It&amp;rsquo;s a pretty big book, and it&amp;rsquo;s gonna take me a while to go through it :) Will update these notes as I go! Trying to do a chapter a week!&lt;/p&gt;
-
-&lt;h2 id=&#34;chapter-1-defining-all-the-things&#34;&gt;Chapter 1: Defining all the things&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;The Internet was done so well that most people think of it as a natural resource like the Pacific Ocean, rather than something that was man-made. When was the last time a technology with a scale like that was so error-free?
-Alan Kay, in &lt;a href=&#34;www.drdobbs.com/architecture-and-design/interview-with-alan-kay/240003442&#34;&gt;interview with Dr Dobb’s Journal (2012)&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I keep forgetting what an amazing marvel the internet is and how intensely (and mostly positively, thankfully) it has affected my life. This is a good reminder! However, perhaps to people who haven&amp;rsquo;t had the privileges I&amp;rsquo;ve had the Internet doesn&amp;rsquo;t feel like a natural resource? Unsure! Should ask them!&lt;/p&gt;
-
-&lt;p&gt;Lots of modern applications are data intensive, rather than CPU intensive.
-&amp;gt;  Raw CPU power is rarely a limiting factor for these applications—bigger problems are usually the amount of data, the complexity of data, and the speed at which it is changing.&lt;/p&gt;
-
-&lt;p&gt;This has borne out in the infrastructure I&amp;rsquo;ve been setting up to help teach people data science - RAM is often the bottleneck, not CPU (barring machine-learning type stuff, but they want GPUs anyway).&lt;/p&gt;
-
-&lt;p&gt;Common building blocks for data intensive applications are:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Store data so that they, or another application, can find it again later (databases)&lt;/li&gt;
-&lt;li&gt;Remember the result of an expensive operation, to speed up reads (caches)&lt;/li&gt;
-&lt;li&gt;Allow users to search data by keyword or filter it in various ways (search indexes)&lt;/li&gt;
-&lt;li&gt;Send a message to another process, to be handled asynchronously (stream processing)&lt;/li&gt;
-&lt;li&gt;Periodically crunch a large amount of accumulated data (batch processing)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;These &lt;em&gt;do&lt;/em&gt; seem to cover a large variety of bases! I feel fairly comfortable in operating, using and building on top of some of these (databases, caches) but not so much in most (never used a search index, batch processing, nor streams outside of redis). Partially I haven&amp;rsquo;t felt an intense need for these, but perhaps if I understand them more I&amp;rsquo;ll use them more? I&amp;rsquo;ve mostly strived to make everything stateless - but perhaps that&amp;rsquo;s causing me to shy away from problems that can only be solved with state? /me ponders.&lt;/p&gt;
-
-&lt;p&gt;Boundaries around &amp;lsquo;data systems&amp;rsquo; are blurring - Redis is a cache but can be a message queue, Apache Kafka is a message queue that can have durability guarantees, etc. Lots of applications also need more than can be done with just one tool (aka a &amp;lsquo;pure LAMP&amp;rsquo; stack is no longer good enough). Applications often have the job of making sure different data sources are in sync. Everyone is a &amp;lsquo;data designer&amp;rsquo;, and everyone is kinda fucked.&lt;/p&gt;
-
-&lt;p&gt;Talk about 3 things that are most important to any software system.&lt;/p&gt;
-
-&lt;h3 id=&#34;reliability&#34;&gt;Reliability&lt;/h3&gt;
-
-&lt;p&gt;Means &amp;lsquo;continue to work correctly, even when things go wrong&amp;rsquo;. Things that go wrong are &amp;lsquo;faults&amp;rsquo;, and systems need to be &amp;lsquo;fault-tolerent&amp;rsquo; or &amp;lsquo;resilient&amp;rsquo;. Can&amp;rsquo;t be tolerant of all faults, so gotta define what faults we&amp;rsquo;re tolerant of.&lt;/p&gt;
-
-&lt;p&gt;Fault isn&amp;rsquo;t failure - fault is when a component of the system &amp;lsquo;deviates from its spec&amp;rsquo;, &lt;em&gt;failure&lt;/em&gt; is when the system as a whole stops providing user server they want. Can&amp;rsquo;t reduce chances of fault to zero, but can work on reducing failures to zero.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Engineering is building reliable systems from unreliable parts.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Chaos monkeys are good, increase faults to find ways to reduce failure.&lt;/p&gt;
-
-&lt;p&gt;Hardware reliability - physical components fail. Nothing you can do about it. Fix it in software.&lt;/p&gt;
-
-&lt;p&gt;Hardware faults &lt;em&gt;usually&lt;/em&gt; not corelated - one macine failing doesn&amp;rsquo;t cause another machine to fail. To truly fuck shit up you need software - can easily cause massive large scale failure! For example, a leap second bug! Or a runaway process that slowly kills every other process on the machine. One of the microservies that 50 of your microservices depend on is slow! Cascading failures! These bugs all lie dormant, until they suddenly aren&amp;rsquo;t and wreak havok. The software makes some assumption about its environment, which is true until it isn&amp;rsquo;t. No quick solution to systematic software faults.&lt;/p&gt;
-
-&lt;p&gt;Human error is worst error. The book offers some suggestions on how to prevent these.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Minimize opportunities for errors - make it easy to do the right thing. But if it&amp;rsquo;s too restrictive, people will work around it - tricky balance.&lt;/li&gt;
-&lt;li&gt;Provide full featured sandboxes so people can fuck around without fucking shit up.&lt;/li&gt;
-&lt;li&gt;AUTOMATICALLY TEST EVERYTHING so when a human does fuck up, they know!&lt;/li&gt;
-&lt;li&gt;Set up undo functionality, so when human does fuck up, they can roll back!&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Learn about telemetry from other disciplines that have been doing this shit for far longer than us. &lt;a href=&#34;https://xkcd.com/1831/&#34;&gt;Relevant XKCD&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Reliability isn&amp;rsquo;t just for nukes &amp;amp; aircraft &amp;amp; election systems (haha). Imagine someone loses a video of their kid&amp;rsquo;s first ever step because you didn&amp;rsquo;t care. Fucking up is human and we all do it - what is important is that we care.&lt;/p&gt;
-
-&lt;p&gt;Sometimes you gotta sacrifice reliability, but make sure that is an explicit &amp;amp; conscious decision. Actually throw away your prototypes! Put FIXMEs in your code. Take a shower. Make sure hacks look, feel and sound hacky!&lt;/p&gt;
-
-&lt;h3 id=&#34;scalability&#34;&gt;Scalability&lt;/h3&gt;
-
-&lt;p&gt;System&amp;rsquo;s ability to adapt to increased &amp;lsquo;load&amp;rsquo; along some axes.&lt;/p&gt;
-
-&lt;p&gt;Load is described with various &lt;em&gt;load parameters&lt;/em&gt;, which depend on the system (req/s? active users? etc).&lt;/p&gt;
-
-&lt;p&gt;Carefully define what this means for your application, and explain your reasoning. You might have to scale in some aspects but not in other.&lt;/p&gt;
-
-&lt;p&gt;Once you have the load parameters for your app defined, figure out what happens when you increase load parameters but keep system resources unchanged. After that, try to figure out how much resources need to be increased.&lt;/p&gt;
-
-&lt;p&gt;Throughput - number of things that can be done per second. Latency is time it takes to serve a request. These are common things we care about when we move load parameters up and down.&lt;/p&gt;
-
-&lt;p&gt;You shouldn&amp;rsquo;t think of these as single numbers, since they vary a fair bit. Think of these as &lt;em&gt;probability distributions&lt;/em&gt;. Learn some statistics! Use percentiles, rather than &amp;lsquo;average&amp;rsquo; or &amp;lsquo;mean&amp;rsquo;.&lt;/p&gt;
-
-&lt;p&gt;High percentile latencies are especially important when you are a service that&amp;rsquo;s called by many other services - it can cascade down.&lt;/p&gt;
-
-&lt;p&gt;No &lt;em&gt;magic scaling sauce&lt;/em&gt; - architecture that can scale is different for each application. But there are general purpose building blocks, so worry a little less!&lt;/p&gt;
-
-&lt;h3 id=&#34;maintainability&#34;&gt;Maintainability&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Always code as if the person who ends up maintaining your code is a violent psychopath who knows where you live.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Split into three major aspects.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Operability&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Make it easy for people to operate your service! Help them monitor the health of the system, observe &amp;amp; debug problems, do capacity planning, keep the production environment stable, prevent single human points of failure (oh, only Chad knows about this system) and many other things!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Simplicity&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Don&amp;rsquo;t make your software a big ball of mud. Take into account that new engineers will have to start working on your software, and they need to understand it quickly.&lt;/p&gt;
-
-&lt;p&gt;Use standard tools &amp;amp; approaches they have a higher likelihood of knowing - look around for standard tools before inventing your own!&lt;/p&gt;
-
-&lt;p&gt;Watch out for accidental complexity, and keep it to a minimum as much as possible. Abstractions are good, but abstractions are also leaky.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Evolvability&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;If your software is simple &amp;amp; has good abstractions, you can change it over time without wanting to pull all your hair out.&lt;/p&gt;
-</description>
+      <description>I&amp;rsquo;ve been reading Designing Data Intensive Applications book &amp;amp; am using this post to keep notes!
+I&amp;rsquo;ve picked up ideas on scaling systems through the years, but never actually sat down to actually study them semi-formally. This seems like a great start to it!
+It&amp;rsquo;s a pretty big book, and it&amp;rsquo;s gonna take me a while to go through it :) Will update these notes as I go! Trying to do a chapter a week!</description>
     </item>
     
     <item>
@@ -132,68 +29,8 @@ Alan Kay, in &lt;a href=&#34;www.drdobbs.com/architecture-and-design/interview-w
       <pubDate>Sat, 13 May 2017 11:41:20 -0700</pubDate>
       
       <guid>http://words.yuvi.in/post/think-os/</guid>
-      <description>
-
-&lt;p&gt;Following a trail from a &lt;a href=&#34;http://jvns.ca/blog/2017/04/17/statistics-for-programmers/&#34;&gt;wonderful Julia Evans post&lt;/a&gt; led me to Allen Downey&amp;rsquo;s nice &lt;a href=&#34;http://greenteapress.com/wp/textbook-manifesto/&#34;&gt;textbook manifesto&lt;/a&gt;. Also led me to the nice &lt;a href=&#34;http://greenteapress.com/thinkos/index.html&#34;&gt;Think OS&lt;/a&gt; book, which seems like a super nice introduction to Operating System principles.&lt;/p&gt;
-
-&lt;p&gt;It is short enough (~100 pages) that I wanted to read through it. I&amp;rsquo;ve spent a good chunk of time absorbing how Operating Systems work by dint of diving into things and working through them, but it would be nice to get a refresher on the basics. There are clearly basic things I do not understand, and this seemed like a good way to explore.&lt;/p&gt;
-
-&lt;p&gt;This post is just a running series of notes from me reading it on a nice saturday morning.&lt;/p&gt;
-
-&lt;h2 id=&#34;stack-vs-heap&#34;&gt;Stack vs Heap&lt;/h2&gt;
-
-&lt;p&gt;This is something that has always bugged me. I&amp;rsquo;ve understood just enough of this by being burnt with pointers when writing C (and primitive types in the CLR, etc), but was lacking a deep understanding of wtf was going on. The fact that these are just process program segments (like text or data) was quite a revelation :D &lt;a href=&#34;http://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap&#34;&gt;This stackoverflow answer&lt;/a&gt; was also quite nice.&lt;/p&gt;
-
-&lt;p&gt;One interesting thing for me to investigate later from the book is how this program:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
-#include &amp;lt;stdlib.h&amp;gt;
-
-int global;
-
-int main() {
-  int local = 5;
-  void *p = malloc(128);
-
-  printf(&amp;quot;Address of main is %p\n&amp;quot;, main);
-  printf(&amp;quot;Address of local is %p\n&amp;quot;, &amp;amp;local);
-  printf(&amp;quot;Address of global is %p\n&amp;quot;, &amp;amp;global);
-  printf(&amp;quot;Address of p is %p\n&amp;quot;, p);
-
-}
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;produces the following output for the author:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Address of main   is 0x      40057c
-Address of local  is 0x7fffd26139c4
-Address of global is 0x      60104c
-Address of p      is 0x     1c3b010
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;but for me,&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Address of main   is 0x5598fc64c740
-Address of local  is 0x7ffeacfaf75c
-Address of global is 0x5598fc84d014
-Address of p      is 0x5598fc85b010
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The point of the program was to demonstrate that text (&lt;code&gt;main&lt;/code&gt;), static (&lt;code&gt;global&lt;/code&gt;) and heap (&lt;code&gt;p&lt;/code&gt;) are near beginning of memory and stack (&lt;code&gt;local&lt;/code&gt;) is towards the end. While on my laptop it does seem to be the case too, the &amp;lsquo;start&amp;rsquo; seems to be much farther out than on the author&amp;rsquo;s computer. Need to understand why this is the case. I&amp;rsquo;ve vaguely heard of address randomization &amp;amp; other security measures in OS kernels - maybe related? For another day!&lt;/p&gt;
-
-&lt;h2 id=&#34;bit-twiddling&#34;&gt;Bit twiddling&lt;/h2&gt;
-
-&lt;p&gt;I continue to find it hard to care about bit twiddling. Most things do use it of course, but it seems to be abstracted away pretty well without leaking too much (except for things that have their own nuances, like floating point representations).&lt;/p&gt;
-
-&lt;h2 id=&#34;malloc&#34;&gt;malloc&lt;/h2&gt;
-
-&lt;p&gt;Nice link to &lt;a href=&#34;http://gee.cs.oswego.edu/dl/html/malloc.html&#34;&gt;a paper&lt;/a&gt; about a common malloc implementation. I also know there are other malloc implementations that programs use (such as &lt;a href=&#34;http://jemalloc.net/&#34;&gt;jemalloc&lt;/a&gt;). Something for me to dive into when I&amp;rsquo;ve more time.&lt;/p&gt;
-
-&lt;h2 id=&#34;tbc&#34;&gt;tbc&lt;/h2&gt;
-
-&lt;p&gt;I didn&amp;rsquo;t have time to finish it all, unfortunately. But shall come back to it whenever I can!&lt;/p&gt;
-</description>
+      <description>Following a trail from a wonderful Julia Evans post led me to Allen Downey&amp;rsquo;s nice textbook manifesto. Also led me to the nice Think OS book, which seems like a super nice introduction to Operating System principles.
+It is short enough (~100 pages) that I wanted to read through it. I&amp;rsquo;ve spent a good chunk of time absorbing how Operating Systems work by dint of diving into things and working through them, but it would be nice to get a refresher on the basics.</description>
     </item>
     
     <item>
@@ -202,45 +39,8 @@ Address of p      is 0x5598fc85b010
       <pubDate>Tue, 18 Apr 2017 00:01:26 -0700</pubDate>
       
       <guid>http://words.yuvi.in/post/learning-selinux/</guid>
-      <description>
-
-&lt;p&gt;I am trying to understand SELinux and AppArmor, and collecting resources here as I learn. k&lt;/p&gt;
-
-&lt;h2 id=&#34;selinux-for-mere-mortals-2014&#34;&gt;SELinux for mere mortals (2014)&lt;/h2&gt;
-
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/MxjenQ31b70&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;This was the first video I watched, and it helped me understanding what SELinux does at a fundamental basic level. It&amp;rsquo;s probably useless in a container-filled world (where I doubt Fedora shipes pre-configured SELinux rules for my containers), but it helped me think I understood types / labels, so that seems like a positive step?&lt;/p&gt;
-
-&lt;p&gt;The fact the presenter keeps saying things like &amp;lsquo;you being a good sysadmin, ssh into the server and edit the apache config file&amp;rsquo; is freakin me out. If I&amp;rsquo;m constantly editing config files on servers manually that seems like a massive failure to me :D How times change!&lt;/p&gt;
-
-&lt;h2 id=&#34;docker-and-selinux-2014&#34;&gt;Docker and SELinux (2014)&lt;/h2&gt;
-
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/zWGFqMuEHdw&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;This one made a lot more sense to me as an answer to the following questions:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Aren&amp;rsquo;t containers secure enough? (Partial answer)&lt;/li&gt;
-&lt;li&gt;What does SELinux do for container security?&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;It&amp;rsquo;s convinced me that container -&amp;gt; host isolation and container &amp;lt;-&amp;gt; container isolation provided by SELinux is pretty simple and super useful, and should be turned on.&lt;/p&gt;
-
-&lt;p&gt;This talk also showed me this most wonderful &lt;a href=&#34;https://people.redhat.com/duffy/selinux/selinux-coloring-book_A4-Stapled.pdf&#34;&gt;coloring book&lt;/a&gt; that tries to explain SELinux. If this is all that is to SELinux, it seems pretty simple and useful (for the container use case).&lt;/p&gt;
-
-&lt;p&gt;Also, it looks like there are more recent versions of both these two talks - I should look &amp;lsquo;em up!&lt;/p&gt;
-
-&lt;h2 id=&#34;securing-linux-applications-with-apparmor-2007&#34;&gt;Securing Linux Applications with AppArmor (2007?)&lt;/h2&gt;
-
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/0l21FN81je0&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;This is me trying to understand AppArmor, which seems to have lower base of support (just Ubuntu? Maybe SUSE, but idk anyone who uses SUSE) but theoretically simpler (mostly file path based). The video seems to be shot with a potato, so the slides aren&amp;rsquo;t super clear - but the content is good enough to give me a super general overview.&lt;/p&gt;
-
-&lt;p&gt;The biggest thing against SELinux it talks about seems to be &amp;lsquo;SELinux is complex&amp;rsquo;, and not much else. I don&amp;rsquo;t know how much I buy that - but then again, I haven&amp;rsquo;t actually &lt;em&gt;used&lt;/em&gt; SELinux anywhere :D&lt;/p&gt;
-
-&lt;p&gt;Unlike SELinux, I can actually see AppArmor rules on my local machine (since it is running Ubuntu). Seems fairly readable!&lt;/p&gt;
-</description>
+      <description>I am trying to understand SELinux and AppArmor, and collecting resources here as I learn. k
+SELinux for mere mortals (2014)  This was the first video I watched, and it helped me understanding what SELinux does at a fundamental basic level. It&amp;rsquo;s probably useless in a container-filled world (where I doubt Fedora shipes pre-configured SELinux rules for my containers), but it helped me think I understood types / labels, so that seems like a positive step?</description>
     </item>
     
     <item>
@@ -249,21 +49,9 @@ Address of p      is 0x5598fc85b010
       <pubDate>Sat, 15 Apr 2017 13:24:23 -0700</pubDate>
       
       <guid>http://words.yuvi.in/post/things-to-build/</guid>
-      <description>&lt;p&gt;This is a running list of things I want to build!&lt;/p&gt;
-
-&lt;p&gt;There&amp;rsquo;s an analogous running list of &lt;a href=&#34;http://words.yuvi.in/post/things-to-learn/&#34;&gt;things I want to learn&lt;/a&gt;. Things move between them :) I also have higher standards of documentation (other people should be able to use it) before marking these as complete.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;kubernetes-login&lt;/strong&gt;
-A helper to openssh that allows users to log in to a configurable user pod
-running on a kubernetes cluster. Should ideally support scp / sftp too.
-Helps get rid of SPOF login nodes&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;just-enough-containment&lt;/strong&gt;
-A purely for-learning docker-ish container project written purely in python.
-Written for pedagogy and personal understanding rather than production use.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>This is a running list of things I want to build!
+There&amp;rsquo;s an analogous running list of things I want to learn. Things move between them :) I also have higher standards of documentation (other people should be able to use it) before marking these as complete.
+ kubernetes-login A helper to openssh that allows users to log in to a configurable user pod running on a kubernetes cluster. Should ideally support scp / sftp too.</description>
     </item>
     
     <item>
@@ -272,62 +60,8 @@ Written for pedagogy and personal understanding rather than production use.&lt;/
       <pubDate>Wed, 05 Apr 2017 23:18:19 -0700</pubDate>
       
       <guid>http://words.yuvi.in/post/python-gil-resources/</guid>
-      <description>
-
-&lt;p&gt;I was in a conversation about the Python GIL with friends a few days ago, and realized that my understanding of the specifics of the GIL problem were super hand-wavy &amp;amp; unstructured. So I spent some time collecting resources to learn more, and now have a better understanding!&lt;/p&gt;
-
-&lt;h4 id=&#34;python-s-infamous-gil-larry-hastings&#34;&gt;Python&amp;rsquo;s Infamous GIL (Larry Hastings)&lt;/h4&gt;
-
-&lt;p&gt;This was a &lt;em&gt;great&lt;/em&gt; introduction to the history of the GIL, why it was necessary &amp;amp; reasons why getting rid of it is complicated.&lt;/p&gt;
-
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/4zeHStBowEk?ecver=1&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;h4 id=&#34;understanding-the-python-gil-david-beazley&#34;&gt;Understanding the Python GIL (David Beazley)&lt;/h4&gt;
-
-&lt;p&gt;This has wonderful visualizations that really helped me understand exactly &lt;em&gt;why&lt;/em&gt; multi-threaded python behaves the way it does. Multithreading decreases performance, adding more cores decreases performance &amp;amp; disabling cores increases performance :) All of this made vague hand-wavy sense to me before, and make much more concrete sense now.&lt;/p&gt;
-
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/Obt-vMVdM8s?ecver=1&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;h4 id=&#34;it-isn-t-easy-to-remove-the-gil-guido-van-rossum&#34;&gt;It isn&amp;rsquo;t easy to remove the GIL (Guido van Rossum)&lt;/h4&gt;
-
-&lt;p&gt;A &lt;a href=&#34;http://www.artima.com/weblogs/viewpost.jsp?thread=214235&#34;&gt;blog post&lt;/a&gt; from the BDFL of python, after yet another request to &amp;lsquo;just get rid of the GIL&amp;rsquo;.&lt;/p&gt;
-
-&lt;p&gt;It set the (pretty high) bar for inclusion of a GIL removal patch (that he makes clear he will not write) in Python:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;I&amp;rsquo;d welcome a set of patches into Py3k only if the performance for a single-threaded program (and for a multi-threaded but I/O-bound program) does not decrease.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Not been met yet!&lt;/p&gt;
-
-&lt;h4 id=&#34;an-inside-look-at-the-gil-removal-patch-of-lore-dave-beazley&#34;&gt;An Inside Look at the GIL Removal Patch of Lore (Dave Beazley)&lt;/h4&gt;
-
-&lt;p&gt;There was an attempt in about 1999 to remove the GIL - the &amp;lsquo;freethreading&amp;rsquo; patch. This is a &lt;a href=&#34;http://dabeaz.blogspot.com/2011/08/inside-look-at-gil-removal-patch-of.html&#34;&gt;wonderful analysis&lt;/a&gt; of that patch - what it tried to do, why it disappeared, what the performance costs of it were, etc. Something that really stood out to me and makes me feel not very hopeful about GIL removal in CPython was:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Despite removing the GIL, I was unable to produce any performance experiment that showed a noticeable improvement on multiple cores. Really, the only benefit (ignoring the horrible performance) seen in pure Python code, was having preemptible instructions.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This seems to be still true, even in the Gilectomy branch.&lt;/p&gt;
-
-&lt;h4 id=&#34;gilectomy-larry-hastings&#34;&gt;Gilectomy (Larry Hastings)&lt;/h4&gt;
-
-&lt;p&gt;This is the only talk about a recent (~2016) GIL removal attempt.&lt;/p&gt;
-
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/P3AyI_u66Bw?ecver=1&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;It is amazing work, but doesn&amp;rsquo;t give me much hope. There&amp;rsquo;s been no new commits to the &lt;a href=&#34;https://github.com/larryhastings/gilectomy/tree/gilectomy&#34;&gt;public git repo&lt;/a&gt; for about 5 months now, so am unsure what the state of it now is.&lt;/p&gt;
-
-&lt;p&gt;There&amp;rsquo;s probably many more - let me know if you know any, and I&amp;rsquo;ll update this when I find out more!&lt;/p&gt;
-
-&lt;h4 id=&#34;gilectomy-2017-larry-hastings&#34;&gt;Gilectomy - 2017 (Larry Hastings)&lt;/h4&gt;
-
-&lt;p&gt;PyCon 2017 just happened, and Larry Hastings gave another talk!&lt;/p&gt;
-
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/pLqv11ScGsQ&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;It seems to have had a lot of intense work done on it, and the wall clock time graph in it warms my heart! I&amp;rsquo;ve a little more hope now than I did after the 2016 talk :D&lt;/p&gt;
-</description>
+      <description>I was in a conversation about the Python GIL with friends a few days ago, and realized that my understanding of the specifics of the GIL problem were super hand-wavy &amp;amp; unstructured. So I spent some time collecting resources to learn more, and now have a better understanding!
+Python&amp;rsquo;s Infamous GIL (Larry Hastings) This was a great introduction to the history of the GIL, why it was necessary &amp;amp; reasons why getting rid of it is complicated.</description>
     </item>
     
     <item>
@@ -336,31 +70,9 @@ Written for pedagogy and personal understanding rather than production use.&lt;/
       <pubDate>Fri, 31 Mar 2017 23:23:52 -0700</pubDate>
       
       <guid>http://words.yuvi.in/post/systemd-simple-containment/</guid>
-      <description>&lt;p&gt;I earlier had &lt;a href=&#34;http://words.yuvi.in/post/systemd-gui-applications/&#34;&gt;a vaguely working setup&lt;/a&gt; for making sure browsers, shells and other applications don&amp;rsquo;t eat all RAM / CPU on my machine with systemd + sudo + shell scripts.&lt;/p&gt;
-
-&lt;p&gt;It was a hacky solution, and also had complications when used to launch shells. It wasn&amp;rsquo;t passing in all the environment varialbes it should, causing interesting-to-debug issues. &lt;code&gt;sudo&lt;/code&gt; rules were complex, and hard to do securely.&lt;/p&gt;
-
-&lt;p&gt;I had also been looking for an excuse to learn more Golang, so I ended up writing &lt;a href=&#34;https://github.com/yuvipanda/systemd-simple-containment&#34;&gt;&lt;code&gt;systemd-simple-containment&lt;/code&gt;&lt;/a&gt; or &lt;code&gt;ssc&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;It&amp;rsquo;s a simple golang application that produces a binary that can be &lt;a href=&#34;https://en.wikipedia.org/wiki/Setuid&#34;&gt;&lt;code&gt;setuid&lt;/code&gt;&lt;/a&gt; to &lt;code&gt;root&lt;/code&gt;, and thus get around all our &lt;code&gt;sudo&lt;/code&gt; complexity, at the price of having to be very, very careful about the code. Fortunately, it&amp;rsquo;s short enough (~100 lines) and &lt;code&gt;systemd-run&lt;/code&gt; helps it keep the following invariants:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;It will never spawn any executable as any user other than the &amp;lsquo;real&amp;rsquo; uid / gid of the user calling the binary.&lt;/li&gt;
-&lt;li&gt;It doesn&amp;rsquo;t allow arbitrary systemd &lt;code&gt;properties&lt;/code&gt; to be set, ensuring a more limited attack surface.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;However, this is the first time I&amp;rsquo;m playing with setuid and with Go, so I probably fucked something up. I feel ok enough about my understanding of real and effective uids for now to use it myself, but not to recommend it to other people. Hopefully I&amp;rsquo;ll be confident enough say that soon :)&lt;/p&gt;
-
-&lt;p&gt;By using a real programming language, I also easily get commandline flags for sharing tty or not (so I can use the same program for launching GUI &amp;amp; interactive terminal applications), pass all environment variables through (which can&amp;rsquo;t be just standard child inheritence, since &lt;code&gt;systemd-run&lt;/code&gt; doesn&amp;rsquo;t work that way) &amp;amp; the ability to setuid (you can&amp;rsquo;t do that easily to a script).&lt;/p&gt;
-
-&lt;p&gt;I was sure I&amp;rsquo;d hate writing go because of the constant &lt;code&gt;if err != nil&lt;/code&gt; checks, but it hasn&amp;rsquo;t bothered me that much. I would like to write more Go, to get a better feel for it. This code is too short to like a language, but I definitely hate it less :)&lt;/p&gt;
-
-&lt;p&gt;Anyway, now I can launch GUI applications with &lt;code&gt;ssc -tty=false -isolation=strict firefox&lt;/code&gt; and it does the right thing. I currently have available &lt;code&gt;-isolation=strict&lt;/code&gt; and &lt;code&gt;-isolation=relaxed&lt;/code&gt;, the former performing stronger sandboxing (NoNewPrivileges, PrivateTmp) than the latter (just MemoryMax). i&amp;rsquo;ll slowly add more protections here, but just keep two modes (ideally).&lt;/p&gt;
-
-&lt;p&gt;My Gnome Terminal shell command is now &lt;code&gt;ssc -isolation=relaxed /bin/bash -i&lt;/code&gt; and it works great :)&lt;/p&gt;
-
-&lt;p&gt;I am pretty happy with &lt;code&gt;ssc&lt;/code&gt; as it exists now. Only thing I now want to do is to be able to use it from the GNOME launcher (I am using GNOME3 with gnome-shell). Apparently &lt;em&gt;shortcuts&lt;/em&gt; are no longer cool and hence pretty hard to create in modern desktop environments :| I shall keep digging!&lt;/p&gt;
-</description>
+      <description>I earlier had a vaguely working setup for making sure browsers, shells and other applications don&amp;rsquo;t eat all RAM / CPU on my machine with systemd + sudo + shell scripts.
+It was a hacky solution, and also had complications when used to launch shells. It wasn&amp;rsquo;t passing in all the environment varialbes it should, causing interesting-to-debug issues. sudo rules were complex, and hard to do securely.
+I had also been looking for an excuse to learn more Golang, so I ended up writing systemd-simple-containment or ssc.</description>
     </item>
     
     <item>
@@ -369,78 +81,8 @@ Written for pedagogy and personal understanding rather than production use.&lt;/
       <pubDate>Wed, 29 Mar 2017 20:47:10 -0700</pubDate>
       
       <guid>http://words.yuvi.in/post/systemd-gui-applications/</guid>
-      <description>
-
-&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: There&amp;rsquo;s a &lt;a href=&#34;//words.yuvi.in/post/systemd-simple-containment/&#34;&gt;follow-up post&lt;/a&gt; with a simpler solution now.&lt;/p&gt;
-
-&lt;p&gt;Ever since I read &lt;a href=&#34;https://blog.jessfraz.com&#34;&gt;Jessie Frazelle&lt;/a&gt;&amp;rsquo;s amazing setup (&lt;a href=&#34;https://blog.jessfraz.com/post/ultimate-linux-on-the-desktop/&#34;&gt;1&lt;/a&gt;, &lt;a href=&#34;https://blog.jessfraz.com/post/docker-containers-on-the-desktop/&#34;&gt;2&lt;/a&gt;, &lt;a href=&#34;https://blog.jessfraz.com/post/runc-containers-on-the-desktop/&#34;&gt;3&lt;/a&gt;) for running GUI applications in docker containers, I&amp;rsquo;ve wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&amp;rsquo;m also not as awesome (or knowledgeable!) as Jess, so will have to naturally settle for less&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;So I am doing it in systemd!&lt;/p&gt;
-
-&lt;p&gt;Before proceeding, I want to warn y&amp;rsquo;all that I don&amp;rsquo;t entirely know what I am doing. Don&amp;rsquo;t take any of this as security advice, since I don&amp;rsquo;t entirely understand X&amp;rsquo;s security model. Works fine for me though!&lt;/p&gt;
-
-&lt;h2 id=&#34;gui-applications&#34;&gt;GUI applications&lt;/h2&gt;
-
-&lt;p&gt;I started out using a simple systemd &lt;a href=&#34;https://fedoramagazine.org/systemd-template-unit-files/&#34;&gt;templated service&lt;/a&gt; to launch GUI applications, but soon realized that &lt;a href=&#34;https://www.freedesktop.org/software/systemd/man/systemd-run.html&#34;&gt;systemd-run&lt;/a&gt; is probably the better way. So I&amp;rsquo;ve a simple script, &lt;code&gt;/usr/local/bin/safeapp&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
-exec sudo systemd-run  \
-    -p CPUQuota=100% \
-    -p MemoryMax=70% \
-    -p WorkingDirectory=$(pwd) \
-    -p PrivateTmp=yes \
-    -p NoNewPrivileges=yes \
-    --setenv DISPLAY=${DISPLAY} \
-    --setenv DBUS_SESSION_BUS_ADDRESS=${DBUS_SESSION_BUS_ADDRESS} \
-    --uid ${USER} \
-    --gid ${USER} \
-    --quiet \
-    &amp;quot;$1&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I can run &lt;code&gt;safeapp /opt/firefox/firefox&lt;/code&gt; now and it&amp;rsquo;ll start firefox inside a nice systemd unit with a 70% Memory usage cap and CPU usage of at most 1 CPU. There&amp;rsquo;s also other minimal security stuff applied - &lt;code&gt;NoNewPrivileges&lt;/code&gt; being the most important one. I want to get &lt;code&gt;ProtectSystem&lt;/code&gt; + &lt;code&gt;ReadWriteDirectories&lt;/code&gt; going too, but there seems to be a bug in &lt;code&gt;systemd-run&lt;/code&gt; that doesn&amp;rsquo;t let it parse &lt;code&gt;ProtectSystem&lt;/code&gt; properly&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Also, there&amp;rsquo;s &lt;a href=&#34;https://github.com/systemd/systemd/issues/3851&#34;&gt;an annoying bug&lt;/a&gt; in systemd v231 (which is what my current system has) - you can&amp;rsquo;t set &lt;code&gt;CPUQuotas&lt;/code&gt; over 100% (aka &amp;gt; 1 CPU core). This is annoying if you want to give each application 3 of your 4 cores (which is what I want). Next version of Ubuntu has v232, so my GUI applications will just have to do with an aggregate of 1 full core until then.&lt;/p&gt;
-
-&lt;p&gt;The two environment variables seem to be all that&amp;rsquo;s necessary for X applications to work.&lt;/p&gt;
-
-&lt;p&gt;And yes, this might ask you for your password. I&amp;rsquo;ll clean this up into a nice non-bash script hopefully soon, and make all of these better.&lt;/p&gt;
-
-&lt;p&gt;Anyway, &lt;em&gt;it works&lt;/em&gt;! I can now open sketchy websites with scroll hijacking without fear it&amp;rsquo;ll kill my machine!&lt;/p&gt;
-
-&lt;h2 id=&#34;cli&#34;&gt;CLI&lt;/h2&gt;
-
-&lt;p&gt;I wanted each tab in my terminal to be its own systemd service, so they all get equitable amount of  CPU time &amp;amp; can&amp;rsquo;t crash machine by themselves with OOM.&lt;/p&gt;
-
-&lt;p&gt;So I&amp;rsquo;ve this script as &lt;code&gt;/usr/local/bin/safeshell&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;`#!/bin/bash
-exec sudo systemd-run \
-    -p CPUQuota=100% \
-    -p MemoryMax=70% \
-    -p WorkingDirectory=$(pwd) \
-    --uid yuvipanda \
-    --gid yuvipanda \
-    --quiet \
-    --tty \
-    /bin/bash -i
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The &lt;code&gt;--tty&lt;/code&gt; is magic here, and does the right things wrt passing the tty that GNOME terminal is passing in all the way to the shell. Now, my login command (set under profile preferences &amp;gt; command in gnome-terminal) is &lt;code&gt;sudo /usr/local/bin/safeshell&lt;/code&gt;. In addition, I add the following line to &lt;code&gt;/etc/sudoers&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;%sudo ALL = (root) NOPASSWD:SETENV: /usr/local/bin/safeshell
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This + just specifying the username directly in &lt;code&gt;safeshell&lt;/code&gt; are both hacks that make me cringe a little. I need to either fully understand how sudo&amp;rsquo;s &lt;code&gt;-E&lt;/code&gt; works, or use this as an opportunity to learn more Go and make a setuid binary.&lt;/p&gt;
-
-&lt;h2 id=&#34;to-do&#34;&gt;To do&lt;/h2&gt;
-
-&lt;p&gt;[ ] Generalize this to not need hacks (either with better sudo usage or a setuid binary)
-[ ] Investigate adding more security related options.
-[ ] Make these work with desktop / dock icons.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;d normally have just never written this post, on account of &amp;lsquo;oh no, it is imperfect&amp;rsquo; or something like that. However, that also seems to have come in the way of ability to find joy in learning simple things :D So I shall follow &lt;a href=&#34;https://jvns.ca/&#34;&gt;b0rk&lt;/a&gt;&amp;rsquo;s lead in spending time &lt;a href=&#34;http://words.yuvi.in/post/things-to-learn/&#34;&gt;learning&lt;/a&gt; for fun again :)&lt;/p&gt;
-</description>
+      <description>Update: There&amp;rsquo;s a follow-up post with a simpler solution now.
+Ever since I read Jessie Frazelle&amp;rsquo;s amazing setup (1, 2, 3) for running GUI applications in docker containers, I&amp;rsquo;ve wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&amp;rsquo;m also not as awesome (or knowledgeable!</description>
     </item>
     
     <item>
@@ -449,36 +91,9 @@ exec sudo systemd-run \
       <pubDate>Wed, 29 Mar 2017 15:27:57 -0700</pubDate>
       
       <guid>http://words.yuvi.in/post/things-to-learn/</guid>
-      <description>&lt;p&gt;Keeping a running list of things I want to learn!&lt;/p&gt;
-
-&lt;p&gt;There&amp;rsquo;s also a list of &lt;a href=&#34;http://words.yuvi.in/post/things-to-learn/&#34;&gt;things I want to build&lt;/a&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;How to use org mode properly? Should I use it for notes over markdown?&lt;/li&gt;
-&lt;li&gt;Develop a deep understanding of how networks work.&lt;/li&gt;
-&lt;li&gt;How do linux network namespaces work?&lt;/li&gt;
-&lt;li&gt;How to run GUI apps with systemd?
-
-&lt;ul&gt;
-&lt;li&gt;I did learn! Both a &lt;a href=&#34;http://words.yuvi.in/post/systemd-gui-applications/&#34;&gt;hacky version&lt;/a&gt; and a &lt;a href=&#34;http://words.yuvi.in/post/systemd-simple-containment/&#34;&gt;much better version&lt;/a&gt; that also taught me some Go!&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;What exactly is a &amp;lsquo;tty&amp;rsquo;?&lt;/li&gt;
-&lt;li&gt;How does HTTP2 actually work?&lt;/li&gt;
-&lt;li&gt;How do X509 / TLS certificates work?&lt;/li&gt;
-&lt;li&gt;How to use cgroups directly?&lt;/li&gt;
-&lt;li&gt;Can I just use emacs terminals for all my terminal needs?&lt;/li&gt;
-&lt;li&gt;How does NFS work, and why is it so crappy?&lt;/li&gt;
-&lt;li&gt;How does ssh work?&lt;/li&gt;
-&lt;li&gt;How does mosh work?&lt;/li&gt;
-&lt;li&gt;How do contact lenses work? HOW DO LENSES WORK?&lt;/li&gt;
-&lt;li&gt;Can I simply run a local DNS recursor on my laptop for performance &amp;amp; blocking me from visiting the orange website?&lt;/li&gt;
-&lt;li&gt;What is SELinux? Why and how would I use it?&lt;/li&gt;
-&lt;li&gt;What is AppArmor? Why and how would I use it, over SELinux?&lt;/li&gt;
-&lt;li&gt;What is seccomp, and when/why/how would I use it?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;If you know of resources that&amp;rsquo;ll help me learn these things, do let me know!&lt;/p&gt;
-</description>
+      <description>Keeping a running list of things I want to learn!
+There&amp;rsquo;s also a list of things I want to build.
+ How to use org mode properly? Should I use it for notes over markdown? Develop a deep understanding of how networks work. How do linux network namespaces work? How to run GUI apps with systemd?  I did learn! Both a hacky version and a much better version that also taught me some Go!</description>
     </item>
     
   </channel>

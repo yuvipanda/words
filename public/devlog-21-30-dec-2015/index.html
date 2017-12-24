@@ -1,0 +1,79 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.31.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>DevLog for 21-30 Dec 2015 &middot; Yuvi Panda</title>
+  
+
+  
+  <link rel="stylesheet" href="http://words.yuvi.in/css/poole.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/syntax.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Raleway">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
+</head>
+
+	<body class=" ">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://words.yuvi.in/"><h1>Yuvi Panda</h1></a>
+      <p class="lead">
+       Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      
+        <li><a href="mailto:yuvipanda@gmail.com"> email </a></li>
+      
+        <li><a href="https://github.com/yuvipanda"> github </a></li>
+      
+        <li><a href="https://twitter.com/yuvipanda"> twitter </a></li>
+      
+    </ul>
+
+    <p>CC0</p>
+    <p><small><a href="mailto:yuvipanda@gmail.com">Email me</a> to ask for Signal / WhatsApp / Telegram contact!</small></p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>DevLog for 21-30 Dec 2015</h1>
+			  <span class="post-date">Wed, Dec 30, 2015</span>
+			      <p>Clearly I missed an entire week. I need to build a better system to make this easier&#8230;</p>
+
+<p>Random notes.</p>
+
+<ul>
+<li>Kicked out NFS from the Tool Labs proxies (with <a href="https://gerrit.wikimedia.org/r/#/c/260424/">1</a>). Yay! This hopefully explains the lockup of tools-proxy-01 yesterday night, maybe? It&#8217;s been restarted since, and I hope to no longer have instances randomly locoking on me. Infrastructure standards of 2009, here we come! :D I&#8217;ve also removed NFS from tools-redis, and migrated them to Jessie as well.</li>
+<li>Fixed up all the races in how kubernetes workers are setup with <a href="https://gerrit.wikimedia.org/r/#/c/260501/">2</a></li>
+<li>Another instance is &#8216;stuck&#8217; again. Sigh. AAAAAAAAAAAAAAAAAAAAAAAAA. Paravoid helped debug this, tracking it down to NFS client issues in the 4.2 kernel (See <a href="https://phabricator.wikimedia.org/T121998">phab</a>). I moved k8s nodes back to a working 3.19 kernel (after filing <a href="https://phabricator.wikimedia.org/T122284">issue</a> about the other 3.19 kernel package I tried that didn&#8217;t work).</li>
+<li>Moved the tools proxies to 4.2 (lol?) after finding out huge ksoftirqd spikes in them. Let&#8217;s see if that improves things</li>
+<li>I split up the individual components of PAWS, and have a working <a href="https://github.com/yuvipanda/nbserve">nbserve</a> in there now! Exciting times. Need to fixup nbserve to use traitlets for config</li>
+<li>Big Tool Labs outage (again!). Some tool accidentally sent about 12million job requests and crashed gridengine&#8217;s underlying backing store (<a href="https://en.wikipedia.org/wiki/Berkeley_DB">BerkeleyDB</a>). Reset to a clean slate after many hours (Thanks Coren!) and mostly things are back up now. I&#8217;m reading through the Berkeley DB <a href="https://web.stanford.edu/class/cs276a/projects/docs/berkeleydb/">reference manual</a> now.</li>
+<li>Persistance failed for ores&#8217;s redises again, mostly because <code>vm_overcommit</code> was turned off. Fixed in the core redis module so it does not happen again.</li>
+</ul>
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>

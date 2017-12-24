@@ -1,0 +1,78 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.31.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>DevLog for 17 Aug 2014 &middot; Yuvi Panda</title>
+  
+
+  
+  <link rel="stylesheet" href="http://words.yuvi.in/css/poole.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/syntax.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Raleway">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
+</head>
+
+	<body class=" ">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://words.yuvi.in/"><h1>Yuvi Panda</h1></a>
+      <p class="lead">
+       Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      
+        <li><a href="mailto:yuvipanda@gmail.com"> email </a></li>
+      
+        <li><a href="https://github.com/yuvipanda"> github </a></li>
+      
+        <li><a href="https://twitter.com/yuvipanda"> twitter </a></li>
+      
+    </ul>
+
+    <p>CC0</p>
+    <p><small><a href="mailto:yuvipanda@gmail.com">Email me</a> to ask for Signal / WhatsApp / Telegram contact!</small></p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>DevLog for 17 Aug 2014</h1>
+			  <span class="post-date">Mon, Aug 18, 2014</span>
+			      <p>Devlogs again! Let&#8217;s see how long I can keep this one up.</p>
+
+<p>Been a whirlwind few months. I&#8217;m moving to the Wikimedia Ops team soon! The Wikipedia app has been released! Lots of excitement around, should do a bigger post sometime with details. This should just follow usual devlog format of stuff for the day</p>
+
+<ul>
+<li>Completed deployment of changing the results backend of <a href="https://quarry.wmflabs.org">Quarry</a> to SQLite. That was a fun exercise, and I should write about that separately. Still have some unicode issues left (mostly from the MySQL side) that I&#8217;ve hacked around for now.</li>
+<li>Quarry now uses a cron based query killer instead of relying on Celery. The day before I had force killed the celery deamons and this meant the query kill tasks didn&#8217;t run, leaving zombie queries behind. The simpler cron based killer won&#8217;t have this issue, since it&#8217;s super simple and does only one thing. The only reason I didn&#8217;t do this before was that I had not known about <code>SHOW PROCESSLIST</code> before (yes, I suck). It seems to be working fine now, but doesn&#8217;t kill superseeded queries immediately. Should be interesting to figure out how to get that done properly.</li>
+<li>I&#8217;ve started trying out <a href="https://atom.io">Atom</a> again. My previous attempt ended quickly when I ran into a bug which didn&#8217;t wrap text at all. A restart seems to have fixed that. The Vim keybindings are &#8216;ok&#8217; &#8211; there&#8217;s no <code>hlsearch</code>, which is painful, but I can live with it. I prefer the fuzzy finder in it to Ctrl-P in Vim.</li>
+<li>Started working on making labs monitoring with graphite possible again. Our graphite / txstatsd roles weren&#8217;t meant to be run on trusty, so working on porting things to make sure they work fine on both. I&#8217;ve immensely come to appreciate ops over the last year or so, and am quite enjoying my work in that area :) I&#8217;ll probably be doing more of these over the next week, since Quarry has reached a nice state now and I await more usage before I spend more time on it.</li>
+<li>Also did some code review on the Android app. It&#8217;s been chugging along quite happily these days :)</li>
+<li>Ran into a awake-when-he-should-not-have been <a href="http://blog.ironholds.org/">Oliver Keyes</a> and we have conspired to start some <a href="https://etherpad.wikimedia.org/p/flagellating-funnel">researchy</a> <a href="https://github.com/Ironholds/WPDMZ">things</a>. I cleaned up some of the python code, and am writing out things to do. This should be fun!</li>
+</ul>
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>

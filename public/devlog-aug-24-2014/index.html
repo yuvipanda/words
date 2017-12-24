@@ -1,0 +1,84 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.31.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>DevLog for Aug 24, 2014 &middot; Yuvi Panda</title>
+  
+
+  
+  <link rel="stylesheet" href="http://words.yuvi.in/css/poole.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/syntax.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Raleway">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
+</head>
+
+	<body class=" ">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://words.yuvi.in/"><h1>Yuvi Panda</h1></a>
+      <p class="lead">
+       Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      
+        <li><a href="mailto:yuvipanda@gmail.com"> email </a></li>
+      
+        <li><a href="https://github.com/yuvipanda"> github </a></li>
+      
+        <li><a href="https://twitter.com/yuvipanda"> twitter </a></li>
+      
+    </ul>
+
+    <p>CC0</p>
+    <p><small><a href="mailto:yuvipanda@gmail.com">Email me</a> to ask for Signal / WhatsApp / Telegram contact!</small></p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>DevLog for Aug 24, 2014</h1>
+			  <span class="post-date">Mon, Aug 25, 2014</span>
+			      <p>Wooooo!</p>
+
+<ul>
+<li>Moved <a href="https://github.com/yuvipanda/labsbooks">labsbooks</a> (described in <a href="http://yuvi.in/blog/devlog-23-aug-2014/">yesterday&#8217;s devlog</a>) to use a shared readonly IPython virtualenv maintained by me. Also installed a bunch of modules people might want to use (SciPy, NumPy, Pandas, PyTables, matplotlib). Am considering just installing IPython notebook globally via puppet and using that, since that&#8217;ll enable users to just use the system packages. However, the version of IPython notebook from Ubuntu is ancient, so that&#8217;s probably a non-starter.</li>
+<li>Have a basic version of the IPython publishing process working! Any toollabs user can create a notebook by:
+
+<ul>
+<li>Creating a <code>~/notebooks</code> folder</li>
+<li>Doing a <code>chmod +x ~/notebooks</code></li>
+<li>Doing a <code>chmod +x ~</code></li>
+<li>Putting IPython notebooks into <code>~/notebooks</code> (as <code>.ipynb</code>) files</li>
+<li>Going to <code>https://tools.wmflabs.org/notebooks/&lt;user-shell-name&gt;/&lt;path-to-ipynb-file&gt;</code> Will have to do a bit more work before it can be considered &#8216;production grade&#8217; (such as user pages, a nicer theme, etc, etc) BUT YAY GOOD START. It already caches the html output in Redis and invalidates with the <code>mtime</code> of the file, so should be pretty quick.</li>
+</ul></li>
+<li>Made the ssh tunneling process for <code>labsbooks</code> purely python, without requiring the <code>ProxyCommand</code>. This makes things simpler (and more portable!). I&#8217;ll need to work on securing this properly before I can publish it for broader use.</li>
+<li>Wrote <a href="https://lists.wikimedia.org/pipermail/analytics/2014-August/002437.html">an email</a> to the analytics mailing list about making public the &#8216;edits per country&#8217; data. I hope to make this publicly available with enough granularity that not just me but others can use this for fun research as well.</li>
+</ul>
+
+<p>I&#8217;ve been using <a href="https://atom.io">Atom</a> for puppet stuff, <a href="http://www.jetbrains.com/pycharm/">PyCharm</a> for Python and <a href="http://www.jetbrains.com/idea/">IntelliJ</a> for Java stuff, and that seems to be doing ok. They all have decent Vim keybindings as well, and good replacements for other functionality &#8211; and I might stick with Atom for a while to see how it goes :)</p>
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>

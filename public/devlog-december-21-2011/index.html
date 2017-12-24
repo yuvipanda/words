@@ -1,0 +1,75 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.31.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>DevLog: December 21 2011 &middot; Yuvi Panda</title>
+  
+
+  
+  <link rel="stylesheet" href="http://words.yuvi.in/css/poole.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/syntax.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Raleway">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
+</head>
+
+	<body class=" ">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://words.yuvi.in/"><h1>Yuvi Panda</h1></a>
+      <p class="lead">
+       Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      
+        <li><a href="mailto:yuvipanda@gmail.com"> email </a></li>
+      
+        <li><a href="https://github.com/yuvipanda"> github </a></li>
+      
+        <li><a href="https://twitter.com/yuvipanda"> twitter </a></li>
+      
+    </ul>
+
+    <p>CC0</p>
+    <p><small><a href="mailto:yuvipanda@gmail.com">Email me</a> to ask for Signal / WhatsApp / Telegram contact!</small></p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>DevLog: December 21 2011</h1>
+			  <span class="post-date">Wed, Dec 21, 2011</span>
+			      <ol>
+<li>livetrains work. Trying to move (minimal) build system to waf. Somewhat complicated, not as fluid as I&#8217;d like. Go to rake. Feel weird about starting from scratch, come back to waf. Not get anything done Another rake diversion. Final Makefile editing desperation. I give up &#8211; I need to spend atleast a day to get back on proper build tools. That day is not today.
+
+<ol>
+<li>Added feature to change font size to wikipedia app. That took almost a couple of days and ended up being less than 20 lines of code. First was trying to enable pinch and zoom, but only for an iframe &#8211; proved impossible. And then a long time of headwalling about how I&#8217;m not able to manipulate the DOM inside the iframe (despite code in other places being able to do it just fine (no crossdomain issues here)), I had given up and moved elsewhere. Finally brion suggested I try inserting a <link> into <head>, which actually did work. So much for the browser being sane</li>
+<li>&#8216;Refined&#8217; the search behavior of the wikipedia app a bit more. Also got bit by a difference between zepto (that we use) and jQuery (whose docs I have to read, since zepto by itself seems to have no docs). Had to read through the code to fix it, and managed to.</li>
+<li>Closed a *lot* of bugs. BOY THAT FEELS GREAT!</li>
+</ol></li>
+</ol>
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>

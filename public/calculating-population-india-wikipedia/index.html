@@ -1,0 +1,77 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.31.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>Calculating the population of India on Wikipedia &middot; Yuvi Panda</title>
+  
+
+  
+  <link rel="stylesheet" href="http://words.yuvi.in/css/poole.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/syntax.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Raleway">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
+</head>
+
+	<body class=" ">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://words.yuvi.in/"><h1>Yuvi Panda</h1></a>
+      <p class="lead">
+       Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      
+        <li><a href="mailto:yuvipanda@gmail.com"> email </a></li>
+      
+        <li><a href="https://github.com/yuvipanda"> github </a></li>
+      
+        <li><a href="https://twitter.com/yuvipanda"> twitter </a></li>
+      
+    </ul>
+
+    <p>CC0</p>
+    <p><small><a href="mailto:yuvipanda@gmail.com">Email me</a> to ask for Signal / WhatsApp / Telegram contact!</small></p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>Calculating the population of India on Wikipedia</h1>
+			  <span class="post-date">Sun, Mar 31, 2013</span>
+			      <p>Exploring the English Wikipedia randomly, I encountered <a href="https://en.wikipedia.org/wiki/Template:Indian_population_clock">this template</a> used to approximate the current live population of India. It uses the following simple formula:</p>
+
+<blockquote>
+<pre>(1176242 + 42.197260273969 * days_since(2010,1,26)) * 000</pre>
+</blockquote>
+
+<p>It&#8217;s based on population at a specific data + projected growth. The &#8216;update&#8217; is done by (best guess) some bot hitting <a href="https://www.mediawiki.org/wiki/Manual:Purge">action=purge</a> every night to re-do the calculation.</p>
+
+<p>And where is this used? After looking at the template&#8217;s <a href="https://en.wikipedia.org/wiki/Template:Indian_population_clock?action=info">info page</a>, the only article this seems to be used in is the India article, and that too only for population density statistics, rather than actual population statistics. Weird, since if Density can be calculated based on projection, I guess population could be too.</p>
+
+<p>The machinations that people invent on Wikipedia are very fascinating! I hope to discover more over time. If you&#8217;ve suggestions on places for me to look (please, no <a href="https://en.wikipedia.org/wiki/Template:WPBannerMeta">WPBannerMeta</a> / associated templates!), leave comments!</p>
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>

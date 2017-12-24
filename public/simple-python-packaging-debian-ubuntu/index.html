@@ -1,0 +1,86 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.31.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>Simple python packaging for Debian / Ubuntu &middot; Yuvi Panda</title>
+  
+
+  
+  <link rel="stylesheet" href="http://words.yuvi.in/css/poole.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/syntax.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Raleway">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
+</head>
+
+	<body class=" ">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://words.yuvi.in/"><h1>Yuvi Panda</h1></a>
+      <p class="lead">
+       Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      
+        <li><a href="mailto:yuvipanda@gmail.com"> email </a></li>
+      
+        <li><a href="https://github.com/yuvipanda"> github </a></li>
+      
+        <li><a href="https://twitter.com/yuvipanda"> twitter </a></li>
+      
+    </ul>
+
+    <p>CC0</p>
+    <p><small><a href="mailto:yuvipanda@gmail.com">Email me</a> to ask for Signal / WhatsApp / Telegram contact!</small></p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>Simple python packaging for Debian / Ubuntu</h1>
+			  <span class="post-date">Tue, Aug 19, 2014</span>
+			      <p>(As requested by <a href="https://twitter.com/JeanFred">Jean-Fred</a>)</p>
+
+<p>One of the &#8216;pain points&#8217; with working on deploying python stuff at Wikimedia is that <code>pip</code> and <code>virtualenvs</code> are banned on production, for some (what I now understand as) good reasons (the solid Signing / Security issues with PYPI, and the slightly less solid but nonetheless valid &#8216;If we use pip for python and gem for ruby and npm for node, EXPLOSION OF PACKAGE MANAGERS and makes things harder to manage&#8217;). I was whining about how hard debian packaging was for quite a while without checking how easy/hard it was to package python specifically, and when I finally did, it turned out to be quite not that hard.</p>
+
+<p>Use <a href="https://pypi.python.org/pypi/stdeb">python-stdeb</a>.</p>
+
+<p>Really, that is it. Ignore most other things (until you run into issues that require them :P). It can translate most python packages that are packaged for PyPI into .debs that mostly pass <a href="https://lintian.debian.org/">lintian</a> checks. Simplest way to package, that I&#8217;ve been following for a while is:</p>
+
+<ol>
+<li>Install <code>python-stdeb</code> (from pip or apt). Usually requires the packages <code>python-all</code>, <code>fakeroot</code> and <code>build-essential</code>, although for some reason these aren&#8217;t required by the debian package for <code>stdeb</code>. Make sure you&#8217;re on the same distro you are building the package for.</li>
+<li><code>git clone</code> the package from its source</li>
+<li>Run <code>python setup.py --command-packages=stdeb.command bdist_deb</code> (or <code>python3</code> if you want to make Python 3 package)</li>
+<li>Run <code>lintian</code> on it. If it spots errors, go back and fix them, usually by editing the <code>setup.py</code> file (or sometimes a <code>stdeb.cfg</code> file). This is usually rather obvious and easy enough to fix.</li>
+<li>Run <code>dpkg -i &lt;package&gt;</code> to try to install the package. This will error out if it can&#8217;t find the packages that your package depends on. This means that they haven&#8217;t been packaged for debian yet. You can mostly fix this by finding that package, and making a deb for it, and installing it as well (recursively making debs for packages as you need them). While this sounds onerous, the fact is that most python packages already exist as deb packages and you <code>stdeb</code> will just work for them. You might have to do this more if you&#8217;re packaging for an older distro (<em>cough</em> <em>cough</em> <code>precise</code> <em>cough</em> <em>cough</em>), but is much easier on newer distros.</li>
+<li>Put your package in a repository! If you want to use this on Wikimedia Labs, you should use <a href="https://wikitech.wikimedia.org/wiki/Help:Using_debs_in_labs">Labsdebrepo</a>. Other environments will have similar ways to make the package available via <code>apt-get</code>. Avoid the temptation to just <code>dpkg -i</code> it on machines manually :)</li>
+</ol>
+
+<p>That&#8217;s pretty much it! Much simpler than I originally expected, and not much confusing / conflicting docs. The docs for <code>stdeb</code> are pretty nice and complete, so do read these!</p>
+
+<p>Will update the post as I learn more.</p>
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>

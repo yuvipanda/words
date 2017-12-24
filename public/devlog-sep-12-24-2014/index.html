@@ -1,0 +1,82 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.31.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>DevLog Sep 12-24, 2014 &middot; Yuvi Panda</title>
+  
+
+  
+  <link rel="stylesheet" href="http://words.yuvi.in/css/poole.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/syntax.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Raleway">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
+</head>
+
+	<body class=" ">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://words.yuvi.in/"><h1>Yuvi Panda</h1></a>
+      <p class="lead">
+       Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      
+        <li><a href="mailto:yuvipanda@gmail.com"> email </a></li>
+      
+        <li><a href="https://github.com/yuvipanda"> github </a></li>
+      
+        <li><a href="https://twitter.com/yuvipanda"> twitter </a></li>
+      
+    </ul>
+
+    <p>CC0</p>
+    <p><small><a href="mailto:yuvipanda@gmail.com">Email me</a> to ask for Signal / WhatsApp / Telegram contact!</small></p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>DevLog Sep 12-24, 2014</h1>
+			  <span class="post-date">Wed, Sep 24, 2014</span>
+			      <p>That was a long break. Should get into better habits. I&#8217;m sure I&#8217;d miss some here. Oh well.</p>
+
+<p>It was a very interesting week, culminating in some very interesting things at Trafalgar Square. I feel much better as a person and more calmer/chilled out now :) Should remember to take weekends off.</p>
+
+<ul>
+<li>Helped the <a href="http://metrics.wmflabs.org/">WikiMetrics</a> people with some puppet changes. They were requiring mysql directly instead of using the class we have in ops/puppet, which meant it put data in the /var partition instead of in /srv. This was because they want to be a &#8216;proper&#8217; independent puppet module, not depending on the other modules in ops/puppet (since the module is used in vagrant as well). Puppet has <em>terrible</em> support for this kind of thing, and ops/puppet by itself also suffers from an incredible amount of NIH syndrome when it comes to modules. Some of the NIH-so-rewrite is justified, but I don&#8217;t think all of it is. Oh well. Hopefully something that can be fixed over time&#8230;</li>
+<li>Added basic icinga/graphite based monitoring for contint project (runs our jenkins installation). Quite trivial, but should be ported over to shinken at some point soon.</li>
+<li>Contributed a fair bit to the <a href="https://github.com/erming/shout">Shout</a> Web IRC project. I was looking around for an open source replacement to <a href="https://irccloud.com">IRCCloud</a>, and found a bunch of OSS projects (<a href="https://github.com/thedjpetersen/subway">Subway</a> and <a href="http://ircanywhere.com/">http://ircanywhere.com/</a> being the others). Shout seemed the most active (and simplest) of them all &#8211; I couldn&#8217;t actually get the others to a working installation. I fixed a bunch of code formatting issues, and also added a couple of features (<a href="https://github.com/erming/shout/pull/138">Desktop notifications</a> being the most significant, I think). The maintainer was fun to work with, and merged most of my changes quite promptly. I hang out on <code>#shout-irc</code> channel now, and activity seems to be speeding along. Should be fun to see how it goes :)</li>
+<li>Moved off IRCCloud. Stopped paying for it. I&#8217;ve also stopped doing email on my phone, in an effort to be more minimalistic / less distracted all the time. This meant no more IRC on phone, so my primary reason for using IRCCloud disappeared. Am back to using LimeChat with my ZNC bouncer now. And nothing on my phone. In case of emergencies, I still have the IRCCloud app on my phone, and can use the free edition to connect to my bouncer temporarily.</li>
+<li>Started working on labs-specific monitoring, with <a href="http://shinken-monitoring.org">shinken</a> &#8211; test instance at <a href="http://shinken.wmflabs.org">shinken.wmflabs.org</a>. Discussion in the ops list about how to best implement this. Shinken is supposed to horizontally scale much better than icinga since it is implemented as a bunch of different daemons that can talk over the network. Right now they are just one machine, but will probably expand at some point not too far away. They are running as a labs project rather than on a physical machine (<code>labmon1001</code>) because it is much easier from a networking perspective. Right now it only has a simple http check for betacluster, but more coming.</li>
+<li>Started refactoring all our icinga code. Separating them out into <code>nagios_commmon</code> module for config that can be shared between shinken and icinga, and into an <code>icinga</code> module for everything else. Moved all the custom checks and check config we have, moving other things as we go. This is a bit hard / frustrating since I don&#8217;t have access to the machine icinga runs on (<code>neon</code>), and also because I still do not have +2 in our ops repo (should change in a month, tho!). Am about 40 patches in (small ones!), let&#8217;s see how many more it takes!</li>
+<li>Moved our <code>dsh</code> code into a module. Was fairly trivial. Now to find ways to get it merged :)</li>
+<li>Started trying out <a href="http://pinboard.in">pinboard</a>. Interesting, barebones design. The bookmarklet is a bit slow to load, though. Let&#8217;s see how often I use this. (I did pay for it)</li>
+</ul>
+
+<p>Five more days left in the UK :( Let me see if I can continue doing these when here, in a more prompt manner.</p>
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>

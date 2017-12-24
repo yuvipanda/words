@@ -1,0 +1,74 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.31.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>DevLog for 18 Aug 2014 &middot; Yuvi Panda</title>
+  
+
+  
+  <link rel="stylesheet" href="http://words.yuvi.in/css/poole.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/syntax.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Raleway">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
+</head>
+
+	<body class=" ">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://words.yuvi.in/"><h1>Yuvi Panda</h1></a>
+      <p class="lead">
+       Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      
+        <li><a href="mailto:yuvipanda@gmail.com"> email </a></li>
+      
+        <li><a href="https://github.com/yuvipanda"> github </a></li>
+      
+        <li><a href="https://twitter.com/yuvipanda"> twitter </a></li>
+      
+    </ul>
+
+    <p>CC0</p>
+    <p><small><a href="mailto:yuvipanda@gmail.com">Email me</a> to ask for Signal / WhatsApp / Telegram contact!</small></p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>DevLog for 18 Aug 2014</h1>
+			  <span class="post-date">Mon, Aug 18, 2014</span>
+			      <p>I&#8217;ve started the habit of opening up a devlog post each morning and just filling it up as I go along. Let&#8217;s hope I can keep this up :)</p>
+
+<ul>
+<li>Merged a couple of Android patches. The app is getting better every day without too much involvement from me, and yay for that :) I&#8217;ve gotten closure over the Android app &#8211; it was fucking terrible, and now it is quite awesome. Need to write another post about that.</li>
+<li>Fixed annoying bug with mysql connections being reset in Quarry&#8217;s query runners after a few hours. I had fixed this earlier when I was using <code>pymysql</code> directly with reconnect(ping=True), and assumed that switching to <a href="http://www.sqlalchemy.org/">SQLAlchemy</a> would&#8217;ve fixed it for me automagically. <a href="http://docs.sqlalchemy.org/en/latest/faq.html#mysql-server-has-gone-away">Apparently not</a>. MySQL Y U SO BAD?</li>
+<li>I have <code>sudo</code> access on <code>labmon1001</code> in prod! First Wikimedia production cluster machine I have root on, and will spend time over the next few weeks setting it up to run graphite. Should be fun!</li>
+<li>Getting slightly better at packaging python things. Packaged <a href="https://github.com/sidnei/txstatsd">python-txstatsd</a> with no lintian errors, and only a couple warnings :)</li>
+</ul>
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>

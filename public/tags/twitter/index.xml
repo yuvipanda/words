@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Twitter on Yuvi Panda</title>
-    <link>http://words.yuvi.in/tags/twitter/index.xml</link>
+    <link>http://words.yuvi.in/tags/twitter/</link>
     <description>Recent content in Twitter on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>CC0</copyright>
-    <atom:link href="http://words.yuvi.in/tags/twitter/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Jan 2017 22:17:12 +0530</lastBuildDate>
+    
+	<atom:link href="http://words.yuvi.in/tags/twitter/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>making twitter useful again</title>
@@ -15,23 +18,9 @@
       <pubDate>Sun, 22 Jan 2017 22:17:12 +0530</pubDate>
       
       <guid>http://words.yuvi.in/post/making-twitter-useful-again/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve unfollowed everyone I follow on Twitter, and am slowly starting back up from scratch. I&amp;rsquo;m only going to follow people who are:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Underrepresented people in Tech (as broadly construed)&lt;/li&gt;
-&lt;li&gt;Journalists&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;And that&amp;rsquo;s it. I&amp;rsquo;ll follow back friends I&amp;rsquo;m not otherwise in contact with as well, but might take a while.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve had this for a few days and am already enjoying using it far more than I did before. A lot of the people I&amp;rsquo;m following now I did not know before, and the vibe is totally different. I&amp;rsquo;m able to understand and appreciate things I was not able to before. I know this is a bubble, but it is certainly a different bubble than the one I was in before. Bubbles also intersect - I&amp;rsquo;ve interactions with other types of people elsewhere, just not on Twitter.&lt;/p&gt;
-
-&lt;p&gt;If I unfollowed you, don&amp;rsquo;t take it personally! DM me for a phone number you can use for Signal / WhatsApp / Telegram - that&amp;rsquo;s how 90% of my social activities seem to happen these days anyway.&lt;/p&gt;
-
-&lt;p&gt;h/t to &lt;a href=&#34;http://www.gaijin.com/&#34;&gt;Jorm&lt;/a&gt; for the idea of targetted following!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: I&amp;rsquo;ve also setup &lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/leechblock/&#34;&gt;LeechBlock&lt;/a&gt; to only allow me 5mins of Twitter every 2h, and I don&amp;rsquo;t have the twitter app on my phone. I wish there was a leechblock type thing for my Phone tho.&lt;/p&gt;
-</description>
+      <description>I&amp;rsquo;ve unfollowed everyone I follow on Twitter, and am slowly starting back up from scratch. I&amp;rsquo;m only going to follow people who are:
+ Underrepresented people in Tech (as broadly construed) Journalists  And that&amp;rsquo;s it. I&amp;rsquo;ll follow back friends I&amp;rsquo;m not otherwise in contact with as well, but might take a while.
+I&amp;rsquo;ve had this for a few days and am already enjoying using it far more than I did before.</description>
     </item>
     
   </channel>

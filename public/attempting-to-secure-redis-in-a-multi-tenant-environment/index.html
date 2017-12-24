@@ -1,0 +1,132 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.31.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>Attempting to Secure Redis in a Multi Tenant environment &middot; Yuvi Panda</title>
+  
+
+  
+  <link rel="stylesheet" href="http://words.yuvi.in/css/poole.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/syntax.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Raleway">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
+</head>
+
+	<body class=" ">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://words.yuvi.in/"><h1>Yuvi Panda</h1></a>
+      <p class="lead">
+       Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      
+        <li><a href="mailto:yuvipanda@gmail.com"> email </a></li>
+      
+        <li><a href="https://github.com/yuvipanda"> github </a></li>
+      
+        <li><a href="https://twitter.com/yuvipanda"> twitter </a></li>
+      
+    </ul>
+
+    <p>CC0</p>
+    <p><small><a href="mailto:yuvipanda@gmail.com">Email me</a> to ask for Signal / WhatsApp / Telegram contact!</small></p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>Attempting to Secure Redis in a Multi Tenant environment</h1>
+			  <span class="post-date">Sat, Jul 20, 2013</span>
+			      
+
+<p>When running <a href="http://redis.io/">Redis</a> in a shared cluster/hosting environment (such as <a href="https://wikitech.wikimedia.org/wiki/Nova_Resource:Tools/Help">Wikimedia Tool Labs</a>, on which I&rsquo;ve been having fun doing a lot of work on), you would want to try to provide at least <em>some</em> guarantee of isolation for your keys from everyone else&rsquo;s keys. Since Redis doesn&rsquo;t do ACLs, this is problematic.</p>
+
+<p>This can be solved in a couple of ways</p>
+
+<h2 id="run-a-redis-instance-for-each-user">Run a Redis instance for each user</h2>
+
+<p>This is simple enough to do &#8211; each user runs their own Redis instance, and has full access to it. Security is handled by setting a secret password, and running <code>redis-server</code> as the user in question. Boom, secure!</p>
+
+<p>This doesn&rsquo;t really scale with a large number of users, because they each have lesser memory to work with now. Also having users who just want to run their tools have to deal with making sure their Redis instance is up and running fine isn&rsquo;t really good. Having the sysadmins be responsible for users&rsquo; Redis instance is&#8230; not going to work :) This would also require all the redis instances to run on one box and/or have a separate cluster just for them, which isn&rsquo;t good either.</p>
+
+<h2 id="add-acl-support-to-redis">Add ACL support to Redis</h2>
+
+<p>Not happening, because I&rsquo;m not good enough to do that yet :P But more realistically, it won&rsquo;t ever happen, since this will probably add a lot of overhead for what is arguably an edge case.</p>
+
+<h2 id="build-a-small-server-that-sits-in-front-of-redis">Build a small server that sits in front of Redis</h2>
+
+<p>Such a server would simply authenticate incoming requests via some mechanism (<a href="http://keystone.openstack.org/">Keystone</a> perhaps), and then enforce ACLs. It will have to speak the exact same protocol as Redis, since users should be able to use any library that connects to Redis. This isn&rsquo;t too hard &#8211; just replace the <code>password</code> functionality of Redis protocol to take in both a username and password (or token, or some other method of auth).</p>
+
+<p>This also I discarded &#8211; it will still affect performance, which will now be limited by how fast <em>this</em> server runs, and that is definitely not faster than Redis. And it will also be hard to maintain, since I&rsquo;ll have to completely mimic Redis&rsquo; protocol and make sure it is kept up to date. Debugging protocol issues with random client libraries is not my idea of fun. Another <strong>major</strong> disadvantage is that <strong>I</strong> would now be writing auth code, and I don&rsquo;t think handrolling auth code is a good idea, ever.</p>
+
+<h2 id="security-by-obscurity">Security By Obscurity!</h2>
+
+<p>This is what we finally settled on :D It sounds horrible by the title, but I think it is Good Enough<sup>TM</sup>.</p>
+
+<p>Since Redis is a key value store at heart, you can do anything once you know the key. So, if an &lsquo;attacker&rsquo; doesn&rsquo;t know the key, there isn&rsquo;t much they can do. So it can be considered SecureEnough for our purposes if we can make it so that other users can not find out or guess your keys.</p>
+
+<p>We essentially did so with the following:</p>
+
+<ol>
+<li>Disable all Redis commands that let users list all / many keys.</li>
+<li>Have users use a random and long key prefix for all their keys.</li>
+</ol>
+
+<p>(1) prevents someone from just listing all keys to find something interesting. (2) prevents people from brute-forcing or guessing keys. Since all code run on Tool Labs must be open source, guessing keys is super easy. By having a &lsquo;secret&rsquo; prefix, having the actual keys is useless. This also prevents accidental key overwrites from different tools using a common key name.</p>
+
+<p>Disabling commands is easy to do by using Redis&rsquo; <code>RENAME COMMAND</code> config feature. I added support for <code>RENAME COMMAND</code> to Wikimedia&rsquo;s <a href="https://github.com/wikimedia/operations-puppet/tree/production/modules/redis">Redis puppet module</a>, and then it was simple enough to <a href="https://github.com/wikimedia/operations-puppet/blob/production/modules/toollabs/manifests/redis.pp">configure</a> a specific instance to disable &lsquo;list keys&rsquo; type commands. That&rsquo;s the following commands:</p>
+
+<ol>
+<li><code>CONFIG</code></li>
+<li><code>FLUSHALL</code></li>
+<li><code>FLUSHDB</code></li>
+<li><code>KEYS</code></li>
+<li><code>SHUTDOWN</code></li>
+<li><code>SLAVEOF</code></li>
+<li><code>CLIENT</code></li>
+<li><code>RANDOMKEY</code></li>
+<li><code>DEBUG</code>.</li>
+</ol>
+
+<p>After going through the list of Redis commands, I am guessing this is going to be GoodEnough to prevent key listing. (Note: if there&rsquo;s more that I&rsquo;m missing, please, <em>please</em> let me know).</p>
+
+<p>We also tell people to use a secure prefix that&rsquo;s at least 64bytes long, saved in a file that is only user readable. Generating that is as simple as:</p>
+
+<p>openssl rand -base64 64</p>
+
+<p>That should be long enough to be hard to brute force, even with Redis being as fast as it is.</p>
+
+<h3 id="problems">Problems</h3>
+
+<p>The major problem with this is, of course &#8211; the fact that humans are involved :) I&rsquo;ve heard &ldquo;I do not care about my keys, do not need security&rdquo; a fair amount of times already. The fact that the prefix generation is optional means that there will be people who do not use prefixes, and it will work for them for a (probably) long time &#8211; until it doesn&rsquo;t, and they have no idea why. This is personally acceptable to me, since they have been made aware of the risks beforehand.</p>
+
+<h2 id="fun">Fun</h2>
+
+<p>This has now been deployed on toollabs for a month or so, and I&rsquo;ve a couple of fun tools already written using it (and other people too). We had a patched memcached server we had that we&rsquo;ll kill in a few weeks, so people who used memcached before are also migrating to redis. And I was able to do all this without even having root! This is mostly thanks to the fact that we try to keep all our configuration in puppet (<a href="https://github.com/wikimedia/operations-puppet">Wikimedia&rsquo;s Puppet repository</a>) &#8211; for both our production cluster and for everything else. So I could re-use our production redis module, make changes to it, and build the new solution &#8211; all while being vetted by &lsquo;proper&rsquo; ops people (whom I dearly love and respect). Building infrastructure in such a collaborative manner is a lot of fun, and I think I&rsquo;m hooked. It&rsquo;s fun!</p>
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>

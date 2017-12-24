@@ -1,0 +1,75 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.31.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>DNS servers, localhost and asynchronous code &middot; Yuvi Panda</title>
+  
+
+  
+  <link rel="stylesheet" href="http://words.yuvi.in/css/poole.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/syntax.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Raleway">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
+</head>
+
+	<body class=" ">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://words.yuvi.in/"><h1>Yuvi Panda</h1></a>
+      <p class="lead">
+       Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      
+        <li><a href="mailto:yuvipanda@gmail.com"> email </a></li>
+      
+        <li><a href="https://github.com/yuvipanda"> github </a></li>
+      
+        <li><a href="https://twitter.com/yuvipanda"> twitter </a></li>
+      
+    </ul>
+
+    <p>CC0</p>
+    <p><small><a href="mailto:yuvipanda@gmail.com">Email me</a> to ask for Signal / WhatsApp / Telegram contact!</small></p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>DNS servers, localhost and asynchronous code</h1>
+			  <span class="post-date">Thu, Feb 4, 2016</span>
+			      <p><code>localhost</code> is always <code>127.0.0.1</code>, right? Nope, can also be <code>::1</code> if your system only has IPV6 (apparently).</p>
+
+<p>Asking a DNS server for an A record for <code>localhost</code> should give you back <code>127.0.0.1</code> right? Nope &#8211; it varies wildly! <code>8.8.8.8</code> gives me an <code>NXDOMAIN</code> which means it tells you straight up THIS DOMAIN DOES NOT EXIST! Which is true, since localhost isn&#8217;t a domain. But if you ask the same thing of any dnsmasq server, it&#8217;ll tell you localhost is 127.0.0.1. Other servers vary wildly &#8211; I found one that returned an <code>NXDOMAIN</code> for AAAA but 127.0.0.1 for A (which is pretty wild, since <code>NXDOMAIN</code> makes most software treat the domain as not existing and not attempt other lookups). So localhost and DNS servers don&#8217;t mix very well.</p>
+
+<p>But why is this a problem, in general? Most DNS resolution happens via <code>gethostbyname</code> libc call, which reads <code>/etc/hosts</code> properly, right? Problem there is that there is popular software that&#8217;s completely asynchronous (_cough_nginx<em>cough</em>) that does <em>not</em> use <code>gethostbyname</code> (since that&#8217;s synchronous) and directly queries DNS servers (asynchronously). This works perfectly well until you try to hit <code>localhost</code> and it tells you &#8216;no such thing!&#8217;.</p>
+
+<p>I should probably file a bug with nginx to have them read <code>/etc/hosts</code> as well, and in the mean-time work around by sending <code>127.0.0.1</code> to nginx rather than localhost.</p>
+
+<p>How did <em>your</em> thursday go?</p>
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>

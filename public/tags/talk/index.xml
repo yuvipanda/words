@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Talk on Yuvi Panda</title>
+    <link>http://words.yuvi.in/tags/talk/</link>
+    <description>Recent content in Talk on Yuvi Panda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>CC0</copyright>
+    <lastBuildDate>Sun, 10 Apr 2011 23:02:48 +0000</lastBuildDate>
+    
+	<atom:link href="http://words.yuvi.in/tags/talk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GStreamer 101 at GNOME Asia 2011</title>
+      <link>http://words.yuvi.in/gstreamer-101-at-gnome-asia-2011/</link>
+      <pubDate>Sun, 10 Apr 2011 23:02:48 +0000</pubDate>
+      
+      <guid>http://words.yuvi.in/gstreamer-101-at-gnome-asia-2011/</guid>
+      <description>My GStreamer 101 presentation at GNOME.asia was very wel received. I was quite happy with the way it turned out. Thanks to Ford_Prefect and Bharath Acharya for pulling me in :)
+My very minimal slides are here. You can reuse them if you want to.
+Sadly, missed the week long hackfest :( Next time!</description>
+    </item>
+    
+  </channel>
+</rss>

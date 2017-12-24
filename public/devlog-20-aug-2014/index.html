@@ -1,0 +1,76 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.31.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>Devlog for 20 Aug 2014 &middot; Yuvi Panda</title>
+  
+
+  
+  <link rel="stylesheet" href="http://words.yuvi.in/css/poole.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/syntax.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Raleway">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
+</head>
+
+	<body class=" ">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://words.yuvi.in/"><h1>Yuvi Panda</h1></a>
+      <p class="lead">
+       Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      
+        <li><a href="mailto:yuvipanda@gmail.com"> email </a></li>
+      
+        <li><a href="https://github.com/yuvipanda"> github </a></li>
+      
+        <li><a href="https://twitter.com/yuvipanda"> twitter </a></li>
+      
+    </ul>
+
+    <p>CC0</p>
+    <p><small><a href="mailto:yuvipanda@gmail.com">Email me</a> to ask for Signal / WhatsApp / Telegram contact!</small></p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>Devlog for 20 Aug 2014</h1>
+			  <span class="post-date">Thu, Aug 21, 2014</span>
+			      <p>Woke up at 11AM again! w000t!</p>
+
+<ul>
+<li>Fixed a stupid bug in Quarry that made it fail if MySQL decided that a column you were selecting is a <code>Decimal</code>. Fixed this in time for&#8230;</li>
+<li>Helped out with a <a href="https://plus.google.com/u/0/b/117126229120807344920/events/cngcjcmm1tcn1omqpalcm686044">webinar</a> from J-Mo for people to learn SQL and do research against Wikimedia stuff with Quarry! Went without a glitch mostly, so yay :) Oren asked for an API for Quarry, I&#8217;ll investigate ways to get that done</li>
+<li>Found that some queries against enwiki succeed on <code>s1.labsdb</code> but not on <code>s4.labsdb</code>. I attribute this to cache characteristics, and have switched Quarry to use s1 for now.</li>
+<li>Did more work on <a href="https://github.com/Ironholds/WPDMZ">DMZ</a>, getting in place a runner / processor infrastructure and sqlite backed intermediary storage so I can write simpler code to get the data I want. Super excited to see how this goes. It&#8217;ll be much easier for me to add new queries now.</li>
+<li>More work on DMZ! I had a late night sprint and split edits by mobile and desktop (and was surprised by seeing how much lesser edits came from mobile). Next would be to gather up population and internet penetration data and then GO MAKE SOME GRAPHS, probably with iPython. I&#8217;m returning to making graphs for real after, what, 6 years or so? :) I was using C# and Excel then :) /nick ExcitedPanda</li>
+<li>Also made some progress on our makeshift Android CI-ish build system for the Wikipedia app. Should be done soon.</li>
+</ul>
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>

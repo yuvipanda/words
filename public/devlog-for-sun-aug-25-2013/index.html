@@ -1,0 +1,87 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.31.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>DevLog for Sun, Aug 25, 2013 &middot; Yuvi Panda</title>
+  
+
+  
+  <link rel="stylesheet" href="http://words.yuvi.in/css/poole.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/syntax.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Raleway">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
+</head>
+
+	<body class=" ">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://words.yuvi.in/"><h1>Yuvi Panda</h1></a>
+      <p class="lead">
+       Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      
+        <li><a href="mailto:yuvipanda@gmail.com"> email </a></li>
+      
+        <li><a href="https://github.com/yuvipanda"> github </a></li>
+      
+        <li><a href="https://twitter.com/yuvipanda"> twitter </a></li>
+      
+    </ul>
+
+    <p>CC0</p>
+    <p><small><a href="mailto:yuvipanda@gmail.com">Email me</a> to ask for Signal / WhatsApp / Telegram contact!</small></p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>DevLog for Sun, Aug 25, 2013</h1>
+			  <span class="post-date">Sun, Aug 25, 2013</span>
+			      
+
+<p>DevLogs have been something I&rsquo;ve not been writing much of of late. Time to fix that!</p>
+
+<h2 id="wlm-android-app">WLM Android App</h2>
+
+<p>Spent some time <a href="http://lists.wikimedia.org/pipermail/wikilovesmonuments/2013-August/006249.html">reviving the WLM Android App</a>. Wasn&rsquo;t too hard, and am surprised at how well it still runs :) Some work still needed to update the <a href="https://github.com/wikimedia/WLMMobile/commit/113d9abf7b675b147ece3f2be005ef1b6ba0e4cf#assets/www/js/campaigns-data.js">templates</a> and other metadata to refer to WLM2013 rather than WLM2012 &#8211; but that should not be too hard. The fact that it is an issue at all is simply because I ripped out all the Campaign related APIs a few weeks ago with my UploadCampaign rewrite.</p>
+
+<p><a href="https://commons.wikimedia.org/wiki/User:Multichill">multichill</a> was awesome in moving the <a href="https://tools.wmflabs.org/heritage/api/api.php">Monuments API</a> to <a href="https://tools.wmflabs.org">Tool Labs</a> &#8211; hence making it much faster! Initially we thought that the Toollabs DB was too slow for writes &#8211; but this turned out to be a mistake, since apparently the Replica Databases had slow writes, but <code>tools-db</code> itself was fine. There&rsquo;s <a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=48851">a bug</a> tracking this now. Toollabs version of the API still seems much faster to me than Toolserver&rsquo;s :)</p>
+
+<h2 id="uploadcampaigns-api">UploadCampaigns API</h2>
+
+<p>Mediawiki sucks. Eeeew! Specifically, writing API modules &#8211; why can&rsquo;t we just be happy and have everything be JSON? Sigh!</p>
+
+<p>I&rsquo;m adding <a href="https://gerrit.wikimedia.org/r/#/c/80782/">a patch</a> that allows <a href="https://www.mediawiki.org/wiki/Extension:UploadWizard/Campaigns">UploadCampaigns</a> to be queried selectively, rather than just via the normal page APIs. Right now, this only lets us filter by <code>enabled</code> status &#8211; but in the future, this should be able to also filter on a vast array of other properties. Properties about Geographic location come to mind as the most useful. That patch still has a good way to go before it can be merged (continue support being the foremost one), but it is getting there :)</p>
+
+<p>The ickiest part of the patch is perhaps that it sends out raw JSON data as a&#8230; string. So no matter which format you are using on your client, you <em>need</em> to use a JSON parser to deal with the Campaigns data. This sortof makes sense, since that is how the data is stored anyway. Doesn&rsquo;t make it any less icky, though!</p>
+
+<p>Not bad for a lazy Sunday, eh?</p>
+
+<p><strong>Update</strong>: After not being able to sleep, I also submitted <a href="https://gerrit.wikimedia.org/r/#/c/80946/">a patch</a> to make phpcs pass for UploadWizard, and also fought with the UploadCampaigns API patch to have it (brokenly?) support continuing. Yay?</p>
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>

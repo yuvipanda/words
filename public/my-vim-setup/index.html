@@ -1,0 +1,93 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.31.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>My Vim setup &middot; Yuvi Panda</title>
+  
+
+  
+  <link rel="stylesheet" href="http://words.yuvi.in/css/poole.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/syntax.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Raleway">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
+</head>
+
+	<body class=" ">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://words.yuvi.in/"><h1>Yuvi Panda</h1></a>
+      <p class="lead">
+       Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      
+        <li><a href="mailto:yuvipanda@gmail.com"> email </a></li>
+      
+        <li><a href="https://github.com/yuvipanda"> github </a></li>
+      
+        <li><a href="https://twitter.com/yuvipanda"> twitter </a></li>
+      
+    </ul>
+
+    <p>CC0</p>
+    <p><small><a href="mailto:yuvipanda@gmail.com">Email me</a> to ask for Signal / WhatsApp / Telegram contact!</small></p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>My Vim setup</h1>
+			  <span class="post-date">Tue, Aug 23, 2011</span>
+			      <p>I <a href="http://yuvi.in/blog/moving-to-vim-from-emacs.html">moved</a> from emacs to vim a while ago, and have been steadily accumulating a series of plugins in my <code>.vim</code>. They&#8217;re all up in my rather messy <a href="http://github.com/yuvipanda/dotfiles">dotfiles repo</a>. Here&#8217;s a slightly more neatly organized list of the plugins I currently use:</p>
+
+<ol>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=3025">command-t</a> &#8211; File opener and buffer switcher. In-fuckin-credibly useful.</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=1953">vimpress</a> &#8211; What I use to blog since <a href="http://yuvi.in/blog/moving-back-to-wordpress/">moving to wordpress</a>.</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=39">matchit</a> &#8211; Lets <code>%</code> work with html tags</li>
+<li><s><a href="http://www.vim.org/scripts/script.php?script_id=3695">commentary</a> &#8211; Generic commenting and uncommenting script</s> <a href="http://www.vim.org/scripts/script.php?script_id=1218">NERDCommenter</a> has replaced commentary due to being more flexible and having more options.</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=2975">fugitive</a> &#8211; Incredibly awesome git wrapper for vim. I rarely go to the commandline for git these days</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=3465">tagbar</a> &#8211; Useful code-exploratory plugin when I&#8217;m looking around a codebase trying to familiarize myself.</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=1643">supertab</a> &#8211; Buffer completion in insert mode only when I need it.</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=2423">gist</a> &#8211; Put stuff up in gist to pass it around</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=559">BufClose</a> &#8211; So I can close a buffer without messing up my splits</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=3509">extradite</a> &#8211; <code>:Glog</code> replacement that builds on top of fugitive. I don&#8217;t understand why this isn&#8217;t bundled with fugitive</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=2204">TwitVim</a> &#8211; Yes, so I don&#8217;t have to go to the browser (and be consumed by chat/reddit/hn) just to post a tweet.</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=2572">ack.vim</a> &#8211; Ack integration for vim. Do yourself a favor and use <a href="http://betterthangrep.com">ack</a> instead of grep.</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=2736">Syntastic</a> &#8211; Automatic syntax checking so that I don&#8217;t miss a semicolon and not know about it</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=1355">php-doc</a> &#8211; Insert boilerplate PHP doc compatible strings in my PHP files whenever I want to. Very PHP specific, need to find something that works across languages. (Note: This plugin has quite some identity crisis. It&#8217;s named PDV but it&#8217;s filename is php-doc. Since php-doc is more descriptive, I&#8217;m using that)</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=2754">delimitMate</a> &#8211; Automatically closes quotes, parens, braces, etc for you. I initially thought this would be super annoying, but in fact it is rather very pleasant.</li>
+</ol>
+
+<p><s>I&#8217;m also on the default <code>desert</code> color theme &#8211; haven&#8217;t found anything better. Suggestions welcome &#8211; both for the color scheme and for new/replacement plugins.</s> After trying out <a href="http://www.vim.org/scripts/script.php?script_id=1778">wombat</a> and <a href="http://www.vim.org/scripts/script.php?script_id=2555">jellybeans</a> color schemes, I have settled on wombat for now.</p>
+
+<p>Suggestions for more plugins still welcome :)</p>
+
+<p><s>This is the list as of 24 Aug 2011.</s> <s>Updated as of September 2 2011 (added 10, 11, 12 since last update).</s> <s>Updated as of September 5 2011 (changed 4, added colorscheme change).</s> Updated as of September 12 2011 (added 13, 14, 15). I am moving quite fast, am I not? Will keep this post updated as and when things change.</p>
+
+<!-- #VIMPRESS_TAG# http://yuvi.in/blog/wp-content/uploads/2011/09/wpid190-vimpress_4e542fc3_mkd.txt wpid190-vimpress_4e542fc3_mkd.txt -->
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>

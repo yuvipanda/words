@@ -1,0 +1,95 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.31.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>Cheese 2.31.1 Released &middot; Yuvi Panda</title>
+  
+
+  
+  <link rel="stylesheet" href="http://words.yuvi.in/css/poole.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/syntax.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Raleway">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
+</head>
+
+	<body class=" ">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://words.yuvi.in/"><h1>Yuvi Panda</h1></a>
+      <p class="lead">
+       Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      
+        <li><a href="mailto:yuvipanda@gmail.com"> email </a></li>
+      
+        <li><a href="https://github.com/yuvipanda"> github </a></li>
+      
+        <li><a href="https://twitter.com/yuvipanda"> twitter </a></li>
+      
+    </ul>
+
+    <p>CC0</p>
+    <p><small><a href="mailto:yuvipanda@gmail.com">Email me</a> to ask for Signal / WhatsApp / Telegram contact!</small></p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>Cheese 2.31.1 Released</h1>
+			  <span class="post-date">Thu, Jul 22, 2010</span>
+			      <p>If you had read my <a href="http://yuvi.in/blog/gsoc-2010-proposal.html">Cheese GSoC proposal</a>, it would&#8217;ve stressed on one major point &#8211; make Cheese sexy.</p>
+
+<p>Two days ago, one of my classmates spent 5 minutes on the bus using Cheese and trying out different effects (and poses!). Today, my brother spent 20 minutes trying to get the perfect combination of style and vagueness for his Facebook profile picture &#8211; using Cheese. He then asked me to create an account for him in Ubuntu (he was an exclusively Win7 user till then) before leaving.</p>
+
+<p>I&#8217;m still not where I want to be (the girls haven&#8217;t gone gaga over it&#8230;yet!), but I know very well that I am on the right path.</p>
+
+<p>And a major milestone in that path is the release of Cheese 2.31.1. The &#8216;release&#8217; means that the code is now stable enough to be actually shown off. The major features (rewrite in Vala, use Clutter, user defined Effects and most importantly, Live Previews) are in working condition. We are no longer walking through a minefield of segfaults. You can build it and show it off. When something breaks and <a href="http://ftp.gnome.org/pub/GNOME/sources/cheese/2.31/">you tell us</a>, we&#8217;ll most probably not reply with &#8216;yeah, we know that. We&#8217;ll fix it when we get to it&#8217;. The road to Cheese 3.0 has begun.</p>
+
+<p>So, what&#8217;s all in this release?</p>
+
+<ol>
+<li><p>Rewrite of the UI code. We removed the entire old src/ folder, and rewrote everything from scratch. Using <a href="http://live.gnome.org/Vala">Vala</a>. Why? Because ~7000 lines of C code is now ~1500 lines of Vala code. And the Vala code has more features (Live preview, for one!). The Vala compiler is pretty mature &#8211; only one &#8216;real&#8217; bug so far (rest have been mostly binding bugs, fixed with single line of code changes). And #vala has been incredibly helpful too! And we are re-using most of the &#8216;backend&#8217; code (Camera detection, pipeline linking, etc) &#8211; it is still in C, and writing Vala bindings was incredibly simple.</p></li>
+
+<li><p>Move from Gtk to Clutter for display. Means I can do stuff like overlay semi-transparent text on top of the effects. Or have animated page transitions. Or (in the future), use OpenGL effects without having to do an extra to-fro copy from memory. Have drop shadows for everything. Make the effects tilt and rotate around when hovered over. Etc, etc, etc. Clutter is the major contributor to the &#8216;sexy&#8217; part.</p></li>
+
+<li><p>User created effects. Effects are no longer hardcoded. A simple 4 line text file and enthusiasm for reading documentation is all that is required to create your own effect. The effects are based on GStreamer, and are very flexible &#8211; you can create something as simple as monochrome + hue, or something as complex as face detection + extra limb addition to specific people :P</p></li>
+
+<li><p>Live Streaming &#8211; biggie. All effects are arranged in grids of 3&#215;3 in multiple pages that you can swipe through. Simply clicking one will activate it pretty much instantaneously. No more &#8216;select effect, apply, no-it-sucks, let&#8217;s go back and do it again&#8217; games :)</p></li>
+</ol>
+
+<p><a href="http://dl.dropbox.com/u/8768784/cheese-midterm.ogv"><img src="http://dl.dropbox.com/u/8768784/cheese-midterm.png" alt="" /></a></p>
+
+<p>I made a <a href="http://dl.dropbox.com/u/8768784/cheese-midterm.ogv">quick screencast</a> to show the new Live preview stuff to those of you too lazy to actually get the source and compile. And the subject is a pink+green teddy bear sitting on my white netbook. (And the weird stuff that turns up after I exit fullscreen is a bug in <a href="http://recordmydesktop.sourceforge.net/about.php">RecordMyDesktop</a> &#8211; and is an incentive for you to actually <a href="http://ftp.gnome.org/pub/GNOME/sources/cheese/2.31/">get the source</a> and check it out :P)</p>
+
+<p>These are the four <em>major</em> features that are new. All the other parts of previous Cheese UI have also been implemented (preferences, thumbnail viewer, fullscreen, wide mode, device detection, etc.)</p>
+
+<p>As for the next release &#8211; keep looking out for it, it will land soon! It will primarily be a bug fix and code cleanup release &#8211; fixing crashes, UI inconsistencies and making sure everything works as intended.</p>
+
+<p>A lot of late night hackery (mostly because my college takes up 10 hours of &#8216;regular&#8217; time) has gone into this release &#8211; so check it out <a href="http://ftp.gnome.org/pub/GNOME/sources/cheese/2.31/">here</a> and tell us what you think. Especially about the parts that suck. Especially useful would be if you can get someone non-technical to sit in front of Cheese, observe where all they fail (and succeed) and then report your observations back to us.</p>
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>

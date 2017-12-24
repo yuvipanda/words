@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Personal on Yuvi Panda</title>
-    <link>http://words.yuvi.in/tags/personal/index.xml</link>
+    <link>http://words.yuvi.in/tags/personal/</link>
     <description>Recent content in Personal on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>CC0</copyright>
-    <atom:link href="http://words.yuvi.in/tags/personal/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Feb 2017 22:37:21 -0800</lastBuildDate>
+    
+	<atom:link href="http://words.yuvi.in/tags/personal/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>my first protest</title>
@@ -15,36 +18,29 @@
       <pubDate>Fri, 03 Feb 2017 22:37:21 -0800</pubDate>
       
       <guid>http://words.yuvi.in/post/first-protest/</guid>
-      <description>&lt;p&gt;I went to the protests at SFO last weekend. It was the first real set of protests I&amp;rsquo;ve been to. I write this to attempt to capture a sliver of what I felt that day.&lt;/p&gt;
-
-&lt;p&gt;I was there for about 10h on day 1, and came home exhausted. I went back on Day 2, and this time stayed for much shorter period of time (~4h?) before heading back home.&lt;/p&gt;
-
-&lt;p&gt;To everyone who was at the protest even if it does not directly affect you yet - &lt;em&gt;thank you&lt;/em&gt;!&lt;/p&gt;
-
-&lt;p&gt;To the wonderful amazing women of color who were leading the protest - &lt;em&gt;thank you&lt;/em&gt;. You are an inspiration.&lt;/p&gt;
-
-&lt;p&gt;To the brass band and the troupe of drummers who showed up - &lt;em&gt;thank you&lt;/em&gt;!&lt;/p&gt;
-
-&lt;p&gt;To the people I already know from other contexts who I ran into at the protest - &lt;em&gt;thank you&lt;/em&gt;!&lt;/p&gt;
-
-&lt;p&gt;To those who were protesting for the first time in their lives (as I was) - &lt;em&gt;thank you&lt;/em&gt;!&lt;/p&gt;
-
-&lt;p&gt;To the fucking ACLU - &lt;em&gt;thank you&lt;/em&gt;! I&amp;rsquo;ll send you all the money I can :)&lt;/p&gt;
-
-&lt;p&gt;To the people who provided infrastructure (food, water, snacks, first aid, printers, internet, etc) - &lt;em&gt;thank you&lt;/em&gt;!&lt;/p&gt;
-
-&lt;p&gt;To the journalists who covered this - &lt;em&gt;thank you&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;I woke up that saturday feeling very depressed, angry, and helpless. By sunday night, I was only depressed and angry - but not helpless. The number and variety of people at the protests was very heartwarming, and made me feel distinctly not alone. Before going I was not sure what going to a protest accomplishes. I still do not know - but I know it gave me hope and restored my sense of agency.&lt;/p&gt;
-
-&lt;p&gt;I promise I&amp;rsquo;ll continue doing all I can, even and especially when it is about things that do not affect me yet. I hope you do too.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;What hurts the victim most is not the cruelty of the oppressor but the silence of the bystander&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;em&gt;- from a sign at the protest&lt;/em&gt;&lt;/p&gt;
-</description>
+      <description>I went to the protests at SFO last weekend. It was the first real set of protests I&amp;rsquo;ve been to. I write this to attempt to capture a sliver of what I felt that day.
+I was there for about 10h on day 1, and came home exhausted. I went back on Day 2, and this time stayed for much shorter period of time (~4h?) before heading back home.
+To everyone who was at the protest even if it does not directly affect you yet - thank you!</description>
+    </item>
+    
+    <item>
+      <title>Our Greatest Fear – ‘Flash and Fade’</title>
+      <link>http://words.yuvi.in/greatest-fear-flash-fade/</link>
+      <pubDate>Fri, 21 Oct 2011 03:14:16 +0000</pubDate>
+      
+      <guid>http://words.yuvi.in/greatest-fear-flash-fade/</guid>
+      <description>HP:MOR is an awesome fanfic that anyone intent on improving themselves should read. It&amp;#8217;s a bit like HHG2G &amp;#8211; you don&amp;#8217;t read for the storyline (which is jumbled) but for the characters, wit, rationality and humor. Quite a few of those things hit very close to home &amp;#8211; if you are a geek, they would perhaps to you too. Highly reccomended.
+Of the many quotable parts of that book, here&amp;#8217;s one little nugget I found:</description>
+    </item>
+    
+    <item>
+      <title>Interview with Sriram Krishnan (5 years old)</title>
+      <link>http://words.yuvi.in/interview-sriram-krishnan-5-years-old/</link>
+      <pubDate>Fri, 26 Aug 2011 15:50:55 +0000</pubDate>
+      
+      <guid>http://words.yuvi.in/interview-sriram-krishnan-5-years-old/</guid>
+      <description>5 years ago, I was in my 10th and new on the Internet. I had been coding for about 5-6 years already, but mostly with TurboC and VB6/C# (thanks to MSDN CDs I steal from Sudar). And then this interview happened and pushed me farther out into geekland :)
+Presenting a reprint from 2006, my interview with Sriram Krishnan, then Microsoftie. Note that the opinions here are of a Sriram 5 years ago, and do not necessarily represent what he thinks now :D And the questions are obviously the questions a younger, naiver (and stupider) Yuvi would&amp;#8217;ve asked, so bear with that.</description>
     </item>
     
   </channel>

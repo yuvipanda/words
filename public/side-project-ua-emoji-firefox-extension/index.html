@@ -1,0 +1,80 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.31.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>Side Project: UA Emoji Firefox Extension &middot; Yuvi Panda</title>
+  
+
+  
+  <link rel="stylesheet" href="http://words.yuvi.in/css/poole.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/syntax.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Raleway">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
+</head>
+
+	<body class=" ">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://words.yuvi.in/"><h1>Yuvi Panda</h1></a>
+      <p class="lead">
+       Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      
+        <li><a href="mailto:yuvipanda@gmail.com"> email </a></li>
+      
+        <li><a href="https://github.com/yuvipanda"> github </a></li>
+      
+        <li><a href="https://twitter.com/yuvipanda"> twitter </a></li>
+      
+    </ul>
+
+    <p>CC0</p>
+    <p><small><a href="mailto:yuvipanda@gmail.com">Email me</a> to ask for Signal / WhatsApp / Telegram contact!</small></p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>Side Project: UA Emoji Firefox Extension</h1>
+			  <span class="post-date">Mon, Mar 28, 2016</span>
+			      <p><em>Note: I&#8217;m trying to spend time explicitly writing random side projects that are not related to what I&#8217;m actively working on as my main project in some form.</em></p>
+
+<p>A random thread started by <a href="https://twitter.com/quominus">Ironholds</a> on a random mailing list I was wearily catching up on contained a joke from <a href="https://twitter.com/bearloga">bearloga</a> about malformed User Agents. This prompted me to write <a href="https://addons.mozilla.org/en-US/firefox/addon/uauliver/?src=search">UAuliver</a> (<a href="https://github.com/yuvipanda/uauliver-firefox-extension">source</a>), a Firefox extension that randomizes your user agent to be a random string of emoji. This breaks a surprisingly large number of software, I&#8217;m told! (GMail &amp; Gerrit being the ones I explicitly remember)</p>
+
+<p>Things I learnt from writing this:</p>
+
+<ol>
+<li>Writing Addons for Firefox is far easier to get started with than they were the last time I looked. Despite the confusing naming (Jetpack API == SDK != WordPress&#8217; Jetpack API != Addons != Plugins != WebExtension), the documentation and tooling were nice enough that I could finish all of this in a few hours!</li>
+<li>I can still write syntactically correct Javascript! \o/</li>
+<li>Generating a &#8216;string of emoji&#8217; is easier/harder than you would think, depending on how you would like to define &#8217;emoji&#8217;. The fact that Unicode deals in blocks that at least in this case aren&#8217;t too split up made this quite easy (I used the <a href="https://en.wikipedia.org/wiki/Emoji#Unicode_blocks">list</a> on Wikipedia to generate them). JS&#8217;s <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCodePoint">String.fromCodePoint</a> can also be used to detect if the codepoint you just generated randomly is actually allocated.</li>
+<li>I don&#8217;t actually know how HTTP headers deal with encoding and unicode. This is something I need to actually look up. Perhaps a re-read of the HTTP RfC is in order!</li>
+</ol>
+
+<p>It was a fun exercise, and I might write more Firefox extensions in the future!</p>
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>

@@ -1,0 +1,79 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.31.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>Android RegEx bug: ‘null’ replacement with Matcher.replaceAll &middot; Yuvi Panda</title>
+  
+
+  
+  <link rel="stylesheet" href="http://words.yuvi.in/css/poole.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/syntax.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Raleway">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
+</head>
+
+	<body class=" ">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://words.yuvi.in/"><h1>Yuvi Panda</h1></a>
+      <p class="lead">
+       Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      
+        <li><a href="mailto:yuvipanda@gmail.com"> email </a></li>
+      
+        <li><a href="https://github.com/yuvipanda"> github </a></li>
+      
+        <li><a href="https://twitter.com/yuvipanda"> twitter </a></li>
+      
+    </ul>
+
+    <p>CC0</p>
+    <p><small><a href="mailto:yuvipanda@gmail.com">Email me</a> to ask for Signal / WhatsApp / Telegram contact!</small></p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>Android RegEx bug: ‘null’ replacement with Matcher.replaceAll</h1>
+			  <span class="post-date">Fri, Mar 22, 2013</span>
+			      <p>Android&#8217;s <a href="https://developer.android.com/reference/java/util/regex/Pattern.html">Regular Expressions</a> engine is API compatible with the generic Java implementation, but under the hood uses <a href="http://userguide.icu-project.org/strings/regexp">ICU&#8217;s RegEx engine</a>. This usually causes no problems, until it does and then you&#8217;re sortof fucked, but not really.</p>
+
+<p>On a recent project, a subtle bug in Android&#8217;s <code>Matcher.replaceAll</code> behavior bit me. When replacing values of captured groups (<code>'$1'&lt;/code,&lt;code&gt;'$2'</code>, etc), Android&#8217;s implementation replaced a reference to an empty group with the literal string <code>'null'</code> instead of just skipping it (aka replacing with empty string <code>''</code>), which is what most other Java implemetations do. The string <code>'null'</code> is, I think, <em>never</em> the right behavior. And the inconsistency causes unit tests to pass when run on the desktop JRE to fail when run in Android, which is a major pain.</p>
+
+<p>Fortunately Android is Open Source, and I was able to track down the <a href="http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/6-b14/java/util/regex/Matcher.java#Matcher.replaceAll%28java.lang.String%29">offending piece of code</a>, and just write myself <a href="https://gist.github.com/yuvipanda/5225151">a simple replacement</a> that has the bug fixed:</p>
+
+<noscript>
+  <p>
+    View the code on <a href="https://gist.github.com/5225151">Gist</a>.
+  </p>
+</noscript>
+
+<p>You&#8217;re welcome. Yay Open Source!</p>
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>

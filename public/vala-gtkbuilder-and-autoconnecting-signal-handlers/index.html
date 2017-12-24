@@ -1,0 +1,83 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.31.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>Vala, GTKBuilder and Autoconnecting Signal Handlers &middot; Yuvi Panda</title>
+  
+
+  
+  <link rel="stylesheet" href="http://words.yuvi.in/css/poole.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/syntax.css">
+  <link rel="stylesheet" href="http://words.yuvi.in/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Raleway">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
+</head>
+
+	<body class=" ">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://words.yuvi.in/"><h1>Yuvi Panda</h1></a>
+      <p class="lead">
+       Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      
+        <li><a href="mailto:yuvipanda@gmail.com"> email </a></li>
+      
+        <li><a href="https://github.com/yuvipanda"> github </a></li>
+      
+        <li><a href="https://twitter.com/yuvipanda"> twitter </a></li>
+      
+    </ul>
+
+    <p>CC0</p>
+    <p><small><a href="mailto:yuvipanda@gmail.com">Email me</a> to ask for Signal / WhatsApp / Telegram contact!</small></p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>Vala, GTKBuilder and Autoconnecting Signal Handlers</h1>
+			  <span class="post-date">Sun, May 30, 2010</span>
+			      <p><strong>Note</strong>: I&#8217;m not an expert on Vala, GTK+, or anything else for that matter. If I am off base someplace, comment.</p>
+
+<p>I spent quite a some time today trying to get GTKBuilder to automagically connect all my signals to their handlers. I tripped up at a few places, and so recording them here for posterity.</p>
+
+<ol>
+<li><p>If you are using instance methods (like most of us are), you&#8217;ve to decorate your handler function with the attribute <code>[CCode (instance_pos=-1)]</code>. This makes sure that the function is passed the <code>this</code> pointer as last argument, rather than first. You&#8217;ve to do this because <code>Builder.connect_signals</code> passes the instance as last parameter (<code>user_data</code>), and by aligning your <code>this</code> pointer with <code>user_data</code>, you make sure the correct instance is called.</p></li>
+
+<li><p>Make sure your handler function signature matches what is expected. Ignore the <code>user_data</code> parameter of most signals &#8211; it is used internally by <code>Builder.connect_signals</code> (see above point).</p></li>
+
+<li><p>Make sure you pass <code>--pkg gmodule-2.0</code> to your <code>valac</code>. If you&#8217;re using Autotools, this means you pass it to <code>VALAFLAGS</code>.</p></li>
+
+<li><p>sure your C compiler is called with <code>-dynamic-export</code>. I&#8217;m told this enabled support for <code>dlopen</code> in the binary produced.</p></li>
+
+<li><p>Mangle your names properly. <code>Cheese.MainWindow.on_quit()</code> becomes <code>cheese_main_window_on_quit</code> on C, and that is what GTKBuilder expects. If you are not sure how your function name is mangled by <code>valac</code>, checkout the generated <code>.c</code> file.</p></li>
+</ol>
+
+<p>If you do all these 5 things right and you&#8217;re still having trouble, turn up on #vala at irc.gimp.net and ask the helpful folks there :)</p>
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>

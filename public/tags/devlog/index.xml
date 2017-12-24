@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Devlog on Yuvi Panda</title>
+    <link>http://words.yuvi.in/tags/devlog/</link>
+    <description>Recent content in Devlog on Yuvi Panda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>CC0</copyright>
+    <lastBuildDate>Mon, 05 Dec 2011 20:31:14 +0000</lastBuildDate>
+    
+	<atom:link href="http://words.yuvi.in/tags/devlog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>DevLog: December 5, 2011</title>
+      <link>http://words.yuvi.in/devlog-december-5-2011/</link>
+      <pubDate>Mon, 05 Dec 2011 20:31:14 +0000</pubDate>
+      
+      <guid>http://words.yuvi.in/devlog-december-5-2011/</guid>
+      <description>Am migrating to per-day posts now. More granularity + I can fit more info in. The ultimate aim of the DevLog is to keep me on my toes and make sure I don&amp;#8217;t relapse into no-productivity hellholes. Daily DevLogs should do a better job at them.
+ Spent some more time trying to get Kiwix to compile under OS X. Macports issue fixed, but more issues persist. It&amp;#8217;s one damn complicated build system :| Not to mention that OS X sucks balls.</description>
+    </item>
+    
+    <item>
+      <title>Devlog December 2011</title>
+      <link>http://words.yuvi.in/devlog-december-2011/</link>
+      <pubDate>Sun, 04 Dec 2011 21:19:50 +0000</pubDate>
+      
+      <guid>http://words.yuvi.in/devlog-december-2011/</guid>
+      <description>With me back to a place where I can be completely open about what code I am writing (yay!), I think it&amp;#8217;s time I restart my devlog :)
+Last time, I was using my old blogging engine, and hand-wrote them in a markdown file on my netbook. Things have changed a lot since then, and this time I&amp;#8217;ll be directly writing/publishing them daily from WordPress
+&amp;#8211;
+Dec 4 I finally grokked Indexes in databases.</description>
+    </item>
+    
+    <item>
+      <title>Devlog May 2011</title>
+      <link>http://words.yuvi.in/devlog-may-2011/</link>
+      <pubDate>Tue, 14 Jun 2011 13:27:41 +0000</pubDate>
+      
+      <guid>http://words.yuvi.in/devlog-may-2011/</guid>
+      <description>May 25-June 13 Loads of things happened.
+Finished/polished up ShortUrl. Pending review. Would go into not just tawiki, but possibly all wmf wikis. YAY!
+Moved to a dual monitor setup. Dual 23&amp;#8243; Monitors, one Samsung LED and one Acer LCD. Also moved to 8G of RAM. VMs are much less painful now.
+Did a few back/forths with the GSoC extension architecture. It&amp;#8217;s still blocking, so working with the non-blocking parts of GSoC now.</description>
+    </item>
+    
+    <item>
+      <title>DevLog: April 2011</title>
+      <link>http://words.yuvi.in/devlog-april-2011/</link>
+      <pubDate>Mon, 02 May 2011 01:50:17 +0000</pubDate>
+      
+      <guid>http://words.yuvi.in/devlog-april-2011/</guid>
+      <description>I&amp;#8217;ve started keeping devlogs, recording productive activity every day in an attempt to publicly shame myself into doing productive things. This is the delayed april edition
+Apr 30 Impromptu talk at ChennaiPy meet. Then fun discussions at Nerd Dinner. No code, sadly.
+Apr 29 Google Instant mostly works on yenWikipedia. Made a release. More exams.
+Apr 22 &amp;#8211; 28 Nothing much done. Exams and stuff.
+Tecoholic forked yenWikipedia and created a Firefox extension.</description>
+    </item>
+    
+    <item>
+      <title>DevLog: Mar 2011</title>
+      <link>http://words.yuvi.in/devlog-mar-2011/</link>
+      <pubDate>Mon, 11 Apr 2011 21:45:12 +0000</pubDate>
+      
+      <guid>http://words.yuvi.in/devlog-mar-2011/</guid>
+      <description>I&amp;#8217;ve started keeping devlogs, recording productive activity every day in an attempt to publicly shame myself into doing productive things. This is the delayed march edition
+Mar 20 &amp;#8211; 31 More contract work for more money.
+My dump patch to meidawiki got commited, then blasted during Code Review. This is what I get for trusting other people&amp;#8217;s code blindly, especially after 5 years. Lesson learnt. Fixed all issues, and now waiting for a review before commit.</description>
+    </item>
+    
+    <item>
+      <title>DevLog: Feb 2011</title>
+      <link>http://words.yuvi.in/devlog-feb-2011/</link>
+      <pubDate>Mon, 11 Apr 2011 21:24:26 +0000</pubDate>
+      
+      <guid>http://words.yuvi.in/devlog-feb-2011/</guid>
+      <description>I&amp;#8217;ve started keeping devlogs, recording everyday productive activity in an attempt to publicly shaming myselfinto doing something productive everyday. This is the delayed february editin
+Links: 32HourStartup, PiTiVi, TEDxSSN
+Feb 26 Initial work on Busroutes.in wiki import script.
+Feb 25 Audio Save Dialog mostly works now.
+Feb 23 Started implementing Audio Name dialog box in PiTiVi. Dad fixed laptop &amp;#8211; new Ethernet port, and working speakers.
+Feb 22 Started doing layouts for WhyKCGRocks.</description>
+    </item>
+    
+    <item>
+      <title>DevLog: Jan 2011</title>
+      <link>http://words.yuvi.in/devlog-jan-2011/</link>
+      <pubDate>Tue, 01 Feb 2011 12:37:06 +0000</pubDate>
+      
+      <guid>http://words.yuvi.in/devlog-jan-2011/</guid>
+      <description>I&amp;#8217;ve started keeping devlogs, recording everyday &amp;#8216;productive&amp;#8217; activity I do everyday. Publicly shaming myself into doing something productive every day. Just records for this month, next month on should provide time spent as well. There&amp;#8217;s an entry for every day when I&amp;#8217;ve touched a computer. I&amp;#8217;ll be continuously refining this format, so feedback welcome
+Links: 32HourStartup, Busroutes.in Wiki, PiTiVi, Geekweekend
+27 Jan More of nothing productive. 32HourStartup is eating into my dev time.</description>
+    </item>
+    
+  </channel>
+</rss>
