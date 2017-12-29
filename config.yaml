@@ -1,0 +1,18 @@
+languageCode: "en-us"
+title: "Yuvi Panda"
+baseurl: "http://words.yuvi.in/"
+theme: "hugo-theme-bootstrap4-blog"
+author: "Yuvi Panda"
+Paginate: 10
+
+params:
+    description: "Jupyter | Kubernetes | Wikimedia"
+    colorscheme: "white"
+    copyright: "CC0"
+    iconFont: "font-awesome"
+    truncate: false
+    profileImage: /profile.jpg
+
+    sidebar:
+        about: |
+            **Yuvi Panda** is a 26 year old building infrastructure for reducing accidental complexities in solving problems with code.

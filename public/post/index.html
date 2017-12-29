@@ -1,1803 +1,816 @@
 <!DOCTYPE html>
-<html lang="en-us">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		
-		<meta name="description" content="Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python">
-		<meta name="generator" content="Hugo 0.31.1" />
-		<title>Posts &middot; Yuvi Panda</title>
-		<link rel="shortcut icon" href="http://words.yuvi.in/images/favicon.ico">
-		<link rel="stylesheet" href="http://words.yuvi.in/css/style.css">
-		<link rel="stylesheet" href="http://words.yuvi.in/css/highlight.css">
+<html lang="en">
 
-		
-		<link rel="stylesheet" href="http://words.yuvi.in/css/monosocialiconsfont.css">
-		
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		
+<meta property="og:title" content="Posts" />
+<meta property="og:description" content="Jupyter | Kubernetes | Wikimedia" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://words.yuvi.in/post/" />
 
-		
-	</head>
 
-	<body>
-	<nav class="main-nav">
-	
-	
-		<a href='http://words.yuvi.in/'> <span class="arrow">←</span>Home</a>
-	
-	<a href='http://words.yuvi.in/posts'>Archive</a>
-	<a href='http://words.yuvi.in/tags'>Tags</a>
-	<a href='http://words.yuvi.in/about'>About</a>
 
-	
+<meta property="og:updated_time" content="2017-12-03T01:23:54-08:00"/>
 
-	
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Posts"/>
+<meta name="twitter:description" content="Jupyter | Kubernetes | Wikimedia"/>
+<meta name="generator" content="Hugo 0.31.1" />
+
+
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Blog",
+  "headline": "Yuvi Panda",
+  "url" : "http://words.yuvi.in/post/",
+  "author": {
+    "@type": "Person",
+    "name": ""
+  },
+  "dateModified": "2017-12-03T01:23:54-08:00",
+  "keywords": "books,class-notes,code,devlog,education,events,links,lol-culture,papers,personal,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
+  "description": "Jupyter | Kubernetes | Wikimedia"
+}
+</script>
+
+
+    <link rel="canonical" href="http://words.yuvi.in/post/">
+
+    <title>Yuvi Panda</title>
+
+    <!-- combined, minified CSS -->
+    <link href="http://words.yuvi.in/css/style.css" rel="stylesheet" integrity="sha384-O8wjsnz02XiyrPxnhfF6AVOv6YLBaEGRCnVF&#43;DL3gCPBy9cieyHcpixIrVyD2JS5" crossorigin="anonymous">
+
+    
+    <!-- RSS 2.0 feed -->
+    <link href="http://words.yuvi.in/post/index.xml" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
+    
+
+    
+
+    
+
+    
+
+  </head>
+
+  <body>
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="nav blog-nav">
+          <a class="nav-link " href="http://words.yuvi.in/">Home</a>
+          
+          
+        </nav>
+      </div>
+    </div>
+
+    <header class="blog-header">
+      <div class="container">
+        <h1 class="blog-title">
+            
+            <img src='/profile.jpg' width=80 style="border-radius: 50%; margin-bottom: 12px;">
+            <a href="http://words.yuvi.in/" rel="home">Yuvi Panda</a></h1>
+        <p class="lead blog-description">Jupyter | Kubernetes | Wikimedia</p>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+
+          
+
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/why-not-s2i/">Why repo2docker? Why not s2i?</a></h2>
+    <p class="blog-post-meta"><time datetime="2017-12-03T01:23:54-08:00">Sun Dec 3, 2017</time> by  in 
+
+<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/binder" rel="tag">binder</a>, <a href="/tags/code" rel="tag">code</a>
+
+</p>
+  </header>
+  
+
+<p><img src="https://imgs.xkcd.com/comics/standards.png" alt="https://xkcd.com/927/" /></p>
+
+<p>The wonderful <a href="https://twitter.com/GrahamDumpleton">Graham Dumpleton</a> asked <a href="https://twitter.com/GrahamDumpleton/status/936740552304836608">on twitter</a> why we built an entirely new tool (<a href="https://github.com/jupyter/repo2docker">repo2docker</a>) instead of using OpenShift&rsquo;s cool <a href="https://github.com/openshift/source-to-image">source2image</a> tool.</p>
+
+<p>This is a very good question, and not a decision we made lightly. This post lays out some history, and explains the reasons we decided to stop using s2i. s2i is still a great tool for most production use cases, and you should use it if you&rsquo;re building anything like a PaaS!</p>
+
+<h2 id="terminology">Terminology</h2>
+
+<p>Before discussing, I want to clarify &amp; define the various projects we are talking about.</p>
+
+<ol>
+<li><a href="https://github.com/openshift/source-to-image">s2i</a> is a nice tool from the <a href="http://openshift.org/">OpenShift</a> project that is used to build images out of git repositories. You can use heroku-like buildpacks to specify how the image should be built. It&rsquo;s used in OpenShift, but can also be easily used standalone.</li>
+<li><a href="https://github.com/jupyterhub/binderhub">BinderHub</a> is the UI + scheduling component of Binder. This is what you see when you go to <a href="https://mybinder.org">https://mybinder.org</a></li>
+<li><a href="https://github.com/jupyter/repo2docker">repo2docker</a> is a standalone python application that takes a git repository &amp; converts it into a docker image containing the environment that is specified in the repository. This heavily overlaps with functionality in s2i.</li>
+</ol>
+
+<h2 id="when-repo2docker-just-wrapped-s2i">When repo2docker just wrapped s2i&hellip;</h2>
+
+<p>When we started building <a href="https://github.com/jupyterhub/binderhub">BinderHub</a>, I looked around for a good heroku-like &lsquo;repository to container image&rsquo; builder project. I first looked at Deis&rsquo; <a href="https://github.com/deis/slugbuilder">slugbuilder</a> and <a href="https://github.com/deis/dockerbuilder">dockerbuilder</a> - they didn&rsquo;t quite match our needs, and seemed a bit tied into Deis. I then found OpenShift&rsquo;s <a href="https://github.com/openshift/source-to-image">source2image</a>, and was very happy! It worked pretty well standalone, and <code>#openshift</code> on IRC was very responsive.</p>
+
+<p>So until July 1, we actually used s2i under the hood! <code>repo2docker</code> was a wrapper that performed the following functions:</p>
+
+<ol>
+<li>Detect which s2i buildpack to use for a given repository</li>
+<li>Support building arbitrary Dockerfiles (s2i couldn&rsquo;t do this)</li>
+<li>Support the Legacy Dockerfiles that were required under the old version of mybinder.org. The older version of mybinder.org munged these Dockerfiles, and so we needed to replicate that for compatibility.</li>
+</ol>
+
+<p>@minrk did some wonderful work in allowing us to package the s2i binary into our python package, so users didn&rsquo;t even need to download s2i separately. It worked great, and we were happy with it!</p>
+
+<h2 id="moving-off-s2i">Moving off s2i</h2>
+
+<p>Sometime in July, we started adding support for Julia to binder/repo2docker. This brought up an interesting &amp; vital issue - composability.</p>
+
+<p>If a user had a <code>requirements.txt</code> in their repo <em>and</em> a <code>REQUIRE</code> file, then we&rsquo;d have to provide both a Python3 and Julia environment. To support this in s2i, we&rsquo;d have needed to make a <code>python3-julia</code> buildpack.</p>
+
+<p>If it had a <code>requirements.txt</code>, a <code>runtime.txt</code> with contents <code>python-2.7</code> and a <code>REQUIRE</code> file, we&rsquo;d have to provide a Python3 environment, a Python2 environment, and a Julia environment. To support this in s2i, we&rsquo;d have needed to make a <code>python3-python2-julia</code> buildpack.</p>
+
+<p>If it had an <code>environment.yml</code> file and a <code>REQUIRE</code> file, we&rsquo;d have to provide a conda environment and a Julia environment. To do this, we&rsquo;d have to make a <code>conda-julia</code> buildpack.</p>
+
+<p>As we add support for other languages (such as R), we&rsquo;d need to keep expanding the set of buildpacks we had. It&rsquo;d become a combinatorial explosion of buildpacks. This isn&rsquo;t a requirement or a big deal for PaaS offerings - usually a container image should only contain one &lsquo;application&rsquo;, and those are usually built using only one language. If you use multiple languages, you just make them each into their own container &amp; communicate over the network. However, Binder was building images that contained <em>environments</em> that people could explore and do things in, rather than specific applications. Since a lot of scientific computing uses multiple languages (looking at you, the people who do everything in R but scrape using Python), this was a core feature / requirement for Binder. So we couldn&rsquo;t restrict people to single-language buildpacks.</p>
+
+<p>So I decided that we can <em>generate</em> these combinatorial buildpacks in repo2docker. We can have a script that generates the buildpacks at build time, and then we can just check in the generated code. This would let us keep using s2i for doing image builds and pushes, and allow others using s2i to use our buildpacks. Win-win!</p>
+
+<p>This had the following problems:</p>
+
+<ol>
+<li>I was generating bash from python. This was quite error prone, since the bash also needed to carefully support the various complex environment specifications we wanted to support.</li>
+<li>We needed to <em>sometimes</em> run assemble scripts as root (such as when there is an &lsquo;apt.txt&rsquo; requiring package installs). This would require careful usage of <code>sudo</code> in the generated bash for security reasons.</li>
+<li>This was very &lsquo;clever&rsquo; code, and after running into a few bugs here I was convinced this &lsquo;generate bash with python&rsquo; idea was too clever for us to use reliably.</li>
+</ol>
+
+<p>At this point I considered making the <code>assemble</code> script into Python, but then I&rsquo;d be either generating Python from Python, or basically writing a full library that will be invoked from inside each buildpack. We&rsquo;d still need to keep repo2docker around (for Dockerfile + Legacy Dockerfile support), and the s2i buildpacks will be quite complex. This would also affect Docker image layer caching, since all activities of <code>assemble</code> are cached as one layer. Since a lot of repositories have similar environments (or are just building successive versions of same repo), this gives up a good amount of caching.</p>
+
+<p>So instead I decided that the right thing to do here is to dynamically generate a Dockerfile in python code, and build / push the image ourselves. S2I was great for generating a best-practices production container that runs one thing and does it well, but for binder we wanted to generate container images that captured complex environments without regard to what can run in them. Forcing s2i to do what we wanted seemed like trying to get a square peg into a round hole.</p>
+
+<p>So in <a href="https://github.com/jupyter/repo2docker/commit/38755650c28fe6c71adec5a5bf9adfdde2d9772e">this heavily squashed commit</a> I removed s2i, and repo2docker became stand alone. It was sad, since I really would have liked to not write extra code &amp; keep leveraging s2i. But the code is cleaner, easier for people to understand and maintain, and the composing works pretty well in understandable ways after we removed it. So IMO it was the right thing to do!</p>
+
+<p>I personally would be happy to go back to using s2i if we can find a clean way to support composability + caching there, but IMO that would make s2i too complex for its primary purpose of building images for a PaaS. I don&rsquo;t see repo2docker and s2i as competitors, as much as tools of similar types in different domains. Lots of &lt;3 to the s2i / openshift folks!</p>
+
+<p>I hope this was a useful read!</p>
+
+<h2 id="tldr">TLDR</h2>
+
+<p>S2I was great for generating a best-practices production container that runs one thing and does it well, but for binder we wanted to generate container images that captured complex environments without regard to what can run in them. Forcing s2i to do what we wanted seemed like trying to get a square peg into a round hole.</p>
+
+<p><em>Thanks to Chris Holgraf, MinRK and Carol Willing for helping read, reason about and edit this blog post</em></p>
+
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/maintainerati-2017/">maintainerati 2017</a></h2>
+    <p class="blog-post-meta"><time datetime="2017-10-10T23:15:01-07:00">Tue Oct 10, 2017</time> by  in 
+
+<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/opensource" rel="tag">opensource</a>
+
+</p>
+  </header>
+  <p>I was at <a href="http://maintainerati.org/">maintainerati</a> today, which was super fun &amp; quite intense! I highly appreciate GitHub &amp; the individuals involved in making it happen!</p>
+
+<p>Here&rsquo;s my key takeaways from this (and several other conversations over the last few weeks leading up to this):</p>
+
+<ol>
+<li>I am now a <em>maintainer</em>, which is quite a different thing from a <em>core contributor</em> or just a <em>contributor</em>. The power dynamics are very different, and so are the responsibilities. I can not ostrich myself into thinking I can just keep writing code and not do anything else - that&rsquo;s a disservice to not just other folks in the project, but also myself.</li>
+<li>Being a maintainer is quite hard emotionally &amp; mentally. I&rsquo;ve a lot more respect for long running OSS maintainers now than I did before. I have a lot of personal work to do before I become anything like a decent maintainer.</li>
+<li>Lots of people love Gerrit, and they also hate Gerrit :D Gerrit is very powerful, but the UX is so user hostile - I don&rsquo;t think these are unrelated. I hope that some of the power of Gerrit transfers to GitHub, but at the same time GitHub does not become anything like Gerrit! Also, people have very strong opinions about how their git histories should look like - perhaps they spend a lot more time looking through it than I do?</li>
+<li>We are slowly developing better ways of dealing with Trolls in projects, but still have a long, long way to go. &ldquo;Look for the helpers&rdquo; here.</li>
+</ol>
+
+<p>It was also great to go to a short, well organized (un)conference targeted at diverse group of people who are still like me in some sense! Would go again, A+++!</p>
+
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/designing-data-intensive-applications/">designing data intensive applications</a></h2>
+    <p class="blog-post-meta"><time datetime="2017-07-02T22:47:06-07:00">Sun Jul 2, 2017</time> by  in 
+
+<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/learning" rel="tag">learning</a>
+
+</p>
+  </header>
+  
+
+<p>I&rsquo;ve been reading <a href="http://dataintensive.net/">Designing Data Intensive Applications</a> book &amp; am using this post to keep notes!</p>
+
+<p>I&rsquo;ve picked up ideas on scaling systems through the years, but never actually sat down to actually study them semi-formally. This seems like a great start to it!</p>
+
+<p>It&rsquo;s a pretty big book, and it&rsquo;s gonna take me a while to go through it :) Will update these notes as I go! Trying to do a chapter a week!</p>
+
+<h2 id="chapter-1-defining-all-the-things">Chapter 1: Defining all the things</h2>
+
+<blockquote>
+<p>The Internet was done so well that most people think of it as a natural resource like the Pacific Ocean, rather than something that was man-made. When was the last time a technology with a scale like that was so error-free?
+Alan Kay, in <a href="www.drdobbs.com/architecture-and-design/interview-with-alan-kay/240003442">interview with Dr Dobb’s Journal (2012)</a></p>
+</blockquote>
+
+<p>I keep forgetting what an amazing marvel the internet is and how intensely (and mostly positively, thankfully) it has affected my life. This is a good reminder! However, perhaps to people who haven&rsquo;t had the privileges I&rsquo;ve had the Internet doesn&rsquo;t feel like a natural resource? Unsure! Should ask them!</p>
+
+<p>Lots of modern applications are data intensive, rather than CPU intensive.
+&gt;  Raw CPU power is rarely a limiting factor for these applications—bigger problems are usually the amount of data, the complexity of data, and the speed at which it is changing.</p>
+
+<p>This has borne out in the infrastructure I&rsquo;ve been setting up to help teach people data science - RAM is often the bottleneck, not CPU (barring machine-learning type stuff, but they want GPUs anyway).</p>
+
+<p>Common building blocks for data intensive applications are:</p>
+
+<ol>
+<li>Store data so that they, or another application, can find it again later (databases)</li>
+<li>Remember the result of an expensive operation, to speed up reads (caches)</li>
+<li>Allow users to search data by keyword or filter it in various ways (search indexes)</li>
+<li>Send a message to another process, to be handled asynchronously (stream processing)</li>
+<li>Periodically crunch a large amount of accumulated data (batch processing)</li>
+</ol>
+
+<p>These <em>do</em> seem to cover a large variety of bases! I feel fairly comfortable in operating, using and building on top of some of these (databases, caches) but not so much in most (never used a search index, batch processing, nor streams outside of redis). Partially I haven&rsquo;t felt an intense need for these, but perhaps if I understand them more I&rsquo;ll use them more? I&rsquo;ve mostly strived to make everything stateless - but perhaps that&rsquo;s causing me to shy away from problems that can only be solved with state? /me ponders.</p>
+
+<p>Boundaries around &lsquo;data systems&rsquo; are blurring - Redis is a cache but can be a message queue, Apache Kafka is a message queue that can have durability guarantees, etc. Lots of applications also need more than can be done with just one tool (aka a &lsquo;pure LAMP&rsquo; stack is no longer good enough). Applications often have the job of making sure different data sources are in sync. Everyone is a &lsquo;data designer&rsquo;, and everyone is kinda fucked.</p>
+
+<p>Talk about 3 things that are most important to any software system.</p>
+
+<h3 id="reliability">Reliability</h3>
+
+<p>Means &lsquo;continue to work correctly, even when things go wrong&rsquo;. Things that go wrong are &lsquo;faults&rsquo;, and systems need to be &lsquo;fault-tolerent&rsquo; or &lsquo;resilient&rsquo;. Can&rsquo;t be tolerant of all faults, so gotta define what faults we&rsquo;re tolerant of.</p>
+
+<p>Fault isn&rsquo;t failure - fault is when a component of the system &lsquo;deviates from its spec&rsquo;, <em>failure</em> is when the system as a whole stops providing user server they want. Can&rsquo;t reduce chances of fault to zero, but can work on reducing failures to zero.</p>
+
+<p><strong>Engineering is building reliable systems from unreliable parts.</strong></p>
+
+<p>Chaos monkeys are good, increase faults to find ways to reduce failure.</p>
+
+<p>Hardware reliability - physical components fail. Nothing you can do about it. Fix it in software.</p>
+
+<p>Hardware faults <em>usually</em> not corelated - one macine failing doesn&rsquo;t cause another machine to fail. To truly fuck shit up you need software - can easily cause massive large scale failure! For example, a leap second bug! Or a runaway process that slowly kills every other process on the machine. One of the microservies that 50 of your microservices depend on is slow! Cascading failures! These bugs all lie dormant, until they suddenly aren&rsquo;t and wreak havok. The software makes some assumption about its environment, which is true until it isn&rsquo;t. No quick solution to systematic software faults.</p>
+
+<p>Human error is worst error. The book offers some suggestions on how to prevent these.</p>
+
+<ol>
+<li>Minimize opportunities for errors - make it easy to do the right thing. But if it&rsquo;s too restrictive, people will work around it - tricky balance.</li>
+<li>Provide full featured sandboxes so people can fuck around without fucking shit up.</li>
+<li>AUTOMATICALLY TEST EVERYTHING so when a human does fuck up, they know!</li>
+<li>Set up undo functionality, so when human does fuck up, they can roll back!</li>
+</ol>
+
+<p>Learn about telemetry from other disciplines that have been doing this shit for far longer than us. <a href="https://xkcd.com/1831/">Relevant XKCD</a></p>
+
+<p>Reliability isn&rsquo;t just for nukes &amp; aircraft &amp; election systems (haha). Imagine someone loses a video of their kid&rsquo;s first ever step because you didn&rsquo;t care. Fucking up is human and we all do it - what is important is that we care.</p>
+
+<p>Sometimes you gotta sacrifice reliability, but make sure that is an explicit &amp; conscious decision. Actually throw away your prototypes! Put FIXMEs in your code. Take a shower. Make sure hacks look, feel and sound hacky!</p>
+
+<h3 id="scalability">Scalability</h3>
+
+<p>System&rsquo;s ability to adapt to increased &lsquo;load&rsquo; along some axes.</p>
+
+<p>Load is described with various <em>load parameters</em>, which depend on the system (req/s? active users? etc).</p>
+
+<p>Carefully define what this means for your application, and explain your reasoning. You might have to scale in some aspects but not in other.</p>
+
+<p>Once you have the load parameters for your app defined, figure out what happens when you increase load parameters but keep system resources unchanged. After that, try to figure out how much resources need to be increased.</p>
+
+<p>Throughput - number of things that can be done per second. Latency is time it takes to serve a request. These are common things we care about when we move load parameters up and down.</p>
+
+<p>You shouldn&rsquo;t think of these as single numbers, since they vary a fair bit. Think of these as <em>probability distributions</em>. Learn some statistics! Use percentiles, rather than &lsquo;average&rsquo; or &lsquo;mean&rsquo;.</p>
+
+<p>High percentile latencies are especially important when you are a service that&rsquo;s called by many other services - it can cascade down.</p>
+
+<p>No <em>magic scaling sauce</em> - architecture that can scale is different for each application. But there are general purpose building blocks, so worry a little less!</p>
+
+<h3 id="maintainability">Maintainability</h3>
+
+<blockquote>
+<p>Always code as if the person who ends up maintaining your code is a violent psychopath who knows where you live.</p>
+</blockquote>
+
+<p>Split into three major aspects.</p>
+
+<p><strong>Operability</strong></p>
+
+<p>Make it easy for people to operate your service! Help them monitor the health of the system, observe &amp; debug problems, do capacity planning, keep the production environment stable, prevent single human points of failure (oh, only Chad knows about this system) and many other things!</p>
+
+<p><strong>Simplicity</strong></p>
+
+<p>Don&rsquo;t make your software a big ball of mud. Take into account that new engineers will have to start working on your software, and they need to understand it quickly.</p>
+
+<p>Use standard tools &amp; approaches they have a higher likelihood of knowing - look around for standard tools before inventing your own!</p>
+
+<p>Watch out for accidental complexity, and keep it to a minimum as much as possible. Abstractions are good, but abstractions are also leaky.</p>
+
+<p><strong>Evolvability</strong></p>
+
+<p>If your software is simple &amp; has good abstractions, you can change it over time without wanting to pull all your hair out.</p>
+
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/think-os/">think os</a></h2>
+    <p class="blog-post-meta"><time datetime="2017-05-13T11:41:20-07:00">Sat May 13, 2017</time> by  in 
+
+<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/learning" rel="tag">learning</a>
+
+</p>
+  </header>
+  
+
+<p>Following a trail from a <a href="http://jvns.ca/blog/2017/04/17/statistics-for-programmers/">wonderful Julia Evans post</a> led me to Allen Downey&rsquo;s nice <a href="http://greenteapress.com/wp/textbook-manifesto/">textbook manifesto</a>. Also led me to the nice <a href="http://greenteapress.com/thinkos/index.html">Think OS</a> book, which seems like a super nice introduction to Operating System principles.</p>
+
+<p>It is short enough (~100 pages) that I wanted to read through it. I&rsquo;ve spent a good chunk of time absorbing how Operating Systems work by dint of diving into things and working through them, but it would be nice to get a refresher on the basics. There are clearly basic things I do not understand, and this seemed like a good way to explore.</p>
+
+<p>This post is just a running series of notes from me reading it on a nice saturday morning.</p>
+
+<h2 id="stack-vs-heap">Stack vs Heap</h2>
+
+<p>This is something that has always bugged me. I&rsquo;ve understood just enough of this by being burnt with pointers when writing C (and primitive types in the CLR, etc), but was lacking a deep understanding of wtf was going on. The fact that these are just process program segments (like text or data) was quite a revelation :D <a href="http://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap">This stackoverflow answer</a> was also quite nice.</p>
+
+<p>One interesting thing for me to investigate later from the book is how this program:</p>
+
+<pre><code class="language-C">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int global;
+
+int main() {
+  int local = 5;
+  void *p = malloc(128);
+
+  printf(&quot;Address of main is %p\n&quot;, main);
+  printf(&quot;Address of local is %p\n&quot;, &amp;local);
+  printf(&quot;Address of global is %p\n&quot;, &amp;global);
+  printf(&quot;Address of p is %p\n&quot;, p);
+
+}
+
+</code></pre>
+
+<p>produces the following output for the author:</p>
+
+<pre><code>Address of main   is 0x      40057c
+Address of local  is 0x7fffd26139c4
+Address of global is 0x      60104c
+Address of p      is 0x     1c3b010
+</code></pre>
+
+<p>but for me,</p>
+
+<pre><code>Address of main   is 0x5598fc64c740
+Address of local  is 0x7ffeacfaf75c
+Address of global is 0x5598fc84d014
+Address of p      is 0x5598fc85b010
+</code></pre>
+
+<p>The point of the program was to demonstrate that text (<code>main</code>), static (<code>global</code>) and heap (<code>p</code>) are near beginning of memory and stack (<code>local</code>) is towards the end. While on my laptop it does seem to be the case too, the &lsquo;start&rsquo; seems to be much farther out than on the author&rsquo;s computer. Need to understand why this is the case. I&rsquo;ve vaguely heard of address randomization &amp; other security measures in OS kernels - maybe related? For another day!</p>
+
+<h2 id="bit-twiddling">Bit twiddling</h2>
+
+<p>I continue to find it hard to care about bit twiddling. Most things do use it of course, but it seems to be abstracted away pretty well without leaking too much (except for things that have their own nuances, like floating point representations).</p>
+
+<h2 id="malloc">malloc</h2>
+
+<p>Nice link to <a href="http://gee.cs.oswego.edu/dl/html/malloc.html">a paper</a> about a common malloc implementation. I also know there are other malloc implementations that programs use (such as <a href="http://jemalloc.net/">jemalloc</a>). Something for me to dive into when I&rsquo;ve more time.</p>
+
+<h2 id="tbc">tbc</h2>
+
+<p>I didn&rsquo;t have time to finish it all, unfortunately. But shall come back to it whenever I can!</p>
+
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/learning-selinux/">learning selinux and apparmor</a></h2>
+    <p class="blog-post-meta"><time datetime="2017-04-18T00:01:26-07:00">Tue Apr 18, 2017</time> by  in 
+
+<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/learning" rel="tag">learning</a>, <a href="/tags/linux" rel="tag">linux</a>
+
+</p>
+  </header>
+  
+
+<p>I am trying to understand SELinux and AppArmor, and collecting resources here as I learn. k</p>
+
+<h2 id="selinux-for-mere-mortals-2014">SELinux for mere mortals (2014)</h2>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MxjenQ31b70" frameborder="0" allowfullscreen></iframe>
+
+<p>This was the first video I watched, and it helped me understanding what SELinux does at a fundamental basic level. It&rsquo;s probably useless in a container-filled world (where I doubt Fedora shipes pre-configured SELinux rules for my containers), but it helped me think I understood types / labels, so that seems like a positive step?</p>
+
+<p>The fact the presenter keeps saying things like &lsquo;you being a good sysadmin, ssh into the server and edit the apache config file&rsquo; is freakin me out. If I&rsquo;m constantly editing config files on servers manually that seems like a massive failure to me :D How times change!</p>
+
+<h2 id="docker-and-selinux-2014">Docker and SELinux (2014)</h2>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zWGFqMuEHdw" frameborder="0" allowfullscreen></iframe>
+
+<p>This one made a lot more sense to me as an answer to the following questions:</p>
+
+<ol>
+<li>Aren&rsquo;t containers secure enough? (Partial answer)</li>
+<li>What does SELinux do for container security?</li>
+</ol>
+
+<p>It&rsquo;s convinced me that container -&gt; host isolation and container &lt;-&gt; container isolation provided by SELinux is pretty simple and super useful, and should be turned on.</p>
+
+<p>This talk also showed me this most wonderful <a href="https://people.redhat.com/duffy/selinux/selinux-coloring-book_A4-Stapled.pdf">coloring book</a> that tries to explain SELinux. If this is all that is to SELinux, it seems pretty simple and useful (for the container use case).</p>
+
+<p>Also, it looks like there are more recent versions of both these two talks - I should look &lsquo;em up!</p>
+
+<h2 id="securing-linux-applications-with-apparmor-2007">Securing Linux Applications with AppArmor (2007?)</h2>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0l21FN81je0" frameborder="0" allowfullscreen></iframe>
+
+<p>This is me trying to understand AppArmor, which seems to have lower base of support (just Ubuntu? Maybe SUSE, but idk anyone who uses SUSE) but theoretically simpler (mostly file path based). The video seems to be shot with a potato, so the slides aren&rsquo;t super clear - but the content is good enough to give me a super general overview.</p>
+
+<p>The biggest thing against SELinux it talks about seems to be &lsquo;SELinux is complex&rsquo;, and not much else. I don&rsquo;t know how much I buy that - but then again, I haven&rsquo;t actually <em>used</em> SELinux anywhere :D</p>
+
+<p>Unlike SELinux, I can actually see AppArmor rules on my local machine (since it is running Ubuntu). Seems fairly readable!</p>
+
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/things-to-build/">things to build</a></h2>
+    <p class="blog-post-meta"><time datetime="2017-04-15T13:24:23-07:00">Sat Apr 15, 2017</time> by  in 
+
+<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/learning" rel="tag">learning</a>
+
+</p>
+  </header>
+  <p>This is a running list of things I want to build!</p>
+
+<p>There&rsquo;s an analogous running list of <a href="http://words.yuvi.in/post/things-to-learn/">things I want to learn</a>. Things move between them :) I also have higher standards of documentation (other people should be able to use it) before marking these as complete.</p>
+
+<ul>
+<li><p><strong>kubernetes-login</strong>
+A helper to openssh that allows users to log in to a configurable user pod
+running on a kubernetes cluster. Should ideally support scp / sftp too.
+Helps get rid of SPOF login nodes</p></li>
+
+<li><p><strong>just-enough-containment</strong>
+A purely for-learning docker-ish container project written purely in python.
+Written for pedagogy and personal understanding rather than production use.</p></li>
+</ul>
+
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/python-gil-resources/">python gil resources</a></h2>
+    <p class="blog-post-meta"><time datetime="2017-04-05T23:18:19-07:00">Wed Apr 5, 2017</time> by  in 
+
+<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/python" rel="tag">python</a>, <a href="/tags/learning" rel="tag">learning</a>
+
+</p>
+  </header>
+  
+
+<p>I was in a conversation about the Python GIL with friends a few days ago, and realized that my understanding of the specifics of the GIL problem were super hand-wavy &amp; unstructured. So I spent some time collecting resources to learn more, and now have a better understanding!</p>
+
+<h4 id="python-s-infamous-gil-larry-hastings">Python&rsquo;s Infamous GIL (Larry Hastings)</h4>
+
+<p>This was a <em>great</em> introduction to the history of the GIL, why it was necessary &amp; reasons why getting rid of it is complicated.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4zeHStBowEk?ecver=1" frameborder="0" allowfullscreen></iframe>
+
+<h4 id="understanding-the-python-gil-david-beazley">Understanding the Python GIL (David Beazley)</h4>
+
+<p>This has wonderful visualizations that really helped me understand exactly <em>why</em> multi-threaded python behaves the way it does. Multithreading decreases performance, adding more cores decreases performance &amp; disabling cores increases performance :) All of this made vague hand-wavy sense to me before, and make much more concrete sense now.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Obt-vMVdM8s?ecver=1" frameborder="0" allowfullscreen></iframe>
+
+<h4 id="it-isn-t-easy-to-remove-the-gil-guido-van-rossum">It isn&rsquo;t easy to remove the GIL (Guido van Rossum)</h4>
+
+<p>A <a href="http://www.artima.com/weblogs/viewpost.jsp?thread=214235">blog post</a> from the BDFL of python, after yet another request to &lsquo;just get rid of the GIL&rsquo;.</p>
+
+<p>It set the (pretty high) bar for inclusion of a GIL removal patch (that he makes clear he will not write) in Python:</p>
+
+<blockquote>
+<p>I&rsquo;d welcome a set of patches into Py3k only if the performance for a single-threaded program (and for a multi-threaded but I/O-bound program) does not decrease.</p>
+</blockquote>
+
+<p>Not been met yet!</p>
+
+<h4 id="an-inside-look-at-the-gil-removal-patch-of-lore-dave-beazley">An Inside Look at the GIL Removal Patch of Lore (Dave Beazley)</h4>
+
+<p>There was an attempt in about 1999 to remove the GIL - the &lsquo;freethreading&rsquo; patch. This is a <a href="http://dabeaz.blogspot.com/2011/08/inside-look-at-gil-removal-patch-of.html">wonderful analysis</a> of that patch - what it tried to do, why it disappeared, what the performance costs of it were, etc. Something that really stood out to me and makes me feel not very hopeful about GIL removal in CPython was:</p>
+
+<blockquote>
+<p>Despite removing the GIL, I was unable to produce any performance experiment that showed a noticeable improvement on multiple cores. Really, the only benefit (ignoring the horrible performance) seen in pure Python code, was having preemptible instructions.</p>
+</blockquote>
+
+<p>This seems to be still true, even in the Gilectomy branch.</p>
+
+<h4 id="gilectomy-larry-hastings">Gilectomy (Larry Hastings)</h4>
+
+<p>This is the only talk about a recent (~2016) GIL removal attempt.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/P3AyI_u66Bw?ecver=1" frameborder="0" allowfullscreen></iframe>
+
+<p>It is amazing work, but doesn&rsquo;t give me much hope. There&rsquo;s been no new commits to the <a href="https://github.com/larryhastings/gilectomy/tree/gilectomy">public git repo</a> for about 5 months now, so am unsure what the state of it now is.</p>
+
+<p>There&rsquo;s probably many more - let me know if you know any, and I&rsquo;ll update this when I find out more!</p>
+
+<h4 id="gilectomy-2017-larry-hastings">Gilectomy - 2017 (Larry Hastings)</h4>
+
+<p>PyCon 2017 just happened, and Larry Hastings gave another talk!</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pLqv11ScGsQ" frameborder="0" allowfullscreen></iframe>
+
+<p>It seems to have had a lot of intense work done on it, and the wall clock time graph in it warms my heart! I&rsquo;ve a little more hope now than I did after the 2016 talk :D</p>
+
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/systemd-simple-containment/">systemd simple containment for GUI applications &amp; shells</a></h2>
+    <p class="blog-post-meta"><time datetime="2017-03-31T23:23:52-07:00">Fri Mar 31, 2017</time> by  in 
+
+<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/systemd" rel="tag">systemd</a>, <a href="/tags/learning" rel="tag">learning</a>, <a href="/tags/code" rel="tag">code</a>
+
+</p>
+  </header>
+  <p>I earlier had <a href="http://words.yuvi.in/post/systemd-gui-applications/">a vaguely working setup</a> for making sure browsers, shells and other applications don&rsquo;t eat all RAM / CPU on my machine with systemd + sudo + shell scripts.</p>
+
+<p>It was a hacky solution, and also had complications when used to launch shells. It wasn&rsquo;t passing in all the environment varialbes it should, causing interesting-to-debug issues. <code>sudo</code> rules were complex, and hard to do securely.</p>
+
+<p>I had also been looking for an excuse to learn more Golang, so I ended up writing <a href="https://github.com/yuvipanda/systemd-simple-containment"><code>systemd-simple-containment</code></a> or <code>ssc</code>.</p>
+
+<p>It&rsquo;s a simple golang application that produces a binary that can be <a href="https://en.wikipedia.org/wiki/Setuid"><code>setuid</code></a> to <code>root</code>, and thus get around all our <code>sudo</code> complexity, at the price of having to be very, very careful about the code. Fortunately, it&rsquo;s short enough (~100 lines) and <code>systemd-run</code> helps it keep the following invariants:</p>
+
+<ol>
+<li>It will never spawn any executable as any user other than the &lsquo;real&rsquo; uid / gid of the user calling the binary.</li>
+<li>It doesn&rsquo;t allow arbitrary systemd <code>properties</code> to be set, ensuring a more limited attack surface.</li>
+</ol>
+
+<p>However, this is the first time I&rsquo;m playing with setuid and with Go, so I probably fucked something up. I feel ok enough about my understanding of real and effective uids for now to use it myself, but not to recommend it to other people. Hopefully I&rsquo;ll be confident enough say that soon :)</p>
+
+<p>By using a real programming language, I also easily get commandline flags for sharing tty or not (so I can use the same program for launching GUI &amp; interactive terminal applications), pass all environment variables through (which can&rsquo;t be just standard child inheritence, since <code>systemd-run</code> doesn&rsquo;t work that way) &amp; the ability to setuid (you can&rsquo;t do that easily to a script).</p>
+
+<p>I was sure I&rsquo;d hate writing go because of the constant <code>if err != nil</code> checks, but it hasn&rsquo;t bothered me that much. I would like to write more Go, to get a better feel for it. This code is too short to like a language, but I definitely hate it less :)</p>
+
+<p>Anyway, now I can launch GUI applications with <code>ssc -tty=false -isolation=strict firefox</code> and it does the right thing. I currently have available <code>-isolation=strict</code> and <code>-isolation=relaxed</code>, the former performing stronger sandboxing (NoNewPrivileges, PrivateTmp) than the latter (just MemoryMax). i&rsquo;ll slowly add more protections here, but just keep two modes (ideally).</p>
+
+<p>My Gnome Terminal shell command is now <code>ssc -isolation=relaxed /bin/bash -i</code> and it works great :)</p>
+
+<p>I am pretty happy with <code>ssc</code> as it exists now. Only thing I now want to do is to be able to use it from the GNOME launcher (I am using GNOME3 with gnome-shell). Apparently <em>shortcuts</em> are no longer cool and hence pretty hard to create in modern desktop environments :| I shall keep digging!</p>
+
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/systemd-gui-applications/">systemd gui applications</a></h2>
+    <p class="blog-post-meta"><time datetime="2017-03-29T20:47:10-07:00">Wed Mar 29, 2017</time> by  in 
+
+<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/systemd" rel="tag">systemd</a>, <a href="/tags/learning" rel="tag">learning</a>, <a href="/tags/code" rel="tag">code</a>
+
+</p>
+  </header>
+  
+
+<p><strong>Update</strong>: There&rsquo;s a <a href="//words.yuvi.in/post/systemd-simple-containment/">follow-up post</a> with a simpler solution now.</p>
+
+<p>Ever since I read <a href="https://blog.jessfraz.com">Jessie Frazelle</a>&rsquo;s amazing setup (<a href="https://blog.jessfraz.com/post/ultimate-linux-on-the-desktop/">1</a>, <a href="https://blog.jessfraz.com/post/docker-containers-on-the-desktop/">2</a>, <a href="https://blog.jessfraz.com/post/runc-containers-on-the-desktop/">3</a>) for running GUI applications in docker containers, I&rsquo;ve wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&rsquo;m also not as awesome (or knowledgeable!) as Jess, so will have to naturally settle for less&hellip;</p>
+
+<p>So I am doing it in systemd!</p>
+
+<p>Before proceeding, I want to warn y&rsquo;all that I don&rsquo;t entirely know what I am doing. Don&rsquo;t take any of this as security advice, since I don&rsquo;t entirely understand X&rsquo;s security model. Works fine for me though!</p>
+
+<h2 id="gui-applications">GUI applications</h2>
+
+<p>I started out using a simple systemd <a href="https://fedoramagazine.org/systemd-template-unit-files/">templated service</a> to launch GUI applications, but soon realized that <a href="https://www.freedesktop.org/software/systemd/man/systemd-run.html">systemd-run</a> is probably the better way. So I&rsquo;ve a simple script, <code>/usr/local/bin/safeapp</code>:</p>
+
+<pre><code class="language-bash">#!/bin/bash
+exec sudo systemd-run  \
+    -p CPUQuota=100% \
+    -p MemoryMax=70% \
+    -p WorkingDirectory=$(pwd) \
+    -p PrivateTmp=yes \
+    -p NoNewPrivileges=yes \
+    --setenv DISPLAY=${DISPLAY} \
+    --setenv DBUS_SESSION_BUS_ADDRESS=${DBUS_SESSION_BUS_ADDRESS} \
+    --uid ${USER} \
+    --gid ${USER} \
+    --quiet \
+    &quot;$1&quot;
+</code></pre>
+
+<p>I can run <code>safeapp /opt/firefox/firefox</code> now and it&rsquo;ll start firefox inside a nice systemd unit with a 70% Memory usage cap and CPU usage of at most 1 CPU. There&rsquo;s also other minimal security stuff applied - <code>NoNewPrivileges</code> being the most important one. I want to get <code>ProtectSystem</code> + <code>ReadWriteDirectories</code> going too, but there seems to be a bug in <code>systemd-run</code> that doesn&rsquo;t let it parse <code>ProtectSystem</code> properly&hellip;</p>
+
+<p>Also, there&rsquo;s <a href="https://github.com/systemd/systemd/issues/3851">an annoying bug</a> in systemd v231 (which is what my current system has) - you can&rsquo;t set <code>CPUQuotas</code> over 100% (aka &gt; 1 CPU core). This is annoying if you want to give each application 3 of your 4 cores (which is what I want). Next version of Ubuntu has v232, so my GUI applications will just have to do with an aggregate of 1 full core until then.</p>
+
+<p>The two environment variables seem to be all that&rsquo;s necessary for X applications to work.</p>
+
+<p>And yes, this might ask you for your password. I&rsquo;ll clean this up into a nice non-bash script hopefully soon, and make all of these better.</p>
+
+<p>Anyway, <em>it works</em>! I can now open sketchy websites with scroll hijacking without fear it&rsquo;ll kill my machine!</p>
+
+<h2 id="cli">CLI</h2>
+
+<p>I wanted each tab in my terminal to be its own systemd service, so they all get equitable amount of  CPU time &amp; can&rsquo;t crash machine by themselves with OOM.</p>
+
+<p>So I&rsquo;ve this script as <code>/usr/local/bin/safeshell</code></p>
+
+<pre><code class="language-bash">`#!/bin/bash
+exec sudo systemd-run \
+    -p CPUQuota=100% \
+    -p MemoryMax=70% \
+    -p WorkingDirectory=$(pwd) \
+    --uid yuvipanda \
+    --gid yuvipanda \
+    --quiet \
+    --tty \
+    /bin/bash -i
+</code></pre>
+
+<p>The <code>--tty</code> is magic here, and does the right things wrt passing the tty that GNOME terminal is passing in all the way to the shell. Now, my login command (set under profile preferences &gt; command in gnome-terminal) is <code>sudo /usr/local/bin/safeshell</code>. In addition, I add the following line to <code>/etc/sudoers</code>:</p>
+
+<pre><code>%sudo ALL = (root) NOPASSWD:SETENV: /usr/local/bin/safeshell
+</code></pre>
+
+<p>This + just specifying the username directly in <code>safeshell</code> are both hacks that make me cringe a little. I need to either fully understand how sudo&rsquo;s <code>-E</code> works, or use this as an opportunity to learn more Go and make a setuid binary.</p>
+
+<h2 id="to-do">To do</h2>
+
+<p>[ ] Generalize this to not need hacks (either with better sudo usage or a setuid binary)
+[ ] Investigate adding more security related options.
+[ ] Make these work with desktop / dock icons.</p>
+
+<p>I&rsquo;d normally have just never written this post, on account of &lsquo;oh no, it is imperfect&rsquo; or something like that. However, that also seems to have come in the way of ability to find joy in learning simple things :D So I shall follow <a href="https://jvns.ca/">b0rk</a>&rsquo;s lead in spending time <a href="http://words.yuvi.in/post/things-to-learn/">learning</a> for fun again :)</p>
+
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/things-to-learn/">things to learn</a></h2>
+    <p class="blog-post-meta"><time datetime="2017-03-29T15:27:57-07:00">Wed Mar 29, 2017</time> by  in 
+
+<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/learning" rel="tag">learning</a>
+
+</p>
+  </header>
+  <p>Keeping a running list of things I want to learn!</p>
+
+<p>There&rsquo;s also a list of <a href="http://words.yuvi.in/post/things-to-learn/">things I want to build</a>.</p>
+
+<ul>
+<li>How to use org mode properly? Should I use it for notes over markdown?</li>
+<li>Develop a deep understanding of how networks work.</li>
+<li>How do linux network namespaces work?</li>
+<li>How to run GUI apps with systemd?
+
+<ul>
+<li>I did learn! Both a <a href="http://words.yuvi.in/post/systemd-gui-applications/">hacky version</a> and a <a href="http://words.yuvi.in/post/systemd-simple-containment/">much better version</a> that also taught me some Go!</li>
+</ul></li>
+<li>What exactly is a &lsquo;tty&rsquo;?</li>
+<li>How does HTTP2 actually work?</li>
+<li>How do X509 / TLS certificates work?</li>
+<li>How to use cgroups directly?</li>
+<li>Can I just use emacs terminals for all my terminal needs?</li>
+<li>How does NFS work, and why is it so crappy?</li>
+<li>How does ssh work?</li>
+<li>How does mosh work?</li>
+<li>How do contact lenses work? HOW DO LENSES WORK?</li>
+<li>Can I simply run a local DNS recursor on my laptop for performance &amp; blocking me from visiting the orange website?</li>
+<li>What is SELinux? Why and how would I use it?</li>
+<li>What is AppArmor? Why and how would I use it, over SELinux?</li>
+<li>What is seccomp, and when/why/how would I use it?</li>
+</ul>
+
+<p>If you know of resources that&rsquo;ll help me learn these things, do let me know!</p>
+
+</article> 
+
+
+
+
+
+<nav class="blog-pagination">
+  
+  
+  
+  <a class="btn btn-outline-primary disabled" href="#" role="button" aria-disabled="true">Previous page</a>
+  <a class="btn btn-outline-primary" href="/post/page/2/" rel="next" role="button">Next page</a>
+  
 </nav>
 
-	<div class="profile">
-    <section id="wrapper">
-        <header id="header">
-            <a href='http://words.yuvi.in/about'>
-                <img id="avatar" class="2x" src="http://words.yuvi.in/images/avatar.jpg"/>
-            </a>
-            <h1>Yuvi Panda</h1>
-            
-        </header>
-    </section>
-</div>
-
-
-	<section id="wrapper" class="home">
-		
-		<div class="archive">
-			<h3>2017</h3>
-			<ul>
-					
-					<div class="post-item">
-						<div class="post-time">Dec 3</div>
-						<a href="http://words.yuvi.in/post/why-not-s2i/" class="post-link">
-							Why repo2docker? Why not s2i?
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Oct 10</div>
-						<a href="http://words.yuvi.in/post/maintainerati-2017/" class="post-link">
-							maintainerati 2017
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 2</div>
-						<a href="http://words.yuvi.in/post/designing-data-intensive-applications/" class="post-link">
-							designing data intensive applications
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">May 13</div>
-						<a href="http://words.yuvi.in/post/think-os/" class="post-link">
-							think os
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Apr 18</div>
-						<a href="http://words.yuvi.in/post/learning-selinux/" class="post-link">
-							learning selinux and apparmor
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Apr 15</div>
-						<a href="http://words.yuvi.in/post/things-to-build/" class="post-link">
-							things to build
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Apr 5</div>
-						<a href="http://words.yuvi.in/post/python-gil-resources/" class="post-link">
-							python gil resources
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Mar 31</div>
-						<a href="http://words.yuvi.in/post/systemd-simple-containment/" class="post-link">
-							systemd simple containment for GUI applications &amp; shells
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Mar 29</div>
-						<a href="http://words.yuvi.in/post/systemd-gui-applications/" class="post-link">
-							systemd gui applications
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Mar 29</div>
-						<a href="http://words.yuvi.in/post/things-to-learn/" class="post-link">
-							things to learn
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Mar 26</div>
-						<a href="http://words.yuvi.in/post/moving-to-hugo/" class="post-link">
-							moving to hugo
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Mar 26</div>
-						<a href="http://words.yuvi.in/post/liberal-software/" class="post-link">
-							liberal software
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Feb 3</div>
-						<a href="http://words.yuvi.in/post/first-protest/" class="post-link">
-							my first protest
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jan 22</div>
-						<a href="http://words.yuvi.in/post/making-twitter-useful-again/" class="post-link">
-							making twitter useful again
-						</a>
-					</div>
-					
-			</ul>
-		</div>
-		
-		<div class="archive">
-			<h3>2016</h3>
-			<ul>
-					
-					<div class="post-item">
-						<div class="post-time">Apr 9</div>
-						<a href="http://words.yuvi.in/uci-conflicts-class-notes-week-1-part/" class="post-link">
-							UCI Conflicts Class: Notes from Week 1 – Part I
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Mar 28</div>
-						<a href="http://words.yuvi.in/side-project-ua-emoji-firefox-extension/" class="post-link">
-							Side Project: UA Emoji Firefox Extension
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Mar 9</div>
-						<a href="http://words.yuvi.in/the-impact-syntax-colouring-program-comprehension-paper-notes/" class="post-link">
-							Paper notes: ‘The impact of syntax colouring on program comprehension’
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Feb 11</div>
-						<a href="http://words.yuvi.in/lua-paper/" class="post-link">
-							The Lua Paper
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Feb 4</div>
-						<a href="http://words.yuvi.in/dns-servers-localhost-asynchronous-code/" class="post-link">
-							DNS servers, localhost and asynchronous code
-						</a>
-					</div>
-					
-			</ul>
-		</div>
-		
-		<div class="archive">
-			<h3>2015</h3>
-			<ul>
-					
-					<div class="post-item">
-						<div class="post-time">Dec 30</div>
-						<a href="http://words.yuvi.in/devlog-21-30-dec-2015/" class="post-link">
-							DevLog for 21-30 Dec 2015
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Dec 21</div>
-						<a href="http://words.yuvi.in/devlog-2015-dec-20/" class="post-link">
-							DevLog for 2015 Dec 20
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Dec 20</div>
-						<a href="http://words.yuvi.in/devlog-2015-dec-19/" class="post-link">
-							DevLog for 2015 Dec 19
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Dec 19</div>
-						<a href="http://words.yuvi.in/devlog-2015-dec-18/" class="post-link">
-							DevLog for 2015 Dec 18
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 26</div>
-						<a href="http://words.yuvi.in/things/" class="post-link">
-							“Things”
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 6</div>
-						<a href="http://words.yuvi.in/green-stuff/" class="post-link">
-							“Green Stuff”
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 4</div>
-						<a href="http://words.yuvi.in/global-merge-accounts-wikimedia/" class="post-link">
-							Global merge of accounts at Wikimedia
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Apr 26</div>
-						<a href="http://words.yuvi.in/talk-ever/" class="post-link">
-							Best talk ever?
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jan 5</div>
-						<a href="http://words.yuvi.in/devlog-for-jan-5-2015/" class="post-link">
-							DevLog for Jan 5, 2015
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jan 4</div>
-						<a href="http://words.yuvi.in/devlog-jan-3-4-2015/" class="post-link">
-							DevLog for Jan 3-4 2015
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jan 2</div>
-						<a href="http://words.yuvi.in/devlog-jan-2-2015/" class="post-link">
-							DevLog for Jan 2, 2015
-						</a>
-					</div>
-					
-			</ul>
-		</div>
-		
-		<div class="archive">
-			<h3>2014</h3>
-			<ul>
-					
-					<div class="post-item">
-						<div class="post-time">Oct 12</div>
-						<a href="http://words.yuvi.in/plugging-a-keyboard-into-my-nexus-7/" class="post-link">
-							Plugging a keyboard into my Nexus 7
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Sep 24</div>
-						<a href="http://words.yuvi.in/devlog-sep-12-24-2014/" class="post-link">
-							DevLog Sep 12-24, 2014
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Sep 11</div>
-						<a href="http://words.yuvi.in/devlog-sep-10-11-2014/" class="post-link">
-							DevLog for Sep 10-11 2014
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Sep 10</div>
-						<a href="http://words.yuvi.in/shitty-web-advertising-1/" class="post-link">
-							Shitty Web advertising #1
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Sep 6</div>
-						<a href="http://words.yuvi.in/devlog-31-aug-1-4-sep-2014/" class="post-link">
-							DevLog for 31 Aug, 1-4 Sep 2014
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Sep 1</div>
-						<a href="http://words.yuvi.in/devlog-29-30-aug-2014/" class="post-link">
-							DevLog for 29, 30 Aug 2014
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 28</div>
-						<a href="http://words.yuvi.in/devlog-28-aug-2014/" class="post-link">
-							DevLog for 28 Aug 2014
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 27</div>
-						<a href="http://words.yuvi.in/devlog-26-27-aug-2014/" class="post-link">
-							DevLog for 25 and 26 Aug 2014
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 25</div>
-						<a href="http://words.yuvi.in/devlog-aug-24-2014/" class="post-link">
-							DevLog for Aug 24, 2014
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 24</div>
-						<a href="http://words.yuvi.in/devlog-23-aug-2014/" class="post-link">
-							DevLog for 23 Aug 2014
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 23</div>
-						<a href="http://words.yuvi.in/devlog-aug-22-2014/" class="post-link">
-							Devlog for Aug 22 2014
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 22</div>
-						<a href="http://words.yuvi.in/devlog-21-aug-2014/" class="post-link">
-							Devlog for 21 Aug 2014
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 21</div>
-						<a href="http://words.yuvi.in/devlog-20-aug-2014/" class="post-link">
-							Devlog for 20 Aug 2014
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 20</div>
-						<a href="http://words.yuvi.in/devlog-19-aug-2014/" class="post-link">
-							Devlog for 19 Aug 2014
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 19</div>
-						<a href="http://words.yuvi.in/simple-python-packaging-debian-ubuntu/" class="post-link">
-							Simple python packaging for Debian / Ubuntu
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 18</div>
-						<a href="http://words.yuvi.in/paying-irccloud/" class="post-link">
-							Paying for IRCCloud
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 18</div>
-						<a href="http://words.yuvi.in/devlog-18-aug-2014/" class="post-link">
-							DevLog for 18 Aug 2014
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 18</div>
-						<a href="http://words.yuvi.in/devlog-17-mon-2014/" class="post-link">
-							DevLog for 17 Aug 2014
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 15</div>
-						<a href="http://words.yuvi.in/english-translation-tamil-hip-hop-song/" class="post-link">
-							English Translation of ‘Tamil Hip Hop’ song
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Apr 25</div>
-						<a href="http://words.yuvi.in/scouting-boys/" class="post-link">
-							“Scouting for Boys”
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jan 15</div>
-						<a href="http://words.yuvi.in/book-4-2014-small-gods-2014/" class="post-link">
-							Book 4 of 2014: Small Gods (Discworld)
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jan 13</div>
-						<a href="http://words.yuvi.in/book-3-2014-pyramids-discworld/" class="post-link">
-							Book 3 of 2014: Pyramids (Discworld)
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jan 5</div>
-						<a href="http://words.yuvi.in/book-2-2014-pro-git/" class="post-link">
-							Book 2 of 2014: Pro Git
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jan 2</div>
-						<a href="http://words.yuvi.in/book-1-2014-hogfather-discworld/" class="post-link">
-							Book 1 of 2014: Hogfather (Discworld)
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jan 1</div>
-						<a href="http://words.yuvi.in/discworld-series-progress/" class="post-link">
-							Discworld Series progress
-						</a>
-					</div>
-					
-			</ul>
-		</div>
-		
-		<div class="archive">
-			<h3>2013</h3>
-			<ul>
-					
-					<div class="post-item">
-						<div class="post-time">Dec 30</div>
-						<a href="http://words.yuvi.in/terry-prachett-word-synergistically/" class="post-link">
-							Terry Prachett on the word ‘synergistically’
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Dec 16</div>
-						<a href="http://words.yuvi.in/feeling-agile-today/" class="post-link">
-							Feeling Agile today
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Dec 15</div>
-						<a href="http://words.yuvi.in/write-once-debug-everywhere/" class="post-link">
-							“Write once, attempt to debug everywhere”
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Dec 14</div>
-						<a href="http://words.yuvi.in/wikipedia-apps-reboot-taking-shape-nicely/" class="post-link">
-							Wikipedia Apps reboot taking shape nicely
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Dec 13</div>
-						<a href="http://words.yuvi.in/php-insane-part-5832/" class="post-link">
-							PHP being insane, part 5832
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Dec 3</div>
-						<a href="http://words.yuvi.in/lots-discussion-tiny-matter-long-run-part-5321/" class="post-link">
-							Lots of discussion over tiny things that do not matter in the long run, part 5321
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Nov 5</div>
-						<a href="http://words.yuvi.in/doing-laundry/" class="post-link">
-							Doing Laundry
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Sep 24</div>
-						<a href="http://words.yuvi.in/devlog-tuesday-september-24-2013/" class="post-link">
-							Devlog for Tuesday, September 24, 2013
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Sep 23</div>
-						<a href="http://words.yuvi.in/science/" class="post-link">
-							Science!
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 28</div>
-						<a href="http://words.yuvi.in/comments/" class="post-link">
-							Comments on again
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 28</div>
-						<a href="http://words.yuvi.in/an-entire-night-wasted/" class="post-link">
-							An Entire Night Wasted
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 27</div>
-						<a href="http://words.yuvi.in/devlog-for-monday-aug-26-2013/" class="post-link">
-							Devlog for Monday, Aug 26, 2013
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 26</div>
-						<a href="http://words.yuvi.in/if-you-help-block-ads-you-should-be-in-prison/" class="post-link">
-							“If you help block Ads, you should be in prison!”
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 25</div>
-						<a href="http://words.yuvi.in/devlog-for-sun-aug-25-2013/" class="post-link">
-							DevLog for Sun, Aug 25, 2013
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 24</div>
-						<a href="http://words.yuvi.in/disconnecting-for-real/" class="post-link">
-							Disconnecting, for real
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 1</div>
-						<a href="http://words.yuvi.in/die-80-cols-or-die-guidelines/" class="post-link">
-							Die ’80 cols or die!’ guidelines!
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 30</div>
-						<a href="http://words.yuvi.in/sprinkling-some-douchebaginess-in-code/" class="post-link">
-							Sprinkling some Douchebaginess in code
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 29</div>
-						<a href="http://words.yuvi.in/nitpicking-about-the-order-of-cards/" class="post-link">
-							Nitpicking about the Order of Cards
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 27</div>
-						<a href="http://words.yuvi.in/github-streaks/" class="post-link">
-							GitHub Streaks
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 25</div>
-						<a href="http://words.yuvi.in/game-of-life-in-apl/" class="post-link">
-							Game of Life in APL
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 24</div>
-						<a href="http://words.yuvi.in/cant-take-the-india-out-of-the-w3c/" class="post-link">
-							Can’t take the India out of the W3C…
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 23</div>
-						<a href="http://words.yuvi.in/first-major-feature-to-commons-deployed/" class="post-link">
-							First major feature to Commons deployed
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 22</div>
-						<a href="http://words.yuvi.in/bikeshedding-on-gerrit-1/" class="post-link">
-							Bikeshedding on Gerrit #1
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 21</div>
-						<a href="http://words.yuvi.in/god-biological-engineering-and-friendly-ais/" class="post-link">
-							God, biological engineering and friendly AIs
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 20</div>
-						<a href="http://words.yuvi.in/attempting-to-secure-redis-in-a-multi-tenant-environment/" class="post-link">
-							Attempting to Secure Redis in a Multi Tenant environment
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 20</div>
-						<a href="http://words.yuvi.in/testing-platen-blog-editor/" class="post-link">
-							Testing Platen Blog Editor
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">May 25</div>
-						<a href="http://words.yuvi.in/comedy-central-censored-india/" class="post-link">
-							Comedy Central Censored in India
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Apr 21</div>
-						<a href="http://words.yuvi.in/emotional-blackmail/" class="post-link">
-							Emotional Blackmail
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Apr 21</div>
-						<a href="http://words.yuvi.in/autosuggest-tamil-android-keyboard/" class="post-link">
-							Autosuggest for Tamil in Android Keyboard
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Apr 18</div>
-						<a href="http://words.yuvi.in/wikipedia-favicon/" class="post-link">
-							Wikipedia has a new Favicon!
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Apr 16</div>
-						<a href="http://words.yuvi.in/remembering-dead/" class="post-link">
-							Remembering the dead
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Apr 15</div>
-						<a href="http://words.yuvi.in/greatest-fear/" class="post-link">
-							Greatest Fear
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Apr 7</div>
-						<a href="http://words.yuvi.in/bugs-resolved-humorous/" class="post-link">
-							Bugs RESOLVED HUMOROUS
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Apr 6</div>
-						<a href="http://words.yuvi.in/leaving-icici-bank/" class="post-link">
-							Leaving ICICI Bank
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Apr 4</div>
-						<a href="http://words.yuvi.in/puppy-pregnancy-syndrome/" class="post-link">
-							Puppy pregnancy syndrome
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Apr 3</div>
-						<a href="http://words.yuvi.in/onion-mass-shootings/" class="post-link">
-							Onion on Mass Shootings in the US
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Apr 3</div>
-						<a href="http://words.yuvi.in/death-by-toile/" class="post-link">
-							Death by toilet
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Apr 2</div>
-						<a href="http://words.yuvi.in/code-times-roman/" class="post-link">
-							Code in Times New Roman
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Mar 31</div>
-						<a href="http://words.yuvi.in/calculating-population-india-wikipedia/" class="post-link">
-							Calculating the population of India on Wikipedia
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Mar 31</div>
-						<a href="http://words.yuvi.in/arranged-shag-childbirth-sex/" class="post-link">
-							Arranged Shag &amp; Childbirth Without Sex
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Mar 25</div>
-						<a href="http://words.yuvi.in/entitled-outsourced-job/" class="post-link">
-							Entitled to an Outsourced Job
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Mar 25</div>
-						<a href="http://words.yuvi.in/tor-flashproxies-browser/" class="post-link">
-							Tor Flashproxies on your browser
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Mar 23</div>
-						<a href="http://words.yuvi.in/experiencing-embrace/" class="post-link">
-							Experiencing ‘Embrace, Extend &amp; Extinguish’
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Mar 23</div>
-						<a href="http://words.yuvi.in/511/" class="post-link">
-							On Whatsapp
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Mar 22</div>
-						<a href="http://words.yuvi.in/mediawiki-bugzilla-quips-aka-behind-scenes-sortof/" class="post-link">
-							Mediawiki Bugzilla quips, aka ‘Behind the Scenes (sortof)’
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Mar 22</div>
-						<a href="http://words.yuvi.in/android-regex-bug-null-replacement-matcher-replaceall/" class="post-link">
-							Android RegEx bug: ‘null’ replacement with Matcher.replaceAll
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Mar 22</div>
-						<a href="http://words.yuvi.in/file-bug-report/" class="post-link">
-							How to file a bug report
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Mar 22</div>
-						<a href="http://words.yuvi.in/blogging-more-often-bye-bye-twitter/" class="post-link">
-							Blogging more often, bye bye Twitter
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Mar 22</div>
-						<a href="http://words.yuvi.in/mindless-television/" class="post-link">
-							Mindless Television
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Mar 17</div>
-						<a href="http://words.yuvi.in/choices/" class="post-link">
-							Choices
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Feb 24</div>
-						<a href="http://words.yuvi.in/open-license-everything/" class="post-link">
-							Open License everything!
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Feb 2</div>
-						<a href="http://words.yuvi.in/immortality-of-youth/" class="post-link">
-							Immortality of Youth
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jan 27</div>
-						<a href="http://words.yuvi.in/worse-worse/" class="post-link">
-							Worse is Worse
-						</a>
-					</div>
-					
-			</ul>
-		</div>
-		
-		<div class="archive">
-			<h3>2012</h3>
-			<ul>
-					
-					<div class="post-item">
-						<div class="post-time">Dec 1</div>
-						<a href="http://words.yuvi.in/month-awesome/" class="post-link">
-							The Month of Awesome (2012 Edition)
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Oct 31</div>
-						<a href="http://words.yuvi.in/happiness-1/" class="post-link">
-							Happiness #1
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Oct 25</div>
-						<a href="http://words.yuvi.in/red-eye-flight/" class="post-link">
-							Red Eye flight
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Oct 24</div>
-						<a href="http://words.yuvi.in/wretched-city/" class="post-link">
-							Wretched City
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Oct 22</div>
-						<a href="http://words.yuvi.in/neglect-sorrow/" class="post-link">
-							Neglect and Sorrow
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Oct 18</div>
-						<a href="http://words.yuvi.in/blogging-raspberry-pi/" class="post-link">
-							Staying on the bleeding Edge
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Oct 5</div>
-						<a href="http://words.yuvi.in/house-painters-programming/" class="post-link">
-							House painters of Programming
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Oct 3</div>
-						<a href="http://words.yuvi.in/vague-sense-order-sense-purpose/" class="post-link">
-							A Vague Sense of Order, No Sense of Purpose
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Sep 8</div>
-						<a href="http://words.yuvi.in/what-puzzles-us/" class="post-link">
-							“What still puzzles us?”
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 28</div>
-						<a href="http://words.yuvi.in/0-3-school-teachers-pass-teachers-recruitment-exam/" class="post-link">
-							What do you do when only 0.3% of School Teachers pass the Eligibility Exam for Teaching?
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Mar 8</div>
-						<a href="http://words.yuvi.in/my-vimrc/" class="post-link">
-							My .vimrc
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Feb 23</div>
-						<a href="http://words.yuvi.in/college-drop/" class="post-link">
-							I’m not a college drop out
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Feb 20</div>
-						<a href="http://words.yuvi.in/passing-headers-proxying-nginx/" class="post-link">
-							Passing Headers along while Proxying with nginx
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jan 7</div>
-						<a href="http://words.yuvi.in/program/" class="post-link">
-							My First Program
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jan 4</div>
-						<a href="http://words.yuvi.in/devlog-december-26-2011/" class="post-link">
-							DevLog: December 26, 2011 – Jan 3rd, 2012
-						</a>
-					</div>
-					
-			</ul>
-		</div>
-		
-		<div class="archive">
-			<h3>2011</h3>
-			<ul>
-					
-					<div class="post-item">
-						<div class="post-time">Dec 23</div>
-						<a href="http://words.yuvi.in/devlog-december-23-2011/" class="post-link">
-							Devlog: December 23, 2011
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Dec 21</div>
-						<a href="http://words.yuvi.in/devlog-december-21-2011/" class="post-link">
-							DevLog: December 21 2011
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Dec 12</div>
-						<a href="http://words.yuvi.in/devlog-december-11-2011/" class="post-link">
-							DevLog: December 11, 2011
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Dec 11</div>
-						<a href="http://words.yuvi.in/devlog-december-10-2011/" class="post-link">
-							Devlog December 10, 2011
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Dec 7</div>
-						<a href="http://words.yuvi.in/devlog-december-7-2011/" class="post-link">
-							DevLog December 7, 2011
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Dec 6</div>
-						<a href="http://words.yuvi.in/story-average-indian-techie/" class="post-link">
-							Story of Average Indian ‘Techie’
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Dec 5</div>
-						<a href="http://words.yuvi.in/devlog-december-5-2011/" class="post-link">
-							DevLog: December 5, 2011
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Dec 4</div>
-						<a href="http://words.yuvi.in/devlog-december-2011/" class="post-link">
-							Devlog December 2011
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Nov 28</div>
-						<a href="http://words.yuvi.in/learnt-reading-javascript-good-parts/" class="post-link">
-							What I learnt from reading “Javascript – The Good Parts”
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Oct 28</div>
-						<a href="http://words.yuvi.in/3-reasons-people-join-it-companies/" class="post-link">
-							3 reasons why people join ‘IT companies’
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Oct 21</div>
-						<a href="http://words.yuvi.in/greatest-fear-flash-fade/" class="post-link">
-							Our Greatest Fear – ‘Flash and Fade’
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 26</div>
-						<a href="http://words.yuvi.in/interview-sriram-krishnan-5-years-old/" class="post-link">
-							Interview with Sriram Krishnan (5 years old)
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 23</div>
-						<a href="http://words.yuvi.in/my-vim-setup/" class="post-link">
-							My Vim setup
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 22</div>
-						<a href="http://words.yuvi.in/the-fridge-at-interviewstreet-office/" class="post-link">
-							The fridge at InterviewStreet office
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 13</div>
-						<a href="http://words.yuvi.in/non-ascii-characters-http-headers/" class="post-link">
-							Non-ASCII Characters in HTTP Headers
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 11</div>
-						<a href="http://words.yuvi.in/programmer-run-code-head/" class="post-link">
-							You are a programmer if you can run code in your head
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 17</div>
-						<a href="http://words.yuvi.in/temptations/" class="post-link">
-							Temptations
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jun 26</div>
-						<a href="http://words.yuvi.in/what-stop-child-athiest/" class="post-link">
-							“What is the best way to stop your child becoming an athiest?”
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jun 19</div>
-						<a href="http://words.yuvi.in/sleepsort-4chan/" class="post-link">
-							SleepSort from 4Chan
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jun 14</div>
-						<a href="http://words.yuvi.in/devlog-may-2011/" class="post-link">
-							Devlog May 2011
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jun 13</div>
-						<a href="http://words.yuvi.in/note-present-future-self-pre-book-travel-tickets/" class="post-link">
-							Note from Present Self to Future Self: Pre-Book your Travel Tickets
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jun 9</div>
-						<a href="http://words.yuvi.in/broke-nonexistent-law/" class="post-link">
-							So, I broke a law by photographing a clock in a railway station
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jun 9</div>
-						<a href="http://words.yuvi.in/working-big-co-unsatisfying/" class="post-link">
-							Why working at “Big Co” is unsatisfying
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jun 8</div>
-						<a href="http://words.yuvi.in/infosys-tcs-or-wipro-none/" class="post-link">
-							“Infosys, TCS or Wipro?” “None”
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jun 7</div>
-						<a href="http://words.yuvi.in/my-new-canon-550d-from-flipkart/" class="post-link">
-							My New Canon 550D from Flipkart
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jun 7</div>
-						<a href="http://words.yuvi.in/belated-samsung-galaxy-3-review/" class="post-link">
-							Belated Samsung Galaxy 3 Review
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jun 6</div>
-						<a href="http://words.yuvi.in/moving-back-to-wordpress/" class="post-link">
-							Moving back to WordPress
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">May 14</div>
-						<a href="http://words.yuvi.in/six-years-of-blogging-and-eleven-years-of-coding/" class="post-link">
-							Six Years of Blogging and Eleven Years of Coding
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">May 13</div>
-						<a href="http://words.yuvi.in/sicp-and-brainfuck/" class="post-link">
-							SICP and BrainFuck
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">May 12</div>
-						<a href="http://words.yuvi.in/orwell-and-huxley/" class="post-link">
-							Orwell and Huxley
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">May 2</div>
-						<a href="http://words.yuvi.in/devlog-april-2011/" class="post-link">
-							DevLog: April 2011
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Apr 11</div>
-						<a href="http://words.yuvi.in/devlog-mar-2011/" class="post-link">
-							DevLog: Mar 2011
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Apr 11</div>
-						<a href="http://words.yuvi.in/devlog-feb-2011/" class="post-link">
-							DevLog: Feb 2011
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Apr 10</div>
-						<a href="http://words.yuvi.in/gstreamer-101-at-gnome-asia-2011/" class="post-link">
-							GStreamer 101 at GNOME Asia 2011
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Feb 1</div>
-						<a href="http://words.yuvi.in/devlog-jan-2011/" class="post-link">
-							DevLog: Jan 2011
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jan 28</div>
-						<a href="http://words.yuvi.in/nen-first-dot-2010-what-i-learnt/" class="post-link">
-							NEN First Dot 2010 – What I learnt
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jan 25</div>
-						<a href="http://words.yuvi.in/functional-programming-geekweekend-at-thoughtworks/" class="post-link">
-							Functional Programming Geekweekend at Thoughtworks
-						</a>
-					</div>
-					
-			</ul>
-		</div>
-		
-		<div class="archive">
-			<h3>2010</h3>
-			<ul>
-					
-					<div class="post-item">
-						<div class="post-time">Dec 25</div>
-						<a href="http://words.yuvi.in/enthusiastic-teachers-and-naive-implementation-of-gauss-seidel-approximations/" class="post-link">
-							Enthusiastic Teachers and Naive Implementation of Gauss Seidel Approximations
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Dec 23</div>
-						<a href="http://words.yuvi.in/serendipity/" class="post-link">
-							Serendipity
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Dec 7</div>
-						<a href="http://words.yuvi.in/more-effects-for-cheese/" class="post-link">
-							More Effects for Cheese!
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Dec 7</div>
-						<a href="http://words.yuvi.in/moving-to-vim-from-emacs/" class="post-link">
-							Moving to Vim from Emacs
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Nov 7</div>
-						<a href="http://words.yuvi.in/how-to-increase-cheeses-burst-mode-photo-count/" class="post-link">
-							How to increase Cheese’s Burst Mode Photo Count
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Nov 1</div>
-						<a href="http://words.yuvi.in/why-i-moved-off-arch-on-my-netbook/" class="post-link">
-							Why I moved off Arch (on my Netbook)
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Oct 16</div>
-						<a href="http://words.yuvi.in/trip-to-kerala/" class="post-link">
-							Trip to Kerala
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Sep 7</div>
-						<a href="http://words.yuvi.in/blogging-from-under-the-table-during-class/" class="post-link">
-							Blogging From Under The Table During Class
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Sep 6</div>
-						<a href="http://words.yuvi.in/running-archlinux/" class="post-link">
-							Running ArchLinux
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Sep 4</div>
-						<a href="http://words.yuvi.in/ihave-a-motorbike/" class="post-link">
-							Ihave a motorbike!
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Sep 2</div>
-						<a href="http://words.yuvi.in/the-end-of-gsoc-2010/" class="post-link">
-							The End of GSoC 2010
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 7</div>
-						<a href="http://words.yuvi.in/work-life-balance/" class="post-link">
-							Work Life Balance
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 22</div>
-						<a href="http://words.yuvi.in/cheese-2-31-1-released/" class="post-link">
-							Cheese 2.31.1 Released
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 22</div>
-						<a href="http://words.yuvi.in/room-full-of-people-like-me/" class="post-link">
-							“Room Full of People Like Me”
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 22</div>
-						<a href="http://words.yuvi.in/my-gsoc-2010-proposal/" class="post-link">
-							My GSoC 2010 Proposal
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 22</div>
-						<a href="http://words.yuvi.in/cheese-gsoc-report-week-8/" class="post-link">
-							Cheese GSoC Report – Week 8
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 12</div>
-						<a href="http://words.yuvi.in/cheese-gsoc-report-week-7/" class="post-link">
-							Cheese GSoC Report – Week 7
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 3</div>
-						<a href="http://words.yuvi.in/reddit-university-sicp-reading-group/" class="post-link">
-							Reddit University – SICP Reading Group
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 1</div>
-						<a href="http://words.yuvi.in/cheese-gsoc-report-week-5/" class="post-link">
-							Cheese GSoC Report – Week 5
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jun 20</div>
-						<a href="http://words.yuvi.in/cheese-gsoc-report-week-4/" class="post-link">
-							Cheese GSoC Report – Week 4
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jun 13</div>
-						<a href="http://words.yuvi.in/cheese-gsoc-report-week-3/" class="post-link">
-							Cheese GSoC Report – Week 3
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jun 6</div>
-						<a href="http://words.yuvi.in/cheese-gsoc-report-week-2/" class="post-link">
-							Cheese GSoC Report – Week 2
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">May 30</div>
-						<a href="http://words.yuvi.in/vala-gtkbuilder-and-autoconnecting-signal-handlers/" class="post-link">
-							Vala, GTKBuilder and Autoconnecting Signal Handlers
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">May 30</div>
-						<a href="http://words.yuvi.in/cheese-gsoc-report-week-1/" class="post-link">
-							Cheese GSoC Report – Week 1
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">May 6</div>
-						<a href="http://words.yuvi.in/gsoc-milestones-vala-build-using-autotools/" class="post-link">
-							GSoC Milestones – Vala Build using AutoTools
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">May 4</div>
-						<a href="http://words.yuvi.in/gsoc-milestone-0-what-does-my-project-do/" class="post-link">
-							GSoC Milestone 0 – What does my project do?
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">May 1</div>
-						<a href="http://words.yuvi.in/my-first-accepted-patch/" class="post-link">
-							My First Accepted Patch!
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">May 1</div>
-						<a href="http://words.yuvi.in/gsoc-2010-the-beginning/" class="post-link">
-							GSoC 2010 – The Beginning
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Apr 21</div>
-						<a href="http://words.yuvi.in/hacking-more/" class="post-link">
-							Hacking more!
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Apr 20</div>
-						<a href="http://words.yuvi.in/how-i-spent-the-day-today/" class="post-link">
-							How I spent the Day today
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Apr 19</div>
-						<a href="http://words.yuvi.in/dokuwiki-plugin-to-easily-embed-gists/" class="post-link">
-							Dokuwiki plugin to easily embed Gists
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Apr 19</div>
-						<a href="http://words.yuvi.in/pycon-india-2009/" class="post-link">
-							PyCon India 2009
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Mar 22</div>
-						<a href="http://words.yuvi.in/webfaction-review/" class="post-link">
-							Webfaction Review
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Mar 12</div>
-						<a href="http://words.yuvi.in/samsung-n210-review/" class="post-link">
-							Samsung N210 Review
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Mar 11</div>
-						<a href="http://words.yuvi.in/we-must-take-india-as-it-is-jules-verne/" class="post-link">
-							“We must take [India] as it is” – Jules Verne
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jan 26</div>
-						<a href="http://words.yuvi.in/first-binary-dream/" class="post-link">
-							First Binary Dream
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jan 18</div>
-						<a href="http://words.yuvi.in/measure-of-learning-epiphanies-per-session/" class="post-link">
-							Measure of Learning: Epiphanies per Session
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jan 4</div>
-						<a href="http://words.yuvi.in/2010-the-beginning-the-bicycle-ride-and-external-dependencies/" class="post-link">
-							2010 – The Beginning, the bicycle ride and external dependencies
-						</a>
-					</div>
-					
-			</ul>
-		</div>
-		
-		<div class="archive">
-			<h3>2009</h3>
-			<ul>
-					
-					<div class="post-item">
-						<div class="post-time">Dec 8</div>
-						<a href="http://words.yuvi.in/the-python-workshop/" class="post-link">
-							The Python Workshop
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Nov 13</div>
-						<a href="http://words.yuvi.in/what-i-lack/" class="post-link">
-							What I lack
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Oct 28</div>
-						<a href="http://words.yuvi.in/perfect-day-1/" class="post-link">
-							Perfect Day #1
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Oct 28</div>
-						<a href="http://words.yuvi.in/block-cursor-vs-post-cursor-gvim-vs-emacs/" class="post-link">
-							Block cursor vs Post Cursor (gVim vs Emacs)
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Oct 21</div>
-						<a href="http://words.yuvi.in/anatomy-of-an-impromptu-hackathon-git-vs-svn/" class="post-link">
-							Anatomy of an impromptu hackathon (Git vs SVN)
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Oct 21</div>
-						<a href="http://words.yuvi.in/why-i-got-rid-of-my-fork-of-waffle/" class="post-link">
-							Why I got rid of my fork of Waffle
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Oct 19</div>
-						<a href="http://words.yuvi.in/attraction-or-admiration/" class="post-link">
-							Attraction or Admiration
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Oct 7</div>
-						<a href="http://words.yuvi.in/what-i-learnt-from-the-hackfest-at-iitm/" class="post-link">
-							What I learnt from the Hackfest at IITM
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Oct 1</div>
-						<a href="http://words.yuvi.in/hackfest-09-expectations/" class="post-link">
-							Hackfest ’09 – Expectations
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Oct 1</div>
-						<a href="http://words.yuvi.in/code-ive-written-so-far/" class="post-link">
-							Code I’ve written so far
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Sep 20</div>
-						<a href="http://words.yuvi.in/lessons-learnt-from-working-with-the-symposium/" class="post-link">
-							Lessons learnt from working with the Symposium
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Sep 7</div>
-						<a href="http://words.yuvi.in/icc-rules-for-backyard-cricket/" class="post-link">
-							ICC Rules for Backyard Cricket
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 28</div>
-						<a href="http://words.yuvi.in/pycon-2009-are-you-coming/" class="post-link">
-							PyCon 2009 – Are you coming?
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 28</div>
-						<a href="http://words.yuvi.in/3hours-of-code-1-blog-post-per-day/" class="post-link">
-							3hours of code &amp; 1 blog post per day
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 26</div>
-						<a href="http://words.yuvi.in/premature-greying/" class="post-link">
-							Premature Greying
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 14</div>
-						<a href="http://words.yuvi.in/autokrish-because-we-dont-get-enough-jilpa/" class="post-link">
-							AutoKrish: Because we don’t get enough jilpa
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 14</div>
-						<a href="http://words.yuvi.in/the-automatic-quote-generators-aka-autopeople/" class="post-link">
-							The Automatic Quote Generators (aka AutoPeople)
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 10</div>
-						<a href="http://words.yuvi.in/abigger-binary-heart/" class="post-link">
-							ABigger, binary heart
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 10</div>
-						<a href="http://words.yuvi.in/new-email-id/" class="post-link">
-							New email id
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 5</div>
-						<a href="http://words.yuvi.in/alone/" class="post-link">
-							Alone
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 31</div>
-						<a href="http://words.yuvi.in/carrier-error/" class="post-link">
-							Carrier Error
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 26</div>
-						<a href="http://words.yuvi.in/chennais-concentration-camps-aka-colleges/" class="post-link">
-							Chennai’s Concentration camps (aka Colleges)
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 20</div>
-						<a href="http://words.yuvi.in/picks-from-autogenerated-freya-quotes-nsfw/" class="post-link">
-							Picks from autogenerated Freya Quotes (NSFW?)
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 17</div>
-						<a href="http://words.yuvi.in/code-highligting-plugin-for-hislain/" class="post-link">
-							Code Highligting Plugin for HiSlain
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 15</div>
-						<a href="http://words.yuvi.in/progress-on-hislain-1/" class="post-link">
-							Progress on HiSlain #1
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 10</div>
-						<a href="http://words.yuvi.in/im-jealous-of-her/" class="post-link">
-							I’m jealous of her
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 4</div>
-						<a href="http://words.yuvi.in/treat-of-a-lifetime/" class="post-link">
-							Treat of a Lifetime
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 2</div>
-						<a href="http://words.yuvi.in/my-involvement-in-novelrace/" class="post-link">
-							My involvement in Novelrace
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 1</div>
-						<a href="http://words.yuvi.in/cute-dress/" class="post-link">
-							Cute Dress
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jun 29</div>
-						<a href="http://words.yuvi.in/emacs/" class="post-link">
-							Emacs
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jun 29</div>
-						<a href="http://words.yuvi.in/isoooo-want-this-on-a-t-shirt/" class="post-link">
-							Isoooo want this on a T-Shirt
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jun 28</div>
-						<a href="http://words.yuvi.in/evanescence-enjoyed-best-without-the-music-vids/" class="post-link">
-							Evanescence: Enjoyed best without the Music Vids
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jun 28</div>
-						<a href="http://words.yuvi.in/shirts/" class="post-link">
-							Shirts
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jun 28</div>
-						<a href="http://words.yuvi.in/things-i-need-time-to-do/" class="post-link">
-							Things I need time to do
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jun 28</div>
-						<a href="http://words.yuvi.in/optimizing-life/" class="post-link">
-							Optimizing Life
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jun 28</div>
-						<a href="http://words.yuvi.in/hello-world-again/" class="post-link">
-							Hello World, Again!
-						</a>
-					</div>
-					
-			</ul>
-		</div>
-		
-		<footer id="footer">
-    
-        <div id="social">
-
-	
-	
-    
-    <a class="symbol" href="yuvipanda">
-        github
-    </a>
-    
-    <a class="symbol" href="yuvipanda">
-        twitterbird
-    </a>
-    
-
-
-</div>
-
-    
-    <p class="small">
-    
-        CC0
-    
-    </p>
-    <p class="small">
-        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
-    </p>
-</footer>
-
-	</section>
-
-	<div class="dd">
-	</div>
-
-	<script src="http://words.yuvi.in/js/jquery-2.2.4.min.js"></script>
-<script src="http://words.yuvi.in/js/main.js"></script>
-<script src="http://words.yuvi.in/js/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 
 
 
+        </div> <!-- /.blog-main -->
+
+        <aside class="col-sm-3 ml-auto blog-sidebar">
+  
+  <section class="sidebar-module sidebar-module-inset">
+    <h4>About</h4>
+    <p><strong>Yuvi Panda</strong> is a 26 year old building infrastructure for reducing accidental complexities in solving problems with code.</p>
+  </section>
+  
+
+  
+        <section class="sidebar-module">
+    <h4>Recent Posts</h4>
+    <ol class="list-unstyled">
 
 
+<li><a href="/post/why-not-s2i/">Why repo2docker? Why not s2i?</a></li>
+
+<li><a href="/post/maintainerati-2017/">maintainerati 2017</a></li>
+
+<li><a href="/post/designing-data-intensive-applications/">designing data intensive applications</a></li>
+
+<li><a href="/post/think-os/">think os</a></li>
+
+<li><a href="/post/learning-selinux/">learning selinux and apparmor</a></li>
+
+    </ol>
+  </section>
+
+  
+
+  
+</aside>
 
 
-	</body>
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>
+      
+      CC0
+      
+      </p>
+      <p>
+      <a href="#">Back to top</a>
+      </p>
+    </footer>
+
+  </body>
+
 </html>

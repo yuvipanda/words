@@ -1,228 +1,994 @@
 <!DOCTYPE html>
-<html lang="en-us">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		
-		<meta name="description" content="Open Knowledge | Open Source | Jupyter | Kubernetes | Wikimedia | Python">
-		<meta name="generator" content="Hugo 0.31.1" />
-		<title>Uncategorized &middot; Yuvi Panda</title>
-		<link rel="shortcut icon" href="http://words.yuvi.in/images/favicon.ico">
-		<link rel="stylesheet" href="http://words.yuvi.in/css/style.css">
-		<link rel="stylesheet" href="http://words.yuvi.in/css/highlight.css">
+<html lang="en">
 
-		
-		<link rel="stylesheet" href="http://words.yuvi.in/css/monosocialiconsfont.css">
-		
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		
+<meta property="og:title" content="Uncategorized" />
+<meta property="og:description" content="Jupyter | Kubernetes | Wikimedia" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://words.yuvi.in/categories/uncategorized/" />
 
-		
-	</head>
 
-	<body>
-	<nav class="main-nav">
-	
-	
-		<a href='http://words.yuvi.in/'> <span class="arrow">←</span>Home</a>
-	
-	<a href='http://words.yuvi.in/posts'>Archive</a>
-	<a href='http://words.yuvi.in/tags'>Tags</a>
-	<a href='http://words.yuvi.in/about'>About</a>
 
-	
+<meta property="og:updated_time" content="2015-12-19T07:55:01&#43;00:00"/>
 
-	
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Uncategorized"/>
+<meta name="twitter:description" content="Jupyter | Kubernetes | Wikimedia"/>
+<meta name="generator" content="Hugo 0.31.1" />
+
+
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Blog",
+  "headline": "Yuvi Panda",
+  "url" : "http://words.yuvi.in/categories/uncategorized/",
+  "author": {
+    "@type": "Person",
+    "name": ""
+  },
+  "dateModified": "2015-12-19T07:55:01&#43;00:00",
+  "keywords": "books,class-notes,code,devlog,education,events,links,lol-culture,papers,personal,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
+  "description": "Jupyter | Kubernetes | Wikimedia"
+}
+</script>
+
+
+    <link rel="canonical" href="http://words.yuvi.in/categories/uncategorized/">
+
+    <title>Yuvi Panda</title>
+
+    <!-- combined, minified CSS -->
+    <link href="http://words.yuvi.in/css/style.css" rel="stylesheet" integrity="sha384-O8wjsnz02XiyrPxnhfF6AVOv6YLBaEGRCnVF&#43;DL3gCPBy9cieyHcpixIrVyD2JS5" crossorigin="anonymous">
+
+    
+    <!-- RSS 2.0 feed -->
+    <link href="http://words.yuvi.in/categories/uncategorized/index.xml" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
+    
+
+    
+
+    
+
+    
+
+  </head>
+
+  <body>
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="nav blog-nav">
+          <a class="nav-link " href="http://words.yuvi.in/">Home</a>
+          
+          
+        </nav>
+      </div>
+    </div>
+
+    <header class="blog-header">
+      <div class="container">
+        <h1 class="blog-title">
+            
+            <img src='/profile.jpg' width=80 style="border-radius: 50%; margin-bottom: 12px;">
+            <a href="http://words.yuvi.in/" rel="home">Yuvi Panda</a></h1>
+        <p class="lead blog-description">Jupyter | Kubernetes | Wikimedia</p>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+
+          
+
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-2015-dec-18/">DevLog for 2015 Dec 18</a></h2>
+    <p class="blog-post-meta"><time datetime="2015-12-19T07:55:01Z">Sat Dec 19, 2015</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/uncategorized" rel="category tag">Uncategorized</a>
+
+
+</p>
+  </header>
+  <p>Haven&#8217;t done these in a while, let&#8217;s see if I can get this back on the wagon!</p>
+
+<ul>
+<li>Discovered the <a href="https://github.com/kjschiroo/WikiChatter">WikiChatter</a> library (thanks to @halfak!), and using that in my Teahouse analysis notebook. Far better than writing my own parser and fighting with that. Lets me get on with the actual fun stuff I wanted to do (which is the actual analysis)</li>
+<li>Learning about pandas, checking out matplotlib, bokeh and wordcloud libraries to use in the analysis. Have included matplotlib and bokeh (and with it, pandas and numpy) in the default libraries list for PAWS, and also fixed permissions so users can pip install stuff themselves too.</li>
+<li>For context, I&#8217;m trying to do an analysis of the <a href="https://en.wikipedia.org/wiki/Wikipedia:Teahouse">English Wikipedia Teahouse</a> questions archive, mostly as a way of showing off what <a href="https://tools.wmflabs.org/paws">PAWS</a> makes possible.</li>
+<li>Also spent a good chunk of the day regretting previous life decisions. All temporary however &#8211; nothing irreversible was done, which is wonderful. Should figure out how to reduce likeliness of similar events happening in the future.</li>
+<li>Docker build times on my machine are pathetic, both because of slow network (USA! USA! USA!) and cheap laptop. Need to find a proper solution to this soon.</li>
+</ul>
+
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/global-merge-accounts-wikimedia/">Global merge of accounts at Wikimedia</a></h2>
+    <p class="blog-post-meta"><time datetime="2015-07-04T12:49:15Z">Sat Jul 4, 2015</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/uncategorized" rel="category tag">Uncategorized</a>, <a href="/categories/wiki" rel="category tag">wiki</a>
+
+
+</p>
+  </header>
+  <p>is now slowly happening, and <a href="https://meta.wikimedia.org/wiki/Special:GlobalRenameProgress/YuviPanda">I am the test subject!</a></p>
+
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/terry-prachett-word-synergistically/">Terry Prachett on the word ‘synergistically’</a></h2>
+    <p class="blog-post-meta"><time datetime="2013-12-30T15:14:12Z">Mon Dec 30, 2013</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/uncategorized" rel="category tag">Uncategorized</a>
+
+
+</p>
+  </header>
+  <blockquote>
+<p>You had to admire the way perfectly innocent words were mugged, ravished, stripped of all true meaning and decency and then sent to walk the gutter for Reacher Gilt, although ‘synergistically’ had probably been a whore from the start
+<em>Going Postal</em>, Terry Prachett</p></p>
+</blockquote>
+
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/interview-sriram-krishnan-5-years-old/">Interview with Sriram Krishnan (5 years old)</a></h2>
+    <p class="blog-post-meta"><time datetime="2011-08-26T15:50:55Z">Fri Aug 26, 2011</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/uncategorized" rel="category tag">Uncategorized</a>
+
+
+<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/interview" rel="tag">interview</a>, <a href="/tags/personal" rel="tag">personal</a>, <a href="/tags/reprint" rel="tag">reprint</a>, <a href="/tags/sriram" rel="tag">sriram</a>
+
+</p>
+  </header>
+  <p>5 years ago, I was in my 10th and new on the Internet. I had been coding for about 5-6 years already, but mostly with TurboC and VB6/C# (thanks to MSDN CDs I steal from <a href="http://sudarmuthu.com">Sudar</a>). And then this interview happened and pushed me farther out into geekland :)</p>
+
+<p>Presenting a reprint from 2006, my interview with <a href="http://sriramk.com">Sriram Krishnan</a>, then Microsoftie. Note that the opinions here are of a Sriram 5 years ago, and do not necessarily represent what he thinks now :D And the questions are obviously the questions a younger, naiver (and stupider) Yuvi would&#8217;ve asked, so bear with that. I was incompetent then (I probably now am too :P) &#8211; but notwithstanding all that, I still think this makes for good reading.</p>
+
+<p>&#8211;</p>
+
+<p><span style="color: #000000;"><span style="font-size: small;"><strong>First, tell us about yourself</strong></span></span></p>
+
+<p><span style="color: #000000;"><span style="font-size: small;">I was afraid of that question :)</span></span></p>
+
+<p><span style="color: #000000;"><span style="font-size: small;">I&#8217;m Sriram Krishnan &#8211; I work as a Program Manager here at Microsoft. I work on Visual Studio for Devices &#8211; that means I help people write software that runs on smart devices, mainly mobile phones but even refrigerators, washing machines, set top boxes are smart machines. I&#8217;m from Chennai, studied in SRM Engineering College and finished my BTech IT last year (yippeee!). I&#8217;m really tall (6 feet 5), really loud and have an unhealthy love for Star Trek and most forms of TV in general. I studied in Sir M Venkat Subba Rao Matriculation Higher Secondary School. It&#8217;s in T Nagar.</span></span></p>
+
+<p><span style="color: #000000;"><span style="font-size: small;"><strong>As a Program manager, what are your Job responsibilities at Microsoft?</strong></span></span></p>
+
+<p><span style="color: #000000;"><span style="font-size: small;">I need to explain this a bit as a &#8216;Program Manager&#8217; is a unique beast to Microsoft. In short, PMs have all the responsibility and none of the authority. Basically, we &#8216;own&#8217; the feature. This means that we figure out how the product/feature should look like. This means talking to customers and finding out what they want. We then own the ship cycle &#8211; so we have to figure out how many features can we build given the limited time and people we have. We then go write &#8216;specs&#8217; or specification documents. The developers take these and turn this into code. We are always the external face for our feature. </span></span></p>
+
+<p><span style="color: #000000;"><span style="font-size: small;">Now, this doesn’t mean that we control the developers in any way. All the 3 roles (developer, tester, PM) are equally important. If my developer doesn&#8217;t like my spec, he&#8217;ll tell me so. That&#8217;s why my title is interesting- I &#8216;manage&#8217; the program rather than any people. Folks get confused due to the &#8216;Manager&#8217; part of my title :) Hope that explains what a PM is in short. You really have to be here to understand the full scope of what a PM does :)</span></span></p>
+
+<p><span style="color: #000000;"><span style="font-size: small;"><strong>Now, tell us something about Microsoft&#8230;</strong></span></span></p>
+
+<p><span style="color: #000000;"><span style="font-size: small;">Microsoft is a weird and interesting place. Kind of like Never Never Land (if you know Peter Pan). It is big &#8211; the people here are really smart. It is scary how many people your software can touch. Imagine if you were the guy writing the Start Menu in Windows &#8211; imagine the number of people who are using your code. The sheer amount of responsibility you have is incredible</span></span></p>
+
+<p><span style="color: #000000;"><span style="font-size: small;">Another interesting thing is &#8211; for whatever interest you have, you can be sure to find some team in Microsoft working on it</span></span></p>
+
+<p><span style="color: #000000;"><span style="font-size: small;">Most of all, I like the people. Incredibly, scary smart. I love the fact that I can say I work in the same company as Dave Cutler (the guy who lead the development of the NT kernel).</span></span></p>
+
+<p><span style="color: #000000;"><span style="font-size: small;"><strong>Tell us about your College Life.</strong></span></span></p>
+
+<p><span style="color: #000000;"><span style="font-size: small;">It was awful. Seriously though, I now think that I wasted too much of my time and energy worrying about things like exams and college. When I recently went back to college for my convocation, I told my HOD that the only useful time I had spent in college was the time I had bunked and stayed at home. </span></span></p>
+
+<p><span style="color: #000000;"><span style="font-size: small;">If you&#8217;re a geek or a creative person, I would urge you &#8211; spend time on what you&#8217;re good at and what you like doing. Spend time drawing or writing or coding. Don&#8217;t spoil your health too much by killing yourself for your exams</span></span></p>
+
+<p><span style="color: #000000;"><span style="font-size: small;">When you reach 12th standard and all throughout college, people will always tell you &#8220;This is the most important exam of your life”. That is nonsense &#8211; no one at Microsoft has ever asked me how much marks I have got</span></span></p>
+
+<p><span style="color: #000000;"><span style="font-size: small;">What matters is what I did in my spare time in school and college. I liked to play around on my computer &#8211; and that&#8217;s what has helped me</span></span></p>
+
+<p><span style="color: #000000;"><span style="font-size: small;">College was awful. I spent a lot of time learning subjects I hated and that were useless to me. School was better in that there wasn&#8217;t the pressure we had in college (except for 10th and 12th public exams). The best part about school for me were the culturals I attended. I got over my fear of the public, of strangers. The public speaking I did then helps me till this date.</span></span></p>
+
+<p><span style="color: #000000;"><span style="font-size: small;">If I could go back in time, I would tell myself before the 10th exams &#8220;Don’t worry about it &#8211; no one will ask you about this even 2 months from now&#8221;</span></span></p>
+
+<p><span style="color: #000000;"><span style="font-size: small;">I would tell myself before the 12th exams &#8216;Don’t kill yourself&#8217;. Don’t spoil your health. It&#8217;s not worth it. No one cares&#8221;</span></span></p>
+
+<p><span style="color: #000000;"><span style="font-size: small;">I would tell myself &#8220;Spend more time having fun. Go play more. Spend more time on your computer. Spend more time dreaming. Spend more time idling away time. Spend more time reading good books (not related to studies)</span></span></p>
+
+<p><span style="color: #000000;"><span style="font-size: small;">Spend more time discovering yourself&#8221;</span></span></p>
+
+<p><span style="color: #000000;"><span style="font-size: small;">And finally, spend more time not growing up</span></span></p>
+
+<p><span style="color: #000000;"><span style="font-size: small;"><strong>Any Advice on following your footsteps and cutting classes? Tips and Tricks?:D</strong></span></span></p>
+
+<p><span style="color: #000000;"><span style="font-size: small;">Let me be clear by what I meant there. I didn&#8217;t go to college a lot because I did a lot of creative stuff at home. In all my 4 years of college and the many, many times I bunked college, I don&#8217;t think I ever went to a movie, for example.</p></p>
+
+<p>
+  If you&#8217;re looking for me to say “skipping class is ok”, I&#8217;m not going to say it. I&#8217;ve seen too many people waste their college lives by skipping class and wasting their time.
+</p>
+
+<p>
+  I&#8217;m saying &#8211; do what you want to do and what you think will hold you in good stead later. Follow your passions. Don&#8217;t go party :-)
+</p>
+
+<p>
+  One of the reasons I got away with a lot of this was because I had a great academic record and I had a long history of doing well at inter college symposiums and so on. That kind of credibility helps</span></span>
+</p>
+
+<p>
+  &nbsp;
+</p>
+
+<p>
+  <span style="color: #000000;"><span style="font-size: small;"><strong>What do you think of Marks?</strong></span></span>
+</p>
+
+<p>
+  <span style="color: #000000;"><span style="font-size: small;">Don&#8217;t put too much weight into them. Don&#8217;t spoil your health or your peace of mind over them.</p> 
+  
+
+<p><p>
+    And please don&#8217;t judge people based on them.<br /> </span></span>
+  </p></p>
+
+<p><p>
+    <span style="color: #000000;"><span style="font-size: small;"><strong>What do you think of the current &#8220;Education System&#8221; in India?<br /> </strong></span></span><span style="color: #000000;"><span style="font-size: small;"><br /> Loaded question and one that I pontificate on at length all too often.</p></p>
+
+<pre><code>&lt;p&gt;
+  I think it is broken. Here&amp;#8217;s why.
+&lt;/p&gt;
+
+&lt;p&gt;
+  Human beings think. They are good at it too. However, no school or college encourages you to think. Human beings are good at doing new things. The greatest things in our history have come from someone asking &amp;#8216;What if&amp;#8217; or &amp;#8216;Why&amp;#8217;
+&lt;/p&gt;
+
+&lt;p&gt;
+  But in school, you&amp;#8217;ll probably be branded as a brat if you ask &amp;#8216;Why&amp;#8217;.
+&lt;/p&gt;
+
+&lt;p&gt;
+  All throughout school and college, I saw people being taught to be the same. I saw individualism suppressed. Being yourself was bad – being like everyone else was good.
+&lt;/p&gt;
+
+&lt;p&gt;
+  College was worse than school. If you need to have 250 engineering colleges in Tamil Nadu, what chance do you have of getting quality lecturers? So you make do with what you have &amp;#8211; which is mostly lecturers who couldn&amp;#8217;t get jobs anywhere else.
+&lt;/p&gt;
+
+&lt;p&gt;
+  And then they force students through 4 years of mindless torture, while the college authorities devote time to useless things like banning jeans for women and cellphones on campus.
+&lt;/p&gt;
+
+&lt;p&gt;
+  I&amp;#8217;ve always dreamed of someday setting up a school where people would be encouraged to think for themselves. Where they would be taught to question everything.
+&lt;/p&gt;
+
+&lt;p&gt;
+  I told someone recently &amp;#8216;The most useful time I spent in school and college was in the time away from class. In school, the most valuable thing I learnt was how to speak on stage, thanks to all the culturals I went to. In college, it was all the days I bunked and wrote code at home&amp;#8217;
+&lt;/p&gt;
+
+&lt;p&gt;
+  Question Everything. That&amp;#8217;s a good mantra for everyone.&lt;/span&gt;&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+  &amp;nbsp;
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;strong&gt;If the Education System is broken, why ain&amp;#8217;t it fixed?&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;Because the people who can don&amp;#8217;t care. And it is the &amp;#8216;broken-ness&amp;#8217; of the system that keeps them in place.&lt;/span&gt;&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+  &amp;nbsp;
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;strong&gt;If you were the Education Minister, what would you do?&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;I&amp;#8217;m going to sum up everything in one line.&lt;br /&gt; &lt;/span&gt;&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;Teach people to think. Don&amp;#8217;t teach them to be like everyone else.&lt;/p&gt; 
+
+  &lt;p&gt;
+    Have them write essays like &amp;#8216;Why is Isaac Newton wrong&amp;#8217; rather than essays that conclude with &amp;#8216;And thus, we conclude that so and so is true&amp;#8217;.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    Teach them to question. Teach them irreverence for the status quo :-)&lt;br /&gt; &lt;/span&gt;&lt;/span&gt;
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;strong&gt;To the young students out in Schools, what is your advice on becoming a good Developer?&lt;br /&gt; &lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;br /&gt; Being a programmer is hard. It means days, weeks of debugging the same problem. It means having to constantly relearn your tools and your materials. Compared to doctors, the human body doesn&amp;#8217;t spout new limbs every decade or so, does it? But, you get new programming languages, new operating systems, new tools and technologies almost every day.&lt;/p&gt; 
+
+    &lt;p&gt;
+      So don&amp;#8217;t do it unless you love it. Please don&amp;#8217;t take up computers because it is fashionable or because it is an easy way to make money. Take up computers because you love it at a very deep level.
+    &lt;/p&gt;
+
+    &lt;p&gt;
+      Be curious. Poke around your machine. Try to understand programming at all levels. Know how to make a button spin. Know how Windows allocates the memory for that button and the data structures involved.
+    &lt;/p&gt;
+
+    &lt;p&gt;
+      Code for fun. Write programs that *you* will use. Write programs that your friends will use. And then write more. The more code you&amp;#8217;ll write, the better you&amp;#8217;ll get. Read good code. You&amp;#8217;ll learn a lot.
+    &lt;/p&gt;
+
+    &lt;p&gt;
+      Read good books. &amp;#8216;Structure and Interpretation of Computer Programs&amp;#8217; and almost all of Tannenbaum&amp;#8217;s books are must reads.
+    &lt;/p&gt;
+
+    &lt;p&gt;
+      Code more. Learn a new programming language atleast every 6 months.
+    &lt;/p&gt;
+
+    &lt;p&gt;
+      Remember this &amp;#8211; no other profession can create so much with so little. You can&amp;#8217;t create an iPod or a Ferrari or even a small pencil from your bedroom. You can create an operating system though :-)
+    &lt;/p&gt;
+
+    &lt;p&gt;
+      Try everything &amp;#8211; atleast once :-)&lt;/span&gt;&lt;/span&gt;
+    &lt;/p&gt;
+
+    &lt;p&gt;
+      &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;Eric S Raymond and Peter Norvig have written great articles on similar lines. I would strongly recommend you to find them and follow them.&lt;/span&gt;&lt;/span&gt;
+    &lt;/p&gt;
+
+    &lt;p&gt;
+      &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;br /&gt; &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;strong&gt;What&amp;#8217;s your advice to students on choosing Colleges?&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;/p&gt;
+
+    &lt;p&gt;
+      &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;Thanks for asking me this!&lt;/span&gt;&lt;/span&gt;
+    &lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;Choose a college with good transport facilities. If you need to leave and come home, you should be able to quickly&lt;/span&gt;&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;Choose one that lets students go attend symposiums, culturals without any restrictions&lt;/span&gt;&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;Don&amp;#8217;t join one that imposes these moronic &amp;#8216;boys and girls shouldn&amp;#8217;t talk&amp;#8217; rules. Inter-gender communication is important in the workplace. &lt;/span&gt;&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;Apart from the IITs and Anna University, chances are low that you&amp;#8217;ll find good faculty in other engineering colleges. Yes, there are a lot of gems out there but they are few and far between. So you would do well to ignore claims of a great faculty&lt;/span&gt;&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;See what the former students of the college are upto. See how many have gone on to join Microsoft or Google or pursue a Phd.&lt;/span&gt;&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;Join a college for the quality of the students, not for the education or the faculty. Trust me it is the people around you that will make the most impact on you&lt;/span&gt;&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;Pick one that doesn&amp;#8217;t enforce attendance so strictly (i.e. they won&amp;#8217;t fail you because you have 74.95%)&lt;/span&gt;&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;Pick a course that you *know* you enjoy. Don&amp;#8217;t join a course because it is the &amp;#8216;in thing&amp;#8217; right now or because your parents said so. 
+
+        &lt;p&gt;
+          In fact, the last point merits some more explanation.
+        &lt;/p&gt;
+
+        &lt;p&gt;
+          I see a lot of students doing this &amp;#8211; joining non-computer science departments and then getting a job in an IT company. Please don&amp;#8217;t do this. Why? For it&amp;#8217;ll be a long time before you&amp;#8217;ll get all the CS background required to be a good programmer. Computers are like art &amp;#8211; no one can &amp;#8216;train&amp;#8217; you in 6 months.
+        &lt;/p&gt;
+
+        &lt;p&gt;
+          I need to tell a story here.
+        &lt;/p&gt;
+
+        &lt;p&gt;
+          When I wrote my engineering entrance exams, I had to wait a few days for my counseling. I remember watching on Sun TV, an interview of the guy who had scored the highest marks and who was Rank #1.
+        &lt;/p&gt;
+
+        &lt;p&gt;
+          He had picked some electronics related course at Anna University. When the reporter asked him &amp;#8216;why&amp;#8217;, he said &amp;#8216;Because anyone can learn computers by going to a class for a few weeks&amp;#8217;.
+        &lt;/p&gt;
+
+        &lt;p&gt;
+          I remember shaking my head and thinking &amp;#8216;what an idiot&amp;#8217;. For you cannot learn computers by going to a class for a few weeks.
+        &lt;/p&gt;
+
+        &lt;p&gt;
+          Pick a course you already enjoy.&lt;/span&gt;&lt;/span&gt;&lt;/li&gt; &lt;/ul&gt; 
+
+          &lt;p&gt;
+            &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;strong&gt;What do you think CS Students should be taught in High School? College?&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;/p&gt; 
+
+            &lt;p&gt;
+              Python? And the Visual Studio Express Editions;-)
+            &lt;/p&gt;
+
+            &lt;p&gt;
+              Seriously though, students should be taught how to debug. And how to code iteratively. I never understood why you have to write code on a piece of paper and then present it to your examiner &amp;#8211; that&amp;#8217;s not how you write code in real life.
+            &lt;/p&gt;
+
+            &lt;p&gt;
+              And most importantly, students need to understand the in-depth working of whatever they&amp;#8217;re using. What is the processor doing when you do a printf? You need to understand stuff like that&lt;br /&gt; &lt;/span&gt;&lt;/span&gt;
+            &lt;/p&gt;
+
+            &lt;p&gt;
+              &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;strong&gt;What do you think of &amp;#8220;Computer Institutes&amp;#8221; like CSC, especially for non-entry level courses?&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;
+            &lt;/p&gt;
+
+            &lt;p&gt;
+              &amp;nbsp;
+            &lt;/p&gt;
+
+            &lt;p&gt;
+              &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;I shouldn&amp;#8217;t be too hard on them since I would have never got into computers if it weren&amp;#8217;t for one of these institutes. It really depends on the expectations you have.&lt;/p&gt; 
+
+              &lt;p&gt;
+                Please don&amp;#8217;t join an institute because they&amp;#8217;ll get you a certificate or because they&amp;#8217;ll get you a job. That&amp;#8217;s the worst motivation ever. Join to learn something. Don&amp;#8217;t expect them to teach you everything though.&lt;br /&gt; &lt;/span&gt;&lt;/span&gt;
+              &lt;/p&gt;
+
+              &lt;p&gt;
+                &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;strong&gt;What first hooked you on to computers?&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;
+              &lt;/p&gt;
+
+              &lt;p&gt;
+                &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;This is quite an interesting story. Until 12th standard or so (sometime in 1999), I had never touched or used a computer apart from a few DOS commands we used to learn by rote for our exams. I had wanted to be a writer or get into graphics and animation.&lt;/p&gt; 
+
+                &lt;p&gt;
+                  My life changed one day in 12th grade when my Computer Science teacher summoned&lt;br /&gt; me during a lunch break. It turned out that there was an unknown institute (called Comp-U-Learn) that was doing a free, promotional “Introduction to Computers” course.
+                &lt;/p&gt;
+
+                &lt;p&gt;
+                  Guessing that it couldn&amp;#8217;t hurt (and it was free after all), I trotted happily to this computer institute where we learnt things like how to create a folder, how to draw in Paint and so on.
+                &lt;/p&gt;
+
+                &lt;p&gt;
+                  One incident there changed me forever. One particular class, we were being taught how to copy-paste and the instructor happened to say &amp;#8216;Please right-click on the &amp;#8216;My Computer&amp;#8217; icon on the desktop&amp;#8217;. Puzzled, I shot up my hand and eagerly asked &amp;#8216;Sir, where is the desktop?&amp;#8217;
+                &lt;/p&gt;
+
+                &lt;p&gt;
+                  Everyone in the class, including the instructor, burst out laughing.
+                &lt;/p&gt;
+
+                &lt;p&gt;
+                  I was hurt. In an almost cinematic fashion, I vowed to myself then that no one would ever laugh at me regarding computers again.
+                &lt;/p&gt;
+
+                &lt;p&gt;
+                  The &amp;#8216;course&amp;#8217; was for 15 days and the institute wanted students to sign up for an additional 30 day course on C/C++.
+                &lt;/p&gt;
+
+                &lt;p&gt;
+                  I was the only student who signed up for the additional course. Since I was the only guy around, the bunched me with a bunch of older people who were studying Java and I got introduced to wonders like &amp;#8216;import java.awt.*” and so on.
+                &lt;/p&gt;
+
+                &lt;p&gt;
+                  I finished 12th standard and the day after my TNPCEE engineering entrance exams, my dad bought me a computer. It was a P3, 850 MHz machine with an astounding 256 MB of RAM.
+                &lt;/p&gt;
+
+                &lt;p&gt;
+                  I was hooked throughout the holidays. I spent the entire holidays writing code in VB6 and have been coding ever since&amp;#8230;
+                &lt;/p&gt;
+
+                &lt;p&gt;
+                  Why do I love computers so much? I&amp;#8217;m really not sure. I think it has something to do with the sense of creating something, molding something from nothingness into a work of beauty. I tell my non-programmer friends that one of the greatest pleasures of life is seeing something finally work correctly, to track down that last pesky bug.
+                &lt;/p&gt;
+
+                &lt;p&gt;
+                  I&amp;#8217;m also seduced by the idea of so many people using code that I&amp;#8217;ve written. How many artists get to mass deliver? :-)&lt;br /&gt; &lt;/span&gt;&lt;/span&gt;
+                &lt;/p&gt;
+
+                &lt;p&gt;
+                  &lt;span style=&quot;color: #000000;&quot;&gt; &lt;span style=&quot;font-size: small;&quot;&gt;&lt;strong&gt;Which Programming language do you respect the most? And, which one do you find the most useful?&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;
+                &lt;/p&gt;
+
+                &lt;p&gt;
+                  &amp;nbsp;
+                &lt;/p&gt;
+
+                &lt;p&gt;
+                  &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;Well, one of the things that you learn over time is to appreciate different things in different languages. People ask me all the time &amp;#8216;Which programming language do I learn?&amp;#8217; and that is a fundamentally incorrect question.&lt;/p&gt; 
+
+                  &lt;p&gt;
+                    A programming language is like a tool in your toolbox. You don&amp;#8217;t use a screw driver alone and refuse to use anything else, do you?
+                  &lt;/p&gt;
+
+                  &lt;p&gt;
+                    Anyway, here&amp;#8217;s a list of some programming languages that I respect and why I like them.
+                  &lt;/p&gt;
+
+                  &lt;p&gt;
+                    &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;strong&gt;Visual Basic&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt; &amp;#8211; My first love. Made programming accessible to the masses. I love the idea that normal people could now code, even if it was only an Excel macro.&lt;/p&gt; 
+
+                    &lt;p&gt;
+                      &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;strong&gt;Python&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt; &amp;#8211; My current favorite. I love its simplicity and the idea of &amp;#8216;batteries included&amp;#8217;. I think this should be the first language taught in school.&lt;/p&gt; 
+
+                      &lt;p&gt;
+                        &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;strong&gt;C#&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt; &amp;#8211; My bread and butter. Anders Hejlsberg is a genius &amp;#8211; I love where he has managed to take C# without making it inaccessible to people who want their curly braces and their semi colons&lt;/p&gt; 
+
+                        &lt;p&gt;
+                          &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;strong&gt;Lisp/Scheme&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&amp;#8211; Twists my head in some very interesting ways. When you code something in Scheme and you see it work, you get a sense of achievement &amp;#8211; the same thing you get after you&amp;#8217;ve written an exam well. Someday I hope to understand macros. Maybe a day after that, I&amp;#8217;ll understand continuations.&lt;/p&gt; 
+
+                          &lt;p&gt;
+                            &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;strong&gt;C/C++&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt; came close to being on this list but I decided against it. Weird, considering that I write so much code in them.&lt;/span&gt;&lt;/span&gt;
+                          &lt;/p&gt;
+
+                          &lt;p&gt;
+                            &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;strong&gt;Anyone you can call as Role Model in your life?&lt;br /&gt; &lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;br /&gt; Interesting question &amp;#8211; I&amp;#8217;ve always had too much of an ego to acknowledge anyone as a role model.&lt;/p&gt; 
+
+                            &lt;p&gt;
+                              However, of late, I&amp;#8217;ve realized that I do look up to two people. One is Bill Gates and the other is Steve Jobs.
+                            &lt;/p&gt;
+
+                            &lt;p&gt;
+                              With BillG, there&amp;#8217;s this whole side of him that people outside Microsoft never get to know. I am amazed at his depth and breadth of knowledge &amp;#8211; I&amp;#8217;ve read stuff from him on topics as varied as database query processing techniques all the way to virtual worlds and search engines. I&amp;#8217;m amazed at his sheer smartness and intelligence &amp;#8211; there are a lot of stories in Microsoft of &amp;#8216;BillG reviews&amp;#8217; which talk of how smart he is.
+                            &lt;/p&gt;
+
+                            &lt;p&gt;
+                              I also love the fact that he&amp;#8217;s so passionate about software, and of late, solving the world&amp;#8217;s problems.
+                            &lt;/p&gt;
+
+                            &lt;p&gt;
+                              With Steve Jobs, I love his eye for beauty and perfection. And I would someday like to get his &amp;#8216;Reality Distortion Field&amp;#8217;.
+                            &lt;/p&gt;
+
+                            &lt;p&gt;
+                              Kind of politically incorrect for a Microsoft employee to admire Steve Jobs, isn&amp;#8217;t it? :-)
+                            &lt;/p&gt;
+
+                            &lt;p&gt;
+                              &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;strong&gt;Quickies&lt;br /&gt; &lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;span style=&quot;text-decoration: underline;&quot;&gt;Your Favorite Books&lt;br /&gt; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;               Lord of the Rings, Hitchhiker’s Guide to the Galaxy, anything by Frederick Forsyth and Michael Crichton. And Peter Norvig&amp;#8217;s AI book All of Ayn Rand&amp;#8217;s work deeply influenced (and comforted) me as well.&lt;/span&gt;&lt;/span&gt;
+                            &lt;/p&gt;
+
+                            &lt;p&gt;
+                              &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;br /&gt; &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;span style=&quot;text-decoration: underline;&quot;&gt;Your Favorite Authors&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+                            &lt;/p&gt;
+
+                            &lt;p&gt;
+                              &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;Apart from Forsyth and Crichton, I loved Conan Doyle as well. I love Joel Spolsky and Paul Graham. Robert Scoble is a friend and so is Don Box &amp;#8211; I love to read them as well. Of late, I&amp;#8217;ve loved reading Guy Kawasaki. Closer home, India Uncut (Amit Verma) is always fascinating. Am I allowed to list myself? :-)&lt;br /&gt; &lt;/span&gt;&lt;/span&gt;
+                            &lt;/p&gt;
+
+                            &lt;p&gt;
+                              &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;span style=&quot;text-decoration: underline;&quot;&gt;Your Favorite Music&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+                            &lt;/p&gt;
+
+                            &lt;p&gt;
+                              &amp;nbsp;
+                            &lt;/p&gt;
+
+                            &lt;p&gt;
+                              &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;Anything by U2, Scorpions, mostly classic rock. And a lot of movie themes &amp;#8211; I love the John Williams score to the Superman movies&lt;br /&gt; &lt;/span&gt;&lt;/span&gt;
+                            &lt;/p&gt;
+
+                            &lt;p&gt;
+                              &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;span style=&quot;text-decoration: underline;&quot;&gt;Your Favorite Gadgets&lt;br /&gt; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;br /&gt; Zune &amp;#8211; when we release it :) [&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;em&gt;Please prepare for extensive trolling from Apple fans –Ed&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;]&lt;/span&gt;&lt;/span&gt;
+                            &lt;/p&gt;
+
+                            &lt;p&gt;
+                              &amp;nbsp;
+                            &lt;/p&gt;
+
+                            &lt;p&gt;
+                              &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;span style=&quot;text-decoration: underline;&quot;&gt;Your Favorite Geeks&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;br /&gt; &lt;/span&gt;&lt;/span&gt;
+                            &lt;/p&gt;
+
+                            &lt;p&gt;
+                              &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;Dave Cutler. Barry Bond (he works on my team :-) ).Raymond Chen. Peter Norvig. Rob Pike. Andrew Tannenbaum. Guido Van Rossum&lt;br /&gt; &lt;/span&gt;&lt;/span&gt;
+                            &lt;/p&gt;
+
+                            &lt;p&gt;
+                              &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;span style=&quot;text-decoration: underline;&quot;&gt;Your Favorite Software&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;br /&gt; Visual Basic 6. Python. Winamp.&lt;/span&gt;&lt;/span&gt;
+                            &lt;/p&gt;
+
+                            &lt;p&gt;
+                              &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;br /&gt; &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;strong&gt;If a Genie were to give you three Wishes, what would you ask for?&lt;br /&gt; &lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;br /&gt; For an infinite number of wishes. Hey, we at Microsoft think big :-) &lt;/span&gt;&lt;/span&gt;
+                            &lt;/p&gt;
+
+                            &lt;p&gt;
+                              &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;br /&gt; &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;strong&gt;What would you like to say to the Students?&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;
+                            &lt;/p&gt;
+
+                            &lt;p&gt;
+                              &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;Question Everything. Never Belong. Ask yourself &amp;#8216;What can I do that I&amp;#8217;ll be remembered for the next 1000 years&amp;#8217;.&lt;/p&gt; 
+
+                              &lt;p&gt;
+                                And work towards that.
+                              &lt;/p&gt;
+
+                              &lt;p&gt;
+                                &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;strong&gt;What would you like to say to the Teachers?&lt;br /&gt; &lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;br /&gt; Don&amp;#8217;t teach unless you love to.&lt;/span&gt;&lt;/span&gt;
+                              &lt;/p&gt;
+
+                              &lt;p&gt;
+                                &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;br /&gt; &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;strong&gt;What&amp;#8217;s your Advice to Parents?&lt;br /&gt; &lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;br /&gt; Don&amp;#8217;t put so much pressure on your kids during exam time. Exams really don&amp;#8217;t matter&lt;br /&gt; &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;strong&gt;What&amp;#8217;s your advice to the &amp;#8220;normal guy&amp;#8221; on becoming a geek?&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;
+                              &lt;/p&gt;
+
+                              &lt;p&gt;
+                                &lt;span style=&quot;color: #000000;&quot;&gt;&lt;span style=&quot;font-size: small;&quot;&gt;Be curious. Enjoy technology and poking around technology. Ask yourself the question &amp;#8216;How does that work?&amp;#8217; and &amp;#8216;What if X could do Y&amp;#8217; and so on.&lt;/p&gt; 
+
+                                &lt;p&gt;
+                                  Be a tinkerer!&lt;/span&gt;&lt;/span&gt;
+                                &lt;/p&gt;
+</code></pre>
+
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/what-stop-child-athiest/">“What is the best way to stop your child becoming an athiest?”</a></h2>
+    <p class="blog-post-meta"><time datetime="2011-06-26T13:59:49Z">Sun Jun 26, 2011</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/uncategorized" rel="category tag">Uncategorized</a>
+
+
+<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/answers" rel="tag">answers</a>, <a href="/tags/athiesm" rel="tag">athiesm</a>, <a href="/tags/bigotry" rel="tag">bigotry</a>, <a href="/tags/education" rel="tag">education</a>, <a href="/tags/parenting" rel="tag">parenting</a>, <a href="/tags/yahoo" rel="tag">yahoo</a>
+
+</p>
+  </header>
+  <p>From the usually boring Yahoo answers, we have this <a href="http://answers.yahoo.com/question/index;_ylt=AsrKG62JfeU5scqqMv6mO0ojzKIX;_ylv=3?qid=20090208040536AAHBrYH">gem of a question</a>:</p>
+
+<blockquote>
+<p>What is the best way to stop your child becoming an athiest?</p>
+
+<p>I don&#8217;t want any of my children to be punished by God.</p>
+</blockquote>
+
+<p>However, it also had this gem of an answer:</p>
+
+<blockquote>
+<p>Do not educate them, or expose them to critical thinking, logic or science.</p>
+
+<p>Lie to them constantly about how the world works. Feed them a steady diet of mumbo jumbo dressed up like real knowledge &#8211; the jumbo jet in the whirlwind for example &#8211; and pretend that it is deep wisdom.</p>
+
+<p>Make them loathe their own natural bodies and functions. Convince them they are small and weak and worthless and need redemption. Tell them everything enjoyable is grievously wrong to even think about, and that their only fun should be in grovelling to an invisible friend.</p>
+
+<p>Ensure that they resent anyone who is not like them in every way &#8211; skin color, nationality, political opinion but especially creed. Make such people out to be evil and vile and give them &#8211; impotent minorities all &#8211; the fictional power to somehow oppress and persecute the vast majority who do think like you.</p>
+
+<p>Teach them to laugh at and dismiss out of hand any faith but their own. Early &#8211; early mind you &#8211; make sure they are taught the difference between superstitious deadly error &#8211; that one raving lunatic in the desert told the truth about a vicious god who killed people, and divine eternal truth &#8211; that another raving lunatic in the desert told the truth about a vicious god who killed people.</p>
+
+<p>Instruct them with all severity and import to never question for themselves &#8211; to never think for themselves &#8211; to never live for themselves &#8211; but to seek answers only in one &#8211; just one &#8211; particular set of semi-literate bronze age folk tales.</p>
+
+<p>Above all &#8211; and this cannot be overemphasized &#8211; make sure they cannot spell, use correct grammar, or understand basic English words.</p>
+
+<p>That should do the trick.</p>
+</blockquote>
+
+<p>It is, however, two years old. Maybe if Yahoo had not been the place where products go to die&#8230;</p>
+
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/belated-samsung-galaxy-3-review/">Belated Samsung Galaxy 3 Review</a></h2>
+    <p class="blog-post-meta"><time datetime="2011-06-07T02:50:05Z">Tue Jun 7, 2011</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/uncategorized" rel="category tag">Uncategorized</a>
+
+
+<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/android" rel="tag">android</a>, <a href="/tags/review" rel="tag">review</a>
+
+</p>
+  </header>
+  
+
+<p>Very late one. I&#8217;ve been using this since last September (as those of you on twitter and following me would know).</p>
+
+<p>It was on 2.1 for a long, long time &#8211; and even after 2.2 came out (first unofficially and then officially) I didn&#8217;t upgrade for almost a month (thanks to a missing usb cable and some laziness). I then upgraded to official 2.2, then one of the &#8216;Stock&#8217; bootloaderless ROMs, and then to InDroid 3.0, then semi-bricked my phone (trying to install InDroid 4.0) and finally settled on Kyrillos.</p>
+
+<p>In the spirit of Anna University, I&#8217;ll now list &#8220;Disadvantages and Advantages&#8221; ;)</p>
+
+<h3 id="disadvantages">Disadvantages</h3>
+
+<ol>
+<li>It&#8217;s reasonably slow</li>
+<li><strong>GPS Does Not Work.</strong> There&#8217;s a hack to enable it, but still, geez.</li>
+<li>I&#8217;ll occasionally need to force close apps</li>
+<li>TweetDeck isn&#8217;t snappy</li>
+<li>Playing Angry Birds will give you a headache (super slow framerates!)</li>
+<li>Sometimes even the SMS app will be super slow</li>
+<li>Searching for contacts is a major pain</li>
+<li>SMS unread marking is incredibly awful</li>
+<li>SMS storage is limited</li>
+<li>GTalk can only use the first account synced</li>
+<li>Swpe very, very <strong>annoyingly</strong> keeps offering you tutorials every time you misspell a word</li>
+<li>Occasional Touch screen freezes</li>
+<li>Not quite usable in direct bright sunlight, even at full brightness</li>
+<li>Battery lasts for at most a day (I&#8217;m used to them lasting a few)</li>
+<li>Auto rotate is too sensitive, cannot be turned on</li>
+<li>Camera is awful</li>
+<li>Vibrate is nowhere near good enough</li>
+<li>Loses data connectivity at times, and needs to be restarted.</li>
+<li>Loses reception way too many times</li>
+<li>Never going to get official updates from now (Froyo itself was delayed by a few months!)</li>
+</ol>
+
+<h3 id="advantages">Advantages</h3>
+
+<ol>
+<li>Only 10.5k. This was when I bought it (~September 2010), so obviously newer/better phones on the market now. But when I bought it, this was the best value for money</li>
+<li>It&#8217; Android</li>
+</ol>
+
+<p>Considering all these, I still love my phone :D Moving from a &#8216;dumb&#8217; phone to a smartphone was an incredibly life altering experience, and you can&#8217;t beat me into going back to a &#8216;normal&#8217; phone again. Email/Twitter on the go is just awesome. I could&#8217;ve never afforded an iPhone &#8211; Android is the PC of our times :)</p>
+
+<div id="_mcePaste" class="mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">
+  <span class="Apple-style-span" style="border-collapse: separate; color: #000000; font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;"><span class="Apple-style-span" style="color: #666666; font-family: Tahoma; font-size: 11px;"><span class="style19">Remarks :</span><span class="Apple-converted-space"> </span>CASH NOT REDAY<strong>ann</strong></span></span>
+</div>
+
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/moving-back-to-wordpress/">Moving back to WordPress</a></h2>
+    <p class="blog-post-meta"><time datetime="2011-06-06T18:21:40Z">Mon Jun 6, 2011</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/uncategorized" rel="category tag">Uncategorized</a>
+
+
+<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/code" rel="tag">code</a>, <a href="/tags/wordpress" rel="tag">wordpress</a>
+
+</p>
+  </header>
+  <p>A while back, I <a href="http://yuvi.in/blog/hello-world-again/">moved my blog</a> (from a wordpress install whose data I lost) to my own platform (<a href="http://github.com/yuvipanda/HiSlain">HiSlain</a>).</p>
+
+<p>After several close calls, I&#8217;m officially moving from HiSlain back to WordPress. I just don&#8217;t have enough time to maintain all the things I wanted in a blog platform in HiSlain, hence the move back. However, it satisfied it&#8217;s purpose &#8211; I learnt to write code I could use, others could use, and <a href="https://github.com/tamizhgeek/HiSlain">others could contribute to</a>. The <a href="http://yuvi.in/blog/oldindex.html">old blog</a> is still around (all permalinks would work) if you&#8217;re interested.</p>
+
+<p>It&#8217;s good to be back :)</p>
+
+<p>I miss writing posts in Vim though &#8211; expect to find/write a plugin that&#8217;ll let me blog/compose from Vim. Suggestions?</p>
+
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/webfaction-review/">Webfaction Review</a></h2>
+    <p class="blog-post-meta"><time datetime="2010-03-22T16:45:50Z">Mon Mar 22, 2010</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/uncategorized" rel="category tag">Uncategorized</a>
+
+
+</p>
+  </header>
+  <p>I&#8217;ve been running <a href="http://yuvi.in">yuvi.in</a> and <a href="http://busroutes.in">busroutes.in</a> on my [Webfaction][3] account for a while. I got the account for free &#8211; after Remi Delon from Webfaction noticed one of my tweets.</p>
+
+<p>Review: I&#8217;m going to save that when my free one year plan expires, I can <em>upgrade</em> to one of their better plans. It is <em>so</em> good :)</p>
+
+<p>Highly Reccomended!</p>
+
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/samsung-n210-review/">Samsung N210 Review</a></h2>
+    <p class="blog-post-meta"><time datetime="2010-03-12T20:41:32Z">Fri Mar 12, 2010</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/uncategorized" rel="category tag">Uncategorized</a>
+
+
+</p>
+  </header>
+  
+
+<p>I bought a brand new Samsung N210 Netbook about two weeks back &#8211; and have been using it almost non-stop since. I&#8217;ve been taking it to college every day, using it at every oportunity I get &#8211; on the college bus, on MTC buses, on the train, while waiting for the train, hell even <em>during</em> a rather very boring class!</p>
+
+<h3 id="the-great">The Great</h3>
+
+<ul>
+<li>The Screen! The <strong>matte</strong> screen is totally awesome. Viewable under all conditions &#8211; full on sunlight during a train commute or at a weird angle snuggled under the desk during class. It is sharp, and IMO has enough resolution (1024&#215;600). The bezel is small and not very distracting.</li>
+<li>The Keyboard. 94% of a full size keyboard, I&#8217;m told. It is extremely comfortable, and I don&#8217;t miss too many keys. I do find the right shift absolutely useless though. The chicklet keys look great too</li>
+<li>The Looks. One guy asked me if I was carrying a white MacBook.</li>
+</ul>
+
+<h3 id="the-good">The Good</h3>
+
+<ul>
+<li>The Touchpad. It is large and the mouse buttons are not bad. I don&#8217;t know if it supports two button finger scroll on Linux &#8211; but it does work on Windows. My hands do accidentally touch it often while typing, moving my cursor unexpectedly &#8211; but I have been able to stop that by using my right thumb for space instead of my left.</li>
+<li>The Battery. I seem to get around 8 hours of usage under varying circumstances and conditions &#8211; while nothing to laugh at, I was expecting more. Might be because I haven&#8217;t been able to figure out a way to turn off the wifi chip from Linux.</li>
+</ul>
+
+<h3 id="the-bad">The Bad</h3>
+
+<ul>
+<li>The Heat. The fan isn&#8217;t very noisy, but the heat buildup is appreciable. I can&#8217;t really work with it directly on my lap.</li>
+<li>The inbuilt webcam. 0.3 Megapixels. Bleh!</li>
+<li>WiFi. Drops <em>very</em> often, and not very sensitive. Ubuntu Autodetected it though.</li>
+<li>The SD Card Slot. It has a cover that comes right off, and I guarentee I&#8217;ll lose it in a while.</li>
+<li>Many of the Function Key functions aren&#8217;t supported on Linux. Was able to make the Brightness keys work after a hack though.</li>
+</ul>
+
+<h3 id="the-awful">The Awful</h3>
+
+<ul>
+<li>The ugly black sticker ad for <em>&#8220;Phoenix Hyperspace&trade; Instant-on&#8221;</em>. Ewww! Atleast there is only one big sticker spoiling this white beauty</li>
+</ul>
+
+<p>Was it worth the 20k bucks I paid for it? I&#8217;m typing out this blog post while waiting at my Doctor&#8217;s, so I&#8217;d say it <em>is</em> well worth the 20k bucks paid :)</p>
+
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/we-must-take-india-as-it-is-jules-verne/">“We must take [India] as it is” – Jules Verne</a></h2>
+    <p class="blog-post-meta"><time datetime="2010-03-11T22:20:39Z">Thu Mar 11, 2010</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/uncategorized" rel="category tag">Uncategorized</a>
+
+
+</p>
+  </header>
+  <p>I&#8217;ve gotten back to reading fiction ever since I got my netbook (review comin up!). <a href="http://gutenberg.org">Project Gutenberg</a> has been very helpful. Jules Verne&#8217;s <em>Adventures of a Special Correspondent</em> was the first one I completed. It is a good book &#8211; but not phenomenal. It does have a few very good moments, and one of them hit extremely close to home.</p>
+
+<p>Towards the end, when <em>Claudius Bombarnac</em> rumbles about how the Chinese do not make full use of the engine&#8217;s power &#8211; always keeping it running at 40 mph even though it could be pushed to do way more.</p>
+
+<blockquote>
+<p>&#8220;I agree with you, but where you have a railway you might as well get</p>
+
+<p>all the advantage out of it that you can.&#8221;</p>
+
+<p>&#8220;Bah!&#8221; said Pan-Chao carelessly.</p>
+
+<p>&#8220;Speed,&#8221; said I, &#8220;is a gain of time&#8211;and to gain time&#8211;&#8220;</p>
+
+<p>&#8220;Time does not exist in China, Monsieur Bombarnac, and it cannot exist</p>
+
+<p>for a population of four hundred millions. There would not be enough</p>
+
+<p>for everybody. And so we do not count by days and hours, but always by</p>
+
+<p>moons and watches.&#8221;</p>
+
+<p>&#8220;Which is more poetical than practical,&#8221; I remark.</p>
+
+<p>&#8220;Practical, Mr. Reporter? You Westerners are never without that word in</p>
+
+<p>your mouth. To be practical is to be the slave of time, work, money,</p>
+
+<p>business, the world, everybody else, and one&#8217;s self included. I confess</p>
+
+<p>that during my stay in Europe&#8211;you can ask Doctor Tio-King&#8211;I have not</p>
+
+<p>been very practical, and now I return to Asia I shall be less so. I</p>
+
+<p>shall let myself live, that is all, as the cloud floats in the breeze,</p>
+
+<p>the straw on the stream, as the thought is borne away by the imagination.&#8221;</p>
+
+<p>&#8220;I see,&#8221; said I, &#8220;we must take China as it is.&#8221;</p>
+</blockquote>
+
+<p>India too, as I see it from where I am, is pretty similar. Practacality can go shoot itself in the head.</p>
+
+<p>What do I gain by copying stuff from the board to the notebook? Nothing, but do it anyway because <em>that is how it has always been done</em>.</p>
+
+<p>Why should I go back 10 years by not using a mobile phone? Because we aren&#8217;t good enough to hold your attention long enough, so we are going to force you to not do anything else even if you are going to be bored to death (even if literally).</p>
+
+<p>Why should I use Turbo C, even though it is extremely antique and doesn&#8217;t really conform to any standards? Because that is what the people setting the syllabus learnt! (Nothing personal, TC.exe &#8211; just that I hope people stop believing Windows was written in Java/VB because <code>you can do GUIs only in those!</code>)</p>
+
+<p><em>Doesn&#8217;t matter if there is a better way, if it is not the way it is done. Conservatism. Bah</em></p>
+
+<p>I&#8217;m talking only from my point of view, from where I have been (apparently) hurt. I am sure this is not the only place &#8211; this happens everywhere. Anti-Change Conservatism. Which I am told, is not even the true meaning of the word <code>conservatism</code>. I hope someone sometimes explains to me what the word was supposed to mean, and how it came to represent parents who won&#8217;t let their kids out to have fun with their friends.</p>
+
+<p>Good news is, trains in China are no longer run at a max of 40 mph. Change does occur, but it takes time, and hurts those who live during it. We are those people. I hope.</p>
+
+</article> 
+
+
+
+
+
+<nav class="blog-pagination">
+  
+  
+  
+  <a class="btn btn-outline-primary disabled" href="#" role="button" aria-disabled="true">Previous page</a>
+  <a class="btn btn-outline-primary" href="/categories/uncategorized/page/2/" rel="next" role="button">Next page</a>
+  
 </nav>
 
-	<div class="profile">
-    <section id="wrapper">
-        <header id="header">
-            <a href='http://words.yuvi.in/about'>
-                <img id="avatar" class="2x" src="http://words.yuvi.in/images/avatar.jpg"/>
-            </a>
-            <h1>Yuvi Panda</h1>
-            
-        </header>
-    </section>
-</div>
-
-
-	<section id="wrapper" class="home">
-		
-		<div class="archive">
-			<h3>2015</h3>
-			<ul>
-					
-					<div class="post-item">
-						<div class="post-time">Dec 19</div>
-						<a href="http://words.yuvi.in/devlog-2015-dec-18/" class="post-link">
-							DevLog for 2015 Dec 18
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jul 4</div>
-						<a href="http://words.yuvi.in/global-merge-accounts-wikimedia/" class="post-link">
-							Global merge of accounts at Wikimedia
-						</a>
-					</div>
-					
-			</ul>
-		</div>
-		
-		<div class="archive">
-			<h3>2013</h3>
-			<ul>
-					
-					<div class="post-item">
-						<div class="post-time">Dec 30</div>
-						<a href="http://words.yuvi.in/terry-prachett-word-synergistically/" class="post-link">
-							Terry Prachett on the word ‘synergistically’
-						</a>
-					</div>
-					
-			</ul>
-		</div>
-		
-		<div class="archive">
-			<h3>2011</h3>
-			<ul>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 26</div>
-						<a href="http://words.yuvi.in/interview-sriram-krishnan-5-years-old/" class="post-link">
-							Interview with Sriram Krishnan (5 years old)
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jun 26</div>
-						<a href="http://words.yuvi.in/what-stop-child-athiest/" class="post-link">
-							“What is the best way to stop your child becoming an athiest?”
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jun 7</div>
-						<a href="http://words.yuvi.in/belated-samsung-galaxy-3-review/" class="post-link">
-							Belated Samsung Galaxy 3 Review
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jun 6</div>
-						<a href="http://words.yuvi.in/moving-back-to-wordpress/" class="post-link">
-							Moving back to WordPress
-						</a>
-					</div>
-					
-			</ul>
-		</div>
-		
-		<div class="archive">
-			<h3>2010</h3>
-			<ul>
-					
-					<div class="post-item">
-						<div class="post-time">Mar 22</div>
-						<a href="http://words.yuvi.in/webfaction-review/" class="post-link">
-							Webfaction Review
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Mar 12</div>
-						<a href="http://words.yuvi.in/samsung-n210-review/" class="post-link">
-							Samsung N210 Review
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Mar 11</div>
-						<a href="http://words.yuvi.in/we-must-take-india-as-it-is-jules-verne/" class="post-link">
-							“We must take [India] as it is” – Jules Verne
-						</a>
-					</div>
-					
-			</ul>
-		</div>
-		
-		<div class="archive">
-			<h3>2009</h3>
-			<ul>
-					
-					<div class="post-item">
-						<div class="post-time">Sep 7</div>
-						<a href="http://words.yuvi.in/icc-rules-for-backyard-cricket/" class="post-link">
-							ICC Rules for Backyard Cricket
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Aug 10</div>
-						<a href="http://words.yuvi.in/abigger-binary-heart/" class="post-link">
-							ABigger, binary heart
-						</a>
-					</div>
-					
-					<div class="post-item">
-						<div class="post-time">Jun 28</div>
-						<a href="http://words.yuvi.in/hello-world-again/" class="post-link">
-							Hello World, Again!
-						</a>
-					</div>
-					
-			</ul>
-		</div>
-		
-		<footer id="footer">
-    
-        <div id="social">
-
-	
-	
-    
-    <a class="symbol" href="yuvipanda">
-        github
-    </a>
-    
-    <a class="symbol" href="yuvipanda">
-        twitterbird
-    </a>
-    
-
-
-</div>
-
-    
-    <p class="small">
-    
-        CC0
-    
-    </p>
-    <p class="small">
-        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
-    </p>
-</footer>
-
-	</section>
-
-	<div class="dd">
-	</div>
-
-	<script src="http://words.yuvi.in/js/jquery-2.2.4.min.js"></script>
-<script src="http://words.yuvi.in/js/main.js"></script>
-<script src="http://words.yuvi.in/js/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 
 
 
+        </div> <!-- /.blog-main -->
+
+        <aside class="col-sm-3 ml-auto blog-sidebar">
+  
+  <section class="sidebar-module sidebar-module-inset">
+    <h4>About</h4>
+    <p><strong>Yuvi Panda</strong> is a 26 year old building infrastructure for reducing accidental complexities in solving problems with code.</p>
+  </section>
+  
+
+  
+        <section class="sidebar-module">
+    <h4>Recent Posts</h4>
+    <ol class="list-unstyled">
 
 
+<li><a href="/post/why-not-s2i/">Why repo2docker? Why not s2i?</a></li>
+
+<li><a href="/post/maintainerati-2017/">maintainerati 2017</a></li>
+
+<li><a href="/post/designing-data-intensive-applications/">designing data intensive applications</a></li>
+
+<li><a href="/post/think-os/">think os</a></li>
+
+<li><a href="/post/learning-selinux/">learning selinux and apparmor</a></li>
+
+    </ol>
+  </section>
+
+  
+
+  
+</aside>
 
 
-	</body>
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>
+      
+      CC0
+      
+      </p>
+      <p>
+      <a href="#">Back to top</a>
+      </p>
+    </footer>
+
+  </body>
+
 </html>
