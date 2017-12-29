@@ -1,0 +1,19 @@
+
+From [HN][1]:
+> From my experience, the largest hurdle first time programmers have is being able to execute programs in their head. *It takes a cognitive leap to go from the source code in front of them, and what happens at runtime*.
+
+*(emphasis mine)*
+
+I believe that if you have made that *cognitive leap*, you can call yourself a programmer. It means you've entered into the [second hump][2] - you are a programmer. One of us. Welcome :)
+
+This is also the reason why solving programming challenges at places like [InterviewStreet Challenges][4], [CodeChef][5], [TopCoder][6], [SPOJ][7], etc also increase your general programming skills - they require that you continuously run code in the interpreter in your head. Helps you train your [procedural memory][3]. Same reason why learning different language paradigms (OOP, Purely Functional, Procedural, etc) makes you a better programmer.
+
+Reminds me that I have four more chapters in SICP to finish and Clojure to learn :)
+
+[1]: http://news.ycombinator.com/item?id=2870176
+[2]: http://www.codinghorror.com/blog/2006/07/separating-programming-sheep-from-non-programming-goats.html
+[3]: http://en.wikipedia.org/wiki/Procedural_memory 
+[4]: http://interviewstreet.com/recruit/challenges
+[5]: http://codechef.com
+[6]: http://topcoder.com
+[7]: http://spoj.pl

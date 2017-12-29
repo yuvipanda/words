@@ -1,0 +1,9 @@
+
+I was debugging an issue [at work][1] today where a (generated) file refused to download in Chrome, but the same URL worked just fine with wget. I remember reading in the [HTTP Spec][2] that HTTP headers can only be lower ASCII, so when wget mangled the output file's name, the problem was obvious - the file name contained a character that wasn't in lower ASCII (an accented A). Chrome had borked on encountering it, while wget soldiered on. Using `iconv` to strip non-ASCII characters in the file name on the server side fixed the issue.
+
+Moral of the story? Read the RFCs! The [HTTP one][4], in particular, is remarkably readable and you *should* read it if you're doing non-trivial Web Development.
+
+[1]: http://interviewstreet.com 
+[2]: http://www.w3.org/Protocols/rfc2616/rfc2616-sec2.html#sec2.2
+[3]: http://en.wikipedia.org/wiki/Iconv
+[4]: http://www.w3.org/Protocols/rfc2616/rfc2616.html

@@ -1,0 +1,47 @@
+
+I [moved][1] from emacs to vim a while ago, and have been steadily accumulating a series of plugins in my `.vim`. They're all up in my rather messy [dotfiles repo][2]. Here's a slightly more neatly organized list of the plugins I currently use:
+
+1. [command-t][ct] - File opener and buffer switcher. In-fuckin-credibly useful.
+2. [vimpress][vp] - What I use to blog since [moving to wordpress][mtwp].
+3. [matchit][mit] - Lets `%` work with html tags
+4. <s>[commentary][ctry] - Generic commenting and uncommenting script</s> [NERDCommenter][nerdcommenter] has replaced commentary due to being more flexible and having more options.
+5. [fugitive][fgtive] - Incredibly awesome git wrapper for vim. I rarely go to the commandline for git these days
+6. [tagbar][tagbar] - Useful code-exploratory plugin when I'm looking around a codebase trying to familiarize myself.
+7. [supertab][supertab] - Buffer completion in insert mode only when I need it.
+8. [gist][gist] - Put stuff up in gist to pass it around
+9. [BufClose][bc] - So I can close a buffer without messing up my splits
+10. [extradite][extradite] - `:Glog` replacement that builds on top of fugitive. I don't understand why this isn't bundled with fugitive
+11. [TwitVim][twitvim] - Yes, so I don't have to go to the browser (and be consumed by chat/reddit/hn) just to post a tweet.
+12. [ack.vim][ackvim] - Ack integration for vim. Do yourself a favor and use [ack][ack] instead of grep.
+13. [Syntastic][syntastic] - Automatic syntax checking so that I don't miss a semicolon and not know about it
+14. [php-doc][php-doc] - Insert boilerplate PHP doc compatible strings in my PHP files whenever I want to. Very PHP specific, need to find something that works across languages. (Note: This plugin has quite some identity crisis. It's named PDV but it's filename is php-doc. Since php-doc is more descriptive, I'm using that)
+15. [delimitMate][delimit] - Automatically closes quotes, parens, braces, etc for you. I initially thought this would be super annoying, but in fact it is rather very pleasant.
+
+<s>I'm also on the default `desert` color theme - haven't found anything better. Suggestions welcome - both for the color scheme and for new/replacement plugins.</s> After trying out [wombat][wombat] and [jellybeans][jellybeans] color schemes, I have settled on wombat for now. 
+
+Suggestions for more plugins still welcome :)
+
+<s>This is the list as of 24 Aug 2011.</s> <s>Updated as of September 2 2011 (added 10, 11, 12 since last update).</s> <s>Updated as of September 5 2011 (changed 4, added colorscheme change).</s> Updated as of September 12 2011 (added 13, 14, 15). I am moving quite fast, am I not? Will keep this post updated as and when things change.
+
+[1]: http://yuvi.in/blog/moving-to-vim-from-emacs.html
+[2]: http://github.com/yuvipanda/dotfiles
+[mtwp]: http://yuvi.in/blog/moving-back-to-wordpress/
+[ct]: http://www.vim.org/scripts/script.php?script_id=3025
+[vp]: http://www.vim.org/scripts/script.php?script_id=1953
+[mit]: http://www.vim.org/scripts/script.php?script_id=39
+[ctry]: http://www.vim.org/scripts/script.php?script_id=3695
+[nerdcommenter]: http://www.vim.org/scripts/script.php?script_id=1218
+[fgtive]: http://www.vim.org/scripts/script.php?script_id=2975
+[tagbar]: http://www.vim.org/scripts/script.php?script_id=3465
+[supertab]: http://www.vim.org/scripts/script.php?script_id=1643
+[gist]: http://www.vim.org/scripts/script.php?script_id=2423
+[bc]:  http://www.vim.org/scripts/script.php?script_id=559
+[extradite]: http://www.vim.org/scripts/script.php?script_id=3509
+[twitvim]: http://www.vim.org/scripts/script.php?script_id=2204
+[ackvim]: http://www.vim.org/scripts/script.php?script_id=2572
+[ack]: http://betterthangrep.com
+[jellybeans]: http://www.vim.org/scripts/script.php?script_id=2555
+[wombat]: http://www.vim.org/scripts/script.php?script_id=1778
+[syntastic]: http://www.vim.org/scripts/script.php?script_id=2736  
+[php-doc]: http://www.vim.org/scripts/script.php?script_id=1355
+[delimit]: http://www.vim.org/scripts/script.php?script_id=2754  
