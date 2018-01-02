@@ -12,7 +12,7 @@
 
 
 
-<meta property="og:updated_time" content="2015-12-21T17:09:40&#43;00:00"/>
+<meta property="og:updated_time" content="2015-12-30T23:40:38&#43;00:00"/>
 
 
 
@@ -39,8 +39,8 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2015-12-21T17:09:40&#43;00:00",
-  "keywords": "books,class-notes,code,devlog,education,events,links,lol-culture,papers,personal,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
+  "dateModified": "2015-12-30T23:40:38&#43;00:00",
+  "keywords": "books,class-notes,code,devlog,education,events,links,lol-culture,papers,personal,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
 </script>
@@ -88,6 +88,36 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-21-30-dec-2015/">DevLog for 21-30 Dec 2015</a></h2>
+    <p class="blog-post-meta"><time datetime="2015-12-30T23:40:38Z">Wed Dec 30, 2015</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
+
+
+</p>
+  </header>
+  <p>Clearly I missed an entire week. I need to build a better system to make this easier&#8230;</p>
+
+<p>Random notes.</p>
+
+<ul>
+<li>Kicked out NFS from the Tool Labs proxies (with <a href="https://gerrit.wikimedia.org/r/#/c/260424/">1</a>). Yay! This hopefully explains the lockup of tools-proxy-01 yesterday night, maybe? It&#8217;s been restarted since, and I hope to no longer have instances randomly locoking on me. Infrastructure standards of 2009, here we come! :D I&#8217;ve also removed NFS from tools-redis, and migrated them to Jessie as well.</li>
+<li>Fixed up all the races in how kubernetes workers are setup with <a href="https://gerrit.wikimedia.org/r/#/c/260501/">2</a></li>
+<li>Another instance is &#8216;stuck&#8217; again. Sigh. AAAAAAAAAAAAAAAAAAAAAAAAA. Paravoid helped debug this, tracking it down to NFS client issues in the 4.2 kernel (See <a href="https://phabricator.wikimedia.org/T121998">phab</a>). I moved k8s nodes back to a working 3.19 kernel (after filing <a href="https://phabricator.wikimedia.org/T122284">issue</a> about the other 3.19 kernel package I tried that didn&#8217;t work).</li>
+<li>Moved the tools proxies to 4.2 (lol?) after finding out huge ksoftirqd spikes in them. Let&#8217;s see if that improves things</li>
+<li>I split up the individual components of PAWS, and have a working <a href="https://github.com/yuvipanda/nbserve">nbserve</a> in there now! Exciting times. Need to fixup nbserve to use traitlets for config</li>
+<li>Big Tool Labs outage (again!). Some tool accidentally sent about 12million job requests and crashed gridengine&#8217;s underlying backing store (<a href="https://en.wikipedia.org/wiki/Berkeley_DB">BerkeleyDB</a>). Reset to a clean slate after many hours (Thanks Coren!) and mostly things are back up now. I&#8217;m reading through the Berkeley DB <a href="https://web.stanford.edu/class/cs276a/projects/docs/berkeleydb/">reference manual</a> now.</li>
+<li>Persistance failed for ores&#8217;s redises again, mostly because <code>vm_overcommit</code> was turned off. Fixed in the core redis module so it does not happen again.</li>
+</ul>
+
+</article> 
 
 
 
@@ -356,31 +386,6 @@
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-jan-2-2015/">DevLog for Jan 2, 2015</a></h2>
-    <p class="blog-post-meta"><time datetime="2015-01-02T21:16:09Z">Fri Jan 2, 2015</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
-
-
-</p>
-  </header>
-  <p>Woohoo, 2015! :) Let&#8217;s see if I can keep this going this time :)</p>
-
-<ul>
-<li>Have started taking weekends slightly more seriously. My brain feels less overwhelmed after that. Should take weekends even more seriously going forward.</li>
-<li>Merged <code>labsdb-auditor</code> <a href="https://gerrit.wikimedia.org/r/#/c/182164/">rewrite patch</a>. Code clean enough for my tastes now, although not documented enough. Lots of back and forth CR with valhallasw was really nice &#8211; it&#8217;s something I&#8217;ve been missing for the past few months. Debating over style and cleanliness was also interesting. Felt like I had been taking code cleanliness and proper design not as seriously as I should have, and this is now time to change that. Also spent time consciously thinking about the commit message I was writing, and shall continue doing that. I think I&#8217;ve taken a few things for granted wrt code quality and design, and should be more careful. And learnt a few more tricks about decorators (haven&#8217;t built decorators that are parameterized before).</li>
-<li>Read a few chapters of <a href="http://book.realworldhaskell.org/">Real World Haskell</a>. Quite nice, although the syntax feels a bit too dense for my tastes. Still should maybe write things with <a href="http://www.call-cc.org/">ChickenScheme</a> instead :)</li>
-<li>Continuing re-reading Coders at Work, which continues to be a thought provoking, wonderful book.</li>
-</ul>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/page/2/" rel="prev" role="button">Previous page</a>
@@ -431,6 +436,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/2017/">2017</a></li>
+
 <li><a href="/post/why-not-s2i/">Why repo2docker? Why not s2i?</a></li>
 
 <li><a href="/post/maintainerati-2017/">maintainerati 2017</a></li>
@@ -438,8 +445,6 @@
 <li><a href="/post/designing-data-intensive-applications/">designing data intensive applications</a></li>
 
 <li><a href="/post/think-os/">think os</a></li>
-
-<li><a href="/post/learning-selinux/">learning selinux and apparmor</a></li>
 
     </ol>
   </section>

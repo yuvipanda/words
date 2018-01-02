@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>CC0</copyright>
-    <lastBuildDate>Sun, 03 Dec 2017 01:23:54 -0800</lastBuildDate>
+    <lastBuildDate>Fri, 29 Dec 2017 16:29:00 -0800</lastBuildDate>
     
 	<atom:link href="http://words.yuvi.in/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2017</title>
+      <link>http://words.yuvi.in/post/2017/</link>
+      <pubDate>Fri, 29 Dec 2017 16:29:00 -0800</pubDate>
+      
+      <guid>http://words.yuvi.in/post/2017/</guid>
+      <description>I haven&amp;rsquo;t done a &amp;lsquo;year in retrospective&amp;rsquo; publicly for a long time, but after reading Alice Goldfuss&amp;rsquo; 2017 year in review decided to do one for me too!
+This is a very filtered view - there are lots of important people &amp;amp; events in 2017 that are not contained here, and that is ok.
+Professional  New Job  I finished around 6-ish years at the Wikimedia Foundation, and joined UC Berkeley&amp;rsquo;s Data Science Division early in the year.</description>
+    </item>
     
     <item>
       <title>Why repo2docker? Why not s2i?</title>

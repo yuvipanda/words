@@ -12,7 +12,7 @@
 
 
 
-<meta property="og:updated_time" content="2013-12-03T21:00:36&#43;00:00"/>
+<meta property="og:updated_time" content="2013-12-13T17:58:15&#43;00:00"/>
 
 
 
@@ -39,8 +39,8 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2013-12-03T21:00:36&#43;00:00",
-  "keywords": "books,class-notes,code,devlog,education,events,links,lol-culture,papers,personal,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
+  "dateModified": "2013-12-13T17:58:15&#43;00:00",
+  "keywords": "books,class-notes,code,devlog,education,events,links,lol-culture,papers,personal,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
 </script>
@@ -88,6 +88,34 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/php-insane-part-5832/">PHP being insane, part 5832</a></h2>
+    <p class="blog-post-meta"><time datetime="2013-12-13T17:58:15Z">Fri Dec 13, 2013</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>, <a href="/categories/wiki" rel="category tag">wiki</a>
+
+
+</p>
+  </header>
+  <p>Somehow: <code>( $a &amp;&amp; $b ) || ( $b &amp;&amp; $c ) || ( $a &amp;&amp; $c )</code></p>
+
+<p>Became: <code>$a ? ( $b || $c ) : ( $b &amp;&amp; $c )</code></p>
+
+<p>Became: <code>count( array_filter( array( $a, $b, $c ) ) ) &gt;= 2</code></p>
+
+<p>Became: <code>&quot;$a$b$c&quot; &gt; 1</code></p>
+
+<p>God dammit PHP&#8230;</p>
+
+<p>(from discussion among me, ^d, ori-l, bd808 and anomie on <code>#mediawiki-core</code> about how to represent &#8216;if at least 2 of three conditions are true&#8217;)</p>
+
+</article> 
 
 
 
@@ -307,32 +335,6 @@
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/disconnecting-for-real/">Disconnecting, for real</a></h2>
-    <p class="blog-post-meta"><time datetime="2013-08-24T15:56:55Z">Sat Aug 24, 2013</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/personal" rel="category tag">personal</a>
-
-
-</p>
-  </header>
-  <p>I&rsquo;ve been on the Internet since I was 14. And I don&rsquo;t remember a time when I did not have a computer &#8211; I think I got mine when I was 10. Growing up, writing code has always been a major part of me &#8211; my identity. I&rsquo;ve never quite managed to separate &lsquo;me&rsquo; from &lsquo;my code&rsquo; &#8211; despite mouthing off the soundbite &lsquo;You are not your code!&rsquo; to plenty of people.</p>
-
-<p>After Wikimania 2013, I spent a week in Hong Kong. The first few days were rough, but after that &#8211; it was amazing. For the first time I could imagine, I had completely managed to not think about code at all! I had my laptop locked in a locker somewhere, and didn&rsquo;t even bother getting to it. I didn&rsquo;t feel the burning urge to make a commit. The feeling of guilt that keeps gnawing at you from the back of the head &lsquo;teehee you have been so unproductive today!&rsquo;.</p>
-
-<p>That was a rather great feeling. Put things into a little bit more perspective. A step towards separating my identity from my code. I gave up on my GitHub streaks after that. I&rsquo;ll probably also be less of a codeaholic.</p>
-
-<p>I could write about &lsquo;oh my god, this was amazing!&rsquo; and detail where I travelled in Hong Kong, but I think what was far more fascinating was <em>how</em>. I did not feel in a hurry. Did not feel like having to &lsquo;tick all boxes&rsquo; before leaving. Just&#8230; actually relaxing. And doing whatever.</p>
-
-<p>Vacations are good :)</p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/page/6/" rel="prev" role="button">Previous page</a>
@@ -383,6 +385,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/2017/">2017</a></li>
+
 <li><a href="/post/why-not-s2i/">Why repo2docker? Why not s2i?</a></li>
 
 <li><a href="/post/maintainerati-2017/">maintainerati 2017</a></li>
@@ -390,8 +394,6 @@
 <li><a href="/post/designing-data-intensive-applications/">designing data intensive applications</a></li>
 
 <li><a href="/post/think-os/">think os</a></li>
-
-<li><a href="/post/learning-selinux/">learning selinux and apparmor</a></li>
 
     </ol>
   </section>

@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://words.yuvi.in/post/2017/</loc>
+    <lastmod>2017-12-29T16:29:00-08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/post/why-not-s2i/</loc>
     <lastmod>2017-12-03T01:23:54-08:00</lastmod>
   </url>
@@ -1257,14 +1262,14 @@
   </url>
   
   <url>
-    <loc>http://words.yuvi.in/categories/code/</loc>
-    <lastmod>2016-03-28T05:29:05+00:00</lastmod>
+    <loc>http://words.yuvi.in/tags/code/</loc>
+    <lastmod>2017-12-03T01:23:54-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://words.yuvi.in/tags/code/</loc>
-    <lastmod>2017-12-03T01:23:54-08:00</lastmod>
+    <loc>http://words.yuvi.in/categories/code/</loc>
+    <lastmod>2016-03-28T05:29:05+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1281,14 +1286,14 @@
   </url>
   
   <url>
-    <loc>http://words.yuvi.in/categories/devlog/</loc>
-    <lastmod>2015-12-30T23:40:38+00:00</lastmod>
+    <loc>http://words.yuvi.in/tags/devlog/</loc>
+    <lastmod>2011-12-05T20:31:14+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://words.yuvi.in/tags/devlog/</loc>
-    <lastmod>2011-12-05T20:31:14+00:00</lastmod>
+    <loc>http://words.yuvi.in/categories/devlog/</loc>
+    <lastmod>2015-12-30T23:40:38+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1299,14 +1304,14 @@
   </url>
   
   <url>
-    <loc>http://words.yuvi.in/categories/education/</loc>
-    <lastmod>2013-04-02T19:56:43+00:00</lastmod>
+    <loc>http://words.yuvi.in/tags/education/</loc>
+    <lastmod>2011-12-06T09:37:13+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://words.yuvi.in/tags/education/</loc>
-    <lastmod>2011-12-06T09:37:13+00:00</lastmod>
+    <loc>http://words.yuvi.in/categories/education/</loc>
+    <lastmod>2013-04-02T19:56:43+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1413,14 +1418,14 @@
   </url>
   
   <url>
-    <loc>http://words.yuvi.in/categories/personal/</loc>
-    <lastmod>2015-07-26T00:13:29+00:00</lastmod>
+    <loc>http://words.yuvi.in/tags/personal/</loc>
+    <lastmod>2017-02-03T22:37:21-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://words.yuvi.in/tags/personal/</loc>
-    <lastmod>2017-02-03T22:37:21-08:00</lastmod>
+    <loc>http://words.yuvi.in/categories/personal/</loc>
+    <lastmod>2017-12-29T16:29:00-08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1444,7 +1449,7 @@
   
   <url>
     <loc>http://words.yuvi.in/post/</loc>
-    <lastmod>2017-12-03T01:23:54-08:00</lastmod>
+    <lastmod>2017-12-29T16:29:00-08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1475,6 +1480,12 @@
   <url>
     <loc>http://words.yuvi.in/tags/resistance/</loc>
     <lastmod>2017-02-03T22:37:21-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/categories/retrospective/</loc>
+    <lastmod>2017-12-29T16:29:00-08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1576,7 +1587,7 @@
   
   <url>
     <loc>http://words.yuvi.in/</loc>
-    <lastmod>2017-12-03T01:23:54-08:00</lastmod>
+    <lastmod>2017-12-29T16:29:00-08:00</lastmod>
     <priority>0</priority>
   </url>
   

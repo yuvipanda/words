@@ -12,7 +12,7 @@
 
 
 
-<meta property="og:updated_time" content="2017-03-26T23:46:17-07:00"/>
+<meta property="og:updated_time" content="2017-03-29T15:27:57-07:00"/>
 
 
 
@@ -39,8 +39,8 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2017-03-26T23:46:17-07:00",
-  "keywords": "books,class-notes,code,devlog,education,events,links,lol-culture,papers,personal,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
+  "dateModified": "2017-03-29T15:27:57-07:00",
+  "keywords": "books,class-notes,code,devlog,education,events,links,lol-culture,papers,personal,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
 </script>
@@ -88,6 +88,52 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/things-to-learn/">things to learn</a></h2>
+    <p class="blog-post-meta"><time datetime="2017-03-29T15:27:57-07:00">Wed Mar 29, 2017</time> by  in 
+
+<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/learning" rel="tag">learning</a>
+
+</p>
+  </header>
+  <p>Keeping a running list of things I want to learn!</p>
+
+<p>There&rsquo;s also a list of <a href="http://words.yuvi.in/post/things-to-learn/">things I want to build</a>.</p>
+
+<ul>
+<li>How to use org mode properly? Should I use it for notes over markdown?</li>
+<li>Develop a deep understanding of how networks work.</li>
+<li>How do linux network namespaces work?</li>
+<li>How to run GUI apps with systemd?
+
+<ul>
+<li>I did learn! Both a <a href="http://words.yuvi.in/post/systemd-gui-applications/">hacky version</a> and a <a href="http://words.yuvi.in/post/systemd-simple-containment/">much better version</a> that also taught me some Go!</li>
+</ul></li>
+<li>What exactly is a &lsquo;tty&rsquo;?</li>
+<li>How does HTTP2 actually work?</li>
+<li>How do X509 / TLS certificates work?</li>
+<li>How to use cgroups directly?</li>
+<li>Can I just use emacs terminals for all my terminal needs?</li>
+<li>How does NFS work, and why is it so crappy?</li>
+<li>How does ssh work?</li>
+<li>How does mosh work?</li>
+<li>How do contact lenses work? HOW DO LENSES WORK?</li>
+<li>Can I simply run a local DNS recursor on my laptop for performance &amp; blocking me from visiting the orange website?</li>
+<li>What is SELinux? Why and how would I use it?</li>
+<li>What is AppArmor? Why and how would I use it, over SELinux?</li>
+<li>What is seccomp, and when/why/how would I use it?</li>
+</ul>
+
+<p>If you know of resources that&rsquo;ll help me learn these things, do let me know!</p>
+
+</article> 
 
 
 
@@ -417,36 +463,6 @@
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-21-30-dec-2015/">DevLog for 21-30 Dec 2015</a></h2>
-    <p class="blog-post-meta"><time datetime="2015-12-30T23:40:38Z">Wed Dec 30, 2015</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
-
-
-</p>
-  </header>
-  <p>Clearly I missed an entire week. I need to build a better system to make this easier&#8230;</p>
-
-<p>Random notes.</p>
-
-<ul>
-<li>Kicked out NFS from the Tool Labs proxies (with <a href="https://gerrit.wikimedia.org/r/#/c/260424/">1</a>). Yay! This hopefully explains the lockup of tools-proxy-01 yesterday night, maybe? It&#8217;s been restarted since, and I hope to no longer have instances randomly locoking on me. Infrastructure standards of 2009, here we come! :D I&#8217;ve also removed NFS from tools-redis, and migrated them to Jessie as well.</li>
-<li>Fixed up all the races in how kubernetes workers are setup with <a href="https://gerrit.wikimedia.org/r/#/c/260501/">2</a></li>
-<li>Another instance is &#8216;stuck&#8217; again. Sigh. AAAAAAAAAAAAAAAAAAAAAAAAA. Paravoid helped debug this, tracking it down to NFS client issues in the 4.2 kernel (See <a href="https://phabricator.wikimedia.org/T121998">phab</a>). I moved k8s nodes back to a working 3.19 kernel (after filing <a href="https://phabricator.wikimedia.org/T122284">issue</a> about the other 3.19 kernel package I tried that didn&#8217;t work).</li>
-<li>Moved the tools proxies to 4.2 (lol?) after finding out huge ksoftirqd spikes in them. Let&#8217;s see if that improves things</li>
-<li>I split up the individual components of PAWS, and have a working <a href="https://github.com/yuvipanda/nbserve">nbserve</a> in there now! Exciting times. Need to fixup nbserve to use traitlets for config</li>
-<li>Big Tool Labs outage (again!). Some tool accidentally sent about 12million job requests and crashed gridengine&#8217;s underlying backing store (<a href="https://en.wikipedia.org/wiki/Berkeley_DB">BerkeleyDB</a>). Reset to a clean slate after many hours (Thanks Coren!) and mostly things are back up now. I&#8217;m reading through the Berkeley DB <a href="https://web.stanford.edu/class/cs276a/projects/docs/berkeleydb/">reference manual</a> now.</li>
-<li>Persistance failed for ores&#8217;s redises again, mostly because <code>vm_overcommit</code> was turned off. Fixed in the core redis module so it does not happen again.</li>
-</ul>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/" rel="prev" role="button">Previous page</a>
@@ -497,6 +513,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/2017/">2017</a></li>
+
 <li><a href="/post/why-not-s2i/">Why repo2docker? Why not s2i?</a></li>
 
 <li><a href="/post/maintainerati-2017/">maintainerati 2017</a></li>
@@ -504,8 +522,6 @@
 <li><a href="/post/designing-data-intensive-applications/">designing data intensive applications</a></li>
 
 <li><a href="/post/think-os/">think os</a></li>
-
-<li><a href="/post/learning-selinux/">learning selinux and apparmor</a></li>
 
     </ol>
   </section>
