@@ -12,7 +12,7 @@
 
 
 
-<meta property="og:updated_time" content="2010-06-20T04:24:14&#43;00:00"/>
+<meta property="og:updated_time" content="2010-07-01T02:35:58&#43;00:00"/>
 
 
 
@@ -39,8 +39,8 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2010-06-20T04:24:14&#43;00:00",
-  "keywords": "books,class-notes,code,devlog,education,events,links,lol-culture,papers,personal,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
+  "dateModified": "2010-07-01T02:35:58&#43;00:00",
+  "keywords": "books,class-notes,code,devlog,education,events,kubernetes,links,lol-culture,papers,personal,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
 </script>
@@ -88,6 +88,45 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/cheese-gsoc-report-week-5/">Cheese GSoC Report – Week 5</a></h2>
+    <p class="blog-post-meta"><time datetime="2010-07-01T02:35:58Z">Thu Jul 1, 2010</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>
+
+
+</p>
+  </header>
+  <p>Late report. But I did get quite a bit done!</p>
+
+<p>Last week&#8230;</p>
+
+<ol>
+<li>Video Effects file format reader</li>
+<li>Live Preview of Effects! (YAY!)</li>
+<li>Effect files added</li>
+</ol>
+
+<p>Live Preview took most of my time. We bought down CPU usage from ~90% to a more manageable ~50%. Cleaned up code a bit (still needs more cleanup). It is rather very &#8216;demoable&#8217;, provided you gloss over the slowdowns.</p>
+
+<p>Coming up next week would be&#8230;</p>
+
+<ol>
+<li>Even less CPU Usage! We&#8217;re now even with current Cheese (which does not give you live previews). I want to bring this down even more.</li>
+<li>Reduced latency for switching operations. Moving between effects/screens now has more than a second of latency. I should reduce this to much lesser than a second.</li>
+<li>Code cleanup. Some of the C code is a mess &#8211; needs to be cleaned up much.</li>
+<li>Error fixing. You can now crash it by looking at it at a 58 degree angle, during new moon days. Bugs like these will be fixed.</li>
+</ol>
+
+<p>Cya in a week, with a very-usable Cheese! I&#8217;ll post a screencast as soon as I&#8217;ve made Cheese a bit more sexy :)</p>
+
+</article> 
 
 
 
@@ -431,40 +470,6 @@
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/hacking-more/">Hacking more!</a></h2>
-    <p class="blog-post-meta"><time datetime="2010-04-21T20:08:24Z">Wed Apr 21, 2010</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>
-
-
-</p>
-  </header>
-  <p>Quoting from <a href="http://en.wikipedia.org/wiki/Steven_Levy">Steven Levy</a>&#8216;s <a href="http://www.gutenberg.org/etext/729">Hackers</a>:</p>
-
-<blockquote>
-<p>[..] a project undertaken or a product built not solely to fulfill</p>
-
-<p>some constructive goal, but with some wild pleasure taken in mere</p>
-
-<p>involvement, was called a &#8220;hack.&#8221;</p>
-</blockquote>
-
-<p>Building things for the fun of building them is hacking. And <a href="http://db.glug-bom.org/lug-authors/philip/docs/hackers-not-crackers.html">hacking is not illegally breaking into computers</a>.</p>
-
-<p>I like hacking. I want to be a real hacker. I can&#8217;t call myself one yet.</p>
-
-<p>I&#8217;m putting this up as a reminder to myself &#8211; about what is important and what isn&#8217;t. Here is to hoping I remember to say <em>No</em> more often. Here is to hoping that the next time I&#8217;m bored, I write something rather than idle on IRC. GSoC (a bigger post about it coming up) is helping &#8211; a lot.</p>
-
-<p>I&#8217;ll do a monthly &#8216;things I&#8217;ve hacked on&#8217; post, and see how many things turn up on that :)</p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/categories/code/page/5/" rel="prev" role="button">Previous page</a>
@@ -515,6 +520,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/kubectl-rbac/">Kubectl verbose logging tricks</a></li>
+
 <li><a href="/post/2017/">2017</a></li>
 
 <li><a href="/post/why-not-s2i/">Why repo2docker? Why not s2i?</a></li>
@@ -522,8 +529,6 @@
 <li><a href="/post/maintainerati-2017/">maintainerati 2017</a></li>
 
 <li><a href="/post/designing-data-intensive-applications/">designing data intensive applications</a></li>
-
-<li><a href="/post/think-os/">think os</a></li>
 
     </ol>
   </section>

@@ -33,7 +33,7 @@
     <item>
       <title>Code</title>
       <link>http://words.yuvi.in/categories/code/</link>
-      <pubDate>Mon, 28 Mar 2016 05:29:05 +0000</pubDate>
+      <pubDate>Thu, 11 Jan 2018 15:15:58 -0800</pubDate>
       
       <guid>http://words.yuvi.in/categories/code/</guid>
       <description></description>
@@ -63,6 +63,15 @@
       <pubDate>Sun, 10 Apr 2011 23:02:48 +0000</pubDate>
       
       <guid>http://words.yuvi.in/categories/events/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>http://words.yuvi.in/categories/kubernetes/</link>
+      <pubDate>Thu, 11 Jan 2018 15:15:58 -0800</pubDate>
+      
+      <guid>http://words.yuvi.in/categories/kubernetes/</guid>
       <description></description>
     </item>
     

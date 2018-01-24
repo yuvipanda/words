@@ -12,7 +12,7 @@
 
 
 
-<meta property="og:updated_time" content="2017-12-29T16:29:00-08:00"/>
+<meta property="og:updated_time" content="2018-01-11T15:15:58-08:00"/>
 
 
 
@@ -39,8 +39,8 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2017-12-29T16:29:00-08:00",
-  "keywords": "books,class-notes,code,devlog,education,events,links,lol-culture,papers,personal,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
+  "dateModified": "2018-01-11T15:15:58-08:00",
+  "keywords": "books,class-notes,code,devlog,education,events,kubernetes,links,lol-culture,papers,personal,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
 </script>
@@ -88,6 +88,78 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/kubectl-rbac/">Kubectl verbose logging tricks</a></h2>
+    <p class="blog-post-meta"><time datetime="2018-01-11T15:15:58-08:00">Thu Jan 11, 2018</time> by  in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/kubernetes" rel="category tag">kubernetes</a>, <a href="/categories/code" rel="category tag">code</a>
+
+
+</p>
+  </header>
+  <p>Recently I had to write some code that had to call the kubernetes API directly,
+without any language wrappers. While there is pretty good <a href="https://kubernetes.io/docs/reference/">reference docs</a>,
+I didn&rsquo;t want to go and construct all the JSON manually in my programming language.</p>
+
+<p>I discovered that <code>kubectl</code>&rsquo;s <code>-v</code> parameter is very useful for this! With this,
+I can do the following:</p>
+
+<ol>
+<li>Perform the actions I need to perform with just <code>kubectl</code> commands</li>
+<li>Pass <code>-v=8</code> to kubectl when doing this, and this will print all the HTTP traffic
+(requests and responses!) in an easy to read way</li>
+<li>Copy paste the JSON requests and template them as needed!</li>
+</ol>
+
+<p>This was very useful! The fact you can see the response bodies is also nice,
+since it gives you a good intuition of how to handle this in your own code.</p>
+
+<p>If you&rsquo;re shelling out to <code>kubectl</code> directly in your code (for some reason!),
+you can also use this to figure out all the RBAC rules your code would need. For
+example, if I&rsquo;m going to run the following in my script:</p>
+
+<pre><code class="language-bash">kubectl get node
+</code></pre>
+
+<p>and need to figure out which RBAC rules are needed for this, I can run:</p>
+
+<pre><code class="language-bash">kubectl -v=8 get node 2&gt;&amp;1 | grep -P 'GET|POST|DELETE|PATCH|PUT'
+</code></pre>
+
+<p>This should list all the API requests the code is making, making it easier
+to figure out what rules are needed.</p>
+
+<p>Note that you might have to <code>rm -rf ~/.kube/cache</code> to &lsquo;really&rsquo; get the
+full API requests list, since <code>kubectl</code> caches a bunch of API autodiscovery.
+The minimum RBAC for kubectl is:</p>
+
+<pre><code class="language-yaml">kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: kubectl-minimum
+rules:
+- nonResourceURLs: [&quot;/api&quot;, &quot;/apis/*&quot;]
+  verbs: [&quot;get&quot;]
+</code></pre>
+
+<p>You will need to add additional rules for the specific commands you
+want to execute.</p>
+
+<p><strong>More Kubectl Tips</strong></p>
+
+<ol>
+<li><a href="https://schd.ws/hosted_files/kccncna17/de/Stupid%20Kubectl%20Tricks.pdf">Slides from the &lsquo;Stupid Kubectl Tricks&rsquo; KubeCon talk</a></li>
+<li><a href="https://coreos.com/blog/kubectl-tips-and-tricks">On the CoreOS blog</a></li>
+<li><a href="https://kubernetes.io/docs/reference/kubectl/cheatsheet/">Terse but useful official documentation</a></li>
+</ol>
+
+</article> 
 
 
 
@@ -838,94 +910,6 @@ Written for pedagogy and personal understanding rather than production use.</p><
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/systemd-gui-applications/">systemd gui applications</a></h2>
-    <p class="blog-post-meta"><time datetime="2017-03-29T20:47:10-07:00">Wed Mar 29, 2017</time> by  in 
-
-<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/systemd" rel="tag">systemd</a>, <a href="/tags/learning" rel="tag">learning</a>, <a href="/tags/code" rel="tag">code</a>
-
-</p>
-  </header>
-  
-
-<p><strong>Update</strong>: There&rsquo;s a <a href="//words.yuvi.in/post/systemd-simple-containment/">follow-up post</a> with a simpler solution now.</p>
-
-<p>Ever since I read <a href="https://blog.jessfraz.com">Jessie Frazelle</a>&rsquo;s amazing setup (<a href="https://blog.jessfraz.com/post/ultimate-linux-on-the-desktop/">1</a>, <a href="https://blog.jessfraz.com/post/docker-containers-on-the-desktop/">2</a>, <a href="https://blog.jessfraz.com/post/runc-containers-on-the-desktop/">3</a>) for running GUI applications in docker containers, I&rsquo;ve wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&rsquo;m also not as awesome (or knowledgeable!) as Jess, so will have to naturally settle for less&hellip;</p>
-
-<p>So I am doing it in systemd!</p>
-
-<p>Before proceeding, I want to warn y&rsquo;all that I don&rsquo;t entirely know what I am doing. Don&rsquo;t take any of this as security advice, since I don&rsquo;t entirely understand X&rsquo;s security model. Works fine for me though!</p>
-
-<h2 id="gui-applications">GUI applications</h2>
-
-<p>I started out using a simple systemd <a href="https://fedoramagazine.org/systemd-template-unit-files/">templated service</a> to launch GUI applications, but soon realized that <a href="https://www.freedesktop.org/software/systemd/man/systemd-run.html">systemd-run</a> is probably the better way. So I&rsquo;ve a simple script, <code>/usr/local/bin/safeapp</code>:</p>
-
-<pre><code class="language-bash">#!/bin/bash
-exec sudo systemd-run  \
-    -p CPUQuota=100% \
-    -p MemoryMax=70% \
-    -p WorkingDirectory=$(pwd) \
-    -p PrivateTmp=yes \
-    -p NoNewPrivileges=yes \
-    --setenv DISPLAY=${DISPLAY} \
-    --setenv DBUS_SESSION_BUS_ADDRESS=${DBUS_SESSION_BUS_ADDRESS} \
-    --uid ${USER} \
-    --gid ${USER} \
-    --quiet \
-    &quot;$1&quot;
-</code></pre>
-
-<p>I can run <code>safeapp /opt/firefox/firefox</code> now and it&rsquo;ll start firefox inside a nice systemd unit with a 70% Memory usage cap and CPU usage of at most 1 CPU. There&rsquo;s also other minimal security stuff applied - <code>NoNewPrivileges</code> being the most important one. I want to get <code>ProtectSystem</code> + <code>ReadWriteDirectories</code> going too, but there seems to be a bug in <code>systemd-run</code> that doesn&rsquo;t let it parse <code>ProtectSystem</code> properly&hellip;</p>
-
-<p>Also, there&rsquo;s <a href="https://github.com/systemd/systemd/issues/3851">an annoying bug</a> in systemd v231 (which is what my current system has) - you can&rsquo;t set <code>CPUQuotas</code> over 100% (aka &gt; 1 CPU core). This is annoying if you want to give each application 3 of your 4 cores (which is what I want). Next version of Ubuntu has v232, so my GUI applications will just have to do with an aggregate of 1 full core until then.</p>
-
-<p>The two environment variables seem to be all that&rsquo;s necessary for X applications to work.</p>
-
-<p>And yes, this might ask you for your password. I&rsquo;ll clean this up into a nice non-bash script hopefully soon, and make all of these better.</p>
-
-<p>Anyway, <em>it works</em>! I can now open sketchy websites with scroll hijacking without fear it&rsquo;ll kill my machine!</p>
-
-<h2 id="cli">CLI</h2>
-
-<p>I wanted each tab in my terminal to be its own systemd service, so they all get equitable amount of  CPU time &amp; can&rsquo;t crash machine by themselves with OOM.</p>
-
-<p>So I&rsquo;ve this script as <code>/usr/local/bin/safeshell</code></p>
-
-<pre><code class="language-bash">`#!/bin/bash
-exec sudo systemd-run \
-    -p CPUQuota=100% \
-    -p MemoryMax=70% \
-    -p WorkingDirectory=$(pwd) \
-    --uid yuvipanda \
-    --gid yuvipanda \
-    --quiet \
-    --tty \
-    /bin/bash -i
-</code></pre>
-
-<p>The <code>--tty</code> is magic here, and does the right things wrt passing the tty that GNOME terminal is passing in all the way to the shell. Now, my login command (set under profile preferences &gt; command in gnome-terminal) is <code>sudo /usr/local/bin/safeshell</code>. In addition, I add the following line to <code>/etc/sudoers</code>:</p>
-
-<pre><code>%sudo ALL = (root) NOPASSWD:SETENV: /usr/local/bin/safeshell
-</code></pre>
-
-<p>This + just specifying the username directly in <code>safeshell</code> are both hacks that make me cringe a little. I need to either fully understand how sudo&rsquo;s <code>-E</code> works, or use this as an opportunity to learn more Go and make a setuid binary.</p>
-
-<h2 id="to-do">To do</h2>
-
-<p>[ ] Generalize this to not need hacks (either with better sudo usage or a setuid binary)
-[ ] Investigate adding more security related options.
-[ ] Make these work with desktop / dock icons.</p>
-
-<p>I&rsquo;d normally have just never written this post, on account of &lsquo;oh no, it is imperfect&rsquo; or something like that. However, that also seems to have come in the way of ability to find joy in learning simple things :D So I shall follow <a href="https://jvns.ca/">b0rk</a>&rsquo;s lead in spending time <a href="http://words.yuvi.in/post/things-to-learn/">learning</a> for fun again :)</p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   
@@ -976,6 +960,8 @@ exec sudo systemd-run \
     <ol class="list-unstyled">
 
 
+<li><a href="/post/kubectl-rbac/">Kubectl verbose logging tricks</a></li>
+
 <li><a href="/post/2017/">2017</a></li>
 
 <li><a href="/post/why-not-s2i/">Why repo2docker? Why not s2i?</a></li>
@@ -983,8 +969,6 @@ exec sudo systemd-run \
 <li><a href="/post/maintainerati-2017/">maintainerati 2017</a></li>
 
 <li><a href="/post/designing-data-intensive-applications/">designing data intensive applications</a></li>
-
-<li><a href="/post/think-os/">think os</a></li>
 
     </ol>
   </section>

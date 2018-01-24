@@ -12,7 +12,7 @@
 
 
 
-<meta property="og:updated_time" content="2016-03-28T05:29:05&#43;00:00"/>
+<meta property="og:updated_time" content="2018-01-11T15:15:58-08:00"/>
 
 
 
@@ -39,8 +39,8 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2016-03-28T05:29:05&#43;00:00",
-  "keywords": "books,class-notes,code,devlog,education,events,links,lol-culture,papers,personal,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
+  "dateModified": "2018-01-11T15:15:58-08:00",
+  "keywords": "books,class-notes,code,devlog,education,events,kubernetes,links,lol-culture,papers,personal,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
 </script>
@@ -88,6 +88,78 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/kubectl-rbac/">Kubectl verbose logging tricks</a></h2>
+    <p class="blog-post-meta"><time datetime="2018-01-11T15:15:58-08:00">Thu Jan 11, 2018</time> by  in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/kubernetes" rel="category tag">kubernetes</a>, <a href="/categories/code" rel="category tag">code</a>
+
+
+</p>
+  </header>
+  <p>Recently I had to write some code that had to call the kubernetes API directly,
+without any language wrappers. While there is pretty good <a href="https://kubernetes.io/docs/reference/">reference docs</a>,
+I didn&rsquo;t want to go and construct all the JSON manually in my programming language.</p>
+
+<p>I discovered that <code>kubectl</code>&rsquo;s <code>-v</code> parameter is very useful for this! With this,
+I can do the following:</p>
+
+<ol>
+<li>Perform the actions I need to perform with just <code>kubectl</code> commands</li>
+<li>Pass <code>-v=8</code> to kubectl when doing this, and this will print all the HTTP traffic
+(requests and responses!) in an easy to read way</li>
+<li>Copy paste the JSON requests and template them as needed!</li>
+</ol>
+
+<p>This was very useful! The fact you can see the response bodies is also nice,
+since it gives you a good intuition of how to handle this in your own code.</p>
+
+<p>If you&rsquo;re shelling out to <code>kubectl</code> directly in your code (for some reason!),
+you can also use this to figure out all the RBAC rules your code would need. For
+example, if I&rsquo;m going to run the following in my script:</p>
+
+<pre><code class="language-bash">kubectl get node
+</code></pre>
+
+<p>and need to figure out which RBAC rules are needed for this, I can run:</p>
+
+<pre><code class="language-bash">kubectl -v=8 get node 2&gt;&amp;1 | grep -P 'GET|POST|DELETE|PATCH|PUT'
+</code></pre>
+
+<p>This should list all the API requests the code is making, making it easier
+to figure out what rules are needed.</p>
+
+<p>Note that you might have to <code>rm -rf ~/.kube/cache</code> to &lsquo;really&rsquo; get the
+full API requests list, since <code>kubectl</code> caches a bunch of API autodiscovery.
+The minimum RBAC for kubectl is:</p>
+
+<pre><code class="language-yaml">kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: kubectl-minimum
+rules:
+- nonResourceURLs: [&quot;/api&quot;, &quot;/apis/*&quot;]
+  verbs: [&quot;get&quot;]
+</code></pre>
+
+<p>You will need to add additional rules for the specific commands you
+want to execute.</p>
+
+<p><strong>More Kubectl Tips</strong></p>
+
+<ol>
+<li><a href="https://schd.ws/hosted_files/kccncna17/de/Stupid%20Kubectl%20Tricks.pdf">Slides from the &lsquo;Stupid Kubectl Tricks&rsquo; KubeCon talk</a></li>
+<li><a href="https://coreos.com/blog/kubectl-tips-and-tricks">On the CoreOS blog</a></li>
+<li><a href="https://kubernetes.io/docs/reference/kubectl/cheatsheet/">Terse but useful official documentation</a></li>
+</ol>
+
+</article> 
 
 
 
@@ -340,39 +412,6 @@
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/sprinkling-some-douchebaginess-in-code/">Sprinkling some Douchebaginess in code</a></h2>
-    <p class="blog-post-meta"><time datetime="2013-07-30T08:49:24Z">Tue Jul 30, 2013</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>, <a href="/categories/links" rel="category tag">links</a>
-
-
-</p>
-  </header>
-  <p>After being frustrated at Java&rsquo;s lack of a generic &lsquo;callback&rsquo; type, I created this interface:</p>
-
-<pre><code>    public interface ContributionUploadProgress {
-        void onUploadStarted(Contribution contribution);
-        boolean isJavaAPieceOfShit();
-    }
-</code></pre>
-
-<p>And randomly throw around (with <code>onComplete</code> implementing <code>ContributionUploadProgress</code>)</p>
-
-<pre><code>    assert onComplete.isJavaAPieceOfShit();
-</code></pre>
-
-<p>This, of course, is trivial to fix with an IDE. Should be more fun with a dynamic language :)</p>
-
-<p>(And yes, I removed that code before committing)</p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   
@@ -423,6 +462,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/kubectl-rbac/">Kubectl verbose logging tricks</a></li>
+
 <li><a href="/post/2017/">2017</a></li>
 
 <li><a href="/post/why-not-s2i/">Why repo2docker? Why not s2i?</a></li>
@@ -430,8 +471,6 @@
 <li><a href="/post/maintainerati-2017/">maintainerati 2017</a></li>
 
 <li><a href="/post/designing-data-intensive-applications/">designing data intensive applications</a></li>
-
-<li><a href="/post/think-os/">think os</a></li>
 
     </ol>
   </section>

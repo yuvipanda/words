@@ -12,7 +12,7 @@
 
 
 
-<meta property="og:updated_time" content="2013-12-13T17:58:15&#43;00:00"/>
+<meta property="og:updated_time" content="2013-12-14T15:06:28&#43;00:00"/>
 
 
 
@@ -39,8 +39,8 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2013-12-13T17:58:15&#43;00:00",
-  "keywords": "books,class-notes,code,devlog,education,events,links,lol-culture,papers,personal,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
+  "dateModified": "2013-12-14T15:06:28&#43;00:00",
+  "keywords": "books,class-notes,code,devlog,education,events,kubernetes,links,lol-culture,papers,personal,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
 </script>
@@ -88,6 +88,26 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/wikipedia-apps-reboot-taking-shape-nicely/">Wikipedia Apps reboot taking shape nicely</a></h2>
+    <p class="blog-post-meta"><time datetime="2013-12-14T15:06:28Z">Sat Dec 14, 2013</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>, <a href="/categories/wiki" rel="category tag">wiki</a>
+
+
+</p>
+  </header>
+  <p><a href="http://yuvi.in/blog/wp-content/uploads/2013/12/wpid-Screenshot_2013-12-14-20-33-57.png"><img title="Screenshot_2013-12-14-20-33-57.png" class="alignnone size-full" alt="image" src="http://yuvi.in/blog/wp-content/uploads/2013/12/wpid-Screenshot_2013-12-14-20-33-57.png" /></a></p>
+
+<p>Prettier, faster and more feature packed! Native Wikipedia app for Android coming real soon!</p>
+
+</article> 
 
 
 
@@ -297,44 +317,6 @@
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-for-sun-aug-25-2013/">DevLog for Sun, Aug 25, 2013</a></h2>
-    <p class="blog-post-meta"><time datetime="2013-08-25T23:44:25Z">Sun Aug 25, 2013</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>, <a href="/categories/devlog" rel="category tag">devlog</a>, <a href="/categories/wiki" rel="category tag">wiki</a>
-
-
-</p>
-  </header>
-  
-
-<p>DevLogs have been something I&rsquo;ve not been writing much of of late. Time to fix that!</p>
-
-<h2 id="wlm-android-app">WLM Android App</h2>
-
-<p>Spent some time <a href="http://lists.wikimedia.org/pipermail/wikilovesmonuments/2013-August/006249.html">reviving the WLM Android App</a>. Wasn&rsquo;t too hard, and am surprised at how well it still runs :) Some work still needed to update the <a href="https://github.com/wikimedia/WLMMobile/commit/113d9abf7b675b147ece3f2be005ef1b6ba0e4cf#assets/www/js/campaigns-data.js">templates</a> and other metadata to refer to WLM2013 rather than WLM2012 &#8211; but that should not be too hard. The fact that it is an issue at all is simply because I ripped out all the Campaign related APIs a few weeks ago with my UploadCampaign rewrite.</p>
-
-<p><a href="https://commons.wikimedia.org/wiki/User:Multichill">multichill</a> was awesome in moving the <a href="https://tools.wmflabs.org/heritage/api/api.php">Monuments API</a> to <a href="https://tools.wmflabs.org">Tool Labs</a> &#8211; hence making it much faster! Initially we thought that the Toollabs DB was too slow for writes &#8211; but this turned out to be a mistake, since apparently the Replica Databases had slow writes, but <code>tools-db</code> itself was fine. There&rsquo;s <a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=48851">a bug</a> tracking this now. Toollabs version of the API still seems much faster to me than Toolserver&rsquo;s :)</p>
-
-<h2 id="uploadcampaigns-api">UploadCampaigns API</h2>
-
-<p>Mediawiki sucks. Eeeew! Specifically, writing API modules &#8211; why can&rsquo;t we just be happy and have everything be JSON? Sigh!</p>
-
-<p>I&rsquo;m adding <a href="https://gerrit.wikimedia.org/r/#/c/80782/">a patch</a> that allows <a href="https://www.mediawiki.org/wiki/Extension:UploadWizard/Campaigns">UploadCampaigns</a> to be queried selectively, rather than just via the normal page APIs. Right now, this only lets us filter by <code>enabled</code> status &#8211; but in the future, this should be able to also filter on a vast array of other properties. Properties about Geographic location come to mind as the most useful. That patch still has a good way to go before it can be merged (continue support being the foremost one), but it is getting there :)</p>
-
-<p>The ickiest part of the patch is perhaps that it sends out raw JSON data as a&#8230; string. So no matter which format you are using on your client, you <em>need</em> to use a JSON parser to deal with the Campaigns data. This sortof makes sense, since that is how the data is stored anyway. Doesn&rsquo;t make it any less icky, though!</p>
-
-<p>Not bad for a lazy Sunday, eh?</p>
-
-<p><strong>Update</strong>: After not being able to sleep, I also submitted <a href="https://gerrit.wikimedia.org/r/#/c/80946/">a patch</a> to make phpcs pass for UploadWizard, and also fought with the UploadCampaigns API patch to have it (brokenly?) support continuing. Yay?</p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/post/page/6/" rel="prev" role="button">Previous page</a>
@@ -385,6 +367,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/kubectl-rbac/">Kubectl verbose logging tricks</a></li>
+
 <li><a href="/post/2017/">2017</a></li>
 
 <li><a href="/post/why-not-s2i/">Why repo2docker? Why not s2i?</a></li>
@@ -392,8 +376,6 @@
 <li><a href="/post/maintainerati-2017/">maintainerati 2017</a></li>
 
 <li><a href="/post/designing-data-intensive-applications/">designing data intensive applications</a></li>
-
-<li><a href="/post/think-os/">think os</a></li>
 
     </ol>
   </section>

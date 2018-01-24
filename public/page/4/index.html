@@ -12,7 +12,7 @@
 
 
 
-<meta property="og:updated_time" content="2015-01-02T21:16:09&#43;00:00"/>
+<meta property="og:updated_time" content="2015-01-04T19:18:34&#43;00:00"/>
 
 
 
@@ -39,8 +39,8 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2015-01-02T21:16:09&#43;00:00",
-  "keywords": "books,class-notes,code,devlog,education,events,links,lol-culture,papers,personal,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
+  "dateModified": "2015-01-04T19:18:34&#43;00:00",
+  "keywords": "books,class-notes,code,devlog,education,events,kubernetes,links,lol-culture,papers,personal,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
 </script>
@@ -88,6 +88,33 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-jan-3-4-2015/">DevLog for Jan 3-4 2015</a></h2>
+    <p class="blog-post-meta"><time datetime="2015-01-04T19:18:34Z">Sun Jan 4, 2015</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
+
+
+</p>
+  </header>
+  <p>Nothing much going on&#8230;</p>
+
+<ul>
+<li>Continue reading Real World Haskell. This is indeed expanding my horizons, but I haven&#8217;t found any project I could use haskell in yet. Will keep looking.</li>
+<li>Helped fix a parsoid outage yesterday. No biggie. I still do not understand fully how parsoid works / how it is set up, should do.</li>
+<li>Spend most of the rest of the time in &#8216;weekend mode&#8217;, which includes mostly not doing things. That went mostly well.</li>
+<li>Watched &#8216;Pink Floyd The Wall&#8217; movie. HOLY FUCK MY MIND IT IS GONE OMG IT IS QUITE REALLY NICE. Recommended.</li>
+</ul>
+
+<p>I should probably write a &#8216;Year in Review 2014&#8217; post, but so much of that is going to be NSFW and private that there probably is no point&#8230; ;)</p>
+
+</article> 
 
 
 
@@ -329,41 +356,6 @@
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-aug-24-2014/">DevLog for Aug 24, 2014</a></h2>
-    <p class="blog-post-meta"><time datetime="2014-08-25T02:37:17Z">Mon Aug 25, 2014</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
-
-
-</p>
-  </header>
-  <p>Wooooo!</p>
-
-<ul>
-<li>Moved <a href="https://github.com/yuvipanda/labsbooks">labsbooks</a> (described in <a href="http://yuvi.in/blog/devlog-23-aug-2014/">yesterday&#8217;s devlog</a>) to use a shared readonly IPython virtualenv maintained by me. Also installed a bunch of modules people might want to use (SciPy, NumPy, Pandas, PyTables, matplotlib). Am considering just installing IPython notebook globally via puppet and using that, since that&#8217;ll enable users to just use the system packages. However, the version of IPython notebook from Ubuntu is ancient, so that&#8217;s probably a non-starter.</li>
-<li>Have a basic version of the IPython publishing process working! Any toollabs user can create a notebook by:
-
-<ul>
-<li>Creating a <code>~/notebooks</code> folder</li>
-<li>Doing a <code>chmod +x ~/notebooks</code></li>
-<li>Doing a <code>chmod +x ~</code></li>
-<li>Putting IPython notebooks into <code>~/notebooks</code> (as <code>.ipynb</code>) files</li>
-<li>Going to <code>https://tools.wmflabs.org/notebooks/&lt;user-shell-name&gt;/&lt;path-to-ipynb-file&gt;</code> Will have to do a bit more work before it can be considered &#8216;production grade&#8217; (such as user pages, a nicer theme, etc, etc) BUT YAY GOOD START. It already caches the html output in Redis and invalidates with the <code>mtime</code> of the file, so should be pretty quick.</li>
-</ul></li>
-<li>Made the ssh tunneling process for <code>labsbooks</code> purely python, without requiring the <code>ProxyCommand</code>. This makes things simpler (and more portable!). I&#8217;ll need to work on securing this properly before I can publish it for broader use.</li>
-<li>Wrote <a href="https://lists.wikimedia.org/pipermail/analytics/2014-August/002437.html">an email</a> to the analytics mailing list about making public the &#8216;edits per country&#8217; data. I hope to make this publicly available with enough granularity that not just me but others can use this for fun research as well.</li>
-</ul>
-
-<p>I&#8217;ve been using <a href="https://atom.io">Atom</a> for puppet stuff, <a href="http://www.jetbrains.com/pycharm/">PyCharm</a> for Python and <a href="http://www.jetbrains.com/idea/">IntelliJ</a> for Java stuff, and that seems to be doing ok. They all have decent Vim keybindings as well, and good replacements for other functionality &#8211; and I might stick with Atom for a while to see how it goes :)</p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/page/3/" rel="prev" role="button">Previous page</a>
@@ -414,6 +406,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/kubectl-rbac/">Kubectl verbose logging tricks</a></li>
+
 <li><a href="/post/2017/">2017</a></li>
 
 <li><a href="/post/why-not-s2i/">Why repo2docker? Why not s2i?</a></li>
@@ -421,8 +415,6 @@
 <li><a href="/post/maintainerati-2017/">maintainerati 2017</a></li>
 
 <li><a href="/post/designing-data-intensive-applications/">designing data intensive applications</a></li>
-
-<li><a href="/post/think-os/">think os</a></li>
 
     </ol>
   </section>

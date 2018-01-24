@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Kubectl verbose logging tricks" />
+<meta property="og:description" content="kubectl for exploring the Kubernetes API" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://words.yuvi.in/post/kubectl-rbac/" />
+
+
+
+<meta property="article:published_time" content="2018-01-11T15:15:58-08:00"/>
+
+<meta property="article:modified_time" content="2018-01-11T15:15:58-08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Kubectl verbose logging tricks"/>
+<meta name="twitter:description" content="kubectl for exploring the Kubernetes API"/>
+<meta name="generator" content="Hugo 0.31.1" />
+
+
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Kubectl verbose logging tricks",
+  "url": "http://words.yuvi.in/post/kubectl-rbac/",
+  "wordCount": "304",
+  "datePublished": "2018-01-11T15:15:58-08:00",
+  "dateModified": "2018-01-11T15:15:58-08:00",
+  "author": {
+    "@type": "Person",
+    "name": ""
+  },
+  "keywords": "kubernetes, code",
+  "description": "kubectl for exploring the Kubernetes API"
+}
+</script>
+
+
+
+    <link rel="canonical" href="http://words.yuvi.in/post/kubectl-rbac/">
+
+    <title>Kubectl verbose logging tricks | Yuvi Panda</title>
+
+    <!-- combined, minified CSS -->
+    <link href="http://words.yuvi.in/css/style.css" rel="stylesheet" integrity="sha384-O8wjsnz02XiyrPxnhfF6AVOv6YLBaEGRCnVF&#43;DL3gCPBy9cieyHcpixIrVyD2JS5" crossorigin="anonymous">
+
+    
+
+    
+
+    
+
+    
+
+  </head>
+
+  <body>
+
+    <div class="blog-masthead">
+    
+    </div>
+
+    <header class="blog-header">
+      <div class="container">
+        <h1 class="blog-title">
+            
+            <img src='/profile.jpg' width=80 style="border-radius: 50%; margin-bottom: 12px;">
+            <a href="http://words.yuvi.in/" rel="home">Yuvi Panda</a></h1>
+        <p class="lead blog-description"><a href="https://github.com/jupyterhub/jupyterhub">JupyterHub</a> | <a href="https://mybinder.org">MyBinder</a> | <a href="https://k8s.io">Kubernetes</a> | Open Culture</p>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+
+          
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/kubectl-rbac/">Kubectl verbose logging tricks</a></h2>
+    <p class="blog-post-meta"><time datetime="2018-01-11T15:15:58-08:00">Thu Jan 11, 2018</time> by  in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/kubernetes" rel="category tag">kubernetes</a>, <a href="/categories/code" rel="category tag">code</a>
+
+
+</p>
+  </header>
+  <p>Recently I had to write some code that had to call the kubernetes API directly,
+without any language wrappers. While there is pretty good <a href="https://kubernetes.io/docs/reference/">reference docs</a>,
+I didn&rsquo;t want to go and construct all the JSON manually in my programming language.</p>
+
+<p>I discovered that <code>kubectl</code>&rsquo;s <code>-v</code> parameter is very useful for this! With this,
+I can do the following:</p>
+
+<ol>
+<li>Perform the actions I need to perform with just <code>kubectl</code> commands</li>
+<li>Pass <code>-v=8</code> to kubectl when doing this, and this will print all the HTTP traffic
+(requests and responses!) in an easy to read way</li>
+<li>Copy paste the JSON requests and template them as needed!</li>
+</ol>
+
+<p>This was very useful! The fact you can see the response bodies is also nice,
+since it gives you a good intuition of how to handle this in your own code.</p>
+
+<p>If you&rsquo;re shelling out to <code>kubectl</code> directly in your code (for some reason!),
+you can also use this to figure out all the RBAC rules your code would need. For
+example, if I&rsquo;m going to run the following in my script:</p>
+
+<pre><code class="language-bash">kubectl get node
+</code></pre>
+
+<p>and need to figure out which RBAC rules are needed for this, I can run:</p>
+
+<pre><code class="language-bash">kubectl -v=8 get node 2&gt;&amp;1 | grep -P 'GET|POST|DELETE|PATCH|PUT'
+</code></pre>
+
+<p>This should list all the API requests the code is making, making it easier
+to figure out what rules are needed.</p>
+
+<p>Note that you might have to <code>rm -rf ~/.kube/cache</code> to &lsquo;really&rsquo; get the
+full API requests list, since <code>kubectl</code> caches a bunch of API autodiscovery.
+The minimum RBAC for kubectl is:</p>
+
+<pre><code class="language-yaml">kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: kubectl-minimum
+rules:
+- nonResourceURLs: [&quot;/api&quot;, &quot;/apis/*&quot;]
+  verbs: [&quot;get&quot;]
+</code></pre>
+
+<p>You will need to add additional rules for the specific commands you
+want to execute.</p>
+
+<p><strong>More Kubectl Tips</strong></p>
+
+<ol>
+<li><a href="https://schd.ws/hosted_files/kccncna17/de/Stupid%20Kubectl%20Tricks.pdf">Slides from the &lsquo;Stupid Kubectl Tricks&rsquo; KubeCon talk</a></li>
+<li><a href="https://coreos.com/blog/kubectl-tips-and-tricks">On the CoreOS blog</a></li>
+<li><a href="https://kubernetes.io/docs/reference/kubectl/cheatsheet/">Terse but useful official documentation</a></li>
+</ol>
+
+
+  
+
+  
+  <hr>
+  <footer>
+
+  
+    <section>
+    <h4>Share</h4>
+    <nav class="nav sharing-icons">
+      <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwords.yuvi.in%2fpost%2fkubectl-rbac%2f" title="Share on Facebook"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://plus.google.com/share?url=http%3a%2f%2fwords.yuvi.in%2fpost%2fkubectl-rbac%2f" title="Share on Google+"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fwords.yuvi.in%2fpost%2fkubectl-rbac%2f" title="Share on LinkedIn"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://twitter.com/home?status=http%3a%2f%2fwords.yuvi.in%2fpost%2fkubectl-rbac%2f" title="Tweet this"><span class="fa fa-twitter fa-2x"></span></a>
+    </nav>
+  </section>
+
+  
+
+  
+  </footer>
+  
+
+</article> 
+
+
+
+        </div> <!-- /.blog-main -->
+
+        <aside class="col-sm-3 ml-auto blog-sidebar">
+  
+  <section class="sidebar-module sidebar-module-inset">
+    <h4>about</h4>
+    <p>I build infrastructure that helps reduce accidental complexities when using code to solve problems.</p>
+  </section>
+  
+  <section class="sidebar-module sidebar-module-inset">
+    <h4>projects</h4>
+    <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
+
+<p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
+</p>
+  </section>
+  
+  <section class="sidebar-module sidebar-module-inset">
+    <h4>work</h4>
+    <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
+
+<p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
+</p>
+  </section>
+  
+  <section class="sidebar-module sidebar-module-inset">
+    <h4>contact</h4>
+    <p><a href="mailto:yuvipanda@gmail.com">Email</a> is the best way to contact me privately.
+<a href="https://twitter.com/yuvipanda">Twitter</a> is the best way to contact me publicly.</p>
+  </section>
+  
+
+  
+        <section class="sidebar-module">
+    <h4>Recent Posts</h4>
+    <ol class="list-unstyled">
+
+
+<li><a href="/post/kubectl-rbac/">Kubectl verbose logging tricks</a></li>
+
+<li><a href="/post/2017/">2017</a></li>
+
+<li><a href="/post/why-not-s2i/">Why repo2docker? Why not s2i?</a></li>
+
+<li><a href="/post/maintainerati-2017/">maintainerati 2017</a></li>
+
+<li><a href="/post/designing-data-intensive-applications/">designing data intensive applications</a></li>
+
+    </ol>
+  </section>
+
+  
+
+  
+</aside>
+
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>
+      
+      CC0
+      
+      </p>
+      <p>
+      <a href="#">Back to top</a>
+      </p>
+    </footer>
+
+  </body>
+
+</html>

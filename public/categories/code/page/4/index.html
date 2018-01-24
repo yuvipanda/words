@@ -12,7 +12,7 @@
 
 
 
-<meta property="og:updated_time" content="2011-08-11T04:09:23&#43;00:00"/>
+<meta property="og:updated_time" content="2011-08-13T00:56:10&#43;00:00"/>
 
 
 
@@ -39,8 +39,8 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2011-08-11T04:09:23&#43;00:00",
-  "keywords": "books,class-notes,code,devlog,education,events,links,lol-culture,papers,personal,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
+  "dateModified": "2011-08-13T00:56:10&#43;00:00",
+  "keywords": "books,class-notes,code,devlog,education,events,kubernetes,links,lol-culture,papers,personal,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
 </script>
@@ -88,6 +88,32 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/non-ascii-characters-http-headers/">Non-ASCII Characters in HTTP Headers</a></h2>
+    <p class="blog-post-meta"><time datetime="2011-08-13T00:56:10Z">Sat Aug 13, 2011</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>
+
+
+<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/code" rel="tag">code</a>
+
+</p>
+  </header>
+  <p>I was debugging an issue <a href="http://interviewstreet.com">at work</a> today where a (generated) file refused to download in Chrome, but the same URL worked just fine with wget. I remember reading in the <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec2.html#sec2.2">HTTP Spec</a> that HTTP headers can only be lower ASCII, so when wget mangled the output file&#8217;s name, the problem was obvious &#8211; the file name contained a character that wasn&#8217;t in lower ASCII (an accented A). Chrome had borked on encountering it, while wget soldiered on. Using <code>iconv</code> to strip non-ASCII characters in the file name on the server side fixed the issue.</p>
+
+<p>Moral of the story? Read the RFCs! The <a href="http://www.w3.org/Protocols/rfc2616/rfc2616.html">HTTP one</a>, in particular, is remarkably readable and you <em>should</em> read it if you&#8217;re doing non-trivial Web Development.</p>
+
+<p>P.S: If I had had time, I&#8217;d have went around testing this behavior in several user agents and documenting their behavior (and possibly submitting bug reports) &#8211; but <insert-excuse-here>.</p>
+
+<p>&nbsp;</p>
+
+</article> 
 
 
 
@@ -447,34 +473,6 @@
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/how-to-increase-cheeses-burst-mode-photo-count/">How to increase Cheese’s Burst Mode Photo Count</a></h2>
-    <p class="blog-post-meta"><time datetime="2010-11-07T14:50:51Z">Sun Nov 7, 2010</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>
-
-
-</p>
-  </header>
-  <p>&#8220;Why does Cheese have a maximum photo count of 100 in burst mode?&#8221; questions have popped up quite a few times on the cheese list. It is just a teeny, tiny bug &#8211; fixed in master.</p>
-
-<p>The work around is simple:</p>
-
-<p><strong>Till Cheese 2.32</strong></p>
-
-<p>Raise it to whatever value you want in <code>line 8</code> of <code>/usr/share/cheese/cheese-prefs.ui</code>.</p>
-
-<p><em>(If you don&#8217;t know what version you are running, check <code>Help -&gt; About</code>)</em></p>
-
-<p>(Fix is just raising the limit from 100 to something that most people will likely not hit. If they do hit it &#8211; well, <code>line 40 on /usr/share/cheese/cheese-prefs.ui</code> :D)</p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/categories/code/page/3/" rel="prev" role="button">Previous page</a>
@@ -525,6 +523,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/kubectl-rbac/">Kubectl verbose logging tricks</a></li>
+
 <li><a href="/post/2017/">2017</a></li>
 
 <li><a href="/post/why-not-s2i/">Why repo2docker? Why not s2i?</a></li>
@@ -532,8 +532,6 @@
 <li><a href="/post/maintainerati-2017/">maintainerati 2017</a></li>
 
 <li><a href="/post/designing-data-intensive-applications/">designing data intensive applications</a></li>
-
-<li><a href="/post/think-os/">think os</a></li>
 
     </ol>
   </section>

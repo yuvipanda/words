@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>CC0</copyright>
-    <lastBuildDate>Fri, 29 Dec 2017 16:29:00 -0800</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jan 2018 15:15:58 -0800</lastBuildDate>
     
 	<atom:link href="http://words.yuvi.in/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Kubectl verbose logging tricks</title>
+      <link>http://words.yuvi.in/post/kubectl-rbac/</link>
+      <pubDate>Thu, 11 Jan 2018 15:15:58 -0800</pubDate>
+      
+      <guid>http://words.yuvi.in/post/kubectl-rbac/</guid>
+      <description>Recently I had to write some code that had to call the kubernetes API directly, without any language wrappers. While there is pretty good reference docs, I didn&amp;rsquo;t want to go and construct all the JSON manually in my programming language.
+I discovered that kubectl&amp;rsquo;s -v parameter is very useful for this! With this, I can do the following:
+ Perform the actions I need to perform with just kubectl commands Pass -v=8 to kubectl when doing this, and this will print all the HTTP traffic (requests and responses!</description>
+    </item>
     
     <item>
       <title>2017</title>
