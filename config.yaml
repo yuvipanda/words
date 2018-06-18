@@ -7,6 +7,7 @@ Paginate: 10
 
 params:
     description: "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
+    googleAnalytics: UA-110578237-1
     navbarDisabled: true
     colorscheme: "white"
     copyright: "CC0"
