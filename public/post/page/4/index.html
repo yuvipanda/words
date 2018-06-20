@@ -12,7 +12,7 @@
 
 
 
-<meta property="og:updated_time" content="2015-01-04T19:18:34&#43;00:00"/>
+<meta property="og:updated_time" content="2015-01-05T21:52:08&#43;00:00"/>
 
 
 
@@ -39,8 +39,8 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2015-01-04T19:18:34&#43;00:00",
-  "keywords": "books,class-notes,code,devlog,education,events,kubernetes,links,lol-culture,papers,personal,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
+  "dateModified": "2015-01-05T21:52:08&#43;00:00",
+  "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
 </script>
@@ -95,6 +95,36 @@ ga('send', 'pageview');
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-for-jan-5-2015/">DevLog for Jan 5, 2015</a></h2>
+    <p class="blog-post-meta"><time datetime="2015-01-05T21:52:08Z">Mon Jan 5, 2015</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
+
+
+</p>
+  </header>
+  <p>DevLog for Jan 5, 2015</p>
+
+<p>Trying out the <a href="https://itunes.apple.com/app/byword/id420212497?mt=12">ByWord</a> app, since it has MarkDown support and also publishes to WordPress. Paid Rs. 900 for it, let&#8217;s hope it is useful. Hate the default font, though.</p>
+
+<ul>
+<li>Need to parse View definitions on labsdb public databases and verify that we aren&#8217;t leaking any info (<a href="https://phabricator.wikimedia.org/T85783">https://phabricator.wikimedia.org/T85783</a>). Was going to use the <a href="https://code.google.com/p/python-sqlparse/">sqlparse</a> library, but that doesn&#8217;t seem very complete or useful. Will attempt to use regexes now. Wish I had learnt how to build parsers properly easily.</li>
+<li>Ignore lament ^, I spent some time learning to use PyParsing, and ended up with a very simple parser that parsed the small subset of SQL I cared about! Yay :) Still need to set aside some time at some point to fully understand parsers/parsing.</li>
+<li>Fixed wikdidata beta not resolving (<a href="https://phabricator.wikimedia.org/T85793">https://phabricator.wikimedia.org/T85793</a>). Of course, problem was caused by me as well, not verifying that DNS changes I was making didn&#8217;t have unintended consequences. It&#8217;s also somewhat surprising that it was down for 6 days before someone noticed.</li>
+<li>Add labsdb-auditor report that verifies views have appropriately done definitions that do not expose private information (<a href="https://gerrit.wikimedia.org/r/#/c/182848/">https://gerrit.wikimedia.org/r/#/c/182848/</a>). This was fun to write. I should definitely learn more parsing things and seek out other simpel things I can write a parser for. Code quality is getting better, although could still be better if I can remove the regex part entirely &#8211; it currently cleans up the SQL via a regex and then parses it with pyparsing.</li>
+<li>Fixed a consistency bug in the perl script that maintians public view replicas (<a href="https://gerrit.wikimedia.org/r/#/c/182819/">https://gerrit.wikimedia.org/r/#/c/182819/</a>).</li>
+</ul>
+
+<p>Reading list: * <a href="http://joostdevblog.blogspot.in/2015/01/what-most-young-programmers-need-to.html">What most young programmers need to learn</a> was nice. I just feel lucky to have been gifted a copy of Code Complete and Pragmatic Programmer when I was 15 (by <a href="http://colinizer.com/">Colinizer</a>).</p>
+
+</article> 
 
 
 
@@ -337,32 +367,6 @@ ga('send', 'pageview');
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-26-27-aug-2014/">DevLog for 25 and 26 Aug 2014</a></h2>
-    <p class="blog-post-meta"><time datetime="2014-08-27T00:29:35Z">Wed Aug 27, 2014</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
-
-
-</p>
-  </header>
-  <p>Not very code heavy</p>
-
-<ul>
-<li>Couple of pull requests(<a href="https://github.com/atom/autosave/pull/22">#1</a> and <a href="https://github.com/atom/autosave/pull/21">#2</a>) for the <a href="https://github.com/atom/autosave">Atom Autosave plugin</a>. One adds a preference to not autosave by when you are explicitly closing a window / pane, and the other just sets the &#8216;enabled&#8217; preference to default. CoffeeScript isn&#8217;t too bad either! I should consider writing more plugins (I currently use Atom for CSS/JS/Puppet, should try other languages)</li>
-<li>Added CSV, TSV and JSON download options to Quarry. There&#8217;s another Webinar tomorrow by the Grantmaking team, and J-Mo asked for it. Streaming TSV and CSV implemented in a neat way, will write a blog post tomorrow about it.</li>
-<li>Started work on a &#8216;number of editors&#8217; per country metric for WPDMZ, needs to be finished up.</li>
-</ul>
-
-<p>I feel a bit exhausted (physically and mentally) from the intense coding over the last few weeks, might have a few chill days to recharge myself. I&#8217;m growing old! :(</p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/post/page/3/" rel="prev" role="button">Previous page</a>
@@ -413,6 +417,8 @@ ga('send', 'pageview');
     <ol class="list-unstyled">
 
 
+<li><a href="/post/the-littlest-jupyterhub/">The Littlest Jupyterhub</a></li>
+
 <li><a href="/post/kubectl-rbac/">Kubectl verbose logging tricks</a></li>
 
 <li><a href="/post/2017/">2017</a></li>
@@ -420,8 +426,6 @@ ga('send', 'pageview');
 <li><a href="/post/why-not-s2i/">Why repo2docker? Why not s2i?</a></li>
 
 <li><a href="/post/maintainerati-2017/">maintainerati 2017</a></li>
-
-<li><a href="/post/designing-data-intensive-applications/">designing data intensive applications</a></li>
 
     </ol>
   </section>

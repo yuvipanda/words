@@ -12,7 +12,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-01-11T15:15:58-08:00"/>
+<meta property="og:updated_time" content="2018-06-18T13:14:59-07:00"/>
 
 
 
@@ -39,8 +39,8 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2018-01-11T15:15:58-08:00",
-  "keywords": "books,class-notes,code,devlog,education,events,kubernetes,links,lol-culture,papers,personal,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
+  "dateModified": "2018-06-18T13:14:59-07:00",
+  "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
 </script>
@@ -95,6 +95,148 @@ ga('send', 'pageview');
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/the-littlest-jupyterhub/">The Littlest Jupyterhub</a></h2>
+    <p class="blog-post-meta"><time datetime="2018-06-18T13:14:59-07:00">Mon Jun 18, 2018</time> by  in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/jupyter" rel="category tag">jupyter</a>, <a href="/categories/project-ideas" rel="category tag">project-ideas</a>
+
+
+</p>
+  </header>
+  
+
+<p>This idea comes from brainstorming along with <a href="https://lindseyjh.ca/">Lindsey
+Heagy</a>, <a href="https://www.willingconsulting.com/">Carol
+Willing</a>, <a href="https://github.com/betatim">Tim
+Head</a> &amp; <a href="https://github.com/bollwyvl">Nick
+Bollweg</a> at the Jupyter Team Meeting 2018. Most
+of the good ideas are theirs! The name is inspired by <a href="https://en.wikipedia.org/wiki/The_Littlest_Hobo">one of favorite TV
+series</a> of one of my
+favorite people.</p>
+
+<p>I really love the idea of <a href="https://github.com/jupyterhub/jupyterhub">JupyterHub</a> distributions - opinionated combination
+of components that target a specific use case. The <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a>
+distribution is awesome &amp; works for most people. However, it requires
+<a href="https://kubernetes.io">Kubernetes</a> - a distributed system with inherent complexities that is not
+worth it below a certain threshold.</p>
+
+<p>This blog post lays out ideas for implementing a simpler, smaller distribution called
+<em>The Littlest JupyterHub</em>. The Littlest JupyterHub serves <a href="https://en.wikipedia.org/wiki/Long_tail">the long tail</a> of potential JupyterHub users
+who have the following needs only.</p>
+
+<ol>
+<li>Support a very small number of students (around 20–30, maybe 50)</li>
+<li>Run on only one node, either <a href="http://digitalocean.com/">a cheap VPS</a> or a
+VM on their <a href="https://cloud.google.com">favorite cloud provider</a></li>
+<li>Provide the same environment for all students</li>
+<li>Allow the instructor / admin to easily modify the environment for students with no specialized knowledge</li>
+<li>Be extremely low maintenance once set up &amp; easily fixable when it breaks</li>
+<li>Allow easy upgrades</li>
+<li>Enforce memory / CPU limits for students</li>
+</ol>
+
+<p>The target audience is primarily educators teaching small classes with
+Jupyter Notebooks. It should be an extremely focused distribution, with new
+feature requests facing higher scrutiny than usual. It has a legitimate
+chance of actually reaching 1.0 &amp; being stable, requiring minimal ongoing
+upgrades!</p>
+
+<h2 id="jupyterhub-setup">JupyterHub setup</h2>
+
+<p>JupyterHub +
+<a href="https://github.com/jupyterhub/configurable-http-proxy">ConfigurableHTTPProxy</a>
+run as standard <a href="https://www.freedesktop.org/software/systemd/man/systemd.service.html">systemd services</a>.
+<a href="https://github.com/jupyterhub/systemdspawner">Systemd spawner is used</a> - it is lightweight, allows JupyterHub
+restarts without killing user servers &amp; provides CPU / memory isolation.</p>
+
+<p>Something like <a href="https://github.com/yuvipanda/jupyterhub-firstuseauthenticator">First Use
+Authenticator</a>
++ a user whitelist might be good enough for a large number of users. New
+authenticators are added whenever users ask for them.</p>
+
+<p>The JupyterHub system is in its own root owned conda environment or
+virtualenv, to prevent accidental damage from users.</p>
+
+<h2 id="user-environment">User environment</h2>
+
+<p>There is a single
+conda environment shared by all the users. JupyterHub admins have
+write access to this environment, and everyone else has read access. Admins
+can install new libraries for all users with conda/pip. No extra steps
+needed, and you can do this from inside JupyterHub without needing to ssh.</p>
+
+<p>Each user gets their own home directory, and can install packages there if
+they wish. systemdspawner puts each user server in a systemd service, and
+provides <a href="https://www.freedesktop.org/software/systemd/man/systemd.resource-control.html">fine grained
+control</a>
+over memory &amp; cpu usage. Users also get their own system user, providing an
+additional layer of security &amp; standardized home directory locations.</p>
+
+<h2 id="configuration">Configuration</h2>
+
+<p><a href="http://yaml.org/">YAML</a> is used for config - it is the
+least bad of all the currently available languages, IMO. Ideally, something
+like the <a href="https://www.sudo.ws/man/1.8.17/visudo.man.html"><code>visudo</code></a> command
+would exist for editing &amp; applying this config. It&rsquo;ll
+open the config file in an editor, allow users to edit it, and apply it only
+if it is valid. Advanced users can sidestep this and edit files directly. The
+YAML file is read and processed directly in <code>jupyterhub_config.py</code>. This
+simplifies things &amp; gives us fewer things to break.</p>
+
+<h2 id="upgrading-the-distribution">Upgrading the distribution</h2>
+
+<p>Backwards compatible upgrading will be supported across one
+minor version only - so you can go from 0.7 to 0.8, but not 0.9. Upgrades
+should not cause outages.</p>
+
+<h2 id="installation-mechanism">Installation mechanism</h2>
+
+<p>Users run a command on a fresh server to install this distribution. This could use
+conda constructor (thanks to Nick Bollweig &amp; <a href="http://matthewrocklin.com/">Matt
+Rocklin</a> for convincing me!)
+or debian packages (with fpm or dh-virtualenv). The user environments will be
+<a href="https://conda.io/">conda environments</a>.</p>
+
+<p>A <code>curl &lt;some-url&gt; | sudo bash</code> command is available in a
+nice looking website for the distribution that users can copy paste into
+their fresh VM. This website also has instructions for creating a fresh VM in
+popular cloud providers &amp; VPS providers.</p>
+
+<h2 id="debuggability">Debuggability</h2>
+
+<p>All systems exist in a partially degraded state all the time. Good systems
+self-heal &amp; continue to run as well as they can. When they can&rsquo;t, they break
+cleanly in known ways. They are observable enough to debug the issues that
+cause 80% of the problems.</p>
+
+<p>The Littlest JupyterHub should be a good system. Systemd captures
+logs from JupyterHub, user servers &amp; the proxy. Strong validation of the
+config file catches fatal misconfigurations. Reboots actually fix most issues
+and never make anything worse. Screwed up user environments are recoverable.</p>
+
+<p>We&rsquo;ll discover how this breaks as users of varying skill levels use it, and
+update our tooling accordingly.</p>
+
+<h2 id="but-no-docker">But, No Docker?</h2>
+
+<p>Docker has been explicitly excluded from this tech stack. Building custom
+docker images &amp; dealing with registries is too complex most educators. A good
+distribution embraces its constraints &amp; does well!</p>
+
+<h2 id="contribute">Contribute</h2>
+
+<p>Are you a person who would use a distribution like this? We would love to
+hear from you! Make an issue <a href="https://github.com/yuvipanda/the-littlest-jupyterhub">on GitHub</a>,
+<a href="https://twitter.com/yuvipanda">tweet at me</a>, or send me <a href="mailto:yuvipanda@gmail.com">an email</a>.</p>
+
+</article> 
 
 
 
@@ -876,47 +1018,6 @@ Written for pedagogy and personal understanding rather than production use.</p><
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/systemd-simple-containment/">systemd simple containment for GUI applications &amp; shells</a></h2>
-    <p class="blog-post-meta"><time datetime="2017-03-31T23:23:52-07:00">Fri Mar 31, 2017</time> by  in 
-
-<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/systemd" rel="tag">systemd</a>, <a href="/tags/learning" rel="tag">learning</a>, <a href="/tags/code" rel="tag">code</a>
-
-</p>
-  </header>
-  <p>I earlier had <a href="http://words.yuvi.in/post/systemd-gui-applications/">a vaguely working setup</a> for making sure browsers, shells and other applications don&rsquo;t eat all RAM / CPU on my machine with systemd + sudo + shell scripts.</p>
-
-<p>It was a hacky solution, and also had complications when used to launch shells. It wasn&rsquo;t passing in all the environment varialbes it should, causing interesting-to-debug issues. <code>sudo</code> rules were complex, and hard to do securely.</p>
-
-<p>I had also been looking for an excuse to learn more Golang, so I ended up writing <a href="https://github.com/yuvipanda/systemd-simple-containment"><code>systemd-simple-containment</code></a> or <code>ssc</code>.</p>
-
-<p>It&rsquo;s a simple golang application that produces a binary that can be <a href="https://en.wikipedia.org/wiki/Setuid"><code>setuid</code></a> to <code>root</code>, and thus get around all our <code>sudo</code> complexity, at the price of having to be very, very careful about the code. Fortunately, it&rsquo;s short enough (~100 lines) and <code>systemd-run</code> helps it keep the following invariants:</p>
-
-<ol>
-<li>It will never spawn any executable as any user other than the &lsquo;real&rsquo; uid / gid of the user calling the binary.</li>
-<li>It doesn&rsquo;t allow arbitrary systemd <code>properties</code> to be set, ensuring a more limited attack surface.</li>
-</ol>
-
-<p>However, this is the first time I&rsquo;m playing with setuid and with Go, so I probably fucked something up. I feel ok enough about my understanding of real and effective uids for now to use it myself, but not to recommend it to other people. Hopefully I&rsquo;ll be confident enough say that soon :)</p>
-
-<p>By using a real programming language, I also easily get commandline flags for sharing tty or not (so I can use the same program for launching GUI &amp; interactive terminal applications), pass all environment variables through (which can&rsquo;t be just standard child inheritence, since <code>systemd-run</code> doesn&rsquo;t work that way) &amp; the ability to setuid (you can&rsquo;t do that easily to a script).</p>
-
-<p>I was sure I&rsquo;d hate writing go because of the constant <code>if err != nil</code> checks, but it hasn&rsquo;t bothered me that much. I would like to write more Go, to get a better feel for it. This code is too short to like a language, but I definitely hate it less :)</p>
-
-<p>Anyway, now I can launch GUI applications with <code>ssc -tty=false -isolation=strict firefox</code> and it does the right thing. I currently have available <code>-isolation=strict</code> and <code>-isolation=relaxed</code>, the former performing stronger sandboxing (NoNewPrivileges, PrivateTmp) than the latter (just MemoryMax). i&rsquo;ll slowly add more protections here, but just keep two modes (ideally).</p>
-
-<p>My Gnome Terminal shell command is now <code>ssc -isolation=relaxed /bin/bash -i</code> and it works great :)</p>
-
-<p>I am pretty happy with <code>ssc</code> as it exists now. Only thing I now want to do is to be able to use it from the GNOME launcher (I am using GNOME3 with gnome-shell). Apparently <em>shortcuts</em> are no longer cool and hence pretty hard to create in modern desktop environments :| I shall keep digging!</p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   
@@ -967,6 +1068,8 @@ Written for pedagogy and personal understanding rather than production use.</p><
     <ol class="list-unstyled">
 
 
+<li><a href="/post/the-littlest-jupyterhub/">The Littlest Jupyterhub</a></li>
+
 <li><a href="/post/kubectl-rbac/">Kubectl verbose logging tricks</a></li>
 
 <li><a href="/post/2017/">2017</a></li>
@@ -974,8 +1077,6 @@ Written for pedagogy and personal understanding rather than production use.</p><
 <li><a href="/post/why-not-s2i/">Why repo2docker? Why not s2i?</a></li>
 
 <li><a href="/post/maintainerati-2017/">maintainerati 2017</a></li>
-
-<li><a href="/post/designing-data-intensive-applications/">designing data intensive applications</a></li>
 
     </ol>
   </section>

@@ -12,7 +12,7 @@
 
 
 
-<meta property="og:updated_time" content="2011-12-06T09:37:13&#43;00:00"/>
+<meta property="og:updated_time" content="2011-12-07T23:34:19&#43;00:00"/>
 
 
 
@@ -39,8 +39,8 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2011-12-06T09:37:13&#43;00:00",
-  "keywords": "books,class-notes,code,devlog,education,events,kubernetes,links,lol-culture,papers,personal,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
+  "dateModified": "2011-12-07T23:34:19&#43;00:00",
+  "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
 </script>
@@ -95,6 +95,35 @@ ga('send', 'pageview');
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-december-7-2011/">DevLog December 7, 2011</a></h2>
+    <p class="blog-post-meta"><time datetime="2011-12-07T23:34:19Z">Wed Dec 7, 2011</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
+
+
+</p>
+  </header>
+  <ol>
+<li>Redid Blog template. Recategorized all blog posts
+
+<ol>
+<li>Finally enabled mobile banking on ICICI. Still need 8 days for Internet activation. Sigh.</li>
+<li>Ordered HyperJuice 60W battery + Airline Adapter</li>
+<li>Read through the <a href="http://en.wikipedia.org/w/index.php?title=Template:WPBannerMeta">WPBannerMeta</a> template (and its subtemplates), figured out where to get the assessment markers in. Poof that was hard. These templates are perfect examples of &#8216;hacks&#8217; &#8211; initially &#8216;designed&#8217; for templating text, they&#8217;ve grown into homebrew programming languages that are worse than PHP. True evolution :)</li>
+<li>Read through, replied to <strong>very</strong> detailed questions about MW development from the KovaiGeeks folks. Both me and Sumanah were amazed at the enthusiasm shown. Should be one fun workshop!</li>
+<li>Fixed arbit bugs in in SelectionSifter, moved away from anything in QueryPage</li>
+<li>Started using SparrowApp and WunderList. Amazing they are.</li>
+</ol></li>
+</ol>
+
+</article> 
 
 
 
@@ -897,32 +926,6 @@ ga('send', 'pageview');
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/non-ascii-characters-http-headers/">Non-ASCII Characters in HTTP Headers</a></h2>
-    <p class="blog-post-meta"><time datetime="2011-08-13T00:56:10Z">Sat Aug 13, 2011</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>
-
-
-<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/code" rel="tag">code</a>
-
-</p>
-  </header>
-  <p>I was debugging an issue <a href="http://interviewstreet.com">at work</a> today where a (generated) file refused to download in Chrome, but the same URL worked just fine with wget. I remember reading in the <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec2.html#sec2.2">HTTP Spec</a> that HTTP headers can only be lower ASCII, so when wget mangled the output file&#8217;s name, the problem was obvious &#8211; the file name contained a character that wasn&#8217;t in lower ASCII (an accented A). Chrome had borked on encountering it, while wget soldiered on. Using <code>iconv</code> to strip non-ASCII characters in the file name on the server side fixed the issue.</p>
-
-<p>Moral of the story? Read the RFCs! The <a href="http://www.w3.org/Protocols/rfc2616/rfc2616.html">HTTP one</a>, in particular, is remarkably readable and you <em>should</em> read it if you&#8217;re doing non-trivial Web Development.</p>
-
-<p>P.S: If I had had time, I&#8217;d have went around testing this behavior in several user agents and documenting their behavior (and possibly submitting bug reports) &#8211; but <insert-excuse-here>.</p>
-
-<p>&nbsp;</p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/post/page/13/" rel="prev" role="button">Previous page</a>
@@ -973,6 +976,8 @@ ga('send', 'pageview');
     <ol class="list-unstyled">
 
 
+<li><a href="/post/the-littlest-jupyterhub/">The Littlest Jupyterhub</a></li>
+
 <li><a href="/post/kubectl-rbac/">Kubectl verbose logging tricks</a></li>
 
 <li><a href="/post/2017/">2017</a></li>
@@ -980,8 +985,6 @@ ga('send', 'pageview');
 <li><a href="/post/why-not-s2i/">Why repo2docker? Why not s2i?</a></li>
 
 <li><a href="/post/maintainerati-2017/">maintainerati 2017</a></li>
-
-<li><a href="/post/designing-data-intensive-applications/">designing data intensive applications</a></li>
 
     </ol>
   </section>

@@ -12,7 +12,7 @@
 
 
 
-<meta property="og:updated_time" content="2011-08-11T04:09:23&#43;00:00"/>
+<meta property="og:updated_time" content="2011-08-13T00:56:10&#43;00:00"/>
 
 
 
@@ -39,8 +39,8 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2011-08-11T04:09:23&#43;00:00",
-  "keywords": "books,class-notes,code,devlog,education,events,kubernetes,links,lol-culture,papers,personal,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
+  "dateModified": "2011-08-13T00:56:10&#43;00:00",
+  "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
 </script>
@@ -95,6 +95,32 @@ ga('send', 'pageview');
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/non-ascii-characters-http-headers/">Non-ASCII Characters in HTTP Headers</a></h2>
+    <p class="blog-post-meta"><time datetime="2011-08-13T00:56:10Z">Sat Aug 13, 2011</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>
+
+
+<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/code" rel="tag">code</a>
+
+</p>
+  </header>
+  <p>I was debugging an issue <a href="http://interviewstreet.com">at work</a> today where a (generated) file refused to download in Chrome, but the same URL worked just fine with wget. I remember reading in the <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec2.html#sec2.2">HTTP Spec</a> that HTTP headers can only be lower ASCII, so when wget mangled the output file&#8217;s name, the problem was obvious &#8211; the file name contained a character that wasn&#8217;t in lower ASCII (an accented A). Chrome had borked on encountering it, while wget soldiered on. Using <code>iconv</code> to strip non-ASCII characters in the file name on the server side fixed the issue.</p>
+
+<p>Moral of the story? Read the RFCs! The <a href="http://www.w3.org/Protocols/rfc2616/rfc2616.html">HTTP one</a>, in particular, is remarkably readable and you <em>should</em> read it if you&#8217;re doing non-trivial Web Development.</p>
+
+<p>P.S: If I had had time, I&#8217;d have went around testing this behavior in several user agents and documenting their behavior (and possibly submitting bug reports) &#8211; but <insert-excuse-here>.</p>
+
+<p>&nbsp;</p>
+
+</article> 
 
 
 
@@ -618,34 +644,6 @@ ga('send', 'pageview');
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/my-new-canon-550d-from-flipkart/">My New Canon 550D from Flipkart</a></h2>
-    <p class="blog-post-meta"><time datetime="2011-06-07T13:20:40Z">Tue Jun 7, 2011</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/personal" rel="category tag">personal</a>
-
-
-<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/flipkart" rel="tag">flipkart</a>, <a href="/tags/photo" rel="tag">photo</a>, <a href="/tags/photography" rel="tag">photography</a>
-
-</p>
-  </header>
-  <p style="text-align: center;">
-  <a title="Dark and Stupid by YuviPanda, on Flickr" href="http://www.flickr.com/photos/yuvi/5807777117/"><img class="aligncenter" src="http://farm4.static.flickr.com/3275/5807777117_53668b3747_z.jpg" alt="Dark and Stupid" width="408" height="640" /></a>
-</p>
-
-<p>I was finally able to order my <a href="http://www.flipkart.com/cameras/canon/itmczftxkzsprmvk?pid=camcvydjt4rff96g&amp;&amp;affid=yuvipandag">Canon 550D</a> from Flipkart. Their customer service was <strong>awesome</strong> &#8211; both on <a href="http://twitter.com/flipkart">twitter</a> (when the camera was out of stock) and via the phone after it was ordered. I ordered Cash on Delivery, and despite some minor issues with the delivery person (uhm, so I&#8217;m supposed to hand over 39k, <strong>and then</strong> open the box? What if I found a box of bricks?) &#8211; I got the camera within 3 working days of ordering it. Impressive. Flipkart is awesome :)</p>
-
-<p>I also got the <a href="http://www.flipkart.com/cameras/lenses/itmczyhazkk9uzvg?pid=acccx3sgep6yd7sw&amp;_l=zmivCgZMFx0bMwIECa6Cow--&amp;_r=r9BKq32uPQ7B1KhXaW5zZg--&amp;ref=ffeaeef8-5805-4e94-a60d-2e6ee69c9f36&amp;affid=yuvipandag">50mm 1.8</a> (underhanded practice by flipkart &#8211; they say free and then bump up the cost to match. Didn&#8217;t matter in this case since I was ordering it anyway, but definitely <em>not cool)<strong>.</strong></em> Incredible lens. I haven&#8217;t even tried on the Kit Lens yet &#8211; playing with the 50mm has been so much fun. Will review both camera and lens once I&#8217;ve played with it enough.</p>
-
-<p>Might renew <a href="http://flickr.com">my flickr</a> membership soon &#8211; tried <a href="http://500px.com">500px</a> but wasn&#8217;t good enough. Any other suggestions?</p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/post/page/14/" rel="prev" role="button">Previous page</a>
@@ -696,6 +694,8 @@ ga('send', 'pageview');
     <ol class="list-unstyled">
 
 
+<li><a href="/post/the-littlest-jupyterhub/">The Littlest Jupyterhub</a></li>
+
 <li><a href="/post/kubectl-rbac/">Kubectl verbose logging tricks</a></li>
 
 <li><a href="/post/2017/">2017</a></li>
@@ -703,8 +703,6 @@ ga('send', 'pageview');
 <li><a href="/post/why-not-s2i/">Why repo2docker? Why not s2i?</a></li>
 
 <li><a href="/post/maintainerati-2017/">maintainerati 2017</a></li>
-
-<li><a href="/post/designing-data-intensive-applications/">designing data intensive applications</a></li>
 
     </ol>
   </section>

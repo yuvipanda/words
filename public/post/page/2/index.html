@@ -12,7 +12,7 @@
 
 
 
-<meta property="og:updated_time" content="2017-03-29T20:47:10-07:00"/>
+<meta property="og:updated_time" content="2017-03-31T23:23:52-07:00"/>
 
 
 
@@ -39,8 +39,8 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2017-03-29T20:47:10-07:00",
-  "keywords": "books,class-notes,code,devlog,education,events,kubernetes,links,lol-culture,papers,personal,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
+  "dateModified": "2017-03-31T23:23:52-07:00",
+  "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
 </script>
@@ -95,6 +95,47 @@ ga('send', 'pageview');
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/systemd-simple-containment/">systemd simple containment for GUI applications &amp; shells</a></h2>
+    <p class="blog-post-meta"><time datetime="2017-03-31T23:23:52-07:00">Fri Mar 31, 2017</time> by  in 
+
+<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/systemd" rel="tag">systemd</a>, <a href="/tags/learning" rel="tag">learning</a>, <a href="/tags/code" rel="tag">code</a>
+
+</p>
+  </header>
+  <p>I earlier had <a href="http://words.yuvi.in/post/systemd-gui-applications/">a vaguely working setup</a> for making sure browsers, shells and other applications don&rsquo;t eat all RAM / CPU on my machine with systemd + sudo + shell scripts.</p>
+
+<p>It was a hacky solution, and also had complications when used to launch shells. It wasn&rsquo;t passing in all the environment varialbes it should, causing interesting-to-debug issues. <code>sudo</code> rules were complex, and hard to do securely.</p>
+
+<p>I had also been looking for an excuse to learn more Golang, so I ended up writing <a href="https://github.com/yuvipanda/systemd-simple-containment"><code>systemd-simple-containment</code></a> or <code>ssc</code>.</p>
+
+<p>It&rsquo;s a simple golang application that produces a binary that can be <a href="https://en.wikipedia.org/wiki/Setuid"><code>setuid</code></a> to <code>root</code>, and thus get around all our <code>sudo</code> complexity, at the price of having to be very, very careful about the code. Fortunately, it&rsquo;s short enough (~100 lines) and <code>systemd-run</code> helps it keep the following invariants:</p>
+
+<ol>
+<li>It will never spawn any executable as any user other than the &lsquo;real&rsquo; uid / gid of the user calling the binary.</li>
+<li>It doesn&rsquo;t allow arbitrary systemd <code>properties</code> to be set, ensuring a more limited attack surface.</li>
+</ol>
+
+<p>However, this is the first time I&rsquo;m playing with setuid and with Go, so I probably fucked something up. I feel ok enough about my understanding of real and effective uids for now to use it myself, but not to recommend it to other people. Hopefully I&rsquo;ll be confident enough say that soon :)</p>
+
+<p>By using a real programming language, I also easily get commandline flags for sharing tty or not (so I can use the same program for launching GUI &amp; interactive terminal applications), pass all environment variables through (which can&rsquo;t be just standard child inheritence, since <code>systemd-run</code> doesn&rsquo;t work that way) &amp; the ability to setuid (you can&rsquo;t do that easily to a script).</p>
+
+<p>I was sure I&rsquo;d hate writing go because of the constant <code>if err != nil</code> checks, but it hasn&rsquo;t bothered me that much. I would like to write more Go, to get a better feel for it. This code is too short to like a language, but I definitely hate it less :)</p>
+
+<p>Anyway, now I can launch GUI applications with <code>ssc -tty=false -isolation=strict firefox</code> and it does the right thing. I currently have available <code>-isolation=strict</code> and <code>-isolation=relaxed</code>, the former performing stronger sandboxing (NoNewPrivileges, PrivateTmp) than the latter (just MemoryMax). i&rsquo;ll slowly add more protections here, but just keep two modes (ideally).</p>
+
+<p>My Gnome Terminal shell command is now <code>ssc -isolation=relaxed /bin/bash -i</code> and it works great :)</p>
+
+<p>I am pretty happy with <code>ssc</code> as it exists now. Only thing I now want to do is to be able to use it from the GNOME launcher (I am using GNOME3 with gnome-shell). Apparently <em>shortcuts</em> are no longer cool and hence pretty hard to create in modern desktop environments :| I shall keep digging!</p>
+
+</article> 
 
 
 
@@ -514,24 +555,6 @@ exec sudo systemd-run \
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/lua-paper/">The Lua Paper</a></h2>
-    <p class="blog-post-meta"><time datetime="2016-02-11T21:43:23Z">Thu Feb 11, 2016</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/links" rel="category tag">links</a>
-
-
-</p>
-  </header>
-  <p><a href="http://www.lua.org/spe.html">http://www.lua.org/spe.html</a> is a pretty nice read!</p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/post/" rel="prev" role="button">Previous page</a>
@@ -582,6 +605,8 @@ exec sudo systemd-run \
     <ol class="list-unstyled">
 
 
+<li><a href="/post/the-littlest-jupyterhub/">The Littlest Jupyterhub</a></li>
+
 <li><a href="/post/kubectl-rbac/">Kubectl verbose logging tricks</a></li>
 
 <li><a href="/post/2017/">2017</a></li>
@@ -589,8 +614,6 @@ exec sudo systemd-run \
 <li><a href="/post/why-not-s2i/">Why repo2docker? Why not s2i?</a></li>
 
 <li><a href="/post/maintainerati-2017/">maintainerati 2017</a></li>
-
-<li><a href="/post/designing-data-intensive-applications/">designing data intensive applications</a></li>
 
     </ol>
   </section>
