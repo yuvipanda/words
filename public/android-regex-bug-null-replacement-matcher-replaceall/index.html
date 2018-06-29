@@ -27,10 +27,11 @@ On a recent project, a subtle bug in Android&#8217;s Matcher.replaceAll behavior
 
 
 
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Android RegEx bug: ‘null’ replacement with Matcher.replaceAll"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Android RegEx bug: ‘null’ replacement with Matcher.replaceAll"/>
 <meta name="twitter:description" content="Android&#8217;s Regular Expressions engine is API compatible with the generic Java implementation, but under the hood uses ICU&#8217;s RegEx engine. This usually causes no problems, until it does and then you&#8217;re sortof fucked, but not really.
 On a recent project, a subtle bug in Android&#8217;s Matcher.replaceAll behavior bit me. When replacing values of captured groups (&#39;$1&#39;&lt;/code,&lt;code&gt;&#39;$2&#39;, etc), Android&#8217;s implementation replaced a reference to an empty group with the literal string &#39;null&#39; instead of just skipping it (aka replacing with empty string &#39;&#39;), which is what most other Java implemetations do."/>
-<meta name="generator" content="Hugo 0.31.1" />
+<meta name="generator" content="Hugo 0.40.1" />
 
 
     
@@ -63,13 +64,6 @@ On a recent project, a subtle bug in Android&#8217;s Matcher.replaceAll behavior
     
 
     
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-110578237-1', 'auto');
-ga('send', 'pageview');
-</script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
-
 
     
 
@@ -189,6 +183,8 @@ ga('send', 'pageview');
     <ol class="list-unstyled">
 
 
+<li><a href="/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></li>
+
 <li><a href="/post/the-littlest-jupyterhub/">The Littlest Jupyterhub</a></li>
 
 <li><a href="/post/kubectl-rbac/">Kubectl verbose logging tricks</a></li>
@@ -196,8 +192,6 @@ ga('send', 'pageview');
 <li><a href="/post/2017/">2017</a></li>
 
 <li><a href="/post/why-not-s2i/">Why repo2docker? Why not s2i?</a></li>
-
-<li><a href="/post/maintainerati-2017/">maintainerati 2017</a></li>
 
     </ol>
   </section>
@@ -214,7 +208,7 @@ ga('send', 'pageview');
     <footer class="blog-footer">
       <p>
       
-      CC0
+      Blog template created by <a href="https://twitter.com/mdo">@mdo</a>, ported to Hugo by <a href='https://twitter.com/mralanorth'>@mralanorth</a>.
       
       </p>
       <p>

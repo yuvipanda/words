@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grading on Yuvi Panda</title>
+    <link>http://words.yuvi.in/categories/grading/</link>
+    <description>Recent content in Grading on Yuvi Panda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 21 Jun 2018 15:00:06 -0700</lastBuildDate>
+    
+	<atom:link href="http://words.yuvi.in/categories/grading/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Personal Auto Grading Roadmap</title>
+      <link>http://words.yuvi.in/post/personal-grading-roadmap/</link>
+      <pubDate>Thu, 21 Jun 2018 15:00:06 -0700</pubDate>
+      
+      <guid>http://words.yuvi.in/post/personal-grading-roadmap/</guid>
+      <description>I&amp;rsquo;m doing a bunch of autograding work in the Jupyter ecosystem. I&amp;rsquo;ve little direct experience in this vast area, which makes building good systems for it hard. When I have explicit users with specific use cases to meet, it always becomes easier. This blog post is an attempt to:
+ Explain the use cases &amp;amp; users I need to serve Describe the components I am working on  As usual, I am attempting to build these within the larger Jupyter community in ways everyone can use, rather than just the amazing folks at Berkeley.</description>
+    </item>
+    
+  </channel>
+</rss>

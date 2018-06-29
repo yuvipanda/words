@@ -12,7 +12,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-01-11T15:15:58-08:00"/>
+<meta property="og:updated_time" content="2018-06-28T22:43:56-07:00"/>
 
 
 
@@ -23,9 +23,10 @@
 
 
 
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Code"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Code"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
-<meta name="generator" content="Hugo 0.31.1" />
+<meta name="generator" content="Hugo 0.40.1" />
 
 
     
@@ -39,7 +40,7 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2018-01-11T15:15:58-08:00",
+  "dateModified": "2018-06-28T22:43:56-07:00",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
@@ -59,13 +60,6 @@
     
 
     
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-110578237-1', 'auto');
-ga('send', 'pageview');
-</script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
-
 
     
 
@@ -95,6 +89,90 @@ ga('send', 'pageview');
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></h2>
+    <p class="blog-post-meta"><time datetime="2018-06-28T22:43:56-07:00">Thu Jun 28, 2018</time> by  in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>
+
+
+</p>
+  </header>
+  
+
+<p>Inspired by conversations with <a href="https://github.com/bollwyvl">Nick Bollweg</a> and
+<a href="http://matthewrocklin.com/">Matt Rocklin</a>, I experimented with using
+<a href="https://github.com/conda/constructor">conda constructor</a> as the installer for
+<a href="http://words.yuvi.in/post/the-littlest-jupyterhub/">The Littlest JupyterHub</a>.
+Theoretically, it fit the bill perfectly - I wanted a way to ship arbitrary
+packages in multiple languages (python &amp; node) in an easy to install self-contained way,
+didn&rsquo;t want to make debian packages &amp; wanted to use a tool that people in the Jupyter
+ecosystem were familiar with. Constructor seemed to provide just that.</p>
+
+<p>I sortof got it working, but in the end ran into enough structural problems that
+I decided it isn&rsquo;t the right tool for this job. This blog post is a note to my
+future self on <em>why</em>.</p>
+
+<p>This isn&rsquo;t a &lsquo;takedown&rsquo; of conda or conda constructor - just a particular
+use case where it didn&rsquo;t work out and a demonstration of how little I know
+about conda. It probably works great if you are doing more scientific computing
+and less &lsquo;ship a software system&rsquo;!</p>
+
+<h2 id="does-not-work-with-conda-forge">Does not work with <code>conda-forge</code></h2>
+
+<p>I &lt;3 <a href="https://conda-forge.org/">conda-forge</a> and the community around
+it. I know there&rsquo;s a nice <a href="https://anaconda.org/conda-forge/jupyterhub">jupyterhub</a>
+package there, which takes care of installing JupyterHub, node, and required
+node modules.</p>
+
+<p>However, this doesn&rsquo;t actually work. conda constructor does not support
+<a href="https://www.anaconda.com/blog/developer-blog/condas-new-noarch-packages/">noarch packages</a>,
+and JupyterHub relies on several <code>noarch</code> packages. From my understanding,
+more <code>conda-forge</code> packages are moving towards being <code>noarch</code> (for good reason!).</p>
+
+<p>Looking at <a href="https://github.com/conda/constructor/issues/86">this issue</a>,
+it doesn&rsquo;t look like this is a high priority item for them to fix anytime soon.
+I understand that - they don&rsquo;t owe the world free work! It just makes conda
+constructor a no-go for my use case&hellip;</p>
+
+<h2 id="no-support-for-pip">No support for pip</h2>
+
+<p>You can pip install packages in a conda environment, and they mostly just work.
+There are a <em>lot</em> of python packages on PyPI that are installable via pip that
+I&rsquo;d like to use. constructor doesn&rsquo;t support bundling these, which is entirely
+fair! <a href="https://github.com/conda/constructor/pull/96">This PR</a> attempted something
+here, but was rejected.</p>
+
+<p>So if I want to keep using packages that don&rsquo;t exist in <code>conda-forge</code> yet but
+do exist in pip, I would have to make sure these packages and all their dependencies
+exist as conda packages too. This would be fine if constructor was giving
+me enough value to justify it, but right now it is not. I&rsquo;ve also tried going
+down a similar road (<em>cough</em> debian <em>cough</em>) and did not want to do that again :)</p>
+
+<h2 id="awkward-post-install-bash">Awkward <code>post-install.bash</code></h2>
+
+<p>I wanted to set up systemd units post install. Right off the bat this should
+have made me realize conda constructor was not the right tool for the job :D
+The only injected environment variable is <code>$PREFIX</code>, which is not super helpful
+if you wanna do stuff like &lsquo;copy this systemd unit file somewhere&rsquo;. I ended up
+writing a small python module that does all these things, and calling it from
+post-install. However, even then I couldn&rsquo;t pass any environment variables to it,
+making testing / CI hard.</p>
+
+<h2 id="current-solution">Current solution</h2>
+
+<p>Currently, we have a <a href="https://github.com/yuvipanda/the-littlest-jupyterhub/blob/9cc05a9d627515a01b68e244a970079481be7d9e/installer/install.bash">bootstrap script</a>
+that downloads miniconda, &amp; bootstraps from there to a full JupyterHub install.
+Things like systemd units &amp; sudo rules are managed by a <a href="https://github.com/yuvipanda/the-littlest-jupyterhub/tree/9cc05a9d627515a01b68e244a970079481be7d9e/tljh">python module</a>
+that is called from the bootstrap script.</p>
+
+</article> 
 
 
 
@@ -396,29 +474,6 @@ want to execute.</p>
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/die-80-cols-or-die-guidelines/">Die ’80 cols or die!’ guidelines!</a></h2>
-    <p class="blog-post-meta"><time datetime="2013-08-01T16:51:09Z">Thu Aug 1, 2013</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>, <a href="/categories/links" rel="category tag">links</a>
-
-
-</p>
-  </header>
-  <p>Python&rsquo;s <a href="http://www.python.org/dev/peps/pep-0008/">PEP8</a> has just been <a href="http://hg.python.org/peps/rev/fb24c80e9afb">changed</a> to no longer recommend sticking to 79 columns! The new text says:</p>
-
-<pre><code>Aim to limit all lines to a maximum of 79 characters, but up to 99 characters is acceptable when it improves readability.
-</code></pre>
-
-<p>It would be nice to not have any such set limits at all, and just depend on programmers not being insane, but this is still an improvement!</p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   
@@ -469,6 +524,8 @@ want to execute.</p>
     <ol class="list-unstyled">
 
 
+<li><a href="/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></li>
+
 <li><a href="/post/the-littlest-jupyterhub/">The Littlest Jupyterhub</a></li>
 
 <li><a href="/post/kubectl-rbac/">Kubectl verbose logging tricks</a></li>
@@ -476,8 +533,6 @@ want to execute.</p>
 <li><a href="/post/2017/">2017</a></li>
 
 <li><a href="/post/why-not-s2i/">Why repo2docker? Why not s2i?</a></li>
-
-<li><a href="/post/maintainerati-2017/">maintainerati 2017</a></li>
 
     </ol>
   </section>
@@ -494,7 +549,7 @@ want to execute.</p>
     <footer class="blog-footer">
       <p>
       
-      CC0
+      Blog template created by <a href="https://twitter.com/mdo">@mdo</a>, ported to Hugo by <a href='https://twitter.com/mralanorth'>@mralanorth</a>.
       
       </p>
       <p>

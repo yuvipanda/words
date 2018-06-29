@@ -27,10 +27,11 @@
 
 
 
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="DevLog for 28 Aug 2014"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="DevLog for 28 Aug 2014"/>
 <meta name="twitter:description" content="Let&#8217;s see. I&#8217;m also going to attempt to include patch links wherever possible.
  Cleaned up session handling bugs in Quarry. They were previously not closing properly, causing SQLAlchemy exceptions now and then that&#8217;ll let queries die in a &#8216;queued&#8217; state. This should hopefully be fixed by https://gerrit.wikimedia.org/r/#/c/156909/. Made https://graphite.wmflabs.org somewhat more stable again for use by Wikimedia BetaLabs folks by just blacklisting all other projects from sending data to it (with a local whitelist hack &#43; https://gerrit."/>
-<meta name="generator" content="Hugo 0.31.1" />
+<meta name="generator" content="Hugo 0.40.1" />
 
 
     
@@ -63,13 +64,6 @@
     
 
     
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-110578237-1', 'auto');
-ga('send', 'pageview');
-</script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
-
 
     
 
@@ -185,6 +179,8 @@ ga('send', 'pageview');
     <ol class="list-unstyled">
 
 
+<li><a href="/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></li>
+
 <li><a href="/post/the-littlest-jupyterhub/">The Littlest Jupyterhub</a></li>
 
 <li><a href="/post/kubectl-rbac/">Kubectl verbose logging tricks</a></li>
@@ -192,8 +188,6 @@ ga('send', 'pageview');
 <li><a href="/post/2017/">2017</a></li>
 
 <li><a href="/post/why-not-s2i/">Why repo2docker? Why not s2i?</a></li>
-
-<li><a href="/post/maintainerati-2017/">maintainerati 2017</a></li>
 
     </ol>
   </section>
@@ -210,7 +204,7 @@ ga('send', 'pageview');
     <footer class="blog-footer">
       <p>
       
-      CC0
+      Blog template created by <a href="https://twitter.com/mdo">@mdo</a>, ported to Hugo by <a href='https://twitter.com/mralanorth'>@mralanorth</a>.
       
       </p>
       <p>

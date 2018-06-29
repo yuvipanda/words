@@ -12,7 +12,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-06-18T13:14:59-07:00"/>
+<meta property="og:updated_time" content="2018-06-28T22:43:56-07:00"/>
 
 
 
@@ -23,9 +23,10 @@
 
 
 
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Yuvi Panda"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Yuvi Panda"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
-<meta name="generator" content="Hugo 0.31.1" />
+<meta name="generator" content="Hugo 0.40.1" />
 
 
     
@@ -39,7 +40,7 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2018-06-18T13:14:59-07:00",
+  "dateModified": "2018-06-28T22:43:56-07:00",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
@@ -59,13 +60,6 @@
     
 
     
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-110578237-1', 'auto');
-ga('send', 'pageview');
-</script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
-
 
     
 
@@ -95,6 +89,90 @@ ga('send', 'pageview');
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></h2>
+    <p class="blog-post-meta"><time datetime="2018-06-28T22:43:56-07:00">Thu Jun 28, 2018</time> by  in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>
+
+
+</p>
+  </header>
+  
+
+<p>Inspired by conversations with <a href="https://github.com/bollwyvl">Nick Bollweg</a> and
+<a href="http://matthewrocklin.com/">Matt Rocklin</a>, I experimented with using
+<a href="https://github.com/conda/constructor">conda constructor</a> as the installer for
+<a href="http://words.yuvi.in/post/the-littlest-jupyterhub/">The Littlest JupyterHub</a>.
+Theoretically, it fit the bill perfectly - I wanted a way to ship arbitrary
+packages in multiple languages (python &amp; node) in an easy to install self-contained way,
+didn&rsquo;t want to make debian packages &amp; wanted to use a tool that people in the Jupyter
+ecosystem were familiar with. Constructor seemed to provide just that.</p>
+
+<p>I sortof got it working, but in the end ran into enough structural problems that
+I decided it isn&rsquo;t the right tool for this job. This blog post is a note to my
+future self on <em>why</em>.</p>
+
+<p>This isn&rsquo;t a &lsquo;takedown&rsquo; of conda or conda constructor - just a particular
+use case where it didn&rsquo;t work out and a demonstration of how little I know
+about conda. It probably works great if you are doing more scientific computing
+and less &lsquo;ship a software system&rsquo;!</p>
+
+<h2 id="does-not-work-with-conda-forge">Does not work with <code>conda-forge</code></h2>
+
+<p>I &lt;3 <a href="https://conda-forge.org/">conda-forge</a> and the community around
+it. I know there&rsquo;s a nice <a href="https://anaconda.org/conda-forge/jupyterhub">jupyterhub</a>
+package there, which takes care of installing JupyterHub, node, and required
+node modules.</p>
+
+<p>However, this doesn&rsquo;t actually work. conda constructor does not support
+<a href="https://www.anaconda.com/blog/developer-blog/condas-new-noarch-packages/">noarch packages</a>,
+and JupyterHub relies on several <code>noarch</code> packages. From my understanding,
+more <code>conda-forge</code> packages are moving towards being <code>noarch</code> (for good reason!).</p>
+
+<p>Looking at <a href="https://github.com/conda/constructor/issues/86">this issue</a>,
+it doesn&rsquo;t look like this is a high priority item for them to fix anytime soon.
+I understand that - they don&rsquo;t owe the world free work! It just makes conda
+constructor a no-go for my use case&hellip;</p>
+
+<h2 id="no-support-for-pip">No support for pip</h2>
+
+<p>You can pip install packages in a conda environment, and they mostly just work.
+There are a <em>lot</em> of python packages on PyPI that are installable via pip that
+I&rsquo;d like to use. constructor doesn&rsquo;t support bundling these, which is entirely
+fair! <a href="https://github.com/conda/constructor/pull/96">This PR</a> attempted something
+here, but was rejected.</p>
+
+<p>So if I want to keep using packages that don&rsquo;t exist in <code>conda-forge</code> yet but
+do exist in pip, I would have to make sure these packages and all their dependencies
+exist as conda packages too. This would be fine if constructor was giving
+me enough value to justify it, but right now it is not. I&rsquo;ve also tried going
+down a similar road (<em>cough</em> debian <em>cough</em>) and did not want to do that again :)</p>
+
+<h2 id="awkward-post-install-bash">Awkward <code>post-install.bash</code></h2>
+
+<p>I wanted to set up systemd units post install. Right off the bat this should
+have made me realize conda constructor was not the right tool for the job :D
+The only injected environment variable is <code>$PREFIX</code>, which is not super helpful
+if you wanna do stuff like &lsquo;copy this systemd unit file somewhere&rsquo;. I ended up
+writing a small python module that does all these things, and calling it from
+post-install. However, even then I couldn&rsquo;t pass any environment variables to it,
+making testing / CI hard.</p>
+
+<h2 id="current-solution">Current solution</h2>
+
+<p>Currently, we have a <a href="https://github.com/yuvipanda/the-littlest-jupyterhub/blob/9cc05a9d627515a01b68e244a970079481be7d9e/installer/install.bash">bootstrap script</a>
+that downloads miniconda, &amp; bootstraps from there to a full JupyterHub install.
+Things like systemd units &amp; sudo rules are managed by a <a href="https://github.com/yuvipanda/the-littlest-jupyterhub/tree/9cc05a9d627515a01b68e244a970079481be7d9e/tljh">python module</a>
+that is called from the bootstrap script.</p>
+
+</article> 
 
 
 
@@ -946,78 +1024,6 @@ Written for pedagogy and personal understanding rather than production use.</p><
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/python-gil-resources/">python gil resources</a></h2>
-    <p class="blog-post-meta"><time datetime="2017-04-05T23:18:19-07:00">Wed Apr 5, 2017</time> by  in 
-
-<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/python" rel="tag">python</a>, <a href="/tags/learning" rel="tag">learning</a>
-
-</p>
-  </header>
-  
-
-<p>I was in a conversation about the Python GIL with friends a few days ago, and realized that my understanding of the specifics of the GIL problem were super hand-wavy &amp; unstructured. So I spent some time collecting resources to learn more, and now have a better understanding!</p>
-
-<h4 id="python-s-infamous-gil-larry-hastings">Python&rsquo;s Infamous GIL (Larry Hastings)</h4>
-
-<p>This was a <em>great</em> introduction to the history of the GIL, why it was necessary &amp; reasons why getting rid of it is complicated.</p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4zeHStBowEk?ecver=1" frameborder="0" allowfullscreen></iframe>
-
-<h4 id="understanding-the-python-gil-david-beazley">Understanding the Python GIL (David Beazley)</h4>
-
-<p>This has wonderful visualizations that really helped me understand exactly <em>why</em> multi-threaded python behaves the way it does. Multithreading decreases performance, adding more cores decreases performance &amp; disabling cores increases performance :) All of this made vague hand-wavy sense to me before, and make much more concrete sense now.</p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Obt-vMVdM8s?ecver=1" frameborder="0" allowfullscreen></iframe>
-
-<h4 id="it-isn-t-easy-to-remove-the-gil-guido-van-rossum">It isn&rsquo;t easy to remove the GIL (Guido van Rossum)</h4>
-
-<p>A <a href="http://www.artima.com/weblogs/viewpost.jsp?thread=214235">blog post</a> from the BDFL of python, after yet another request to &lsquo;just get rid of the GIL&rsquo;.</p>
-
-<p>It set the (pretty high) bar for inclusion of a GIL removal patch (that he makes clear he will not write) in Python:</p>
-
-<blockquote>
-<p>I&rsquo;d welcome a set of patches into Py3k only if the performance for a single-threaded program (and for a multi-threaded but I/O-bound program) does not decrease.</p>
-</blockquote>
-
-<p>Not been met yet!</p>
-
-<h4 id="an-inside-look-at-the-gil-removal-patch-of-lore-dave-beazley">An Inside Look at the GIL Removal Patch of Lore (Dave Beazley)</h4>
-
-<p>There was an attempt in about 1999 to remove the GIL - the &lsquo;freethreading&rsquo; patch. This is a <a href="http://dabeaz.blogspot.com/2011/08/inside-look-at-gil-removal-patch-of.html">wonderful analysis</a> of that patch - what it tried to do, why it disappeared, what the performance costs of it were, etc. Something that really stood out to me and makes me feel not very hopeful about GIL removal in CPython was:</p>
-
-<blockquote>
-<p>Despite removing the GIL, I was unable to produce any performance experiment that showed a noticeable improvement on multiple cores. Really, the only benefit (ignoring the horrible performance) seen in pure Python code, was having preemptible instructions.</p>
-</blockquote>
-
-<p>This seems to be still true, even in the Gilectomy branch.</p>
-
-<h4 id="gilectomy-larry-hastings">Gilectomy (Larry Hastings)</h4>
-
-<p>This is the only talk about a recent (~2016) GIL removal attempt.</p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/P3AyI_u66Bw?ecver=1" frameborder="0" allowfullscreen></iframe>
-
-<p>It is amazing work, but doesn&rsquo;t give me much hope. There&rsquo;s been no new commits to the <a href="https://github.com/larryhastings/gilectomy/tree/gilectomy">public git repo</a> for about 5 months now, so am unsure what the state of it now is.</p>
-
-<p>There&rsquo;s probably many more - let me know if you know any, and I&rsquo;ll update this when I find out more!</p>
-
-<h4 id="gilectomy-2017-larry-hastings">Gilectomy - 2017 (Larry Hastings)</h4>
-
-<p>PyCon 2017 just happened, and Larry Hastings gave another talk!</p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pLqv11ScGsQ" frameborder="0" allowfullscreen></iframe>
-
-<p>It seems to have had a lot of intense work done on it, and the wall clock time graph in it warms my heart! I&rsquo;ve a little more hope now than I did after the 2016 talk :D</p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   
@@ -1068,6 +1074,8 @@ Written for pedagogy and personal understanding rather than production use.</p><
     <ol class="list-unstyled">
 
 
+<li><a href="/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></li>
+
 <li><a href="/post/the-littlest-jupyterhub/">The Littlest Jupyterhub</a></li>
 
 <li><a href="/post/kubectl-rbac/">Kubectl verbose logging tricks</a></li>
@@ -1075,8 +1083,6 @@ Written for pedagogy and personal understanding rather than production use.</p><
 <li><a href="/post/2017/">2017</a></li>
 
 <li><a href="/post/why-not-s2i/">Why repo2docker? Why not s2i?</a></li>
-
-<li><a href="/post/maintainerati-2017/">maintainerati 2017</a></li>
 
     </ol>
   </section>
@@ -1093,7 +1099,7 @@ Written for pedagogy and personal understanding rather than production use.</p><
     <footer class="blog-footer">
       <p>
       
-      CC0
+      Blog template created by <a href="https://twitter.com/mdo">@mdo</a>, ported to Hugo by <a href='https://twitter.com/mralanorth'>@mralanorth</a>.
       
       </p>
       <p>

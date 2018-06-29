@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Grading" />
+<meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://words.yuvi.in/categories/grading/" />
+
+
+
+<meta property="og:updated_time" content="2018-06-21T15:00:06-07:00"/>
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Grading"/>
+<meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
+<meta name="generator" content="Hugo 0.40.1" />
+
+
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Blog",
+  "headline": "Yuvi Panda",
+  "url" : "http://words.yuvi.in/categories/grading/",
+  "author": {
+    "@type": "Person",
+    "name": ""
+  },
+  "dateModified": "2018-06-21T15:00:06-07:00",
+  "keywords": "books,class-notes,code,devlog,education,events,grading,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
+  "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
+}
+</script>
+
+
+    <link rel="canonical" href="http://words.yuvi.in/categories/grading/">
+
+    <title>Yuvi Panda</title>
+
+    <!-- combined, minified CSS -->
+    <link href="http://words.yuvi.in/css/style.css" rel="stylesheet" integrity="sha384-O8wjsnz02XiyrPxnhfF6AVOv6YLBaEGRCnVF&#43;DL3gCPBy9cieyHcpixIrVyD2JS5" crossorigin="anonymous">
+
+    
+    <!-- RSS 2.0 feed -->
+    <link href="http://words.yuvi.in/categories/grading/index.xml" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
+    
+
+    
+
+    
+
+    
+
+  </head>
+
+  <body>
+
+    <div class="blog-masthead">
+    
+    </div>
+
+    <header class="blog-header">
+      <div class="container">
+        <h1 class="blog-title">
+            
+            <img src='/profile.jpg' width=80 style="border-radius: 50%; margin-bottom: 12px;">
+            <a href="http://words.yuvi.in/" rel="home">Yuvi Panda</a></h1>
+        <p class="lead blog-description"><a href="https://github.com/jupyterhub/jupyterhub">JupyterHub</a> | <a href="https://mybinder.org">MyBinder</a> | <a href="https://k8s.io">Kubernetes</a> | Open Culture</p>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+
+          
+
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/personal-grading-roadmap/">Personal Auto Grading Roadmap</a></h2>
+    <p class="blog-post-meta"><time datetime="2018-06-21T15:00:06-07:00">Thu Jun 21, 2018</time> by  in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/jupyter" rel="category tag">jupyter</a>, <a href="/categories/education" rel="category tag">education</a>, <a href="/categories/grading" rel="category tag">grading</a>
+
+
+</p>
+  </header>
+  
+
+<p>I&rsquo;m doing a bunch of autograding work in the Jupyter ecosystem. I&rsquo;ve little direct experience in this vast area, which makes building <em>good</em> systems for it hard. When I have explicit users with specific use cases to meet, it always becomes easier. This blog post is an attempt to:</p>
+
+<ol>
+<li>Explain the use cases &amp; users I need to serve</li>
+<li>Describe the components I am working on</li>
+</ol>
+
+<p>As usual, I am attempting to build these within the larger Jupyter community in ways everyone can use, rather than just the amazing folks at Berkeley.</p>
+
+<h2 id="use-cases">Use cases</h2>
+
+<p>I&rsquo;ve two primary use cases, at fairly extreme ends!</p>
+
+<ol>
+<li>This EdX course, with several thousand active students served by a small number of instructors</li>
+<li>Connector courses at UC Berkeley. There are quite a few of them, serving a smallish number of students. Faculty who are experts in their fields but not at navigating software development tools teach them.</li>
+</ol>
+
+<h2 id="test-authoring">Test authoring</h2>
+
+<h2 id="inline-student-feedback">Inline student feedback</h2>
+
+<h2 id="batch-grading">Batch grading</h2>
+
+<h2 id="interactive-grading">Interactive grading</h2>
+
+<h2 id="gradebooks">Gradebooks</h2>
+
+<h2 id="not-covered">Not covered</h2>
+
+</article> 
+
+
+
+
+
+
+
+
+        </div> <!-- /.blog-main -->
+
+        <aside class="col-sm-3 ml-auto blog-sidebar">
+  
+  <section class="sidebar-module sidebar-module-inset">
+    <h4>about</h4>
+    <p>I build infrastructure that helps reduce accidental complexities when using code to solve problems.</p>
+  </section>
+  
+  <section class="sidebar-module sidebar-module-inset">
+    <h4>projects</h4>
+    <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
+
+<p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
+</p>
+  </section>
+  
+  <section class="sidebar-module sidebar-module-inset">
+    <h4>work</h4>
+    <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
+
+<p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
+</p>
+  </section>
+  
+  <section class="sidebar-module sidebar-module-inset">
+    <h4>contact</h4>
+    <p><a href="mailto:yuvipanda@gmail.com">Email</a> is the best way to contact me privately.
+<a href="https://twitter.com/yuvipanda">Twitter</a> is the best way to contact me publicly.</p>
+  </section>
+  
+
+  
+        <section class="sidebar-module">
+    <h4>Recent Posts</h4>
+    <ol class="list-unstyled">
+
+
+<li><a href="/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></li>
+
+<li><a href="/post/personal-grading-roadmap/">Personal Auto Grading Roadmap</a></li>
+
+<li><a href="/post/the-littlest-jupyterhub/">The Littlest Jupyterhub</a></li>
+
+<li><a href="/post/kubectl-rbac/">Kubectl verbose logging tricks</a></li>
+
+<li><a href="/post/2017/">2017</a></li>
+
+    </ol>
+  </section>
+
+  
+
+  
+</aside>
+
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>
+      
+      Blog template created by <a href="https://twitter.com/mdo">@mdo</a>, ported to Hugo by <a href='https://twitter.com/mralanorth'>@mralanorth</a>.
+      
+      </p>
+      <p>
+      <a href="#">Back to top</a>
+      </p>
+    </footer>
+
+  </body>
+
+</html>

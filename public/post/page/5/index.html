@@ -12,7 +12,7 @@
 
 
 
-<meta property="og:updated_time" content="2014-08-27T00:29:35&#43;00:00"/>
+<meta property="og:updated_time" content="2014-08-28T22:56:53&#43;00:00"/>
 
 
 
@@ -23,9 +23,10 @@
 
 
 
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Posts"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
-<meta name="generator" content="Hugo 0.31.1" />
+<meta name="generator" content="Hugo 0.40.1" />
 
 
     
@@ -39,7 +40,7 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2014-08-27T00:29:35&#43;00:00",
+  "dateModified": "2014-08-28T22:56:53&#43;00:00",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
@@ -59,13 +60,6 @@
     
 
     
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-110578237-1', 'auto');
-ga('send', 'pageview');
-</script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
-
 
     
 
@@ -95,6 +89,32 @@ ga('send', 'pageview');
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-28-aug-2014/">DevLog for 28 Aug 2014</a></h2>
+    <p class="blog-post-meta"><time datetime="2014-08-28T22:56:53Z">Thu Aug 28, 2014</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
+
+
+</p>
+  </header>
+  <p>Let&#8217;s see. I&#8217;m also going to attempt to include patch links wherever possible.</p>
+
+<ul>
+<li>Cleaned up <code>session</code> handling bugs in Quarry. They were previously not closing properly, causing SQLAlchemy exceptions now and then that&#8217;ll let queries die in a &#8216;queued&#8217; state. This should <em>hopefully</em> be fixed by <a href="https://gerrit.wikimedia.org/r/#/c/156909/">https://gerrit.wikimedia.org/r/#/c/156909/</a>.</li>
+<li>Made <a href="https://graphite.wmflabs.org">https://graphite.wmflabs.org</a> somewhat more stable again for use by Wikimedia BetaLabs folks by just blacklisting all other projects from sending data to it (with a local whitelist hack + <a href="https://gerrit.wikimedia.org/r/#/c/156966/">https://gerrit.wikimedia.org/r/#/c/156966/</a>). This would let them use it, and they said they would find it massively useful. All this is a hack until <a href="https://rt.wikimedia.org/Ticket/Display.html?id=8163">https://rt.wikimedia.org/Ticket/Display.html?id=8163</a> could be resolved and I can deploy graphite on a &#8216;real&#8217; machine.</li>
+<li>Minor patch to my Gerrit -&gt; IRC bot to make it strip a common prefix (&#8216;operations/&#8217;) from change messages posted to the operations channel &#8211; <a href="https://gerrit.wikimedia.org/r/#/c/156877/">https://gerrit.wikimedia.org/r/#/c/156877/</a>. Also made one that calls jenkins-bot jerkins-bot if it -1&#8217;s your patch (<a href="https://gerrit.wikimedia.org/r/#/c/156878/">https://gerrit.wikimedia.org/r/#/c/156878/</a>) but it seems to have a bug that I can&#8217;t be bothered to debug atm.</li>
+</ul>
+
+<p>Might spend some more time with Hive over the next few days &#8211; figured out an approach for using it from Python, and it should be fun to do so!</p>
+
+</article> 
 
 
 
@@ -366,31 +386,6 @@ ga('send', 'pageview');
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-18-aug-2014/">DevLog for 18 Aug 2014</a></h2>
-    <p class="blog-post-meta"><time datetime="2014-08-18T12:39:06Z">Mon Aug 18, 2014</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
-
-
-</p>
-  </header>
-  <p>I&#8217;ve started the habit of opening up a devlog post each morning and just filling it up as I go along. Let&#8217;s hope I can keep this up :)</p>
-
-<ul>
-<li>Merged a couple of Android patches. The app is getting better every day without too much involvement from me, and yay for that :) I&#8217;ve gotten closure over the Android app &#8211; it was fucking terrible, and now it is quite awesome. Need to write another post about that.</li>
-<li>Fixed annoying bug with mysql connections being reset in Quarry&#8217;s query runners after a few hours. I had fixed this earlier when I was using <code>pymysql</code> directly with reconnect(ping=True), and assumed that switching to <a href="http://www.sqlalchemy.org/">SQLAlchemy</a> would&#8217;ve fixed it for me automagically. <a href="http://docs.sqlalchemy.org/en/latest/faq.html#mysql-server-has-gone-away">Apparently not</a>. MySQL Y U SO BAD?</li>
-<li>I have <code>sudo</code> access on <code>labmon1001</code> in prod! First Wikimedia production cluster machine I have root on, and will spend time over the next few weeks setting it up to run graphite. Should be fun!</li>
-<li>Getting slightly better at packaging python things. Packaged <a href="https://github.com/sidnei/txstatsd">python-txstatsd</a> with no lintian errors, and only a couple warnings :)</li>
-</ul>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/post/page/4/" rel="prev" role="button">Previous page</a>
@@ -441,6 +436,8 @@ ga('send', 'pageview');
     <ol class="list-unstyled">
 
 
+<li><a href="/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></li>
+
 <li><a href="/post/the-littlest-jupyterhub/">The Littlest Jupyterhub</a></li>
 
 <li><a href="/post/kubectl-rbac/">Kubectl verbose logging tricks</a></li>
@@ -448,8 +445,6 @@ ga('send', 'pageview');
 <li><a href="/post/2017/">2017</a></li>
 
 <li><a href="/post/why-not-s2i/">Why repo2docker? Why not s2i?</a></li>
-
-<li><a href="/post/maintainerati-2017/">maintainerati 2017</a></li>
 
     </ol>
   </section>
@@ -466,7 +461,7 @@ ga('send', 'pageview');
     <footer class="blog-footer">
       <p>
       
-      CC0
+      Blog template created by <a href="https://twitter.com/mdo">@mdo</a>, ported to Hugo by <a href='https://twitter.com/mralanorth'>@mralanorth</a>.
       
       </p>
       <p>
