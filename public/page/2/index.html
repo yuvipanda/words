@@ -12,7 +12,7 @@
 
 
 
-<meta property="og:updated_time" content="2017-04-05T23:18:19-07:00"/>
+<meta property="og:updated_time" content="2017-04-15T13:24:23-07:00"/>
 
 
 
@@ -40,8 +40,8 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2017-04-05T23:18:19-07:00",
-  "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
+  "dateModified": "2017-04-15T13:24:23-07:00",
+  "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
 </script>
@@ -89,6 +89,37 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/things-to-build/">things to build</a></h2>
+    <p class="blog-post-meta"><time datetime="2017-04-15T13:24:23-07:00">Sat Apr 15, 2017</time> by  in 
+
+<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/learning" rel="tag">learning</a>
+
+</p>
+  </header>
+  <p>This is a running list of things I want to build!</p>
+
+<p>There&rsquo;s an analogous running list of <a href="http://words.yuvi.in/post/things-to-learn/">things I want to learn</a>. Things move between them :) I also have higher standards of documentation (other people should be able to use it) before marking these as complete.</p>
+
+<ul>
+<li><p><strong>kubernetes-login</strong>
+A helper to openssh that allows users to log in to a configurable user pod
+running on a kubernetes cluster. Should ideally support scp / sftp too.
+Helps get rid of SPOF login nodes</p></li>
+
+<li><p><strong>just-enough-containment</strong>
+A purely for-learning docker-ish container project written purely in python.
+Written for pedagogy and personal understanding rather than production use.</p></li>
+</ul>
+
+</article> 
 
 
 
@@ -553,37 +584,6 @@ exec sudo systemd-run \
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/side-project-ua-emoji-firefox-extension/">Side Project: UA Emoji Firefox Extension</a></h2>
-    <p class="blog-post-meta"><time datetime="2016-03-28T05:29:05Z">Mon Mar 28, 2016</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>
-
-
-</p>
-  </header>
-  <p><em>Note: I&#8217;m trying to spend time explicitly writing random side projects that are not related to what I&#8217;m actively working on as my main project in some form.</em></p>
-
-<p>A random thread started by <a href="https://twitter.com/quominus">Ironholds</a> on a random mailing list I was wearily catching up on contained a joke from <a href="https://twitter.com/bearloga">bearloga</a> about malformed User Agents. This prompted me to write <a href="https://addons.mozilla.org/en-US/firefox/addon/uauliver/?src=search">UAuliver</a> (<a href="https://github.com/yuvipanda/uauliver-firefox-extension">source</a>), a Firefox extension that randomizes your user agent to be a random string of emoji. This breaks a surprisingly large number of software, I&#8217;m told! (GMail &amp; Gerrit being the ones I explicitly remember)</p>
-
-<p>Things I learnt from writing this:</p>
-
-<ol>
-<li>Writing Addons for Firefox is far easier to get started with than they were the last time I looked. Despite the confusing naming (Jetpack API == SDK != WordPress&#8217; Jetpack API != Addons != Plugins != WebExtension), the documentation and tooling were nice enough that I could finish all of this in a few hours!</li>
-<li>I can still write syntactically correct Javascript! \o/</li>
-<li>Generating a &#8216;string of emoji&#8217; is easier/harder than you would think, depending on how you would like to define &#8217;emoji&#8217;. The fact that Unicode deals in blocks that at least in this case aren&#8217;t too split up made this quite easy (I used the <a href="https://en.wikipedia.org/wiki/Emoji#Unicode_blocks">list</a> on Wikipedia to generate them). JS&#8217;s <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCodePoint">String.fromCodePoint</a> can also be used to detect if the codepoint you just generated randomly is actually allocated.</li>
-<li>I don&#8217;t actually know how HTTP headers deal with encoding and unicode. This is something I need to actually look up. Perhaps a re-read of the HTTP RfC is in order!</li>
-</ol>
-
-<p>It was a fun exercise, and I might write more Firefox extensions in the future!</p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/" rel="prev" role="button">Previous page</a>
@@ -634,6 +634,8 @@ exec sudo systemd-run \
     <ol class="list-unstyled">
 
 
+<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
+
 <li><a href="/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></li>
 
 <li><a href="/post/the-littlest-jupyterhub/">The Littlest Jupyterhub</a></li>
@@ -641,8 +643,6 @@ exec sudo systemd-run \
 <li><a href="/post/kubectl-rbac/">Kubectl verbose logging tricks</a></li>
 
 <li><a href="/post/2017/">2017</a></li>
-
-<li><a href="/post/why-not-s2i/">Why repo2docker? Why not s2i?</a></li>
 
     </ol>
   </section>

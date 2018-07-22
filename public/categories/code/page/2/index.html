@@ -12,7 +12,7 @@
 
 
 
-<meta property="og:updated_time" content="2013-08-01T16:51:09&#43;00:00"/>
+<meta property="og:updated_time" content="2013-08-25T23:44:25&#43;00:00"/>
 
 
 
@@ -40,8 +40,8 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2013-08-01T16:51:09&#43;00:00",
-  "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
+  "dateModified": "2013-08-25T23:44:25&#43;00:00",
+  "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
 </script>
@@ -89,6 +89,44 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-for-sun-aug-25-2013/">DevLog for Sun, Aug 25, 2013</a></h2>
+    <p class="blog-post-meta"><time datetime="2013-08-25T23:44:25Z">Sun Aug 25, 2013</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>, <a href="/categories/devlog" rel="category tag">devlog</a>, <a href="/categories/wiki" rel="category tag">wiki</a>
+
+
+</p>
+  </header>
+  
+
+<p>DevLogs have been something I&rsquo;ve not been writing much of of late. Time to fix that!</p>
+
+<h2 id="wlm-android-app">WLM Android App</h2>
+
+<p>Spent some time <a href="http://lists.wikimedia.org/pipermail/wikilovesmonuments/2013-August/006249.html">reviving the WLM Android App</a>. Wasn&rsquo;t too hard, and am surprised at how well it still runs :) Some work still needed to update the <a href="https://github.com/wikimedia/WLMMobile/commit/113d9abf7b675b147ece3f2be005ef1b6ba0e4cf#assets/www/js/campaigns-data.js">templates</a> and other metadata to refer to WLM2013 rather than WLM2012 &#8211; but that should not be too hard. The fact that it is an issue at all is simply because I ripped out all the Campaign related APIs a few weeks ago with my UploadCampaign rewrite.</p>
+
+<p><a href="https://commons.wikimedia.org/wiki/User:Multichill">multichill</a> was awesome in moving the <a href="https://tools.wmflabs.org/heritage/api/api.php">Monuments API</a> to <a href="https://tools.wmflabs.org">Tool Labs</a> &#8211; hence making it much faster! Initially we thought that the Toollabs DB was too slow for writes &#8211; but this turned out to be a mistake, since apparently the Replica Databases had slow writes, but <code>tools-db</code> itself was fine. There&rsquo;s <a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=48851">a bug</a> tracking this now. Toollabs version of the API still seems much faster to me than Toolserver&rsquo;s :)</p>
+
+<h2 id="uploadcampaigns-api">UploadCampaigns API</h2>
+
+<p>Mediawiki sucks. Eeeew! Specifically, writing API modules &#8211; why can&rsquo;t we just be happy and have everything be JSON? Sigh!</p>
+
+<p>I&rsquo;m adding <a href="https://gerrit.wikimedia.org/r/#/c/80782/">a patch</a> that allows <a href="https://www.mediawiki.org/wiki/Extension:UploadWizard/Campaigns">UploadCampaigns</a> to be queried selectively, rather than just via the normal page APIs. Right now, this only lets us filter by <code>enabled</code> status &#8211; but in the future, this should be able to also filter on a vast array of other properties. Properties about Geographic location come to mind as the most useful. That patch still has a good way to go before it can be merged (continue support being the foremost one), but it is getting there :)</p>
+
+<p>The ickiest part of the patch is perhaps that it sends out raw JSON data as a&#8230; string. So no matter which format you are using on your client, you <em>need</em> to use a JSON parser to deal with the Campaigns data. This sortof makes sense, since that is how the data is stored anyway. Doesn&rsquo;t make it any less icky, though!</p>
+
+<p>Not bad for a lazy Sunday, eh?</p>
+
+<p><strong>Update</strong>: After not being able to sleep, I also submitted <a href="https://gerrit.wikimedia.org/r/#/c/80946/">a patch</a> to make phpcs pass for UploadWizard, and also fought with the UploadCampaigns API patch to have it (brokenly?) support continuing. Yay?</p>
+
+</article> 
 
 
 
@@ -357,26 +395,6 @@
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/tor-flashproxies-browser/">Tor Flashproxies on your browser</a></h2>
-    <p class="blog-post-meta"><time datetime="2013-03-25T14:34:57Z">Mon Mar 25, 2013</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>, <a href="/categories/links" rel="category tag">links</a>
-
-
-</p>
-  </header>
-  <p>Tor is one of those things that you don&#8217;t really need at all until you really really need it. I don&#8217;t need it right now, but I still try to help it as much as possible. One of the easiest way to do so is to run a <a href="https://crypto.stanford.edu/flashproxy">flashproxy</a> (has nothing to do with Adobe!) on your browser &#8211; super simple to setup, and effective for people looking for <a href="https://www.torproject.org/docs/bridges">bridges</a>.</p>
-
-<p>The easiest way to use it if you&#8217;re a Chrome user is to use the <a href="https://chrome.google.com/webstore/detail/cupcake/dajjbehmbnbppjkcnpdkaniapgdppdnc">CupCake</a> extension (the initial colorscheme is a bit&#8230; geocities-y, but I&#8217;ve sent in <a href="https://github.com/glamrock/cupcake/pull/1">a patch</a> to fix that). You can also add <a href="https://gitweb.torproject.org/flashproxy.git/blob/HEAD:/modules/mediawiki/custom.js">this snippet</a> to your Mediawiki wiki either as a userscript or gadget. If you&#8217;re running a site, you can simply use <a href="https://crypto.stanford.edu/flashproxy/#badge-howto">the snippet on the flashproxy site</a> to have it run for all your visitors.</p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/categories/code/" rel="prev" role="button">Previous page</a>
@@ -427,6 +445,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
+
 <li><a href="/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></li>
 
 <li><a href="/post/the-littlest-jupyterhub/">The Littlest Jupyterhub</a></li>
@@ -434,8 +454,6 @@
 <li><a href="/post/kubectl-rbac/">Kubectl verbose logging tricks</a></li>
 
 <li><a href="/post/2017/">2017</a></li>
-
-<li><a href="/post/why-not-s2i/">Why repo2docker? Why not s2i?</a></li>
 
     </ol>
   </section>

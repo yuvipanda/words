@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Work Plan on Yuvi Panda</title>
+    <link>http://words.yuvi.in/categories/work-plan/</link>
+    <description>Recent content in Work Plan on Yuvi Panda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 21 Jul 2018 18:32:53 -0700</lastBuildDate>
+    
+	<atom:link href="http://words.yuvi.in/categories/work-plan/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Aug 2018 Work Plan</title>
+      <link>http://words.yuvi.in/post/aug-2018-plan/</link>
+      <pubDate>Sat, 21 Jul 2018 18:32:53 -0700</pubDate>
+      
+      <guid>http://words.yuvi.in/post/aug-2018-plan/</guid>
+      <description>I&amp;rsquo;m writing up monthly &amp;lsquo;work plans&amp;rsquo; to plan what work I&amp;rsquo;m trying to do every month, and do a retrospective after to see how much I got done. I work across a variety of open source projects with ambiguous responsibilities, so work planning isn&amp;rsquo;t very set. This has proven to be somewhat quite stressful for everyone involved. Let&amp;rsquo;s see if this helps!
+JupyterCon JupyterCon is in NYC towards the end of August, and it is going to set the pace for a bunch of stuff.</description>
+    </item>
+    
+  </channel>
+</rss>
