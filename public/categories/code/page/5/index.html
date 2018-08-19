@@ -9,24 +9,11 @@
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/categories/code/" />
-
-
-
-<meta property="og:updated_time" content="2010-12-07T02:42:49&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="og:updated_time" content="2010-12-25T11:50:04&#43;00:00"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Code"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
-<meta name="generator" content="Hugo 0.40.1" />
+<meta name="generator" content="Hugo 0.47" />
 
 
     
@@ -40,7 +27,7 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2010-12-07T02:42:49&#43;00:00",
+  "dateModified": "2010-12-25T11:50:04&#43;00:00",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
@@ -89,6 +76,30 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/enthusiastic-teachers-and-naive-implementation-of-gauss-seidel-approximations/">Enthusiastic Teachers and Naive Implementation of Gauss Seidel Approximations</a></h2>
+    <p class="blog-post-meta"><time datetime="2010-12-25T11:50:04Z">Sat Dec 25, 2010</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>, <a href="/categories/education" rel="category tag">education</a>
+
+
+</p>
+  </header>
+  <p>This semester, one of our so called <em>electives</em> (despite the fact that we have no real choice in them) is Numerical Methods. I don&#8217;t quite like the actual way the subject is taught &#8211; mind numbing, error prone calculations with a calculator. However, the methods are pretty awesome.</p>
+
+<p>The staff explained <a href="https://gist.github.com/753872">Gauss Seidel</a> yesterday, and it seemed a straightforward recursive solution to me. So in the break, I cooked up a small python <a href="http://en.wikipedia.org/wiki/Gauss%E2%80%93Seidel_method">script</a> that gave me all the intermediate answers as well &#8211; so for any <em>assignments</em> I could just run them through this and copy it to paper.</p>
+
+<p>What happened after that was more interesting. The staff made an offhand remark that she hates the subject, since it involves so much mindnumbingly repetitive calculative work, and not something fun like probability theory. I picked it up, and we had an interesting conversation that ended up with me showing her a 3-function version of the above code and explaining to her how I got this. She was incredibly interested &#8211; and asked me how to explain each line properly.</p>
+
+<p>Was a lot of fun. Sad that this is the first time in 3 years that I&#8217;ve had someone who is actually interested in what they&#8217;re teaching, rather than treating it as just a normal 9-5 job not much different from herding sheep. What exactly can we do to change this?</p>
+
+</article> 
 
 
 
@@ -336,64 +347,6 @@
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/cheese-gsoc-report-week-8/">Cheese GSoC Report – Week 8</a></h2>
-    <p class="blog-post-meta"><time datetime="2010-07-22T00:37:31Z">Thu Jul 22, 2010</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>
-
-
-</p>
-  </header>
-  <p>This week on Cheese&#8230;.</p>
-
-<p>WE MADE A RELEASE! :)</p>
-
-<p><a href="http://ftp.gnome.org/pub/GNOME/sources/cheese/2.31/">http://ftp.gnome.org/pub/GNOME/sources/cheese/2.31/</a></p>
-
-<p>Cheese 2.31.1 is out. It&#8217;s a dev release. Does not have zarro boogs.</p>
-
-<p>But it is a release!</p>
-
-<p>This week, we</p>
-
-<ol>
-<li>Fixed several perf bugs.</li>
-<li>Fixed some weird preferences dialog bugs</li>
-<li>Filed (and eventually had fixed) a bug in GStreamer.</li>
-<li>Fixed a regression</li>
-<li>Beautified the UI a bit (text name overlay of effects, etc)</li>
-
-<li><p>Assorted administrative work to prepare for release (Copyright</p>
-
-<p>updating, merging back into master, etc)</p></li>
-</ol>
-
-<p>I also passed my mid terms :)</p>
-
-<p>Next week&#8230;</p>
-
-<ol>
-<li><p>Remove dependency on Mx Toolkit (it is not a blessed dependency,</p>
-
-<p>and i&#8217;m not using large parts of it anyway)</p></li>
-
-<li><p>Performance improvements, especially at startup time. It is taking</p>
-
-<p><em>waaay</em> too long .</p></li>
-
-<li><p>Fix problems in video mode.</p></li>
-
-<li><p>Make the TODO list shorter.</p></li>
-</ol>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/categories/code/page/4/" rel="prev" role="button">Previous page</a>
@@ -444,6 +397,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
+
 <li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
 <li><a href="/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></li>
@@ -451,8 +406,6 @@
 <li><a href="/post/the-littlest-jupyterhub/">The Littlest Jupyterhub</a></li>
 
 <li><a href="/post/kubectl-rbac/">Kubectl verbose logging tricks</a></li>
-
-<li><a href="/post/2017/">2017</a></li>
 
     </ol>
   </section>

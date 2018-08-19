@@ -6,10 +6,22 @@
     <description>Recent content in Code on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 21 Jul 2018 18:32:53 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 15 Aug 2018 22:41:17 -0600</lastBuildDate>
     
 	<atom:link href="http://words.yuvi.in/categories/code/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Freedoms for Open Source Software users in the Cloud</title>
+      <link>http://words.yuvi.in/post/oss-in-the-cloud/</link>
+      <pubDate>Wed, 15 Aug 2018 22:41:17 -0600</pubDate>
+      
+      <guid>http://words.yuvi.in/post/oss-in-the-cloud/</guid>
+      <description>This post is from conversations with Matt Rocklin and others at the PANGEO developer meeting at NCAR
+Today, almost all of &amp;lsquo;the cloud&amp;rsquo; is run by ruthlessly competitive hypercapitalist large scale organizations. This is great &amp;amp; terrible.
+When writing open source applications that primarily run on the cloud, I try to make sure my users (primarily people deploying my software for their users) have the following freedoms:
+ They can run the software on any cloud provider they choose to They can run the software on a bunch of computers they physically own, with the help of other open source software only  Ensuring these freedoms for my users requires the following restrictions on me:</description>
+    </item>
     
     <item>
       <title>Aug 2018 Work Plan</title>

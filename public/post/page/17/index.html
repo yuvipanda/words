@@ -9,24 +9,11 @@
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/post/" />
-
-
-
-<meta property="og:updated_time" content="2011-04-11T21:24:26&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="og:updated_time" content="2011-04-11T21:45:12&#43;00:00"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
-<meta name="generator" content="Hugo 0.40.1" />
+<meta name="generator" content="Hugo 0.47" />
 
 
     
@@ -40,7 +27,7 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2011-04-11T21:24:26&#43;00:00",
+  "dateModified": "2011-04-11T21:45:12&#43;00:00",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
@@ -89,6 +76,64 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-mar-2011/">DevLog: Mar 2011</a></h2>
+    <p class="blog-post-meta"><time datetime="2011-04-11T21:45:12Z">Mon Apr 11, 2011</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
+
+
+<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/devlog" rel="tag">devlog</a>
+
+</p>
+  </header>
+  
+
+<p><em>I&#8217;ve started keeping devlogs, recording productive activity every day in an attempt to publicly shame myself into doing productive things. This is the delayed march edition</em></p>
+
+<h3 id="mar-20-8211-31">Mar 20 &#8211; 31</h3>
+
+<p>More contract work for more money.</p>
+
+<p>My dump patch to meidawiki got commited, then blasted during Code Review. This is what I get for trusting other people&#8217;s code blindly, especially after 5 years. Lesson learnt. Fixed all issues, and now waiting for a review before commit.</p>
+
+<p>More help for Madhu&#8217;s GSoC, on and off. Same for Arun and Karthik.</p>
+
+<p>Decide to give up on dumps (no concrete work found) and pick up wikipedia offline, after post to wikitech-l by the offline guy saying he is looking for people.</p>
+
+<p>Channels #mediawiki and #wikimedia-tech are quite fun, actually. Not bad at all.</p>
+
+<p>Started writing php code. Not that ugh, actually.</p>
+
+<p>Spent 3 days at In50Hrs. Prototyped the CollegeReviews thing I was always dreaming about. Concepts were fleshed out really well. Need to spend more time on this thing.</p>
+
+<h3 id="mar-15-8211-20">Mar 15 &#8211; 20</h3>
+
+<p>Almost got fix to Mediawiki that made dumps 5% faster. Now just need to prove it on a larger scale before it gets accepted.</p>
+
+<p>Did contracting work for some decent money. Feels pretty good.</p>
+
+<p>Started helping madhu with her gsoc. She&#8217;s darn smart.</p>
+
+<h3 id="mar-14">Mar 14</h3>
+
+<p>Did bits of resume.</p>
+
+<h3 id="mar-1-13">Mar 1-13</h3>
+
+<p>Some amount of Mediawiki work &#8211; getting it to run, learning how to profile it, profiling the import and export process. Identified a hotspot in the export process (UtfNormal), need to try to get a fix in.</p>
+
+<p>Moved main system from Ubuntu 32 bit to Debian 64 bit. Yay. Tried to jhbuild gnome-shell and failed miserably. Boo.</p>
+
+<p>Started helping other folks with their GSoC. Yay.</p>
+
+</article> 
 
 
 
@@ -513,34 +558,6 @@
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/how-to-increase-cheeses-burst-mode-photo-count/">How to increase Cheese’s Burst Mode Photo Count</a></h2>
-    <p class="blog-post-meta"><time datetime="2010-11-07T14:50:51Z">Sun Nov 7, 2010</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>
-
-
-</p>
-  </header>
-  <p>&#8220;Why does Cheese have a maximum photo count of 100 in burst mode?&#8221; questions have popped up quite a few times on the cheese list. It is just a teeny, tiny bug &#8211; fixed in master.</p>
-
-<p>The work around is simple:</p>
-
-<p><strong>Till Cheese 2.32</strong></p>
-
-<p>Raise it to whatever value you want in <code>line 8</code> of <code>/usr/share/cheese/cheese-prefs.ui</code>.</p>
-
-<p><em>(If you don&#8217;t know what version you are running, check <code>Help -&gt; About</code>)</em></p>
-
-<p>(Fix is just raising the limit from 100 to something that most people will likely not hit. If they do hit it &#8211; well, <code>line 40 on /usr/share/cheese/cheese-prefs.ui</code> :D)</p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/post/page/16/" rel="prev" role="button">Previous page</a>
@@ -591,6 +608,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
+
 <li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
 <li><a href="/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></li>
@@ -598,8 +617,6 @@
 <li><a href="/post/the-littlest-jupyterhub/">The Littlest Jupyterhub</a></li>
 
 <li><a href="/post/kubectl-rbac/">Kubectl verbose logging tricks</a></li>
-
-<li><a href="/post/2017/">2017</a></li>
 
     </ol>
   </section>

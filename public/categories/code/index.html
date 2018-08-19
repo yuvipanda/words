@@ -9,24 +9,11 @@
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/categories/code/" />
-
-
-
-<meta property="og:updated_time" content="2018-07-21T18:32:53-07:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="og:updated_time" content="2018-08-15T22:41:17-06:00"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Code"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
-<meta name="generator" content="Hugo 0.40.1" />
+<meta name="generator" content="Hugo 0.47" />
 
 
     
@@ -40,7 +27,7 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2018-07-21T18:32:53-07:00",
+  "dateModified": "2018-08-15T22:41:17-06:00",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
@@ -89,6 +76,71 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></h2>
+    <p class="blog-post-meta"><time datetime="2018-08-15T22:41:17-06:00">Wed Aug 15, 2018</time> by  in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>
+
+
+</p>
+  </header>
+  <p><em>This post is from conversations with <a href="http://matthewrocklin.com/">Matt
+Rocklin</a> and others at the
+<a href="http://pangeo.io/">PANGEO</a> developer meeting at
+<a href="https://ncar.ucar.edu/">NCAR</a></em></p>
+
+<p>Today, almost all of &lsquo;the cloud&rsquo; is run by
+ruthlessly competitive hypercapitalist large scale
+organizations. This is great &amp; terrible.</p>
+
+<p>When writing open source applications that primarily
+run on the cloud, I try to make sure my users (primarily
+people deploying my software for <em>their</em> users) have
+the following freedoms:</p>
+
+<ol>
+<li><strong>They can run the software on any cloud provider they
+choose to</strong></li>
+<li><strong>They can run the software on a bunch of computers they
+physically own, with the help of other open source software
+only</strong></li>
+</ol>
+
+<p>Ensuring these freedoms for my users requires the following
+restrictions on me:</p>
+
+<ol>
+<li>Depend on Open Source Software with hosted cloud versions,
+not proprietary cloud-vendor-only software.</li>
+</ol>
+
+<p>I&rsquo;ll use PostgreSQL over Google Cloud Datastore. Kubernetes with
+   autoscaling over talking to the EC2 api directly.</p>
+
+<ol>
+<li>Use abstractions that allow swappable implementations anytime
+you have to talk to a cloud provider API directly.</li>
+</ol>
+
+<p>Don&rsquo;t talk to the S3 API directly, but have an abstract
+   interface that defines exactly what your application needs,
+   and then write an S3 implementation for it. Ideally, also
+   write a minio / ceph / file-system implementation for it,
+   to make sure your abstraction actually works.</p>
+
+<p>These are easy to follow once you are aware of them, and provide
+good design tradeoffs for Open Source projects. Remember these are
+necessary but not sufficient to ensure some of your users&rsquo; fundamental
+freedoms.</p>
+
+</article> 
 
 
 
@@ -494,34 +546,6 @@ want to execute.</p>
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/php-insane-part-5832/">PHP being insane, part 5832</a></h2>
-    <p class="blog-post-meta"><time datetime="2013-12-13T17:58:15Z">Fri Dec 13, 2013</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>, <a href="/categories/wiki" rel="category tag">wiki</a>
-
-
-</p>
-  </header>
-  <p>Somehow: <code>( $a &amp;&amp; $b ) || ( $b &amp;&amp; $c ) || ( $a &amp;&amp; $c )</code></p>
-
-<p>Became: <code>$a ? ( $b || $c ) : ( $b &amp;&amp; $c )</code></p>
-
-<p>Became: <code>count( array_filter( array( $a, $b, $c ) ) ) &gt;= 2</code></p>
-
-<p>Became: <code>&quot;$a$b$c&quot; &gt; 1</code></p>
-
-<p>God dammit PHP&#8230;</p>
-
-<p>(from discussion among me, ^d, ori-l, bd808 and anomie on <code>#mediawiki-core</code> about how to represent &#8216;if at least 2 of three conditions are true&#8217;)</p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   
@@ -572,6 +596,8 @@ want to execute.</p>
     <ol class="list-unstyled">
 
 
+<li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
+
 <li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
 <li><a href="/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></li>
@@ -579,8 +605,6 @@ want to execute.</p>
 <li><a href="/post/the-littlest-jupyterhub/">The Littlest Jupyterhub</a></li>
 
 <li><a href="/post/kubectl-rbac/">Kubectl verbose logging tricks</a></li>
-
-<li><a href="/post/2017/">2017</a></li>
 
     </ol>
   </section>

@@ -9,24 +9,11 @@
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/categories/code/" />
-
-
-
-<meta property="og:updated_time" content="2010-07-12T18:26:54&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="og:updated_time" content="2010-07-22T00:37:31&#43;00:00"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Code"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
-<meta name="generator" content="Hugo 0.40.1" />
+<meta name="generator" content="Hugo 0.47" />
 
 
     
@@ -40,7 +27,7 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2010-07-12T18:26:54&#43;00:00",
+  "dateModified": "2010-07-22T00:37:31&#43;00:00",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
@@ -89,6 +76,64 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/cheese-gsoc-report-week-8/">Cheese GSoC Report – Week 8</a></h2>
+    <p class="blog-post-meta"><time datetime="2010-07-22T00:37:31Z">Thu Jul 22, 2010</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>
+
+
+</p>
+  </header>
+  <p>This week on Cheese&#8230;.</p>
+
+<p>WE MADE A RELEASE! :)</p>
+
+<p><a href="http://ftp.gnome.org/pub/GNOME/sources/cheese/2.31/">http://ftp.gnome.org/pub/GNOME/sources/cheese/2.31/</a></p>
+
+<p>Cheese 2.31.1 is out. It&#8217;s a dev release. Does not have zarro boogs.</p>
+
+<p>But it is a release!</p>
+
+<p>This week, we</p>
+
+<ol>
+<li>Fixed several perf bugs.</li>
+<li>Fixed some weird preferences dialog bugs</li>
+<li>Filed (and eventually had fixed) a bug in GStreamer.</li>
+<li>Fixed a regression</li>
+<li>Beautified the UI a bit (text name overlay of effects, etc)</li>
+
+<li><p>Assorted administrative work to prepare for release (Copyright</p>
+
+<p>updating, merging back into master, etc)</p></li>
+</ol>
+
+<p>I also passed my mid terms :)</p>
+
+<p>Next week&#8230;</p>
+
+<ol>
+<li><p>Remove dependency on Mx Toolkit (it is not a blessed dependency,</p>
+
+<p>and i&#8217;m not using large parts of it anyway)</p></li>
+
+<li><p>Performance improvements, especially at startup time. It is taking</p>
+
+<p><em>waaay</em> too long .</p></li>
+
+<li><p>Fix problems in video mode.</p></li>
+
+<li><p>Make the TODO list shorter.</p></li>
+</ol>
+
+</article> 
 
 
 
@@ -439,39 +484,6 @@
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/gsoc-milestone-0-what-does-my-project-do/">GSoC Milestone 0 – What does my project do?</a></h2>
-    <p class="blog-post-meta"><time datetime="2010-05-04T00:48:06Z">Tue May 4, 2010</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>
-
-
-</p>
-  </header>
-  <p><em>I&#8217;m using a <a href="http://www.rememberthemilk.com/home/yuvipanda/13485943/">RTM List</a> to track my milestones for this <a href="http://yuvi.in/blog/gsoc-2010-the-beginning.html">my GSoC</a> this year. I&#8217;ll be making a blog post for each item ticked off that list, to share what I&#8217;ve learnt in my journey from n00b to someone whose code is good enough to be included in GNOME. This is part 0 in the series, where I tell you what my project is all about and how <a href="http://projects.gnome.org/cheese">Cheese</a> is going to become awesomer.</em></p>
-
-<p>So, what exactly does <a href="http://gist.github.com/356202">my proposal</a> mean for Cheese?</p>
-
-<ol>
-<li>Moving the UI to <a href="http://live.gnome.org/Vala">Vala</a> (from C)</li>
-<li>Move display bits from <a href="http://www.gtk.org/">GTK+</a> to <a href="http://clutter-project.org/">clutter</a></li>
-<li>Implement Live Preview to show people how applying an effect will look before applying it</li>
-<li>Implement loadable effects so you aren&#8217;t stuck with just 12 preloaded effects.</li>
-</ol>
-
-<p>I&#8217;m told that the scope is kinda too big for 3 months &#8211; but I&#8217;m sure that with careful planning (hah!), around 40 hours of work a week (haha!), lots of time away from college (hahaha!) I can do this stuff :)</p>
-
-<p>I&#8217;m keeping my code in a <a href="http://github.com/yuvipanda/cheese">github repo</a>, so watch that for code updates. And will be updating this blog at the completion of every milestone, so subscribe if you haven&#8217;t :)</p>
-
-<p><strong>Note</strong>: My exams are still going on. Won&#8217;t be coding much till they end (May 19th).</p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/categories/code/page/5/" rel="prev" role="button">Previous page</a>
@@ -522,6 +534,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
+
 <li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
 <li><a href="/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></li>
@@ -529,8 +543,6 @@
 <li><a href="/post/the-littlest-jupyterhub/">The Littlest Jupyterhub</a></li>
 
 <li><a href="/post/kubectl-rbac/">Kubectl verbose logging tricks</a></li>
-
-<li><a href="/post/2017/">2017</a></li>
 
     </ol>
   </section>

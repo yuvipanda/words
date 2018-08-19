@@ -9,24 +9,11 @@
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/categories/code/" />
-
-
-
-<meta property="og:updated_time" content="2013-08-25T23:44:25&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="og:updated_time" content="2013-12-13T17:58:15&#43;00:00"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Code"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
-<meta name="generator" content="Hugo 0.40.1" />
+<meta name="generator" content="Hugo 0.47" />
 
 
     
@@ -40,7 +27,7 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2013-08-25T23:44:25&#43;00:00",
+  "dateModified": "2013-12-13T17:58:15&#43;00:00",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
@@ -89,6 +76,34 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/php-insane-part-5832/">PHP being insane, part 5832</a></h2>
+    <p class="blog-post-meta"><time datetime="2013-12-13T17:58:15Z">Fri Dec 13, 2013</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>, <a href="/categories/wiki" rel="category tag">wiki</a>
+
+
+</p>
+  </header>
+  <p>Somehow: <code>( $a &amp;&amp; $b ) || ( $b &amp;&amp; $c ) || ( $a &amp;&amp; $c )</code></p>
+
+<p>Became: <code>$a ? ( $b || $c ) : ( $b &amp;&amp; $c )</code></p>
+
+<p>Became: <code>count( array_filter( array( $a, $b, $c ) ) ) &gt;= 2</code></p>
+
+<p>Became: <code>&quot;$a$b$c&quot; &gt; 1</code></p>
+
+<p>God dammit PHP&#8230;</p>
+
+<p>(from discussion among me, ^d, ori-l, bd808 and anomie on <code>#mediawiki-core</code> about how to represent &#8216;if at least 2 of three conditions are true&#8217;)</p>
+
+</article> 
 
 
 
@@ -375,26 +390,6 @@
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/bugs-resolved-humorous/">Bugs RESOLVED HUMOROUS</a></h2>
-    <p class="blog-post-meta"><time datetime="2013-04-07T14:49:24Z">Sun Apr 7, 2013</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>, <a href="/categories/links" rel="category tag">links</a>, <a href="/categories/wiki" rel="category tag">wiki</a>
-
-
-</p>
-  </header>
-  <p>Mediawiki has a <a href="https://bugzilla.wikimedia.org/showdependencytree.cgi?id=29079&amp;hide_resolved=0">number of humorous bug reports</a>, though not as many as I&#8217;d like. Still, they&#8217;re quite funny.</p>
-
-<p>I think my favorites are the <a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=42595">request for RESOLVED MURDERED</a>, the <a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=30561#c1">real reason why MediaWiki runs on MySQL</a>, someone asking <a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=23223#c53">where the community consensus is</a> to stop Volcanoes exploding, <a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=23223#c66">offers of shamanic help</a>, a <a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=25236">ground breaking report</a> on US Government corruption, and a warning about <a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=23029#c2">zoning laws required for shipping Ponies</a>,</p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/categories/code/" rel="prev" role="button">Previous page</a>
@@ -445,6 +440,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
+
 <li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
 <li><a href="/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></li>
@@ -452,8 +449,6 @@
 <li><a href="/post/the-littlest-jupyterhub/">The Littlest Jupyterhub</a></li>
 
 <li><a href="/post/kubectl-rbac/">Kubectl verbose logging tricks</a></li>
-
-<li><a href="/post/2017/">2017</a></li>
 
     </ol>
   </section>

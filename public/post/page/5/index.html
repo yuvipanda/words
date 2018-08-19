@@ -9,24 +9,11 @@
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/post/" />
-
-
-
-<meta property="og:updated_time" content="2014-09-01T11:41:55&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="og:updated_time" content="2014-09-06T10:27:26&#43;00:00"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
-<meta name="generator" content="Hugo 0.40.1" />
+<meta name="generator" content="Hugo 0.47" />
 
 
     
@@ -40,7 +27,7 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2014-09-01T11:41:55&#43;00:00",
+  "dateModified": "2014-09-06T10:27:26&#43;00:00",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
@@ -89,6 +76,36 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-31-aug-1-4-sep-2014/">DevLog for 31 Aug, 1-4 Sep 2014</a></h2>
+    <p class="blog-post-meta"><time datetime="2014-09-06T10:27:26Z">Sat Sep 6, 2014</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
+
+
+</p>
+  </header>
+  <p>Missed DevLogging for a while.</p>
+
+<p>Am in London now.</p>
+
+<ul>
+<li>Started using a spare <a href="http://www.keyboardco.com/keyboard/uk-filco-ninja-majestouch-2-tenkeyless-nkr-tactile-action-keyboard.asp">Majestouch Ninja 2</a> over my regular <a href="https://www.kinesis-ergo.com/shop/advantage-for-pc-mac/">Kinesis Advantage</a>. This is way more portable, and my hand does not seem to be hurting while using it (so far only about 4-5 hours). If this keeps up, I should be able to move to a similar smaller keyboard over the much bulkier kinesis. There&#8217;s still a little bit of discomfort, so I&#8217;ll probably want a very portable and mechanical split keyboard. Can&#8217;t sadly seem to find any, though :( Maybe I should just build one with an arduino :)</li>
+<li>Setup icinga checks for puppet failures and disk space issues on betalabs, and fixed a bunch of issues/docs in our icinga puppet code during that time. This still doesn&#8217;t properly work since our implementation of <code>check_graphite</code> does not support wildcard metrics properly &#8211; it should check thresholds for each series, but it seems to do that only across the entire series combined, which is kinda useless. Should fix that soon by adding more features to it. Also might try out other alternatives to icinga, since our icinga puppet code is a fuckball anyway.</li>
+<li>Fix a couple more Quarry bugs. There&#8217;s still a random bug where <code>celery</code> seems to be attempting to read data about a query run from mysql before the web has committed it, which is theoretically impossible (I do a commit before sending the task to celery with the id), so I suspect some mysql fuckery. Will need to debug that sooner than later, and also consider moving to <code>postgres</code>. But then Quarry will have to deal with SQLite (for result storage), MySQL (for connecting to labsdb) and with postgres for local data, which sounds insanely complex. I also added CORS support to resultsets, and Magnus is playing with it (wooohhooooo!!!). I&#8217;m going to add more features to make it easier for people to use results from quarry in their JS applications elsewhere. Should be fun.</li>
+<li>Finished videos for the first week of the Coursera <a href="https://class.coursera.org/statistics-002">Data Analysis and Statistical Inference</a> class I&#8217;m taking. Started poking around R since the labs for that class are from R, should be fun.</li>
+<li>Chad has started his <a href="http://anyonecanedit.org/blog">devlog</a>. He does search stuff at Wikimedia and is a co-whiner about all things Java. Do check out :)</li>
+</ul>
+
+<p>Am away on &#8216;vacation&#8217; till Wednesday, yay! :) Should disconnect well.</p>
+
+</article> 
 
 
 
@@ -345,43 +362,6 @@
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/simple-python-packaging-debian-ubuntu/">Simple python packaging for Debian / Ubuntu</a></h2>
-    <p class="blog-post-meta"><time datetime="2014-08-19T13:08:28Z">Tue Aug 19, 2014</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>
-
-
-</p>
-  </header>
-  <p>(As requested by <a href="https://twitter.com/JeanFred">Jean-Fred</a>)</p>
-
-<p>One of the &#8216;pain points&#8217; with working on deploying python stuff at Wikimedia is that <code>pip</code> and <code>virtualenvs</code> are banned on production, for some (what I now understand as) good reasons (the solid Signing / Security issues with PYPI, and the slightly less solid but nonetheless valid &#8216;If we use pip for python and gem for ruby and npm for node, EXPLOSION OF PACKAGE MANAGERS and makes things harder to manage&#8217;). I was whining about how hard debian packaging was for quite a while without checking how easy/hard it was to package python specifically, and when I finally did, it turned out to be quite not that hard.</p>
-
-<p>Use <a href="https://pypi.python.org/pypi/stdeb">python-stdeb</a>.</p>
-
-<p>Really, that is it. Ignore most other things (until you run into issues that require them :P). It can translate most python packages that are packaged for PyPI into .debs that mostly pass <a href="https://lintian.debian.org/">lintian</a> checks. Simplest way to package, that I&#8217;ve been following for a while is:</p>
-
-<ol>
-<li>Install <code>python-stdeb</code> (from pip or apt). Usually requires the packages <code>python-all</code>, <code>fakeroot</code> and <code>build-essential</code>, although for some reason these aren&#8217;t required by the debian package for <code>stdeb</code>. Make sure you&#8217;re on the same distro you are building the package for.</li>
-<li><code>git clone</code> the package from its source</li>
-<li>Run <code>python setup.py --command-packages=stdeb.command bdist_deb</code> (or <code>python3</code> if you want to make Python 3 package)</li>
-<li>Run <code>lintian</code> on it. If it spots errors, go back and fix them, usually by editing the <code>setup.py</code> file (or sometimes a <code>stdeb.cfg</code> file). This is usually rather obvious and easy enough to fix.</li>
-<li>Run <code>dpkg -i &lt;package&gt;</code> to try to install the package. This will error out if it can&#8217;t find the packages that your package depends on. This means that they haven&#8217;t been packaged for debian yet. You can mostly fix this by finding that package, and making a deb for it, and installing it as well (recursively making debs for packages as you need them). While this sounds onerous, the fact is that most python packages already exist as deb packages and you <code>stdeb</code> will just work for them. You might have to do this more if you&#8217;re packaging for an older distro (<em>cough</em> <em>cough</em> <code>precise</code> <em>cough</em> <em>cough</em>), but is much easier on newer distros.</li>
-<li>Put your package in a repository! If you want to use this on Wikimedia Labs, you should use <a href="https://wikitech.wikimedia.org/wiki/Help:Using_debs_in_labs">Labsdebrepo</a>. Other environments will have similar ways to make the package available via <code>apt-get</code>. Avoid the temptation to just <code>dpkg -i</code> it on machines manually :)</li>
-</ol>
-
-<p>That&#8217;s pretty much it! Much simpler than I originally expected, and not much confusing / conflicting docs. The docs for <code>stdeb</code> are pretty nice and complete, so do read these!</p>
-
-<p>Will update the post as I learn more.</p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/post/page/4/" rel="prev" role="button">Previous page</a>
@@ -432,6 +412,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
+
 <li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
 <li><a href="/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></li>
@@ -439,8 +421,6 @@
 <li><a href="/post/the-littlest-jupyterhub/">The Littlest Jupyterhub</a></li>
 
 <li><a href="/post/kubectl-rbac/">Kubectl verbose logging tricks</a></li>
-
-<li><a href="/post/2017/">2017</a></li>
 
     </ol>
   </section>
