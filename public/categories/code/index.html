@@ -9,11 +9,11 @@
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/categories/code/" />
-<meta property="og:updated_time" content="2018-08-15T22:41:17-06:00"/>
+<meta property="og:updated_time" content="2018-12-23T19:44:53-08:00"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Code"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
-<meta name="generator" content="Hugo 0.47" />
+<meta name="generator" content="Hugo 0.47.1" />
 
 
     
@@ -27,7 +27,7 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2018-08-15T22:41:17-06:00",
+  "dateModified": "2018-12-23T19:44:53-08:00",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
@@ -76,6 +76,110 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/devlog-2018-12-23/">DevLog 2018 December 23</a></h2>
+    <p class="blog-post-meta"><time datetime="2018-12-23T19:44:53-08:00">Sun Dec 23, 2018</time> by  in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>, <a href="/categories/devlog" rel="category tag">devlog</a>
+
+
+</p>
+  </header>
+  
+
+<p>I have enjoyed keeping running logs of my coding work (devlogs)
+in the past, and am going to start doing those again now.</p>
+
+<p>This &lsquo;holiday&rsquo; season, I am spending time teaching myself
+skills I sortof know about but do not have a deep understanding of.</p>
+
+<h2 id="jupyterlab-extension">JupyterLab extension</h2>
+
+<p>I spent the first part of the day (before I started devlogging)
+working on finishing up a <a href="https://github.com/yuvipanda/jupyterlab-nbmetadata">jupyterlab extension</a>
+I started the day before. It lets you <a href="https://github.com/jupyterlab/jupyterlab/issues/1308">edit notebook metadata</a>.
+I got started since I wanted to use <a href="https://github.com/mwouts/jupytext">Jupytext</a>
+for my work on publishing <a href="https://github.com/yuvipanda/mybinder.org-analytics">mybinder.org-analytics</a>.</p>
+
+<p>TypeScript was easy to pick up coming from C#. I wish the
+phospor / JupyterLab code had more documentation though.</p>
+
+<p>I ran into <a href="https://github.com/jupyterlab/jupyterlab/issues/5802">a bug</a>.
+While following instructions to set up a JupyterLab dev
+setup, I somehow managed to <a href="https://github.com/jupyterlab/jupyterlab/issues/5803">delete my source code</a>.
+Thankfully I got most of it back thanks to a saved copy
+in vscode. It was a sour start to the morning though.</p>
+
+<p>I&rsquo;ll get back on to this once the sour taste is gone,
+and hopefully the bug is fixed :)</p>
+
+<h2 id="asyncio-what-s-next-yuri-selivanov-pybay-2018">asyncio: what&rsquo;s next | Yuri Selivanov @ PyBay 2018</h2>
+
+<p>I&rsquo;ve been trying to get a better handle on asyncio. I can
+use it, but I don&rsquo;t fully understand it - I am probably leaving
+bugs everywhere&hellip;</p>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vem5GHboRNM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>From one of the asyncio maintainers. Gave me some impetus
+to push the default version of Python on mybinder.org to 3.7 :D
+I&rsquo;m most excited about getting features from Trio &amp; Curio into
+the standard library. Was good to hear that nobody can quite
+figure out exception handling, and not just me.</p>
+
+<p>I discovered <a href="https://github.com/observerss/aioutils">aioutils</a>
+while searching around after this. I&rsquo;ve copy pasted code that
+theoretically does the same things as <code>Group</code> and <code>Pool</code> from
+<code>aioutils</code>, but I&rsquo;ve no idea if they are right. I&rsquo;ll be using
+this library from now!</p>
+
+<h2 id="processing-signals">Processing Signals</h2>
+
+<p>I&rsquo;m writing a simple process supervisor library to replace the
+janky parts of nbserverproxy. It should have the following
+features:</p>
+
+<ol>
+<li>Restart processes when they die</li>
+<li>Propagate signals appropriately</li>
+<li>Support a sense of &lsquo;readiness&rsquo; probes (not liveness)</li>
+<li>Be very well tested</li>
+<li>Run on asyncio</li>
+</ol>
+
+<p>This is more difficult than it seems, and am slowly working my
+way through it. (1) isn&rsquo;t too difficult.</p>
+
+<p>(2) is a fair bit more difficult. <code>atexit</code> is useless since it doesn&rsquo;t do
+anything with SIGTERM. So I need to manage my own SIGTERM
+handlers. However, this means there needs to be a centralish
+location of some sort that decides <em>when</em> to exit. This introduces
+global state, and I don&rsquo;t like that at all. But unix signals are
+global, and maybe there&rsquo;s nothing for me to do here.</p>
+
+<p>I initially created a Supervisor class that holds a bunch of
+SupervisedProcess&rsquo;s, but it was still calling sys.exit in it.
+Since signals are global, I realize there&rsquo;s no other real
+way to handle this, and so I made a global handler setup too.
+This has the additional advantage of being able to remove
+handlers when a SupervisedProcess dies, avoiding memory
+leaks and stuff.</p>
+
+<p>Testing this stuff is hard!</p>
+
+<p>I also need to make sure I don&rsquo;t end up with lots of races.
+I&rsquo;m still writing concurrent code, even without threads.
+Gotta be careefull. Especially with signals thrown in. Although
+I guess once you get a SIGTERM or SIGINT inconsistent state
+is not particularly worrysome.</p>
+
+</article> 
 
 
 
@@ -526,26 +630,6 @@ want to execute.</p>
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/wikipedia-apps-reboot-taking-shape-nicely/">Wikipedia Apps reboot taking shape nicely</a></h2>
-    <p class="blog-post-meta"><time datetime="2013-12-14T15:06:28Z">Sat Dec 14, 2013</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>, <a href="/categories/wiki" rel="category tag">wiki</a>
-
-
-</p>
-  </header>
-  <p><a href="http://yuvi.in/blog/wp-content/uploads/2013/12/wpid-Screenshot_2013-12-14-20-33-57.png"><img title="Screenshot_2013-12-14-20-33-57.png" class="alignnone size-full" alt="image" src="http://yuvi.in/blog/wp-content/uploads/2013/12/wpid-Screenshot_2013-12-14-20-33-57.png" /></a></p>
-
-<p>Prettier, faster and more feature packed! Native Wikipedia app for Android coming real soon!</p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   
@@ -596,6 +680,8 @@ want to execute.</p>
     <ol class="list-unstyled">
 
 
+<li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
+
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
 
 <li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
@@ -603,8 +689,6 @@ want to execute.</p>
 <li><a href="/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></li>
 
 <li><a href="/post/the-littlest-jupyterhub/">The Littlest Jupyterhub</a></li>
-
-<li><a href="/post/kubectl-rbac/">Kubectl verbose logging tricks</a></li>
 
     </ol>
   </section>

@@ -9,11 +9,11 @@
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/" />
-<meta property="og:updated_time" content="2017-04-18T00:01:26-07:00"/>
+<meta property="og:updated_time" content="2017-05-13T11:41:20-07:00"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Yuvi Panda"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
-<meta name="generator" content="Hugo 0.47" />
+<meta name="generator" content="Hugo 0.47.1" />
 
 
     
@@ -27,7 +27,7 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2017-04-18T00:01:26-07:00",
+  "dateModified": "2017-05-13T11:41:20-07:00",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
@@ -76,6 +76,84 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/think-os/">think os</a></h2>
+    <p class="blog-post-meta"><time datetime="2017-05-13T11:41:20-07:00">Sat May 13, 2017</time> by  in 
+
+<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/learning" rel="tag">learning</a>
+
+</p>
+  </header>
+  
+
+<p>Following a trail from a <a href="http://jvns.ca/blog/2017/04/17/statistics-for-programmers/">wonderful Julia Evans post</a> led me to Allen Downey&rsquo;s nice <a href="http://greenteapress.com/wp/textbook-manifesto/">textbook manifesto</a>. Also led me to the nice <a href="http://greenteapress.com/thinkos/index.html">Think OS</a> book, which seems like a super nice introduction to Operating System principles.</p>
+
+<p>It is short enough (~100 pages) that I wanted to read through it. I&rsquo;ve spent a good chunk of time absorbing how Operating Systems work by dint of diving into things and working through them, but it would be nice to get a refresher on the basics. There are clearly basic things I do not understand, and this seemed like a good way to explore.</p>
+
+<p>This post is just a running series of notes from me reading it on a nice saturday morning.</p>
+
+<h2 id="stack-vs-heap">Stack vs Heap</h2>
+
+<p>This is something that has always bugged me. I&rsquo;ve understood just enough of this by being burnt with pointers when writing C (and primitive types in the CLR, etc), but was lacking a deep understanding of wtf was going on. The fact that these are just process program segments (like text or data) was quite a revelation :D <a href="http://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap">This stackoverflow answer</a> was also quite nice.</p>
+
+<p>One interesting thing for me to investigate later from the book is how this program:</p>
+
+<pre><code class="language-C">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int global;
+
+int main() {
+  int local = 5;
+  void *p = malloc(128);
+
+  printf(&quot;Address of main is %p\n&quot;, main);
+  printf(&quot;Address of local is %p\n&quot;, &amp;local);
+  printf(&quot;Address of global is %p\n&quot;, &amp;global);
+  printf(&quot;Address of p is %p\n&quot;, p);
+
+}
+
+</code></pre>
+
+<p>produces the following output for the author:</p>
+
+<pre><code>Address of main   is 0x      40057c
+Address of local  is 0x7fffd26139c4
+Address of global is 0x      60104c
+Address of p      is 0x     1c3b010
+</code></pre>
+
+<p>but for me,</p>
+
+<pre><code>Address of main   is 0x5598fc64c740
+Address of local  is 0x7ffeacfaf75c
+Address of global is 0x5598fc84d014
+Address of p      is 0x5598fc85b010
+</code></pre>
+
+<p>The point of the program was to demonstrate that text (<code>main</code>), static (<code>global</code>) and heap (<code>p</code>) are near beginning of memory and stack (<code>local</code>) is towards the end. While on my laptop it does seem to be the case too, the &lsquo;start&rsquo; seems to be much farther out than on the author&rsquo;s computer. Need to understand why this is the case. I&rsquo;ve vaguely heard of address randomization &amp; other security measures in OS kernels - maybe related? For another day!</p>
+
+<h2 id="bit-twiddling">Bit twiddling</h2>
+
+<p>I continue to find it hard to care about bit twiddling. Most things do use it of course, but it seems to be abstracted away pretty well without leaking too much (except for things that have their own nuances, like floating point representations).</p>
+
+<h2 id="malloc">malloc</h2>
+
+<p>Nice link to <a href="http://gee.cs.oswego.edu/dl/html/malloc.html">a paper</a> about a common malloc implementation. I also know there are other malloc implementations that programs use (such as <a href="http://jemalloc.net/">jemalloc</a>). Something for me to dive into when I&rsquo;ve more time.</p>
+
+<h2 id="tbc">tbc</h2>
+
+<p>I didn&rsquo;t have time to finish it all, unfortunately. But shall come back to it whenever I can!</p>
+
+</article> 
 
 
 
@@ -504,39 +582,6 @@ exec sudo systemd-run \
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/making-twitter-useful-again/">making twitter useful again</a></h2>
-    <p class="blog-post-meta"><time datetime="2017-01-22T22:17:12&#43;05:30">Sun Jan 22, 2017</time> by  in 
-
-<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/twitter" rel="tag">twitter</a>, <a href="/tags/external-enforcement" rel="tag">external-enforcement</a>
-
-</p>
-  </header>
-  <p>I&rsquo;ve unfollowed everyone I follow on Twitter, and am slowly starting back up from scratch. I&rsquo;m only going to follow people who are:</p>
-
-<ol>
-<li>Underrepresented people in Tech (as broadly construed)</li>
-<li>Journalists</li>
-</ol>
-
-<p>And that&rsquo;s it. I&rsquo;ll follow back friends I&rsquo;m not otherwise in contact with as well, but might take a while.</p>
-
-<p>I&rsquo;ve had this for a few days and am already enjoying using it far more than I did before. A lot of the people I&rsquo;m following now I did not know before, and the vibe is totally different. I&rsquo;m able to understand and appreciate things I was not able to before. I know this is a bubble, but it is certainly a different bubble than the one I was in before. Bubbles also intersect - I&rsquo;ve interactions with other types of people elsewhere, just not on Twitter.</p>
-
-<p>If I unfollowed you, don&rsquo;t take it personally! DM me for a phone number you can use for Signal / WhatsApp / Telegram - that&rsquo;s how 90% of my social activities seem to happen these days anyway.</p>
-
-<p>h/t to <a href="http://www.gaijin.com/">Jorm</a> for the idea of targetted following!</p>
-
-<p><strong>Update</strong>: I&rsquo;ve also setup <a href="https://addons.mozilla.org/en-US/firefox/addon/leechblock/">LeechBlock</a> to only allow me 5mins of Twitter every 2h, and I don&rsquo;t have the twitter app on my phone. I wish there was a leechblock type thing for my Phone tho.</p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/" rel="prev" role="button">Previous page</a>
@@ -587,6 +632,8 @@ exec sudo systemd-run \
     <ol class="list-unstyled">
 
 
+<li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
+
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
 
 <li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
@@ -594,8 +641,6 @@ exec sudo systemd-run \
 <li><a href="/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></li>
 
 <li><a href="/post/the-littlest-jupyterhub/">The Littlest Jupyterhub</a></li>
-
-<li><a href="/post/kubectl-rbac/">Kubectl verbose logging tricks</a></li>
 
     </ol>
   </section>

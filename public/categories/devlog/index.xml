@@ -6,10 +6,21 @@
     <description>Recent content in Devlog on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Dec 2015 23:40:38 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 23 Dec 2018 19:44:53 -0800</lastBuildDate>
     
 	<atom:link href="http://words.yuvi.in/categories/devlog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>DevLog 2018 December 23</title>
+      <link>http://words.yuvi.in/post/devlog-2018-12-23/</link>
+      <pubDate>Sun, 23 Dec 2018 19:44:53 -0800</pubDate>
+      
+      <guid>http://words.yuvi.in/post/devlog-2018-12-23/</guid>
+      <description>I have enjoyed keeping running logs of my coding work (devlogs) in the past, and am going to start doing those again now.
+This &amp;lsquo;holiday&amp;rsquo; season, I am spending time teaching myself skills I sortof know about but do not have a deep understanding of.
+JupyterLab extension I spent the first part of the day (before I started devlogging) working on finishing up a jupyterlab extension I started the day before.</description>
+    </item>
     
     <item>
       <title>DevLog for 21-30 Dec 2015</title>

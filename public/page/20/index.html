@@ -9,11 +9,11 @@
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/" />
-<meta property="og:updated_time" content="2010-05-06T07:00:20&#43;00:00"/>
+<meta property="og:updated_time" content="2010-05-30T02:22:41&#43;00:00"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Yuvi Panda"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
-<meta name="generator" content="Hugo 0.47" />
+<meta name="generator" content="Hugo 0.47.1" />
 
 
     
@@ -27,7 +27,7 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2010-05-06T07:00:20&#43;00:00",
+  "dateModified": "2010-05-30T02:22:41&#43;00:00",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
@@ -76,6 +76,40 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/vala-gtkbuilder-and-autoconnecting-signal-handlers/">Vala, GTKBuilder and Autoconnecting Signal Handlers</a></h2>
+    <p class="blog-post-meta"><time datetime="2010-05-30T02:22:41Z">Sun May 30, 2010</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>
+
+
+</p>
+  </header>
+  <p><strong>Note</strong>: I&#8217;m not an expert on Vala, GTK+, or anything else for that matter. If I am off base someplace, comment.</p>
+
+<p>I spent quite a some time today trying to get GTKBuilder to automagically connect all my signals to their handlers. I tripped up at a few places, and so recording them here for posterity.</p>
+
+<ol>
+<li><p>If you are using instance methods (like most of us are), you&#8217;ve to decorate your handler function with the attribute <code>[CCode (instance_pos=-1)]</code>. This makes sure that the function is passed the <code>this</code> pointer as last argument, rather than first. You&#8217;ve to do this because <code>Builder.connect_signals</code> passes the instance as last parameter (<code>user_data</code>), and by aligning your <code>this</code> pointer with <code>user_data</code>, you make sure the correct instance is called.</p></li>
+
+<li><p>Make sure your handler function signature matches what is expected. Ignore the <code>user_data</code> parameter of most signals &#8211; it is used internally by <code>Builder.connect_signals</code> (see above point).</p></li>
+
+<li><p>Make sure you pass <code>--pkg gmodule-2.0</code> to your <code>valac</code>. If you&#8217;re using Autotools, this means you pass it to <code>VALAFLAGS</code>.</p></li>
+
+<li><p>sure your C compiler is called with <code>-dynamic-export</code>. I&#8217;m told this enabled support for <code>dlopen</code> in the binary produced.</p></li>
+
+<li><p>Mangle your names properly. <code>Cheese.MainWindow.on_quit()</code> becomes <code>cheese_main_window_on_quit</code> on C, and that is what GTKBuilder expects. If you are not sure how your function name is mangled by <code>valac</code>, checkout the generated <code>.c</code> file.</p></li>
+</ol>
+
+<p>If you do all these 5 things right and you&#8217;re still having trouble, turn up on #vala at irc.gimp.net and ask the helpful folks there :)</p>
+
+</article> 
 
 
 
@@ -338,59 +372,6 @@
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/samsung-n210-review/">Samsung N210 Review</a></h2>
-    <p class="blog-post-meta"><time datetime="2010-03-12T20:41:32Z">Fri Mar 12, 2010</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/uncategorized" rel="category tag">Uncategorized</a>
-
-
-</p>
-  </header>
-  
-
-<p>I bought a brand new Samsung N210 Netbook about two weeks back &#8211; and have been using it almost non-stop since. I&#8217;ve been taking it to college every day, using it at every oportunity I get &#8211; on the college bus, on MTC buses, on the train, while waiting for the train, hell even <em>during</em> a rather very boring class!</p>
-
-<h3 id="the-great">The Great</h3>
-
-<ul>
-<li>The Screen! The <strong>matte</strong> screen is totally awesome. Viewable under all conditions &#8211; full on sunlight during a train commute or at a weird angle snuggled under the desk during class. It is sharp, and IMO has enough resolution (1024&#215;600). The bezel is small and not very distracting.</li>
-<li>The Keyboard. 94% of a full size keyboard, I&#8217;m told. It is extremely comfortable, and I don&#8217;t miss too many keys. I do find the right shift absolutely useless though. The chicklet keys look great too</li>
-<li>The Looks. One guy asked me if I was carrying a white MacBook.</li>
-</ul>
-
-<h3 id="the-good">The Good</h3>
-
-<ul>
-<li>The Touchpad. It is large and the mouse buttons are not bad. I don&#8217;t know if it supports two button finger scroll on Linux &#8211; but it does work on Windows. My hands do accidentally touch it often while typing, moving my cursor unexpectedly &#8211; but I have been able to stop that by using my right thumb for space instead of my left.</li>
-<li>The Battery. I seem to get around 8 hours of usage under varying circumstances and conditions &#8211; while nothing to laugh at, I was expecting more. Might be because I haven&#8217;t been able to figure out a way to turn off the wifi chip from Linux.</li>
-</ul>
-
-<h3 id="the-bad">The Bad</h3>
-
-<ul>
-<li>The Heat. The fan isn&#8217;t very noisy, but the heat buildup is appreciable. I can&#8217;t really work with it directly on my lap.</li>
-<li>The inbuilt webcam. 0.3 Megapixels. Bleh!</li>
-<li>WiFi. Drops <em>very</em> often, and not very sensitive. Ubuntu Autodetected it though.</li>
-<li>The SD Card Slot. It has a cover that comes right off, and I guarentee I&#8217;ll lose it in a while.</li>
-<li>Many of the Function Key functions aren&#8217;t supported on Linux. Was able to make the Brightness keys work after a hack though.</li>
-</ul>
-
-<h3 id="the-awful">The Awful</h3>
-
-<ul>
-<li>The ugly black sticker ad for <em>&#8220;Phoenix Hyperspace&trade; Instant-on&#8221;</em>. Ewww! Atleast there is only one big sticker spoiling this white beauty</li>
-</ul>
-
-<p>Was it worth the 20k bucks I paid for it? I&#8217;m typing out this blog post while waiting at my Doctor&#8217;s, so I&#8217;d say it <em>is</em> well worth the 20k bucks paid :)</p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/page/19/" rel="prev" role="button">Previous page</a>
@@ -441,6 +422,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
+
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
 
 <li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
@@ -448,8 +431,6 @@
 <li><a href="/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></li>
 
 <li><a href="/post/the-littlest-jupyterhub/">The Littlest Jupyterhub</a></li>
-
-<li><a href="/post/kubectl-rbac/">Kubectl verbose logging tricks</a></li>
 
     </ol>
   </section>
