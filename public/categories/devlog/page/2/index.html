@@ -9,7 +9,7 @@
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/categories/devlog/" />
-<meta property="og:updated_time" content="2014-09-01T11:41:55&#43;00:00"/>
+<meta property="og:updated_time" content="2014-09-06T10:27:26&#43;00:00"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Devlog"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
@@ -27,7 +27,7 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2014-09-01T11:41:55&#43;00:00",
+  "dateModified": "2014-09-06T10:27:26&#43;00:00",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
@@ -76,6 +76,36 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-31-aug-1-4-sep-2014/">DevLog for 31 Aug, 1-4 Sep 2014</a></h2>
+    <p class="blog-post-meta"><time datetime="2014-09-06T10:27:26Z">Sat Sep 6, 2014</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
+
+
+</p>
+  </header>
+  <p>Missed DevLogging for a while.</p>
+
+<p>Am in London now.</p>
+
+<ul>
+<li>Started using a spare <a href="http://www.keyboardco.com/keyboard/uk-filco-ninja-majestouch-2-tenkeyless-nkr-tactile-action-keyboard.asp">Majestouch Ninja 2</a> over my regular <a href="https://www.kinesis-ergo.com/shop/advantage-for-pc-mac/">Kinesis Advantage</a>. This is way more portable, and my hand does not seem to be hurting while using it (so far only about 4-5 hours). If this keeps up, I should be able to move to a similar smaller keyboard over the much bulkier kinesis. There&#8217;s still a little bit of discomfort, so I&#8217;ll probably want a very portable and mechanical split keyboard. Can&#8217;t sadly seem to find any, though :( Maybe I should just build one with an arduino :)</li>
+<li>Setup icinga checks for puppet failures and disk space issues on betalabs, and fixed a bunch of issues/docs in our icinga puppet code during that time. This still doesn&#8217;t properly work since our implementation of <code>check_graphite</code> does not support wildcard metrics properly &#8211; it should check thresholds for each series, but it seems to do that only across the entire series combined, which is kinda useless. Should fix that soon by adding more features to it. Also might try out other alternatives to icinga, since our icinga puppet code is a fuckball anyway.</li>
+<li>Fix a couple more Quarry bugs. There&#8217;s still a random bug where <code>celery</code> seems to be attempting to read data about a query run from mysql before the web has committed it, which is theoretically impossible (I do a commit before sending the task to celery with the id), so I suspect some mysql fuckery. Will need to debug that sooner than later, and also consider moving to <code>postgres</code>. But then Quarry will have to deal with SQLite (for result storage), MySQL (for connecting to labsdb) and with postgres for local data, which sounds insanely complex. I also added CORS support to resultsets, and Magnus is playing with it (wooohhooooo!!!). I&#8217;m going to add more features to make it easier for people to use results from quarry in their JS applications elsewhere. Should be fun.</li>
+<li>Finished videos for the first week of the Coursera <a href="https://class.coursera.org/statistics-002">Data Analysis and Statistical Inference</a> class I&#8217;m taking. Started poking around R since the labs for that class are from R, should be fun.</li>
+<li>Chad has started his <a href="http://anyonecanedit.org/blog">devlog</a>. He does search stuff at Wikimedia and is a co-whiner about all things Java. Do check out :)</li>
+</ul>
+
+<p>Am away on &#8216;vacation&#8217; till Wednesday, yay! :) Should disconnect well.</p>
+
+</article> 
 
 
 
@@ -332,31 +362,6 @@
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-18-aug-2014/">DevLog for 18 Aug 2014</a></h2>
-    <p class="blog-post-meta"><time datetime="2014-08-18T12:39:06Z">Mon Aug 18, 2014</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
-
-
-</p>
-  </header>
-  <p>I&#8217;ve started the habit of opening up a devlog post each morning and just filling it up as I go along. Let&#8217;s hope I can keep this up :)</p>
-
-<ul>
-<li>Merged a couple of Android patches. The app is getting better every day without too much involvement from me, and yay for that :) I&#8217;ve gotten closure over the Android app &#8211; it was fucking terrible, and now it is quite awesome. Need to write another post about that.</li>
-<li>Fixed annoying bug with mysql connections being reset in Quarry&#8217;s query runners after a few hours. I had fixed this earlier when I was using <code>pymysql</code> directly with reconnect(ping=True), and assumed that switching to <a href="http://www.sqlalchemy.org/">SQLAlchemy</a> would&#8217;ve fixed it for me automagically. <a href="http://docs.sqlalchemy.org/en/latest/faq.html#mysql-server-has-gone-away">Apparently not</a>. MySQL Y U SO BAD?</li>
-<li>I have <code>sudo</code> access on <code>labmon1001</code> in prod! First Wikimedia production cluster machine I have root on, and will spend time over the next few weeks setting it up to run graphite. Should be fun!</li>
-<li>Getting slightly better at packaging python things. Packaged <a href="https://github.com/sidnei/txstatsd">python-txstatsd</a> with no lintian errors, and only a couple warnings :)</li>
-</ul>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/categories/devlog/" rel="prev" role="button">Previous page</a>
@@ -407,6 +412,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
+
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
@@ -414,8 +421,6 @@
 <li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
 <li><a href="/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></li>
-
-<li><a href="/post/the-littlest-jupyterhub/">The Littlest Jupyterhub</a></li>
 
     </ol>
   </section>

@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 Dec 2018 19:44:53 -0800</lastBuildDate>
+    <lastBuildDate>Mon, 24 Dec 2018 10:51:57 -0800</lastBuildDate>
     
 	<atom:link href="http://words.yuvi.in/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Devlog 2018 12 24</title>
+      <link>http://words.yuvi.in/post/devlog-2018-12-24/</link>
+      <pubDate>Mon, 24 Dec 2018 10:51:57 -0800</pubDate>
+      
+      <guid>http://words.yuvi.in/post/devlog-2018-12-24/</guid>
+      <description>Gracefully exiting asyncio application Continuing yesterday&amp;rsquo;s work on my simple supervisor library, I continued trying to propagate signals cleanly to child processes before exiting. I remembered that it isn&amp;rsquo;t enough to just propagate signals - you also have to actually reap them. This meant waiting for wait calls on them to return.
+I had a task running concurrently that is waiting on these processes. So &amp;lsquo;all&amp;rsquo; I had to do was make sure the application does not exit until these tasks are done.</description>
+    </item>
     
     <item>
       <title>DevLog 2018 December 23</title>

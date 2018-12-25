@@ -9,7 +9,7 @@
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/categories/code/" />
-<meta property="og:updated_time" content="2018-12-23T19:44:53-08:00"/>
+<meta property="og:updated_time" content="2018-12-24T10:51:57-08:00"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Code"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
@@ -27,7 +27,7 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2018-12-23T19:44:53-08:00",
+  "dateModified": "2018-12-24T10:51:57-08:00",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
@@ -76,6 +76,97 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/devlog-2018-12-24/">Devlog 2018 12 24</a></h2>
+    <p class="blog-post-meta"><time datetime="2018-12-24T10:51:57-08:00">Mon Dec 24, 2018</time> by  in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>, <a href="/categories/devlog" rel="category tag">devlog</a>
+
+
+</p>
+  </header>
+  
+
+<h2 id="gracefully-exiting-asyncio-application">Gracefully exiting asyncio application</h2>
+
+<p>Continuing yesterday&rsquo;s work on my <a href="https://github.com/yuvipanda/simpervisor">simple supervisor library</a>,
+I continued trying to propagate signals cleanly to child processes
+before exiting. I remembered that it isn&rsquo;t enough to just propagate
+signals - you also have to actually reap them. This meant waiting
+for <code>wait</code> calls on them to return.</p>
+
+<p>I had a task running concurrently that is waiting on these
+processes. So &lsquo;all&rsquo; I had to do was make sure the application
+does <em>not</em> exit until these tasks are done. This turned
+out to be harder than I thought! After a bunch of reading, I
+recognized that what I needed to do was make sure I wait
+for all pending tasks before actually exiting the application.</p>
+
+<p>This was more involved than I thought. It also must be done
+at the application level rather than in the library - you don&rsquo;t
+want libraries doing sys.exit, and definitely don&rsquo;t want them
+closing event loops.</p>
+
+<p>After a bunch of looking and playing, it <em>looks</em> like what I want is
+in my application code is something like:</p>
+
+<pre><code class="language-python">if __name__ == '__main__':
+    loop = asyncio.get_event_loop()
+    try:
+        loop.run_until_complete(main())
+    finally:
+        loop.run_until_complete(asyncio.gather(*asyncio.Task.all_tasks()))
+        loop.close()
+</code></pre>
+
+<p>This waits for all tasks to complete before exiting, and seems
+to make sure all child processes are reaped. However, I have a
+few unresolved questions:</p>
+
+<ol>
+<li>What happens when one of the tasks is designed to run forever,
+and never exit? Should we cancel all tasks? Cancel tasks after
+a timeout? Cancelling tasks after a timeout seems most
+appropriate.</li>
+<li>If a task schedules more tasks, do those get run? Or are they
+abandoned? This seems important - can tasks keep adding more
+tasks in a loop?</li>
+</ol>
+
+<p>I am getting a better handle on what people mean by &lsquo;asyncio is
+more complicated than needed&rsquo;. I&rsquo;m going to find places to read
+up on asyncio internals - particularly how the list of pending
+tasks is maintained.</p>
+
+<p>This <a href="https://www.roguelynn.com/words/asyncio-we-did-it-wrong-pt-1/">series of blog posts</a>
+and <a href="https://www.youtube.com/watch?v=1lJDZx6f6tY">this EuroPython talk</a>
+from <a href="https://www.roguelynn.com/">Lynn Root</a> helped a lot.
+So did <a href="https://github.com/saghul">Saúl Ibarra Corretgé</a> (one of the asyncio core devs)
+talk on <a href="https://www.youtube.com/watch?v=HppNu0-ANYw">asyncio internals</a></p>
+
+<h3 id="testing">Testing</h3>
+
+<p>Testing code that involves asyncio, signals and processes is
+hard. I attempted to do so with <code>os.fork</code>, but decided that is
+super-hard mode and I&rsquo;d rather not play. Instead, I wrote Python
+code verbatim that is then spawned as a subprocess, and use
+stdout to communicate back to the parent process. The child process&rsquo;
+code itself is <a href="https://github.com/yuvipanda/simpervisor/blob/b130203a0a497d26f438a6ab3c9511a3c3de60ab/tests/test_atexitasync.py#L13">inline</a>
+in the test file, which is terrible. I am going to move it to its
+own file.</p>
+
+<p>I also added tests for multiple signal handlers. I&rsquo;ve been writing
+a lot more tests in the last few months than I was before. I credit
+<a href="https://github.com/betatim">Tim Head</a> for a lot of this. It definitely
+gives me a lot more confidence in my code.</p>
+
+</article> 
 
 
 
@@ -610,26 +701,6 @@ want to execute.</p>
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/write-once-debug-everywhere/">“Write once, attempt to debug everywhere”</a></h2>
-    <p class="blog-post-meta"><time datetime="2013-12-15T02:20:31Z">Sun Dec 15, 2013</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>
-
-
-</p>
-  </header>
-  <p>&#8220;Write once, attempt to debug everywhere&#8221; is probably way more accurate than &#8220;Write once, run anywhere&#8221; &#8211; at least for GUI apps. There&#8217;s something rather special about ideas that are theoretically amazingly wonderful yet end up being a major pain in the butt when you try to put them in practice, isn&#8217;t it?</p>
-
-<p>The older <a href="https://play.google.com/store/apps/details?id=org.wikipedia">Wikipedia App</a> happened to be in <a href="http://phonegap.com/">PhoneGap</a>, and I consider it one of my biggest blunders to not have torn it down on day 0 and rewritten it in something saner. I once started writing a blog post for the <a href="https://blog.wikimedia.org">Wikimedia Blog</a> about why we switched from PhoneGap to native apps, but it was killed for having too much profanity in it :) Someday, perhaps.</p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   
@@ -680,6 +751,8 @@ want to execute.</p>
     <ol class="list-unstyled">
 
 
+<li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
+
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
@@ -687,8 +760,6 @@ want to execute.</p>
 <li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
 <li><a href="/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></li>
-
-<li><a href="/post/the-littlest-jupyterhub/">The Littlest Jupyterhub</a></li>
 
     </ol>
   </section>

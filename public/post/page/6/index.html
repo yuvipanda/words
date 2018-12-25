@@ -9,7 +9,7 @@
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/post/" />
-<meta property="og:updated_time" content="2014-08-20T11:11:22&#43;00:00"/>
+<meta property="og:updated_time" content="2014-08-21T03:39:15&#43;00:00"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
@@ -27,7 +27,7 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2014-08-20T11:11:22&#43;00:00",
+  "dateModified": "2014-08-21T03:39:15&#43;00:00",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
@@ -76,6 +76,33 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-20-aug-2014/">Devlog for 20 Aug 2014</a></h2>
+    <p class="blog-post-meta"><time datetime="2014-08-21T03:39:15Z">Thu Aug 21, 2014</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
+
+
+</p>
+  </header>
+  <p>Woke up at 11AM again! w000t!</p>
+
+<ul>
+<li>Fixed a stupid bug in Quarry that made it fail if MySQL decided that a column you were selecting is a <code>Decimal</code>. Fixed this in time for&#8230;</li>
+<li>Helped out with a <a href="https://plus.google.com/u/0/b/117126229120807344920/events/cngcjcmm1tcn1omqpalcm686044">webinar</a> from J-Mo for people to learn SQL and do research against Wikimedia stuff with Quarry! Went without a glitch mostly, so yay :) Oren asked for an API for Quarry, I&#8217;ll investigate ways to get that done</li>
+<li>Found that some queries against enwiki succeed on <code>s1.labsdb</code> but not on <code>s4.labsdb</code>. I attribute this to cache characteristics, and have switched Quarry to use s1 for now.</li>
+<li>Did more work on <a href="https://github.com/Ironholds/WPDMZ">DMZ</a>, getting in place a runner / processor infrastructure and sqlite backed intermediary storage so I can write simpler code to get the data I want. Super excited to see how this goes. It&#8217;ll be much easier for me to add new queries now.</li>
+<li>More work on DMZ! I had a late night sprint and split edits by mobile and desktop (and was surprised by seeing how much lesser edits came from mobile). Next would be to gather up population and internet penetration data and then GO MAKE SOME GRAPHS, probably with iPython. I&#8217;m returning to making graphs for real after, what, 6 years or so? :) I was using C# and Excel then :) /nick ExcitedPanda</li>
+<li>Also made some progress on our makeshift Android CI-ish build system for the Wikipedia app. Should be done soon.</li>
+</ul>
+
+</article> 
 
 
 
@@ -398,24 +425,6 @@ THEY ARE WEARING HANDKERCHEIFS!
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/book-2-2014-pro-git/">Book 2 of 2014: Pro Git</a></h2>
-    <p class="blog-post-meta"><time datetime="2014-01-05T17:30:03Z">Sun Jan 5, 2014</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/books" rel="category tag">books</a>
-
-
-</p>
-  </header>
-  <p><a href="http://git-scm.com/book/en/">Pro Git</a> is a nice book I recommend to newbies &#8211; yet I hadn&#8217;t fully read it once. I decided to do so, and I think it was reasonably useful. Most of the stuff in here I already knew, and the treatment of the stuff I did not (Git Internals, mostly) wasn&#8217;t deep enough to be useful. Nevertheless, reinforced some useful concepts in my head and probably gave me enough strong foundations for when I decide to dive into the actual internals of git more (probably by reading the source code?). Also looked very newbie friendly, so I&#8217;ll continue recommending this to people who want to learn about Git.</p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/post/page/5/" rel="prev" role="button">Previous page</a>
@@ -466,6 +475,8 @@ THEY ARE WEARING HANDKERCHEIFS!
     <ol class="list-unstyled">
 
 
+<li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
+
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
@@ -473,8 +484,6 @@ THEY ARE WEARING HANDKERCHEIFS!
 <li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
 <li><a href="/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></li>
-
-<li><a href="/post/the-littlest-jupyterhub/">The Littlest Jupyterhub</a></li>
 
     </ol>
   </section>

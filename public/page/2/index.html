@@ -9,7 +9,7 @@
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/" />
-<meta property="og:updated_time" content="2017-05-13T11:41:20-07:00"/>
+<meta property="og:updated_time" content="2017-07-02T22:47:06-07:00"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Yuvi Panda"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
@@ -27,7 +27,7 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2017-05-13T11:41:20-07:00",
+  "dateModified": "2017-07-02T22:47:06-07:00",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
@@ -76,6 +76,131 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/designing-data-intensive-applications/">designing data intensive applications</a></h2>
+    <p class="blog-post-meta"><time datetime="2017-07-02T22:47:06-07:00">Sun Jul 2, 2017</time> by  in 
+
+<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/learning" rel="tag">learning</a>
+
+</p>
+  </header>
+  
+
+<p>I&rsquo;ve been reading <a href="http://dataintensive.net/">Designing Data Intensive Applications</a> book &amp; am using this post to keep notes!</p>
+
+<p>I&rsquo;ve picked up ideas on scaling systems through the years, but never actually sat down to actually study them semi-formally. This seems like a great start to it!</p>
+
+<p>It&rsquo;s a pretty big book, and it&rsquo;s gonna take me a while to go through it :) Will update these notes as I go! Trying to do a chapter a week!</p>
+
+<h2 id="chapter-1-defining-all-the-things">Chapter 1: Defining all the things</h2>
+
+<blockquote>
+<p>The Internet was done so well that most people think of it as a natural resource like the Pacific Ocean, rather than something that was man-made. When was the last time a technology with a scale like that was so error-free?
+Alan Kay, in <a href="www.drdobbs.com/architecture-and-design/interview-with-alan-kay/240003442">interview with Dr Dobb’s Journal (2012)</a></p>
+</blockquote>
+
+<p>I keep forgetting what an amazing marvel the internet is and how intensely (and mostly positively, thankfully) it has affected my life. This is a good reminder! However, perhaps to people who haven&rsquo;t had the privileges I&rsquo;ve had the Internet doesn&rsquo;t feel like a natural resource? Unsure! Should ask them!</p>
+
+<p>Lots of modern applications are data intensive, rather than CPU intensive.
+&gt;  Raw CPU power is rarely a limiting factor for these applications—bigger problems are usually the amount of data, the complexity of data, and the speed at which it is changing.</p>
+
+<p>This has borne out in the infrastructure I&rsquo;ve been setting up to help teach people data science - RAM is often the bottleneck, not CPU (barring machine-learning type stuff, but they want GPUs anyway).</p>
+
+<p>Common building blocks for data intensive applications are:</p>
+
+<ol>
+<li>Store data so that they, or another application, can find it again later (databases)</li>
+<li>Remember the result of an expensive operation, to speed up reads (caches)</li>
+<li>Allow users to search data by keyword or filter it in various ways (search indexes)</li>
+<li>Send a message to another process, to be handled asynchronously (stream processing)</li>
+<li>Periodically crunch a large amount of accumulated data (batch processing)</li>
+</ol>
+
+<p>These <em>do</em> seem to cover a large variety of bases! I feel fairly comfortable in operating, using and building on top of some of these (databases, caches) but not so much in most (never used a search index, batch processing, nor streams outside of redis). Partially I haven&rsquo;t felt an intense need for these, but perhaps if I understand them more I&rsquo;ll use them more? I&rsquo;ve mostly strived to make everything stateless - but perhaps that&rsquo;s causing me to shy away from problems that can only be solved with state? /me ponders.</p>
+
+<p>Boundaries around &lsquo;data systems&rsquo; are blurring - Redis is a cache but can be a message queue, Apache Kafka is a message queue that can have durability guarantees, etc. Lots of applications also need more than can be done with just one tool (aka a &lsquo;pure LAMP&rsquo; stack is no longer good enough). Applications often have the job of making sure different data sources are in sync. Everyone is a &lsquo;data designer&rsquo;, and everyone is kinda fucked.</p>
+
+<p>Talk about 3 things that are most important to any software system.</p>
+
+<h3 id="reliability">Reliability</h3>
+
+<p>Means &lsquo;continue to work correctly, even when things go wrong&rsquo;. Things that go wrong are &lsquo;faults&rsquo;, and systems need to be &lsquo;fault-tolerent&rsquo; or &lsquo;resilient&rsquo;. Can&rsquo;t be tolerant of all faults, so gotta define what faults we&rsquo;re tolerant of.</p>
+
+<p>Fault isn&rsquo;t failure - fault is when a component of the system &lsquo;deviates from its spec&rsquo;, <em>failure</em> is when the system as a whole stops providing user server they want. Can&rsquo;t reduce chances of fault to zero, but can work on reducing failures to zero.</p>
+
+<p><strong>Engineering is building reliable systems from unreliable parts.</strong></p>
+
+<p>Chaos monkeys are good, increase faults to find ways to reduce failure.</p>
+
+<p>Hardware reliability - physical components fail. Nothing you can do about it. Fix it in software.</p>
+
+<p>Hardware faults <em>usually</em> not corelated - one macine failing doesn&rsquo;t cause another machine to fail. To truly fuck shit up you need software - can easily cause massive large scale failure! For example, a leap second bug! Or a runaway process that slowly kills every other process on the machine. One of the microservies that 50 of your microservices depend on is slow! Cascading failures! These bugs all lie dormant, until they suddenly aren&rsquo;t and wreak havok. The software makes some assumption about its environment, which is true until it isn&rsquo;t. No quick solution to systematic software faults.</p>
+
+<p>Human error is worst error. The book offers some suggestions on how to prevent these.</p>
+
+<ol>
+<li>Minimize opportunities for errors - make it easy to do the right thing. But if it&rsquo;s too restrictive, people will work around it - tricky balance.</li>
+<li>Provide full featured sandboxes so people can fuck around without fucking shit up.</li>
+<li>AUTOMATICALLY TEST EVERYTHING so when a human does fuck up, they know!</li>
+<li>Set up undo functionality, so when human does fuck up, they can roll back!</li>
+</ol>
+
+<p>Learn about telemetry from other disciplines that have been doing this shit for far longer than us. <a href="https://xkcd.com/1831/">Relevant XKCD</a></p>
+
+<p>Reliability isn&rsquo;t just for nukes &amp; aircraft &amp; election systems (haha). Imagine someone loses a video of their kid&rsquo;s first ever step because you didn&rsquo;t care. Fucking up is human and we all do it - what is important is that we care.</p>
+
+<p>Sometimes you gotta sacrifice reliability, but make sure that is an explicit &amp; conscious decision. Actually throw away your prototypes! Put FIXMEs in your code. Take a shower. Make sure hacks look, feel and sound hacky!</p>
+
+<h3 id="scalability">Scalability</h3>
+
+<p>System&rsquo;s ability to adapt to increased &lsquo;load&rsquo; along some axes.</p>
+
+<p>Load is described with various <em>load parameters</em>, which depend on the system (req/s? active users? etc).</p>
+
+<p>Carefully define what this means for your application, and explain your reasoning. You might have to scale in some aspects but not in other.</p>
+
+<p>Once you have the load parameters for your app defined, figure out what happens when you increase load parameters but keep system resources unchanged. After that, try to figure out how much resources need to be increased.</p>
+
+<p>Throughput - number of things that can be done per second. Latency is time it takes to serve a request. These are common things we care about when we move load parameters up and down.</p>
+
+<p>You shouldn&rsquo;t think of these as single numbers, since they vary a fair bit. Think of these as <em>probability distributions</em>. Learn some statistics! Use percentiles, rather than &lsquo;average&rsquo; or &lsquo;mean&rsquo;.</p>
+
+<p>High percentile latencies are especially important when you are a service that&rsquo;s called by many other services - it can cascade down.</p>
+
+<p>No <em>magic scaling sauce</em> - architecture that can scale is different for each application. But there are general purpose building blocks, so worry a little less!</p>
+
+<h3 id="maintainability">Maintainability</h3>
+
+<blockquote>
+<p>Always code as if the person who ends up maintaining your code is a violent psychopath who knows where you live.</p>
+</blockquote>
+
+<p>Split into three major aspects.</p>
+
+<p><strong>Operability</strong></p>
+
+<p>Make it easy for people to operate your service! Help them monitor the health of the system, observe &amp; debug problems, do capacity planning, keep the production environment stable, prevent single human points of failure (oh, only Chad knows about this system) and many other things!</p>
+
+<p><strong>Simplicity</strong></p>
+
+<p>Don&rsquo;t make your software a big ball of mud. Take into account that new engineers will have to start working on your software, and they need to understand it quickly.</p>
+
+<p>Use standard tools &amp; approaches they have a higher likelihood of knowing - look around for standard tools before inventing your own!</p>
+
+<p>Watch out for accidental complexity, and keep it to a minimum as much as possible. Abstractions are good, but abstractions are also leaky.</p>
+
+<p><strong>Evolvability</strong></p>
+
+<p>If your software is simple &amp; has good abstractions, you can change it over time without wanting to pull all your hair out.</p>
+
+</article> 
 
 
 
@@ -536,52 +661,6 @@ exec sudo systemd-run \
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/first-protest/">my first protest</a></h2>
-    <p class="blog-post-meta"><time datetime="2017-02-03T22:37:21-08:00">Fri Feb 3, 2017</time> by  in 
-
-<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/resistance" rel="tag">resistance</a>, <a href="/tags/personal" rel="tag">personal</a>
-
-</p>
-  </header>
-  <p>I went to the protests at SFO last weekend. It was the first real set of protests I&rsquo;ve been to. I write this to attempt to capture a sliver of what I felt that day.</p>
-
-<p>I was there for about 10h on day 1, and came home exhausted. I went back on Day 2, and this time stayed for much shorter period of time (~4h?) before heading back home.</p>
-
-<p>To everyone who was at the protest even if it does not directly affect you yet - <em>thank you</em>!</p>
-
-<p>To the wonderful amazing women of color who were leading the protest - <em>thank you</em>. You are an inspiration.</p>
-
-<p>To the brass band and the troupe of drummers who showed up - <em>thank you</em>!</p>
-
-<p>To the people I already know from other contexts who I ran into at the protest - <em>thank you</em>!</p>
-
-<p>To those who were protesting for the first time in their lives (as I was) - <em>thank you</em>!</p>
-
-<p>To the fucking ACLU - <em>thank you</em>! I&rsquo;ll send you all the money I can :)</p>
-
-<p>To the people who provided infrastructure (food, water, snacks, first aid, printers, internet, etc) - <em>thank you</em>!</p>
-
-<p>To the journalists who covered this - <em>thank you</em>.</p>
-
-<p>I woke up that saturday feeling very depressed, angry, and helpless. By sunday night, I was only depressed and angry - but not helpless. The number and variety of people at the protests was very heartwarming, and made me feel distinctly not alone. Before going I was not sure what going to a protest accomplishes. I still do not know - but I know it gave me hope and restored my sense of agency.</p>
-
-<p>I promise I&rsquo;ll continue doing all I can, even and especially when it is about things that do not affect me yet. I hope you do too.</p>
-
-<blockquote>
-<p>What hurts the victim most is not the cruelty of the oppressor but the silence of the bystander</p>
-</blockquote>
-
-<p><em>- from a sign at the protest</em></p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/" rel="prev" role="button">Previous page</a>
@@ -632,6 +711,8 @@ exec sudo systemd-run \
     <ol class="list-unstyled">
 
 
+<li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
+
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
@@ -639,8 +720,6 @@ exec sudo systemd-run \
 <li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
 <li><a href="/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></li>
-
-<li><a href="/post/the-littlest-jupyterhub/">The Littlest Jupyterhub</a></li>
 
     </ol>
   </section>
