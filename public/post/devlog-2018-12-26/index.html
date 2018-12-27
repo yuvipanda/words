@@ -23,7 +23,7 @@
   "@type": "BlogPosting",
   "headline": "Devlog 2018 12 26",
   "url": "http://words.yuvi.in/post/devlog-2018-12-26/",
-  "wordCount": "375",
+  "wordCount": "494",
   "datePublished": "2018-12-26T10:23:40-08:00",
   "dateModified": "2018-12-26T10:23:40-08:00",
   "author": {
@@ -110,6 +110,18 @@ to see test output directly.</p>
 <p>I think I&rsquo;ll be using the Terminal for pytest runs for now. I&rsquo;m not even going to try with git.</p>
 
 <p>If I was younger and not already full of projects to do, I&rsquo;d have picked up and tried to make a PR for this. Boo time commitments.</p>
+
+<h2 id="readyness-check">Readyness check</h2>
+
+<p>I rallied late in the day &amp; wrote some code around readyness checks in simpervisor. I don&rsquo;t fully understand what I want it to do, but I&rsquo;m going to look at what kubernetes does &amp; try to follow that. Since this is being written for nbserverproxy, I am also going to try port nbserverproxy to simpervisor to see what kind of API affordances I&rsquo;m missing. Primarily, I feel there should be a lock somewhere, but:</p>
+
+<ol>
+<li>I don&rsquo;t have a unified theory of what needs locking &amp; why</li>
+<li>I don&rsquo;t know if I need a lock or another synchronization mechanism</li>
+<li>I don&rsquo;t know how it&rsquo;ll actually be used by the application</li>
+</ol>
+
+<p>So designing by porting nbserverproxy seems right.</p>
 
 
   
