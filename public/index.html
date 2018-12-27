@@ -9,7 +9,7 @@
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/" />
-<meta property="og:updated_time" content="2018-12-24T10:51:57-08:00"/>
+<meta property="og:updated_time" content="2018-12-26T10:23:40-08:00"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Yuvi Panda"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
@@ -27,7 +27,7 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2018-12-24T10:51:57-08:00",
+  "dateModified": "2018-12-26T10:23:40-08:00",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
@@ -76,6 +76,48 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/devlog-2018-12-26/">Devlog 2018 12 26</a></h2>
+    <p class="blog-post-meta"><time datetime="2018-12-26T10:23:40-08:00">Wed Dec 26, 2018</time> by  in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>, <a href="/categories/code" rel="category tag">code</a>
+
+
+</p>
+  </header>
+  
+
+<h2 id="physical-activity">Physical activity</h2>
+
+<p>I walked for about 6 miles yesterday evening, after doing 3-4 miles each day for about 2-3 days before. The roads were empty, and it was lovely. I&rsquo;ve listened to maybe 6-10 hours of <a href="https://en.wikipedia.org/wiki/Deborah_Frances-White">Deborah Frances-White</a> in the last week or so, split between <a href="http://guiltyfeminist.com/">The Guilty Feminist</a> and <a href="http://globalpillage.net/">Global Pillage</a>. Next time though, I&rsquo;m going to try listen to podcasts less &amp; observe my surroundings more. I am doing this (plus PT) to rehab my knee mostly. I slept for 12h yesterday night :)</p>
+
+<h2 id="asyncio-deadlock">Asyncio deadlock</h2>
+
+<p>I don&rsquo;t have enough experience with the pitfalls of concurrent programming where you <em>have</em> to use <a href="https://docs.python.org/3/library/asyncio-sync.html">synchronization</a> techniques. I had my first deadlock today, and after a few minutes realized it was actually an infinite recursion from a typo. I need to get a better theoretical understanding of both event loop based async programming and synchronization methods. I&rsquo;ve used them with threading &amp; Java, but feel shaky in asyncio.</p>
+
+<p>simperviser now has 100% unit test coverage. But it combines asyncio,
+processes &amp; signals - so that doesn&rsquo;t give me enough confidence as it might have otherwise. I&rsquo;ll take it though :)</p>
+
+<h2 id="vscode-customization">VSCode customization</h2>
+
+<p>I&rsquo;ve been re-reading the pragmatic programmer again (after initially reading it about 12 years or so ago). A lot of it still holds up, although some stuff is date (love for Broken Window policing &amp; perl). It reminded me that I hadn&rsquo;t really spent much time customizing and being more productive in VSCode, so am spending time today doing that.</p>
+
+<p>I switch between vscode and my terminal quite a bit, mostly for git operations and running tests. I&rsquo;m going to see if I can stay inside vscode comfortably for running pytest based tests.</p>
+
+<p>It made me very sad that the only thing I wanted from the pytest integration in vscode is something the maintainers aren&rsquo;t actively working on - <a href="https://github.com/Microsoft/vscode-python/issues/637">shortcut to run test the cursor is currently at</a>. I also can&rsquo;t seem
+to see test output directly.</p>
+
+<p>I think I&rsquo;ll be using the Terminal for pytest runs for now. I&rsquo;m not even going to try with git.</p>
+
+<p>If I was younger and not already full of projects to do, I&rsquo;d have picked up and tried to make a PR for this. Boo time commitments.</p>
+
+</article> 
 
 
 
@@ -1039,35 +1081,6 @@ This has had a lot of good cascading changes.</li>
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/post/maintainerati-2017/">maintainerati 2017</a></h2>
-    <p class="blog-post-meta"><time datetime="2017-10-10T23:15:01-07:00">Tue Oct 10, 2017</time> by  in 
-
-<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/opensource" rel="tag">opensource</a>
-
-</p>
-  </header>
-  <p>I was at <a href="http://maintainerati.org/">maintainerati</a> today, which was super fun &amp; quite intense! I highly appreciate GitHub &amp; the individuals involved in making it happen!</p>
-
-<p>Here&rsquo;s my key takeaways from this (and several other conversations over the last few weeks leading up to this):</p>
-
-<ol>
-<li>I am now a <em>maintainer</em>, which is quite a different thing from a <em>core contributor</em> or just a <em>contributor</em>. The power dynamics are very different, and so are the responsibilities. I can not ostrich myself into thinking I can just keep writing code and not do anything else - that&rsquo;s a disservice to not just other folks in the project, but also myself.</li>
-<li>Being a maintainer is quite hard emotionally &amp; mentally. I&rsquo;ve a lot more respect for long running OSS maintainers now than I did before. I have a lot of personal work to do before I become anything like a decent maintainer.</li>
-<li>Lots of people love Gerrit, and they also hate Gerrit :D Gerrit is very powerful, but the UX is so user hostile - I don&rsquo;t think these are unrelated. I hope that some of the power of Gerrit transfers to GitHub, but at the same time GitHub does not become anything like Gerrit! Also, people have very strong opinions about how their git histories should look like - perhaps they spend a lot more time looking through it than I do?</li>
-<li>We are slowly developing better ways of dealing with Trolls in projects, but still have a long, long way to go. &ldquo;Look for the helpers&rdquo; here.</li>
-</ol>
-
-<p>It was also great to go to a short, well organized (un)conference targeted at diverse group of people who are still like me in some sense! Would go again, A+++!</p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   
@@ -1118,6 +1131,8 @@ This has had a lot of good cascading changes.</li>
     <ol class="list-unstyled">
 
 
+<li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
+
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
 
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
@@ -1125,8 +1140,6 @@ This has had a lot of good cascading changes.</li>
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
 
 <li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
-
-<li><a href="/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></li>
 
     </ol>
   </section>

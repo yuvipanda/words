@@ -9,7 +9,7 @@
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/categories/devlog/" />
-<meta property="og:updated_time" content="2011-12-12T09:47:48&#43;00:00"/>
+<meta property="og:updated_time" content="2011-12-21T23:55:51&#43;00:00"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Devlog"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
@@ -27,7 +27,7 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2011-12-12T09:47:48&#43;00:00",
+  "dateModified": "2011-12-21T23:55:51&#43;00:00",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
@@ -76,6 +76,32 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-december-21-2011/">DevLog: December 21 2011</a></h2>
+    <p class="blog-post-meta"><time datetime="2011-12-21T23:55:51Z">Wed Dec 21, 2011</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
+
+
+</p>
+  </header>
+  <ol>
+<li>livetrains work. Trying to move (minimal) build system to waf. Somewhat complicated, not as fluid as I&#8217;d like. Go to rake. Feel weird about starting from scratch, come back to waf. Not get anything done Another rake diversion. Final Makefile editing desperation. I give up &#8211; I need to spend atleast a day to get back on proper build tools. That day is not today.
+
+<ol>
+<li>Added feature to change font size to wikipedia app. That took almost a couple of days and ended up being less than 20 lines of code. First was trying to enable pinch and zoom, but only for an iframe &#8211; proved impossible. And then a long time of headwalling about how I&#8217;m not able to manipulate the DOM inside the iframe (despite code in other places being able to do it just fine (no crossdomain issues here)), I had given up and moved elsewhere. Finally brion suggested I try inserting a <link> into <head>, which actually did work. So much for the browser being sane</li>
+<li>&#8216;Refined&#8217; the search behavior of the wikipedia app a bit more. Also got bit by a difference between zepto (that we use) and jQuery (whose docs I have to read, since zepto by itself seems to have no docs). Had to read through the code to fix it, and managed to.</li>
+<li>Closed a *lot* of bugs. BOY THAT FEELS GREAT!</li>
+</ol></li>
+</ol>
+
+</article> 
 
 
 
@@ -736,6 +762,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
+
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
 
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
@@ -743,8 +771,6 @@
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
 
 <li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
-
-<li><a href="/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></li>
 
     </ol>
   </section>

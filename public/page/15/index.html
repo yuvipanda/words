@@ -9,7 +9,7 @@
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/" />
-<meta property="og:updated_time" content="2011-10-28T08:27:50&#43;00:00"/>
+<meta property="og:updated_time" content="2011-11-28T10:40:50&#43;00:00"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Yuvi Panda"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
@@ -27,7 +27,7 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2011-10-28T08:27:50&#43;00:00",
+  "dateModified": "2011-11-28T10:40:50&#43;00:00",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
@@ -76,6 +76,42 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/learnt-reading-javascript-good-parts/">What I learnt from reading “Javascript – The Good Parts”</a></h2>
+    <p class="blog-post-meta"><time datetime="2011-11-28T10:40:50Z">Mon Nov 28, 2011</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>
+
+
+<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/book" rel="tag">book</a>, <a href="/tags/js" rel="tag">js</a>, <a href="/tags/php" rel="tag">php</a>
+
+</p>
+  </header>
+  
+
+<p>Just finished reading &#8216;Javascript &#8211; The Good Parts&#8217;. Here is what I learnt:</p>
+
+<ul>
+<li>I knew jack shit about JavaScript. I was able to get along so far simply because I knew jQuery and understood how closures work.</li>
+<li>Holy shit that&#8217;s one fucked up language. Quite schizophrenic, saved by almost limitless extensibility/monkey-patchability/watcha-gonna-do-write-a-java-applet-hahaha .</li>
+<li>If you&#8217;re going to write Javascript, you&#8217;ll have to subset. Subsetting/augmenting has its own share of problems &#8211; primarily that <code>map</code> in your code might not be the same as <code>map</code> in someone else&#8217;s code, even if they seem to be working on the same &#8216;type&#8217;</li>
+<li>jQuery is incredible. I guess it is sort of like a &#8216;Standard Library&#8217; of sorts, atleast on the client side. I&#8217;m sure there exists something similar on the server side as well (underscore.js, perhaps?)</li>
+<li>I haven&#8217;t written any sufficiently large Javascript program yet. Need to fix that.</li>
+</ul>
+
+<h3 id="defensive-programming">Defensive Programming</h3>
+
+<p>When you&#8217;re writing PHP, you program <em>defensively</em>. The language is out to get you. Make one wrong step and it&#8217;ll fuck you over. Never assume anything, make sure you always check the documentation. You can&#8217;t trust the language. It&#8217;s not stupid, it&#8217;s schizophrenic.</p>
+
+<p>I think I should start treating JavaScript also that way.</p>
+
+</article> 
 
 
 
@@ -832,32 +868,6 @@
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/sleepsort-4chan/">SleepSort from 4Chan</a></h2>
-    <p class="blog-post-meta"><time datetime="2011-06-19T01:40:36Z">Sun Jun 19, 2011</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>
-
-
-<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/algorithm" rel="tag">algorithm</a>, <a href="/tags/code" rel="tag">code</a>
-
-</p>
-  </header>
-  <p>4Chan isn&#8217;t exactly what you&#8217;d associate with &#8216;shit, that&#8217;s a cool piece of code!&#8217;, but look <a href="http://dis.4chan.org/read/prog/1295544154">what I found</a>!</p>
-
-<p>(<a href="http://news.ycombinator.com/item?id=2657277">via HN</a>)</p>
-
-<p>Nice hack. And it <strong>is</strong> <code>O(N)</code> in bitsize of largest number (Ignoring all the overhead of forking new processes, the problem with the race conditions(Sort 0 and 0.1? How about 0.01 and 0.011?), processor contention, etc,.) They basically delegated the sorting to the process scheduler, treating it as a sort of priority queue.</p>
-
-<p>Sometimes you just see a hack so out of the box that it makes you say &#8216;woah!&#8217; and let your mouth hang open there for a while. One such time this :)</p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/page/14/" rel="prev" role="button">Previous page</a>
@@ -908,6 +918,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
+
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
 
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
@@ -915,8 +927,6 @@
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
 
 <li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
-
-<li><a href="/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></li>
 
     </ol>
   </section>

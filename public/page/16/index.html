@@ -9,7 +9,7 @@
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/" />
-<meta property="og:updated_time" content="2011-06-14T13:27:41&#43;00:00"/>
+<meta property="og:updated_time" content="2011-06-19T01:40:36&#43;00:00"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Yuvi Panda"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
@@ -27,7 +27,7 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2011-06-14T13:27:41&#43;00:00",
+  "dateModified": "2011-06-19T01:40:36&#43;00:00",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
@@ -76,6 +76,32 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/sleepsort-4chan/">SleepSort from 4Chan</a></h2>
+    <p class="blog-post-meta"><time datetime="2011-06-19T01:40:36Z">Sun Jun 19, 2011</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>
+
+
+<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/algorithm" rel="tag">algorithm</a>, <a href="/tags/code" rel="tag">code</a>
+
+</p>
+  </header>
+  <p>4Chan isn&#8217;t exactly what you&#8217;d associate with &#8216;shit, that&#8217;s a cool piece of code!&#8217;, but look <a href="http://dis.4chan.org/read/prog/1295544154">what I found</a>!</p>
+
+<p>(<a href="http://news.ycombinator.com/item?id=2657277">via HN</a>)</p>
+
+<p>Nice hack. And it <strong>is</strong> <code>O(N)</code> in bitsize of largest number (Ignoring all the overhead of forking new processes, the problem with the race conditions(Sort 0 and 0.1? How about 0.01 and 0.011?), processor contention, etc,.) They basically delegated the sorting to the process scheduler, treating it as a sort of priority queue.</p>
+
+<p>Sometimes you just see a hack so out of the box that it makes you say &#8216;woah!&#8217; and let your mouth hang open there for a while. One such time this :)</p>
+
+</article> 
 
 
 
@@ -601,30 +627,6 @@
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/sicp-and-brainfuck/">SICP and BrainFuck</a></h2>
-    <p class="blog-post-meta"><time datetime="2011-05-13T05:10:31Z">Fri May 13, 2011</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>
-
-
-<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/code" rel="tag">code</a>
-
-</p>
-  </header>
-  <p>No, I&#8217;m <em>not</em> going to blow your mind by telling you I&#8217;m going to do the SICP exercises in BrainFuck :)</p>
-
-<p>I just wrote <a href="https://gist.github.com/969657">my first brainfuck program</a>. Might as well be my last, but not sure. Tape-based turing-ish programing seems fun, so maybe I&#8217;ll try that again with something more expressive than brainfuck (or maybe that is pointless?)</p>
-
-<p>And I&#8217;m doing the SICP Exercises. In <a href="http://groups.csail.mit.edu/mac/projects/scheme/">MIT-Scheme</a>. I&#8217;ve put them <a href="https://github.com/yuvipanda/sicp-exercises">up on GitHub</a>. I&#8217;m doing this with the <a href="http://fpug-c.posterous.com/">FPUG-C</a> SICP Study Group, so hope I&#8217;m able to complete it all this time :) Big props to <a href="http://www.openbala.com/">Balaji</a> for organizing it, and letting us get away with the free coke and coffee!</p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/page/15/" rel="prev" role="button">Previous page</a>
@@ -675,6 +677,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
+
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
 
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
@@ -682,8 +686,6 @@
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
 
 <li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
-
-<li><a href="/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></li>
 
     </ol>
   </section>

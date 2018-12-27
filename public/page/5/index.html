@@ -9,7 +9,7 @@
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/" />
-<meta property="og:updated_time" content="2014-09-11T20:16:39&#43;00:00"/>
+<meta property="og:updated_time" content="2014-09-24T15:17:10&#43;00:00"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Yuvi Panda"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
@@ -27,7 +27,7 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2014-09-11T20:16:39&#43;00:00",
+  "dateModified": "2014-09-24T15:17:10&#43;00:00",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
@@ -76,6 +76,39 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-sep-12-24-2014/">DevLog Sep 12-24, 2014</a></h2>
+    <p class="blog-post-meta"><time datetime="2014-09-24T15:17:10Z">Wed Sep 24, 2014</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
+
+
+</p>
+  </header>
+  <p>That was a long break. Should get into better habits. I&#8217;m sure I&#8217;d miss some here. Oh well.</p>
+
+<p>It was a very interesting week, culminating in some very interesting things at Trafalgar Square. I feel much better as a person and more calmer/chilled out now :) Should remember to take weekends off.</p>
+
+<ul>
+<li>Helped the <a href="http://metrics.wmflabs.org/">WikiMetrics</a> people with some puppet changes. They were requiring mysql directly instead of using the class we have in ops/puppet, which meant it put data in the /var partition instead of in /srv. This was because they want to be a &#8216;proper&#8217; independent puppet module, not depending on the other modules in ops/puppet (since the module is used in vagrant as well). Puppet has <em>terrible</em> support for this kind of thing, and ops/puppet by itself also suffers from an incredible amount of NIH syndrome when it comes to modules. Some of the NIH-so-rewrite is justified, but I don&#8217;t think all of it is. Oh well. Hopefully something that can be fixed over time&#8230;</li>
+<li>Added basic icinga/graphite based monitoring for contint project (runs our jenkins installation). Quite trivial, but should be ported over to shinken at some point soon.</li>
+<li>Contributed a fair bit to the <a href="https://github.com/erming/shout">Shout</a> Web IRC project. I was looking around for an open source replacement to <a href="https://irccloud.com">IRCCloud</a>, and found a bunch of OSS projects (<a href="https://github.com/thedjpetersen/subway">Subway</a> and <a href="http://ircanywhere.com/">http://ircanywhere.com/</a> being the others). Shout seemed the most active (and simplest) of them all &#8211; I couldn&#8217;t actually get the others to a working installation. I fixed a bunch of code formatting issues, and also added a couple of features (<a href="https://github.com/erming/shout/pull/138">Desktop notifications</a> being the most significant, I think). The maintainer was fun to work with, and merged most of my changes quite promptly. I hang out on <code>#shout-irc</code> channel now, and activity seems to be speeding along. Should be fun to see how it goes :)</li>
+<li>Moved off IRCCloud. Stopped paying for it. I&#8217;ve also stopped doing email on my phone, in an effort to be more minimalistic / less distracted all the time. This meant no more IRC on phone, so my primary reason for using IRCCloud disappeared. Am back to using LimeChat with my ZNC bouncer now. And nothing on my phone. In case of emergencies, I still have the IRCCloud app on my phone, and can use the free edition to connect to my bouncer temporarily.</li>
+<li>Started working on labs-specific monitoring, with <a href="http://shinken-monitoring.org">shinken</a> &#8211; test instance at <a href="http://shinken.wmflabs.org">shinken.wmflabs.org</a>. Discussion in the ops list about how to best implement this. Shinken is supposed to horizontally scale much better than icinga since it is implemented as a bunch of different daemons that can talk over the network. Right now they are just one machine, but will probably expand at some point not too far away. They are running as a labs project rather than on a physical machine (<code>labmon1001</code>) because it is much easier from a networking perspective. Right now it only has a simple http check for betacluster, but more coming.</li>
+<li>Started refactoring all our icinga code. Separating them out into <code>nagios_commmon</code> module for config that can be shared between shinken and icinga, and into an <code>icinga</code> module for everything else. Moved all the custom checks and check config we have, moving other things as we go. This is a bit hard / frustrating since I don&#8217;t have access to the machine icinga runs on (<code>neon</code>), and also because I still do not have +2 in our ops repo (should change in a month, tho!). Am about 40 patches in (small ones!), let&#8217;s see how many more it takes!</li>
+<li>Moved our <code>dsh</code> code into a module. Was fairly trivial. Now to find ways to get it merged :)</li>
+<li>Started trying out <a href="http://pinboard.in">pinboard</a>. Interesting, barebones design. The bookmarklet is a bit slow to load, though. Let&#8217;s see how often I use this. (I did pay for it)</li>
+</ul>
+
+<p>Five more days left in the UK :( Let me see if I can continue doing these when here, in a more prompt manner.</p>
+
+</article> 
 
 
 
@@ -337,32 +370,6 @@
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-21-aug-2014/">Devlog for 21 Aug 2014</a></h2>
-    <p class="blog-post-meta"><time datetime="2014-08-22T11:01:50Z">Fri Aug 22, 2014</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
-
-
-</p>
-  </header>
-  <p>In Edinburgh! I&#8217;ve finally stopped spelling it as Edinborough!</p>
-
-<ul>
-<li>Added &#8216;user group&#8217; functionality to Quarry, and added a <code>sudo</code> user group that does what you would think it does. Will be assigned super, super sparingly.</li>
-<li>Found out that I&#8217;d have to explicitly specify charset of the database when I&#8217;m creating it or MySQL will default to a stupid charset. Forced all tables and columns to utf8 and that seems to have fixed a bunch of unicode issues. Yay?</li>
-<li>Still facing occasional <code>MySQL server has gone away</code> errors with SQLAlchemy for local MySQL instance, despite asking SQLAlchemy to recycle connections every hour or so. Reduced the recycle time to 10m, hopefully that helps.</li>
-<li>Read Tony Hoare&#8217;s Turing Award speech from 1980, titled <a href="http://zoo.cs.yale.edu/classes/cs422/2014/bib/hoare81emperor.pdf">&#8220;The Emperor&#8217;s Old Clothes&#8221;</a>. I think I should read more of these papers / speeches, helps keep perspective and &#8216;learn from history&#8217;. Lots of warnings against complexity seem to be a very common theme, and one I&#8217;ve also personally encountered many times. Recommend reading :)</li>
-<li>More DMZ work! Now running edits per country stats separated by mobile vs desktop for all countries for all wikipedias! EXCITING!</li>
-</ul>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/page/4/" rel="prev" role="button">Previous page</a>
@@ -413,6 +420,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
+
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
 
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
@@ -420,8 +429,6 @@
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
 
 <li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
-
-<li><a href="/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></li>
 
     </ol>
   </section>

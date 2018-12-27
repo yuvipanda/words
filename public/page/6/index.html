@@ -9,7 +9,7 @@
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/" />
-<meta property="og:updated_time" content="2014-08-21T03:39:15&#43;00:00"/>
+<meta property="og:updated_time" content="2014-08-22T11:01:50&#43;00:00"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Yuvi Panda"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
@@ -27,7 +27,7 @@
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2014-08-21T03:39:15&#43;00:00",
+  "dateModified": "2014-08-22T11:01:50&#43;00:00",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
   "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
 }
@@ -76,6 +76,32 @@
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-21-aug-2014/">Devlog for 21 Aug 2014</a></h2>
+    <p class="blog-post-meta"><time datetime="2014-08-22T11:01:50Z">Fri Aug 22, 2014</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
+
+
+</p>
+  </header>
+  <p>In Edinburgh! I&#8217;ve finally stopped spelling it as Edinborough!</p>
+
+<ul>
+<li>Added &#8216;user group&#8217; functionality to Quarry, and added a <code>sudo</code> user group that does what you would think it does. Will be assigned super, super sparingly.</li>
+<li>Found out that I&#8217;d have to explicitly specify charset of the database when I&#8217;m creating it or MySQL will default to a stupid charset. Forced all tables and columns to utf8 and that seems to have fixed a bunch of unicode issues. Yay?</li>
+<li>Still facing occasional <code>MySQL server has gone away</code> errors with SQLAlchemy for local MySQL instance, despite asking SQLAlchemy to recycle connections every hour or so. Reduced the recycle time to 10m, hopefully that helps.</li>
+<li>Read Tony Hoare&#8217;s Turing Award speech from 1980, titled <a href="http://zoo.cs.yale.edu/classes/cs422/2014/bib/hoare81emperor.pdf">&#8220;The Emperor&#8217;s Old Clothes&#8221;</a>. I think I should read more of these papers / speeches, helps keep perspective and &#8216;learn from history&#8217;. Lots of warnings against complexity seem to be a very common theme, and one I&#8217;ve also personally encountered many times. Recommend reading :)</li>
+<li>More DMZ work! Now running edits per country stats separated by mobile vs desktop for all countries for all wikipedias! EXCITING!</li>
+</ul>
+
+</article> 
 
 
 
@@ -405,26 +431,6 @@ THEY ARE WEARING HANDKERCHEIFS!
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/book-3-2014-pyramids-discworld/">Book 3 of 2014: Pyramids (Discworld)</a></h2>
-    <p class="blog-post-meta"><time datetime="2014-01-13T06:24:15Z">Mon Jan 13, 2014</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/books" rel="category tag">books</a>
-
-
-</p>
-  </header>
-  <p>Finished that yesterday. Fun digs at war, and fun digs at people (literally) stuck in a paste despite being in the present. The bit with the Greek philosophers was also nice. No memorable recurring characters, however.</p>
-
-<p><sup>3</sup>&frasl;<sub>5</sub></p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/page/5/" rel="prev" role="button">Previous page</a>
@@ -475,6 +481,8 @@ THEY ARE WEARING HANDKERCHEIFS!
     <ol class="list-unstyled">
 
 
+<li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
+
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
 
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
@@ -482,8 +490,6 @@ THEY ARE WEARING HANDKERCHEIFS!
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
 
 <li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
-
-<li><a href="/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></li>
 
     </ol>
   </section>

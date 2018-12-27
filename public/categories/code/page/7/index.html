@@ -84,6 +84,51 @@
 
 <article class="blog-post">
   <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/cheese-gsoc-report-week-1/">Cheese GSoC Report – Week 1</a></h2>
+    <p class="blog-post-meta"><time datetime="2010-05-30T02:22:41Z">Sun May 30, 2010</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>
+
+
+</p>
+  </header>
+  <p>First week of official coding is over. What do I have to show for it?</p>
+
+<ol>
+<li>Moved code from Github to GNOME Git (Thanks fargiolas!)</li>
+<li>Learnt how to use GTKBuilder, and how to autoconnect signals to vala callback functions.</li>
+<li>Learnt <em>some</em> of the intricacies of Gtk+ Layouts (They still have a lot to teach me!)</li>
+<li>Got a very basic version of the basic Cheese window up and running.</li>
+<li>Learnt how to embed Clutter into the Gtk+ base of Cheese.</li>
+</ol>
+
+<p>So far so good. I don&#8217;t quite like the pace of my work &#8211; I should be going faster. Hopefully I won&#8217;t be feeling like this at the end of next week :)</p>
+
+<p>By next week, I hope to have accomplished&#8230;</p>
+
+<ol>
+<li>Pixel perfect UI, replicating exactly what is in cheese right now (except for the viewport, ofcourse)</li>
+<li>Vala bindings (<code>.vapi</code> files, basically) for <code>libcheese</code></li>
+<li>Thumbnail View finished (either wrap and use current code, steal some some other project or write my own)</li>
+<li>Basic work on modifying libcheese to support video output to a ClutterTexture</li>
+</ol>
+
+<p>GSoC is primarily about learning, so what have I learnt so far?</p>
+
+<ol>
+<li><code>git</code> is a powerful tool, provided you do not fight it (thanks fargiolas!)</li>
+<li>Just because code works, doesn&#8217;t mean it is good enough! (thanks _ke!)</li>
+<li>When you are stuck, STOP AND ASK FOR DIRECTIONS! (thanks fargiolas!)</li>
+</ol>
+
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
     <h2 class="blog-post-title"><a href="http://words.yuvi.in/vala-gtkbuilder-and-autoconnecting-signal-handlers/">Vala, GTKBuilder and Autoconnecting Signal Handlers</a></h2>
     <p class="blog-post-meta"><time datetime="2010-05-30T02:22:41Z">Sun May 30, 2010</time> by yuvipanda in 
 <i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>
@@ -392,36 +437,6 @@
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/why-i-got-rid-of-my-fork-of-waffle/">Why I got rid of my fork of Waffle</a></h2>
-    <p class="blog-post-meta"><time datetime="2009-10-21T00:27:55Z">Wed Oct 21, 2009</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>
-
-
-</p>
-  </header>
-  <p>For those of you who didn&#8217;t know, <a href="http://github.com/bickfordb/waffle">Waffle</a> is a <a href="http://bret.appspot.com/entry/how-friendfeed-uses-mysql">schemaless storage layer</a> that sits on top of SQLAlchemy. Something that I was initially very interested in.</p>
-
-<p>Not anymore.</p>
-
-<p>Why?</p>
-
-<p>Because I found <a href="http://www.mongodb.org/display/DOCS/Home">MongoDB</a>.</p>
-
-<p>And fell in love.</p>
-
-<p>Yes, I do know they both are different, but MongoDB has the things that attracted me to Waffle (very flexible schema, great querying, indexes) and is just as easy to set up (maybe not as easy as Waffle over SQLite, but only slightly less easier).</p>
-
-<p>I &lt;3 MongoDB. Let&#8217;s see how long this lasts!</p>
-
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/categories/code/page/6/" rel="prev" role="button">Previous page</a>
@@ -472,6 +487,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
+
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
 
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
@@ -479,8 +496,6 @@
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
 
 <li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
-
-<li><a href="/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></li>
 
     </ol>
   </section>
