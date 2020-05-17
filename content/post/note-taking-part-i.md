@@ -26,7 +26,9 @@ I noticed I was using Evernote less and less, and wandered the desert for a whil
 ## OneNote
 
 I had been using OneNote on and off for a while. It has some of the same problems Evernote has. But the absolute no-go for me was how it handled text notes on my laptop.
- ![Pasted image](https://dynalist.io/u/uNCYg20uAdh0sB6J-rESvEuH) 
+
+![one note being terrible](/images/note-taking/onenote-terrible.png)
+
 This __feature__ killed it. It was too much mental load, and I hated the extra UI it brought. It had most of the problems evernote did, and worse.
 
 ## List applications
@@ -49,8 +51,10 @@ At this point, I heard about [Roam Research](https://roamresearch.com/). It look
 
 I looked around for alternatives, and discovered [workflowey](https://workflowy.com/). I'll admit the list of endorsements on their home page was a big draw for me. 
 However, when I tried to sign up, I got
-![Image](https://pbs.twimg.com/media/EX9-uPjU0AUJGSt?format=jpg&name=medium)
-My usual password length is 63, and it totally [failed that test](https://twitter.com/WorkFlowy/status/1261034917011632128).I also discovered [they don't support markdown](https://workflowy.zendesk.com/hc/en-us/community/posts/360007921026-Needs-some-kind-of-Markdown-syntax-support-) so that rules them out
+
+![one note being terrible](/images/note-taking/workflowey-password.jpg)
+
+My usual password length is 63, and it totally [failed that test](https://twitter.com/WorkFlowy/status/1261034917011632128). I also discovered [they don't support markdown](https://workflowy.zendesk.com/hc/en-us/community/posts/360007921026-Needs-some-kind-of-Markdown-syntax-support-) so that rules them out
 
 ## Dynalist
 I discovered **[Dynalist](https://dynalist.io/)** as a Workflowey alternative. It has all the things I want, and I've been using it for a few days now. It's been extremely awesome! The syncing is flakey, and I have some anxiety about losing data - but otherwise, the format itself has been great for me!
