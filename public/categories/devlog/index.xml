@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Devlog on Yuvi Panda</title>
+    <title>devlog on Yuvi Panda</title>
     <link>http://words.yuvi.in/categories/devlog/</link>
-    <description>Recent content in Devlog on Yuvi Panda</description>
+    <description>Recent content in devlog on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 26 Dec 2018 10:23:40 -0800</lastBuildDate>
@@ -69,7 +69,7 @@ Ended up learning some Tornad and wrote nbserve to serve rendered notebooks and 
       <pubDate>Sun, 20 Dec 2015 09:15:56 +0000</pubDate>
       
       <guid>http://words.yuvi.in/devlog-2015-dec-19/</guid>
-      <description>Today looks like a day of finding, reporting and fixing bugs in WikiChatter. I had made a stupid mistake yesterday that meant not all of the Teahouse pages were being parsed, and I immediately started running into bugs. Have reported (and fixed!) two (1 and 2), and ran into another bug in mediawikiparserfromhell itself. I&amp;#8217;m sure I&amp;#8217;ll find more.  Another bug in WikiChatter! 3 Perils of digging through archives &amp;#8211; you find Wikipedians giving relationship advice.</description>
+      <description>Today looks like a day of finding, reporting and fixing bugs in WikiChatter. I had made a stupid mistake yesterday that meant not all of the Teahouse pages were being parsed, and I immediately started running into bugs. Have reported (and fixed!) two (1 and 2), and ran into another bug in mediawikiparserfromhell itself. I&amp;#8217;m sure I&amp;#8217;ll find more. Another bug in WikiChatter! 3 Perils of digging through archives &amp;#8211; you find Wikipedians giving relationship advice.</description>
     </item>
     
     <item>
@@ -323,7 +323,7 @@ Run a Redis instance for each user This is simple enough to do &amp;#8211; each 
       <pubDate>Wed, 21 Dec 2011 23:55:51 +0000</pubDate>
       
       <guid>http://words.yuvi.in/devlog-december-21-2011/</guid>
-      <description>livetrains work. Trying to move (minimal) build system to waf. Somewhat complicated, not as fluid as I&amp;#8217;d like. Go to rake. Feel weird about starting from scratch, come back to waf. Not get anything done Another rake diversion. Final Makefile editing desperation. I give up &amp;#8211; I need to spend atleast a day to get back on proper build tools. That day is not today.  Added feature to change font size to wikipedia app.</description>
+      <description>livetrains work. Trying to move (minimal) build system to waf. Somewhat complicated, not as fluid as I&amp;#8217;d like. Go to rake. Feel weird about starting from scratch, come back to waf. Not get anything done Another rake diversion. Final Makefile editing desperation. I give up &amp;#8211; I need to spend atleast a day to get back on proper build tools. That day is not today. Added feature to change font size to wikipedia app.</description>
     </item>
     
     <item>
@@ -332,7 +332,7 @@ Run a Redis instance for each user This is simple enough to do &amp;#8211; each 
       <pubDate>Mon, 12 Dec 2011 09:47:48 +0000</pubDate>
       
       <guid>http://words.yuvi.in/devlog-december-11-2011/</guid>
-      <description>Added UI for AssessmentLog [SelectionSifter]  Removed lots of dead code in SelectionSifter. Went to Bangalore Wikipedia Meetup. Was nice meeting people I knew online face to face. Talked about yenWikipedia, and learnt a lot about how article selection for offline wikipedia is done. Shot myself in the foot multiple times (over use of empty(), incomplete commit summaries and a tab/spaces issue). I&amp;#8217;m rusty and it is showing. Shouldn&amp;#8217;t be a problem anymore, though &amp;#8211; because of you-know-what.</description>
+      <description>Added UI for AssessmentLog [SelectionSifter] Removed lots of dead code in SelectionSifter. Went to Bangalore Wikipedia Meetup. Was nice meeting people I knew online face to face. Talked about yenWikipedia, and learnt a lot about how article selection for offline wikipedia is done. Shot myself in the foot multiple times (over use of empty(), incomplete commit summaries and a tab/spaces issue). I&amp;#8217;m rusty and it is showing. Shouldn&amp;#8217;t be a problem anymore, though &amp;#8211; because of you-know-what.</description>
     </item>
     
     <item>
@@ -341,7 +341,7 @@ Run a Redis instance for each user This is simple enough to do &amp;#8211; each 
       <pubDate>Sun, 11 Dec 2011 18:23:51 +0000</pubDate>
       
       <guid>http://words.yuvi.in/devlog-december-10-2011/</guid>
-      <description> Looks like I&amp;#8217;m going to be rewriting SelectionSifter&amp;#8217;s UI a lot. No more QuickTemplates, as I found TablePager. Mediawik definitely needs to fix Bug #1 soon.  Added proper i18n for SelectionSifter. Redid FilterRatings page completely. Went through PhoneGap documentation, checked out state of its Photo handling API. Looks good. Checked out patch to official Wikipedia app that adds upload functionality. Needs lot more polish.   </description>
+      <description> Looks like I&amp;#8217;m going to be rewriting SelectionSifter&amp;#8217;s UI a lot. No more QuickTemplates, as I found TablePager. Mediawik definitely needs to fix Bug #1 soon. Added proper i18n for SelectionSifter. Redid FilterRatings page completely. Went through PhoneGap documentation, checked out state of its Photo handling API. Looks good. Checked out patch to official Wikipedia app that adds upload functionality. Needs lot more polish.  </description>
     </item>
     
     <item>
@@ -350,7 +350,7 @@ Run a Redis instance for each user This is simple enough to do &amp;#8211; each 
       <pubDate>Wed, 07 Dec 2011 23:34:19 +0000</pubDate>
       
       <guid>http://words.yuvi.in/devlog-december-7-2011/</guid>
-      <description>Redid Blog template. Recategorized all blog posts  Finally enabled mobile banking on ICICI. Still need 8 days for Internet activation. Sigh. Ordered HyperJuice 60W battery + Airline Adapter Read through the WPBannerMeta template (and its subtemplates), figured out where to get the assessment markers in. Poof that was hard. These templates are perfect examples of &amp;#8216;hacks&amp;#8217; &amp;#8211; initially &amp;#8216;designed&amp;#8217; for templating text, they&amp;#8217;ve grown into homebrew programming languages that are worse than PHP.</description>
+      <description>Redid Blog template. Recategorized all blog posts Finally enabled mobile banking on ICICI. Still need 8 days for Internet activation. Sigh. Ordered HyperJuice 60W battery + Airline Adapter Read through the WPBannerMeta template (and its subtemplates), figured out where to get the assessment markers in. Poof that was hard. These templates are perfect examples of &amp;#8216;hacks&amp;#8217; &amp;#8211; initially &amp;#8216;designed&amp;#8217; for templating text, they&amp;#8217;ve grown into homebrew programming languages that are worse than PHP.</description>
     </item>
     
     <item>

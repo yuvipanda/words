@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Personal on Yuvi Panda</title>
+    <title>personal on Yuvi Panda</title>
     <link>http://words.yuvi.in/tags/personal/</link>
-    <description>Recent content in Personal on Yuvi Panda</description>
+    <description>Recent content in personal on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Feb 2017 22:37:21 -0800</lastBuildDate>
+    <lastBuildDate>Sun, 17 May 2020 11:25:35 +0530</lastBuildDate>
     
 	<atom:link href="http://words.yuvi.in/tags/personal/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>I miss blogging too</title>
+      <link>http://words.yuvi.in/post/miss-blogging/</link>
+      <pubDate>Sun, 17 May 2020 11:25:35 +0530</pubDate>
+      
+      <guid>http://words.yuvi.in/post/miss-blogging/</guid>
+      <description>This person misses blogs a lot. So do I. I made many frients, built myself a platform, and expressed myself in ways I do not feel like I can anymore on my various blogs. Some of them are lost to time, but some are there if you know how to find it.
+Part of it was where my life was - I had time, nobody physically nearby I jived with, and a lot of angst.</description>
+    </item>
     
     <item>
       <title>my first protest</title>

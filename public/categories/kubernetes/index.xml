@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kubernetes on Yuvi Panda</title>
+    <title>kubernetes on Yuvi Panda</title>
     <link>http://words.yuvi.in/categories/kubernetes/</link>
-    <description>Recent content in Kubernetes on Yuvi Panda</description>
+    <description>Recent content in kubernetes on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 11 Jan 2018 15:15:58 -0800</lastBuildDate>

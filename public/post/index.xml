@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Dec 2018 10:23:40 -0800</lastBuildDate>
+    <lastBuildDate>Sun, 17 May 2020 11:25:35 +0530</lastBuildDate>
     
 	<atom:link href="http://words.yuvi.in/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>I miss blogging too</title>
+      <link>http://words.yuvi.in/post/miss-blogging/</link>
+      <pubDate>Sun, 17 May 2020 11:25:35 +0530</pubDate>
+      
+      <guid>http://words.yuvi.in/post/miss-blogging/</guid>
+      <description>This person misses blogs a lot. So do I. I made many frients, built myself a platform, and expressed myself in ways I do not feel like I can anymore on my various blogs. Some of them are lost to time, but some are there if you know how to find it.
+Part of it was where my life was - I had time, nobody physically nearby I jived with, and a lot of angst.</description>
+    </item>
     
     <item>
       <title>Devlog 2018 12 26</title>
@@ -332,7 +342,7 @@ Ended up learning some Tornad and wrote nbserve to serve rendered notebooks and 
       <pubDate>Sun, 20 Dec 2015 09:15:56 +0000</pubDate>
       
       <guid>http://words.yuvi.in/devlog-2015-dec-19/</guid>
-      <description>Today looks like a day of finding, reporting and fixing bugs in WikiChatter. I had made a stupid mistake yesterday that meant not all of the Teahouse pages were being parsed, and I immediately started running into bugs. Have reported (and fixed!) two (1 and 2), and ran into another bug in mediawikiparserfromhell itself. I&amp;#8217;m sure I&amp;#8217;ll find more.  Another bug in WikiChatter! 3 Perils of digging through archives &amp;#8211; you find Wikipedians giving relationship advice.</description>
+      <description>Today looks like a day of finding, reporting and fixing bugs in WikiChatter. I had made a stupid mistake yesterday that meant not all of the Teahouse pages were being parsed, and I immediately started running into bugs. Have reported (and fixed!) two (1 and 2), and ran into another bug in mediawikiparserfromhell itself. I&amp;#8217;m sure I&amp;#8217;ll find more. Another bug in WikiChatter! 3 Perils of digging through archives &amp;#8211; you find Wikipedians giving relationship advice.</description>
     </item>
     
     <item>
@@ -1379,7 +1389,7 @@ My first memories of programming aren&amp;#8217;t actually C. They were GW-BASIC
       <pubDate>Wed, 21 Dec 2011 23:55:51 +0000</pubDate>
       
       <guid>http://words.yuvi.in/devlog-december-21-2011/</guid>
-      <description>livetrains work. Trying to move (minimal) build system to waf. Somewhat complicated, not as fluid as I&amp;#8217;d like. Go to rake. Feel weird about starting from scratch, come back to waf. Not get anything done Another rake diversion. Final Makefile editing desperation. I give up &amp;#8211; I need to spend atleast a day to get back on proper build tools. That day is not today.  Added feature to change font size to wikipedia app.</description>
+      <description>livetrains work. Trying to move (minimal) build system to waf. Somewhat complicated, not as fluid as I&amp;#8217;d like. Go to rake. Feel weird about starting from scratch, come back to waf. Not get anything done Another rake diversion. Final Makefile editing desperation. I give up &amp;#8211; I need to spend atleast a day to get back on proper build tools. That day is not today. Added feature to change font size to wikipedia app.</description>
     </item>
     
     <item>
@@ -1388,7 +1398,7 @@ My first memories of programming aren&amp;#8217;t actually C. They were GW-BASIC
       <pubDate>Mon, 12 Dec 2011 09:47:48 +0000</pubDate>
       
       <guid>http://words.yuvi.in/devlog-december-11-2011/</guid>
-      <description>Added UI for AssessmentLog [SelectionSifter]  Removed lots of dead code in SelectionSifter. Went to Bangalore Wikipedia Meetup. Was nice meeting people I knew online face to face. Talked about yenWikipedia, and learnt a lot about how article selection for offline wikipedia is done. Shot myself in the foot multiple times (over use of empty(), incomplete commit summaries and a tab/spaces issue). I&amp;#8217;m rusty and it is showing. Shouldn&amp;#8217;t be a problem anymore, though &amp;#8211; because of you-know-what.</description>
+      <description>Added UI for AssessmentLog [SelectionSifter] Removed lots of dead code in SelectionSifter. Went to Bangalore Wikipedia Meetup. Was nice meeting people I knew online face to face. Talked about yenWikipedia, and learnt a lot about how article selection for offline wikipedia is done. Shot myself in the foot multiple times (over use of empty(), incomplete commit summaries and a tab/spaces issue). I&amp;#8217;m rusty and it is showing. Shouldn&amp;#8217;t be a problem anymore, though &amp;#8211; because of you-know-what.</description>
     </item>
     
     <item>
@@ -1397,7 +1407,7 @@ My first memories of programming aren&amp;#8217;t actually C. They were GW-BASIC
       <pubDate>Sun, 11 Dec 2011 18:23:51 +0000</pubDate>
       
       <guid>http://words.yuvi.in/devlog-december-10-2011/</guid>
-      <description> Looks like I&amp;#8217;m going to be rewriting SelectionSifter&amp;#8217;s UI a lot. No more QuickTemplates, as I found TablePager. Mediawik definitely needs to fix Bug #1 soon.  Added proper i18n for SelectionSifter. Redid FilterRatings page completely. Went through PhoneGap documentation, checked out state of its Photo handling API. Looks good. Checked out patch to official Wikipedia app that adds upload functionality. Needs lot more polish.   </description>
+      <description> Looks like I&amp;#8217;m going to be rewriting SelectionSifter&amp;#8217;s UI a lot. No more QuickTemplates, as I found TablePager. Mediawik definitely needs to fix Bug #1 soon. Added proper i18n for SelectionSifter. Redid FilterRatings page completely. Went through PhoneGap documentation, checked out state of its Photo handling API. Looks good. Checked out patch to official Wikipedia app that adds upload functionality. Needs lot more polish.  </description>
     </item>
     
     <item>
@@ -1406,7 +1416,7 @@ My first memories of programming aren&amp;#8217;t actually C. They were GW-BASIC
       <pubDate>Wed, 07 Dec 2011 23:34:19 +0000</pubDate>
       
       <guid>http://words.yuvi.in/devlog-december-7-2011/</guid>
-      <description>Redid Blog template. Recategorized all blog posts  Finally enabled mobile banking on ICICI. Still need 8 days for Internet activation. Sigh. Ordered HyperJuice 60W battery + Airline Adapter Read through the WPBannerMeta template (and its subtemplates), figured out where to get the assessment markers in. Poof that was hard. These templates are perfect examples of &amp;#8216;hacks&amp;#8217; &amp;#8211; initially &amp;#8216;designed&amp;#8217; for templating text, they&amp;#8217;ve grown into homebrew programming languages that are worse than PHP.</description>
+      <description>Redid Blog template. Recategorized all blog posts Finally enabled mobile banking on ICICI. Still need 8 days for Internet activation. Sigh. Ordered HyperJuice 60W battery + Airline Adapter Read through the WPBannerMeta template (and its subtemplates), figured out where to get the assessment markers in. Poof that was hard. These templates are perfect examples of &amp;#8216;hacks&amp;#8217; &amp;#8211; initially &amp;#8216;designed&amp;#8217; for templating text, they&amp;#8217;ve grown into homebrew programming languages that are worse than PHP.</description>
     </item>
     
     <item>
@@ -2282,7 +2292,7 @@ I&amp;#8217;ll be hackin on GNOME Apps &amp;#8211; hopefully Banshee (since that
       <pubDate>Sun, 20 Sep 2009 23:24:28 +0000</pubDate>
       
       <guid>http://words.yuvi.in/lessons-learnt-from-working-with-the-symposium/</guid>
-      <description>Document Everything! On paper. Will save you from hell later.  There is never enough time. Start earlier than you think is early enough. Sell people things. Make them want it. Think from their point of view. Prioritize. Delegate. Responsibly. And follow up. Know when to stop. Recognize when something is good enough. Printing takes a long time. Very long timeE. And is boring. People often do not mean what they say.</description>
+      <description>Document Everything! On paper. Will save you from hell later. There is never enough time. Start earlier than you think is early enough. Sell people things. Make them want it. Think from their point of view. Prioritize. Delegate. Responsibly. And follow up. Know when to stop. Recognize when something is good enough. Printing takes a long time. Very long timeE. And is boring. People often do not mean what they say.</description>
     </item>
     
     <item>
@@ -2522,7 +2532,7 @@ I&amp;#8217;m awesome :)</description>
       <pubDate>Sun, 28 Jun 2009 11:47:09 +0000</pubDate>
       
       <guid>http://words.yuvi.in/things-i-need-time-to-do/</guid>
-      <description>Put on muscle/reduce weight.  Master jQuery Learn CSS Process photos and put them up on flickr Put up college&amp;#8217;s (awesome) dance videos on Facebook and Youtube Go out more. Fix my glasses. Get ontacts if possible &amp;#8211; or change my frames. Write stats posts. Develop goodfather Add a plugin system to HiSlain Publish a paper or two! (yeah, I know) Blog more (duh) Go out more. Learn to bike (of the petrol eating variety, that is) Go out more Photograph more Kick everyone&amp;#8217;s ass in studies (I can do that this sem, we have 3 CS papers!</description>
+      <description>Put on muscle/reduce weight. Master jQuery Learn CSS Process photos and put them up on flickr Put up college&amp;#8217;s (awesome) dance videos on Facebook and Youtube Go out more. Fix my glasses. Get ontacts if possible &amp;#8211; or change my frames. Write stats posts. Develop goodfather Add a plugin system to HiSlain Publish a paper or two! (yeah, I know) Blog more (duh) Go out more. Learn to bike (of the petrol eating variety, that is) Go out more Photograph more Kick everyone&amp;#8217;s ass in studies (I can do that this sem, we have 3 CS papers!</description>
     </item>
     
     <item>

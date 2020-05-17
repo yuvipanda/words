@@ -3,6 +3,46 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://words.yuvi.in/post/miss-blogging/</loc>
+    <lastmod>2020-05-17T11:25:35+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/personal/</loc>
+    <lastmod>2020-05-17T11:25:35+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/post/</loc>
+    <lastmod>2020-05-17T11:25:35+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/</loc>
+    <lastmod>2020-05-17T11:25:35+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/</loc>
+    <lastmod>2020-05-17T11:25:35+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/categories/</loc>
+    <lastmod>2018-12-26T10:23:40-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/categories/code/</loc>
+    <lastmod>2018-12-26T10:23:40-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/categories/devlog/</loc>
+    <lastmod>2018-12-26T10:23:40-08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/post/devlog-2018-12-26/</loc>
     <lastmod>2018-12-26T10:23:40-08:00</lastmod>
   </url>
@@ -28,8 +68,23 @@
   </url>
   
   <url>
+    <loc>http://words.yuvi.in/categories/work-plan/</loc>
+    <lastmod>2018-07-21T18:32:53-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/post/conda-constructor-thoughts/</loc>
     <lastmod>2018-06-28T22:43:56-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/categories/jupyter/</loc>
+    <lastmod>2018-06-18T13:14:59-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/categories/project-ideas/</loc>
+    <lastmod>2018-06-18T13:14:59-07:00</lastmod>
   </url>
   
   <url>
@@ -43,8 +98,33 @@
   </url>
   
   <url>
+    <loc>http://words.yuvi.in/categories/kubernetes/</loc>
+    <lastmod>2018-01-11T15:15:58-08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/post/2017/</loc>
     <lastmod>2017-12-29T16:29:00-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/categories/personal/</loc>
+    <lastmod>2017-12-29T16:29:00-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/categories/retrospective/</loc>
+    <lastmod>2017-12-29T16:29:00-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/binder/</loc>
+    <lastmod>2017-12-03T01:23:54-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/code/</loc>
+    <lastmod>2017-12-03T01:23:54-08:00</lastmod>
   </url>
   
   <url>
@@ -58,7 +138,17 @@
   </url>
   
   <url>
+    <loc>http://words.yuvi.in/tags/opensource/</loc>
+    <lastmod>2017-10-10T23:15:01-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/post/designing-data-intensive-applications/</loc>
+    <lastmod>2017-07-02T22:47:06-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/learning/</loc>
     <lastmod>2017-07-02T22:47:06-07:00</lastmod>
   </url>
   
@@ -73,13 +163,28 @@
   </url>
   
   <url>
+    <loc>http://words.yuvi.in/tags/linux/</loc>
+    <lastmod>2017-04-18T00:01:26-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/post/things-to-build/</loc>
     <lastmod>2017-04-15T13:24:23-07:00</lastmod>
   </url>
   
   <url>
+    <loc>http://words.yuvi.in/tags/python/</loc>
+    <lastmod>2017-04-05T23:18:19-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/post/python-gil-resources/</loc>
     <lastmod>2017-04-05T23:18:19-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/systemd/</loc>
+    <lastmod>2017-03-31T23:23:52-07:00</lastmod>
   </url>
   
   <url>
@@ -103,7 +208,17 @@
   </url>
   
   <url>
+    <loc>http://words.yuvi.in/tags/democratizing-programming/</loc>
+    <lastmod>2017-03-26T22:45:36-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/post/liberal-software/</loc>
+    <lastmod>2017-03-26T22:45:36-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/talks/</loc>
     <lastmod>2017-03-26T22:45:36-07:00</lastmod>
   </url>
   
@@ -113,8 +228,28 @@
   </url>
   
   <url>
+    <loc>http://words.yuvi.in/tags/resistance/</loc>
+    <lastmod>2017-02-03T22:37:21-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/external-enforcement/</loc>
+    <lastmod>2017-01-22T22:17:12+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/post/making-twitter-useful-again/</loc>
     <lastmod>2017-01-22T22:17:12+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/twitter/</loc>
+    <lastmod>2017-01-22T22:17:12+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/categories/class-notes/</loc>
+    <lastmod>2016-04-09T18:39:34+00:00</lastmod>
   </url>
   
   <url>
@@ -130,6 +265,16 @@
   <url>
     <loc>http://words.yuvi.in/the-impact-syntax-colouring-program-comprehension-paper-notes/</loc>
     <lastmod>2016-03-09T08:03:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/categories/papers/</loc>
+    <lastmod>2016-03-09T08:03:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/categories/links/</loc>
+    <lastmod>2016-02-11T21:43:23+00:00</lastmod>
   </url>
   
   <url>
@@ -163,8 +308,18 @@
   </url>
   
   <url>
+    <loc>http://words.yuvi.in/categories/uncategorized/</loc>
+    <lastmod>2015-12-19T07:55:01+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/things/</loc>
     <lastmod>2015-07-26T00:13:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/categories/wiki/</loc>
+    <lastmod>2015-07-06T20:58:35+00:00</lastmod>
   </url>
   
   <url>
@@ -293,12 +448,22 @@
   </url>
   
   <url>
+    <loc>http://words.yuvi.in/categories/lol-culture/</loc>
+    <lastmod>2014-07-15T12:44:08+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/scouting-boys/</loc>
     <lastmod>2014-04-25T19:31:45+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://words.yuvi.in/book-4-2014-small-gods-2014/</loc>
+    <lastmod>2014-01-15T18:54:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/categories/books/</loc>
     <lastmod>2014-01-15T18:54:34+00:00</lastmod>
   </url>
   
@@ -428,6 +593,11 @@
   </url>
   
   <url>
+    <loc>http://words.yuvi.in/categories/so-called-it/</loc>
+    <lastmod>2013-07-24T07:12:12+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/first-major-feature-to-commons-deployed/</loc>
     <lastmod>2013-07-23T00:40:26+00:00</lastmod>
   </url>
@@ -509,6 +679,11 @@
   
   <url>
     <loc>http://words.yuvi.in/code-times-roman/</loc>
+    <lastmod>2013-04-02T19:56:43+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/categories/education/</loc>
     <lastmod>2013-04-02T19:56:43+00:00</lastmod>
   </url>
   
@@ -643,6 +818,11 @@
   </url>
   
   <url>
+    <loc>http://words.yuvi.in/tags/atleast-not-yet/</loc>
+    <lastmod>2012-02-23T09:18:01+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/college-drop/</loc>
     <lastmod>2012-02-23T09:18:01+00:00</lastmod>
   </url>
@@ -688,8 +868,33 @@
   </url>
   
   <url>
+    <loc>http://words.yuvi.in/tags/education/</loc>
+    <lastmod>2011-12-06T09:37:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/india/</loc>
+    <lastmod>2011-12-06T09:37:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/reddit/</loc>
+    <lastmod>2011-12-06T09:37:13+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/story-average-indian-techie/</loc>
     <lastmod>2011-12-06T09:37:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/devlog/</loc>
+    <lastmod>2011-12-05T20:31:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/devlog-dec-2011/</loc>
+    <lastmod>2011-12-05T20:31:14+00:00</lastmod>
   </url>
   
   <url>
@@ -703,6 +908,21 @@
   </url>
   
   <url>
+    <loc>http://words.yuvi.in/tags/book/</loc>
+    <lastmod>2011-11-28T10:40:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/js/</loc>
+    <lastmod>2011-11-28T10:40:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/php/</loc>
+    <lastmod>2011-11-28T10:40:50+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/learnt-reading-javascript-good-parts/</loc>
     <lastmod>2011-11-28T10:40:50+00:00</lastmod>
   </url>
@@ -713,12 +933,42 @@
   </url>
   
   <url>
+    <loc>http://words.yuvi.in/tags/it/</loc>
+    <lastmod>2011-10-28T08:27:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/sick/</loc>
+    <lastmod>2011-10-28T08:27:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/fiction/</loc>
+    <lastmod>2011-10-21T03:14:16+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/greatest-fear-flash-fade/</loc>
     <lastmod>2011-10-21T03:14:16+00:00</lastmod>
   </url>
   
   <url>
+    <loc>http://words.yuvi.in/tags/interview/</loc>
+    <lastmod>2011-08-26T15:50:55+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/interview-sriram-krishnan-5-years-old/</loc>
+    <lastmod>2011-08-26T15:50:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/reprint/</loc>
+    <lastmod>2011-08-26T15:50:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/sriram/</loc>
     <lastmod>2011-08-26T15:50:55+00:00</lastmod>
   </url>
   
@@ -748,8 +998,38 @@
   </url>
   
   <url>
+    <loc>http://words.yuvi.in/tags/answers/</loc>
+    <lastmod>2011-06-26T13:59:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/athiesm/</loc>
+    <lastmod>2011-06-26T13:59:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/bigotry/</loc>
+    <lastmod>2011-06-26T13:59:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/parenting/</loc>
+    <lastmod>2011-06-26T13:59:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/yahoo/</loc>
+    <lastmod>2011-06-26T13:59:49+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/what-stop-child-athiest/</loc>
     <lastmod>2011-06-26T13:59:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/algorithm/</loc>
+    <lastmod>2011-06-19T01:40:36+00:00</lastmod>
   </url>
   
   <url>
@@ -768,8 +1048,48 @@
   </url>
   
   <url>
+    <loc>http://words.yuvi.in/tags/note-to-future-self/</loc>
+    <lastmod>2011-06-13T08:27:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/rant/</loc>
+    <lastmod>2011-06-13T08:27:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/travel/</loc>
+    <lastmod>2011-06-13T08:27:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/crime/</loc>
+    <lastmod>2011-06-09T15:03:25+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/photography/</loc>
+    <lastmod>2011-06-09T15:03:25+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/rights/</loc>
+    <lastmod>2011-06-09T15:03:25+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/broke-nonexistent-law/</loc>
     <lastmod>2011-06-09T15:03:25+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/bigco/</loc>
+    <lastmod>2011-06-09T13:11:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/link/</loc>
+    <lastmod>2011-06-09T13:11:47+00:00</lastmod>
   </url>
   
   <url>
@@ -778,13 +1098,38 @@
   </url>
   
   <url>
+    <loc>http://words.yuvi.in/tags/work/</loc>
+    <lastmod>2011-06-09T13:11:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/review/</loc>
+    <lastmod>2011-06-08T04:21:33+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/infosys-tcs-or-wipro-none/</loc>
     <lastmod>2011-06-08T04:21:33+00:00</lastmod>
   </url>
   
   <url>
+    <loc>http://words.yuvi.in/tags/flipkart/</loc>
+    <lastmod>2011-06-07T13:20:40+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/my-new-canon-550d-from-flipkart/</loc>
     <lastmod>2011-06-07T13:20:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/photo/</loc>
+    <lastmod>2011-06-07T13:20:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/android/</loc>
+    <lastmod>2011-06-07T02:50:05+00:00</lastmod>
   </url>
   
   <url>
@@ -795,6 +1140,21 @@
   <url>
     <loc>http://words.yuvi.in/moving-back-to-wordpress/</loc>
     <lastmod>2011-06-06T18:21:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/wordpress/</loc>
+    <lastmod>2011-06-06T18:21:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/anniversary/</loc>
+    <lastmod>2011-05-14T09:04:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/blogging/</loc>
+    <lastmod>2011-05-14T09:04:03+00:00</lastmod>
   </url>
   
   <url>
@@ -828,7 +1188,17 @@
   </url>
   
   <url>
+    <loc>http://words.yuvi.in/categories/events/</loc>
+    <lastmod>2011-04-10T23:02:48+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/gstreamer-101-at-gnome-asia-2011/</loc>
+    <lastmod>2011-04-10T23:02:48+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/talk/</loc>
     <lastmod>2011-04-10T23:02:48+00:00</lastmod>
   </url>
   
@@ -1215,444 +1585,6 @@
   <url>
     <loc>http://words.yuvi.in/optimizing-life/</loc>
     <lastmod>2009-06-28T10:47:18+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/algorithm/</loc>
-    <lastmod>2011-06-19T01:40:36+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/android/</loc>
-    <lastmod>2011-06-07T02:50:05+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/anniversary/</loc>
-    <lastmod>2011-05-14T09:04:03+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/answers/</loc>
-    <lastmod>2011-06-26T13:59:49+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/athiesm/</loc>
-    <lastmod>2011-06-26T13:59:49+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/atleast-not-yet/</loc>
-    <lastmod>2012-02-23T09:18:01+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/bigco/</loc>
-    <lastmod>2011-06-09T13:11:47+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/bigotry/</loc>
-    <lastmod>2011-06-26T13:59:49+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/binder/</loc>
-    <lastmod>2017-12-03T01:23:54-08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/blogging/</loc>
-    <lastmod>2011-05-14T09:04:03+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/book/</loc>
-    <lastmod>2011-11-28T10:40:50+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/categories/books/</loc>
-    <lastmod>2014-01-15T18:54:34+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/categories/</loc>
-    <lastmod>2014-01-15T18:54:34+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/categories/class-notes/</loc>
-    <lastmod>2016-04-09T18:39:34+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/code/</loc>
-    <lastmod>2017-12-03T01:23:54-08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/categories/code/</loc>
-    <lastmod>2018-12-26T10:23:40-08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/crime/</loc>
-    <lastmod>2011-06-09T15:03:25+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/democratizing-programming/</loc>
-    <lastmod>2017-03-26T22:45:36-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/devlog/</loc>
-    <lastmod>2011-12-05T20:31:14+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/categories/devlog/</loc>
-    <lastmod>2018-12-26T10:23:40-08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/devlog-dec-2011/</loc>
-    <lastmod>2011-12-05T20:31:14+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/education/</loc>
-    <lastmod>2011-12-06T09:37:13+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/categories/education/</loc>
-    <lastmod>2013-04-02T19:56:43+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/categories/events/</loc>
-    <lastmod>2011-04-10T23:02:48+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/external-enforcement/</loc>
-    <lastmod>2017-01-22T22:17:12+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/fiction/</loc>
-    <lastmod>2011-10-21T03:14:16+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/flipkart/</loc>
-    <lastmod>2011-06-07T13:20:40+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/india/</loc>
-    <lastmod>2011-12-06T09:37:13+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/interview/</loc>
-    <lastmod>2011-08-26T15:50:55+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/it/</loc>
-    <lastmod>2011-10-28T08:27:50+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/js/</loc>
-    <lastmod>2011-11-28T10:40:50+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/categories/jupyter/</loc>
-    <lastmod>2018-06-18T13:14:59-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/categories/kubernetes/</loc>
-    <lastmod>2018-01-11T15:15:58-08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/learning/</loc>
-    <lastmod>2017-07-02T22:47:06-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/link/</loc>
-    <lastmod>2011-06-09T13:11:47+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/categories/links/</loc>
-    <lastmod>2016-02-11T21:43:23+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/linux/</loc>
-    <lastmod>2017-04-18T00:01:26-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/categories/lol-culture/</loc>
-    <lastmod>2014-07-15T12:44:08+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/note-to-future-self/</loc>
-    <lastmod>2011-06-13T08:27:41+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/opensource/</loc>
-    <lastmod>2017-10-10T23:15:01-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/categories/papers/</loc>
-    <lastmod>2016-03-09T08:03:07+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/parenting/</loc>
-    <lastmod>2011-06-26T13:59:49+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/personal/</loc>
-    <lastmod>2017-02-03T22:37:21-08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/categories/personal/</loc>
-    <lastmod>2017-12-29T16:29:00-08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/photo/</loc>
-    <lastmod>2011-06-07T13:20:40+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/photography/</loc>
-    <lastmod>2011-06-09T15:03:25+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/php/</loc>
-    <lastmod>2011-11-28T10:40:50+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/post/</loc>
-    <lastmod>2018-12-26T10:23:40-08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/categories/project-ideas/</loc>
-    <lastmod>2018-06-18T13:14:59-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/python/</loc>
-    <lastmod>2017-04-05T23:18:19-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/rant/</loc>
-    <lastmod>2011-06-13T08:27:41+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/reddit/</loc>
-    <lastmod>2011-12-06T09:37:13+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/reprint/</loc>
-    <lastmod>2011-08-26T15:50:55+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/resistance/</loc>
-    <lastmod>2017-02-03T22:37:21-08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/categories/retrospective/</loc>
-    <lastmod>2017-12-29T16:29:00-08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/review/</loc>
-    <lastmod>2011-06-08T04:21:33+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/rights/</loc>
-    <lastmod>2011-06-09T15:03:25+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/sick/</loc>
-    <lastmod>2011-10-28T08:27:50+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/categories/so-called-it/</loc>
-    <lastmod>2013-07-24T07:12:12+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/sriram/</loc>
-    <lastmod>2011-08-26T15:50:55+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/systemd/</loc>
-    <lastmod>2017-03-31T23:23:52-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/</loc>
-    <lastmod>2011-06-19T01:40:36+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/talk/</loc>
-    <lastmod>2011-04-10T23:02:48+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/talks/</loc>
-    <lastmod>2017-03-26T22:45:36-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/travel/</loc>
-    <lastmod>2011-06-13T08:27:41+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/twitter/</loc>
-    <lastmod>2017-01-22T22:17:12+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/categories/uncategorized/</loc>
-    <lastmod>2015-12-19T07:55:01+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/categories/wiki/</loc>
-    <lastmod>2015-07-06T20:58:35+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/wordpress/</loc>
-    <lastmod>2011-06-06T18:21:40+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/work/</loc>
-    <lastmod>2011-06-09T13:11:47+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/categories/work-plan/</loc>
-    <lastmod>2018-07-21T18:32:53-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/yahoo/</loc>
-    <lastmod>2011-06-26T13:59:49+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/</loc>
-    <lastmod>2018-12-26T10:23:40-08:00</lastmod>
-    <priority>0</priority>
   </url>
   
 </urlset>
