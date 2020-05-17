@@ -10,14 +10,16 @@
 Some Android app work, and lots of monitoring work
  Fixed bugs causing the Wikipedia Android Alpha from building properly. Now it builds properly whenever there is a new commit. Hooray! This was primarily caused by me forgetting to give it lots of RAM (8G VMEM) to execute the mvn build commands (https://gerrit." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://words.yuvi.in/devlog-sep-10-11-2014/" /><meta property="article:published_time" content="2014-09-11T20:16:39&#43;00:00"/>
-<meta property="article:modified_time" content="2014-09-11T20:16:39&#43;00:00"/>
+<meta property="og:url" content="http://words.yuvi.in/devlog-sep-10-11-2014/" />
+<meta property="article:published_time" content="2014-09-11T20:16:39+00:00" />
+<meta property="article:modified_time" content="2014-09-11T20:16:39+00:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="DevLog for Sep 10-11 2014"/>
 <meta name="twitter:description" content="Back from an awesome vacation. Too awesome to write about, even :) Suffice it to say, England has some really pretty places.
 Some Android app work, and lots of monitoring work
  Fixed bugs causing the Wikipedia Android Alpha from building properly. Now it builds properly whenever there is a new commit. Hooray! This was primarily caused by me forgetting to give it lots of RAM (8G VMEM) to execute the mvn build commands (https://gerrit."/>
-<meta name="generator" content="Hugo 0.47.1" />
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -26,10 +28,10 @@ Some Android app work, and lots of monitoring work
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "DevLog for Sep 10-11 2014",
-  "url": "http://words.yuvi.in/devlog-sep-10-11-2014/",
+  "url": "http:\/\/words.yuvi.in\/devlog-sep-10-11-2014\/",
   "wordCount": "409",
-  "datePublished": "2014-09-11T20:16:39&#43;00:00",
-  "dateModified": "2014-09-11T20:16:39&#43;00:00",
+  "datePublished": "2014-09-11T20:16:39\x2b00:00",
+  "dateModified": "2014-09-11T20:16:39\x2b00:00",
   "author": {
     "@type": "Person",
     "name": "yuvipanda"
@@ -90,20 +92,17 @@ Some Android app work, and lots of monitoring work
 </p>
   </header>
   <p>Back from an <em>awesome</em> vacation. Too awesome to write about, even :) Suffice it to say, England has some really pretty places.</p>
-
 <p>Some Android app work, and lots of monitoring work</p>
-
 <ul>
-<li>Fixed bugs causing the <a href="https://tools.wmflabs.org/wikipedia-android-builds/">Wikipedia Android Alpha</a> from building properly. Now it builds properly whenever there is a new commit. Hooray! This was primarily caused by me forgetting to give it lots of RAM (8G VMEM) to execute the <code>mvn</code> build commands (<a href="https://gerrit.wikimedia.org/r/#/c/159482/">https://gerrit.wikimedia.org/r/#/c/159482/</a>) and also not cleaning up previous <code>.alpha</code> subfolders (<a href="https://gerrit.wikimedia.org/r/#/c/159481/">https://gerrit.wikimedia.org/r/#/c/159481/</a>) &#8211; this causes a chain of <code>.alpha.alpha.alpha.*</code> subfolders, breaking the build.</li>
-<li>Added a <a href="https://gerrit.wikimedia.org/r/#/c/159506/">patch</a> to the Android alpha app itself that checks for updates every day or so and notifies you if there&#8217;s a new one. Was fairly trivial to write, although I was hoping to make it more seamless (i.e. download the apk myself and just pop it up for people to tap). It now requires 4 clicks to install it, should be able to bring it down to 2 at some point in the future if people care enough.</li>
-<li>Added a method to our <code>check_graphite</code> code that lets you individually check a bunch of metrics for thresholds (<a href="https://gerrit.wikimedia.org/r/#/c/159473/">https://gerrit.wikimedia.org/r/#/c/159473/</a>). This makes it much simpler to do icinga checks on a bunch of metrics that are all measuring the same thing but from different machines. BetaLabs and ToolLabs checks use this.</li>
-<li>Cleaned up a bunch of minor things with our <code>check_graphite</code> script. Also fucked up trying to replace all double quotes in it with single quotes for consistency &#8211; it replaced the double quotes being used inside single quotes, and caused all checks to fail. Fixed shortly by <a href="https://gerrit.wikimedia.org/r/#/c/159711/">https://gerrit.wikimedia.org/r/#/c/159711/</a></li>
-<li>Added more monitoring for betalabs! Now checks for stale puppet runs (<a href="https://gerrit.wikimedia.org/r/#/c/159701/">https://gerrit.wikimedia.org/r/#/c/159701/</a>) and low space on the root partition (<a href="https://gerrit.wikimedia.org/r/#/c/159694/">https://gerrit.wikimedia.org/r/#/c/159694/</a>). All are green now, thanks to some work from bd808.</li>
-<li>Added monitoring for ToolLabs! Now checks for stale puppet runs, low space on root and /var, and puppet failure events (<a href="https://gerrit.wikimedia.org/r/#/c/159709/">https://gerrit.wikimedia.org/r/#/c/159709/</a>). Also checks for high sustained CPU usage (<a href="https://gerrit.wikimedia.org/r/#/c/159751/">https://gerrit.wikimedia.org/r/#/c/159751/</a>). Then spent some time (with help from scfc_de (whose nick I kept spelling as scfe_de until today)) cleaning up the puppet failures. They are all green now as well.</li>
-<li>Did a bunch of cleaning up work around the graphite role, removing the realm branching (<a href="https://gerrit.wikimedia.org/r/#/c/159759/">https://gerrit.wikimedia.org/r/#/c/159759/</a>). Ori says everytime realm branching code is removed, an angel gets its wings, so well done there.</li>
+<li>Fixed bugs causing the <a href="https://tools.wmflabs.org/wikipedia-android-builds/">Wikipedia Android Alpha</a> from building properly. Now it builds properly whenever there is a new commit. Hooray! This was primarily caused by me forgetting to give it lots of RAM (8G VMEM) to execute the <code>mvn</code> build commands (<a href="https://gerrit.wikimedia.org/r/#/c/159482/">https://gerrit.wikimedia.org/r/#/c/159482/</a>) and also not cleaning up previous <code>.alpha</code> subfolders (<a href="https://gerrit.wikimedia.org/r/#/c/159481/">https://gerrit.wikimedia.org/r/#/c/159481/</a>) – this causes a chain of <code>.alpha.alpha.alpha.*</code> subfolders, breaking the build.</li>
+<li>Added a <a href="https://gerrit.wikimedia.org/r/#/c/159506/">patch</a> to the Android alpha app itself that checks for updates every day or so and notifies you if there’s a new one. Was fairly trivial to write, although I was hoping to make it more seamless (i.e. download the apk myself and just pop it up for people to tap). It now requires 4 clicks to install it, should be able to bring it down to 2 at some point in the future if people care enough.</li>
+<li>Added a method to our <code>check_graphite</code> code that lets you individually check a bunch of metrics for thresholds (<a href="https://gerrit.wikimedia.org/r/#/c/159473/)">https://gerrit.wikimedia.org/r/#/c/159473/)</a>. This makes it much simpler to do icinga checks on a bunch of metrics that are all measuring the same thing but from different machines. BetaLabs and ToolLabs checks use this.</li>
+<li>Cleaned up a bunch of minor things with our <code>check_graphite</code> script. Also fucked up trying to replace all double quotes in it with single quotes for consistency – it replaced the double quotes being used inside single quotes, and caused all checks to fail. Fixed shortly by <a href="https://gerrit.wikimedia.org/r/#/c/159711/">https://gerrit.wikimedia.org/r/#/c/159711/</a></li>
+<li>Added more monitoring for betalabs! Now checks for stale puppet runs (<a href="https://gerrit.wikimedia.org/r/#/c/159701/">https://gerrit.wikimedia.org/r/#/c/159701/</a>) and low space on the root partition (<a href="https://gerrit.wikimedia.org/r/#/c/159694/)">https://gerrit.wikimedia.org/r/#/c/159694/)</a>. All are green now, thanks to some work from bd808.</li>
+<li>Added monitoring for ToolLabs! Now checks for stale puppet runs, low space on root and /var, and puppet failure events (<a href="https://gerrit.wikimedia.org/r/#/c/159709/)">https://gerrit.wikimedia.org/r/#/c/159709/)</a>. Also checks for high sustained CPU usage (<a href="https://gerrit.wikimedia.org/r/#/c/159751/)">https://gerrit.wikimedia.org/r/#/c/159751/)</a>. Then spent some time (with help from scfc_de (whose nick I kept spelling as scfe_de until today)) cleaning up the puppet failures. They are all green now as well.</li>
+<li>Did a bunch of cleaning up work around the graphite role, removing the realm branching (<a href="https://gerrit.wikimedia.org/r/#/c/159759/)">https://gerrit.wikimedia.org/r/#/c/159759/)</a>. Ori says everytime realm branching code is removed, an angel gets its wings, so well done there.</li>
 </ul>
-
-<p>Not a bad day, eh? I&#8217;ve been trying to wake up early, perhaps that is helping.</p>
+<p>Not a bad day, eh? I’ve been trying to wake up early, perhaps that is helping.</p>
 
 
   
@@ -145,7 +144,6 @@ Some Android app work, and lots of monitoring work
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -153,7 +151,6 @@ Some Android app work, and lots of monitoring work
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -171,6 +168,8 @@ Some Android app work, and lots of monitoring work
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -178,8 +177,6 @@ Some Android app work, and lots of monitoring work
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>

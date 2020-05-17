@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>education on Yuvi Panda</title>
@@ -17,7 +17,7 @@
       <pubDate>Tue, 02 Apr 2013 19:56:43 +0000</pubDate>
       
       <guid>http://words.yuvi.in/code-times-roman/</guid>
-      <description>Quoting from Anna University&amp;#8217;s guidelines for submitting a &amp;#8216;project report&amp;#8217;
+      <description>Quoting from Anna University’s guidelines for submitting a ‘project report’
  Appendix 1: Sample Code. Font style: Times New Roman, Font Size:12 and 1.5 line spacing.
  Shoot me now.</description>
     </item>
@@ -28,8 +28,8 @@
       <pubDate>Wed, 03 Oct 2012 06:13:37 +0000</pubDate>
       
       <guid>http://words.yuvi.in/vague-sense-order-sense-purpose/</guid>
-      <description>Earlier this month I spent a couple of days as a &amp;#8216;guest&amp;#8217; at Infosys Mahindra City (district finals for Aspirations 2020 &amp;#8211; a TopCoder style programming competition). Interesting experience.
-No laptops allowed. No storage devices either. Cameras are okay, but &amp;#8220;please don&amp;#8217;t take pictures&amp;#8221;. Phones are okay too. The usual complimentary grope as you enter. Random security guards ask &amp;#8220;Where is your ID card?&amp;#8221; at random times. Buses bringing in hordes of people.</description>
+      <description>Earlier this month I spent a couple of days as a ‘guest’ at Infosys Mahindra City (district finals for Aspirations 2020 – a TopCoder style programming competition). Interesting experience.
+No laptops allowed. No storage devices either. Cameras are okay, but “please don’t take pictures”. Phones are okay too. The usual complimentary grope as you enter. Random security guards ask “Where is your ID card?” at random times. Buses bringing in hordes of people.</description>
     </item>
     
     <item>
@@ -60,8 +60,8 @@ Beautifully laid out by someone in the under-trafficked r/india:
       <pubDate>Fri, 28 Oct 2011 08:27:50 +0000</pubDate>
       
       <guid>http://words.yuvi.in/3-reasons-people-join-it-companies/</guid>
-      <description>Source: Friend of mine who is sadly &amp;#8216;training&amp;#8217; at a big &amp;#8216;IT company&amp;#8217; now (He wishes to remain anonymous, and I could see why)
- Because everyone else did Because parents told Because it will be very sophisticated and relaxing there, with lots of recreational facilities  I&amp;#8217;m just going to leave this here, and hope that when this boom does bust, it doesn&amp;#8217;t leave too many dead bodies in its wake.</description>
+      <description>Source: Friend of mine who is sadly ‘training’ at a big ‘IT company’ now (He wishes to remain anonymous, and I could see why)
+ Because everyone else did Because parents told Because it will be very sophisticated and relaxing there, with lots of recreational facilities  I’m just going to leave this here, and hope that when this boom does bust, it doesn’t leave too many dead bodies in its wake.</description>
     </item>
     
     <item>
@@ -71,7 +71,7 @@ Beautifully laid out by someone in the under-trafficked r/india:
       
       <guid>http://words.yuvi.in/working-big-co-unsatisfying/</guid>
       <description>Update: As usual, good comments at HN.
-I&amp;#8217;ve been trying to put it in words for a while, and failing utterly every time. swombat gets to the crux of it wonderfully:
+I’ve been trying to put it in words for a while, and failing utterly every time. swombat gets to the crux of it wonderfully:
  At the same time, something really bothered me about my work. It felt pointless. One project I did (whose output was basically a PPT and Word document outlining the successes and failures of a client project), which took two and a half months, had, as its only apparent purpose, the promotion of the person who had led the project.</description>
     </item>
     
@@ -82,7 +82,7 @@ I&amp;#8217;ve been trying to put it in words for a while, and failing utterly e
       
       <guid>http://words.yuvi.in/infosys-tcs-or-wipro-none/</guid>
       <description>Succinctly written post that every engineering college student should read.
-Ofcourse, someone should write a post called &amp;#8220;CS, EC or EEE?&amp;#8221; &amp;#8220;Neither&amp;#8221; for high school students, because for a lot of people the answer to the question &amp;#8220;Should you do Engineering?&amp;#8221; is a huge &amp;#8220;No&amp;#8221;.
+Ofcourse, someone should write a post called “CS, EC or EEE?” “Neither” for high school students, because for a lot of people the answer to the question “Should you do Engineering?” is a huge “No”.
 The comments section is even more awesome. Choice quotes:
 A sympathizer/astroturfer/cognitively dissonant person writes:
  Are you saying that anybody who can browse the internet and knows about the computer can do our jobs?</description>
@@ -94,7 +94,7 @@ A sympathizer/astroturfer/cognitively dissonant person writes:
       <pubDate>Thu, 12 May 2011 21:00:29 +0000</pubDate>
       
       <guid>http://words.yuvi.in/orwell-and-huxley/</guid>
-      <description>I just finished 1984. Had finished Animal Farm and Brave New World a while ago. Orwell is scarier, but Huxley seems to be closer to real life already &amp;#8211; I know several people (perhaps too many) who wouldn&amp;#8217;t flinch at all at the world Huxley created. Scary.
+      <description>I just finished 1984. Had finished Animal Farm and Brave New World a while ago. Orwell is scarier, but Huxley seems to be closer to real life already – I know several people (perhaps too many) who wouldn’t flinch at all at the world Huxley created. Scary.
  Sanity is not Statistical
  </description>
     </item>
@@ -105,8 +105,8 @@ A sympathizer/astroturfer/cognitively dissonant person writes:
       <pubDate>Sat, 25 Dec 2010 11:50:04 +0000</pubDate>
       
       <guid>http://words.yuvi.in/enthusiastic-teachers-and-naive-implementation-of-gauss-seidel-approximations/</guid>
-      <description>This semester, one of our so called electives (despite the fact that we have no real choice in them) is Numerical Methods. I don&amp;#8217;t quite like the actual way the subject is taught &amp;#8211; mind numbing, error prone calculations with a calculator. However, the methods are pretty awesome.
-The staff explained Gauss Seidel yesterday, and it seemed a straightforward recursive solution to me. So in the break, I cooked up a small python script that gave me all the intermediate answers as well &amp;#8211; so for any assignments I could just run them through this and copy it to paper.</description>
+      <description>This semester, one of our so called electives (despite the fact that we have no real choice in them) is Numerical Methods. I don’t quite like the actual way the subject is taught – mind numbing, error prone calculations with a calculator. However, the methods are pretty awesome.
+The staff explained Gauss Seidel yesterday, and it seemed a straightforward recursive solution to me. So in the break, I cooked up a small python script that gave me all the intermediate answers as well – so for any assignments I could just run them through this and copy it to paper.</description>
     </item>
     
     <item>
@@ -115,8 +115,8 @@ The staff explained Gauss Seidel yesterday, and it seemed a straightforward recu
       <pubDate>Tue, 07 Sep 2010 14:22:55 +0000</pubDate>
       
       <guid>http://words.yuvi.in/blogging-from-under-the-table-during-class/</guid>
-      <description>One of the major advantages of my netbook is that I can actually use it in class, under the desk &amp;#8211; and most staff won&amp;#8217;t notice ;) And even if they do, I can easily and neatly close the lid, put it in standby and become innocent good boy :D
-I&amp;#8217;ve zoned out from what&amp;#8217;s happening in class a long time back. I just looked up, and it&amp;#8217;s something I really do like (withheld to protect the name of subject).</description>
+      <description>One of the major advantages of my netbook is that I can actually use it in class, under the desk – and most staff won’t notice ;) And even if they do, I can easily and neatly close the lid, put it in standby and become innocent good boy :D
+I’ve zoned out from what’s happening in class a long time back. I just looked up, and it’s something I really do like (withheld to protect the name of subject).</description>
     </item>
     
     <item>
@@ -125,8 +125,8 @@ I&amp;#8217;ve zoned out from what&amp;#8217;s happening in class a long time ba
       <pubDate>Sat, 03 Jul 2010 17:59:34 +0000</pubDate>
       
       <guid>http://words.yuvi.in/reddit-university-sicp-reading-group/</guid>
-      <description>I&amp;#8217;ve joined Reddit University&amp;#8216;s SICP Reading Group class. I&amp;#8217;ve wanted to read through SICP for a long time, and have gotten started many times &amp;#8211; never completed it. Maybe the group effects will help me finish this time :)
-If you&amp;#8217;re interested in expanding your horizons beyond mere code-monkey programming, join up!</description>
+      <description>I’ve joined Reddit University‘s SICP Reading Group class. I’ve wanted to read through SICP for a long time, and have gotten started many times – never completed it. Maybe the group effects will help me finish this time :)
+If you’re interested in expanding your horizons beyond mere code-monkey programming, join up!</description>
     </item>
     
     <item>
@@ -137,7 +137,7 @@ If you&amp;#8217;re interested in expanding your horizons beyond mere code-monke
       <guid>http://words.yuvi.in/measure-of-learning-epiphanies-per-session/</guid>
       <description>The measure of code quality is WTFs/minute.
 I just realized, after a rather intriguing facebook conversation with Shiva, that the only true measure of learning is Epiphanies per Session.
-My latest Epiphany was a couple of days back. And the one before that was a month or so back, when I was &amp;#8216;pairing&amp;#8217; with Sid. I think the one before that was quite some time back &amp;#8211; when I understood the true meaning of closures.</description>
+My latest Epiphany was a couple of days back. And the one before that was a month or so back, when I was ‘pairing’ with Sid. I think the one before that was quite some time back – when I understood the true meaning of closures.</description>
     </item>
     
     <item>

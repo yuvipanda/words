@@ -6,16 +6,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <meta property="og:title" content="DevLog for 28 Aug 2014" />
-<meta property="og:description" content="Let&#8217;s see. I&#8217;m also going to attempt to include patch links wherever possible.
- Cleaned up session handling bugs in Quarry. They were previously not closing properly, causing SQLAlchemy exceptions now and then that&#8217;ll let queries die in a &#8216;queued&#8217; state. This should hopefully be fixed by https://gerrit.wikimedia.org/r/#/c/156909/. Made https://graphite.wmflabs.org somewhat more stable again for use by Wikimedia BetaLabs folks by just blacklisting all other projects from sending data to it (with a local whitelist hack &#43; https://gerrit." />
+<meta property="og:description" content="Let’s see. I’m also going to attempt to include patch links wherever possible.
+ Cleaned up session handling bugs in Quarry. They were previously not closing properly, causing SQLAlchemy exceptions now and then that’ll let queries die in a ‘queued’ state. This should hopefully be fixed by https://gerrit.wikimedia.org/r/#/c/156909/. Made https://graphite.wmflabs.org somewhat more stable again for use by Wikimedia BetaLabs folks by just blacklisting all other projects from sending data to it (with a local whitelist hack &#43; https://gerrit." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://words.yuvi.in/devlog-28-aug-2014/" /><meta property="article:published_time" content="2014-08-28T22:56:53&#43;00:00"/>
-<meta property="article:modified_time" content="2014-08-28T22:56:53&#43;00:00"/>
+<meta property="og:url" content="http://words.yuvi.in/devlog-28-aug-2014/" />
+<meta property="article:published_time" content="2014-08-28T22:56:53+00:00" />
+<meta property="article:modified_time" content="2014-08-28T22:56:53+00:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="DevLog for 28 Aug 2014"/>
-<meta name="twitter:description" content="Let&#8217;s see. I&#8217;m also going to attempt to include patch links wherever possible.
- Cleaned up session handling bugs in Quarry. They were previously not closing properly, causing SQLAlchemy exceptions now and then that&#8217;ll let queries die in a &#8216;queued&#8217; state. This should hopefully be fixed by https://gerrit.wikimedia.org/r/#/c/156909/. Made https://graphite.wmflabs.org somewhat more stable again for use by Wikimedia BetaLabs folks by just blacklisting all other projects from sending data to it (with a local whitelist hack &#43; https://gerrit."/>
-<meta name="generator" content="Hugo 0.47.1" />
+<meta name="twitter:description" content="Let’s see. I’m also going to attempt to include patch links wherever possible.
+ Cleaned up session handling bugs in Quarry. They were previously not closing properly, causing SQLAlchemy exceptions now and then that’ll let queries die in a ‘queued’ state. This should hopefully be fixed by https://gerrit.wikimedia.org/r/#/c/156909/. Made https://graphite.wmflabs.org somewhat more stable again for use by Wikimedia BetaLabs folks by just blacklisting all other projects from sending data to it (with a local whitelist hack &#43; https://gerrit."/>
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -24,10 +26,10 @@
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "DevLog for 28 Aug 2014",
-  "url": "http://words.yuvi.in/devlog-28-aug-2014/",
+  "url": "http:\/\/words.yuvi.in\/devlog-28-aug-2014\/",
   "wordCount": "195",
-  "datePublished": "2014-08-28T22:56:53&#43;00:00",
-  "dateModified": "2014-08-28T22:56:53&#43;00:00",
+  "datePublished": "2014-08-28T22:56:53\x2b00:00",
+  "dateModified": "2014-08-28T22:56:53\x2b00:00",
   "author": {
     "@type": "Person",
     "name": "yuvipanda"
@@ -87,15 +89,13 @@
 
 </p>
   </header>
-  <p>Let&#8217;s see. I&#8217;m also going to attempt to include patch links wherever possible.</p>
-
+  <p>Let’s see. I’m also going to attempt to include patch links wherever possible.</p>
 <ul>
-<li>Cleaned up <code>session</code> handling bugs in Quarry. They were previously not closing properly, causing SQLAlchemy exceptions now and then that&#8217;ll let queries die in a &#8216;queued&#8217; state. This should <em>hopefully</em> be fixed by <a href="https://gerrit.wikimedia.org/r/#/c/156909/">https://gerrit.wikimedia.org/r/#/c/156909/</a>.</li>
-<li>Made <a href="https://graphite.wmflabs.org">https://graphite.wmflabs.org</a> somewhat more stable again for use by Wikimedia BetaLabs folks by just blacklisting all other projects from sending data to it (with a local whitelist hack + <a href="https://gerrit.wikimedia.org/r/#/c/156966/">https://gerrit.wikimedia.org/r/#/c/156966/</a>). This would let them use it, and they said they would find it massively useful. All this is a hack until <a href="https://rt.wikimedia.org/Ticket/Display.html?id=8163">https://rt.wikimedia.org/Ticket/Display.html?id=8163</a> could be resolved and I can deploy graphite on a &#8216;real&#8217; machine.</li>
-<li>Minor patch to my Gerrit -&gt; IRC bot to make it strip a common prefix (&#8216;operations/&#8217;) from change messages posted to the operations channel &#8211; <a href="https://gerrit.wikimedia.org/r/#/c/156877/">https://gerrit.wikimedia.org/r/#/c/156877/</a>. Also made one that calls jenkins-bot jerkins-bot if it -1&#8217;s your patch (<a href="https://gerrit.wikimedia.org/r/#/c/156878/">https://gerrit.wikimedia.org/r/#/c/156878/</a>) but it seems to have a bug that I can&#8217;t be bothered to debug atm.</li>
+<li>Cleaned up <code>session</code> handling bugs in Quarry. They were previously not closing properly, causing SQLAlchemy exceptions now and then that’ll let queries die in a ‘queued’ state. This should <em>hopefully</em> be fixed by <a href="https://gerrit.wikimedia.org/r/#/c/156909/">https://gerrit.wikimedia.org/r/#/c/156909/</a>.</li>
+<li>Made <a href="https://graphite.wmflabs.org">https://graphite.wmflabs.org</a> somewhat more stable again for use by Wikimedia BetaLabs folks by just blacklisting all other projects from sending data to it (with a local whitelist hack + <a href="https://gerrit.wikimedia.org/r/#/c/156966/)">https://gerrit.wikimedia.org/r/#/c/156966/)</a>. This would let them use it, and they said they would find it massively useful. All this is a hack until <a href="https://rt.wikimedia.org/Ticket/Display.html?id=8163">https://rt.wikimedia.org/Ticket/Display.html?id=8163</a> could be resolved and I can deploy graphite on a ‘real’ machine.</li>
+<li>Minor patch to my Gerrit -&gt; IRC bot to make it strip a common prefix (‘operations/’) from change messages posted to the operations channel – <a href="https://gerrit.wikimedia.org/r/#/c/156877/">https://gerrit.wikimedia.org/r/#/c/156877/</a>. Also made one that calls jenkins-bot jerkins-bot if it -1’s your patch (<a href="https://gerrit.wikimedia.org/r/#/c/156878/">https://gerrit.wikimedia.org/r/#/c/156878/</a>) but it seems to have a bug that I can’t be bothered to debug atm.</li>
 </ul>
-
-<p>Might spend some more time with Hive over the next few days &#8211; figured out an approach for using it from Python, and it should be fun to do so!</p>
+<p>Might spend some more time with Hive over the next few days – figured out an approach for using it from Python, and it should be fun to do so!</p>
 
 
   
@@ -137,7 +137,6 @@
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -145,7 +144,6 @@
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -163,6 +161,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -170,8 +170,6 @@
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>

@@ -5,15 +5,16 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="Code" />
+<meta property="og:title" content="code" />
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/tags/code/" />
-<meta property="og:updated_time" content="2017-12-03T01:23:54-08:00"/>
+<meta property="og:updated_time" content="2017-12-03T01:23:54-08:00" />
+
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Code"/>
+<meta name="twitter:title" content="code"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
-<meta name="generator" content="Hugo 0.47.1" />
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -22,14 +23,14 @@
   "@context": "http://schema.org",
   "@type": "Blog",
   "headline": "Yuvi Panda",
-  "url" : "http://words.yuvi.in/tags/code/",
+  "url" : "http:\/\/words.yuvi.in\/tags\/code\/",
   "author": {
     "@type": "Person",
     "name": ""
   },
   "dateModified": "2017-12-03T01:23:54-08:00",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
-  "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
+  "description": "[JupyterHub](https:\/\/github.com\/jupyterhub\/jupyterhub) | [MyBinder](https:\/\/mybinder.org) | [Kubernetes](https:\/\/k8s.io) | Open Culture"
 }
 </script>
 
@@ -91,74 +92,45 @@
 
 </p>
   </header>
-  
-
-<p><img src="https://imgs.xkcd.com/comics/standards.png" alt="https://xkcd.com/927/" /></p>
-
+  <p><img src="https://imgs.xkcd.com/comics/standards.png" alt="https://xkcd.com/927/"></p>
 <p>The wonderful <a href="https://twitter.com/GrahamDumpleton">Graham Dumpleton</a> asked <a href="https://twitter.com/GrahamDumpleton/status/936740552304836608">on twitter</a> why we built an entirely new tool (<a href="https://github.com/jupyter/repo2docker">repo2docker</a>) instead of using OpenShift&rsquo;s cool <a href="https://github.com/openshift/source-to-image">source2image</a> tool.</p>
-
 <p>This is a very good question, and not a decision we made lightly. This post lays out some history, and explains the reasons we decided to stop using s2i. s2i is still a great tool for most production use cases, and you should use it if you&rsquo;re building anything like a PaaS!</p>
-
 <h2 id="terminology">Terminology</h2>
-
 <p>Before discussing, I want to clarify &amp; define the various projects we are talking about.</p>
-
 <ol>
 <li><a href="https://github.com/openshift/source-to-image">s2i</a> is a nice tool from the <a href="http://openshift.org/">OpenShift</a> project that is used to build images out of git repositories. You can use heroku-like buildpacks to specify how the image should be built. It&rsquo;s used in OpenShift, but can also be easily used standalone.</li>
 <li><a href="https://github.com/jupyterhub/binderhub">BinderHub</a> is the UI + scheduling component of Binder. This is what you see when you go to <a href="https://mybinder.org">https://mybinder.org</a></li>
 <li><a href="https://github.com/jupyter/repo2docker">repo2docker</a> is a standalone python application that takes a git repository &amp; converts it into a docker image containing the environment that is specified in the repository. This heavily overlaps with functionality in s2i.</li>
 </ol>
-
 <h2 id="when-repo2docker-just-wrapped-s2i">When repo2docker just wrapped s2i&hellip;</h2>
-
 <p>When we started building <a href="https://github.com/jupyterhub/binderhub">BinderHub</a>, I looked around for a good heroku-like &lsquo;repository to container image&rsquo; builder project. I first looked at Deis&rsquo; <a href="https://github.com/deis/slugbuilder">slugbuilder</a> and <a href="https://github.com/deis/dockerbuilder">dockerbuilder</a> - they didn&rsquo;t quite match our needs, and seemed a bit tied into Deis. I then found OpenShift&rsquo;s <a href="https://github.com/openshift/source-to-image">source2image</a>, and was very happy! It worked pretty well standalone, and <code>#openshift</code> on IRC was very responsive.</p>
-
 <p>So until July 1, we actually used s2i under the hood! <code>repo2docker</code> was a wrapper that performed the following functions:</p>
-
 <ol>
 <li>Detect which s2i buildpack to use for a given repository</li>
 <li>Support building arbitrary Dockerfiles (s2i couldn&rsquo;t do this)</li>
 <li>Support the Legacy Dockerfiles that were required under the old version of mybinder.org. The older version of mybinder.org munged these Dockerfiles, and so we needed to replicate that for compatibility.</li>
 </ol>
-
 <p>@minrk did some wonderful work in allowing us to package the s2i binary into our python package, so users didn&rsquo;t even need to download s2i separately. It worked great, and we were happy with it!</p>
-
 <h2 id="moving-off-s2i">Moving off s2i</h2>
-
 <p>Sometime in July, we started adding support for Julia to binder/repo2docker. This brought up an interesting &amp; vital issue - composability.</p>
-
 <p>If a user had a <code>requirements.txt</code> in their repo <em>and</em> a <code>REQUIRE</code> file, then we&rsquo;d have to provide both a Python3 and Julia environment. To support this in s2i, we&rsquo;d have needed to make a <code>python3-julia</code> buildpack.</p>
-
 <p>If it had a <code>requirements.txt</code>, a <code>runtime.txt</code> with contents <code>python-2.7</code> and a <code>REQUIRE</code> file, we&rsquo;d have to provide a Python3 environment, a Python2 environment, and a Julia environment. To support this in s2i, we&rsquo;d have needed to make a <code>python3-python2-julia</code> buildpack.</p>
-
 <p>If it had an <code>environment.yml</code> file and a <code>REQUIRE</code> file, we&rsquo;d have to provide a conda environment and a Julia environment. To do this, we&rsquo;d have to make a <code>conda-julia</code> buildpack.</p>
-
 <p>As we add support for other languages (such as R), we&rsquo;d need to keep expanding the set of buildpacks we had. It&rsquo;d become a combinatorial explosion of buildpacks. This isn&rsquo;t a requirement or a big deal for PaaS offerings - usually a container image should only contain one &lsquo;application&rsquo;, and those are usually built using only one language. If you use multiple languages, you just make them each into their own container &amp; communicate over the network. However, Binder was building images that contained <em>environments</em> that people could explore and do things in, rather than specific applications. Since a lot of scientific computing uses multiple languages (looking at you, the people who do everything in R but scrape using Python), this was a core feature / requirement for Binder. So we couldn&rsquo;t restrict people to single-language buildpacks.</p>
-
 <p>So I decided that we can <em>generate</em> these combinatorial buildpacks in repo2docker. We can have a script that generates the buildpacks at build time, and then we can just check in the generated code. This would let us keep using s2i for doing image builds and pushes, and allow others using s2i to use our buildpacks. Win-win!</p>
-
 <p>This had the following problems:</p>
-
 <ol>
 <li>I was generating bash from python. This was quite error prone, since the bash also needed to carefully support the various complex environment specifications we wanted to support.</li>
 <li>We needed to <em>sometimes</em> run assemble scripts as root (such as when there is an &lsquo;apt.txt&rsquo; requiring package installs). This would require careful usage of <code>sudo</code> in the generated bash for security reasons.</li>
 <li>This was very &lsquo;clever&rsquo; code, and after running into a few bugs here I was convinced this &lsquo;generate bash with python&rsquo; idea was too clever for us to use reliably.</li>
 </ol>
-
 <p>At this point I considered making the <code>assemble</code> script into Python, but then I&rsquo;d be either generating Python from Python, or basically writing a full library that will be invoked from inside each buildpack. We&rsquo;d still need to keep repo2docker around (for Dockerfile + Legacy Dockerfile support), and the s2i buildpacks will be quite complex. This would also affect Docker image layer caching, since all activities of <code>assemble</code> are cached as one layer. Since a lot of repositories have similar environments (or are just building successive versions of same repo), this gives up a good amount of caching.</p>
-
 <p>So instead I decided that the right thing to do here is to dynamically generate a Dockerfile in python code, and build / push the image ourselves. S2I was great for generating a best-practices production container that runs one thing and does it well, but for binder we wanted to generate container images that captured complex environments without regard to what can run in them. Forcing s2i to do what we wanted seemed like trying to get a square peg into a round hole.</p>
-
 <p>So in <a href="https://github.com/jupyter/repo2docker/commit/38755650c28fe6c71adec5a5bf9adfdde2d9772e">this heavily squashed commit</a> I removed s2i, and repo2docker became stand alone. It was sad, since I really would have liked to not write extra code &amp; keep leveraging s2i. But the code is cleaner, easier for people to understand and maintain, and the composing works pretty well in understandable ways after we removed it. So IMO it was the right thing to do!</p>
-
 <p>I personally would be happy to go back to using s2i if we can find a clean way to support composability + caching there, but IMO that would make s2i too complex for its primary purpose of building images for a PaaS. I don&rsquo;t see repo2docker and s2i as competitors, as much as tools of similar types in different domains. Lots of &lt;3 to the s2i / openshift folks!</p>
-
 <p>I hope this was a useful read!</p>
-
 <h2 id="tldr">TLDR</h2>
-
 <p>S2I was great for generating a best-practices production container that runs one thing and does it well, but for binder we wanted to generate container images that captured complex environments without regard to what can run in them. Forcing s2i to do what we wanted seemed like trying to get a square peg into a round hole.</p>
-
 <p><em>Thanks to Chris Holgraf, MinRK and Carol Willing for helping read, reason about and edit this blog post</em></p>
 
 </article> 
@@ -178,28 +150,18 @@
 </p>
   </header>
   <p>I earlier had <a href="http://words.yuvi.in/post/systemd-gui-applications/">a vaguely working setup</a> for making sure browsers, shells and other applications don&rsquo;t eat all RAM / CPU on my machine with systemd + sudo + shell scripts.</p>
-
 <p>It was a hacky solution, and also had complications when used to launch shells. It wasn&rsquo;t passing in all the environment varialbes it should, causing interesting-to-debug issues. <code>sudo</code> rules were complex, and hard to do securely.</p>
-
 <p>I had also been looking for an excuse to learn more Golang, so I ended up writing <a href="https://github.com/yuvipanda/systemd-simple-containment"><code>systemd-simple-containment</code></a> or <code>ssc</code>.</p>
-
 <p>It&rsquo;s a simple golang application that produces a binary that can be <a href="https://en.wikipedia.org/wiki/Setuid"><code>setuid</code></a> to <code>root</code>, and thus get around all our <code>sudo</code> complexity, at the price of having to be very, very careful about the code. Fortunately, it&rsquo;s short enough (~100 lines) and <code>systemd-run</code> helps it keep the following invariants:</p>
-
 <ol>
 <li>It will never spawn any executable as any user other than the &lsquo;real&rsquo; uid / gid of the user calling the binary.</li>
 <li>It doesn&rsquo;t allow arbitrary systemd <code>properties</code> to be set, ensuring a more limited attack surface.</li>
 </ol>
-
 <p>However, this is the first time I&rsquo;m playing with setuid and with Go, so I probably fucked something up. I feel ok enough about my understanding of real and effective uids for now to use it myself, but not to recommend it to other people. Hopefully I&rsquo;ll be confident enough say that soon :)</p>
-
 <p>By using a real programming language, I also easily get commandline flags for sharing tty or not (so I can use the same program for launching GUI &amp; interactive terminal applications), pass all environment variables through (which can&rsquo;t be just standard child inheritence, since <code>systemd-run</code> doesn&rsquo;t work that way) &amp; the ability to setuid (you can&rsquo;t do that easily to a script).</p>
-
 <p>I was sure I&rsquo;d hate writing go because of the constant <code>if err != nil</code> checks, but it hasn&rsquo;t bothered me that much. I would like to write more Go, to get a better feel for it. This code is too short to like a language, but I definitely hate it less :)</p>
-
 <p>Anyway, now I can launch GUI applications with <code>ssc -tty=false -isolation=strict firefox</code> and it does the right thing. I currently have available <code>-isolation=strict</code> and <code>-isolation=relaxed</code>, the former performing stronger sandboxing (NoNewPrivileges, PrivateTmp) than the latter (just MemoryMax). i&rsquo;ll slowly add more protections here, but just keep two modes (ideally).</p>
-
 <p>My Gnome Terminal shell command is now <code>ssc -isolation=relaxed /bin/bash -i</code> and it works great :)</p>
-
 <p>I am pretty happy with <code>ssc</code> as it exists now. Only thing I now want to do is to be able to use it from the GNOME launcher (I am using GNOME3 with gnome-shell). Apparently <em>shortcuts</em> are no longer cool and hence pretty hard to create in modern desktop environments :| I shall keep digging!</p>
 
 </article> 
@@ -218,77 +180,51 @@
 
 </p>
   </header>
-  
-
-<p><strong>Update</strong>: There&rsquo;s a <a href="//words.yuvi.in/post/systemd-simple-containment/">follow-up post</a> with a simpler solution now.</p>
-
-<p>Ever since I read <a href="https://blog.jessfraz.com">Jessie Frazelle</a>&rsquo;s amazing setup (<a href="https://blog.jessfraz.com/post/ultimate-linux-on-the-desktop/">1</a>, <a href="https://blog.jessfraz.com/post/docker-containers-on-the-desktop/">2</a>, <a href="https://blog.jessfraz.com/post/runc-containers-on-the-desktop/">3</a>) for running GUI applications in docker containers, I&rsquo;ve wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&rsquo;m also not as awesome (or knowledgeable!) as Jess, so will have to naturally settle for less&hellip;</p>
-
+  <p><strong>Update</strong>: There&rsquo;s a <a href="//words.yuvi.in/post/systemd-simple-containment/">follow-up post</a> with a simpler solution now.</p>
+<p>Ever since I read <a href="https://blog.jessfraz.com">Jessie Frazelle</a>&lsquo;s amazing setup (<a href="https://blog.jessfraz.com/post/ultimate-linux-on-the-desktop/">1</a>, <a href="https://blog.jessfraz.com/post/docker-containers-on-the-desktop/">2</a>, <a href="https://blog.jessfraz.com/post/runc-containers-on-the-desktop/">3</a>) for running GUI applications in docker containers, I&rsquo;ve wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&rsquo;m also not as awesome (or knowledgeable!) as Jess, so will have to naturally settle for less&hellip;</p>
 <p>So I am doing it in systemd!</p>
-
 <p>Before proceeding, I want to warn y&rsquo;all that I don&rsquo;t entirely know what I am doing. Don&rsquo;t take any of this as security advice, since I don&rsquo;t entirely understand X&rsquo;s security model. Works fine for me though!</p>
-
-<h2 id="gui-applications">GUI applications</h2>
-
+<h2 id="gui-applications-">GUI applications</h2>
 <p>I started out using a simple systemd <a href="https://fedoramagazine.org/systemd-template-unit-files/">templated service</a> to launch GUI applications, but soon realized that <a href="https://www.freedesktop.org/software/systemd/man/systemd-run.html">systemd-run</a> is probably the better way. So I&rsquo;ve a simple script, <code>/usr/local/bin/safeapp</code>:</p>
-
-<pre><code class="language-bash">#!/bin/bash
-exec sudo systemd-run  \
-    -p CPUQuota=100% \
-    -p MemoryMax=70% \
-    -p WorkingDirectory=$(pwd) \
-    -p PrivateTmp=yes \
-    -p NoNewPrivileges=yes \
-    --setenv DISPLAY=${DISPLAY} \
-    --setenv DBUS_SESSION_BUS_ADDRESS=${DBUS_SESSION_BUS_ADDRESS} \
-    --uid ${USER} \
-    --gid ${USER} \
-    --quiet \
-    &quot;$1&quot;
-</code></pre>
-
-<p>I can run <code>safeapp /opt/firefox/firefox</code> now and it&rsquo;ll start firefox inside a nice systemd unit with a 70% Memory usage cap and CPU usage of at most 1 CPU. There&rsquo;s also other minimal security stuff applied - <code>NoNewPrivileges</code> being the most important one. I want to get <code>ProtectSystem</code> + <code>ReadWriteDirectories</code> going too, but there seems to be a bug in <code>systemd-run</code> that doesn&rsquo;t let it parse <code>ProtectSystem</code> properly&hellip;</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>exec sudo systemd-run  <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -p CPUQuota<span style="color:#f92672">=</span>100% <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -p MemoryMax<span style="color:#f92672">=</span>70% <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -p WorkingDirectory<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -p PrivateTmp<span style="color:#f92672">=</span>yes <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -p NoNewPrivileges<span style="color:#f92672">=</span>yes <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --setenv DISPLAY<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>DISPLAY<span style="color:#e6db74">}</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --setenv DBUS_SESSION_BUS_ADDRESS<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>DBUS_SESSION_BUS_ADDRESS<span style="color:#e6db74">}</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --uid <span style="color:#e6db74">${</span>USER<span style="color:#e6db74">}</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --gid <span style="color:#e6db74">${</span>USER<span style="color:#e6db74">}</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --quiet <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
+</code></pre></div><p>I can run <code>safeapp /opt/firefox/firefox</code> now and it&rsquo;ll start firefox inside a nice systemd unit with a 70% Memory usage cap and CPU usage of at most 1 CPU. There&rsquo;s also other minimal security stuff applied - <code>NoNewPrivileges</code> being the most important one. I want to get <code>ProtectSystem</code> + <code>ReadWriteDirectories</code> going too, but there seems to be a bug in <code>systemd-run</code> that doesn&rsquo;t let it parse <code>ProtectSystem</code> properly&hellip;</p>
 <p>Also, there&rsquo;s <a href="https://github.com/systemd/systemd/issues/3851">an annoying bug</a> in systemd v231 (which is what my current system has) - you can&rsquo;t set <code>CPUQuotas</code> over 100% (aka &gt; 1 CPU core). This is annoying if you want to give each application 3 of your 4 cores (which is what I want). Next version of Ubuntu has v232, so my GUI applications will just have to do with an aggregate of 1 full core until then.</p>
-
 <p>The two environment variables seem to be all that&rsquo;s necessary for X applications to work.</p>
-
 <p>And yes, this might ask you for your password. I&rsquo;ll clean this up into a nice non-bash script hopefully soon, and make all of these better.</p>
-
 <p>Anyway, <em>it works</em>! I can now open sketchy websites with scroll hijacking without fear it&rsquo;ll kill my machine!</p>
-
-<h2 id="cli">CLI</h2>
-
+<h2 id="cli-">CLI</h2>
 <p>I wanted each tab in my terminal to be its own systemd service, so they all get equitable amount of  CPU time &amp; can&rsquo;t crash machine by themselves with OOM.</p>
-
 <p>So I&rsquo;ve this script as <code>/usr/local/bin/safeshell</code></p>
-
-<pre><code class="language-bash">`#!/bin/bash
-exec sudo systemd-run \
-    -p CPUQuota=100% \
-    -p MemoryMax=70% \
-    -p WorkingDirectory=$(pwd) \
-    --uid yuvipanda \
-    --gid yuvipanda \
-    --quiet \
-    --tty \
-    /bin/bash -i
-</code></pre>
-
-<p>The <code>--tty</code> is magic here, and does the right things wrt passing the tty that GNOME terminal is passing in all the way to the shell. Now, my login command (set under profile preferences &gt; command in gnome-terminal) is <code>sudo /usr/local/bin/safeshell</code>. In addition, I add the following line to <code>/etc/sudoers</code>:</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#e6db74">`</span><span style="color:#75715e">#!/bin/bash</span>
+exec sudo systemd-run <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -p CPUQuota<span style="color:#f92672">=</span>100% <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -p MemoryMax<span style="color:#f92672">=</span>70% <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -p WorkingDirectory<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --uid yuvipanda <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --gid yuvipanda <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --quiet <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --tty <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    /bin/bash -i
+</code></pre></div><p>The <code>--tty</code> is magic here, and does the right things wrt passing the tty that GNOME terminal is passing in all the way to the shell. Now, my login command (set under profile preferences &gt; command in gnome-terminal) is <code>sudo /usr/local/bin/safeshell</code>. In addition, I add the following line to <code>/etc/sudoers</code>:</p>
 <pre><code>%sudo ALL = (root) NOPASSWD:SETENV: /usr/local/bin/safeshell
-</code></pre>
-
-<p>This + just specifying the username directly in <code>safeshell</code> are both hacks that make me cringe a little. I need to either fully understand how sudo&rsquo;s <code>-E</code> works, or use this as an opportunity to learn more Go and make a setuid binary.</p>
-
-<h2 id="to-do">To do</h2>
-
+</code></pre><p>This + just specifying the username directly in <code>safeshell</code> are both hacks that make me cringe a little. I need to either fully understand how sudo&rsquo;s <code>-E</code> works, or use this as an opportunity to learn more Go and make a setuid binary.</p>
+<h2 id="to-do-">To do</h2>
 <p>[ ] Generalize this to not need hacks (either with better sudo usage or a setuid binary)
 [ ] Investigate adding more security related options.
 [ ] Make these work with desktop / dock icons.</p>
-
-<p>I&rsquo;d normally have just never written this post, on account of &lsquo;oh no, it is imperfect&rsquo; or something like that. However, that also seems to have come in the way of ability to find joy in learning simple things :D So I shall follow <a href="https://jvns.ca/">b0rk</a>&rsquo;s lead in spending time <a href="http://words.yuvi.in/post/things-to-learn/">learning</a> for fun again :)</p>
+<p>I&rsquo;d normally have just never written this post, on account of &lsquo;oh no, it is imperfect&rsquo; or something like that. However, that also seems to have come in the way of ability to find joy in learning simple things :D So I shall follow <a href="https://jvns.ca/">b0rk</a>&lsquo;s lead in spending time <a href="http://words.yuvi.in/post/things-to-learn/">learning</a> for fun again :)</p>
 
 </article> 
 
@@ -308,33 +244,28 @@ exec sudo systemd-run \
 
 </p>
   </header>
-  <p>I <a href="http://yuvi.in/blog/moving-to-vim-from-emacs.html">moved</a> from emacs to vim a while ago, and have been steadily accumulating a series of plugins in my <code>.vim</code>. They&#8217;re all up in my rather messy <a href="http://github.com/yuvipanda/dotfiles">dotfiles repo</a>. Here&#8217;s a slightly more neatly organized list of the plugins I currently use:</p>
-
+  <p>I <a href="http://yuvi.in/blog/moving-to-vim-from-emacs.html">moved</a> from emacs to vim a while ago, and have been steadily accumulating a series of plugins in my <code>.vim</code>. They’re all up in my rather messy <a href="http://github.com/yuvipanda/dotfiles">dotfiles repo</a>. Here’s a slightly more neatly organized list of the plugins I currently use:</p>
 <ol>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=3025">command-t</a> &#8211; File opener and buffer switcher. In-fuckin-credibly useful.</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=1953">vimpress</a> &#8211; What I use to blog since <a href="http://yuvi.in/blog/moving-back-to-wordpress/">moving to wordpress</a>.</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=39">matchit</a> &#8211; Lets <code>%</code> work with html tags</li>
-<li><s><a href="http://www.vim.org/scripts/script.php?script_id=3695">commentary</a> &#8211; Generic commenting and uncommenting script</s> <a href="http://www.vim.org/scripts/script.php?script_id=1218">NERDCommenter</a> has replaced commentary due to being more flexible and having more options.</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=2975">fugitive</a> &#8211; Incredibly awesome git wrapper for vim. I rarely go to the commandline for git these days</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=3465">tagbar</a> &#8211; Useful code-exploratory plugin when I&#8217;m looking around a codebase trying to familiarize myself.</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=1643">supertab</a> &#8211; Buffer completion in insert mode only when I need it.</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=2423">gist</a> &#8211; Put stuff up in gist to pass it around</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=559">BufClose</a> &#8211; So I can close a buffer without messing up my splits</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=3509">extradite</a> &#8211; <code>:Glog</code> replacement that builds on top of fugitive. I don&#8217;t understand why this isn&#8217;t bundled with fugitive</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=2204">TwitVim</a> &#8211; Yes, so I don&#8217;t have to go to the browser (and be consumed by chat/reddit/hn) just to post a tweet.</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=2572">ack.vim</a> &#8211; Ack integration for vim. Do yourself a favor and use <a href="http://betterthangrep.com">ack</a> instead of grep.</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=2736">Syntastic</a> &#8211; Automatic syntax checking so that I don&#8217;t miss a semicolon and not know about it</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=1355">php-doc</a> &#8211; Insert boilerplate PHP doc compatible strings in my PHP files whenever I want to. Very PHP specific, need to find something that works across languages. (Note: This plugin has quite some identity crisis. It&#8217;s named PDV but it&#8217;s filename is php-doc. Since php-doc is more descriptive, I&#8217;m using that)</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=2754">delimitMate</a> &#8211; Automatically closes quotes, parens, braces, etc for you. I initially thought this would be super annoying, but in fact it is rather very pleasant.</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=3025">command-t</a> – File opener and buffer switcher. In-fuckin-credibly useful.</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=1953">vimpress</a> – What I use to blog since <a href="http://yuvi.in/blog/moving-back-to-wordpress/">moving to wordpress</a>.</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=39">matchit</a> – Lets <code>%</code> work with html tags</li>
+<li><!-- raw HTML omitted --><a href="http://www.vim.org/scripts/script.php?script_id=3695">commentary</a> – Generic commenting and uncommenting script<!-- raw HTML omitted --> <a href="http://www.vim.org/scripts/script.php?script_id=1218">NERDCommenter</a> has replaced commentary due to being more flexible and having more options.</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=2975">fugitive</a> – Incredibly awesome git wrapper for vim. I rarely go to the commandline for git these days</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=3465">tagbar</a> – Useful code-exploratory plugin when I’m looking around a codebase trying to familiarize myself.</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=1643">supertab</a> – Buffer completion in insert mode only when I need it.</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=2423">gist</a> – Put stuff up in gist to pass it around</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=559">BufClose</a> – So I can close a buffer without messing up my splits</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=3509">extradite</a> – <code>:Glog</code> replacement that builds on top of fugitive. I don’t understand why this isn’t bundled with fugitive</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=2204">TwitVim</a> – Yes, so I don’t have to go to the browser (and be consumed by chat/reddit/hn) just to post a tweet.</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=2572">ack.vim</a> – Ack integration for vim. Do yourself a favor and use <a href="http://betterthangrep.com">ack</a> instead of grep.</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=2736">Syntastic</a> – Automatic syntax checking so that I don’t miss a semicolon and not know about it</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=1355">php-doc</a> – Insert boilerplate PHP doc compatible strings in my PHP files whenever I want to. Very PHP specific, need to find something that works across languages. (Note: This plugin has quite some identity crisis. It’s named PDV but it’s filename is php-doc. Since php-doc is more descriptive, I’m using that)</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=2754">delimitMate</a> – Automatically closes quotes, parens, braces, etc for you. I initially thought this would be super annoying, but in fact it is rather very pleasant.</li>
 </ol>
-
-<p><s>I&#8217;m also on the default <code>desert</code> color theme &#8211; haven&#8217;t found anything better. Suggestions welcome &#8211; both for the color scheme and for new/replacement plugins.</s> After trying out <a href="http://www.vim.org/scripts/script.php?script_id=1778">wombat</a> and <a href="http://www.vim.org/scripts/script.php?script_id=2555">jellybeans</a> color schemes, I have settled on wombat for now.</p>
-
+<p><!-- raw HTML omitted -->I’m also on the default <code>desert</code> color theme – haven’t found anything better. Suggestions welcome – both for the color scheme and for new/replacement plugins.<!-- raw HTML omitted --> After trying out <a href="http://www.vim.org/scripts/script.php?script_id=1778">wombat</a> and <a href="http://www.vim.org/scripts/script.php?script_id=2555">jellybeans</a> color schemes, I have settled on wombat for now.</p>
 <p>Suggestions for more plugins still welcome :)</p>
-
-<p><s>This is the list as of 24 Aug 2011.</s> <s>Updated as of September 2 2011 (added 10, 11, 12 since last update).</s> <s>Updated as of September 5 2011 (changed 4, added colorscheme change).</s> Updated as of September 12 2011 (added 13, 14, 15). I am moving quite fast, am I not? Will keep this post updated as and when things change.</p>
-
-<!-- #VIMPRESS_TAG# http://yuvi.in/blog/wp-content/uploads/2011/09/wpid190-vimpress_4e542fc3_mkd.txt wpid190-vimpress_4e542fc3_mkd.txt -->
+<p><!-- raw HTML omitted -->This is the list as of 24 Aug 2011.<!-- raw HTML omitted --> <!-- raw HTML omitted -->Updated as of September 2 2011 (added 10, 11, 12 since last update).<!-- raw HTML omitted --> <!-- raw HTML omitted -->Updated as of September 5 2011 (changed 4, added colorscheme change).<!-- raw HTML omitted --> Updated as of September 12 2011 (added 13, 14, 15). I am moving quite fast, am I not? Will keep this post updated as and when things change.</p>
+<!-- raw HTML omitted -->
 
 </article> 
 
@@ -354,13 +285,10 @@ exec sudo systemd-run \
 
 </p>
   </header>
-  <p>I was debugging an issue <a href="http://interviewstreet.com">at work</a> today where a (generated) file refused to download in Chrome, but the same URL worked just fine with wget. I remember reading in the <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec2.html#sec2.2">HTTP Spec</a> that HTTP headers can only be lower ASCII, so when wget mangled the output file&#8217;s name, the problem was obvious &#8211; the file name contained a character that wasn&#8217;t in lower ASCII (an accented A). Chrome had borked on encountering it, while wget soldiered on. Using <code>iconv</code> to strip non-ASCII characters in the file name on the server side fixed the issue.</p>
-
-<p>Moral of the story? Read the RFCs! The <a href="http://www.w3.org/Protocols/rfc2616/rfc2616.html">HTTP one</a>, in particular, is remarkably readable and you <em>should</em> read it if you&#8217;re doing non-trivial Web Development.</p>
-
-<p>P.S: If I had had time, I&#8217;d have went around testing this behavior in several user agents and documenting their behavior (and possibly submitting bug reports) &#8211; but <insert-excuse-here>.</p>
-
-<p>&nbsp;</p>
+  <p>I was debugging an issue <a href="http://interviewstreet.com">at work</a> today where a (generated) file refused to download in Chrome, but the same URL worked just fine with wget. I remember reading in the <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec2.html#sec2.2">HTTP Spec</a> that HTTP headers can only be lower ASCII, so when wget mangled the output file’s name, the problem was obvious – the file name contained a character that wasn’t in lower ASCII (an accented A). Chrome had borked on encountering it, while wget soldiered on. Using <code>iconv</code> to strip non-ASCII characters in the file name on the server side fixed the issue.</p>
+<p>Moral of the story? Read the RFCs! The <a href="http://www.w3.org/Protocols/rfc2616/rfc2616.html">HTTP one</a>, in particular, is remarkably readable and you <em>should</em> read it if you’re doing non-trivial Web Development.</p>
+<p>P.S: If I had had time, I’d have went around testing this behavior in several user agents and documenting their behavior (and possibly submitting bug reports) – but <!-- raw HTML omitted -->.</p>
+<p> </p>
 
 </article> 
 
@@ -381,20 +309,14 @@ exec sudo systemd-run \
 </p>
   </header>
   <p>From <a href="http://news.ycombinator.com/item?id=2870176">HN</a>:</p>
-
 <blockquote>
 <p>From my experience, the largest hurdle first time programmers have is being able to execute programs in their head. <strong><em>It takes a cognitive leap to go from the source code in front of them, and what happens at runtime</em>.</strong></p>
 </blockquote>
-
 <p><em>(emphasis mine)</em></p>
-
-<p>I believe that if you have made that <em>cognitive leap</em>, you can call yourself a programmer. It means you&#8217;ve entered into the <a href="http://www.codinghorror.com/blog/2006/07/separating-programming-sheep-from-non-programming-goats.html">second hump</a> &#8211; you are a programmer. One of us. Welcome :)</p>
-
-<p>This is also the reason why solving programming challenges at places like <a href="http://interviewstreet.com/recruit/challenges">InterviewStreet Challenges</a>, <a href="http://codechef.com">CodeChef</a>, <a href="http://topcoder.com">TopCoder</a>, <a href="http://spoj.pl">SPOJ</a>, etc also increase your general programming skills &#8211; they require that you continuously run code in the interpreter in your head. Helps you train your <a href="http://en.wikipedia.org/wiki/Procedural_memory">procedural memory</a>. Same reason why learning different language paradigms (OOP, Purely Functional, Procedural, etc) makes you a better programmer.</p>
-
+<p>I believe that if you have made that <em>cognitive leap</em>, you can call yourself a programmer. It means you’ve entered into the <a href="http://www.codinghorror.com/blog/2006/07/separating-programming-sheep-from-non-programming-goats.html">second hump</a> – you are a programmer. One of us. Welcome :)</p>
+<p>This is also the reason why solving programming challenges at places like <a href="http://interviewstreet.com/recruit/challenges">InterviewStreet Challenges</a>, <a href="http://codechef.com">CodeChef</a>, <a href="http://topcoder.com">TopCoder</a>, <a href="http://spoj.pl">SPOJ</a>, etc also increase your general programming skills – they require that you continuously run code in the interpreter in your head. Helps you train your <a href="http://en.wikipedia.org/wiki/Procedural_memory">procedural memory</a>. Same reason why learning different language paradigms (OOP, Purely Functional, Procedural, etc) makes you a better programmer.</p>
 <p>Reminds me that I have four more chapters in SICP to finish and Clojure to learn :)</p>
-
-<p>&nbsp;</p>
+<p> </p>
 
 </article> 
 
@@ -414,13 +336,10 @@ exec sudo systemd-run \
 
 </p>
   </header>
-  <p>4Chan isn&#8217;t exactly what you&#8217;d associate with &#8216;shit, that&#8217;s a cool piece of code!&#8217;, but look <a href="http://dis.4chan.org/read/prog/1295544154">what I found</a>!</p>
-
+  <p>4Chan isn’t exactly what you’d associate with ‘shit, that’s a cool piece of code!’, but look <a href="http://dis.4chan.org/read/prog/1295544154">what I found</a>!</p>
 <p>(<a href="http://news.ycombinator.com/item?id=2657277">via HN</a>)</p>
-
 <p>Nice hack. And it <strong>is</strong> <code>O(N)</code> in bitsize of largest number (Ignoring all the overhead of forking new processes, the problem with the race conditions(Sort 0 and 0.1? How about 0.01 and 0.011?), processor contention, etc,.) They basically delegated the sorting to the process scheduler, treating it as a sort of priority queue.</p>
-
-<p>Sometimes you just see a hack so out of the box that it makes you say &#8216;woah!&#8217; and let your mouth hang open there for a while. One such time this :)</p>
+<p>Sometimes you just see a hack so out of the box that it makes you say ‘woah!’ and let your mouth hang open there for a while. One such time this :)</p>
 
 </article> 
 
@@ -441,12 +360,9 @@ exec sudo systemd-run \
 </p>
   </header>
   <p>A while back, I <a href="http://yuvi.in/blog/hello-world-again/">moved my blog</a> (from a wordpress install whose data I lost) to my own platform (<a href="http://github.com/yuvipanda/HiSlain">HiSlain</a>).</p>
-
-<p>After several close calls, I&#8217;m officially moving from HiSlain back to WordPress. I just don&#8217;t have enough time to maintain all the things I wanted in a blog platform in HiSlain, hence the move back. However, it satisfied it&#8217;s purpose &#8211; I learnt to write code I could use, others could use, and <a href="https://github.com/tamizhgeek/HiSlain">others could contribute to</a>. The <a href="http://yuvi.in/blog/oldindex.html">old blog</a> is still around (all permalinks would work) if you&#8217;re interested.</p>
-
-<p>It&#8217;s good to be back :)</p>
-
-<p>I miss writing posts in Vim though &#8211; expect to find/write a plugin that&#8217;ll let me blog/compose from Vim. Suggestions?</p>
+<p>After several close calls, I’m officially moving from HiSlain back to WordPress. I just don’t have enough time to maintain all the things I wanted in a blog platform in HiSlain, hence the move back. However, it satisfied it’s purpose – I learnt to write code I could use, others could use, and <a href="https://github.com/tamizhgeek/HiSlain">others could contribute to</a>. The <a href="http://yuvi.in/blog/oldindex.html">old blog</a> is still around (all permalinks would work) if you’re interested.</p>
+<p>It’s good to be back :)</p>
+<p>I miss writing posts in Vim though – expect to find/write a plugin that’ll let me blog/compose from Vim. Suggestions?</p>
 
 </article> 
 
@@ -466,11 +382,9 @@ exec sudo systemd-run \
 
 </p>
   </header>
-  <p>No, I&#8217;m <em>not</em> going to blow your mind by telling you I&#8217;m going to do the SICP exercises in BrainFuck :)</p>
-
-<p>I just wrote <a href="https://gist.github.com/969657">my first brainfuck program</a>. Might as well be my last, but not sure. Tape-based turing-ish programing seems fun, so maybe I&#8217;ll try that again with something more expressive than brainfuck (or maybe that is pointless?)</p>
-
-<p>And I&#8217;m doing the SICP Exercises. In <a href="http://groups.csail.mit.edu/mac/projects/scheme/">MIT-Scheme</a>. I&#8217;ve put them <a href="https://github.com/yuvipanda/sicp-exercises">up on GitHub</a>. I&#8217;m doing this with the <a href="http://fpug-c.posterous.com/">FPUG-C</a> SICP Study Group, so hope I&#8217;m able to complete it all this time :) Big props to <a href="http://www.openbala.com/">Balaji</a> for organizing it, and letting us get away with the free coke and coffee!</p>
+  <p>No, I’m <em>not</em> going to blow your mind by telling you I’m going to do the SICP exercises in BrainFuck :)</p>
+<p>I just wrote <a href="https://gist.github.com/969657">my first brainfuck program</a>. Might as well be my last, but not sure. Tape-based turing-ish programing seems fun, so maybe I’ll try that again with something more expressive than brainfuck (or maybe that is pointless?)</p>
+<p>And I’m doing the SICP Exercises. In <a href="http://groups.csail.mit.edu/mac/projects/scheme/">MIT-Scheme</a>. I’ve put them <a href="https://github.com/yuvipanda/sicp-exercises">up on GitHub</a>. I’m doing this with the <a href="http://fpug-c.posterous.com/">FPUG-C</a> SICP Study Group, so hope I’m able to complete it all this time :) Big props to <a href="http://www.openbala.com/">Balaji</a> for organizing it, and letting us get away with the free coke and coffee!</p>
 
 </article> 
 
@@ -491,9 +405,7 @@ exec sudo systemd-run \
 </p>
   </header>
   <p>My <code>GStreamer 101</code> presentation at <a href="http://gnome.asia">GNOME.asia</a> was <em>very</em> wel received. I was quite happy with the way it turned out. Thanks to <a href="http://arunraghavan.net/">Ford_Prefect</a> and <a href="http://abharath.wordpress.com/">Bharath Acharya</a> for pulling me in :)</p>
-
 <p>My very minimal slides are <a href="http://www.slideshare.net/yuvipanda/gstreamer-101">here</a>. You can reuse them if you want to.</p>
-
 <p>Sadly, missed the week long hackfest :( Next time!</p>
 
 </article> 
@@ -517,7 +429,6 @@ exec sudo systemd-run \
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -525,7 +436,6 @@ exec sudo systemd-run \
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -543,6 +453,8 @@ exec sudo systemd-run \
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -550,8 +462,6 @@ exec sudo systemd-run \
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>

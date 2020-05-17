@@ -6,16 +6,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <meta property="og:title" content="Side Project: UA Emoji Firefox Extension" />
-<meta property="og:description" content="Note: I&#8217;m trying to spend time explicitly writing random side projects that are not related to what I&#8217;m actively working on as my main project in some form.
+<meta property="og:description" content="Note: I’m trying to spend time explicitly writing random side projects that are not related to what I’m actively working on as my main project in some form.
 A random thread started by Ironholds on a random mailing list I was wearily catching up on contained a joke from bearloga about malformed User Agents. This prompted me to write UAuliver (source), a Firefox extension that randomizes your user agent to be a random string of emoji." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://words.yuvi.in/side-project-ua-emoji-firefox-extension/" /><meta property="article:published_time" content="2016-03-28T05:29:05&#43;00:00"/>
-<meta property="article:modified_time" content="2016-03-28T05:29:05&#43;00:00"/>
+<meta property="og:url" content="http://words.yuvi.in/side-project-ua-emoji-firefox-extension/" />
+<meta property="article:published_time" content="2016-03-28T05:29:05+00:00" />
+<meta property="article:modified_time" content="2016-03-28T05:29:05+00:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Side Project: UA Emoji Firefox Extension"/>
-<meta name="twitter:description" content="Note: I&#8217;m trying to spend time explicitly writing random side projects that are not related to what I&#8217;m actively working on as my main project in some form.
+<meta name="twitter:description" content="Note: I’m trying to spend time explicitly writing random side projects that are not related to what I’m actively working on as my main project in some form.
 A random thread started by Ironholds on a random mailing list I was wearily catching up on contained a joke from bearloga about malformed User Agents. This prompted me to write UAuliver (source), a Firefox extension that randomizes your user agent to be a random string of emoji."/>
-<meta name="generator" content="Hugo 0.47.1" />
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -24,10 +26,10 @@ A random thread started by Ironholds on a random mailing list I was wearily catc
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "Side Project: UA Emoji Firefox Extension",
-  "url": "http://words.yuvi.in/side-project-ua-emoji-firefox-extension/",
+  "url": "http:\/\/words.yuvi.in\/side-project-ua-emoji-firefox-extension\/",
   "wordCount": "278",
-  "datePublished": "2016-03-28T05:29:05&#43;00:00",
-  "dateModified": "2016-03-28T05:29:05&#43;00:00",
+  "datePublished": "2016-03-28T05:29:05\x2b00:00",
+  "dateModified": "2016-03-28T05:29:05\x2b00:00",
   "author": {
     "@type": "Person",
     "name": "yuvipanda"
@@ -87,19 +89,15 @@ A random thread started by Ironholds on a random mailing list I was wearily catc
 
 </p>
   </header>
-  <p><em>Note: I&#8217;m trying to spend time explicitly writing random side projects that are not related to what I&#8217;m actively working on as my main project in some form.</em></p>
-
-<p>A random thread started by <a href="https://twitter.com/quominus">Ironholds</a> on a random mailing list I was wearily catching up on contained a joke from <a href="https://twitter.com/bearloga">bearloga</a> about malformed User Agents. This prompted me to write <a href="https://addons.mozilla.org/en-US/firefox/addon/uauliver/?src=search">UAuliver</a> (<a href="https://github.com/yuvipanda/uauliver-firefox-extension">source</a>), a Firefox extension that randomizes your user agent to be a random string of emoji. This breaks a surprisingly large number of software, I&#8217;m told! (GMail &amp; Gerrit being the ones I explicitly remember)</p>
-
+  <p><em>Note: I’m trying to spend time explicitly writing random side projects that are not related to what I’m actively working on as my main project in some form.</em></p>
+<p>A random thread started by <a href="https://twitter.com/quominus">Ironholds</a> on a random mailing list I was wearily catching up on contained a joke from <a href="https://twitter.com/bearloga">bearloga</a> about malformed User Agents. This prompted me to write <a href="https://addons.mozilla.org/en-US/firefox/addon/uauliver/?src=search">UAuliver</a> (<a href="https://github.com/yuvipanda/uauliver-firefox-extension">source</a>), a Firefox extension that randomizes your user agent to be a random string of emoji. This breaks a surprisingly large number of software, I’m told! (GMail &amp; Gerrit being the ones I explicitly remember)</p>
 <p>Things I learnt from writing this:</p>
-
 <ol>
-<li>Writing Addons for Firefox is far easier to get started with than they were the last time I looked. Despite the confusing naming (Jetpack API == SDK != WordPress&#8217; Jetpack API != Addons != Plugins != WebExtension), the documentation and tooling were nice enough that I could finish all of this in a few hours!</li>
+<li>Writing Addons for Firefox is far easier to get started with than they were the last time I looked. Despite the confusing naming (Jetpack API == SDK != WordPress’ Jetpack API != Addons != Plugins != WebExtension), the documentation and tooling were nice enough that I could finish all of this in a few hours!</li>
 <li>I can still write syntactically correct Javascript! \o/</li>
-<li>Generating a &#8216;string of emoji&#8217; is easier/harder than you would think, depending on how you would like to define &#8217;emoji&#8217;. The fact that Unicode deals in blocks that at least in this case aren&#8217;t too split up made this quite easy (I used the <a href="https://en.wikipedia.org/wiki/Emoji#Unicode_blocks">list</a> on Wikipedia to generate them). JS&#8217;s <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCodePoint">String.fromCodePoint</a> can also be used to detect if the codepoint you just generated randomly is actually allocated.</li>
-<li>I don&#8217;t actually know how HTTP headers deal with encoding and unicode. This is something I need to actually look up. Perhaps a re-read of the HTTP RfC is in order!</li>
+<li>Generating a ‘string of emoji’ is easier/harder than you would think, depending on how you would like to define ’emoji’. The fact that Unicode deals in blocks that at least in this case aren’t too split up made this quite easy (I used the <a href="https://en.wikipedia.org/wiki/Emoji#Unicode_blocks">list</a> on Wikipedia to generate them). JS’s <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCodePoint">String.fromCodePoint</a> can also be used to detect if the codepoint you just generated randomly is actually allocated.</li>
+<li>I don’t actually know how HTTP headers deal with encoding and unicode. This is something I need to actually look up. Perhaps a re-read of the HTTP RfC is in order!</li>
 </ol>
-
 <p>It was a fun exercise, and I might write more Firefox extensions in the future!</p>
 
 
@@ -142,7 +140,6 @@ A random thread started by Ironholds on a random mailing list I was wearily catc
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -150,7 +147,6 @@ A random thread started by Ironholds on a random mailing list I was wearily catc
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -168,6 +164,8 @@ A random thread started by Ironholds on a random mailing list I was wearily catc
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -175,8 +173,6 @@ A random thread started by Ironholds on a random mailing list I was wearily catc
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>

@@ -6,16 +6,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <meta property="og:title" content="Cheese GSoC Report – Week 2" />
-<meta property="og:description" content="Second week of the (rather hot and sweaty) Summer of Code is over! And during this week&#8230;.
- Replicated most of the UI of Cheese Learnt how to make C and Vala code co-exist (Thanks folks at #vala!) Made the thumbnail widget work, in both modes/orientations Implemented fullscreen mode, with autohiding of the action buttons Started modifying parts of libcheese to support clutter for video output  In last week&#8217;s report, I mentioned that I didn&#8217;t quite like my pace of work." />
+<meta property="og:description" content="Second week of the (rather hot and sweaty) Summer of Code is over! And during this week….
+ Replicated most of the UI of Cheese Learnt how to make C and Vala code co-exist (Thanks folks at #vala!) Made the thumbnail widget work, in both modes/orientations Implemented fullscreen mode, with autohiding of the action buttons Started modifying parts of libcheese to support clutter for video output  In last week’s report, I mentioned that I didn’t quite like my pace of work." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://words.yuvi.in/cheese-gsoc-report-week-2/" /><meta property="article:published_time" content="2010-06-06T04:20:42&#43;00:00"/>
-<meta property="article:modified_time" content="2010-06-06T04:20:42&#43;00:00"/>
+<meta property="og:url" content="http://words.yuvi.in/cheese-gsoc-report-week-2/" />
+<meta property="article:published_time" content="2010-06-06T04:20:42+00:00" />
+<meta property="article:modified_time" content="2010-06-06T04:20:42+00:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Cheese GSoC Report – Week 2"/>
-<meta name="twitter:description" content="Second week of the (rather hot and sweaty) Summer of Code is over! And during this week&#8230;.
- Replicated most of the UI of Cheese Learnt how to make C and Vala code co-exist (Thanks folks at #vala!) Made the thumbnail widget work, in both modes/orientations Implemented fullscreen mode, with autohiding of the action buttons Started modifying parts of libcheese to support clutter for video output  In last week&#8217;s report, I mentioned that I didn&#8217;t quite like my pace of work."/>
-<meta name="generator" content="Hugo 0.47.1" />
+<meta name="twitter:description" content="Second week of the (rather hot and sweaty) Summer of Code is over! And during this week….
+ Replicated most of the UI of Cheese Learnt how to make C and Vala code co-exist (Thanks folks at #vala!) Made the thumbnail widget work, in both modes/orientations Implemented fullscreen mode, with autohiding of the action buttons Started modifying parts of libcheese to support clutter for video output  In last week’s report, I mentioned that I didn’t quite like my pace of work."/>
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -24,10 +26,10 @@
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "Cheese GSoC Report – Week 2",
-  "url": "http://words.yuvi.in/cheese-gsoc-report-week-2/",
+  "url": "http:\/\/words.yuvi.in\/cheese-gsoc-report-week-2\/",
   "wordCount": "261",
-  "datePublished": "2010-06-06T04:20:42&#43;00:00",
-  "dateModified": "2010-06-06T04:20:42&#43;00:00",
+  "datePublished": "2010-06-06T04:20:42\x2b00:00",
+  "dateModified": "2010-06-06T04:20:42\x2b00:00",
   "author": {
     "@type": "Person",
     "name": "yuvipanda"
@@ -87,8 +89,7 @@
 
 </p>
   </header>
-  <p>Second week of the (rather hot and sweaty) Summer of Code is over! And during this week&#8230;.</p>
-
+  <p>Second week of the (rather hot and sweaty) Summer of Code is over! And during this week….</p>
 <ol>
 <li>Replicated most of the UI of Cheese</li>
 <li>Learnt how to make C and Vala code co-exist (Thanks folks at #vala!)</li>
@@ -96,31 +97,23 @@
 <li>Implemented fullscreen mode, with autohiding of the action buttons</li>
 <li>Started modifying parts of libcheese to support clutter for video output</li>
 </ol>
-
-<p>In <a href="http://yuvi.in/blog/cheese-gsoc-report-week-1.html">last week&#8217;s report</a>, I mentioned that I didn&#8217;t quite like my pace of work. I <em>still</em> don&#8217;t like it &#8211; <a href="http://projecthamster.wordpress.com/">Hamster</a> reports I&#8217;ve spent 15.2 hours since Monday on Cheese, which is just about 3 hours a day! Totally unacceptable, and I&#8217;d like to increase that number considerably.</p>
-
-<p>Last week&#8217;s predictions were for libcheese integration, UI replication and Thumbnail view implementation. I&#8217;ve finished the last two, and have made a start on the first. Needs improvement.</p>
-
-<p>By next week, I hope to have accomplished&#8230;</p>
-
+<p>In <a href="http://yuvi.in/blog/cheese-gsoc-report-week-1.html">last week’s report</a>, I mentioned that I didn’t quite like my pace of work. I <em>still</em> don’t like it – <a href="http://projecthamster.wordpress.com/">Hamster</a> reports I’ve spent 15.2 hours since Monday on Cheese, which is just about 3 hours a day! Totally unacceptable, and I’d like to increase that number considerably.</p>
+<p>Last week’s predictions were for libcheese integration, UI replication and Thumbnail view implementation. I’ve finished the last two, and have made a start on the first. Needs improvement.</p>
+<p>By next week, I hope to have accomplished…</p>
 <ol>
 <li>Working video preview showing up!</li>
 <li>Photo taking works</li>
 <li>Video taking works</li>
 <li>Burst mode works</li>
 </ol>
-
 <p>Basically, it would be usable. In a basic way.</p>
-
 <p>And what did I learn this week?</p>
-
 <ol>
-<li>Don&#8217;t try to be too clever. Clear Code &gt; Lesser LoC.</li>
+<li>Don’t try to be too clever. Clear Code &gt; Lesser LoC.</li>
 <li>Ask first. Verify assumptions.</li>
 <li>Just because something can be rewritten, does not mean it should be :)</li>
 </ol>
-
-<p>On an unrelated note, my sleep cycle is totally messed up &#8211; I&#8217;ve been sleeping at 6 AM and waking up at 2 PM. Sunlight feels weird to me. I haven&#8217;t been able to do my biweekly bicycle rides :( I should also try to fix that before the end of next week.</p>
+<p>On an unrelated note, my sleep cycle is totally messed up – I’ve been sleeping at 6 AM and waking up at 2 PM. Sunlight feels weird to me. I haven’t been able to do my biweekly bicycle rides :( I should also try to fix that before the end of next week.</p>
 
 
   
@@ -162,7 +155,6 @@
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -170,7 +162,6 @@
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -188,6 +179,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -195,8 +188,6 @@
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>

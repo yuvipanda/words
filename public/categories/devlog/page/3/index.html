@@ -5,15 +5,16 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="Devlog" />
+<meta property="og:title" content="devlog" />
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/categories/devlog/" />
-<meta property="og:updated_time" content="2014-08-20T11:11:22&#43;00:00"/>
+<meta property="og:updated_time" content="2018-12-26T10:23:40-08:00" />
+
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Devlog"/>
+<meta name="twitter:title" content="devlog"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
-<meta name="generator" content="Hugo 0.47.1" />
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -22,14 +23,14 @@
   "@context": "http://schema.org",
   "@type": "Blog",
   "headline": "Yuvi Panda",
-  "url" : "http://words.yuvi.in/categories/devlog/",
+  "url" : "http:\/\/words.yuvi.in\/categories\/devlog\/",
   "author": {
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2014-08-20T11:11:22&#43;00:00",
+  "dateModified": "2018-12-26T10:23:40-08:00",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
-  "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
+  "description": "[JupyterHub](https:\/\/github.com\/jupyterhub\/jupyterhub) | [MyBinder](https:\/\/mybinder.org) | [Kubernetes](https:\/\/k8s.io) | Open Culture"
 }
 </script>
 
@@ -92,13 +93,12 @@
 </p>
   </header>
   <p>Here we go again.</p>
-
 <ul>
 <li>Wrote <a href="http://yuvi.in/blog/simple-python-packaging-debian-ubuntu/">a small blog post</a> talking about how to package python packages as debian packages.</li>
 <li>More work on getting <a href="https://graphite.readthedocs.org/en/latest/">Graphite</a> setup for Wikimedia Labs. Everything is up and running now (after a number of embarrassing typos). Need to figure out NAT rules to let labs machines talk to <code>labmon1001</code>, and then it can start receiving data!!!1</li>
-<li>Got access to Wikimedia&#8217;s <a href="http://hadoop.apache.org/">Hadoop</a> cluster, and ran my first <a href="https://hive.apache.org/">HIVE</a> query ever! This is exciting :)</li>
-<li>Made packages for <a href="https://github.com/appliedsec/pygeoip">pygeoip</a> and <a href="https://github.com/tobie/ua-parser">ua-parser</a>. Having to make both trusty and precise packages was fun. I ended up building them on separate machines, but am sure there&#8217;s a simpler way.</li>
-<li>Started doing some SQL about editors from different countries. Did you know that there are 2x as many edits to english wikipedia from India as from Germany? And that Wikidata has had 10x as many edits from Toollabs as from Germany (the largest contributing country)? I didn&#8217;t either! This is fun.</li>
+<li>Got access to Wikimedia’s <a href="http://hadoop.apache.org/">Hadoop</a> cluster, and ran my first <a href="https://hive.apache.org/">HIVE</a> query ever! This is exciting :)</li>
+<li>Made packages for <a href="https://github.com/appliedsec/pygeoip">pygeoip</a> and <a href="https://github.com/tobie/ua-parser">ua-parser</a>. Having to make both trusty and precise packages was fun. I ended up building them on separate machines, but am sure there’s a simpler way.</li>
+<li>Started doing some SQL about editors from different countries. Did you know that there are 2x as many edits to english wikipedia from India as from Germany? And that Wikidata has had 10x as many edits from Toollabs as from Germany (the largest contributing country)? I didn’t either! This is fun.</li>
 </ul>
 
 </article> 
@@ -117,11 +117,10 @@
 
 </p>
   </header>
-  <p>I&#8217;ve started the habit of opening up a devlog post each morning and just filling it up as I go along. Let&#8217;s hope I can keep this up :)</p>
-
+  <p>I’ve started the habit of opening up a devlog post each morning and just filling it up as I go along. Let’s hope I can keep this up :)</p>
 <ul>
-<li>Merged a couple of Android patches. The app is getting better every day without too much involvement from me, and yay for that :) I&#8217;ve gotten closure over the Android app &#8211; it was fucking terrible, and now it is quite awesome. Need to write another post about that.</li>
-<li>Fixed annoying bug with mysql connections being reset in Quarry&#8217;s query runners after a few hours. I had fixed this earlier when I was using <code>pymysql</code> directly with reconnect(ping=True), and assumed that switching to <a href="http://www.sqlalchemy.org/">SQLAlchemy</a> would&#8217;ve fixed it for me automagically. <a href="http://docs.sqlalchemy.org/en/latest/faq.html#mysql-server-has-gone-away">Apparently not</a>. MySQL Y U SO BAD?</li>
+<li>Merged a couple of Android patches. The app is getting better every day without too much involvement from me, and yay for that :) I’ve gotten closure over the Android app – it was fucking terrible, and now it is quite awesome. Need to write another post about that.</li>
+<li>Fixed annoying bug with mysql connections being reset in Quarry’s query runners after a few hours. I had fixed this earlier when I was using <code>pymysql</code> directly with reconnect(ping=True), and assumed that switching to <a href="http://www.sqlalchemy.org/">SQLAlchemy</a> would’ve fixed it for me automagically. <a href="http://docs.sqlalchemy.org/en/latest/faq.html#mysql-server-has-gone-away">Apparently not</a>. MySQL Y U SO BAD?</li>
 <li>I have <code>sudo</code> access on <code>labmon1001</code> in prod! First Wikimedia production cluster machine I have root on, and will spend time over the next few weeks setting it up to run graphite. Should be fun!</li>
 <li>Getting slightly better at packaging python things. Packaged <a href="https://github.com/sidnei/txstatsd">python-txstatsd</a> with no lintian errors, and only a couple warnings :)</li>
 </ul>
@@ -142,16 +141,14 @@
 
 </p>
   </header>
-  <p>Devlogs again! Let&#8217;s see how long I can keep this one up.</p>
-
-<p>Been a whirlwind few months. I&#8217;m moving to the Wikimedia Ops team soon! The Wikipedia app has been released! Lots of excitement around, should do a bigger post sometime with details. This should just follow usual devlog format of stuff for the day</p>
-
+  <p>Devlogs again! Let’s see how long I can keep this one up.</p>
+<p>Been a whirlwind few months. I’m moving to the Wikimedia Ops team soon! The Wikipedia app has been released! Lots of excitement around, should do a bigger post sometime with details. This should just follow usual devlog format of stuff for the day</p>
 <ul>
-<li>Completed deployment of changing the results backend of <a href="https://quarry.wmflabs.org">Quarry</a> to SQLite. That was a fun exercise, and I should write about that separately. Still have some unicode issues left (mostly from the MySQL side) that I&#8217;ve hacked around for now.</li>
-<li>Quarry now uses a cron based query killer instead of relying on Celery. The day before I had force killed the celery deamons and this meant the query kill tasks didn&#8217;t run, leaving zombie queries behind. The simpler cron based killer won&#8217;t have this issue, since it&#8217;s super simple and does only one thing. The only reason I didn&#8217;t do this before was that I had not known about <code>SHOW PROCESSLIST</code> before (yes, I suck). It seems to be working fine now, but doesn&#8217;t kill superseeded queries immediately. Should be interesting to figure out how to get that done properly.</li>
-<li>I&#8217;ve started trying out <a href="https://atom.io">Atom</a> again. My previous attempt ended quickly when I ran into a bug which didn&#8217;t wrap text at all. A restart seems to have fixed that. The Vim keybindings are &#8216;ok&#8217; &#8211; there&#8217;s no <code>hlsearch</code>, which is painful, but I can live with it. I prefer the fuzzy finder in it to Ctrl-P in Vim.</li>
-<li>Started working on making labs monitoring with graphite possible again. Our graphite / txstatsd roles weren&#8217;t meant to be run on trusty, so working on porting things to make sure they work fine on both. I&#8217;ve immensely come to appreciate ops over the last year or so, and am quite enjoying my work in that area :) I&#8217;ll probably be doing more of these over the next week, since Quarry has reached a nice state now and I await more usage before I spend more time on it.</li>
-<li>Also did some code review on the Android app. It&#8217;s been chugging along quite happily these days :)</li>
+<li>Completed deployment of changing the results backend of <a href="https://quarry.wmflabs.org">Quarry</a> to SQLite. That was a fun exercise, and I should write about that separately. Still have some unicode issues left (mostly from the MySQL side) that I’ve hacked around for now.</li>
+<li>Quarry now uses a cron based query killer instead of relying on Celery. The day before I had force killed the celery deamons and this meant the query kill tasks didn’t run, leaving zombie queries behind. The simpler cron based killer won’t have this issue, since it’s super simple and does only one thing. The only reason I didn’t do this before was that I had not known about <code>SHOW PROCESSLIST</code> before (yes, I suck). It seems to be working fine now, but doesn’t kill superseeded queries immediately. Should be interesting to figure out how to get that done properly.</li>
+<li>I’ve started trying out <a href="https://atom.io">Atom</a> again. My previous attempt ended quickly when I ran into a bug which didn’t wrap text at all. A restart seems to have fixed that. The Vim keybindings are ‘ok’ – there’s no <code>hlsearch</code>, which is painful, but I can live with it. I prefer the fuzzy finder in it to Ctrl-P in Vim.</li>
+<li>Started working on making labs monitoring with graphite possible again. Our graphite / txstatsd roles weren’t meant to be run on trusty, so working on porting things to make sure they work fine on both. I’ve immensely come to appreciate ops over the last year or so, and am quite enjoying my work in that area :) I’ll probably be doing more of these over the next week, since Quarry has reached a nice state now and I await more usage before I spend more time on it.</li>
+<li>Also did some code review on the Android app. It’s been chugging along quite happily these days :)</li>
 <li>Ran into a awake-when-he-should-not-have been <a href="http://blog.ironholds.org/">Oliver Keyes</a> and we have conspired to start some <a href="https://etherpad.wikimedia.org/p/flagellating-funnel">researchy</a> <a href="https://github.com/Ironholds/WPDMZ">things</a>. I cleaned up some of the python code, and am writing out things to do. This should be fun!</li>
 </ul>
 
@@ -171,19 +168,13 @@
 
 </p>
   </header>
-  <p>I&#8217;ve given up on trying to make DevLogs really comprehensive and complete, and just try to make them &#8211; even if they are incomplete. Perhaps this will help me actually write more devlogs, and thus make it more comprehensive&#8230;</p>
-
-<p>I started on the <a href="https://www.coursera.org/course/progfun">Functional Programming in Scala</a> course today. I wanted to do it the last time, but did not find the time. This time will be different &#8211; I&#8217;m in a different spot mentally, and a big drain on my emotional / time resources (&#8220;college&#8221;) is no longer a factor. I&#8217;ve already gone through the first week&#8217;s lectures (most seem straight ports from <a href="https://mitpress.mit.edu/sicp/">SICP</a>), and am <sup>2</sup>&frasl;<sub>3</sub> of my way through the assignments for the first week. Though I&#8217;m normally not fond of the typical types of exercises (&#8220;How many ways can you make change for this scenario?&#8221;), doing them functionally seems to be enough of a twist to keep me interested. The regular languages I seem to work with these days (Java, PHP, Puppet, Python and a bit of JS) aren&#8217;t exactly well tuned to the functional style of programming (except JS, but I don&#8217;t really do that much JS these days) &#8211; so going through this course and hopefully building something in Scala can exercise my &#8216;OMG HOLY SHIT THIS NEW THING IS AWESOME!!1&#8217; muscles.</p>
-
-<p>The course recommends using Scala IDE. Which is Eclipse based. Despite my deep distaste for Eclipse, I&#8217;ve given it a shot and it seems fairly stable and much less shitty than the Eclipse I&#8217;m used to! Let&#8217;s see how that goes.</p>
-
-<p>The way I learn the best seems to be to find a project I want to build, and then build it in a new language. I&#8217;m looking around for fun projects that I could build with Scala, and I&#8217;m pretty sure I&#8217;ll find one at some point. I should also try to diversify the communities I contribute to, so perhaps I should look for a non-Wikimedia project where I can contribute to in Scala. Should be fun :D</p>
-
-<p>Other than that &#8211; I&#8217;ve been <a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=54465">investigating performance problems</a> with the Campaigns API &#8211; turns out Mediawiki&#8217;s Parser is really, really slow. Who would&#8217;ve thought, eh? ;). The &#8216;solution&#8217;, of course &#8211; is to just add more caching. Which is a sortof biggish, hairy-ish problem because of the number of changes that can cause cache invalidation. The way Mediawiki handles caching is&#8230; rather complex &#8211; but that is more due to how much functionality exists rather than anything else. Needs a proper &#8216;clean&#8217; solution that is not just &#8220;Let&#8217;s cache everything for 5 minutes!!!1&#8221;. Should be fun to write up and fix!</p>
-
-<p>I&#8217;ve also been spending time integrating <a href="https://www.mediawiki.org/wiki/MediaWiki-Vagrant">Mediawiki-Vagrant</a> with <a href="https://wikitech.wikimedia.org">Wikimedia Labs</a>. This will make it easy for anyone to setup a base mediawiki installation on Labs, and save time dicking around various mundane deployment-of-test-instance issues (did I turn on caching? How do I get this extension on? etc). This is interesting because it merges two different puppet repos &#8211; operations/puppet.git and mediawiki/vagrant.git on one machine and provides different ways of managing them. Since this is also using puppet as a sort of &#8216;deployment&#8217; tool (rather than just a configuration-of-systems tool), that is an interesting / fun aspect too. Should be able to get the <a href="https://gerrit.wikimedia.org/r/#/c/85814/">patch</a> merged in a few weeks.</p>
-
-<p>I visited San Francisco for the last 2 weeks. I don&#8217;t really feel insecure anymore :)</p>
+  <p>I’ve given up on trying to make DevLogs really comprehensive and complete, and just try to make them – even if they are incomplete. Perhaps this will help me actually write more devlogs, and thus make it more comprehensive…</p>
+<p>I started on the <a href="https://www.coursera.org/course/progfun">Functional Programming in Scala</a> course today. I wanted to do it the last time, but did not find the time. This time will be different – I’m in a different spot mentally, and a big drain on my emotional / time resources (“college”) is no longer a factor. I’ve already gone through the first week’s lectures (most seem straight ports from <a href="https://mitpress.mit.edu/sicp/">SICP</a>), and am 2/3 of my way through the assignments for the first week. Though I’m normally not fond of the typical types of exercises (“How many ways can you make change for this scenario?”), doing them functionally seems to be enough of a twist to keep me interested. The regular languages I seem to work with these days (Java, PHP, Puppet, Python and a bit of JS) aren’t exactly well tuned to the functional style of programming (except JS, but I don’t really do that much JS these days) – so going through this course and hopefully building something in Scala can exercise my ‘OMG HOLY SHIT THIS NEW THING IS AWESOME!!1’ muscles.</p>
+<p>The course recommends using Scala IDE. Which is Eclipse based. Despite my deep distaste for Eclipse, I’ve given it a shot and it seems fairly stable and much less shitty than the Eclipse I’m used to! Let’s see how that goes.</p>
+<p>The way I learn the best seems to be to find a project I want to build, and then build it in a new language. I’m looking around for fun projects that I could build with Scala, and I’m pretty sure I’ll find one at some point. I should also try to diversify the communities I contribute to, so perhaps I should look for a non-Wikimedia project where I can contribute to in Scala. Should be fun :D</p>
+<p>Other than that – I’ve been <a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=54465">investigating performance problems</a> with the Campaigns API – turns out Mediawiki’s Parser is really, really slow. Who would’ve thought, eh? ;). The ‘solution’, of course – is to just add more caching. Which is a sortof biggish, hairy-ish problem because of the number of changes that can cause cache invalidation. The way Mediawiki handles caching is… rather complex – but that is more due to how much functionality exists rather than anything else. Needs a proper ‘clean’ solution that is not just “Let’s cache everything for 5 minutes!!!1”. Should be fun to write up and fix!</p>
+<p>I’ve also been spending time integrating <a href="https://www.mediawiki.org/wiki/MediaWiki-Vagrant">Mediawiki-Vagrant</a> with <a href="https://wikitech.wikimedia.org">Wikimedia Labs</a>. This will make it easy for anyone to setup a base mediawiki installation on Labs, and save time dicking around various mundane deployment-of-test-instance issues (did I turn on caching? How do I get this extension on? etc). This is interesting because it merges two different puppet repos – operations/puppet.git and mediawiki/vagrant.git on one machine and provides different ways of managing them. Since this is also using puppet as a sort of ‘deployment’ tool (rather than just a configuration-of-systems tool), that is an interesting / fun aspect too. Should be able to get the <a href="https://gerrit.wikimedia.org/r/#/c/85814/">patch</a> merged in a few weeks.</p>
+<p>I visited San Francisco for the last 2 weeks. I don’t really feel insecure anymore :)</p>
 
 </article> 
 
@@ -201,7 +192,7 @@
 
 </p>
   </header>
-  <p>Nothing new started. The UploadCampaigns <a href="https://gerrit.wikimedia.org/r/#/c/80782/">API patch</a> I <a href="http://yuvi.in/blog/devlog-for-sun-aug-25-2013/">talked about</a> yesterday was fixed and merged. I also helped merge some of <a href="http://marktraceur.info/">MarkTraceur&rsquo;s</a> JS cleanup patches to UploadWizard. And <a href="https://brionv.com/log/">Brion</a>&rsquo;s big <a href="https://gerrit.wikimedia.org/r/#/c/81139/">detail view patch</a> for Android Commons app. Also another cleanup/api <a href="https://gerrit.wikimedia.org/r/#/c/81162/">feature patch</a> to UploadWizard.</p>
+  <p>Nothing new started. The UploadCampaigns <a href="https://gerrit.wikimedia.org/r/#/c/80782/">API patch</a> I <a href="http://yuvi.in/blog/devlog-for-sun-aug-25-2013/">talked about</a> yesterday was fixed and merged. I also helped merge some of <a href="http://marktraceur.info/">MarkTraceur&rsquo;s</a> JS cleanup patches to UploadWizard. And <a href="https://brionv.com/log/">Brion</a>&lsquo;s big <a href="https://gerrit.wikimedia.org/r/#/c/81139/">detail view patch</a> for Android Commons app. Also another cleanup/api <a href="https://gerrit.wikimedia.org/r/#/c/81162/">feature patch</a> to UploadWizard.</p>
 
 </article> 
 
@@ -219,26 +210,15 @@
 
 </p>
   </header>
-  
-
-<p>DevLogs have been something I&rsquo;ve not been writing much of of late. Time to fix that!</p>
-
+  <p>DevLogs have been something I&rsquo;ve not been writing much of of late. Time to fix that!</p>
 <h2 id="wlm-android-app">WLM Android App</h2>
-
-<p>Spent some time <a href="http://lists.wikimedia.org/pipermail/wikilovesmonuments/2013-August/006249.html">reviving the WLM Android App</a>. Wasn&rsquo;t too hard, and am surprised at how well it still runs :) Some work still needed to update the <a href="https://github.com/wikimedia/WLMMobile/commit/113d9abf7b675b147ece3f2be005ef1b6ba0e4cf#assets/www/js/campaigns-data.js">templates</a> and other metadata to refer to WLM2013 rather than WLM2012 &#8211; but that should not be too hard. The fact that it is an issue at all is simply because I ripped out all the Campaign related APIs a few weeks ago with my UploadCampaign rewrite.</p>
-
-<p><a href="https://commons.wikimedia.org/wiki/User:Multichill">multichill</a> was awesome in moving the <a href="https://tools.wmflabs.org/heritage/api/api.php">Monuments API</a> to <a href="https://tools.wmflabs.org">Tool Labs</a> &#8211; hence making it much faster! Initially we thought that the Toollabs DB was too slow for writes &#8211; but this turned out to be a mistake, since apparently the Replica Databases had slow writes, but <code>tools-db</code> itself was fine. There&rsquo;s <a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=48851">a bug</a> tracking this now. Toollabs version of the API still seems much faster to me than Toolserver&rsquo;s :)</p>
-
+<p>Spent some time <a href="http://lists.wikimedia.org/pipermail/wikilovesmonuments/2013-August/006249.html">reviving the WLM Android App</a>. Wasn&rsquo;t too hard, and am surprised at how well it still runs :) Some work still needed to update the <a href="https://github.com/wikimedia/WLMMobile/commit/113d9abf7b675b147ece3f2be005ef1b6ba0e4cf#assets/www/js/campaigns-data.js">templates</a> and other metadata to refer to WLM2013 rather than WLM2012 – but that should not be too hard. The fact that it is an issue at all is simply because I ripped out all the Campaign related APIs a few weeks ago with my UploadCampaign rewrite.</p>
+<p><a href="https://commons.wikimedia.org/wiki/User:Multichill">multichill</a> was awesome in moving the <a href="https://tools.wmflabs.org/heritage/api/api.php">Monuments API</a> to <a href="https://tools.wmflabs.org">Tool Labs</a> – hence making it much faster! Initially we thought that the Toollabs DB was too slow for writes – but this turned out to be a mistake, since apparently the Replica Databases had slow writes, but <code>tools-db</code> itself was fine. There&rsquo;s <a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=48851">a bug</a> tracking this now. Toollabs version of the API still seems much faster to me than Toolserver&rsquo;s :)</p>
 <h2 id="uploadcampaigns-api">UploadCampaigns API</h2>
-
-<p>Mediawiki sucks. Eeeew! Specifically, writing API modules &#8211; why can&rsquo;t we just be happy and have everything be JSON? Sigh!</p>
-
-<p>I&rsquo;m adding <a href="https://gerrit.wikimedia.org/r/#/c/80782/">a patch</a> that allows <a href="https://www.mediawiki.org/wiki/Extension:UploadWizard/Campaigns">UploadCampaigns</a> to be queried selectively, rather than just via the normal page APIs. Right now, this only lets us filter by <code>enabled</code> status &#8211; but in the future, this should be able to also filter on a vast array of other properties. Properties about Geographic location come to mind as the most useful. That patch still has a good way to go before it can be merged (continue support being the foremost one), but it is getting there :)</p>
-
-<p>The ickiest part of the patch is perhaps that it sends out raw JSON data as a&#8230; string. So no matter which format you are using on your client, you <em>need</em> to use a JSON parser to deal with the Campaigns data. This sortof makes sense, since that is how the data is stored anyway. Doesn&rsquo;t make it any less icky, though!</p>
-
+<p>Mediawiki sucks. Eeeew! Specifically, writing API modules – why can&rsquo;t we just be happy and have everything be JSON? Sigh!</p>
+<p>I&rsquo;m adding <a href="https://gerrit.wikimedia.org/r/#/c/80782/">a patch</a> that allows <a href="https://www.mediawiki.org/wiki/Extension:UploadWizard/Campaigns">UploadCampaigns</a> to be queried selectively, rather than just via the normal page APIs. Right now, this only lets us filter by <code>enabled</code> status – but in the future, this should be able to also filter on a vast array of other properties. Properties about Geographic location come to mind as the most useful. That patch still has a good way to go before it can be merged (continue support being the foremost one), but it is getting there :)</p>
+<p>The ickiest part of the patch is perhaps that it sends out raw JSON data as a… string. So no matter which format you are using on your client, you <em>need</em> to use a JSON parser to deal with the Campaigns data. This sortof makes sense, since that is how the data is stored anyway. Doesn&rsquo;t make it any less icky, though!</p>
 <p>Not bad for a lazy Sunday, eh?</p>
-
 <p><strong>Update</strong>: After not being able to sleep, I also submitted <a href="https://gerrit.wikimedia.org/r/#/c/80946/">a patch</a> to make phpcs pass for UploadWizard, and also fought with the UploadCampaigns API patch to have it (brokenly?) support continuing. Yay?</p>
 
 </article> 
@@ -258,8 +238,7 @@
 </p>
   </header>
   <p>My <a href="https://mediawiki.org/wiki/User:Yuvipanda/Campaigns_namespace_proposal">UploadWizard work</a> has just been deployed to <a href="https://commons.wikimedia.org">Wikimedia Commons</a> and my name is listed in the on site <a href="https://commons.wikimedia.org/wiki/Special:Version">credits</a>. Special thanks to <a href="http://marktraceur.info/">Mark Traceur</a> for code review!</p>
-
-<p>This feels very, <em>very</em> nice :) Now to sneak more code into other extensions&#8230;</p>
+<p>This feels very, <em>very</em> nice :) Now to sneak more code into other extensions…</p>
 
 </article> 
 
@@ -277,45 +256,26 @@
 
 </p>
   </header>
-  
-
-<p>When running <a href="http://redis.io/">Redis</a> in a shared cluster/hosting environment (such as <a href="https://wikitech.wikimedia.org/wiki/Nova_Resource:Tools/Help">Wikimedia Tool Labs</a>, on which I&rsquo;ve been having fun doing a lot of work on), you would want to try to provide at least <em>some</em> guarantee of isolation for your keys from everyone else&rsquo;s keys. Since Redis doesn&rsquo;t do ACLs, this is problematic.</p>
-
+  <p>When running <a href="http://redis.io/">Redis</a> in a shared cluster/hosting environment (such as <a href="https://wikitech.wikimedia.org/wiki/Nova_Resource:Tools/Help">Wikimedia Tool Labs</a>, on which I&rsquo;ve been having fun doing a lot of work on), you would want to try to provide at least <em>some</em> guarantee of isolation for your keys from everyone else&rsquo;s keys. Since Redis doesn&rsquo;t do ACLs, this is problematic.</p>
 <p>This can be solved in a couple of ways</p>
-
 <h2 id="run-a-redis-instance-for-each-user">Run a Redis instance for each user</h2>
-
-<p>This is simple enough to do &#8211; each user runs their own Redis instance, and has full access to it. Security is handled by setting a secret password, and running <code>redis-server</code> as the user in question. Boom, secure!</p>
-
-<p>This doesn&rsquo;t really scale with a large number of users, because they each have lesser memory to work with now. Also having users who just want to run their tools have to deal with making sure their Redis instance is up and running fine isn&rsquo;t really good. Having the sysadmins be responsible for users&rsquo; Redis instance is&#8230; not going to work :) This would also require all the redis instances to run on one box and/or have a separate cluster just for them, which isn&rsquo;t good either.</p>
-
+<p>This is simple enough to do – each user runs their own Redis instance, and has full access to it. Security is handled by setting a secret password, and running <code>redis-server</code> as the user in question. Boom, secure!</p>
+<p>This doesn&rsquo;t really scale with a large number of users, because they each have lesser memory to work with now. Also having users who just want to run their tools have to deal with making sure their Redis instance is up and running fine isn&rsquo;t really good. Having the sysadmins be responsible for users&rsquo; Redis instance is… not going to work :) This would also require all the redis instances to run on one box and/or have a separate cluster just for them, which isn&rsquo;t good either.</p>
 <h2 id="add-acl-support-to-redis">Add ACL support to Redis</h2>
-
 <p>Not happening, because I&rsquo;m not good enough to do that yet :P But more realistically, it won&rsquo;t ever happen, since this will probably add a lot of overhead for what is arguably an edge case.</p>
-
 <h2 id="build-a-small-server-that-sits-in-front-of-redis">Build a small server that sits in front of Redis</h2>
-
-<p>Such a server would simply authenticate incoming requests via some mechanism (<a href="http://keystone.openstack.org/">Keystone</a> perhaps), and then enforce ACLs. It will have to speak the exact same protocol as Redis, since users should be able to use any library that connects to Redis. This isn&rsquo;t too hard &#8211; just replace the <code>password</code> functionality of Redis protocol to take in both a username and password (or token, or some other method of auth).</p>
-
-<p>This also I discarded &#8211; it will still affect performance, which will now be limited by how fast <em>this</em> server runs, and that is definitely not faster than Redis. And it will also be hard to maintain, since I&rsquo;ll have to completely mimic Redis&rsquo; protocol and make sure it is kept up to date. Debugging protocol issues with random client libraries is not my idea of fun. Another <strong>major</strong> disadvantage is that <strong>I</strong> would now be writing auth code, and I don&rsquo;t think handrolling auth code is a good idea, ever.</p>
-
+<p>Such a server would simply authenticate incoming requests via some mechanism (<a href="http://keystone.openstack.org/">Keystone</a> perhaps), and then enforce ACLs. It will have to speak the exact same protocol as Redis, since users should be able to use any library that connects to Redis. This isn&rsquo;t too hard – just replace the <code>password</code> functionality of Redis protocol to take in both a username and password (or token, or some other method of auth).</p>
+<p>This also I discarded – it will still affect performance, which will now be limited by how fast <em>this</em> server runs, and that is definitely not faster than Redis. And it will also be hard to maintain, since I&rsquo;ll have to completely mimic Redis&rsquo; protocol and make sure it is kept up to date. Debugging protocol issues with random client libraries is not my idea of fun. Another <strong>major</strong> disadvantage is that <strong>I</strong> would now be writing auth code, and I don&rsquo;t think handrolling auth code is a good idea, ever.</p>
 <h2 id="security-by-obscurity">Security By Obscurity!</h2>
-
-<p>This is what we finally settled on :D It sounds horrible by the title, but I think it is Good Enough<sup>TM</sup>.</p>
-
+<p>This is what we finally settled on :D It sounds horrible by the title, but I think it is Good Enough<!-- raw HTML omitted -->TM<!-- raw HTML omitted -->.</p>
 <p>Since Redis is a key value store at heart, you can do anything once you know the key. So, if an &lsquo;attacker&rsquo; doesn&rsquo;t know the key, there isn&rsquo;t much they can do. So it can be considered SecureEnough for our purposes if we can make it so that other users can not find out or guess your keys.</p>
-
 <p>We essentially did so with the following:</p>
-
 <ol>
 <li>Disable all Redis commands that let users list all / many keys.</li>
 <li>Have users use a random and long key prefix for all their keys.</li>
 </ol>
-
 <p>(1) prevents someone from just listing all keys to find something interesting. (2) prevents people from brute-forcing or guessing keys. Since all code run on Tool Labs must be open source, guessing keys is super easy. By having a &lsquo;secret&rsquo; prefix, having the actual keys is useless. This also prevents accidental key overwrites from different tools using a common key name.</p>
-
 <p>Disabling commands is easy to do by using Redis&rsquo; <code>RENAME COMMAND</code> config feature. I added support for <code>RENAME COMMAND</code> to Wikimedia&rsquo;s <a href="https://github.com/wikimedia/operations-puppet/tree/production/modules/redis">Redis puppet module</a>, and then it was simple enough to <a href="https://github.com/wikimedia/operations-puppet/blob/production/modules/toollabs/manifests/redis.pp">configure</a> a specific instance to disable &lsquo;list keys&rsquo; type commands. That&rsquo;s the following commands:</p>
-
 <ol>
 <li><code>CONFIG</code></li>
 <li><code>FLUSHALL</code></li>
@@ -327,22 +287,14 @@
 <li><code>RANDOMKEY</code></li>
 <li><code>DEBUG</code>.</li>
 </ol>
-
 <p>After going through the list of Redis commands, I am guessing this is going to be GoodEnough to prevent key listing. (Note: if there&rsquo;s more that I&rsquo;m missing, please, <em>please</em> let me know).</p>
-
 <p>We also tell people to use a secure prefix that&rsquo;s at least 64bytes long, saved in a file that is only user readable. Generating that is as simple as:</p>
-
 <p>openssl rand -base64 64</p>
-
 <p>That should be long enough to be hard to brute force, even with Redis being as fast as it is.</p>
-
 <h3 id="problems">Problems</h3>
-
-<p>The major problem with this is, of course &#8211; the fact that humans are involved :) I&rsquo;ve heard &ldquo;I do not care about my keys, do not need security&rdquo; a fair amount of times already. The fact that the prefix generation is optional means that there will be people who do not use prefixes, and it will work for them for a (probably) long time &#8211; until it doesn&rsquo;t, and they have no idea why. This is personally acceptable to me, since they have been made aware of the risks beforehand.</p>
-
+<p>The major problem with this is, of course – the fact that humans are involved :) I&rsquo;ve heard &ldquo;I do not care about my keys, do not need security&rdquo; a fair amount of times already. The fact that the prefix generation is optional means that there will be people who do not use prefixes, and it will work for them for a (probably) long time – until it doesn&rsquo;t, and they have no idea why. This is personally acceptable to me, since they have been made aware of the risks beforehand.</p>
 <h2 id="fun">Fun</h2>
-
-<p>This has now been deployed on toollabs for a month or so, and I&rsquo;ve a couple of fun tools already written using it (and other people too). We had a patched memcached server we had that we&rsquo;ll kill in a few weeks, so people who used memcached before are also migrating to redis. And I was able to do all this without even having root! This is mostly thanks to the fact that we try to keep all our configuration in puppet (<a href="https://github.com/wikimedia/operations-puppet">Wikimedia&rsquo;s Puppet repository</a>) &#8211; for both our production cluster and for everything else. So I could re-use our production redis module, make changes to it, and build the new solution &#8211; all while being vetted by &lsquo;proper&rsquo; ops people (whom I dearly love and respect). Building infrastructure in such a collaborative manner is a lot of fun, and I think I&rsquo;m hooked. It&rsquo;s fun!</p>
+<p>This has now been deployed on toollabs for a month or so, and I&rsquo;ve a couple of fun tools already written using it (and other people too). We had a patched memcached server we had that we&rsquo;ll kill in a few weeks, so people who used memcached before are also migrating to redis. And I was able to do all this without even having root! This is mostly thanks to the fact that we try to keep all our configuration in puppet (<a href="https://github.com/wikimedia/operations-puppet">Wikimedia&rsquo;s Puppet repository</a>) – for both our production cluster and for everything else. So I could re-use our production redis module, make changes to it, and build the new solution – all while being vetted by &lsquo;proper&rsquo; ops people (whom I dearly love and respect). Building infrastructure in such a collaborative manner is a lot of fun, and I think I&rsquo;m hooked. It&rsquo;s fun!</p>
 
 </article> 
 
@@ -361,13 +313,12 @@
 </p>
   </header>
   <p>Back in Chennai</p>
-
 <ol>
-<li>Moving yuvi.in to my <a href="http://prgmr.com">prgmr</a> server. I want wordpress for my blog, but I don&#8217;t want to run MySQL. Solution? Keep blog where it is (with the awesome <a href="http://webfaction.com">webfaction</a> people!) and use <a href="http://nginx.org">nginx</a> to proxy requests to blog/. Seems to work, so yay!</li>
+<li>Moving yuvi.in to my <a href="http://prgmr.com">prgmr</a> server. I want wordpress for my blog, but I don’t want to run MySQL. Solution? Keep blog where it is (with the awesome <a href="http://webfaction.com">webfaction</a> people!) and use <a href="http://nginx.org">nginx</a> to proxy requests to blog/. Seems to work, so yay!</li>
 <li>Rewrote tawp.in to use python/flask/memcached. Available on github. Replaced older node.js version</li>
-<li>Reading through _The Art of Unix Programming_ on kindle. Amazing book so far.</li>
-<li>Fixed a few more bugs on Wikipedia App. I think I&#8217;ll keep &#8216;official&#8217; Wiki related stuff off this, unless it&#8217;s big?</li>
-<li>Partied along new year&#8217;s. Yay. Not particularly &#8216;dev&#8217;, but still :)</li>
+<li>Reading through <em>The Art of Unix Programming</em> on kindle. Amazing book so far.</li>
+<li>Fixed a few more bugs on Wikipedia App. I think I’ll keep ‘official’ Wiki related stuff off this, unless it’s big?</li>
+<li>Partied along new year’s. Yay. Not particularly ‘dev’, but still :)</li>
 </ol>
 
 </article> 
@@ -386,8 +337,7 @@
 
 </p>
   </header>
-  <p>Worked the day first from Domlur bus terminus, and then from Exotel&#8217;s office (with @vijaysw).</p>
-
+  <p>Worked the day first from Domlur bus terminus, and then from Exotel’s office (with @vijaysw).</p>
 <ul>
 <li>Incorporated search results (rather than just suggestions) into the Wikipedia app. Was a slight bitch to get right, but after that have made a bunch of variants that the others are testing out to see which one feels good (Suggestion if exists, else search, or search alone). Took up most of my time.</li>
 <li>We put out a dud as RC3 for the Wikipedia app. A missing defaults statement. Lesson learnt: Test the entire process (uninstall -&gt; install -&gt; run -&gt; test) before passing off RCs</li>
@@ -424,7 +374,6 @@
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -432,7 +381,6 @@
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -450,6 +398,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -457,8 +407,6 @@
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>

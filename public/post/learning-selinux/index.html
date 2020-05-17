@@ -7,15 +7,17 @@
 
 <meta property="og:title" content="learning selinux and apparmor" />
 <meta property="og:description" content="I am trying to understand SELinux and AppArmor, and collecting resources here as I learn. k
-SELinux for mere mortals (2014)  This was the first video I watched, and it helped me understanding what SELinux does at a fundamental basic level. It&rsquo;s probably useless in a container-filled world (where I doubt Fedora shipes pre-configured SELinux rules for my containers), but it helped me think I understood types / labels, so that seems like a positive step?" />
+SELinux for mere mortals (2014) This was the first video I watched, and it helped me understanding what SELinux does at a fundamental basic level. It&rsquo;s probably useless in a container-filled world (where I doubt Fedora shipes pre-configured SELinux rules for my containers), but it helped me think I understood types / labels, so that seems like a positive step?" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://words.yuvi.in/post/learning-selinux/" /><meta property="article:published_time" content="2017-04-18T00:01:26-07:00"/>
-<meta property="article:modified_time" content="2017-04-18T00:01:26-07:00"/>
+<meta property="og:url" content="http://words.yuvi.in/post/learning-selinux/" />
+<meta property="article:published_time" content="2017-04-18T00:01:26-07:00" />
+<meta property="article:modified_time" content="2017-04-18T00:01:26-07:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="learning selinux and apparmor"/>
 <meta name="twitter:description" content="I am trying to understand SELinux and AppArmor, and collecting resources here as I learn. k
-SELinux for mere mortals (2014)  This was the first video I watched, and it helped me understanding what SELinux does at a fundamental basic level. It&rsquo;s probably useless in a container-filled world (where I doubt Fedora shipes pre-configured SELinux rules for my containers), but it helped me think I understood types / labels, so that seems like a positive step?"/>
-<meta name="generator" content="Hugo 0.47.1" />
+SELinux for mere mortals (2014) This was the first video I watched, and it helped me understanding what SELinux does at a fundamental basic level. It&rsquo;s probably useless in a container-filled world (where I doubt Fedora shipes pre-configured SELinux rules for my containers), but it helped me think I understood types / labels, so that seems like a positive step?"/>
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -24,7 +26,7 @@ SELinux for mere mortals (2014)  This was the first video I watched, and it help
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "learning selinux and apparmor",
-  "url": "http://words.yuvi.in/post/learning-selinux/",
+  "url": "http:\/\/words.yuvi.in\/post\/learning-selinux\/",
   "wordCount": "362",
   "datePublished": "2017-04-18T00:01:26-07:00",
   "dateModified": "2017-04-18T00:01:26-07:00",
@@ -87,43 +89,25 @@ SELinux for mere mortals (2014)  This was the first video I watched, and it help
 
 </p>
   </header>
-  
-
-<p>I am trying to understand SELinux and AppArmor, and collecting resources here as I learn. k</p>
-
+  <p>I am trying to understand SELinux and AppArmor, and collecting resources here as I learn. k</p>
 <h2 id="selinux-for-mere-mortals-2014">SELinux for mere mortals (2014)</h2>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MxjenQ31b70" frameborder="0" allowfullscreen></iframe>
-
+<!-- raw HTML omitted -->
 <p>This was the first video I watched, and it helped me understanding what SELinux does at a fundamental basic level. It&rsquo;s probably useless in a container-filled world (where I doubt Fedora shipes pre-configured SELinux rules for my containers), but it helped me think I understood types / labels, so that seems like a positive step?</p>
-
 <p>The fact the presenter keeps saying things like &lsquo;you being a good sysadmin, ssh into the server and edit the apache config file&rsquo; is freakin me out. If I&rsquo;m constantly editing config files on servers manually that seems like a massive failure to me :D How times change!</p>
-
 <h2 id="docker-and-selinux-2014">Docker and SELinux (2014)</h2>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zWGFqMuEHdw" frameborder="0" allowfullscreen></iframe>
-
+<!-- raw HTML omitted -->
 <p>This one made a lot more sense to me as an answer to the following questions:</p>
-
 <ol>
 <li>Aren&rsquo;t containers secure enough? (Partial answer)</li>
 <li>What does SELinux do for container security?</li>
 </ol>
-
 <p>It&rsquo;s convinced me that container -&gt; host isolation and container &lt;-&gt; container isolation provided by SELinux is pretty simple and super useful, and should be turned on.</p>
-
 <p>This talk also showed me this most wonderful <a href="https://people.redhat.com/duffy/selinux/selinux-coloring-book_A4-Stapled.pdf">coloring book</a> that tries to explain SELinux. If this is all that is to SELinux, it seems pretty simple and useful (for the container use case).</p>
-
 <p>Also, it looks like there are more recent versions of both these two talks - I should look &lsquo;em up!</p>
-
 <h2 id="securing-linux-applications-with-apparmor-2007">Securing Linux Applications with AppArmor (2007?)</h2>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0l21FN81je0" frameborder="0" allowfullscreen></iframe>
-
+<!-- raw HTML omitted -->
 <p>This is me trying to understand AppArmor, which seems to have lower base of support (just Ubuntu? Maybe SUSE, but idk anyone who uses SUSE) but theoretically simpler (mostly file path based). The video seems to be shot with a potato, so the slides aren&rsquo;t super clear - but the content is good enough to give me a super general overview.</p>
-
 <p>The biggest thing against SELinux it talks about seems to be &lsquo;SELinux is complex&rsquo;, and not much else. I don&rsquo;t know how much I buy that - but then again, I haven&rsquo;t actually <em>used</em> SELinux anywhere :D</p>
-
 <p>Unlike SELinux, I can actually see AppArmor rules on my local machine (since it is running Ubuntu). Seems fairly readable!</p>
 
 
@@ -166,7 +150,6 @@ SELinux for mere mortals (2014)  This was the first video I watched, and it help
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -174,7 +157,6 @@ SELinux for mere mortals (2014)  This was the first video I watched, and it help
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -192,6 +174,8 @@ SELinux for mere mortals (2014)  This was the first video I watched, and it help
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -199,8 +183,6 @@ SELinux for mere mortals (2014)  This was the first video I watched, and it help
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>

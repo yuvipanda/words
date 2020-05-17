@@ -7,15 +7,17 @@
 
 <meta property="og:title" content="DevLog for Aug 24, 2014" />
 <meta property="og:description" content="Wooooo!
- Moved labsbooks (described in yesterday&#8217;s devlog) to use a shared readonly IPython virtualenv maintained by me. Also installed a bunch of modules people might want to use (SciPy, NumPy, Pandas, PyTables, matplotlib). Am considering just installing IPython notebook globally via puppet and using that, since that&#8217;ll enable users to just use the system packages. However, the version of IPython notebook from Ubuntu is ancient, so that&#8217;s probably a non-starter." />
+ Moved labsbooks (described in yesterday’s devlog) to use a shared readonly IPython virtualenv maintained by me. Also installed a bunch of modules people might want to use (SciPy, NumPy, Pandas, PyTables, matplotlib). Am considering just installing IPython notebook globally via puppet and using that, since that’ll enable users to just use the system packages. However, the version of IPython notebook from Ubuntu is ancient, so that’s probably a non-starter." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://words.yuvi.in/devlog-aug-24-2014/" /><meta property="article:published_time" content="2014-08-25T02:37:17&#43;00:00"/>
-<meta property="article:modified_time" content="2014-08-25T02:37:17&#43;00:00"/>
+<meta property="og:url" content="http://words.yuvi.in/devlog-aug-24-2014/" />
+<meta property="article:published_time" content="2014-08-25T02:37:17+00:00" />
+<meta property="article:modified_time" content="2014-08-25T02:37:17+00:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="DevLog for Aug 24, 2014"/>
 <meta name="twitter:description" content="Wooooo!
- Moved labsbooks (described in yesterday&#8217;s devlog) to use a shared readonly IPython virtualenv maintained by me. Also installed a bunch of modules people might want to use (SciPy, NumPy, Pandas, PyTables, matplotlib). Am considering just installing IPython notebook globally via puppet and using that, since that&#8217;ll enable users to just use the system packages. However, the version of IPython notebook from Ubuntu is ancient, so that&#8217;s probably a non-starter."/>
-<meta name="generator" content="Hugo 0.47.1" />
+ Moved labsbooks (described in yesterday’s devlog) to use a shared readonly IPython virtualenv maintained by me. Also installed a bunch of modules people might want to use (SciPy, NumPy, Pandas, PyTables, matplotlib). Am considering just installing IPython notebook globally via puppet and using that, since that’ll enable users to just use the system packages. However, the version of IPython notebook from Ubuntu is ancient, so that’s probably a non-starter."/>
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -24,10 +26,10 @@
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "DevLog for Aug 24, 2014",
-  "url": "http://words.yuvi.in/devlog-aug-24-2014/",
+  "url": "http:\/\/words.yuvi.in\/devlog-aug-24-2014\/",
   "wordCount": "290",
-  "datePublished": "2014-08-25T02:37:17&#43;00:00",
-  "dateModified": "2014-08-25T02:37:17&#43;00:00",
+  "datePublished": "2014-08-25T02:37:17\x2b00:00",
+  "dateModified": "2014-08-25T02:37:17\x2b00:00",
   "author": {
     "@type": "Person",
     "name": "yuvipanda"
@@ -88,23 +90,21 @@
 </p>
   </header>
   <p>Wooooo!</p>
-
 <ul>
-<li>Moved <a href="https://github.com/yuvipanda/labsbooks">labsbooks</a> (described in <a href="http://yuvi.in/blog/devlog-23-aug-2014/">yesterday&#8217;s devlog</a>) to use a shared readonly IPython virtualenv maintained by me. Also installed a bunch of modules people might want to use (SciPy, NumPy, Pandas, PyTables, matplotlib). Am considering just installing IPython notebook globally via puppet and using that, since that&#8217;ll enable users to just use the system packages. However, the version of IPython notebook from Ubuntu is ancient, so that&#8217;s probably a non-starter.</li>
+<li>Moved <a href="https://github.com/yuvipanda/labsbooks">labsbooks</a> (described in <a href="http://yuvi.in/blog/devlog-23-aug-2014/">yesterday’s devlog</a>) to use a shared readonly IPython virtualenv maintained by me. Also installed a bunch of modules people might want to use (SciPy, NumPy, Pandas, PyTables, matplotlib). Am considering just installing IPython notebook globally via puppet and using that, since that’ll enable users to just use the system packages. However, the version of IPython notebook from Ubuntu is ancient, so that’s probably a non-starter.</li>
 <li>Have a basic version of the IPython publishing process working! Any toollabs user can create a notebook by:
-
 <ul>
 <li>Creating a <code>~/notebooks</code> folder</li>
 <li>Doing a <code>chmod +x ~/notebooks</code></li>
 <li>Doing a <code>chmod +x ~</code></li>
 <li>Putting IPython notebooks into <code>~/notebooks</code> (as <code>.ipynb</code>) files</li>
-<li>Going to <code>https://tools.wmflabs.org/notebooks/&lt;user-shell-name&gt;/&lt;path-to-ipynb-file&gt;</code> Will have to do a bit more work before it can be considered &#8216;production grade&#8217; (such as user pages, a nicer theme, etc, etc) BUT YAY GOOD START. It already caches the html output in Redis and invalidates with the <code>mtime</code> of the file, so should be pretty quick.</li>
-</ul></li>
-<li>Made the ssh tunneling process for <code>labsbooks</code> purely python, without requiring the <code>ProxyCommand</code>. This makes things simpler (and more portable!). I&#8217;ll need to work on securing this properly before I can publish it for broader use.</li>
-<li>Wrote <a href="https://lists.wikimedia.org/pipermail/analytics/2014-August/002437.html">an email</a> to the analytics mailing list about making public the &#8216;edits per country&#8217; data. I hope to make this publicly available with enough granularity that not just me but others can use this for fun research as well.</li>
+<li>Going to <code>https://tools.wmflabs.org/notebooks/&lt;user-shell-name&gt;/&lt;path-to-ipynb-file&gt;</code> Will have to do a bit more work before it can be considered ‘production grade’ (such as user pages, a nicer theme, etc, etc) BUT YAY GOOD START. It already caches the html output in Redis and invalidates with the <code>mtime</code> of the file, so should be pretty quick.</li>
 </ul>
-
-<p>I&#8217;ve been using <a href="https://atom.io">Atom</a> for puppet stuff, <a href="http://www.jetbrains.com/pycharm/">PyCharm</a> for Python and <a href="http://www.jetbrains.com/idea/">IntelliJ</a> for Java stuff, and that seems to be doing ok. They all have decent Vim keybindings as well, and good replacements for other functionality &#8211; and I might stick with Atom for a while to see how it goes :)</p>
+</li>
+<li>Made the ssh tunneling process for <code>labsbooks</code> purely python, without requiring the <code>ProxyCommand</code>. This makes things simpler (and more portable!). I’ll need to work on securing this properly before I can publish it for broader use.</li>
+<li>Wrote <a href="https://lists.wikimedia.org/pipermail/analytics/2014-August/002437.html">an email</a> to the analytics mailing list about making public the ‘edits per country’ data. I hope to make this publicly available with enough granularity that not just me but others can use this for fun research as well.</li>
+</ul>
+<p>I’ve been using <a href="https://atom.io">Atom</a> for puppet stuff, <a href="http://www.jetbrains.com/pycharm/">PyCharm</a> for Python and <a href="http://www.jetbrains.com/idea/">IntelliJ</a> for Java stuff, and that seems to be doing ok. They all have decent Vim keybindings as well, and good replacements for other functionality – and I might stick with Atom for a while to see how it goes :)</p>
 
 
   
@@ -146,7 +146,6 @@
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -154,7 +153,6 @@
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -172,6 +170,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -179,8 +179,6 @@
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>

@@ -5,15 +5,16 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="Code" />
+<meta property="og:title" content="code" />
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/categories/code/" />
-<meta property="og:updated_time" content="2012-10-05T07:05:45&#43;00:00"/>
+<meta property="og:updated_time" content="2018-12-26T10:23:40-08:00" />
+
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Code"/>
+<meta name="twitter:title" content="code"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
-<meta name="generator" content="Hugo 0.47.1" />
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -22,14 +23,14 @@
   "@context": "http://schema.org",
   "@type": "Blog",
   "headline": "Yuvi Panda",
-  "url" : "http://words.yuvi.in/categories/code/",
+  "url" : "http:\/\/words.yuvi.in\/categories\/code\/",
   "author": {
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2012-10-05T07:05:45&#43;00:00",
+  "dateModified": "2018-12-26T10:23:40-08:00",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
-  "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
+  "description": "[JupyterHub](https:\/\/github.com\/jupyterhub\/jupyterhub) | [MyBinder](https:\/\/mybinder.org) | [Kubernetes](https:\/\/k8s.io) | Open Culture"
 }
 </script>
 
@@ -93,13 +94,11 @@
   </header>
   <blockquote>
 <blockquote>
-<p><em>We&#8217;re the Michelangelos of the great age of machine intelligence which is yet to come. We&#8217;re sketching out how it&#8217;s all going to look. We&#8217;re at the forefront of solving incredible problems and creating magical devices. &#8211; <a href="https://news.ycombinator.com/item?id=4611688">DanielBMarkham</a></em></p>
+<p><em>We’re the Michelangelos of the great age of machine intelligence which is yet to come. We’re sketching out how it’s all going to look. We’re at the forefront of solving incredible problems and creating magical devices. – <a href="https://news.ycombinator.com/item?id=4611688">DanielBMarkham</a></em></p>
 </blockquote>
-
-<p>If there&#8217;s a great age of machine intelligence to come, then one in a million of us may be a Michelangelo. The rest of us are house-painters, and the houses we paint are slated for demolition within our own lifetimes. &#8211; <a href="https://news.ycombinator.com/item?id=4612184">Lagged2Death</a></p>
+<p>If there’s a great age of machine intelligence to come, then one in a million of us may be a Michelangelo. The rest of us are house-painters, and the houses we paint are slated for demolition within our own lifetimes. – <a href="https://news.ycombinator.com/item?id=4612184">Lagged2Death</a></p>
 </blockquote>
-
-<p>I&#8217;ll try not to be a house painter.</p>
+<p>I’ll try not to be a house painter.</p>
 
 </article> 
 
@@ -117,10 +116,8 @@
 
 </p>
   </header>
-  <p>I&#8217;ve gotten rid of my Vim repo from GitHub, and switched to using <a href="https://github.com/gmarik/vundle">Vundle</a> + DropBox to keep my vim environment safely backed up.</p>
-
+  <p>I’ve gotten rid of my Vim repo from GitHub, and switched to using <a href="https://github.com/gmarik/vundle">Vundle</a> + DropBox to keep my vim environment safely backed up.</p>
 <p>You can find my <a href="http://dl.dropbox.com/u/8768784/vimrc">.vimrc</a> file here. With just this and Vundle setup, I find it much easier to port my settings elsewhere instead of using git.</p>
-
 <p>Hat tip to <a href="http://www.arunmozhi.in/">tecoholic</a> for pushing me to switch to Vundle :)</p>
 
 </article> 
@@ -139,21 +136,15 @@
 
 </p>
   </header>
-  <p>When you&#8217;re proxying requests via nginx, you might assume after reading [the documentation][1] that every header is forwarded, except for the Host and Connection headers.</p>
-
-<p>You&#8217;d also be wrong.</p>
-
+  <p>When you’re proxying requests via nginx, you might assume after reading [the documentation][1] that every header is forwarded, except for the Host and Connection headers.</p>
+<p>You’d also be wrong.</p>
 <p>nginx <strong>drops</strong> all headers with an underscore in them.</p>
-
 <p>This is a configurable settings. You can turn it on with a simple</p>
-
-<pre>underscores_in_headers on</pre>
-
-<p>I&#8217;m still baffled as to *why* this is <a href="http://wiki.nginx.org/HttpCoreModule#underscores_in_headers">a configuration parameter</a>. And why it is turned off by default. And why there is no mention of it in the proxy docs.</p>
-
+<!-- raw HTML omitted -->
+<p>I’m still baffled as to *why* this is [a configuration parameter][2]. And why it is turned off by default. And why there is no mention of it in the proxy docs.</p>
 <p>Thanks to <code>kolbyjack</code> on <code>#nginx</code> for helping me figure this out.</p>
-
-<p>[1]: <a href="http://wiki.nginx.org/HttpProxyModule&quot;">http://wiki.nginx.org/HttpProxyModule&quot;</a> data-mce-href=</p>
+<p>[1]: <a href="http://wiki.nginx.org/HttpProxyModule">http://wiki.nginx.org/HttpProxyModule</a>&quot; data-mce-href=
+[2]: <a href="http://wiki.nginx.org/HttpCoreModule#underscores_in_headers">http://wiki.nginx.org/HttpCoreModule#underscores_in_headers</a></p>
 
 </article> 
 
@@ -172,21 +163,13 @@
 </p>
   </header>
   <p>Note: These are almost a decade old. Reproduced as close to memory as possible</p>
-
-<p>My first memories of programming aren&#8217;t actually C. They were GW-BASIC, and later on, LOGO. I don&#8217;t remember any of my BASIC &#8211; but I do remember the look on my computer science teacher&#8217;s face in 5th grade when I managed to draw a flower with LOGO when everyone else was doing rectangles and lines. I vividly remember it &#8211; you draw an arc for a certain length, then stop, draw another arc in the reverse direction for the same length &#8211; and you have a petal. Then you just offset your next arc by a few degrees, repeat the previous thing, and you have another petal. Do this a few times such that <code>offset-degreese * count = 360</code> and you have a flower. That I could just modify the variables <code>length</code> and <code>offset-degree</code> to draw flowers as big, and with as many petals as you want &#8211; it blew my mind. This was in 5th grade &#8211; and I immediately started pestering my parents to put me in a programming language class outside (I had already gone to classes for _cough_MS Office<em>cough</em> and DOS back then). And the SSI nearby happened to be teaching a reasonably cheap <code>Unix/C/C++</code> class.</p>
-
-<p>The first thing I remember still is someone telling me &#8220;you don&#8217;t need to type out clearscreen(); &#8211; clrscr() would do&#8221;. This was TurboC, and to me, at that point of time, a &#8216;good program&#8217; was one that had a <code>getch()</code> call at the end and a <code>clrscr()</code> in the beginning :)</p>
-
-<p>The <code>Unix/C/C++</code> course &#8211; I don&#8217;t remember any Unix in it. And the C++ was disinteresting to me, because I saw no point in inheriting mammal from animal or car from vehicle. So I went about writing &#8216;C++&#8217;, which was basically C but with <code>cout</code> and <code>cin</code> instead of <code>printf()</code> and <code>scanf()</code> (I wouldn&#8217;t understand classes and how/why they were useful until I read <em>Hardcore Visual Basic 5</em> and saw the ways classes are useful and how much it sucks that VB doesn&#8217;t have them).</p>
-
-<p>I had written a program called <code>DOSTutor</code> then (end of 5th grade, I guess?). It had screens and screens of text that &#8216;taught&#8217; you DOS commands, and then ones that made you type them in and &#8216;checked&#8217; it. Initially I had written it as a long series of <code>printf()</code> and <code>scanf()</code> statements. Suddenly some bulb went on and I realized I could cut my program size by about 90% if I separated code and data, and put the data (screen text and responses) into arrays. The feeling you get when you can reduce code drastically with no reduction in functionality (+ easier to make &#8216;fixes&#8217;) is quite incredible :)</p>
-
-<p>But nobody ever used that program, so I wouldn&#8217;t consider that my first &#8216;program&#8217;. I spent the next year or so messing around with random <code>sound()</code> and <code>nosound()</code> calls producing &#8216;music&#8217; (including a few times when my code hit the <code>sound()</code> call, but crashed before the <code>nosound()</code> call &#8211; thus making the PC Speaker whine constantly, without any apparent way to turn it off. I used to just reset the computer then &#8211; until I learnt what exactly a <code>DOS System Call</code> meant. Then I wrote another small program that just called <code>nosound()</code>). I also remember messing around with BGI Graphics, mostly taking the example programs for <code>graphics.h</code> and modifying them to make somewhat-pretty figures.</p>
-
-<p>My first &#8216;real&#8217; program was an implementation of a variant of <a href="http://en.wikipedia.org/wiki/Forms_of_cricket#Book_Cricket">Book Cricket</a>. It even had a stored High Scores file. It was my stint at a &#8216;programming center&#8217; (SSI, for those who remember), and I kept it in a Network Drive that I accessed using &#8216;Map Network Drive&#8217;. The amount of fun that was had when I discovered <code>rand()</code> was quite something. It even beeped when you got out!</p>
-
-<p>I lost it all in a server crash. Just do &#8216;Map Network Drive&#8217; once and it was no longer there. I think I came home and cried :(</p>
-
+<p>My first memories of programming aren’t actually C. They were GW-BASIC, and later on, LOGO. I don’t remember any of my BASIC – but I do remember the look on my computer science teacher’s face in 5th grade when I managed to draw a flower with LOGO when everyone else was doing rectangles and lines. I vividly remember it – you draw an arc for a certain length, then stop, draw another arc in the reverse direction for the same length – and you have a petal. Then you just offset your next arc by a few degrees, repeat the previous thing, and you have another petal. Do this a few times such that <code>offset-degreese * count = 360</code> and you have a flower. That I could just modify the variables <code>length</code> and <code>offset-degree</code> to draw flowers as big, and with as many petals as you want – it blew my mind. This was in 5th grade – and I immediately started pestering my parents to put me in a programming language class outside (I had already gone to classes for <em>cough_MS Office_cough</em> and DOS back then). And the SSI nearby happened to be teaching a reasonably cheap <code>Unix/C/C++</code> class.</p>
+<p>The first thing I remember still is someone telling me “you don’t need to type out clearscreen(); – clrscr() would do”. This was TurboC, and to me, at that point of time, a ‘good program’ was one that had a <code>getch()</code> call at the end and a <code>clrscr()</code> in the beginning :)</p>
+<p>The <code>Unix/C/C++</code> course – I don’t remember any Unix in it. And the C++ was disinteresting to me, because I saw no point in inheriting mammal from animal or car from vehicle. So I went about writing ‘C++’, which was basically C but with <code>cout</code> and <code>cin</code> instead of <code>printf()</code> and <code>scanf()</code> (I wouldn’t understand classes and how/why they were useful until I read <em>Hardcore Visual Basic 5</em> and saw the ways classes are useful and how much it sucks that VB doesn’t have them).</p>
+<p>I had written a program called <code>DOSTutor</code> then (end of 5th grade, I guess?). It had screens and screens of text that ‘taught’ you DOS commands, and then ones that made you type them in and ‘checked’ it. Initially I had written it as a long series of <code>printf()</code> and <code>scanf()</code> statements. Suddenly some bulb went on and I realized I could cut my program size by about 90% if I separated code and data, and put the data (screen text and responses) into arrays. The feeling you get when you can reduce code drastically with no reduction in functionality (+ easier to make ‘fixes’) is quite incredible :)</p>
+<p>But nobody ever used that program, so I wouldn’t consider that my first ‘program’. I spent the next year or so messing around with random <code>sound()</code> and <code>nosound()</code> calls producing ‘music’ (including a few times when my code hit the <code>sound()</code> call, but crashed before the <code>nosound()</code> call – thus making the PC Speaker whine constantly, without any apparent way to turn it off. I used to just reset the computer then – until I learnt what exactly a <code>DOS System Call</code> meant. Then I wrote another small program that just called <code>nosound()</code>). I also remember messing around with BGI Graphics, mostly taking the example programs for <code>graphics.h</code> and modifying them to make somewhat-pretty figures.</p>
+<p>My first ‘real’ program was an implementation of a variant of <a href="http://en.wikipedia.org/wiki/Forms_of_cricket#Book_Cricket">Book Cricket</a>. It even had a stored High Scores file. It was my stint at a ‘programming center’ (SSI, for those who remember), and I kept it in a Network Drive that I accessed using ‘Map Network Drive’. The amount of fun that was had when I discovered <code>rand()</code> was quite something. It even beeped when you got out!</p>
+<p>I lost it all in a server crash. Just do ‘Map Network Drive’ once and it was no longer there. I think I came home and cried :(</p>
 <p>What was <em>your</em> first program?</p>
 
 </article> 
@@ -207,22 +190,16 @@
 
 </p>
   </header>
-  
-
-<p>Just finished reading &#8216;Javascript &#8211; The Good Parts&#8217;. Here is what I learnt:</p>
-
+  <p>Just finished reading ‘Javascript – The Good Parts’. Here is what I learnt:</p>
 <ul>
 <li>I knew jack shit about JavaScript. I was able to get along so far simply because I knew jQuery and understood how closures work.</li>
-<li>Holy shit that&#8217;s one fucked up language. Quite schizophrenic, saved by almost limitless extensibility/monkey-patchability/watcha-gonna-do-write-a-java-applet-hahaha .</li>
-<li>If you&#8217;re going to write Javascript, you&#8217;ll have to subset. Subsetting/augmenting has its own share of problems &#8211; primarily that <code>map</code> in your code might not be the same as <code>map</code> in someone else&#8217;s code, even if they seem to be working on the same &#8216;type&#8217;</li>
-<li>jQuery is incredible. I guess it is sort of like a &#8216;Standard Library&#8217; of sorts, atleast on the client side. I&#8217;m sure there exists something similar on the server side as well (underscore.js, perhaps?)</li>
-<li>I haven&#8217;t written any sufficiently large Javascript program yet. Need to fix that.</li>
+<li>Holy shit that’s one fucked up language. Quite schizophrenic, saved by almost limitless extensibility/monkey-patchability/watcha-gonna-do-write-a-java-applet-hahaha .</li>
+<li>If you’re going to write Javascript, you’ll have to subset. Subsetting/augmenting has its own share of problems – primarily that <code>map</code> in your code might not be the same as <code>map</code> in someone else’s code, even if they seem to be working on the same ‘type’</li>
+<li>jQuery is incredible. I guess it is sort of like a ‘Standard Library’ of sorts, atleast on the client side. I’m sure there exists something similar on the server side as well (underscore.js, perhaps?)</li>
+<li>I haven’t written any sufficiently large Javascript program yet. Need to fix that.</li>
 </ul>
-
 <h3 id="defensive-programming">Defensive Programming</h3>
-
-<p>When you&#8217;re writing PHP, you program <em>defensively</em>. The language is out to get you. Make one wrong step and it&#8217;ll fuck you over. Never assume anything, make sure you always check the documentation. You can&#8217;t trust the language. It&#8217;s not stupid, it&#8217;s schizophrenic.</p>
-
+<p>When you’re writing PHP, you program <em>defensively</em>. The language is out to get you. Make one wrong step and it’ll fuck you over. Never assume anything, make sure you always check the documentation. You can’t trust the language. It’s not stupid, it’s schizophrenic.</p>
 <p>I think I should start treating JavaScript also that way.</p>
 
 </article> 
@@ -243,33 +220,28 @@
 
 </p>
   </header>
-  <p>I <a href="http://yuvi.in/blog/moving-to-vim-from-emacs.html">moved</a> from emacs to vim a while ago, and have been steadily accumulating a series of plugins in my <code>.vim</code>. They&#8217;re all up in my rather messy <a href="http://github.com/yuvipanda/dotfiles">dotfiles repo</a>. Here&#8217;s a slightly more neatly organized list of the plugins I currently use:</p>
-
+  <p>I <a href="http://yuvi.in/blog/moving-to-vim-from-emacs.html">moved</a> from emacs to vim a while ago, and have been steadily accumulating a series of plugins in my <code>.vim</code>. They’re all up in my rather messy <a href="http://github.com/yuvipanda/dotfiles">dotfiles repo</a>. Here’s a slightly more neatly organized list of the plugins I currently use:</p>
 <ol>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=3025">command-t</a> &#8211; File opener and buffer switcher. In-fuckin-credibly useful.</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=1953">vimpress</a> &#8211; What I use to blog since <a href="http://yuvi.in/blog/moving-back-to-wordpress/">moving to wordpress</a>.</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=39">matchit</a> &#8211; Lets <code>%</code> work with html tags</li>
-<li><s><a href="http://www.vim.org/scripts/script.php?script_id=3695">commentary</a> &#8211; Generic commenting and uncommenting script</s> <a href="http://www.vim.org/scripts/script.php?script_id=1218">NERDCommenter</a> has replaced commentary due to being more flexible and having more options.</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=2975">fugitive</a> &#8211; Incredibly awesome git wrapper for vim. I rarely go to the commandline for git these days</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=3465">tagbar</a> &#8211; Useful code-exploratory plugin when I&#8217;m looking around a codebase trying to familiarize myself.</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=1643">supertab</a> &#8211; Buffer completion in insert mode only when I need it.</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=2423">gist</a> &#8211; Put stuff up in gist to pass it around</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=559">BufClose</a> &#8211; So I can close a buffer without messing up my splits</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=3509">extradite</a> &#8211; <code>:Glog</code> replacement that builds on top of fugitive. I don&#8217;t understand why this isn&#8217;t bundled with fugitive</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=2204">TwitVim</a> &#8211; Yes, so I don&#8217;t have to go to the browser (and be consumed by chat/reddit/hn) just to post a tweet.</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=2572">ack.vim</a> &#8211; Ack integration for vim. Do yourself a favor and use <a href="http://betterthangrep.com">ack</a> instead of grep.</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=2736">Syntastic</a> &#8211; Automatic syntax checking so that I don&#8217;t miss a semicolon and not know about it</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=1355">php-doc</a> &#8211; Insert boilerplate PHP doc compatible strings in my PHP files whenever I want to. Very PHP specific, need to find something that works across languages. (Note: This plugin has quite some identity crisis. It&#8217;s named PDV but it&#8217;s filename is php-doc. Since php-doc is more descriptive, I&#8217;m using that)</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=2754">delimitMate</a> &#8211; Automatically closes quotes, parens, braces, etc for you. I initially thought this would be super annoying, but in fact it is rather very pleasant.</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=3025">command-t</a> – File opener and buffer switcher. In-fuckin-credibly useful.</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=1953">vimpress</a> – What I use to blog since <a href="http://yuvi.in/blog/moving-back-to-wordpress/">moving to wordpress</a>.</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=39">matchit</a> – Lets <code>%</code> work with html tags</li>
+<li><!-- raw HTML omitted --><a href="http://www.vim.org/scripts/script.php?script_id=3695">commentary</a> – Generic commenting and uncommenting script<!-- raw HTML omitted --> <a href="http://www.vim.org/scripts/script.php?script_id=1218">NERDCommenter</a> has replaced commentary due to being more flexible and having more options.</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=2975">fugitive</a> – Incredibly awesome git wrapper for vim. I rarely go to the commandline for git these days</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=3465">tagbar</a> – Useful code-exploratory plugin when I’m looking around a codebase trying to familiarize myself.</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=1643">supertab</a> – Buffer completion in insert mode only when I need it.</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=2423">gist</a> – Put stuff up in gist to pass it around</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=559">BufClose</a> – So I can close a buffer without messing up my splits</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=3509">extradite</a> – <code>:Glog</code> replacement that builds on top of fugitive. I don’t understand why this isn’t bundled with fugitive</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=2204">TwitVim</a> – Yes, so I don’t have to go to the browser (and be consumed by chat/reddit/hn) just to post a tweet.</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=2572">ack.vim</a> – Ack integration for vim. Do yourself a favor and use <a href="http://betterthangrep.com">ack</a> instead of grep.</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=2736">Syntastic</a> – Automatic syntax checking so that I don’t miss a semicolon and not know about it</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=1355">php-doc</a> – Insert boilerplate PHP doc compatible strings in my PHP files whenever I want to. Very PHP specific, need to find something that works across languages. (Note: This plugin has quite some identity crisis. It’s named PDV but it’s filename is php-doc. Since php-doc is more descriptive, I’m using that)</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=2754">delimitMate</a> – Automatically closes quotes, parens, braces, etc for you. I initially thought this would be super annoying, but in fact it is rather very pleasant.</li>
 </ol>
-
-<p><s>I&#8217;m also on the default <code>desert</code> color theme &#8211; haven&#8217;t found anything better. Suggestions welcome &#8211; both for the color scheme and for new/replacement plugins.</s> After trying out <a href="http://www.vim.org/scripts/script.php?script_id=1778">wombat</a> and <a href="http://www.vim.org/scripts/script.php?script_id=2555">jellybeans</a> color schemes, I have settled on wombat for now.</p>
-
+<p><!-- raw HTML omitted -->I’m also on the default <code>desert</code> color theme – haven’t found anything better. Suggestions welcome – both for the color scheme and for new/replacement plugins.<!-- raw HTML omitted --> After trying out <a href="http://www.vim.org/scripts/script.php?script_id=1778">wombat</a> and <a href="http://www.vim.org/scripts/script.php?script_id=2555">jellybeans</a> color schemes, I have settled on wombat for now.</p>
 <p>Suggestions for more plugins still welcome :)</p>
-
-<p><s>This is the list as of 24 Aug 2011.</s> <s>Updated as of September 2 2011 (added 10, 11, 12 since last update).</s> <s>Updated as of September 5 2011 (changed 4, added colorscheme change).</s> Updated as of September 12 2011 (added 13, 14, 15). I am moving quite fast, am I not? Will keep this post updated as and when things change.</p>
-
-<!-- #VIMPRESS_TAG# http://yuvi.in/blog/wp-content/uploads/2011/09/wpid190-vimpress_4e542fc3_mkd.txt wpid190-vimpress_4e542fc3_mkd.txt -->
+<p><!-- raw HTML omitted -->This is the list as of 24 Aug 2011.<!-- raw HTML omitted --> <!-- raw HTML omitted -->Updated as of September 2 2011 (added 10, 11, 12 since last update).<!-- raw HTML omitted --> <!-- raw HTML omitted -->Updated as of September 5 2011 (changed 4, added colorscheme change).<!-- raw HTML omitted --> Updated as of September 12 2011 (added 13, 14, 15). I am moving quite fast, am I not? Will keep this post updated as and when things change.</p>
+<!-- raw HTML omitted -->
 
 </article> 
 
@@ -289,13 +261,10 @@
 
 </p>
   </header>
-  <p>I was debugging an issue <a href="http://interviewstreet.com">at work</a> today where a (generated) file refused to download in Chrome, but the same URL worked just fine with wget. I remember reading in the <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec2.html#sec2.2">HTTP Spec</a> that HTTP headers can only be lower ASCII, so when wget mangled the output file&#8217;s name, the problem was obvious &#8211; the file name contained a character that wasn&#8217;t in lower ASCII (an accented A). Chrome had borked on encountering it, while wget soldiered on. Using <code>iconv</code> to strip non-ASCII characters in the file name on the server side fixed the issue.</p>
-
-<p>Moral of the story? Read the RFCs! The <a href="http://www.w3.org/Protocols/rfc2616/rfc2616.html">HTTP one</a>, in particular, is remarkably readable and you <em>should</em> read it if you&#8217;re doing non-trivial Web Development.</p>
-
-<p>P.S: If I had had time, I&#8217;d have went around testing this behavior in several user agents and documenting their behavior (and possibly submitting bug reports) &#8211; but <insert-excuse-here>.</p>
-
-<p>&nbsp;</p>
+  <p>I was debugging an issue <a href="http://interviewstreet.com">at work</a> today where a (generated) file refused to download in Chrome, but the same URL worked just fine with wget. I remember reading in the <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec2.html#sec2.2">HTTP Spec</a> that HTTP headers can only be lower ASCII, so when wget mangled the output file’s name, the problem was obvious – the file name contained a character that wasn’t in lower ASCII (an accented A). Chrome had borked on encountering it, while wget soldiered on. Using <code>iconv</code> to strip non-ASCII characters in the file name on the server side fixed the issue.</p>
+<p>Moral of the story? Read the RFCs! The <a href="http://www.w3.org/Protocols/rfc2616/rfc2616.html">HTTP one</a>, in particular, is remarkably readable and you <em>should</em> read it if you’re doing non-trivial Web Development.</p>
+<p>P.S: If I had had time, I’d have went around testing this behavior in several user agents and documenting their behavior (and possibly submitting bug reports) – but <!-- raw HTML omitted -->.</p>
+<p> </p>
 
 </article> 
 
@@ -316,20 +285,14 @@
 </p>
   </header>
   <p>From <a href="http://news.ycombinator.com/item?id=2870176">HN</a>:</p>
-
 <blockquote>
 <p>From my experience, the largest hurdle first time programmers have is being able to execute programs in their head. <strong><em>It takes a cognitive leap to go from the source code in front of them, and what happens at runtime</em>.</strong></p>
 </blockquote>
-
 <p><em>(emphasis mine)</em></p>
-
-<p>I believe that if you have made that <em>cognitive leap</em>, you can call yourself a programmer. It means you&#8217;ve entered into the <a href="http://www.codinghorror.com/blog/2006/07/separating-programming-sheep-from-non-programming-goats.html">second hump</a> &#8211; you are a programmer. One of us. Welcome :)</p>
-
-<p>This is also the reason why solving programming challenges at places like <a href="http://interviewstreet.com/recruit/challenges">InterviewStreet Challenges</a>, <a href="http://codechef.com">CodeChef</a>, <a href="http://topcoder.com">TopCoder</a>, <a href="http://spoj.pl">SPOJ</a>, etc also increase your general programming skills &#8211; they require that you continuously run code in the interpreter in your head. Helps you train your <a href="http://en.wikipedia.org/wiki/Procedural_memory">procedural memory</a>. Same reason why learning different language paradigms (OOP, Purely Functional, Procedural, etc) makes you a better programmer.</p>
-
+<p>I believe that if you have made that <em>cognitive leap</em>, you can call yourself a programmer. It means you’ve entered into the <a href="http://www.codinghorror.com/blog/2006/07/separating-programming-sheep-from-non-programming-goats.html">second hump</a> – you are a programmer. One of us. Welcome :)</p>
+<p>This is also the reason why solving programming challenges at places like <a href="http://interviewstreet.com/recruit/challenges">InterviewStreet Challenges</a>, <a href="http://codechef.com">CodeChef</a>, <a href="http://topcoder.com">TopCoder</a>, <a href="http://spoj.pl">SPOJ</a>, etc also increase your general programming skills – they require that you continuously run code in the interpreter in your head. Helps you train your <a href="http://en.wikipedia.org/wiki/Procedural_memory">procedural memory</a>. Same reason why learning different language paradigms (OOP, Purely Functional, Procedural, etc) makes you a better programmer.</p>
 <p>Reminds me that I have four more chapters in SICP to finish and Clojure to learn :)</p>
-
-<p>&nbsp;</p>
+<p> </p>
 
 </article> 
 
@@ -349,13 +312,10 @@
 
 </p>
   </header>
-  <p>4Chan isn&#8217;t exactly what you&#8217;d associate with &#8216;shit, that&#8217;s a cool piece of code!&#8217;, but look <a href="http://dis.4chan.org/read/prog/1295544154">what I found</a>!</p>
-
+  <p>4Chan isn’t exactly what you’d associate with ‘shit, that’s a cool piece of code!’, but look <a href="http://dis.4chan.org/read/prog/1295544154">what I found</a>!</p>
 <p>(<a href="http://news.ycombinator.com/item?id=2657277">via HN</a>)</p>
-
 <p>Nice hack. And it <strong>is</strong> <code>O(N)</code> in bitsize of largest number (Ignoring all the overhead of forking new processes, the problem with the race conditions(Sort 0 and 0.1? How about 0.01 and 0.011?), processor contention, etc,.) They basically delegated the sorting to the process scheduler, treating it as a sort of priority queue.</p>
-
-<p>Sometimes you just see a hack so out of the box that it makes you say &#8216;woah!&#8217; and let your mouth hang open there for a while. One such time this :)</p>
+<p>Sometimes you just see a hack so out of the box that it makes you say ‘woah!’ and let your mouth hang open there for a while. One such time this :)</p>
 
 </article> 
 
@@ -375,11 +335,9 @@
 
 </p>
   </header>
-  <p>No, I&#8217;m <em>not</em> going to blow your mind by telling you I&#8217;m going to do the SICP exercises in BrainFuck :)</p>
-
-<p>I just wrote <a href="https://gist.github.com/969657">my first brainfuck program</a>. Might as well be my last, but not sure. Tape-based turing-ish programing seems fun, so maybe I&#8217;ll try that again with something more expressive than brainfuck (or maybe that is pointless?)</p>
-
-<p>And I&#8217;m doing the SICP Exercises. In <a href="http://groups.csail.mit.edu/mac/projects/scheme/">MIT-Scheme</a>. I&#8217;ve put them <a href="https://github.com/yuvipanda/sicp-exercises">up on GitHub</a>. I&#8217;m doing this with the <a href="http://fpug-c.posterous.com/">FPUG-C</a> SICP Study Group, so hope I&#8217;m able to complete it all this time :) Big props to <a href="http://www.openbala.com/">Balaji</a> for organizing it, and letting us get away with the free coke and coffee!</p>
+  <p>No, I’m <em>not</em> going to blow your mind by telling you I’m going to do the SICP exercises in BrainFuck :)</p>
+<p>I just wrote <a href="https://gist.github.com/969657">my first brainfuck program</a>. Might as well be my last, but not sure. Tape-based turing-ish programing seems fun, so maybe I’ll try that again with something more expressive than brainfuck (or maybe that is pointless?)</p>
+<p>And I’m doing the SICP Exercises. In <a href="http://groups.csail.mit.edu/mac/projects/scheme/">MIT-Scheme</a>. I’ve put them <a href="https://github.com/yuvipanda/sicp-exercises">up on GitHub</a>. I’m doing this with the <a href="http://fpug-c.posterous.com/">FPUG-C</a> SICP Study Group, so hope I’m able to complete it all this time :) Big props to <a href="http://www.openbala.com/">Balaji</a> for organizing it, and letting us get away with the free coke and coffee!</p>
 
 </article> 
 
@@ -411,7 +369,6 @@
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -419,7 +376,6 @@
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -437,6 +393,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -444,8 +402,6 @@
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>

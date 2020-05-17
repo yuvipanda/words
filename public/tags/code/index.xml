@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>code on Yuvi Panda</title>
@@ -39,7 +39,7 @@ I had also been looking for an excuse to learn more Golang, so I ended up writin
       
       <guid>http://words.yuvi.in/post/systemd-gui-applications/</guid>
       <description>Update: There&amp;rsquo;s a follow-up post with a simpler solution now.
-Ever since I read Jessie Frazelle&amp;rsquo;s amazing setup (1, 2, 3) for running GUI applications in docker containers, I&amp;rsquo;ve wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&amp;rsquo;m also not as awesome (or knowledgeable!</description>
+Ever since I read Jessie Frazelle&amp;lsquo;s amazing setup (1, 2, 3) for running GUI applications in docker containers, I&amp;rsquo;ve wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&amp;rsquo;m also not as awesome (or knowledgeable!</description>
     </item>
     
     <item>
@@ -48,8 +48,8 @@ Ever since I read Jessie Frazelle&amp;rsquo;s amazing setup (1, 2, 3) for runnin
       <pubDate>Tue, 23 Aug 2011 22:55:03 +0000</pubDate>
       
       <guid>http://words.yuvi.in/my-vim-setup/</guid>
-      <description>I moved from emacs to vim a while ago, and have been steadily accumulating a series of plugins in my .vim. They&amp;#8217;re all up in my rather messy dotfiles repo. Here&amp;#8217;s a slightly more neatly organized list of the plugins I currently use:
- command-t &amp;#8211; File opener and buffer switcher. In-fuckin-credibly useful. vimpress &amp;#8211; What I use to blog since moving to wordpress. matchit &amp;#8211; Lets % work with html tags commentary &amp;#8211; Generic commenting and uncommenting script NERDCommenter has replaced commentary due to being more flexible and having more options.</description>
+      <description>I moved from emacs to vim a while ago, and have been steadily accumulating a series of plugins in my .vim. They’re all up in my rather messy dotfiles repo. Here’s a slightly more neatly organized list of the plugins I currently use:
+ command-t – File opener and buffer switcher. In-fuckin-credibly useful. vimpress – What I use to blog since moving to wordpress. matchit – Lets % work with html tags commentary – Generic commenting and uncommenting scriptNERDCommenter has replaced commentary due to being more flexible and having more options.</description>
     </item>
     
     <item>
@@ -58,7 +58,7 @@ Ever since I read Jessie Frazelle&amp;rsquo;s amazing setup (1, 2, 3) for runnin
       <pubDate>Sat, 13 Aug 2011 00:56:10 +0000</pubDate>
       
       <guid>http://words.yuvi.in/non-ascii-characters-http-headers/</guid>
-      <description>I was debugging an issue at work today where a (generated) file refused to download in Chrome, but the same URL worked just fine with wget. I remember reading in the HTTP Spec that HTTP headers can only be lower ASCII, so when wget mangled the output file&amp;#8217;s name, the problem was obvious &amp;#8211; the file name contained a character that wasn&amp;#8217;t in lower ASCII (an accented A). Chrome had borked on encountering it, while wget soldiered on.</description>
+      <description>I was debugging an issue at work today where a (generated) file refused to download in Chrome, but the same URL worked just fine with wget. I remember reading in the HTTP Spec that HTTP headers can only be lower ASCII, so when wget mangled the output file’s name, the problem was obvious – the file name contained a character that wasn’t in lower ASCII (an accented A). Chrome had borked on encountering it, while wget soldiered on.</description>
     </item>
     
     <item>
@@ -70,7 +70,7 @@ Ever since I read Jessie Frazelle&amp;rsquo;s amazing setup (1, 2, 3) for runnin
       <description>From HN:
  From my experience, the largest hurdle first time programmers have is being able to execute programs in their head. It takes a cognitive leap to go from the source code in front of them, and what happens at runtime.
  (emphasis mine)
-I believe that if you have made that cognitive leap, you can call yourself a programmer. It means you&amp;#8217;ve entered into the second hump &amp;#8211; you are a programmer.</description>
+I believe that if you have made that cognitive leap, you can call yourself a programmer. It means you’ve entered into the second hump – you are a programmer.</description>
     </item>
     
     <item>
@@ -79,7 +79,7 @@ I believe that if you have made that cognitive leap, you can call yourself a pro
       <pubDate>Sun, 19 Jun 2011 01:40:36 +0000</pubDate>
       
       <guid>http://words.yuvi.in/sleepsort-4chan/</guid>
-      <description>4Chan isn&amp;#8217;t exactly what you&amp;#8217;d associate with &amp;#8216;shit, that&amp;#8217;s a cool piece of code!&amp;#8217;, but look what I found!
+      <description>4Chan isn’t exactly what you’d associate with ‘shit, that’s a cool piece of code!’, but look what I found!
 (via HN)
 Nice hack. And it is O(N) in bitsize of largest number (Ignoring all the overhead of forking new processes, the problem with the race conditions(Sort 0 and 0.1? How about 0.01 and 0.011?), processor contention, etc,.) They basically delegated the sorting to the process scheduler, treating it as a sort of priority queue.</description>
     </item>
@@ -91,7 +91,7 @@ Nice hack. And it is O(N) in bitsize of largest number (Ignoring all the overhea
       
       <guid>http://words.yuvi.in/moving-back-to-wordpress/</guid>
       <description>A while back, I moved my blog (from a wordpress install whose data I lost) to my own platform (HiSlain).
-After several close calls, I&amp;#8217;m officially moving from HiSlain back to WordPress. I just don&amp;#8217;t have enough time to maintain all the things I wanted in a blog platform in HiSlain, hence the move back. However, it satisfied it&amp;#8217;s purpose &amp;#8211; I learnt to write code I could use, others could use, and others could contribute to.</description>
+After several close calls, I’m officially moving from HiSlain back to WordPress. I just don’t have enough time to maintain all the things I wanted in a blog platform in HiSlain, hence the move back. However, it satisfied it’s purpose – I learnt to write code I could use, others could use, and others could contribute to.</description>
     </item>
     
     <item>
@@ -100,9 +100,9 @@ After several close calls, I&amp;#8217;m officially moving from HiSlain back to 
       <pubDate>Fri, 13 May 2011 05:10:31 +0000</pubDate>
       
       <guid>http://words.yuvi.in/sicp-and-brainfuck/</guid>
-      <description>No, I&amp;#8217;m not going to blow your mind by telling you I&amp;#8217;m going to do the SICP exercises in BrainFuck :)
-I just wrote my first brainfuck program. Might as well be my last, but not sure. Tape-based turing-ish programing seems fun, so maybe I&amp;#8217;ll try that again with something more expressive than brainfuck (or maybe that is pointless?)
-And I&amp;#8217;m doing the SICP Exercises. In MIT-Scheme. I&amp;#8217;ve put them up on GitHub.</description>
+      <description>No, I’m not going to blow your mind by telling you I’m going to do the SICP exercises in BrainFuck :)
+I just wrote my first brainfuck program. Might as well be my last, but not sure. Tape-based turing-ish programing seems fun, so maybe I’ll try that again with something more expressive than brainfuck (or maybe that is pointless?)
+And I’m doing the SICP Exercises. In MIT-Scheme. I’ve put them up on GitHub.</description>
     </item>
     
     <item>

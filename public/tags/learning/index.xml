@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>learning on Yuvi Panda</title>
@@ -39,7 +39,7 @@ It is short enough (~100 pages) that I wanted to read through it. I&amp;rsquo;ve
       
       <guid>http://words.yuvi.in/post/learning-selinux/</guid>
       <description>I am trying to understand SELinux and AppArmor, and collecting resources here as I learn. k
-SELinux for mere mortals (2014)  This was the first video I watched, and it helped me understanding what SELinux does at a fundamental basic level. It&amp;rsquo;s probably useless in a container-filled world (where I doubt Fedora shipes pre-configured SELinux rules for my containers), but it helped me think I understood types / labels, so that seems like a positive step?</description>
+SELinux for mere mortals (2014) This was the first video I watched, and it helped me understanding what SELinux does at a fundamental basic level. It&amp;rsquo;s probably useless in a container-filled world (where I doubt Fedora shipes pre-configured SELinux rules for my containers), but it helped me think I understood types / labels, so that seems like a positive step?</description>
     </item>
     
     <item>
@@ -50,7 +50,7 @@ SELinux for mere mortals (2014)  This was the first video I watched, and it help
       <guid>http://words.yuvi.in/post/things-to-build/</guid>
       <description>This is a running list of things I want to build!
 There&amp;rsquo;s an analogous running list of things I want to learn. Things move between them :) I also have higher standards of documentation (other people should be able to use it) before marking these as complete.
- kubernetes-login A helper to openssh that allows users to log in to a configurable user pod running on a kubernetes cluster. Should ideally support scp / sftp too.</description>
+  kubernetes-login A helper to openssh that allows users to log in to a configurable user pod running on a kubernetes cluster. Should ideally support scp / sftp too.</description>
     </item>
     
     <item>
@@ -81,7 +81,7 @@ I had also been looking for an excuse to learn more Golang, so I ended up writin
       
       <guid>http://words.yuvi.in/post/systemd-gui-applications/</guid>
       <description>Update: There&amp;rsquo;s a follow-up post with a simpler solution now.
-Ever since I read Jessie Frazelle&amp;rsquo;s amazing setup (1, 2, 3) for running GUI applications in docker containers, I&amp;rsquo;ve wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&amp;rsquo;m also not as awesome (or knowledgeable!</description>
+Ever since I read Jessie Frazelle&amp;lsquo;s amazing setup (1, 2, 3) for running GUI applications in docker containers, I&amp;rsquo;ve wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&amp;rsquo;m also not as awesome (or knowledgeable!</description>
     </item>
     
     <item>

@@ -9,13 +9,15 @@
 <meta property="og:description" content="Gracefully exiting asyncio application Continuing yesterday&rsquo;s work on my simple supervisor library, I continued trying to propagate signals cleanly to child processes before exiting. I remembered that it isn&rsquo;t enough to just propagate signals - you also have to actually reap them. This meant waiting for wait calls on them to return.
 I had a task running concurrently that is waiting on these processes. So &lsquo;all&rsquo; I had to do was make sure the application does not exit until these tasks are done." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://words.yuvi.in/post/devlog-2018-12-24/" /><meta property="article:published_time" content="2018-12-24T10:51:57-08:00"/>
-<meta property="article:modified_time" content="2018-12-24T10:51:57-08:00"/>
+<meta property="og:url" content="http://words.yuvi.in/post/devlog-2018-12-24/" />
+<meta property="article:published_time" content="2018-12-24T10:51:57-08:00" />
+<meta property="article:modified_time" content="2018-12-24T10:51:57-08:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Devlog 2018 12 24"/>
 <meta name="twitter:description" content="Gracefully exiting asyncio application Continuing yesterday&rsquo;s work on my simple supervisor library, I continued trying to propagate signals cleanly to child processes before exiting. I remembered that it isn&rsquo;t enough to just propagate signals - you also have to actually reap them. This meant waiting for wait calls on them to return.
 I had a task running concurrently that is waiting on these processes. So &lsquo;all&rsquo; I had to do was make sure the application does not exit until these tasks are done."/>
-<meta name="generator" content="Hugo 0.47.1" />
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -24,7 +26,7 @@ I had a task running concurrently that is waiting on these processes. So &lsquo;
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "Devlog 2018 12 24",
-  "url": "http://words.yuvi.in/post/devlog-2018-12-24/",
+  "url": "http:\/\/words.yuvi.in\/post\/devlog-2018-12-24\/",
   "wordCount": "462",
   "datePublished": "2018-12-24T10:51:57-08:00",
   "dateModified": "2018-12-24T10:51:57-08:00",
@@ -87,44 +89,34 @@ I had a task running concurrently that is waiting on these processes. So &lsquo;
 
 </p>
   </header>
-  
-
-<h2 id="gracefully-exiting-asyncio-application">Gracefully exiting asyncio application</h2>
-
+  <h2 id="gracefully-exiting-asyncio-application">Gracefully exiting asyncio application</h2>
 <p>Continuing yesterday&rsquo;s work on my <a href="https://github.com/yuvipanda/simpervisor">simple supervisor library</a>,
 I continued trying to propagate signals cleanly to child processes
 before exiting. I remembered that it isn&rsquo;t enough to just propagate
 signals - you also have to actually reap them. This meant waiting
 for <code>wait</code> calls on them to return.</p>
-
 <p>I had a task running concurrently that is waiting on these
 processes. So &lsquo;all&rsquo; I had to do was make sure the application
 does <em>not</em> exit until these tasks are done. This turned
 out to be harder than I thought! After a bunch of reading, I
 recognized that what I needed to do was make sure I wait
 for all pending tasks before actually exiting the application.</p>
-
 <p>This was more involved than I thought. It also must be done
 at the application level rather than in the library - you don&rsquo;t
 want libraries doing sys.exit, and definitely don&rsquo;t want them
 closing event loops.</p>
-
 <p>After a bunch of looking and playing, it <em>looks</em> like what I want is
 in my application code is something like:</p>
-
-<pre><code class="language-python">if __name__ == '__main__':
-    loop = asyncio.get_event_loop()
-    try:
-        loop.run_until_complete(main())
-    finally:
-        loop.run_until_complete(asyncio.gather(*asyncio.Task.all_tasks()))
-        loop.close()
-</code></pre>
-
-<p>This waits for all tasks to complete before exiting, and seems
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+    loop <span style="color:#f92672">=</span> asyncio<span style="color:#f92672">.</span>get_event_loop()
+    <span style="color:#66d9ef">try</span>:
+        loop<span style="color:#f92672">.</span>run_until_complete(main())
+    <span style="color:#66d9ef">finally</span>:
+        loop<span style="color:#f92672">.</span>run_until_complete(asyncio<span style="color:#f92672">.</span>gather(<span style="color:#f92672">*</span>asyncio<span style="color:#f92672">.</span>Task<span style="color:#f92672">.</span>all_tasks()))
+        loop<span style="color:#f92672">.</span>close()
+</code></pre></div><p>This waits for all tasks to complete before exiting, and seems
 to make sure all child processes are reaped. However, I have a
 few unresolved questions:</p>
-
 <ol>
 <li>What happens when one of the tasks is designed to run forever,
 and never exit? Should we cancel all tasks? Cancel tasks after
@@ -134,20 +126,16 @@ appropriate.</li>
 abandoned? This seems important - can tasks keep adding more
 tasks in a loop?</li>
 </ol>
-
 <p>I am getting a better handle on what people mean by &lsquo;asyncio is
 more complicated than needed&rsquo;. I&rsquo;m going to find places to read
 up on asyncio internals - particularly how the list of pending
 tasks is maintained.</p>
-
 <p>This <a href="https://www.roguelynn.com/words/asyncio-we-did-it-wrong-pt-1/">series of blog posts</a>
 and <a href="https://www.youtube.com/watch?v=1lJDZx6f6tY">this EuroPython talk</a>
 from <a href="https://www.roguelynn.com/">Lynn Root</a> helped a lot.
 So did <a href="https://github.com/saghul">Saúl Ibarra Corretgé</a> (one of the asyncio core devs)
 talk on <a href="https://www.youtube.com/watch?v=HppNu0-ANYw">asyncio internals</a></p>
-
 <h3 id="testing">Testing</h3>
-
 <p>Testing code that involves asyncio, signals and processes is
 hard. I attempted to do so with <code>os.fork</code>, but decided that is
 super-hard mode and I&rsquo;d rather not play. Instead, I wrote Python
@@ -156,7 +144,6 @@ stdout to communicate back to the parent process. The child process&rsquo;
 code itself is <a href="https://github.com/yuvipanda/simpervisor/blob/b130203a0a497d26f438a6ab3c9511a3c3de60ab/tests/test_atexitasync.py#L13">inline</a>
 in the test file, which is terrible. I am going to move it to its
 own file.</p>
-
 <p>I also added tests for multiple signal handlers. I&rsquo;ve been writing
 a lot more tests in the last few months than I was before. I credit
 <a href="https://github.com/betatim">Tim Head</a> for a lot of this. It definitely
@@ -202,7 +189,6 @@ gives me a lot more confidence in my code.</p>
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -210,7 +196,6 @@ gives me a lot more confidence in my code.</p>
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -228,6 +213,8 @@ gives me a lot more confidence in my code.</p>
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -235,8 +222,6 @@ gives me a lot more confidence in my code.</p>
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>

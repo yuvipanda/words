@@ -10,14 +10,16 @@
 It was a hacky solution, and also had complications when used to launch shells. It wasn&rsquo;t passing in all the environment varialbes it should, causing interesting-to-debug issues. sudo rules were complex, and hard to do securely.
 I had also been looking for an excuse to learn more Golang, so I ended up writing systemd-simple-containment or ssc." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://words.yuvi.in/post/systemd-simple-containment/" /><meta property="article:published_time" content="2017-03-31T23:23:52-07:00"/>
-<meta property="article:modified_time" content="2017-03-31T23:23:52-07:00"/>
+<meta property="og:url" content="http://words.yuvi.in/post/systemd-simple-containment/" />
+<meta property="article:published_time" content="2017-03-31T23:23:52-07:00" />
+<meta property="article:modified_time" content="2017-03-31T23:23:52-07:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="systemd simple containment for GUI applications &amp; shells"/>
 <meta name="twitter:description" content="I earlier had a vaguely working setup for making sure browsers, shells and other applications don&rsquo;t eat all RAM / CPU on my machine with systemd &#43; sudo &#43; shell scripts.
 It was a hacky solution, and also had complications when used to launch shells. It wasn&rsquo;t passing in all the environment varialbes it should, causing interesting-to-debug issues. sudo rules were complex, and hard to do securely.
 I had also been looking for an excuse to learn more Golang, so I ended up writing systemd-simple-containment or ssc."/>
-<meta name="generator" content="Hugo 0.47.1" />
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -25,8 +27,8 @@ I had also been looking for an excuse to learn more Golang, so I ended up writin
 {
   "@context": "http://schema.org",
   "@type": "BlogPosting",
-  "headline": "systemd simple containment for GUI applications &amp; shells",
-  "url": "http://words.yuvi.in/post/systemd-simple-containment/",
+  "headline": "systemd simple containment for GUI applications \x26 shells",
+  "url": "http:\/\/words.yuvi.in\/post\/systemd-simple-containment\/",
   "wordCount": "463",
   "datePublished": "2017-03-31T23:23:52-07:00",
   "dateModified": "2017-03-31T23:23:52-07:00",
@@ -90,28 +92,18 @@ I had also been looking for an excuse to learn more Golang, so I ended up writin
 </p>
   </header>
   <p>I earlier had <a href="http://words.yuvi.in/post/systemd-gui-applications/">a vaguely working setup</a> for making sure browsers, shells and other applications don&rsquo;t eat all RAM / CPU on my machine with systemd + sudo + shell scripts.</p>
-
 <p>It was a hacky solution, and also had complications when used to launch shells. It wasn&rsquo;t passing in all the environment varialbes it should, causing interesting-to-debug issues. <code>sudo</code> rules were complex, and hard to do securely.</p>
-
 <p>I had also been looking for an excuse to learn more Golang, so I ended up writing <a href="https://github.com/yuvipanda/systemd-simple-containment"><code>systemd-simple-containment</code></a> or <code>ssc</code>.</p>
-
 <p>It&rsquo;s a simple golang application that produces a binary that can be <a href="https://en.wikipedia.org/wiki/Setuid"><code>setuid</code></a> to <code>root</code>, and thus get around all our <code>sudo</code> complexity, at the price of having to be very, very careful about the code. Fortunately, it&rsquo;s short enough (~100 lines) and <code>systemd-run</code> helps it keep the following invariants:</p>
-
 <ol>
 <li>It will never spawn any executable as any user other than the &lsquo;real&rsquo; uid / gid of the user calling the binary.</li>
 <li>It doesn&rsquo;t allow arbitrary systemd <code>properties</code> to be set, ensuring a more limited attack surface.</li>
 </ol>
-
 <p>However, this is the first time I&rsquo;m playing with setuid and with Go, so I probably fucked something up. I feel ok enough about my understanding of real and effective uids for now to use it myself, but not to recommend it to other people. Hopefully I&rsquo;ll be confident enough say that soon :)</p>
-
 <p>By using a real programming language, I also easily get commandline flags for sharing tty or not (so I can use the same program for launching GUI &amp; interactive terminal applications), pass all environment variables through (which can&rsquo;t be just standard child inheritence, since <code>systemd-run</code> doesn&rsquo;t work that way) &amp; the ability to setuid (you can&rsquo;t do that easily to a script).</p>
-
 <p>I was sure I&rsquo;d hate writing go because of the constant <code>if err != nil</code> checks, but it hasn&rsquo;t bothered me that much. I would like to write more Go, to get a better feel for it. This code is too short to like a language, but I definitely hate it less :)</p>
-
 <p>Anyway, now I can launch GUI applications with <code>ssc -tty=false -isolation=strict firefox</code> and it does the right thing. I currently have available <code>-isolation=strict</code> and <code>-isolation=relaxed</code>, the former performing stronger sandboxing (NoNewPrivileges, PrivateTmp) than the latter (just MemoryMax). i&rsquo;ll slowly add more protections here, but just keep two modes (ideally).</p>
-
 <p>My Gnome Terminal shell command is now <code>ssc -isolation=relaxed /bin/bash -i</code> and it works great :)</p>
-
 <p>I am pretty happy with <code>ssc</code> as it exists now. Only thing I now want to do is to be able to use it from the GNOME launcher (I am using GNOME3 with gnome-shell). Apparently <em>shortcuts</em> are no longer cool and hence pretty hard to create in modern desktop environments :| I shall keep digging!</p>
 
 
@@ -154,7 +146,6 @@ I had also been looking for an excuse to learn more Golang, so I ended up writin
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -162,7 +153,6 @@ I had also been looking for an excuse to learn more Golang, so I ended up writin
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -180,6 +170,8 @@ I had also been looking for an excuse to learn more Golang, so I ended up writin
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -187,8 +179,6 @@ I had also been looking for an excuse to learn more Golang, so I ended up writin
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>

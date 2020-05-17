@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>kubernetes on Yuvi Panda</title>
@@ -18,7 +18,7 @@
       
       <guid>http://words.yuvi.in/post/kubectl-rbac/</guid>
       <description>Recently I had to write some code that had to call the kubernetes API directly, without any language wrappers. While there is pretty good reference docs, I didn&amp;rsquo;t want to go and construct all the JSON manually in my programming language.
-I discovered that kubectl&amp;rsquo;s -v parameter is very useful for this! With this, I can do the following:
+I discovered that kubectl&#39;s -v parameter is very useful for this! With this, I can do the following:
  Perform the actions I need to perform with just kubectl commands Pass -v=8 to kubectl when doing this, and this will print all the HTTP traffic (requests and responses!</description>
     </item>
     

@@ -5,15 +5,16 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="Kubernetes" />
+<meta property="og:title" content="kubernetes" />
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/categories/kubernetes/" />
-<meta property="og:updated_time" content="2018-01-11T15:15:58-08:00"/>
+<meta property="og:updated_time" content="2018-01-11T15:15:58-08:00" />
+
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Kubernetes"/>
+<meta name="twitter:title" content="kubernetes"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
-<meta name="generator" content="Hugo 0.47.1" />
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -22,14 +23,14 @@
   "@context": "http://schema.org",
   "@type": "Blog",
   "headline": "Yuvi Panda",
-  "url" : "http://words.yuvi.in/categories/kubernetes/",
+  "url" : "http:\/\/words.yuvi.in\/categories\/kubernetes\/",
   "author": {
     "@type": "Person",
     "name": ""
   },
   "dateModified": "2018-01-11T15:15:58-08:00",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
-  "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
+  "description": "[JupyterHub](https:\/\/github.com\/jupyterhub\/jupyterhub) | [MyBinder](https:\/\/mybinder.org) | [Kubernetes](https:\/\/k8s.io) | Open Culture"
 }
 </script>
 
@@ -94,54 +95,38 @@
   <p>Recently I had to write some code that had to call the kubernetes API directly,
 without any language wrappers. While there is pretty good <a href="https://kubernetes.io/docs/reference/">reference docs</a>,
 I didn&rsquo;t want to go and construct all the JSON manually in my programming language.</p>
-
-<p>I discovered that <code>kubectl</code>&rsquo;s <code>-v</code> parameter is very useful for this! With this,
+<p>I discovered that <code>kubectl</code>'s <code>-v</code> parameter is very useful for this! With this,
 I can do the following:</p>
-
 <ol>
 <li>Perform the actions I need to perform with just <code>kubectl</code> commands</li>
 <li>Pass <code>-v=8</code> to kubectl when doing this, and this will print all the HTTP traffic
 (requests and responses!) in an easy to read way</li>
 <li>Copy paste the JSON requests and template them as needed!</li>
 </ol>
-
 <p>This was very useful! The fact you can see the response bodies is also nice,
 since it gives you a good intuition of how to handle this in your own code.</p>
-
 <p>If you&rsquo;re shelling out to <code>kubectl</code> directly in your code (for some reason!),
 you can also use this to figure out all the RBAC rules your code would need. For
 example, if I&rsquo;m going to run the following in my script:</p>
-
-<pre><code class="language-bash">kubectl get node
-</code></pre>
-
-<p>and need to figure out which RBAC rules are needed for this, I can run:</p>
-
-<pre><code class="language-bash">kubectl -v=8 get node 2&gt;&amp;1 | grep -P 'GET|POST|DELETE|PATCH|PUT'
-</code></pre>
-
-<p>This should list all the API requests the code is making, making it easier
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl get node
+</code></pre></div><p>and need to figure out which RBAC rules are needed for this, I can run:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl -v<span style="color:#f92672">=</span><span style="color:#ae81ff">8</span> get node 2&gt;&amp;<span style="color:#ae81ff">1</span> | grep -P <span style="color:#e6db74">&#39;GET|POST|DELETE|PATCH|PUT&#39;</span>
+</code></pre></div><p>This should list all the API requests the code is making, making it easier
 to figure out what rules are needed.</p>
-
 <p>Note that you might have to <code>rm -rf ~/.kube/cache</code> to &lsquo;really&rsquo; get the
 full API requests list, since <code>kubectl</code> caches a bunch of API autodiscovery.
 The minimum RBAC for kubectl is:</p>
-
-<pre><code class="language-yaml">kind: ClusterRole
-apiVersion: rbac.authorization.k8s.io/v1beta1
-metadata:
-  name: kubectl-minimum
-rules:
-- nonResourceURLs: [&quot;/api&quot;, &quot;/apis/*&quot;]
-  verbs: [&quot;get&quot;]
-</code></pre>
-
-<p>You will need to add additional rules for the specific commands you
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">kind</span>: ClusterRole
+<span style="color:#66d9ef">apiVersion</span>: rbac.authorization.k8s.io/v1beta1
+<span style="color:#66d9ef">metadata</span>:
+  <span style="color:#66d9ef">name</span>: kubectl-minimum
+<span style="color:#66d9ef">rules</span>:
+- <span style="color:#66d9ef">nonResourceURLs</span>: [<span style="color:#e6db74">&#34;/api&#34;</span>, <span style="color:#e6db74">&#34;/apis/*&#34;</span>]
+  <span style="color:#66d9ef">verbs</span>: [<span style="color:#e6db74">&#34;get&#34;</span>]
+</code></pre></div><p>You will need to add additional rules for the specific commands you
 want to execute.</p>
-
 <p><strong>More Kubectl Tips</strong></p>
-
-<ol>
+<ol start="0">
 <li><a href="https://schd.ws/hosted_files/kccncna17/de/Stupid%20Kubectl%20Tricks.pdf">Slides from the &lsquo;Stupid Kubectl Tricks&rsquo; KubeCon talk</a></li>
 <li><a href="https://coreos.com/blog/kubectl-tips-and-tricks">On the CoreOS blog</a></li>
 <li><a href="https://kubernetes.io/docs/reference/kubectl/cheatsheet/">Terse but useful official documentation</a></li>
@@ -168,7 +153,6 @@ want to execute.</p>
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -176,7 +160,6 @@ want to execute.</p>
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -194,6 +177,8 @@ want to execute.</p>
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -201,8 +186,6 @@ want to execute.</p>
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>

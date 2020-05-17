@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
@@ -214,6 +214,11 @@
   
   <url>
     <loc>http://words.yuvi.in/post/liberal-software/</loc>
+    <lastmod>2017-03-26T22:45:36-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/talk/</loc>
     <lastmod>2017-03-26T22:45:36-07:00</lastmod>
   </url>
   
@@ -1068,6 +1073,11 @@
   </url>
   
   <url>
+    <loc>http://words.yuvi.in/tags/photo/</loc>
+    <lastmod>2011-06-09T15:03:25+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/tags/photography/</loc>
     <lastmod>2011-06-09T15:03:25+00:00</lastmod>
   </url>
@@ -1119,11 +1129,6 @@
   
   <url>
     <loc>http://words.yuvi.in/my-new-canon-550d-from-flipkart/</loc>
-    <lastmod>2011-06-07T13:20:40+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/photo/</loc>
     <lastmod>2011-06-07T13:20:40+00:00</lastmod>
   </url>
   
@@ -1194,11 +1199,6 @@
   
   <url>
     <loc>http://words.yuvi.in/gstreamer-101-at-gnome-asia-2011/</loc>
-    <lastmod>2011-04-10T23:02:48+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/talk/</loc>
     <lastmod>2011-04-10T23:02:48+00:00</lastmod>
   </url>
   

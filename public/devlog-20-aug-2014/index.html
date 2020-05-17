@@ -7,15 +7,17 @@
 
 <meta property="og:title" content="Devlog for 20 Aug 2014" />
 <meta property="og:description" content="Woke up at 11AM again! w000t!
- Fixed a stupid bug in Quarry that made it fail if MySQL decided that a column you were selecting is a Decimal. Fixed this in time for&#8230; Helped out with a webinar from J-Mo for people to learn SQL and do research against Wikimedia stuff with Quarry! Went without a glitch mostly, so yay :) Oren asked for an API for Quarry, I&#8217;ll investigate ways to get that done Found that some queries against enwiki succeed on s1." />
+ Fixed a stupid bug in Quarry that made it fail if MySQL decided that a column you were selecting is a Decimal. Fixed this in time for… Helped out with a webinar from J-Mo for people to learn SQL and do research against Wikimedia stuff with Quarry! Went without a glitch mostly, so yay :) Oren asked for an API for Quarry, I’ll investigate ways to get that done Found that some queries against enwiki succeed on s1." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://words.yuvi.in/devlog-20-aug-2014/" /><meta property="article:published_time" content="2014-08-21T03:39:15&#43;00:00"/>
-<meta property="article:modified_time" content="2014-08-21T03:39:15&#43;00:00"/>
+<meta property="og:url" content="http://words.yuvi.in/devlog-20-aug-2014/" />
+<meta property="article:published_time" content="2014-08-21T03:39:15+00:00" />
+<meta property="article:modified_time" content="2014-08-21T03:39:15+00:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Devlog for 20 Aug 2014"/>
 <meta name="twitter:description" content="Woke up at 11AM again! w000t!
- Fixed a stupid bug in Quarry that made it fail if MySQL decided that a column you were selecting is a Decimal. Fixed this in time for&#8230; Helped out with a webinar from J-Mo for people to learn SQL and do research against Wikimedia stuff with Quarry! Went without a glitch mostly, so yay :) Oren asked for an API for Quarry, I&#8217;ll investigate ways to get that done Found that some queries against enwiki succeed on s1."/>
-<meta name="generator" content="Hugo 0.47.1" />
+ Fixed a stupid bug in Quarry that made it fail if MySQL decided that a column you were selecting is a Decimal. Fixed this in time for… Helped out with a webinar from J-Mo for people to learn SQL and do research against Wikimedia stuff with Quarry! Went without a glitch mostly, so yay :) Oren asked for an API for Quarry, I’ll investigate ways to get that done Found that some queries against enwiki succeed on s1."/>
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -24,10 +26,10 @@
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "Devlog for 20 Aug 2014",
-  "url": "http://words.yuvi.in/devlog-20-aug-2014/",
+  "url": "http:\/\/words.yuvi.in\/devlog-20-aug-2014\/",
   "wordCount": "243",
-  "datePublished": "2014-08-21T03:39:15&#43;00:00",
-  "dateModified": "2014-08-21T03:39:15&#43;00:00",
+  "datePublished": "2014-08-21T03:39:15\x2b00:00",
+  "dateModified": "2014-08-21T03:39:15\x2b00:00",
   "author": {
     "@type": "Person",
     "name": "yuvipanda"
@@ -88,13 +90,12 @@
 </p>
   </header>
   <p>Woke up at 11AM again! w000t!</p>
-
 <ul>
-<li>Fixed a stupid bug in Quarry that made it fail if MySQL decided that a column you were selecting is a <code>Decimal</code>. Fixed this in time for&#8230;</li>
-<li>Helped out with a <a href="https://plus.google.com/u/0/b/117126229120807344920/events/cngcjcmm1tcn1omqpalcm686044">webinar</a> from J-Mo for people to learn SQL and do research against Wikimedia stuff with Quarry! Went without a glitch mostly, so yay :) Oren asked for an API for Quarry, I&#8217;ll investigate ways to get that done</li>
+<li>Fixed a stupid bug in Quarry that made it fail if MySQL decided that a column you were selecting is a <code>Decimal</code>. Fixed this in time for…</li>
+<li>Helped out with a <a href="https://plus.google.com/u/0/b/117126229120807344920/events/cngcjcmm1tcn1omqpalcm686044">webinar</a> from J-Mo for people to learn SQL and do research against Wikimedia stuff with Quarry! Went without a glitch mostly, so yay :) Oren asked for an API for Quarry, I’ll investigate ways to get that done</li>
 <li>Found that some queries against enwiki succeed on <code>s1.labsdb</code> but not on <code>s4.labsdb</code>. I attribute this to cache characteristics, and have switched Quarry to use s1 for now.</li>
-<li>Did more work on <a href="https://github.com/Ironholds/WPDMZ">DMZ</a>, getting in place a runner / processor infrastructure and sqlite backed intermediary storage so I can write simpler code to get the data I want. Super excited to see how this goes. It&#8217;ll be much easier for me to add new queries now.</li>
-<li>More work on DMZ! I had a late night sprint and split edits by mobile and desktop (and was surprised by seeing how much lesser edits came from mobile). Next would be to gather up population and internet penetration data and then GO MAKE SOME GRAPHS, probably with iPython. I&#8217;m returning to making graphs for real after, what, 6 years or so? :) I was using C# and Excel then :) /nick ExcitedPanda</li>
+<li>Did more work on <a href="https://github.com/Ironholds/WPDMZ">DMZ</a>, getting in place a runner / processor infrastructure and sqlite backed intermediary storage so I can write simpler code to get the data I want. Super excited to see how this goes. It’ll be much easier for me to add new queries now.</li>
+<li>More work on DMZ! I had a late night sprint and split edits by mobile and desktop (and was surprised by seeing how much lesser edits came from mobile). Next would be to gather up population and internet penetration data and then GO MAKE SOME GRAPHS, probably with iPython. I’m returning to making graphs for real after, what, 6 years or so? :) I was using C# and Excel then :) /nick ExcitedPanda</li>
 <li>Also made some progress on our makeshift Android CI-ish build system for the Wikipedia app. Should be done soon.</li>
 </ul>
 
@@ -138,7 +139,6 @@
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -146,7 +146,6 @@
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -164,6 +163,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -171,8 +172,6 @@
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>

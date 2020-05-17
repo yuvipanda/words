@@ -6,14 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <meta property="og:title" content="DevLog: December 21 2011" />
-<meta property="og:description" content="livetrains work. Trying to move (minimal) build system to waf. Somewhat complicated, not as fluid as I&#8217;d like. Go to rake. Feel weird about starting from scratch, come back to waf. Not get anything done Another rake diversion. Final Makefile editing desperation. I give up &#8211; I need to spend atleast a day to get back on proper build tools. That day is not today.  Added feature to change font size to wikipedia app." />
+<meta property="og:description" content="livetrains work. Trying to move (minimal) build system to waf. Somewhat complicated, not as fluid as I’d like. Go to rake. Feel weird about starting from scratch, come back to waf. Not get anything done Another rake diversion. Final Makefile editing desperation. I give up – I need to spend atleast a day to get back on proper build tools. That day is not today. Added feature to change font size to wikipedia app." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://words.yuvi.in/devlog-december-21-2011/" /><meta property="article:published_time" content="2011-12-21T23:55:51&#43;00:00"/>
-<meta property="article:modified_time" content="2011-12-21T23:55:51&#43;00:00"/>
+<meta property="og:url" content="http://words.yuvi.in/devlog-december-21-2011/" />
+<meta property="article:published_time" content="2011-12-21T23:55:51+00:00" />
+<meta property="article:modified_time" content="2011-12-21T23:55:51+00:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="DevLog: December 21 2011"/>
-<meta name="twitter:description" content="livetrains work. Trying to move (minimal) build system to waf. Somewhat complicated, not as fluid as I&#8217;d like. Go to rake. Feel weird about starting from scratch, come back to waf. Not get anything done Another rake diversion. Final Makefile editing desperation. I give up &#8211; I need to spend atleast a day to get back on proper build tools. That day is not today.  Added feature to change font size to wikipedia app."/>
-<meta name="generator" content="Hugo 0.47.1" />
+<meta name="twitter:description" content="livetrains work. Trying to move (minimal) build system to waf. Somewhat complicated, not as fluid as I’d like. Go to rake. Feel weird about starting from scratch, come back to waf. Not get anything done Another rake diversion. Final Makefile editing desperation. I give up – I need to spend atleast a day to get back on proper build tools. That day is not today. Added feature to change font size to wikipedia app."/>
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -22,10 +24,10 @@
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "DevLog: December 21 2011",
-  "url": "http://words.yuvi.in/devlog-december-21-2011/",
+  "url": "http:\/\/words.yuvi.in\/devlog-december-21-2011\/",
   "wordCount": "229",
-  "datePublished": "2011-12-21T23:55:51&#43;00:00",
-  "dateModified": "2011-12-21T23:55:51&#43;00:00",
+  "datePublished": "2011-12-21T23:55:51\x2b00:00",
+  "dateModified": "2011-12-21T23:55:51\x2b00:00",
   "author": {
     "@type": "Person",
     "name": "yuvipanda"
@@ -86,13 +88,10 @@
 </p>
   </header>
   <ol>
-<li>livetrains work. Trying to move (minimal) build system to waf. Somewhat complicated, not as fluid as I&#8217;d like. Go to rake. Feel weird about starting from scratch, come back to waf. Not get anything done Another rake diversion. Final Makefile editing desperation. I give up &#8211; I need to spend atleast a day to get back on proper build tools. That day is not today.
-
-<ol>
-<li>Added feature to change font size to wikipedia app. That took almost a couple of days and ended up being less than 20 lines of code. First was trying to enable pinch and zoom, but only for an iframe &#8211; proved impossible. And then a long time of headwalling about how I&#8217;m not able to manipulate the DOM inside the iframe (despite code in other places being able to do it just fine (no crossdomain issues here)), I had given up and moved elsewhere. Finally brion suggested I try inserting a <link> into <head>, which actually did work. So much for the browser being sane</li>
-<li>&#8216;Refined&#8217; the search behavior of the wikipedia app a bit more. Also got bit by a difference between zepto (that we use) and jQuery (whose docs I have to read, since zepto by itself seems to have no docs). Had to read through the code to fix it, and managed to.</li>
+<li>livetrains work. Trying to move (minimal) build system to waf. Somewhat complicated, not as fluid as I’d like. Go to rake. Feel weird about starting from scratch, come back to waf. Not get anything done Another rake diversion. Final Makefile editing desperation. I give up – I need to spend atleast a day to get back on proper build tools. That day is not today.</li>
+<li>Added feature to change font size to wikipedia app. That took almost a couple of days and ended up being less than 20 lines of code. First was trying to enable pinch and zoom, but only for an iframe – proved impossible. And then a long time of headwalling about how I’m not able to manipulate the DOM inside the iframe (despite code in other places being able to do it just fine (no crossdomain issues here)), I had given up and moved elsewhere. Finally brion suggested I try inserting a <!-- raw HTML omitted --> into <!-- raw HTML omitted -->, which actually did work. So much for the browser being sane</li>
+<li>‘Refined’ the search behavior of the wikipedia app a bit more. Also got bit by a difference between zepto (that we use) and jQuery (whose docs I have to read, since zepto by itself seems to have no docs). Had to read through the code to fix it, and managed to.</li>
 <li>Closed a *lot* of bugs. BOY THAT FEELS GREAT!</li>
-</ol></li>
 </ol>
 
 
@@ -135,7 +134,6 @@
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -143,7 +141,6 @@
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -161,6 +158,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -168,8 +167,6 @@
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>

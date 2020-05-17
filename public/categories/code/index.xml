@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>code on Yuvi Panda</title>
@@ -79,7 +79,7 @@ JupyterCon JupyterCon is in NYC towards the end of August, and it is going to se
       
       <guid>http://words.yuvi.in/post/kubectl-rbac/</guid>
       <description>Recently I had to write some code that had to call the kubernetes API directly, without any language wrappers. While there is pretty good reference docs, I didn&amp;rsquo;t want to go and construct all the JSON manually in my programming language.
-I discovered that kubectl&amp;rsquo;s -v parameter is very useful for this! With this, I can do the following:
+I discovered that kubectl&#39;s -v parameter is very useful for this! With this, I can do the following:
  Perform the actions I need to perform with just kubectl commands Pass -v=8 to kubectl when doing this, and this will print all the HTTP traffic (requests and responses!</description>
     </item>
     
@@ -89,7 +89,7 @@ I discovered that kubectl&amp;rsquo;s -v parameter is very useful for this! With
       <pubDate>Mon, 28 Mar 2016 05:29:05 +0000</pubDate>
       
       <guid>http://words.yuvi.in/side-project-ua-emoji-firefox-extension/</guid>
-      <description>Note: I&amp;#8217;m trying to spend time explicitly writing random side projects that are not related to what I&amp;#8217;m actively working on as my main project in some form.
+      <description>Note: I’m trying to spend time explicitly writing random side projects that are not related to what I’m actively working on as my main project in some form.
 A random thread started by Ironholds on a random mailing list I was wearily catching up on contained a joke from bearloga about malformed User Agents. This prompted me to write UAuliver (source), a Firefox extension that randomizes your user agent to be a random string of emoji.</description>
     </item>
     
@@ -100,7 +100,7 @@ A random thread started by Ironholds on a random mailing list I was wearily catc
       
       <guid>http://words.yuvi.in/dns-servers-localhost-asynchronous-code/</guid>
       <description>localhost is always 127.0.0.1, right? Nope, can also be ::1 if your system only has IPV6 (apparently).
-Asking a DNS server for an A record for localhost should give you back 127.0.0.1 right? Nope &amp;#8211; it varies wildly! 8.8.8.8 gives me an NXDOMAIN which means it tells you straight up THIS DOMAIN DOES NOT EXIST! Which is true, since localhost isn&amp;#8217;t a domain. But if you ask the same thing of any dnsmasq server, it&amp;#8217;ll tell you localhost is 127.</description>
+Asking a DNS server for an A record for localhost should give you back 127.0.0.1 right? Nope – it varies wildly! 8.8.8.8 gives me an NXDOMAIN which means it tells you straight up THIS DOMAIN DOES NOT EXIST! Which is true, since localhost isn’t a domain. But if you ask the same thing of any dnsmasq server, it’ll tell you localhost is 127.</description>
     </item>
     
     <item>
@@ -110,7 +110,7 @@ Asking a DNS server for an A record for localhost should give you back 127.0.0.1
       
       <guid>http://words.yuvi.in/simple-python-packaging-debian-ubuntu/</guid>
       <description>(As requested by Jean-Fred)
-One of the &amp;#8216;pain points&amp;#8217; with working on deploying python stuff at Wikimedia is that pip and virtualenvs are banned on production, for some (what I now understand as) good reasons (the solid Signing / Security issues with PYPI, and the slightly less solid but nonetheless valid &amp;#8216;If we use pip for python and gem for ruby and npm for node, EXPLOSION OF PACKAGE MANAGERS and makes things harder to manage&amp;#8217;).</description>
+One of the ‘pain points’ with working on deploying python stuff at Wikimedia is that pip and virtualenvs are banned on production, for some (what I now understand as) good reasons (the solid Signing / Security issues with PYPI, and the slightly less solid but nonetheless valid ‘If we use pip for python and gem for ruby and npm for node, EXPLOSION OF PACKAGE MANAGERS and makes things harder to manage’).</description>
     </item>
     
     <item>
@@ -119,8 +119,8 @@ One of the &amp;#8216;pain points&amp;#8217; with working on deploying python st
       <pubDate>Mon, 18 Aug 2014 12:58:45 +0000</pubDate>
       
       <guid>http://words.yuvi.in/paying-irccloud/</guid>
-      <description>I&amp;#8217;ve started paying for IRCCloud.
-It is the first &amp;#8216;service&amp;#8217; I am paying for as a subscriber, I think. I&amp;#8217;ve considered doing that for a long time, but &amp;#8216;paying for IRC&amp;#8217; just felt&amp;#8230; odd. I&amp;#8217;ve been using ZNC + LimeChat. It&amp;#8217;s decent, but sucks on Mobile. Keeping a socket open all the time on a phone just kills the battery, plus the UX on most Android clients sucks.
+      <description>I’ve started paying for IRCCloud.
+It is the first ‘service’ I am paying for as a subscriber, I think. I’ve considered doing that for a long time, but ‘paying for IRC’ just felt… odd. I’ve been using ZNC + LimeChat. It’s decent, but sucks on Mobile. Keeping a socket open all the time on a phone just kills the battery, plus the UX on most Android clients sucks.
 So after seeing Sam Smith use IRCCloud during Wikimania, I made the plunge and paid for IRCCloud.</description>
     </item>
     
@@ -130,7 +130,7 @@ So after seeing Sam Smith use IRCCloud during Wikimania, I made the plunge and p
       <pubDate>Sun, 15 Dec 2013 02:20:31 +0000</pubDate>
       
       <guid>http://words.yuvi.in/write-once-debug-everywhere/</guid>
-      <description>&amp;#8220;Write once, attempt to debug everywhere&amp;#8221; is probably way more accurate than &amp;#8220;Write once, run anywhere&amp;#8221; &amp;#8211; at least for GUI apps. There&amp;#8217;s something rather special about ideas that are theoretically amazingly wonderful yet end up being a major pain in the butt when you try to put them in practice, isn&amp;#8217;t it?
+      <description>“Write once, attempt to debug everywhere” is probably way more accurate than “Write once, run anywhere” – at least for GUI apps. There’s something rather special about ideas that are theoretically amazingly wonderful yet end up being a major pain in the butt when you try to put them in practice, isn’t it?
 The older Wikipedia App happened to be in PhoneGap, and I consider it one of my biggest blunders to not have torn it down on day 0 and rewritten it in something saner.</description>
     </item>
     
@@ -153,8 +153,8 @@ The older Wikipedia App happened to be in PhoneGap, and I consider it one of my 
 Became: $a ? ( $b || $c ) : ( $b &amp;amp;&amp;amp; $c )
 Became: count( array_filter( array( $a, $b, $c ) ) ) &amp;gt;= 2
 Became: &amp;quot;$a$b$c&amp;quot; &amp;gt; 1
-God dammit PHP&amp;#8230;
-(from discussion among me, ^d, ori-l, bd808 and anomie on #mediawiki-core about how to represent &amp;#8216;if at least 2 of three conditions are true&amp;#8217;)</description>
+God dammit PHP…
+(from discussion among me, ^d, ori-l, bd808 and anomie on #mediawiki-core about how to represent ‘if at least 2 of three conditions are true’)</description>
     </item>
     
     <item>
@@ -164,7 +164,7 @@ God dammit PHP&amp;#8230;
       
       <guid>http://words.yuvi.in/devlog-for-sun-aug-25-2013/</guid>
       <description>DevLogs have been something I&amp;rsquo;ve not been writing much of of late. Time to fix that!
-WLM Android App Spent some time reviving the WLM Android App. Wasn&amp;rsquo;t too hard, and am surprised at how well it still runs :) Some work still needed to update the templates and other metadata to refer to WLM2013 rather than WLM2012 &amp;#8211; but that should not be too hard. The fact that it is an issue at all is simply because I ripped out all the Campaign related APIs a few weeks ago with my UploadCampaign rewrite.</description>
+WLM Android App Spent some time reviving the WLM Android App. Wasn&amp;rsquo;t too hard, and am surprised at how well it still runs :) Some work still needed to update the templates and other metadata to refer to WLM2013 rather than WLM2012 – but that should not be too hard. The fact that it is an issue at all is simply because I ripped out all the Campaign related APIs a few weeks ago with my UploadCampaign rewrite.</description>
     </item>
     
     <item>
@@ -184,7 +184,7 @@ Aim to limit all lines to a maximum of 79 characters, but up to 99 characters is
       
       <guid>http://words.yuvi.in/sprinkling-some-douchebaginess-in-code/</guid>
       <description>After being frustrated at Java&amp;rsquo;s lack of a generic &amp;lsquo;callback&amp;rsquo; type, I created this interface:
- public interface ContributionUploadProgress { void onUploadStarted(Contribution contribution); boolean isJavaAPieceOfShit(); }  And randomly throw around (with onComplete implementing ContributionUploadProgress)
+ public interface ContributionUploadProgress {void onUploadStarted(Contribution contribution);boolean isJavaAPieceOfShit();}  And randomly throw around (with onComplete implementing ContributionUploadProgress)
  assert onComplete.isJavaAPieceOfShit();  This, of course, is trivial to fix with an IDE. Should be more fun with a dynamic language :)
 (And yes, I removed that code before committing)</description>
     </item>
@@ -195,7 +195,7 @@ Aim to limit all lines to a maximum of 79 characters, but up to 99 characters is
       <pubDate>Mon, 29 Jul 2013 01:18:42 +0000</pubDate>
       
       <guid>http://words.yuvi.in/nitpicking-about-the-order-of-cards/</guid>
-      <description>Someone pointed out this happening on Gerrit&amp;#8230;</description>
+      <description>Someone pointed out this happening on Gerrit…</description>
     </item>
     
     <item>
@@ -204,7 +204,7 @@ Aim to limit all lines to a maximum of 79 characters, but up to 99 characters is
       <pubDate>Thu, 25 Jul 2013 10:52:05 +0000</pubDate>
       
       <guid>http://words.yuvi.in/game-of-life-in-apl/</guid>
-      <description>Ran across a video explaining building Game of Life in APL. Pretty awesome, and surprisingly &amp;#8211; quite understandable too!
+      <description>Ran across a video explaining building Game of Life in APL. Pretty awesome, and surprisingly – quite understandable too!
 I should learn J at some point, I think. My problem with trying to learn such languages is that I find it hard to find something to build that&amp;rsquo;s not a mere academic exercise, and I still do not have a solution as such. Just &amp;lsquo;try harder&amp;rsquo; doesn&amp;rsquo;t really work. Perhaps invent some sort of wonderful number crunching idea and then implement it?</description>
     </item>
     
@@ -215,7 +215,7 @@ I should learn J at some point, I think. My problem with trying to learn such la
       
       <guid>http://words.yuvi.in/first-major-feature-to-commons-deployed/</guid>
       <description>My UploadWizard work has just been deployed to Wikimedia Commons and my name is listed in the on site credits. Special thanks to Mark Traceur for code review!
-This feels very, very nice :) Now to sneak more code into other extensions&amp;#8230;</description>
+This feels very, very nice :) Now to sneak more code into other extensions…</description>
     </item>
     
     <item>
@@ -236,7 +236,7 @@ I was bored, and so there was this. That of course, brought a swift end to the b
       <guid>http://words.yuvi.in/attempting-to-secure-redis-in-a-multi-tenant-environment/</guid>
       <description>When running Redis in a shared cluster/hosting environment (such as Wikimedia Tool Labs, on which I&amp;rsquo;ve been having fun doing a lot of work on), you would want to try to provide at least some guarantee of isolation for your keys from everyone else&amp;rsquo;s keys. Since Redis doesn&amp;rsquo;t do ACLs, this is problematic.
 This can be solved in a couple of ways
-Run a Redis instance for each user This is simple enough to do &amp;#8211; each user runs their own Redis instance, and has full access to it.</description>
+Run a Redis instance for each user This is simple enough to do – each user runs their own Redis instance, and has full access to it.</description>
     </item>
     
     <item>
@@ -245,8 +245,8 @@ Run a Redis instance for each user This is simple enough to do &amp;#8211; each 
       <pubDate>Sun, 21 Apr 2013 21:35:32 +0000</pubDate>
       
       <guid>http://words.yuvi.in/autosuggest-tamil-android-keyboard/</guid>
-      <description>Screenshot of Autosuggest working in Tamil on my variant of the Android keyboard. I&amp;#8217;ve been working on this on and off for the last few months (this is also my final year project in college). I&amp;#8217;ve ported all of the jQuery.IME languages to work on the keyboard natively.
-Now experimenting with Autosuggest. It only needs an appropriate dictionary now and we&amp;#8217;ll be good to go. Currently I&amp;#8217;m getting Autosuggest working only on Tamil, but the plan is to get it to work for all Indian languages.</description>
+      <description>Screenshot of Autosuggest working in Tamil on my variant of the Android keyboard. I’ve been working on this on and off for the last few months (this is also my final year project in college). I’ve ported all of the jQuery.IME languages to work on the keyboard natively.
+Now experimenting with Autosuggest. It only needs an appropriate dictionary now and we’ll be good to go. Currently I’m getting Autosuggest working only on Tamil, but the plan is to get it to work for all Indian languages.</description>
     </item>
     
     <item>
@@ -255,7 +255,7 @@ Now experimenting with Autosuggest. It only needs an appropriate dictionary now 
       <pubDate>Sun, 07 Apr 2013 14:49:24 +0000</pubDate>
       
       <guid>http://words.yuvi.in/bugs-resolved-humorous/</guid>
-      <description>Mediawiki has a number of humorous bug reports, though not as many as I&amp;#8217;d like. Still, they&amp;#8217;re quite funny.
+      <description>Mediawiki has a number of humorous bug reports, though not as many as I’d like. Still, they’re quite funny.
 I think my favorites are the request for RESOLVED MURDERED, the real reason why MediaWiki runs on MySQL, someone asking where the community consensus is to stop Volcanoes exploding, offers of shamanic help, a ground breaking report on US Government corruption, and a warning about zoning laws required for shipping Ponies,</description>
     </item>
     
@@ -265,7 +265,7 @@ I think my favorites are the request for RESOLVED MURDERED, the real reason why 
       <pubDate>Mon, 25 Mar 2013 14:34:57 +0000</pubDate>
       
       <guid>http://words.yuvi.in/tor-flashproxies-browser/</guid>
-      <description>Tor is one of those things that you don&amp;#8217;t really need at all until you really really need it. I don&amp;#8217;t need it right now, but I still try to help it as much as possible. One of the easiest way to do so is to run a flashproxy (has nothing to do with Adobe!) on your browser &amp;#8211; super simple to setup, and effective for people looking for bridges.</description>
+      <description>Tor is one of those things that you don’t really need at all until you really really need it. I don’t need it right now, but I still try to help it as much as possible. One of the easiest way to do so is to run a flashproxy (has nothing to do with Adobe!) on your browser – super simple to setup, and effective for people looking for bridges.</description>
     </item>
     
     <item>
@@ -284,8 +284,8 @@ Mediawiki maintains something similar, but much shorter in size &amp;amp; form, 
       <pubDate>Fri, 22 Mar 2013 22:18:21 +0000</pubDate>
       
       <guid>http://words.yuvi.in/android-regex-bug-null-replacement-matcher-replaceall/</guid>
-      <description>Android&amp;#8217;s Regular Expressions engine is API compatible with the generic Java implementation, but under the hood uses ICU&amp;#8217;s RegEx engine. This usually causes no problems, until it does and then you&amp;#8217;re sortof fucked, but not really.
-On a recent project, a subtle bug in Android&amp;#8217;s Matcher.replaceAll behavior bit me. When replacing values of captured groups (&#39;$1&#39;&amp;lt;/code,&amp;lt;code&amp;gt;&#39;$2&#39;, etc), Android&amp;#8217;s implementation replaced a reference to an empty group with the literal string &#39;null&#39; instead of just skipping it (aka replacing with empty string &#39;&#39;), which is what most other Java implemetations do.</description>
+      <description>Android’s Regular Expressions engine is API compatible with the generic Java implementation, but under the hood uses ICU’s RegEx engine. This usually causes no problems, until it does and then you’re sortof fucked, but not really.
+On a recent project, a subtle bug in Android’s Matcher.replaceAll behavior bit me. When replacing values of captured groups (&#39;$1&#39;&amp;lt;/code,&amp;lt;code&amp;gt;&#39;$2&#39;, etc), Android’s implementation replaced a reference to an empty group with the literal string &#39;null&#39; instead of just skipping it (aka replacing with empty string &#39;&#39;), which is what most other Java implemetations do.</description>
     </item>
     
     <item>
@@ -294,9 +294,9 @@ On a recent project, a subtle bug in Android&amp;#8217;s Matcher.replaceAll beha
       <pubDate>Sun, 27 Jan 2013 16:59:06 +0000</pubDate>
       
       <guid>http://words.yuvi.in/worse-worse/</guid>
-      <description>Richard Gabriel&amp;#8217;s Worse is Better (falsly attributed to jwz by many), is a piece on how LISP lost out to C, despite being &amp;#8216;better&amp;#8217;.
-Jim Waldo&amp;#8217;s Worse is Worse notes, quite accurately, that what us geeks consider &amp;#8216;better&amp;#8217; might not what is, in the context of the universe at large, &amp;#8216;better&amp;#8217;. To quote,
- [&amp;#8230;] what we see is that better is a complicated notion, and can depend on a variety of different metrics.</description>
+      <description>Richard Gabriel’s Worse is Better (falsly attributed to jwz by many), is a piece on how LISP lost out to C, despite being ‘better’.
+Jim Waldo’s Worse is Worse notes, quite accurately, that what us geeks consider ‘better’ might not what is, in the context of the universe at large, ‘better’. To quote,
+ […] what we see is that better is a complicated notion, and can depend on a variety of different metrics.</description>
     </item>
     
     <item>
@@ -314,7 +314,7 @@ Jim Waldo&amp;#8217;s Worse is Worse notes, quite accurately, that what us geeks
       <pubDate>Thu, 18 Oct 2012 14:58:39 +0000</pubDate>
       
       <guid>http://words.yuvi.in/blogging-raspberry-pi/</guid>
-      <description>I&amp;#8217;m blogging from (one of the many) browsers on this Raspberry Pi. Testing setting it up to do slideshows during JSFoo 2012.
+      <description>I’m blogging from (one of the many) browsers on this Raspberry Pi. Testing setting it up to do slideshows during JSFoo 2012.
 THIS IS SO COOL!
 I am now editing this blog post from my new Nexus 7.
 THIS IS SO COOL!
@@ -327,8 +327,8 @@ I am a few years behind the curve on this. Last year was spent slogging my ass o
       <pubDate>Fri, 05 Oct 2012 07:05:45 +0000</pubDate>
       
       <guid>http://words.yuvi.in/house-painters-programming/</guid>
-      <description>We&amp;#8217;re the Michelangelos of the great age of machine intelligence which is yet to come. We&amp;#8217;re sketching out how it&amp;#8217;s all going to look. We&amp;#8217;re at the forefront of solving incredible problems and creating magical devices. &amp;#8211; DanielBMarkham
- If there&amp;#8217;s a great age of machine intelligence to come, then one in a million of us may be a Michelangelo. The rest of us are house-painters, and the houses we paint are slated for demolition within our own lifetimes.</description>
+      <description>We’re the Michelangelos of the great age of machine intelligence which is yet to come. We’re sketching out how it’s all going to look. We’re at the forefront of solving incredible problems and creating magical devices. – DanielBMarkham
+ If there’s a great age of machine intelligence to come, then one in a million of us may be a Michelangelo. The rest of us are house-painters, and the houses we paint are slated for demolition within our own lifetimes.</description>
     </item>
     
     <item>
@@ -337,7 +337,7 @@ I am a few years behind the curve on this. Last year was spent slogging my ass o
       <pubDate>Thu, 08 Mar 2012 12:45:06 +0000</pubDate>
       
       <guid>http://words.yuvi.in/my-vimrc/</guid>
-      <description>I&amp;#8217;ve gotten rid of my Vim repo from GitHub, and switched to using Vundle + DropBox to keep my vim environment safely backed up.
+      <description>I’ve gotten rid of my Vim repo from GitHub, and switched to using Vundle + DropBox to keep my vim environment safely backed up.
 You can find my .vimrc file here. With just this and Vundle setup, I find it much easier to port my settings elsewhere instead of using git.
 Hat tip to tecoholic for pushing me to switch to Vundle :)</description>
     </item>
@@ -348,11 +348,11 @@ Hat tip to tecoholic for pushing me to switch to Vundle :)</description>
       <pubDate>Mon, 20 Feb 2012 20:23:35 +0000</pubDate>
       
       <guid>http://words.yuvi.in/passing-headers-proxying-nginx/</guid>
-      <description>When you&amp;#8217;re proxying requests via nginx, you might assume after reading [the documentation][1] that every header is forwarded, except for the Host and Connection headers.
-You&amp;#8217;d also be wrong.
+      <description>When you’re proxying requests via nginx, you might assume after reading [the documentation][1] that every header is forwarded, except for the Host and Connection headers.
+You’d also be wrong.
 nginx drops all headers with an underscore in them.
 This is a configurable settings. You can turn it on with a simple
-underscores_in_headers on I&amp;#8217;m still baffled as to *why* this is a configuration parameter. And why it is turned off by default.</description>
+I’m still baffled as to *why* this is [a configuration parameter][2]. And why it is turned off by default. And why there is no mention of it in the proxy docs.</description>
     </item>
     
     <item>
@@ -362,7 +362,7 @@ underscores_in_headers on I&amp;#8217;m still baffled as to *why* this is a conf
       
       <guid>http://words.yuvi.in/program/</guid>
       <description>Note: These are almost a decade old. Reproduced as close to memory as possible
-My first memories of programming aren&amp;#8217;t actually C. They were GW-BASIC, and later on, LOGO. I don&amp;#8217;t remember any of my BASIC &amp;#8211; but I do remember the look on my computer science teacher&amp;#8217;s face in 5th grade when I managed to draw a flower with LOGO when everyone else was doing rectangles and lines. I vividly remember it &amp;#8211; you draw an arc for a certain length, then stop, draw another arc in the reverse direction for the same length &amp;#8211; and you have a petal.</description>
+My first memories of programming aren’t actually C. They were GW-BASIC, and later on, LOGO. I don’t remember any of my BASIC – but I do remember the look on my computer science teacher’s face in 5th grade when I managed to draw a flower with LOGO when everyone else was doing rectangles and lines. I vividly remember it – you draw an arc for a certain length, then stop, draw another arc in the reverse direction for the same length – and you have a petal.</description>
     </item>
     
     <item>
@@ -371,8 +371,8 @@ My first memories of programming aren&amp;#8217;t actually C. They were GW-BASIC
       <pubDate>Mon, 28 Nov 2011 10:40:50 +0000</pubDate>
       
       <guid>http://words.yuvi.in/learnt-reading-javascript-good-parts/</guid>
-      <description>Just finished reading &amp;#8216;Javascript &amp;#8211; The Good Parts&amp;#8217;. Here is what I learnt:
- I knew jack shit about JavaScript. I was able to get along so far simply because I knew jQuery and understood how closures work. Holy shit that&amp;#8217;s one fucked up language. Quite schizophrenic, saved by almost limitless extensibility/monkey-patchability/watcha-gonna-do-write-a-java-applet-hahaha . If you&amp;#8217;re going to write Javascript, you&amp;#8217;ll have to subset. Subsetting/augmenting has its own share of problems &amp;#8211; primarily that map in your code might not be the same as map in someone else&amp;#8217;s code, even if they seem to be working on the same &amp;#8216;type&amp;#8217; jQuery is incredible.</description>
+      <description>Just finished reading ‘Javascript – The Good Parts’. Here is what I learnt:
+ I knew jack shit about JavaScript. I was able to get along so far simply because I knew jQuery and understood how closures work. Holy shit that’s one fucked up language. Quite schizophrenic, saved by almost limitless extensibility/monkey-patchability/watcha-gonna-do-write-a-java-applet-hahaha . If you’re going to write Javascript, you’ll have to subset. Subsetting/augmenting has its own share of problems – primarily that map in your code might not be the same as map in someone else’s code, even if they seem to be working on the same ‘type’ jQuery is incredible.</description>
     </item>
     
     <item>
@@ -381,8 +381,8 @@ My first memories of programming aren&amp;#8217;t actually C. They were GW-BASIC
       <pubDate>Tue, 23 Aug 2011 22:55:03 +0000</pubDate>
       
       <guid>http://words.yuvi.in/my-vim-setup/</guid>
-      <description>I moved from emacs to vim a while ago, and have been steadily accumulating a series of plugins in my .vim. They&amp;#8217;re all up in my rather messy dotfiles repo. Here&amp;#8217;s a slightly more neatly organized list of the plugins I currently use:
- command-t &amp;#8211; File opener and buffer switcher. In-fuckin-credibly useful. vimpress &amp;#8211; What I use to blog since moving to wordpress. matchit &amp;#8211; Lets % work with html tags commentary &amp;#8211; Generic commenting and uncommenting script NERDCommenter has replaced commentary due to being more flexible and having more options.</description>
+      <description>I moved from emacs to vim a while ago, and have been steadily accumulating a series of plugins in my .vim. They’re all up in my rather messy dotfiles repo. Here’s a slightly more neatly organized list of the plugins I currently use:
+ command-t – File opener and buffer switcher. In-fuckin-credibly useful. vimpress – What I use to blog since moving to wordpress. matchit – Lets % work with html tags commentary – Generic commenting and uncommenting scriptNERDCommenter has replaced commentary due to being more flexible and having more options.</description>
     </item>
     
     <item>
@@ -391,7 +391,7 @@ My first memories of programming aren&amp;#8217;t actually C. They were GW-BASIC
       <pubDate>Sat, 13 Aug 2011 00:56:10 +0000</pubDate>
       
       <guid>http://words.yuvi.in/non-ascii-characters-http-headers/</guid>
-      <description>I was debugging an issue at work today where a (generated) file refused to download in Chrome, but the same URL worked just fine with wget. I remember reading in the HTTP Spec that HTTP headers can only be lower ASCII, so when wget mangled the output file&amp;#8217;s name, the problem was obvious &amp;#8211; the file name contained a character that wasn&amp;#8217;t in lower ASCII (an accented A). Chrome had borked on encountering it, while wget soldiered on.</description>
+      <description>I was debugging an issue at work today where a (generated) file refused to download in Chrome, but the same URL worked just fine with wget. I remember reading in the HTTP Spec that HTTP headers can only be lower ASCII, so when wget mangled the output file’s name, the problem was obvious – the file name contained a character that wasn’t in lower ASCII (an accented A). Chrome had borked on encountering it, while wget soldiered on.</description>
     </item>
     
     <item>
@@ -403,7 +403,7 @@ My first memories of programming aren&amp;#8217;t actually C. They were GW-BASIC
       <description>From HN:
  From my experience, the largest hurdle first time programmers have is being able to execute programs in their head. It takes a cognitive leap to go from the source code in front of them, and what happens at runtime.
  (emphasis mine)
-I believe that if you have made that cognitive leap, you can call yourself a programmer. It means you&amp;#8217;ve entered into the second hump &amp;#8211; you are a programmer.</description>
+I believe that if you have made that cognitive leap, you can call yourself a programmer. It means you’ve entered into the second hump – you are a programmer.</description>
     </item>
     
     <item>
@@ -412,7 +412,7 @@ I believe that if you have made that cognitive leap, you can call yourself a pro
       <pubDate>Sun, 19 Jun 2011 01:40:36 +0000</pubDate>
       
       <guid>http://words.yuvi.in/sleepsort-4chan/</guid>
-      <description>4Chan isn&amp;#8217;t exactly what you&amp;#8217;d associate with &amp;#8216;shit, that&amp;#8217;s a cool piece of code!&amp;#8217;, but look what I found!
+      <description>4Chan isn’t exactly what you’d associate with ‘shit, that’s a cool piece of code!’, but look what I found!
 (via HN)
 Nice hack. And it is O(N) in bitsize of largest number (Ignoring all the overhead of forking new processes, the problem with the race conditions(Sort 0 and 0.1? How about 0.01 and 0.011?), processor contention, etc,.) They basically delegated the sorting to the process scheduler, treating it as a sort of priority queue.</description>
     </item>
@@ -423,9 +423,9 @@ Nice hack. And it is O(N) in bitsize of largest number (Ignoring all the overhea
       <pubDate>Fri, 13 May 2011 05:10:31 +0000</pubDate>
       
       <guid>http://words.yuvi.in/sicp-and-brainfuck/</guid>
-      <description>No, I&amp;#8217;m not going to blow your mind by telling you I&amp;#8217;m going to do the SICP exercises in BrainFuck :)
-I just wrote my first brainfuck program. Might as well be my last, but not sure. Tape-based turing-ish programing seems fun, so maybe I&amp;#8217;ll try that again with something more expressive than brainfuck (or maybe that is pointless?)
-And I&amp;#8217;m doing the SICP Exercises. In MIT-Scheme. I&amp;#8217;ve put them up on GitHub.</description>
+      <description>No, I’m not going to blow your mind by telling you I’m going to do the SICP exercises in BrainFuck :)
+I just wrote my first brainfuck program. Might as well be my last, but not sure. Tape-based turing-ish programing seems fun, so maybe I’ll try that again with something more expressive than brainfuck (or maybe that is pointless?)
+And I’m doing the SICP Exercises. In MIT-Scheme. I’ve put them up on GitHub.</description>
     </item>
     
     <item>
@@ -445,7 +445,7 @@ Sadly, missed the week long hackfest :( Next time!</description>
       <pubDate>Tue, 01 Feb 2011 12:37:06 +0000</pubDate>
       
       <guid>http://words.yuvi.in/devlog-jan-2011/</guid>
-      <description>I&amp;#8217;ve started keeping devlogs, recording everyday &amp;#8216;productive&amp;#8217; activity I do everyday. Publicly shaming myself into doing something productive every day. Just records for this month, next month on should provide time spent as well. There&amp;#8217;s an entry for every day when I&amp;#8217;ve touched a computer. I&amp;#8217;ll be continuously refining this format, so feedback welcome
+      <description>I’ve started keeping devlogs, recording everyday ‘productive’ activity I do everyday. Publicly shaming myself into doing something productive every day. Just records for this month, next month on should provide time spent as well. There’s an entry for every day when I’ve touched a computer. I’ll be continuously refining this format, so feedback welcome
 Links: 32HourStartup, Busroutes.in Wiki, PiTiVi, Geekweekend
 27 Jan More of nothing productive. 32HourStartup is eating into my dev time.</description>
     </item>
@@ -456,9 +456,9 @@ Links: 32HourStartup, Busroutes.in Wiki, PiTiVi, Geekweekend
       <pubDate>Tue, 25 Jan 2011 18:51:26 +0000</pubDate>
       
       <guid>http://words.yuvi.in/functional-programming-geekweekend-at-thoughtworks/</guid>
-      <description>[Note: I&amp;#8217;ve a rather large backlog of blog posts to do, will push them out as soon as I can]
-Saturday (22 Jan 2011) was spent at Geekweekend, organized at Thougtworks Chennai. The event had awesomeness written all over it, even before it started &amp;#8211; how can any event where you register through a (rather limited, but still) command line interface on a website be not good? :D
-I was late as usual (damn living so far away from everywhere) &amp;#8211; and found my way walking through the underbelly of the Kathipara junction thanks to Google Maps&amp;#8217; Walking Directions :P</description>
+      <description>[Note: I’ve a rather large backlog of blog posts to do, will push them out as soon as I can]
+Saturday (22 Jan 2011) was spent at Geekweekend, organized at Thougtworks Chennai. The event had awesomeness written all over it, even before it started – how can any event where you register through a (rather limited, but still) command line interface on a website be not good? :D
+I was late as usual (damn living so far away from everywhere) – and found my way walking through the underbelly of the Kathipara junction thanks to Google Maps’ Walking Directions :P</description>
     </item>
     
     <item>
@@ -467,8 +467,8 @@ I was late as usual (damn living so far away from everywhere) &amp;#8211; and fo
       <pubDate>Sat, 25 Dec 2010 11:50:04 +0000</pubDate>
       
       <guid>http://words.yuvi.in/enthusiastic-teachers-and-naive-implementation-of-gauss-seidel-approximations/</guid>
-      <description>This semester, one of our so called electives (despite the fact that we have no real choice in them) is Numerical Methods. I don&amp;#8217;t quite like the actual way the subject is taught &amp;#8211; mind numbing, error prone calculations with a calculator. However, the methods are pretty awesome.
-The staff explained Gauss Seidel yesterday, and it seemed a straightforward recursive solution to me. So in the break, I cooked up a small python script that gave me all the intermediate answers as well &amp;#8211; so for any assignments I could just run them through this and copy it to paper.</description>
+      <description>This semester, one of our so called electives (despite the fact that we have no real choice in them) is Numerical Methods. I don’t quite like the actual way the subject is taught – mind numbing, error prone calculations with a calculator. However, the methods are pretty awesome.
+The staff explained Gauss Seidel yesterday, and it seemed a straightforward recursive solution to me. So in the break, I cooked up a small python script that gave me all the intermediate answers as well – so for any assignments I could just run them through this and copy it to paper.</description>
     </item>
     
     <item>
@@ -477,7 +477,7 @@ The staff explained Gauss Seidel yesterday, and it seemed a straightforward recu
       <pubDate>Tue, 07 Dec 2010 02:42:49 +0000</pubDate>
       
       <guid>http://words.yuvi.in/more-effects-for-cheese/</guid>
-      <description>Watch two rather handsome1 dudes (daniel and andreas) in this screencast where they show off some more effects (thanks to fargiolas!). Newer effects are easier to add (feels awesome that that was my work) &amp;#8211; and more will be on their way :)
+      <description>Watch two rather handsome1 dudes (daniel and andreas) in this screencast where they show off some more effects (thanks to fargiolas!). Newer effects are easier to add (feels awesome that that was my work) – and more will be on their way :)
 footnote: 1: Professional opinion from one of my lady friends :P</description>
     </item>
     
@@ -487,7 +487,7 @@ footnote: 1: Professional opinion from one of my lady friends :P</description>
       <pubDate>Tue, 07 Dec 2010 01:14:21 +0000</pubDate>
       
       <guid>http://words.yuvi.in/moving-to-vim-from-emacs/</guid>
-      <description>I moved to Vim from Emacs a while back. I realized I was not using emacs to its fullest extent &amp;#8211; I was using it as &amp;#8216;just a text editor&amp;#8217;, and alt-tabbing to gnome-terminal for most of my work. I was using one tool per job anyway, so why not go all the way and use a text editor for a text editor instead of yet another operating system :P</description>
+      <description>I moved to Vim from Emacs a while back. I realized I was not using emacs to its fullest extent – I was using it as ‘just a text editor’, and alt-tabbing to gnome-terminal for most of my work. I was using one tool per job anyway, so why not go all the way and use a text editor for a text editor instead of yet another operating system :P</description>
     </item>
     
     <item>
@@ -496,11 +496,11 @@ footnote: 1: Professional opinion from one of my lady friends :P</description>
       <pubDate>Sun, 07 Nov 2010 14:50:51 +0000</pubDate>
       
       <guid>http://words.yuvi.in/how-to-increase-cheeses-burst-mode-photo-count/</guid>
-      <description>&amp;#8220;Why does Cheese have a maximum photo count of 100 in burst mode?&amp;#8221; questions have popped up quite a few times on the cheese list. It is just a teeny, tiny bug &amp;#8211; fixed in master.
+      <description>“Why does Cheese have a maximum photo count of 100 in burst mode?” questions have popped up quite a few times on the cheese list. It is just a teeny, tiny bug – fixed in master.
 The work around is simple:
 Till Cheese 2.32
 Raise it to whatever value you want in line 8 of /usr/share/cheese/cheese-prefs.ui.
-(If you don&amp;#8217;t know what version you are running, check Help -&amp;gt; About)
+(If you don’t know what version you are running, check Help -&amp;gt; About)
 (Fix is just raising the limit from 100 to something that most people will likely not hit.</description>
     </item>
     
@@ -510,7 +510,7 @@ Raise it to whatever value you want in line 8 of /usr/share/cheese/cheese-prefs.
       <pubDate>Mon, 01 Nov 2010 17:24:25 +0000</pubDate>
       
       <guid>http://words.yuvi.in/why-i-moved-off-arch-on-my-netbook/</guid>
-      <description>I posted a while back that I moved to Arch (from Ubuntu) on my Netbook. That was almost two months back. My Arch experiment, sadly, didn&amp;#8217;t work out for long. I moved back to Ubuntu within a couple of week&amp;#8217;s time. Why?
+      <description>I posted a while back that I moved to Arch (from Ubuntu) on my Netbook. That was almost two months back. My Arch experiment, sadly, didn’t work out for long. I moved back to Ubuntu within a couple of week’s time. Why?
  Lack of binary packages. I had to build quite a few packages from source because there were no binary packages available. The tilting point was when I figured there were no binary packges for mit-scheme!</description>
     </item>
     
@@ -520,8 +520,8 @@ Raise it to whatever value you want in line 8 of /usr/share/cheese/cheese-prefs.
       <pubDate>Mon, 06 Sep 2010 22:58:20 +0000</pubDate>
       
       <guid>http://words.yuvi.in/running-archlinux/</guid>
-      <description>I&amp;#8217;m blogging from Arch Linux :D
-I&amp;#8217;ve been meaning to setup Arch on my netbook for a while, after hearing a lot of people rave about how awesome pacman is and how fast their system is. I didn&amp;#8217;t want to spend time on moving to a new distro during my GSoC, so I kept putting it off. Yesterday Ubuntu borked on my netbook for some weird reason (I suspect it was my friend Rathna sitting on it, but might have been because I was thinking of moving to Vim too) &amp;#8211; and I took the opportunity to install Arch.</description>
+      <description>I’m blogging from Arch Linux :D
+I’ve been meaning to setup Arch on my netbook for a while, after hearing a lot of people rave about how awesome pacman is and how fast their system is. I didn’t want to spend time on moving to a new distro during my GSoC, so I kept putting it off. Yesterday Ubuntu borked on my netbook for some weird reason (I suspect it was my friend Rathna sitting on it, but might have been because I was thinking of moving to Vim too) – and I took the opportunity to install Arch.</description>
     </item>
     
     <item>
@@ -530,8 +530,8 @@ I&amp;#8217;ve been meaning to setup Arch on my netbook for a while, after heari
       <pubDate>Thu, 02 Sep 2010 23:42:20 +0000</pubDate>
       
       <guid>http://words.yuvi.in/the-end-of-gsoc-2010/</guid>
-      <description>Google Summer of Code ended a while back. Me (and most on #gsoc) agreed on one thing &amp;#8211; WHERE DID THOSE 3 MONTHS GO? Amazing time it was &amp;#8211; thanks to _ke (Who is frolicking somewhere in Thailand right now), fargiolas and the rest of the GNOME guys (#clutter, #gstreamer and #gtk+ yay!) for making it awesome. #hackers-india was a great venting place too :)
-Cheese&amp;#8216;s master needs quite a bit of work before it can be included in GNOME 3.</description>
+      <description>Google Summer of Code ended a while back. Me (and most on #gsoc) agreed on one thing – WHERE DID THOSE 3 MONTHS GO? Amazing time it was – thanks to _ke (Who is frolicking somewhere in Thailand right now), fargiolas and the rest of the GNOME guys (#clutter, #gstreamer and #gtk+ yay!) for making it awesome. #hackers-india was a great venting place too :)
+Cheese‘s master needs quite a bit of work before it can be included in GNOME 3.</description>
     </item>
     
     <item>
@@ -540,8 +540,8 @@ Cheese&amp;#8216;s master needs quite a bit of work before it can be included in
       <pubDate>Thu, 22 Jul 2010 19:57:53 +0000</pubDate>
       
       <guid>http://words.yuvi.in/cheese-2-31-1-released/</guid>
-      <description>If you had read my Cheese GSoC proposal, it would&amp;#8217;ve stressed on one major point &amp;#8211; make Cheese sexy.
-Two days ago, one of my classmates spent 5 minutes on the bus using Cheese and trying out different effects (and poses!). Today, my brother spent 20 minutes trying to get the perfect combination of style and vagueness for his Facebook profile picture &amp;#8211; using Cheese. He then asked me to create an account for him in Ubuntu (he was an exclusively Win7 user till then) before leaving.</description>
+      <description>If you had read my Cheese GSoC proposal, it would’ve stressed on one major point – make Cheese sexy.
+Two days ago, one of my classmates spent 5 minutes on the bus using Cheese and trying out different effects (and poses!). Today, my brother spent 20 minutes trying to get the perfect combination of style and vagueness for his Facebook profile picture – using Cheese. He then asked me to create an account for him in Ubuntu (he was an exclusively Win7 user till then) before leaving.</description>
     </item>
     
     <item>
@@ -550,7 +550,7 @@ Two days ago, one of my classmates spent 5 minutes on the bus using Cheese and t
       <pubDate>Thu, 22 Jul 2010 03:02:02 +0000</pubDate>
       
       <guid>http://words.yuvi.in/room-full-of-people-like-me/</guid>
-      <description>&#34;I can&amp;#39;t tell you how wonderful it was - I walked into this room, and it was full of people like me&#34;   I would give an arm, a leg, an eye and other assorted body parts if I could find such a room. And live there.
+      <description>I would give an arm, a leg, an eye and other assorted body parts if I could find such a room. And live there.
 Hackerpace Chennai or The Startup Center better turn up fast :)</description>
     </item>
     
@@ -560,9 +560,9 @@ Hackerpace Chennai or The Startup Center better turn up fast :)</description>
       <pubDate>Thu, 22 Jul 2010 02:45:06 +0000</pubDate>
       
       <guid>http://words.yuvi.in/my-gsoc-2010-proposal/</guid>
-      <description>I used gist to publish my GSoC proposal. Diffs, easy to show off, and Markdown support &amp;#8211; made gist perfect for me to make modifications and get feedback easily.
-It is the first &amp;#8216;real&amp;#8217; document I&amp;#8217;ve written &amp;#8211; it actually had a tangible effect.
-Now that I don&amp;#8217;t need to make any modifications, I&amp;#8217;ve moved it to my site.</description>
+      <description>I used gist to publish my GSoC proposal. Diffs, easy to show off, and Markdown support – made gist perfect for me to make modifications and get feedback easily.
+It is the first ‘real’ document I’ve written – it actually had a tangible effect.
+Now that I don’t need to make any modifications, I’ve moved it to my site.</description>
     </item>
     
     <item>
@@ -571,13 +571,13 @@ Now that I don&amp;#8217;t need to make any modifications, I&amp;#8217;ve moved 
       <pubDate>Thu, 22 Jul 2010 00:37:31 +0000</pubDate>
       
       <guid>http://words.yuvi.in/cheese-gsoc-report-week-8/</guid>
-      <description>This week on Cheese&amp;#8230;.
+      <description>This week on Cheese….
 WE MADE A RELEASE! :)
 http://ftp.gnome.org/pub/GNOME/sources/cheese/2.31/
-Cheese 2.31.1 is out. It&amp;#8217;s a dev release. Does not have zarro boogs.
+Cheese 2.31.1 is out. It’s a dev release. Does not have zarro boogs.
 But it is a release!
 This week, we
- Fixed several perf bugs. Fixed some weird preferences dialog bugs Filed (and eventually had fixed) a bug in GStreamer. Fixed a regression Beautified the UI a bit (text name overlay of effects, etc) Assorted administrative work to prepare for release (Copyright</description>
+ Fixed several perf bugs. Fixed some weird preferences dialog bugs Filed (and eventually had fixed) a bug in GStreamer. Fixed a regression Beautified the UI a bit (text name overlay of effects, etc) Assorted administrative work to prepare for release (Copyright  updating, merging back into master, etc)  I also passed my mid terms :)</description>
     </item>
     
     <item>
@@ -586,7 +586,7 @@ This week, we
       <pubDate>Mon, 12 Jul 2010 18:26:54 +0000</pubDate>
       
       <guid>http://words.yuvi.in/cheese-gsoc-report-week-7/</guid>
-      <description>This week on Cheese&amp;#8230;.
+      <description>This week on Cheese….
  Performance enhancements. Sacrificed some startup time for much improved usage time. Viewing live effects are now a snap. So is selecting an effect. We went in some cases from ~15s to &amp;lt;1s. Thanks to Tester (and other folks) at #gstreamer for helping out :) Paging of effects. Effects are now in pages of 9 each, instead of a huge scroller area. Applying effects without stopping the pipeline.</description>
     </item>
     
@@ -596,8 +596,8 @@ This week, we
       <pubDate>Sat, 03 Jul 2010 17:59:34 +0000</pubDate>
       
       <guid>http://words.yuvi.in/reddit-university-sicp-reading-group/</guid>
-      <description>I&amp;#8217;ve joined Reddit University&amp;#8216;s SICP Reading Group class. I&amp;#8217;ve wanted to read through SICP for a long time, and have gotten started many times &amp;#8211; never completed it. Maybe the group effects will help me finish this time :)
-If you&amp;#8217;re interested in expanding your horizons beyond mere code-monkey programming, join up!</description>
+      <description>I’ve joined Reddit University‘s SICP Reading Group class. I’ve wanted to read through SICP for a long time, and have gotten started many times – never completed it. Maybe the group effects will help me finish this time :)
+If you’re interested in expanding your horizons beyond mere code-monkey programming, join up!</description>
     </item>
     
     <item>
@@ -607,9 +607,9 @@ If you&amp;#8217;re interested in expanding your horizons beyond mere code-monke
       
       <guid>http://words.yuvi.in/cheese-gsoc-report-week-5/</guid>
       <description>Late report. But I did get quite a bit done!
-Last week&amp;#8230;
- Video Effects file format reader Live Preview of Effects! (YAY!) Effect files added  Live Preview took most of my time. We bought down CPU usage from ~90% to a more manageable ~50%. Cleaned up code a bit (still needs more cleanup). It is rather very &amp;#8216;demoable&amp;#8217;, provided you gloss over the slowdowns.
-Coming up next week would be&amp;#8230;</description>
+Last week…
+ Video Effects file format reader Live Preview of Effects! (YAY!) Effect files added  Live Preview took most of my time. We bought down CPU usage from ~90% to a more manageable ~50%. Cleaned up code a bit (still needs more cleanup). It is rather very ‘demoable’, provided you gloss over the slowdowns.
+Coming up next week would be…</description>
     </item>
     
     <item>
@@ -618,10 +618,10 @@ Coming up next week would be&amp;#8230;</description>
       <pubDate>Sun, 20 Jun 2010 04:24:14 +0000</pubDate>
       
       <guid>http://words.yuvi.in/cheese-gsoc-report-week-4/</guid>
-      <description>Fourth week of the Summer of Code was over a few days back, and this report is overdue :( I&amp;#8217;ve not been able to code as much as I wanted to this week &amp;#8211; due to various non-technical issues. Will compensate in the next week.
-Last week&amp;#8230;
+      <description>Fourth week of the Summer of Code was over a few days back, and this report is overdue :( I’ve not been able to code as much as I wanted to this week – due to various non-technical issues. Will compensate in the next week.
+Last week…
  Countdown Animations (Thanks to _ke for cleanup!) GConf Cleanup  Yes, that was it.
-Totally failed to meet last week&amp;#8217;s goals. Sigh.</description>
+Totally failed to meet last week’s goals. Sigh.</description>
     </item>
     
     <item>
@@ -630,8 +630,8 @@ Totally failed to meet last week&amp;#8217;s goals. Sigh.</description>
       <pubDate>Sun, 13 Jun 2010 04:24:14 +0000</pubDate>
       
       <guid>http://words.yuvi.in/cheese-gsoc-report-week-3/</guid>
-      <description>Third week of the Summer of Code is over! And during this week&amp;#8230;.
- Successfully wrapped up the core cheese functionality (libcheese) with a vala wrapper Made Photo Mode work Made Video Mode work Made Burst Mode work Made cheese single instance using libunique Started work on cleaning up GConf code.  In last week&amp;#8217;s report, I mentioned that I didn&amp;#8217;t quite like my pace of work. It is still the same (approx.</description>
+      <description>Third week of the Summer of Code is over! And during this week….
+ Successfully wrapped up the core cheese functionality (libcheese) with a vala wrapper Made Photo Mode work Made Video Mode work Made Burst Mode work Made cheese single instance using libunique Started work on cleaning up GConf code.  In last week’s report, I mentioned that I didn’t quite like my pace of work. It is still the same (approx.</description>
     </item>
     
     <item>
@@ -640,8 +640,8 @@ Totally failed to meet last week&amp;#8217;s goals. Sigh.</description>
       <pubDate>Sun, 06 Jun 2010 04:20:42 +0000</pubDate>
       
       <guid>http://words.yuvi.in/cheese-gsoc-report-week-2/</guid>
-      <description>Second week of the (rather hot and sweaty) Summer of Code is over! And during this week&amp;#8230;.
- Replicated most of the UI of Cheese Learnt how to make C and Vala code co-exist (Thanks folks at #vala!) Made the thumbnail widget work, in both modes/orientations Implemented fullscreen mode, with autohiding of the action buttons Started modifying parts of libcheese to support clutter for video output  In last week&amp;#8217;s report, I mentioned that I didn&amp;#8217;t quite like my pace of work.</description>
+      <description>Second week of the (rather hot and sweaty) Summer of Code is over! And during this week….
+ Replicated most of the UI of Cheese Learnt how to make C and Vala code co-exist (Thanks folks at #vala!) Made the thumbnail widget work, in both modes/orientations Implemented fullscreen mode, with autohiding of the action buttons Started modifying parts of libcheese to support clutter for video output  In last week’s report, I mentioned that I didn’t quite like my pace of work.</description>
     </item>
     
     <item>
@@ -660,9 +660,9 @@ Totally failed to meet last week&amp;#8217;s goals. Sigh.</description>
       <pubDate>Sun, 30 May 2010 02:22:41 +0000</pubDate>
       
       <guid>http://words.yuvi.in/vala-gtkbuilder-and-autoconnecting-signal-handlers/</guid>
-      <description>Note: I&amp;#8217;m not an expert on Vala, GTK+, or anything else for that matter. If I am off base someplace, comment.
+      <description>Note: I’m not an expert on Vala, GTK+, or anything else for that matter. If I am off base someplace, comment.
 I spent quite a some time today trying to get GTKBuilder to automagically connect all my signals to their handlers. I tripped up at a few places, and so recording them here for posterity.
- If you are using instance methods (like most of us are), you&amp;#8217;ve to decorate your handler function with the attribute [CCode (instance_pos=-1)].</description>
+  If you are using instance methods (like most of us are), you’ve to decorate your handler function with the attribute [CCode (instance_pos=-1)].</description>
     </item>
     
     <item>
@@ -671,8 +671,8 @@ I spent quite a some time today trying to get GTKBuilder to automagically connec
       <pubDate>Thu, 06 May 2010 07:00:20 +0000</pubDate>
       
       <guid>http://words.yuvi.in/gsoc-milestones-vala-build-using-autotools/</guid>
-      <description>I&amp;#8217;m using a RTM List to track my milestones for this my GSoC this year. I&amp;#8217;ll be making a blog post for each item ticked off that list, to share what I&amp;#8217;ve learnt in my journey from n00b to someone whose code is good enough to be included in GNOME. This is part 1 in the series, where I tell you about autotools
-My GSoC project involves, moving major parts (UI) of Cheese to a new language &amp;#8211; Vala.</description>
+      <description>I’m using a RTM List to track my milestones for this my GSoC this year. I’ll be making a blog post for each item ticked off that list, to share what I’ve learnt in my journey from n00b to someone whose code is good enough to be included in GNOME. This is part 1 in the series, where I tell you about autotools
+My GSoC project involves, moving major parts (UI) of Cheese to a new language – Vala.</description>
     </item>
     
     <item>
@@ -681,7 +681,7 @@ My GSoC project involves, moving major parts (UI) of Cheese to a new language &a
       <pubDate>Tue, 04 May 2010 00:48:06 +0000</pubDate>
       
       <guid>http://words.yuvi.in/gsoc-milestone-0-what-does-my-project-do/</guid>
-      <description>I&amp;#8217;m using a RTM List to track my milestones for this my GSoC this year. I&amp;#8217;ll be making a blog post for each item ticked off that list, to share what I&amp;#8217;ve learnt in my journey from n00b to someone whose code is good enough to be included in GNOME. This is part 0 in the series, where I tell you what my project is all about and how Cheese is going to become awesomer.</description>
+      <description>I’m using a RTM List to track my milestones for this my GSoC this year. I’ll be making a blog post for each item ticked off that list, to share what I’ve learnt in my journey from n00b to someone whose code is good enough to be included in GNOME. This is part 0 in the series, where I tell you what my project is all about and how Cheese is going to become awesomer.</description>
     </item>
     
     <item>
@@ -690,7 +690,7 @@ My GSoC project involves, moving major parts (UI) of Cheese to a new language &a
       <pubDate>Sat, 01 May 2010 19:04:18 +0000</pubDate>
       
       <guid>http://words.yuvi.in/my-first-accepted-patch/</guid>
-      <description>As part of my GSoC preparations, I wrote a few patches for Cheese. One of them (a one liner to fix a crash) has made it to GNOME 2.30.1 &amp;#8211; the other two (1 and 2) are slightly more significant and involve UI changes, and so will be integrated later.
+      <description>As part of my GSoC preparations, I wrote a few patches for Cheese. One of them (a one liner to fix a crash) has made it to GNOME 2.30.1 – the other two (1 and 2) are slightly more significant and involve UI changes, and so will be integrated later.
 Free beer to everyone who can catch me in a bar! Free Pepsi/Sprite/Egg Puff to anyone who can catch me in the College Stores ;)</description>
     </item>
     
@@ -700,9 +700,9 @@ Free beer to everyone who can catch me in a bar! Free Pepsi/Sprite/Egg Puff to a
       <pubDate>Sat, 01 May 2010 18:53:43 +0000</pubDate>
       
       <guid>http://words.yuvi.in/gsoc-2010-the-beginning/</guid>
-      <description>I mentioned this in passing in my earlier post, and was tweeting about it quite furiously &amp;#8211; I&amp;#8217;ve been selected to work on Cheese for this year&amp;#8217;s Google Summer of Code :D
+      <description>I mentioned this in passing in my earlier post, and was tweeting about it quite furiously – I’ve been selected to work on Cheese for this year’s Google Summer of Code :D
 Link to my, uhm, cheesy proposal
-What Now? Getting accepted doesn&amp;#8217;t mean shit. Actually finishing whatever I was supposed to within 3 months does mean something &amp;#8211; especially since I&amp;#8217;ve taken on quite a bit of stuff to do (Move to new language + 2 new features).</description>
+What Now? Getting accepted doesn’t mean shit. Actually finishing whatever I was supposed to within 3 months does mean something – especially since I’ve taken on quite a bit of stuff to do (Move to new language + 2 new features).</description>
     </item>
     
     <item>
@@ -711,13 +711,12 @@ What Now? Getting accepted doesn&amp;#8217;t mean shit. Actually finishing whate
       <pubDate>Wed, 21 Apr 2010 20:08:24 +0000</pubDate>
       
       <guid>http://words.yuvi.in/hacking-more/</guid>
-      <description>Quoting from Steven Levy&amp;#8216;s Hackers:
+      <description>Quoting from Steven Levy‘s Hackers:
  [..] a project undertaken or a product built not solely to fulfill
-some constructive goal, but with some wild pleasure taken in mere
-involvement, was called a &amp;#8220;hack.&amp;#8221;
+  some constructive goal, but with some wild pleasure taken in mere
+  involvement, was called a “hack.”
  Building things for the fun of building them is hacking. And hacking is not illegally breaking into computers.
-I like hacking. I want to be a real hacker. I can&amp;#8217;t call myself one yet.
-I&amp;#8217;m putting this up as a reminder to myself &amp;#8211; about what is important and what isn&amp;#8217;t.</description>
+I like hacking. I want to be a real hacker. I can’t call myself one yet.</description>
     </item>
     
     <item>
@@ -736,7 +735,7 @@ I recently started a project that required me to embed gists in Dokuwiki. I hunt
       <pubDate>Wed, 28 Oct 2009 00:40:41 +0000</pubDate>
       
       <guid>http://words.yuvi.in/block-cursor-vs-post-cursor-gvim-vs-emacs/</guid>
-      <description>Here is an approximate timeline of the editors I&amp;#8217;ve used so far:
+      <description>Here is an approximate timeline of the editors I’ve used so far:
  Turbo C++ (4th grade to 8th grade) Visual Basic 6 (8th grade to 10th grade) Visual Studio 2005 (10th grade to 11th grade) Visual Studio 2008 (11th grade to 1st year of college) gVim (1st year of college) GNU Emacs (after gVim)  Now, the one thing, maybe even the only thing I miss is the fact that gVim gives me the I-Bar cursor, while Emacs by default gave me the block cursor.</description>
     </item>
     
@@ -747,7 +746,7 @@ I recently started a project that required me to embed gists in Dokuwiki. I hunt
       
       <guid>http://words.yuvi.in/anatomy-of-an-impromptu-hackathon-git-vs-svn/</guid>
       <description>One of the (good) things that came out of the IIT Hackfest was me hanging out on the #hackers-india IRC channel. It is wild, swingy and usually fun. Usually.
-So yesterday night, ideamonk casually mentioned that he was working on something called pymos. It was a python script that made mosiacs. Now that was something I was totally interested in &amp;#8211; I tried making a similar &amp;#8216;script&amp;#8217; a long time back (in C#), and totally utterly failed, simply because I was so caught up with the part that downloaded pictures from flickr that I didn&amp;#8217;t do the part that generated the actual Mosaic.</description>
+So yesterday night, ideamonk casually mentioned that he was working on something called pymos. It was a python script that made mosiacs. Now that was something I was totally interested in – I tried making a similar ‘script’ a long time back (in C#), and totally utterly failed, simply because I was so caught up with the part that downloaded pictures from flickr that I didn’t do the part that generated the actual Mosaic.</description>
     </item>
     
     <item>
@@ -756,7 +755,7 @@ So yesterday night, ideamonk casually mentioned that he was working on something
       <pubDate>Wed, 21 Oct 2009 00:27:55 +0000</pubDate>
       
       <guid>http://words.yuvi.in/why-i-got-rid-of-my-fork-of-waffle/</guid>
-      <description>For those of you who didn&amp;#8217;t know, Waffle is a schemaless storage layer that sits on top of SQLAlchemy. Something that I was initially very interested in.
+      <description>For those of you who didn’t know, Waffle is a schemaless storage layer that sits on top of SQLAlchemy. Something that I was initially very interested in.
 Not anymore.
 Why?
 Because I found MongoDB.
@@ -770,8 +769,8 @@ Yes, I do know they both are different, but MongoDB has the things that attracte
       <pubDate>Wed, 07 Oct 2009 23:10:41 +0000</pubDate>
       
       <guid>http://words.yuvi.in/what-i-learnt-from-the-hackfest-at-iitm/</guid>
-      <description>I was about to just type a list of stuff here, but that doesn&amp;#8217;t do the topic justice. So here I am, at 3:30 in the morning, sleep cycle screwed up by the Hackfest, typing out a post on what all I learnt from there. I spent pretty much my entire awake-time at the IIT, so it helped me a lot.
-Your college doesn&amp;#8217;t matter much IIT Envy. Every non-IITian has that.</description>
+      <description>I was about to just type a list of stuff here, but that doesn’t do the topic justice. So here I am, at 3:30 in the morning, sleep cycle screwed up by the Hackfest, typing out a post on what all I learnt from there. I spent pretty much my entire awake-time at the IIT, so it helped me a lot.
+Your college doesn’t matter much IIT Envy. Every non-IITian has that.</description>
     </item>
     
     <item>
@@ -780,8 +779,8 @@ Your college doesn&amp;#8217;t matter much IIT Envy. Every non-IITian has that.<
       <pubDate>Thu, 01 Oct 2009 01:27:12 +0000</pubDate>
       
       <guid>http://words.yuvi.in/hackfest-09-expectations/</guid>
-      <description>I&amp;#8217;m going to participate in Hackfest at IITM&amp;#8217;s Shaastra, starting tomorrow. Will hopefully be a lot of fun &amp;#8211; and may I be able to contribute my first ever patch during the event ;) Got permission to not get back home &amp;#8211; but wondering, where would I stay? Probably pass out in front of the computers :)
-I&amp;#8217;ll be hackin on GNOME Apps &amp;#8211; hopefully Banshee (since that&amp;#8217;s one app I love), or write a newish, smallish app with PyGTK.</description>
+      <description>I’m going to participate in Hackfest at IITM’s Shaastra, starting tomorrow. Will hopefully be a lot of fun – and may I be able to contribute my first ever patch during the event ;) Got permission to not get back home – but wondering, where would I stay? Probably pass out in front of the computers :)
+I’ll be hackin on GNOME Apps – hopefully Banshee (since that’s one app I love), or write a newish, smallish app with PyGTK.</description>
     </item>
     
     <item>
@@ -791,7 +790,7 @@ I&amp;#8217;ll be hackin on GNOME Apps &amp;#8211; hopefully Banshee (since that
       
       <guid>http://words.yuvi.in/code-ive-written-so-far/</guid>
       <description>Code I have written so far:
- HiSlain: A static blog publishing system (NOT A DJANGO BLOG!). Runs this blog wtfimb: The code that powers Busroutes.in frailgrey: Markov Chain based page generator (pretty lame, actually) GoodFather: Collection of utils for web data scraping and storing reappy: A Twitter Search Application Framework SadIvy: A pure WSGI URL Shortener  Now, I&amp;#8217;ve been doing a shit job of documenting them &amp;#8211; none exists.</description>
+ HiSlain: A static blog publishing system (NOT A DJANGO BLOG!). Runs this blog wtfimb: The code that powers Busroutes.in frailgrey: Markov Chain based page generator (pretty lame, actually) GoodFather: Collection of utils for web data scraping and storing reappy: A Twitter Search Application Framework SadIvy: A pure WSGI URL Shortener  Now, I’ve been doing a shit job of documenting them – none exists.</description>
     </item>
     
     <item>
@@ -801,8 +800,8 @@ I&amp;#8217;ll be hackin on GNOME Apps &amp;#8211; hopefully Banshee (since that
       
       <guid>http://words.yuvi.in/3hours-of-code-1-blog-post-per-day/</guid>
       <description>Those are my new goals.
-I&amp;#8217;ve got a mechanism to track the code accomplishments (will make that public soon), and maybe I&amp;#8217;ll write a widget for HiSlain for the blog post/day accomplishment.
-I&amp;#8217;m liking it so far &amp;#8211; 7 hours of code yesterday, along with 2 blog posts. Couldn&amp;#8217;t hit my code target today &amp;#8211; but am hitting my blog target. I should figure out more ways to make this work better.</description>
+I’ve got a mechanism to track the code accomplishments (will make that public soon), and maybe I’ll write a widget for HiSlain for the blog post/day accomplishment.
+I’m liking it so far – 7 hours of code yesterday, along with 2 blog posts. Couldn’t hit my code target today – but am hitting my blog target. I should figure out more ways to make this work better.</description>
     </item>
     
     <item>
@@ -811,8 +810,8 @@ I&amp;#8217;m liking it so far &amp;#8211; 7 hours of code yesterday, along with
       <pubDate>Fri, 14 Aug 2009 02:03:12 +0000</pubDate>
       
       <guid>http://words.yuvi.in/autokrish-because-we-dont-get-enough-jilpa/</guid>
-      <description>I dig KrishAshok&amp;#8216;s writing. Been lurking there for a long time.
-Only problem is, he doesn&amp;#8217;t write often. Nor does he tweet often.
+      <description>I dig KrishAshok‘s writing. Been lurking there for a long time.
+Only problem is, he doesn’t write often. Nor does he tweet often.
 Only solution is, ofcourse, to create a bot that writes like him, and another bot that tweets like him.
 UPDATE: Some of my favorites: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, etc. Too many to list :)
 UPDATE 2: Absolute Ripper</description>
@@ -824,8 +823,8 @@ UPDATE 2: Absolute Ripper</description>
       <pubDate>Fri, 14 Aug 2009 01:30:59 +0000</pubDate>
       
       <guid>http://words.yuvi.in/the-automatic-quote-generators-aka-autopeople/</guid>
-      <description>An Automatic Quote Generator &amp;#8211; generates sound bites that almost sound like someone else, and are somtimes funny as hell:
- AutoFreya, emulating the doubtfully-anonymous-teen Freya AutoLG, for popular blogger Louis Gray AutoMona, for, well, I can&amp;#8217;t describe who Mona is yet. I haven&amp;#8217;t figured out. Just someone cool, maybe? AutoAtwood, for one of the few for-the-masses dev coder Jeff Atwood  A few of them (@AutoLG &amp;amp; @AutoMona) also have twiwtter bots for them, posting short tweets once every seven minutes.</description>
+      <description>An Automatic Quote Generator – generates sound bites that almost sound like someone else, and are somtimes funny as hell:
+ AutoFreya, emulating the doubtfully-anonymous-teen Freya AutoLG, for popular blogger Louis Gray AutoMona, for, well, I can’t describe who Mona is yet. I haven’t figured out. Just someone cool, maybe? AutoAtwood, for one of the few for-the-masses dev coder Jeff Atwood  A few of them (@AutoLG &amp;amp; @AutoMona) also have twiwtter bots for them, posting short tweets once every seven minutes.</description>
     </item>
     
     <item>
@@ -835,8 +834,8 @@ UPDATE 2: Absolute Ripper</description>
       
       <guid>http://words.yuvi.in/picks-from-autogenerated-freya-quotes-nsfw/</guid>
       <description>I love autogenerating text.
-So I ran Freya&amp;#8217;s Blog through a markov chain text generator, and it came up with a ton of potentially funny quotes that had me in splits for a while. Here are the best:
- They say its gonna kill me But still, his eyes are in no way good. Thank God I never pick it up. But hello, which parent accompanies a full-grown daughter to her lover When you win, nobody knows that she&amp;#8217;s thinking of marriage.</description>
+So I ran Freya’s Blog through a markov chain text generator, and it came up with a ton of potentially funny quotes that had me in splits for a while. Here are the best:
+ They say its gonna kill me But still, his eyes are in no way good. Thank God I never pick it up. But hello, which parent accompanies a full-grown daughter to her lover When you win, nobody knows that she’s thinking of marriage.</description>
     </item>
     
     <item>
@@ -845,9 +844,8 @@ So I ran Freya&amp;#8217;s Blog through a markov chain text generator, and it ca
       <pubDate>Fri, 17 Jul 2009 23:44:21 +0000</pubDate>
       
       <guid>http://words.yuvi.in/code-highligting-plugin-for-hislain/</guid>
-      <description>I&amp;#8217;ve been hacking &amp;#8217;round with HiSlain, and wrote a syntax highlighting plugin for it. Nothing fancy &amp;#8211; just uses Pygments, but the process of modifying the plugin architecture to support this has been an awesome ride. I&amp;#8217;ll probably open up a new GitHub project just for HiSlain Themes and Plugins.
-And since I&amp;#8217;ve to test out Syntax Highlighting,
-print &#34;I kinda like Python :)&#34;   </description>
+      <description>I’ve been hacking ’round with HiSlain, and wrote a syntax highlighting plugin for it. Nothing fancy – just uses Pygments, but the process of modifying the plugin architecture to support this has been an awesome ride. I’ll probably open up a new GitHub project just for HiSlain Themes and Plugins.
+And since I’ve to test out Syntax Highlighting,</description>
     </item>
     
     <item>
@@ -856,8 +854,8 @@ print &#34;I kinda like Python :)&#34;   </description>
       <pubDate>Wed, 15 Jul 2009 23:35:18 +0000</pubDate>
       
       <guid>http://words.yuvi.in/progress-on-hislain-1/</guid>
-      <description>Small status update on my blogging platform&amp;#8216;s progress.
-I&amp;#8217;ve got the plugin infrastructure (mostly) in. Google Analytics Plugin and the RSS link plugin are working :)
+      <description>Small status update on my blogging platform‘s progress.
+I’ve got the plugin infrastructure (mostly) in. Google Analytics Plugin and the RSS link plugin are working :)
 Next Step is to make DISQUS a plugin too, and then I can start on porting themes!</description>
     </item>
     
@@ -867,8 +865,8 @@ Next Step is to make DISQUS a plugin too, and then I can start on porting themes
       <pubDate>Thu, 02 Jul 2009 19:49:12 +0000</pubDate>
       
       <guid>http://words.yuvi.in/my-involvement-in-novelrace/</guid>
-      <description>It started when @msnarain pinged me one day and asked if I could help out with a small project involving twitter. I asked how small &amp;#8211; and he described what would later on become http://novelrace.in. It ended up being pretty small &amp;#8211; about 150 lines of code, excluding styles and stuff. Not bad, eh?
-Oh, and if you have no idea what novelrace is &amp;#8211; this post should clear things up.</description>
+      <description>It started when @msnarain pinged me one day and asked if I could help out with a small project involving twitter. I asked how small – and he described what would later on become http://novelrace.in. It ended up being pretty small – about 150 lines of code, excluding styles and stuff. Not bad, eh?
+Oh, and if you have no idea what novelrace is – this post should clear things up.</description>
     </item>
     
   </channel>

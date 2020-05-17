@@ -9,11 +9,12 @@
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/post/" />
-<meta property="og:updated_time" content="2015-12-20T09:15:56&#43;00:00"/>
+<meta property="og:updated_time" content="2020-05-17T11:25:35+05:30" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
-<meta name="generator" content="Hugo 0.47.1" />
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -22,14 +23,14 @@
   "@context": "http://schema.org",
   "@type": "Blog",
   "headline": "Yuvi Panda",
-  "url" : "http://words.yuvi.in/post/",
+  "url" : "http:\/\/words.yuvi.in\/post\/",
   "author": {
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2015-12-20T09:15:56&#43;00:00",
+  "dateModified": "2020-05-17T11:25:35\x2b05:30",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
-  "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
+  "description": "[JupyterHub](https:\/\/github.com\/jupyterhub\/jupyterhub) | [MyBinder](https:\/\/mybinder.org) | [Kubernetes](https:\/\/k8s.io) | Open Culture"
 }
 </script>
 
@@ -84,6 +85,26 @@
 
 <article class="blog-post">
   <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-2015-dec-20/">DevLog for 2015 Dec 20</a></h2>
+    <p class="blog-post-meta"><time datetime="2015-12-21T17:09:40Z">Mon Dec 21, 2015</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
+
+
+</p>
+  </header>
+  <p>Probably going to take it easy and chill. Already sent a <a href="https://github.com/kjschiroo/WikiChatter/pull/13">trivial PR</a> up though.</p>
+<p>Also saw the old <a href="http://librelist.com/browser/devlog/">devlog mailing list</a> and feeling happy memories. Clearly need to bring something back like that, but I don’t know / think mailing lists are the best medium. More thinking!</p>
+<p>Ended up learning some <a href="http://tornadoweb.org/">Tornad</a> and wrote <a href="https://github.com/yuvipanda/nbserve">nbserve</a> to serve rendered notebooks and static files in a configurable way. I should refactor PAWS to have separate jupyterhub, proxy and nbserve pods tomorrow. Also need to test for path traversal attacks and whatnot. Also coroutine based programming is a lot easier than I had originally thought! woo!</p>
+
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
     <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-2015-dec-19/">DevLog for 2015 Dec 19</a></h2>
     <p class="blog-post-meta"><time datetime="2015-12-20T09:15:56Z">Sun Dec 20, 2015</time> by yuvipanda in 
 <i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
@@ -92,13 +113,10 @@
 </p>
   </header>
   <ul>
-<li>Today looks like a day of finding, reporting and fixing bugs in <a href="https://github.com/kjschiroo/WikiChatter">WikiChatter</a>. I had made a stupid mistake yesterday that meant not all of the Teahouse pages were being parsed, and I immediately started running into bugs. Have reported (and fixed!) two (<a href="https://github.com/kjschiroo/WikiChatter/issues/8">1</a> and <a href="https://github.com/kjschiroo/WikiChatter/issues/9">2</a>), and ran into another <a href="https://github.com/earwig/mwparserfromhell/issues/55#issuecomment-166033817">bug</a> in mediawikiparserfromhell itself. I&#8217;m sure I&#8217;ll find more.
-
-<ul>
+<li>Today looks like a day of finding, reporting and fixing bugs in <a href="https://github.com/kjschiroo/WikiChatter">WikiChatter</a>. I had made a stupid mistake yesterday that meant not all of the Teahouse pages were being parsed, and I immediately started running into bugs. Have reported (and fixed!) two (<a href="https://github.com/kjschiroo/WikiChatter/issues/8">1</a> and <a href="https://github.com/kjschiroo/WikiChatter/issues/9">2</a>), and ran into another <a href="https://github.com/earwig/mwparserfromhell/issues/55#issuecomment-166033817">bug</a> in mediawikiparserfromhell itself. I’m sure I’ll find more.</li>
 <li>Another bug in WikiChatter! <a href="https://github.com/kjschiroo/WikiChatter/issues/12">3</a></li>
-<li>Perils of digging through archives &#8211; you find Wikipedians giving <a href="https://en.wikipedia.org/wiki/Wikipedia:Teahouse/Questions/Archive_105#relationship_help">relationship advice</a>.</li>
+<li>Perils of digging through archives – you find Wikipedians giving <a href="https://en.wikipedia.org/wiki/Wikipedia:Teahouse/Questions/Archive_105#relationship_help">relationship advice</a>.</li>
 <li>Should work on <a href="https://github.com/jupyter/jupyterhub/issues/17">https://github.com/jupyter/jupyterhub/issues/17</a> in some form over the next few weeks.</li>
-</ul></li>
 </ul>
 
 </article> 
@@ -117,13 +135,12 @@
 
 </p>
   </header>
-  <p>Haven&#8217;t done these in a while, let&#8217;s see if I can get this back on the wagon!</p>
-
+  <p>Haven’t done these in a while, let’s see if I can get this back on the wagon!</p>
 <ul>
 <li>Discovered the <a href="https://github.com/kjschiroo/WikiChatter">WikiChatter</a> library (thanks to @halfak!), and using that in my Teahouse analysis notebook. Far better than writing my own parser and fighting with that. Lets me get on with the actual fun stuff I wanted to do (which is the actual analysis)</li>
 <li>Learning about pandas, checking out matplotlib, bokeh and wordcloud libraries to use in the analysis. Have included matplotlib and bokeh (and with it, pandas and numpy) in the default libraries list for PAWS, and also fixed permissions so users can pip install stuff themselves too.</li>
-<li>For context, I&#8217;m trying to do an analysis of the <a href="https://en.wikipedia.org/wiki/Wikipedia:Teahouse">English Wikipedia Teahouse</a> questions archive, mostly as a way of showing off what <a href="https://tools.wmflabs.org/paws">PAWS</a> makes possible.</li>
-<li>Also spent a good chunk of the day regretting previous life decisions. All temporary however &#8211; nothing irreversible was done, which is wonderful. Should figure out how to reduce likeliness of similar events happening in the future.</li>
+<li>For context, I’m trying to do an analysis of the <a href="https://en.wikipedia.org/wiki/Wikipedia:Teahouse">English Wikipedia Teahouse</a> questions archive, mostly as a way of showing off what <a href="https://tools.wmflabs.org/paws">PAWS</a> makes possible.</li>
+<li>Also spent a good chunk of the day regretting previous life decisions. All temporary however – nothing irreversible was done, which is wonderful. Should figure out how to reduce likeliness of similar events happening in the future.</li>
 <li>Docker build times on my machine are pathetic, both because of slow network (USA! USA! USA!) and cheap laptop. Need to find a proper solution to this soon.</li>
 </ul>
 
@@ -143,16 +160,15 @@
 
 </p>
   </header>
-  <p>I&#8217;m writing this post in an attempt to catalog the list of things I own so I can evaluate if I really need them and get rid of them.</p>
-
+  <p>I’m writing this post in an attempt to catalog the list of things I own so I can evaluate if I really need them and get rid of them.</p>
 <ol>
-<li>15&#8243; rMBP</li>
+<li>15″ rMBP</li>
 <li>Kinesis Keyboard</li>
 <li>Apple Trackpad</li>
 <li>Moto X</li>
 <li>Kindle</li>
 <li>Nexus 7 (To be returned to the WMF)</li>
-<li>Broken Nexus 4 (To be backed up and then&#8230; something)</li>
+<li>Broken Nexus 4 (To be backed up and then… something)</li>
 <li>iPod Touch</li>
 <li>Earphones (Soundmagic E10)</li>
 <li>Headphones (AudioTechnica ATH M50)</li>
@@ -179,12 +195,10 @@
 <li>Wrist Straps (left and right)</li>
 <li>Beard Trimmer</li>
 </ol>
-
 <p>Clothes:</p>
-
 <ol>
 <li>14 Underpants</li>
-<li>23 Socks (not 19 pairs &#8211; I had given up on pairing socks a long long time ago)</li>
+<li>23 Socks (not 19 pairs – I had given up on pairing socks a long long time ago)</li>
 <li>8 T Shirts</li>
 <li>3 pairs of cargo shorts</li>
 <li>1 pair of jeans</li>
@@ -194,13 +208,10 @@
 <li>1 pair of thermal underclothes</li>
 <li>2 Towels (1 slightly fluffy, 1 microfiber)</li>
 </ol>
-
-<p>I&#8217;ll try and keep this list updated.</p>
-
+<p>I’ll try and keep this list updated.</p>
 <p>Decluttering actions:</p>
-
 <ol>
-<li>I gave away assorted USB Power chargers and Plug convertors &#8211; I have now a universal plug that should be good enough, and 3 USB power adaptors of various sizes. I should probably trim down the number of cables I have</li>
+<li>I gave away assorted USB Power chargers and Plug convertors – I have now a universal plug that should be good enough, and 3 USB power adaptors of various sizes. I should probably trim down the number of cables I have</li>
 </ol>
 
 </article> 
@@ -219,8 +230,7 @@
 
 </p>
   </header>
-  <p><a href="https://lists.wikimedia.org/pipermail/foundation-l/2009-May/051656.html">&#8220;Green Stuff&#8221;</a></p>
-
+  <p><a href="https://lists.wikimedia.org/pipermail/foundation-l/2009-May/051656.html">“Green Stuff”</a></p>
 <p>TIL that Gregory Kohs was actually allowed to post on wikimedia-l at some point in the past.</p>
 
 </article> 
@@ -276,17 +286,14 @@
 </p>
   </header>
   <p>DevLog for Jan 5, 2015</p>
-
-<p>Trying out the <a href="https://itunes.apple.com/app/byword/id420212497?mt=12">ByWord</a> app, since it has MarkDown support and also publishes to WordPress. Paid Rs. 900 for it, let&#8217;s hope it is useful. Hate the default font, though.</p>
-
+<p>Trying out the <a href="https://itunes.apple.com/app/byword/id420212497?mt=12">ByWord</a> app, since it has MarkDown support and also publishes to WordPress. Paid Rs. 900 for it, let’s hope it is useful. Hate the default font, though.</p>
 <ul>
-<li>Need to parse View definitions on labsdb public databases and verify that we aren&#8217;t leaking any info (<a href="https://phabricator.wikimedia.org/T85783">https://phabricator.wikimedia.org/T85783</a>). Was going to use the <a href="https://code.google.com/p/python-sqlparse/">sqlparse</a> library, but that doesn&#8217;t seem very complete or useful. Will attempt to use regexes now. Wish I had learnt how to build parsers properly easily.</li>
+<li>Need to parse View definitions on labsdb public databases and verify that we aren’t leaking any info (<a href="https://phabricator.wikimedia.org/T85783)">https://phabricator.wikimedia.org/T85783)</a>. Was going to use the <a href="https://code.google.com/p/python-sqlparse/">sqlparse</a> library, but that doesn’t seem very complete or useful. Will attempt to use regexes now. Wish I had learnt how to build parsers properly easily.</li>
 <li>Ignore lament ^, I spent some time learning to use PyParsing, and ended up with a very simple parser that parsed the small subset of SQL I cared about! Yay :) Still need to set aside some time at some point to fully understand parsers/parsing.</li>
-<li>Fixed wikdidata beta not resolving (<a href="https://phabricator.wikimedia.org/T85793">https://phabricator.wikimedia.org/T85793</a>). Of course, problem was caused by me as well, not verifying that DNS changes I was making didn&#8217;t have unintended consequences. It&#8217;s also somewhat surprising that it was down for 6 days before someone noticed.</li>
-<li>Add labsdb-auditor report that verifies views have appropriately done definitions that do not expose private information (<a href="https://gerrit.wikimedia.org/r/#/c/182848/">https://gerrit.wikimedia.org/r/#/c/182848/</a>). This was fun to write. I should definitely learn more parsing things and seek out other simpel things I can write a parser for. Code quality is getting better, although could still be better if I can remove the regex part entirely &#8211; it currently cleans up the SQL via a regex and then parses it with pyparsing.</li>
-<li>Fixed a consistency bug in the perl script that maintians public view replicas (<a href="https://gerrit.wikimedia.org/r/#/c/182819/">https://gerrit.wikimedia.org/r/#/c/182819/</a>).</li>
+<li>Fixed wikdidata beta not resolving (<a href="https://phabricator.wikimedia.org/T85793)">https://phabricator.wikimedia.org/T85793)</a>. Of course, problem was caused by me as well, not verifying that DNS changes I was making didn’t have unintended consequences. It’s also somewhat surprising that it was down for 6 days before someone noticed.</li>
+<li>Add labsdb-auditor report that verifies views have appropriately done definitions that do not expose private information (<a href="https://gerrit.wikimedia.org/r/#/c/182848/)">https://gerrit.wikimedia.org/r/#/c/182848/)</a>. This was fun to write. I should definitely learn more parsing things and seek out other simpel things I can write a parser for. Code quality is getting better, although could still be better if I can remove the regex part entirely – it currently cleans up the SQL via a regex and then parses it with pyparsing.</li>
+<li>Fixed a consistency bug in the perl script that maintians public view replicas (<a href="https://gerrit.wikimedia.org/r/#/c/182819/)">https://gerrit.wikimedia.org/r/#/c/182819/)</a>.</li>
 </ul>
-
 <p>Reading list: * <a href="http://joostdevblog.blogspot.in/2015/01/what-most-young-programmers-need-to.html">What most young programmers need to learn</a> was nice. I just feel lucky to have been gifted a copy of Code Complete and Pragmatic Programmer when I was 15 (by <a href="http://colinizer.com/">Colinizer</a>).</p>
 
 </article> 
@@ -305,16 +312,14 @@
 
 </p>
   </header>
-  <p>Nothing much going on&#8230;</p>
-
+  <p>Nothing much going on…</p>
 <ul>
-<li>Continue reading Real World Haskell. This is indeed expanding my horizons, but I haven&#8217;t found any project I could use haskell in yet. Will keep looking.</li>
+<li>Continue reading Real World Haskell. This is indeed expanding my horizons, but I haven’t found any project I could use haskell in yet. Will keep looking.</li>
 <li>Helped fix a parsoid outage yesterday. No biggie. I still do not understand fully how parsoid works / how it is set up, should do.</li>
-<li>Spend most of the rest of the time in &#8216;weekend mode&#8217;, which includes mostly not doing things. That went mostly well.</li>
-<li>Watched &#8216;Pink Floyd The Wall&#8217; movie. HOLY FUCK MY MIND IT IS GONE OMG IT IS QUITE REALLY NICE. Recommended.</li>
+<li>Spend most of the rest of the time in ‘weekend mode’, which includes mostly not doing things. That went mostly well.</li>
+<li>Watched ‘Pink Floyd The Wall’ movie. HOLY FUCK MY MIND IT IS GONE OMG IT IS QUITE REALLY NICE. Recommended.</li>
 </ul>
-
-<p>I should probably write a &#8216;Year in Review 2014&#8217; post, but so much of that is going to be NSFW and private that there probably is no point&#8230; ;)</p>
+<p>I should probably write a ‘Year in Review 2014’ post, but so much of that is going to be NSFW and private that there probably is no point… ;)</p>
 
 </article> 
 
@@ -332,36 +337,13 @@
 
 </p>
   </header>
-  <p>Woohoo, 2015! :) Let&#8217;s see if I can keep this going this time :)</p>
-
+  <p>Woohoo, 2015! :) Let’s see if I can keep this going this time :)</p>
 <ul>
 <li>Have started taking weekends slightly more seriously. My brain feels less overwhelmed after that. Should take weekends even more seriously going forward.</li>
-<li>Merged <code>labsdb-auditor</code> <a href="https://gerrit.wikimedia.org/r/#/c/182164/">rewrite patch</a>. Code clean enough for my tastes now, although not documented enough. Lots of back and forth CR with valhallasw was really nice &#8211; it&#8217;s something I&#8217;ve been missing for the past few months. Debating over style and cleanliness was also interesting. Felt like I had been taking code cleanliness and proper design not as seriously as I should have, and this is now time to change that. Also spent time consciously thinking about the commit message I was writing, and shall continue doing that. I think I&#8217;ve taken a few things for granted wrt code quality and design, and should be more careful. And learnt a few more tricks about decorators (haven&#8217;t built decorators that are parameterized before).</li>
+<li>Merged <code>labsdb-auditor</code> <a href="https://gerrit.wikimedia.org/r/#/c/182164/">rewrite patch</a>. Code clean enough for my tastes now, although not documented enough. Lots of back and forth CR with valhallasw was really nice – it’s something I’ve been missing for the past few months. Debating over style and cleanliness was also interesting. Felt like I had been taking code cleanliness and proper design not as seriously as I should have, and this is now time to change that. Also spent time consciously thinking about the commit message I was writing, and shall continue doing that. I think I’ve taken a few things for granted wrt code quality and design, and should be more careful. And learnt a few more tricks about decorators (haven’t built decorators that are parameterized before).</li>
 <li>Read a few chapters of <a href="http://book.realworldhaskell.org/">Real World Haskell</a>. Quite nice, although the syntax feels a bit too dense for my tastes. Still should maybe write things with <a href="http://www.call-cc.org/">ChickenScheme</a> instead :)</li>
 <li>Continuing re-reading Coders at Work, which continues to be a thought provoking, wonderful book.</li>
 </ul>
-
-</article> 
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/plugging-a-keyboard-into-my-nexus-7/">Plugging a keyboard into my Nexus 7</a></h2>
-    <p class="blog-post-meta"><time datetime="2014-10-12T18:35:19Z">Sun Oct 12, 2014</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/personal" rel="category tag">personal</a>
-
-
-</p>
-  </header>
-  <p>Was a great idea! It just worked (with an OTP cable), and I can now probably find much more uses for this thing than I could before. Yay!</p>
-
-<p>I wonder if I can use this to write code. However, a 7 inch tablet is very poorly suited for that task &#8211; would need at least a 10&#8243; one. But there aren&#8217;t many of those going around these days&#8230;</p>
-
-<p>I&#8217;ll probably use this for random browsing / commenting, and use my Mac for actual programming.</p>
 
 </article> 
 
@@ -393,7 +375,6 @@
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -401,7 +382,6 @@
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -419,6 +399,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -426,8 +408,6 @@
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>

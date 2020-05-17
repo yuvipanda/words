@@ -6,16 +6,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <meta property="og:title" content="Cheese GSoC Report – Week 3" />
-<meta property="og:description" content="Third week of the Summer of Code is over! And during this week&#8230;.
- Successfully wrapped up the core cheese functionality (libcheese) with a vala wrapper Made Photo Mode work Made Video Mode work Made Burst Mode work Made cheese single instance using libunique Started work on cleaning up GConf code.  In last week&#8217;s report, I mentioned that I didn&#8217;t quite like my pace of work. It is still the same (approx." />
+<meta property="og:description" content="Third week of the Summer of Code is over! And during this week….
+ Successfully wrapped up the core cheese functionality (libcheese) with a vala wrapper Made Photo Mode work Made Video Mode work Made Burst Mode work Made cheese single instance using libunique Started work on cleaning up GConf code.  In last week’s report, I mentioned that I didn’t quite like my pace of work. It is still the same (approx." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://words.yuvi.in/cheese-gsoc-report-week-3/" /><meta property="article:published_time" content="2010-06-13T04:24:14&#43;00:00"/>
-<meta property="article:modified_time" content="2010-06-13T04:24:14&#43;00:00"/>
+<meta property="og:url" content="http://words.yuvi.in/cheese-gsoc-report-week-3/" />
+<meta property="article:published_time" content="2010-06-13T04:24:14+00:00" />
+<meta property="article:modified_time" content="2010-06-13T04:24:14+00:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Cheese GSoC Report – Week 3"/>
-<meta name="twitter:description" content="Third week of the Summer of Code is over! And during this week&#8230;.
- Successfully wrapped up the core cheese functionality (libcheese) with a vala wrapper Made Photo Mode work Made Video Mode work Made Burst Mode work Made cheese single instance using libunique Started work on cleaning up GConf code.  In last week&#8217;s report, I mentioned that I didn&#8217;t quite like my pace of work. It is still the same (approx."/>
-<meta name="generator" content="Hugo 0.47.1" />
+<meta name="twitter:description" content="Third week of the Summer of Code is over! And during this week….
+ Successfully wrapped up the core cheese functionality (libcheese) with a vala wrapper Made Photo Mode work Made Video Mode work Made Burst Mode work Made cheese single instance using libunique Started work on cleaning up GConf code.  In last week’s report, I mentioned that I didn’t quite like my pace of work. It is still the same (approx."/>
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -24,10 +26,10 @@
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "Cheese GSoC Report – Week 3",
-  "url": "http://words.yuvi.in/cheese-gsoc-report-week-3/",
+  "url": "http:\/\/words.yuvi.in\/cheese-gsoc-report-week-3\/",
   "wordCount": "235",
-  "datePublished": "2010-06-13T04:24:14&#43;00:00",
-  "dateModified": "2010-06-13T04:24:14&#43;00:00",
+  "datePublished": "2010-06-13T04:24:14\x2b00:00",
+  "dateModified": "2010-06-13T04:24:14\x2b00:00",
   "author": {
     "@type": "Person",
     "name": "yuvipanda"
@@ -87,8 +89,7 @@
 
 </p>
   </header>
-  <p>Third week of the Summer of Code is over! And during this week&#8230;.</p>
-
+  <p>Third week of the Summer of Code is over! And during this week….</p>
 <ol>
 <li>Successfully wrapped up the core cheese functionality (<code>libcheese</code>) with a vala wrapper</li>
 <li>Made Photo Mode work</li>
@@ -97,13 +98,9 @@
 <li>Made cheese single instance using <code>libunique</code></li>
 <li>Started work on cleaning up GConf code.</li>
 </ol>
-
-<p>In <a href="http://yuvi.in/blog/cheese-gsoc-report-week-2.html">last week&#8217;s report</a>, I mentioned that I didn&#8217;t quite like my pace of work. It is still the same (approx. 3 hours a day on average, excluding overhead) &#8211; but I&#8217;ve come to accept that it is okay. No more bitching about it, as long as I&#8217;m meeting my goals.</p>
-
-<p>Last week&#8217;s predictions were to complete libcheese wrapping, photo mode, video mode and burst mode. Set goals accomplished with ample time to spare &#8211; time that was spent trying to get countdown animations to work (still haven&#8217;t managed), and make cheese single instance. I under-estimated last week &#8211; should improve accuracy.</p>
-
-<p>By next week, I hope to have accomplished&#8230;</p>
-
+<p>In <a href="http://yuvi.in/blog/cheese-gsoc-report-week-2.html">last week’s report</a>, I mentioned that I didn’t quite like my pace of work. It is still the same (approx. 3 hours a day on average, excluding overhead) – but I’ve come to accept that it is okay. No more bitching about it, as long as I’m meeting my goals.</p>
+<p>Last week’s predictions were to complete libcheese wrapping, photo mode, video mode and burst mode. Set goals accomplished with ample time to spare – time that was spent trying to get countdown animations to work (still haven’t managed), and make cheese single instance. I under-estimated last week – should improve accuracy.</p>
+<p>By next week, I hope to have accomplished…</p>
 <ol>
 <li>Fully functional preferences dialog box</li>
 <li>Countdown animations</li>
@@ -111,14 +108,11 @@
 <li>Full blown keybindings (Basically <code>&lt;Esc&gt;</code> to cancel, since the others are already implemented)</li>
 <li>Trash/Delete implementation</li>
 </ol>
-
 <p>It would have everything Cheese 2.30.1 has, except for Effects.</p>
-
 <p>And what did I learn this week?</p>
-
 <ol>
 <li>RTFM. Again. And again. THEN ask on IRC.</li>
-<li>How to use gdb. I&#8217;ve only cursorily used it before &#8211; but digging into it deeper now (thank you, segfault!)</li>
+<li>How to use gdb. I’ve only cursorily used it before – but digging into it deeper now (thank you, segfault!)</li>
 </ol>
 
 
@@ -161,7 +155,6 @@
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -169,7 +162,6 @@
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -187,6 +179,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -194,8 +188,6 @@
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>

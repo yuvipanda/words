@@ -7,15 +7,17 @@
 
 <meta property="og:title" content="Simple python packaging for Debian / Ubuntu" />
 <meta property="og:description" content="(As requested by Jean-Fred)
-One of the &#8216;pain points&#8217; with working on deploying python stuff at Wikimedia is that pip and virtualenvs are banned on production, for some (what I now understand as) good reasons (the solid Signing / Security issues with PYPI, and the slightly less solid but nonetheless valid &#8216;If we use pip for python and gem for ruby and npm for node, EXPLOSION OF PACKAGE MANAGERS and makes things harder to manage&#8217;)." />
+One of the ‘pain points’ with working on deploying python stuff at Wikimedia is that pip and virtualenvs are banned on production, for some (what I now understand as) good reasons (the solid Signing / Security issues with PYPI, and the slightly less solid but nonetheless valid ‘If we use pip for python and gem for ruby and npm for node, EXPLOSION OF PACKAGE MANAGERS and makes things harder to manage’)." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://words.yuvi.in/simple-python-packaging-debian-ubuntu/" /><meta property="article:published_time" content="2014-08-19T13:08:28&#43;00:00"/>
-<meta property="article:modified_time" content="2014-08-19T13:08:28&#43;00:00"/>
+<meta property="og:url" content="http://words.yuvi.in/simple-python-packaging-debian-ubuntu/" />
+<meta property="article:published_time" content="2014-08-19T13:08:28+00:00" />
+<meta property="article:modified_time" content="2014-08-19T13:08:28+00:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Simple python packaging for Debian / Ubuntu"/>
 <meta name="twitter:description" content="(As requested by Jean-Fred)
-One of the &#8216;pain points&#8217; with working on deploying python stuff at Wikimedia is that pip and virtualenvs are banned on production, for some (what I now understand as) good reasons (the solid Signing / Security issues with PYPI, and the slightly less solid but nonetheless valid &#8216;If we use pip for python and gem for ruby and npm for node, EXPLOSION OF PACKAGE MANAGERS and makes things harder to manage&#8217;)."/>
-<meta name="generator" content="Hugo 0.47.1" />
+One of the ‘pain points’ with working on deploying python stuff at Wikimedia is that pip and virtualenvs are banned on production, for some (what I now understand as) good reasons (the solid Signing / Security issues with PYPI, and the slightly less solid but nonetheless valid ‘If we use pip for python and gem for ruby and npm for node, EXPLOSION OF PACKAGE MANAGERS and makes things harder to manage’)."/>
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -23,11 +25,11 @@ One of the &#8216;pain points&#8217; with working on deploying python stuff at W
 {
   "@context": "http://schema.org",
   "@type": "BlogPosting",
-  "headline": "Simple python packaging for Debian / Ubuntu",
-  "url": "http://words.yuvi.in/simple-python-packaging-debian-ubuntu/",
+  "headline": "Simple python packaging for Debian \/ Ubuntu",
+  "url": "http:\/\/words.yuvi.in\/simple-python-packaging-debian-ubuntu\/",
   "wordCount": "453",
-  "datePublished": "2014-08-19T13:08:28&#43;00:00",
-  "dateModified": "2014-08-19T13:08:28&#43;00:00",
+  "datePublished": "2014-08-19T13:08:28\x2b00:00",
+  "dateModified": "2014-08-19T13:08:28\x2b00:00",
   "author": {
     "@type": "Person",
     "name": "yuvipanda"
@@ -88,24 +90,18 @@ One of the &#8216;pain points&#8217; with working on deploying python stuff at W
 </p>
   </header>
   <p>(As requested by <a href="https://twitter.com/JeanFred">Jean-Fred</a>)</p>
-
-<p>One of the &#8216;pain points&#8217; with working on deploying python stuff at Wikimedia is that <code>pip</code> and <code>virtualenvs</code> are banned on production, for some (what I now understand as) good reasons (the solid Signing / Security issues with PYPI, and the slightly less solid but nonetheless valid &#8216;If we use pip for python and gem for ruby and npm for node, EXPLOSION OF PACKAGE MANAGERS and makes things harder to manage&#8217;). I was whining about how hard debian packaging was for quite a while without checking how easy/hard it was to package python specifically, and when I finally did, it turned out to be quite not that hard.</p>
-
+<p>One of the ‘pain points’ with working on deploying python stuff at Wikimedia is that <code>pip</code> and <code>virtualenvs</code> are banned on production, for some (what I now understand as) good reasons (the solid Signing / Security issues with PYPI, and the slightly less solid but nonetheless valid ‘If we use pip for python and gem for ruby and npm for node, EXPLOSION OF PACKAGE MANAGERS and makes things harder to manage’). I was whining about how hard debian packaging was for quite a while without checking how easy/hard it was to package python specifically, and when I finally did, it turned out to be quite not that hard.</p>
 <p>Use <a href="https://pypi.python.org/pypi/stdeb">python-stdeb</a>.</p>
-
-<p>Really, that is it. Ignore most other things (until you run into issues that require them :P). It can translate most python packages that are packaged for PyPI into .debs that mostly pass <a href="https://lintian.debian.org/">lintian</a> checks. Simplest way to package, that I&#8217;ve been following for a while is:</p>
-
+<p>Really, that is it. Ignore most other things (until you run into issues that require them :P). It can translate most python packages that are packaged for PyPI into .debs that mostly pass <a href="https://lintian.debian.org/">lintian</a> checks. Simplest way to package, that I’ve been following for a while is:</p>
 <ol>
-<li>Install <code>python-stdeb</code> (from pip or apt). Usually requires the packages <code>python-all</code>, <code>fakeroot</code> and <code>build-essential</code>, although for some reason these aren&#8217;t required by the debian package for <code>stdeb</code>. Make sure you&#8217;re on the same distro you are building the package for.</li>
+<li>Install <code>python-stdeb</code> (from pip or apt). Usually requires the packages <code>python-all</code>, <code>fakeroot</code> and <code>build-essential</code>, although for some reason these aren’t required by the debian package for <code>stdeb</code>. Make sure you’re on the same distro you are building the package for.</li>
 <li><code>git clone</code> the package from its source</li>
 <li>Run <code>python setup.py --command-packages=stdeb.command bdist_deb</code> (or <code>python3</code> if you want to make Python 3 package)</li>
 <li>Run <code>lintian</code> on it. If it spots errors, go back and fix them, usually by editing the <code>setup.py</code> file (or sometimes a <code>stdeb.cfg</code> file). This is usually rather obvious and easy enough to fix.</li>
-<li>Run <code>dpkg -i &lt;package&gt;</code> to try to install the package. This will error out if it can&#8217;t find the packages that your package depends on. This means that they haven&#8217;t been packaged for debian yet. You can mostly fix this by finding that package, and making a deb for it, and installing it as well (recursively making debs for packages as you need them). While this sounds onerous, the fact is that most python packages already exist as deb packages and you <code>stdeb</code> will just work for them. You might have to do this more if you&#8217;re packaging for an older distro (<em>cough</em> <em>cough</em> <code>precise</code> <em>cough</em> <em>cough</em>), but is much easier on newer distros.</li>
+<li>Run <code>dpkg -i &lt;package&gt;</code> to try to install the package. This will error out if it can’t find the packages that your package depends on. This means that they haven’t been packaged for debian yet. You can mostly fix this by finding that package, and making a deb for it, and installing it as well (recursively making debs for packages as you need them). While this sounds onerous, the fact is that most python packages already exist as deb packages and you <code>stdeb</code> will just work for them. You might have to do this more if you’re packaging for an older distro (<em>cough</em> <em>cough</em> <code>precise</code> <em>cough</em> <em>cough</em>), but is much easier on newer distros.</li>
 <li>Put your package in a repository! If you want to use this on Wikimedia Labs, you should use <a href="https://wikitech.wikimedia.org/wiki/Help:Using_debs_in_labs">Labsdebrepo</a>. Other environments will have similar ways to make the package available via <code>apt-get</code>. Avoid the temptation to just <code>dpkg -i</code> it on machines manually :)</li>
 </ol>
-
-<p>That&#8217;s pretty much it! Much simpler than I originally expected, and not much confusing / conflicting docs. The docs for <code>stdeb</code> are pretty nice and complete, so do read these!</p>
-
+<p>That’s pretty much it! Much simpler than I originally expected, and not much confusing / conflicting docs. The docs for <code>stdeb</code> are pretty nice and complete, so do read these!</p>
 <p>Will update the post as I learn more.</p>
 
 
@@ -148,7 +144,6 @@ One of the &#8216;pain points&#8217; with working on deploying python stuff at W
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -156,7 +151,6 @@ One of the &#8216;pain points&#8217; with working on deploying python stuff at W
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -174,6 +168,8 @@ One of the &#8216;pain points&#8217; with working on deploying python stuff at W
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -181,8 +177,6 @@ One of the &#8216;pain points&#8217; with working on deploying python stuff at W
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>

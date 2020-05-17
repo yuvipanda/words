@@ -7,15 +7,17 @@
 
 <meta property="og:title" content="DNS servers, localhost and asynchronous code" />
 <meta property="og:description" content="localhost is always 127.0.0.1, right? Nope, can also be ::1 if your system only has IPV6 (apparently).
-Asking a DNS server for an A record for localhost should give you back 127.0.0.1 right? Nope &#8211; it varies wildly! 8.8.8.8 gives me an NXDOMAIN which means it tells you straight up THIS DOMAIN DOES NOT EXIST! Which is true, since localhost isn&#8217;t a domain. But if you ask the same thing of any dnsmasq server, it&#8217;ll tell you localhost is 127." />
+Asking a DNS server for an A record for localhost should give you back 127.0.0.1 right? Nope – it varies wildly! 8.8.8.8 gives me an NXDOMAIN which means it tells you straight up THIS DOMAIN DOES NOT EXIST! Which is true, since localhost isn’t a domain. But if you ask the same thing of any dnsmasq server, it’ll tell you localhost is 127." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://words.yuvi.in/dns-servers-localhost-asynchronous-code/" /><meta property="article:published_time" content="2016-02-04T02:38:03&#43;00:00"/>
-<meta property="article:modified_time" content="2016-02-04T02:38:03&#43;00:00"/>
+<meta property="og:url" content="http://words.yuvi.in/dns-servers-localhost-asynchronous-code/" />
+<meta property="article:published_time" content="2016-02-04T02:38:03+00:00" />
+<meta property="article:modified_time" content="2016-02-04T02:38:03+00:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="DNS servers, localhost and asynchronous code"/>
 <meta name="twitter:description" content="localhost is always 127.0.0.1, right? Nope, can also be ::1 if your system only has IPV6 (apparently).
-Asking a DNS server for an A record for localhost should give you back 127.0.0.1 right? Nope &#8211; it varies wildly! 8.8.8.8 gives me an NXDOMAIN which means it tells you straight up THIS DOMAIN DOES NOT EXIST! Which is true, since localhost isn&#8217;t a domain. But if you ask the same thing of any dnsmasq server, it&#8217;ll tell you localhost is 127."/>
-<meta name="generator" content="Hugo 0.47.1" />
+Asking a DNS server for an A record for localhost should give you back 127.0.0.1 right? Nope – it varies wildly! 8.8.8.8 gives me an NXDOMAIN which means it tells you straight up THIS DOMAIN DOES NOT EXIST! Which is true, since localhost isn’t a domain. But if you ask the same thing of any dnsmasq server, it’ll tell you localhost is 127."/>
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -24,10 +26,10 @@ Asking a DNS server for an A record for localhost should give you back 127.0.0.1
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "DNS servers, localhost and asynchronous code",
-  "url": "http://words.yuvi.in/dns-servers-localhost-asynchronous-code/",
+  "url": "http:\/\/words.yuvi.in\/dns-servers-localhost-asynchronous-code\/",
   "wordCount": "225",
-  "datePublished": "2016-02-04T02:38:03&#43;00:00",
-  "dateModified": "2016-02-04T02:38:03&#43;00:00",
+  "datePublished": "2016-02-04T02:38:03\x2b00:00",
+  "dateModified": "2016-02-04T02:38:03\x2b00:00",
   "author": {
     "@type": "Person",
     "name": "yuvipanda"
@@ -88,13 +90,9 @@ Asking a DNS server for an A record for localhost should give you back 127.0.0.1
 </p>
   </header>
   <p><code>localhost</code> is always <code>127.0.0.1</code>, right? Nope, can also be <code>::1</code> if your system only has IPV6 (apparently).</p>
-
-<p>Asking a DNS server for an A record for <code>localhost</code> should give you back <code>127.0.0.1</code> right? Nope &#8211; it varies wildly! <code>8.8.8.8</code> gives me an <code>NXDOMAIN</code> which means it tells you straight up THIS DOMAIN DOES NOT EXIST! Which is true, since localhost isn&#8217;t a domain. But if you ask the same thing of any dnsmasq server, it&#8217;ll tell you localhost is 127.0.0.1. Other servers vary wildly &#8211; I found one that returned an <code>NXDOMAIN</code> for AAAA but 127.0.0.1 for A (which is pretty wild, since <code>NXDOMAIN</code> makes most software treat the domain as not existing and not attempt other lookups). So localhost and DNS servers don&#8217;t mix very well.</p>
-
-<p>But why is this a problem, in general? Most DNS resolution happens via <code>gethostbyname</code> libc call, which reads <code>/etc/hosts</code> properly, right? Problem there is that there is popular software that&#8217;s completely asynchronous (_cough_nginx<em>cough</em>) that does <em>not</em> use <code>gethostbyname</code> (since that&#8217;s synchronous) and directly queries DNS servers (asynchronously). This works perfectly well until you try to hit <code>localhost</code> and it tells you &#8216;no such thing!&#8217;.</p>
-
+<p>Asking a DNS server for an A record for <code>localhost</code> should give you back <code>127.0.0.1</code> right? Nope – it varies wildly! <code>8.8.8.8</code> gives me an <code>NXDOMAIN</code> which means it tells you straight up THIS DOMAIN DOES NOT EXIST! Which is true, since localhost isn’t a domain. But if you ask the same thing of any dnsmasq server, it’ll tell you localhost is 127.0.0.1. Other servers vary wildly – I found one that returned an <code>NXDOMAIN</code> for AAAA but 127.0.0.1 for A (which is pretty wild, since <code>NXDOMAIN</code> makes most software treat the domain as not existing and not attempt other lookups). So localhost and DNS servers don’t mix very well.</p>
+<p>But why is this a problem, in general? Most DNS resolution happens via <code>gethostbyname</code> libc call, which reads <code>/etc/hosts</code> properly, right? Problem there is that there is popular software that’s completely asynchronous (<em>cough_nginx_cough</em>) that does <em>not</em> use <code>gethostbyname</code> (since that’s synchronous) and directly queries DNS servers (asynchronously). This works perfectly well until you try to hit <code>localhost</code> and it tells you ‘no such thing!’.</p>
 <p>I should probably file a bug with nginx to have them read <code>/etc/hosts</code> as well, and in the mean-time work around by sending <code>127.0.0.1</code> to nginx rather than localhost.</p>
-
 <p>How did <em>your</em> thursday go?</p>
 
 
@@ -137,7 +135,6 @@ Asking a DNS server for an A record for localhost should give you back 127.0.0.1
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -145,7 +142,6 @@ Asking a DNS server for an A record for localhost should give you back 127.0.0.1
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -163,6 +159,8 @@ Asking a DNS server for an A record for localhost should give you back 127.0.0.1
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -170,8 +168,6 @@ Asking a DNS server for an A record for localhost should give you back 127.0.0.1
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>

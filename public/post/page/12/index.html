@@ -9,11 +9,12 @@
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/post/" />
-<meta property="og:updated_time" content="2013-03-22T19:24:21&#43;00:00"/>
+<meta property="og:updated_time" content="2020-05-17T11:25:35+05:30" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
-<meta name="generator" content="Hugo 0.47.1" />
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -22,14 +23,14 @@
   "@context": "http://schema.org",
   "@type": "Blog",
   "headline": "Yuvi Panda",
-  "url" : "http://words.yuvi.in/post/",
+  "url" : "http:\/\/words.yuvi.in\/post\/",
   "author": {
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2013-03-22T19:24:21&#43;00:00",
+  "dateModified": "2020-05-17T11:25:35\x2b05:30",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
-  "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
+  "description": "[JupyterHub](https:\/\/github.com\/jupyterhub\/jupyterhub) | [MyBinder](https:\/\/mybinder.org) | [Kubernetes](https:\/\/k8s.io) | Open Culture"
 }
 </script>
 
@@ -84,6 +85,28 @@
 
 <article class="blog-post">
   <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/android-regex-bug-null-replacement-matcher-replaceall/">Android RegEx bug: ‘null’ replacement with Matcher.replaceAll</a></h2>
+    <p class="blog-post-meta"><time datetime="2013-03-22T22:18:21Z">Fri Mar 22, 2013</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>
+
+
+</p>
+  </header>
+  <p>Android’s <a href="https://developer.android.com/reference/java/util/regex/Pattern.html">Regular Expressions</a> engine is API compatible with the generic Java implementation, but under the hood uses <a href="http://userguide.icu-project.org/strings/regexp">ICU’s RegEx engine</a>. This usually causes no problems, until it does and then you’re sortof fucked, but not really.</p>
+<p>On a recent project, a subtle bug in Android’s <code>Matcher.replaceAll</code> behavior bit me. When replacing values of captured groups (<code>'$1'&lt;/code,&lt;code&gt;'$2'</code>, etc), Android’s implementation replaced a reference to an empty group with the literal string <code>'null'</code> instead of just skipping it (aka replacing with empty string <code>''</code>), which is what most other Java implemetations do. The string <code>'null'</code> is, I think, <em>never</em> the right behavior. And the inconsistency causes unit tests to pass when run on the desktop JRE to fail when run in Android, which is a major pain.</p>
+<p>Fortunately Android is Open Source, and I was able to track down the <a href="http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/6-b14/java/util/regex/Matcher.java#Matcher.replaceAll%28java.lang.String%29">offending piece of code</a>, and just write myself <a href="https://gist.github.com/yuvipanda/5225151">a simple replacement</a> that has the bug fixed:</p>
+<!-- raw HTML omitted -->
+<p>You’re welcome. Yay Open Source!</p>
+
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
     <h2 class="blog-post-title"><a href="http://words.yuvi.in/file-bug-report/">How to file a bug report</a></h2>
     <p class="blog-post-meta"><time datetime="2013-03-22T19:24:21Z">Fri Mar 22, 2013</time> by yuvipanda in 
 <i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/links" rel="category tag">links</a>
@@ -91,7 +114,7 @@
 
 </p>
   </header>
-  <p><a href="https://www.mediawiki.org/wiki/User:Valeriej">Valerie</a>, our awesome &#8216;Bug Wrangler in Training&#8217;, has written a nice blog post on <a href="https://blog.wikimedia.org/2013/03/18/how-to-create-a-good-first-bug-report/">how to report your first bug</a>.</p>
+  <p><a href="https://www.mediawiki.org/wiki/User:Valeriej">Valerie</a>, our awesome ‘Bug Wrangler in Training’, has written a nice blog post on <a href="https://blog.wikimedia.org/2013/03/18/how-to-create-a-good-first-bug-report/">how to report your first bug</a>.</p>
 
 </article> 
 
@@ -109,11 +132,9 @@
 
 </p>
   </header>
-  <p>I&#8217;ve been mostly off Twitter for a while now, interacting with it rarely, and only on my Phone. While I&#8217;ve had a vague feeling of uneasiness ever since they unveiled their now <a href="https://dev.twitter.com/terms/api-terms"><em>business friendly</em> developer policies</a>, it really hit home when my favorite Android twitter app, Falcon Pro, hit <a href="http://www.theverge.com/2013/2/23/4021380/falcon-for-android-hits-twitter-token-limit">Twitter&#8217;s arbitrary user token limit</a> (and Twitter declined to care). That, plus the Google Reader saga have jolted me out of complacency a bit.</p>
-
-<p>It may be cliche, but &#8220;If you are not paying for it, you are the product&#8221; rings rather true at the moment.</p>
-
-<p>So I&#8217;ll mostly be off Twitter (and Facebook too) now. Identi.ca seems inactive, but I will probably give it a shot too. I&#8217;m going to pick up the slack by actually blogging instead. Twitter seems to have completely killed my long form text writing ability. My Nexus 7 and bluetooth keyboard will hopefully help bring it back! Twitter is still good for publicity, so I&#8217;ll need to find a way to feed my blog links into Twitter.</p>
+  <p>I’ve been mostly off Twitter for a while now, interacting with it rarely, and only on my Phone. While I’ve had a vague feeling of uneasiness ever since they unveiled their now <a href="https://dev.twitter.com/terms/api-terms"><em>business friendly</em> developer policies</a>, it really hit home when my favorite Android twitter app, Falcon Pro, hit <a href="http://www.theverge.com/2013/2/23/4021380/falcon-for-android-hits-twitter-token-limit">Twitter’s arbitrary user token limit</a> (and Twitter declined to care). That, plus the Google Reader saga have jolted me out of complacency a bit.</p>
+<p>It may be cliche, but “If you are not paying for it, you are the product” rings rather true at the moment.</p>
+<p>So I’ll mostly be off Twitter (and Facebook too) now. Identi.ca seems inactive, but I will probably give it a shot too. I’m going to pick up the slack by actually blogging instead. Twitter seems to have completely killed my long form text writing ability. My Nexus 7 and bluetooth keyboard will hopefully help bring it back! Twitter is still good for publicity, so I’ll need to find a way to feed my blog links into Twitter.</p>
 
 </article> 
 
@@ -132,7 +153,6 @@
 </p>
   </header>
   <p>Somehow, I found <a href="http://neave.com/television">http://neave.com/television</a> earlier today. Addictive.</p>
-
 <p>P.S. Blogging from a tablet with a bluetooth keyboard is not bad at all.</p>
 
 </article> 
@@ -151,7 +171,7 @@
 
 </p>
   </header>
-  <p>They suck. It&#8217;s easy when it is &#8216;useless test to take&#8217; vs &#8216;GSoC&#8217;. Painful for a lot of other things. Ugh.</p>
+  <p>They suck. It’s easy when it is ‘useless test to take’ vs ‘GSoC’. Painful for a lot of other things. Ugh.</p>
 
 </article> 
 
@@ -169,13 +189,10 @@
 
 </p>
   </header>
-  <p>Should have done this a while back. Added a <a href="https://creativecommons.org/licenses/by/3.0/deed.en_US">CC BY</a> mark to the blog. Will add a notice to the front page as well, stating that all media I produce (when not bound to someone else&#8217;s copyright) is CC BY. I think code is already taken care of, but I&#8217;ll add a note here saying that all code I release (unless explicitly licensed otherwise) is CC0 Licensed.</p>
-
-<p>Now to actually produce something of value&#8230;</p>
-
+  <p>Should have done this a while back. Added a <a href="https://creativecommons.org/licenses/by/3.0/deed.en_US">CC BY</a> mark to the blog. Will add a notice to the front page as well, stating that all media I produce (when not bound to someone else’s copyright) is CC BY. I think code is already taken care of, but I’ll add a note here saying that all code I release (unless explicitly licensed otherwise) is CC0 Licensed.</p>
+<p>Now to actually produce something of value…</p>
 <p>(Thanks to <a href="http://quominus.org">Ironholds</a> for <a href="http://quominus.org/archives/1169">the push</a>)</p>
-
-<p>&nbsp;</p>
+<p> </p>
 
 </article> 
 
@@ -193,11 +210,9 @@
 
 </p>
   </header>
-  <p>Reading <a href="http://wilwheaton.net/2011/12/from-the-vault-the-irrational-immortality-of-youth/">this blog post</a> from <del>Wesley Crusher</del><ins>Wil Wheaton</ins> reminded me first of my visit to the beach a few hours before <a href="https://en.wikipedia.org/wiki/Cyclone_Nilam">Cyclone Nilam</a> hit landfall (at the Thiruvanmiyur Beach). The fact that I couldn&#8217;t stand in one place (wind) and was constantly being attacked by sand &#8211; it was exhilarating.</p>
-
-<p>The blog post also reminded me of how much I mis-treat my body. I&#8217;m surprised I&#8217;m not bedridden, immovable and with a host of diseases. Trading health for a wealth of incredible stories.</p>
-
-<p>Immortality of youth, or plain old luck. Hopefully I&#8217;ll wisen up before either of them run out.</p>
+  <p>Reading <a href="http://wilwheaton.net/2011/12/from-the-vault-the-irrational-immortality-of-youth/">this blog post</a> from <!-- raw HTML omitted -->Wesley Crusher<!-- raw HTML omitted --><!-- raw HTML omitted -->Wil Wheaton<!-- raw HTML omitted --> reminded me first of my visit to the beach a few hours before <a href="https://en.wikipedia.org/wiki/Cyclone_Nilam">Cyclone Nilam</a> hit landfall (at the Thiruvanmiyur Beach). The fact that I couldn’t stand in one place (wind) and was constantly being attacked by sand – it was exhilarating.</p>
+<p>The blog post also reminded me of how much I mis-treat my body. I’m surprised I’m not bedridden, immovable and with a host of diseases. Trading health for a wealth of incredible stories.</p>
+<p>Immortality of youth, or plain old luck. Hopefully I’ll wisen up before either of them run out.</p>
 
 </article> 
 
@@ -215,25 +230,20 @@
 
 </p>
   </header>
-  <p>Richard Gabriel&#8217;s <a href="http://www.jwz.org/doc/worse-is-better.html">Worse is Better</a> (falsly attributed to <a href="http://www.jwz.org">jwz</a> by many), is a piece on how LISP lost out to C, despite being &#8216;better&#8217;.</p>
-
-<p>Jim Waldo&#8217;s <a href="http://www.artima.com/weblogs/viewpost.jsp?thread=24807">Worse is Worse</a> notes, quite accurately, that what us geeks consider &#8216;better&#8217; might not what is, in the context of the universe at large, &#8216;better&#8217;. To quote,</p>
-
+  <p>Richard Gabriel’s <a href="http://www.jwz.org/doc/worse-is-better.html">Worse is Better</a> (falsly attributed to <a href="http://www.jwz.org">jwz</a> by many), is a piece on how LISP lost out to C, despite being ‘better’.</p>
+<p>Jim Waldo’s <a href="http://www.artima.com/weblogs/viewpost.jsp?thread=24807">Worse is Worse</a> notes, quite accurately, that what us geeks consider ‘better’ might not what is, in the context of the universe at large, ‘better’. To quote,</p>
 <blockquote>
-<p>[&#8230;] what we see is that better is a complicated notion, and can depend on a variety of different metrics. It may be disappointing to find out that what we geeks think of as better may not be what our customers think is better. But finding this out shouldn&#8217;t surprise us too much.</p>
+<p>[…] what we see is that better is a complicated notion, and can depend on a variety of different metrics. It may be disappointing to find out that what we geeks think of as better may not be what our customers think is better. But finding this out shouldn’t surprise us too much.</p>
 </blockquote>
-
-<p>There is also explanations on how on many of the examples used to justify worse as being &#8216;better&#8217;, the wrong criteria was being used.</p>
-
+<p>There is also explanations on how on many of the examples used to justify worse as being ‘better’, the wrong criteria was being used.</p>
 <p>The original piece has been used to justify people producing shoddy, shitty work quite frequently. Waldo agrees:</p>
-
 <blockquote>
-<p>My problem with the slogan is that it has become a catch phrase for those who either haven&#8217;t read the original article, or have read it and either have forgotten what it really talked about or never understood it in the first place. As a catch phrase, it is often used to justify shoddy design, or following the crowd rather than doing what is right, or as short-hand for the real claim that our customers are too stupid to either appreciate or deserve high quality products. Why spend the time doing things right, this line of reasoning goes, when we all know that worse is better. You are far better off giving the customer something that you know is less than what you could produce, because they (those simple customers) will think that it is better.</p>
-
-<p>The end result of this thinking is sloppy products that don&#8217;t work, are hard to use, or are unreliable (or all of the above). We try to convince our customers that this is the way software has to be, and then turn around and convince ourselves that they won&#8217;t pay for anything better. But we short-change our customers, and we cheapen our craft, when we put up with this sort of thinking. When the original article was produced, I don&#8217;t think that this is what the author had in mind; even if it was, it is time for us to reject the simple-minded interpretation of the slogan, and start putting out software that really is better (on the dimension of goodness that our customers have, not necessarily our own).</p>
+<p>My problem with the slogan is that it has become a catch phrase for those who either haven’t read the original article, or have read it and either have forgotten what it really talked about or never understood it in the first place. As a catch phrase, it is often used to justify shoddy design, or following the crowd rather than doing what is right, or as short-hand for the real claim that our customers are too stupid to either appreciate or deserve high quality products. Why spend the time doing things right, this line of reasoning goes, when we all know that worse is better. You are far better off giving the customer something that you know is less than what you could produce, because they (those simple customers) will think that it is better.</p>
 </blockquote>
-
-<p>I&#8217;ve sadly had to personally witness this at a few places. When &#8216;shit work&#8217; becomes acceptable, it very soon becomes the norm. Eventually people consider that not just the norm, but <em>something to aspire to</em> &#8211; as if producing something that is actually shit is, somehow, <em>better</em> than producing something actually better. If you notice that happening to yourself / your project, please step back a bit, <a href="https://en.wikipedia.org/wiki/Wikipedia:Whacking_with_a_wet_trout">trout</a> yourself, and do the right thing.</p>
+<blockquote>
+<p>The end result of this thinking is sloppy products that don’t work, are hard to use, or are unreliable (or all of the above). We try to convince our customers that this is the way software has to be, and then turn around and convince ourselves that they won’t pay for anything better. But we short-change our customers, and we cheapen our craft, when we put up with this sort of thinking. When the original article was produced, I don’t think that this is what the author had in mind; even if it was, it is time for us to reject the simple-minded interpretation of the slogan, and start putting out software that really is better (on the dimension of goodness that our customers have, not necessarily our own).</p>
+</blockquote>
+<p>I’ve sadly had to personally witness this at a few places. When ‘shit work’ becomes acceptable, it very soon becomes the norm. Eventually people consider that not just the norm, but <em>something to aspire to</em> – as if producing something that is actually shit is, somehow, <em>better</em> than producing something actually better. If you notice that happening to yourself / your project, please step back a bit, <a href="https://en.wikipedia.org/wiki/Wikipedia:Whacking_with_a_wet_trout">trout</a> yourself, and do the right thing.</p>
 
 </article> 
 
@@ -251,15 +261,13 @@
 
 </p>
   </header>
-  <p>I left Chennai on the 3rd of November. I (will be) leaving Delhi on the 4th of December. That&#8217;s a 31 day trip. It taught me to be optimistic. It taught me in very real terms that the world is a large place, and so is life.</p>
-
+  <p>I left Chennai on the 3rd of November. I (will be) leaving Delhi on the 4th of December. That’s a 31 day trip. It taught me to be optimistic. It taught me in very real terms that the world is a large place, and so is life.</p>
 <p>A few highlights:</p>
-
 <ul>
 <li>Building an app from nothing to workable state in a few days</li>
 <li>An actual first class train ride in India</li>
 <li>Running into a bunch of random french people who ended up becoming travel buddies</li>
-<li>Feeling small, and very temporary being in the ruins of Hampi. Here was a civilization that used to be great, reduced to rubble visited by 2-3 tourists a year. Our Data centers and Washington Monuments will be similar in a few hundred / thousand years. &#8220;The one thing a man can not truly have, is perspective&#8221; &#8211; DA.</li>
+<li>Feeling small, and very temporary being in the ruins of Hampi. Here was a civilization that used to be great, reduced to rubble visited by 2-3 tourists a year. Our Data centers and Washington Monuments will be similar in a few hundred / thousand years. “The one thing a man can not truly have, is perspective” – DA.</li>
 <li>The best lassi money can buy</li>
 <li>First train ticket that was confirmed after being waitlisted</li>
 <li>RAVE!</li>
@@ -268,28 +276,19 @@
 <li>Pulling a passed out guy out of the ocean, and seeing how other locals react to that.</li>
 <li>Watching Rob Moen try to negotiate with the local hawkers</li>
 <li>Stopping at a Pharmacy every time we get into an Auto with Rob Moen</li>
-<li>Being annoyed at Jon Robson&#8217;s eternal optimism,  and then eventually coming to accept that it is a good thing</li>
-<li>Feeling incredibly unsafe in Aurangabad 2 days after Bal Thackaray&#8217;s death, harassed by a bunch of auto men.</li>
-<li>Being told flat out that I&#8217;m not Indian, and having to pull out ID to prove otherwise</li>
+<li>Being annoyed at Jon Robson’s eternal optimism,  and then eventually coming to accept that it is a good thing</li>
+<li>Feeling incredibly unsafe in Aurangabad 2 days after Bal Thackaray’s death, harassed by a bunch of auto men.</li>
+<li>Being told flat out that I’m not Indian, and having to pull out ID to prove otherwise</li>
 <li>Being stranded in Aurangabad, with a bus journey out costing about 50 hours</li>
 <li>An airport (Aurangabad) smelling of pure unadultered human shit.</li>
 <li>Good things happening</li>
-<li>Horrible horrible experience in Agra &#8211; Taj Mahal surrounded by lots and lots of slums with open sewers. Entire place being pimped out for money. The &#8216;two India&#8217;s in sharp contrast again</li>
+<li>Horrible horrible experience in Agra – Taj Mahal surrounded by lots and lots of slums with open sewers. Entire place being pimped out for money. The ‘two India’s in sharp contrast again</li>
 <li>A 9 year old girl selling pens at traffic signals, speaking to me in a language I could not understand about things that do not need a spoken language to be understood</li>
 <li>Surprised to find myself a grown up in Delhi</li>
 </ul>
-
-<div>
-  <p>
-    I&#8217;m sure I&#8217;m missing out a few things (intentionally or unintentionally) &#8211; and each of those things would merit a blog post of their own too. Maybe I&#8217;ll write them sometime. Maybe I&#8217;ll write about my (amazing) last year out too.
-  </p>
-  
-  <p>
-    Thanks to @rakugojon, @riddems and @flyingclimber for making this awesome.
-  </p>
-</div>
-
-<p>&nbsp;</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p> </p>
 
 </article> 
 
@@ -308,28 +307,6 @@
 </p>
   </header>
   <p>Happiness is fixing a bug with no obvious cause with a one liner and pushing it out to five million people with wonderful support from a team sitting halfway across the world :-)</p>
-
-</article> 
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/red-eye-flight/">Red Eye flight</a></h2>
-    <p class="blog-post-meta"><time datetime="2012-10-25T16:22:08Z">Thu Oct 25, 2012</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/personal" rel="category tag">personal</a>
-
-
-</p>
-  </header>
-  <p>I am not a fan of red eye flights. Nobody is</p>
-
-<p>I have one tomorrow. Which brings up the question &#8211; do I stay up, or go to sleep and risk not waking up in time?</p>
-
-<p>I am going to stay up. Let&#8217;s see how that goes :-)</p>
 
 </article> 
 
@@ -361,7 +338,6 @@
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -369,7 +345,6 @@
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -387,6 +362,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -394,8 +371,6 @@
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>

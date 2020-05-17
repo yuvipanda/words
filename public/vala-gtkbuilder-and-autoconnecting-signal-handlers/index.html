@@ -6,18 +6,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <meta property="og:title" content="Vala, GTKBuilder and Autoconnecting Signal Handlers" />
-<meta property="og:description" content="Note: I&#8217;m not an expert on Vala, GTK&#43;, or anything else for that matter. If I am off base someplace, comment.
+<meta property="og:description" content="Note: I’m not an expert on Vala, GTK&#43;, or anything else for that matter. If I am off base someplace, comment.
 I spent quite a some time today trying to get GTKBuilder to automagically connect all my signals to their handlers. I tripped up at a few places, and so recording them here for posterity.
- If you are using instance methods (like most of us are), you&#8217;ve to decorate your handler function with the attribute [CCode (instance_pos=-1)]." />
+  If you are using instance methods (like most of us are), you’ve to decorate your handler function with the attribute [CCode (instance_pos=-1)]." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://words.yuvi.in/vala-gtkbuilder-and-autoconnecting-signal-handlers/" /><meta property="article:published_time" content="2010-05-30T02:22:41&#43;00:00"/>
-<meta property="article:modified_time" content="2010-05-30T02:22:41&#43;00:00"/>
+<meta property="og:url" content="http://words.yuvi.in/vala-gtkbuilder-and-autoconnecting-signal-handlers/" />
+<meta property="article:published_time" content="2010-05-30T02:22:41+00:00" />
+<meta property="article:modified_time" content="2010-05-30T02:22:41+00:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Vala, GTKBuilder and Autoconnecting Signal Handlers"/>
-<meta name="twitter:description" content="Note: I&#8217;m not an expert on Vala, GTK&#43;, or anything else for that matter. If I am off base someplace, comment.
+<meta name="twitter:description" content="Note: I’m not an expert on Vala, GTK&#43;, or anything else for that matter. If I am off base someplace, comment.
 I spent quite a some time today trying to get GTKBuilder to automagically connect all my signals to their handlers. I tripped up at a few places, and so recording them here for posterity.
- If you are using instance methods (like most of us are), you&#8217;ve to decorate your handler function with the attribute [CCode (instance_pos=-1)]."/>
-<meta name="generator" content="Hugo 0.47.1" />
+  If you are using instance methods (like most of us are), you’ve to decorate your handler function with the attribute [CCode (instance_pos=-1)]."/>
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -26,10 +28,10 @@ I spent quite a some time today trying to get GTKBuilder to automagically connec
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "Vala, GTKBuilder and Autoconnecting Signal Handlers",
-  "url": "http://words.yuvi.in/vala-gtkbuilder-and-autoconnecting-signal-handlers/",
+  "url": "http:\/\/words.yuvi.in\/vala-gtkbuilder-and-autoconnecting-signal-handlers\/",
   "wordCount": "248",
-  "datePublished": "2010-05-30T02:22:41&#43;00:00",
-  "dateModified": "2010-05-30T02:22:41&#43;00:00",
+  "datePublished": "2010-05-30T02:22:41\x2b00:00",
+  "dateModified": "2010-05-30T02:22:41\x2b00:00",
   "author": {
     "@type": "Person",
     "name": "yuvipanda"
@@ -89,23 +91,26 @@ I spent quite a some time today trying to get GTKBuilder to automagically connec
 
 </p>
   </header>
-  <p><strong>Note</strong>: I&#8217;m not an expert on Vala, GTK+, or anything else for that matter. If I am off base someplace, comment.</p>
-
+  <p><strong>Note</strong>: I’m not an expert on Vala, GTK+, or anything else for that matter. If I am off base someplace, comment.</p>
 <p>I spent quite a some time today trying to get GTKBuilder to automagically connect all my signals to their handlers. I tripped up at a few places, and so recording them here for posterity.</p>
-
 <ol>
-<li><p>If you are using instance methods (like most of us are), you&#8217;ve to decorate your handler function with the attribute <code>[CCode (instance_pos=-1)]</code>. This makes sure that the function is passed the <code>this</code> pointer as last argument, rather than first. You&#8217;ve to do this because <code>Builder.connect_signals</code> passes the instance as last parameter (<code>user_data</code>), and by aligning your <code>this</code> pointer with <code>user_data</code>, you make sure the correct instance is called.</p></li>
-
-<li><p>Make sure your handler function signature matches what is expected. Ignore the <code>user_data</code> parameter of most signals &#8211; it is used internally by <code>Builder.connect_signals</code> (see above point).</p></li>
-
-<li><p>Make sure you pass <code>--pkg gmodule-2.0</code> to your <code>valac</code>. If you&#8217;re using Autotools, this means you pass it to <code>VALAFLAGS</code>.</p></li>
-
-<li><p>sure your C compiler is called with <code>-dynamic-export</code>. I&#8217;m told this enabled support for <code>dlopen</code> in the binary produced.</p></li>
-
-<li><p>Mangle your names properly. <code>Cheese.MainWindow.on_quit()</code> becomes <code>cheese_main_window_on_quit</code> on C, and that is what GTKBuilder expects. If you are not sure how your function name is mangled by <code>valac</code>, checkout the generated <code>.c</code> file.</p></li>
+<li>
+<p>If you are using instance methods (like most of us are), you’ve to decorate your handler function with the attribute <code>[CCode (instance_pos=-1)]</code>. This makes sure that the function is passed the <code>this</code> pointer as last argument, rather than first. You’ve to do this because <code>Builder.connect_signals</code> passes the instance as last parameter (<code>user_data</code>), and by aligning your <code>this</code> pointer with <code>user_data</code>, you make sure the correct instance is called.</p>
+</li>
+<li>
+<p>Make sure your handler function signature matches what is expected. Ignore the <code>user_data</code> parameter of most signals – it is used internally by <code>Builder.connect_signals</code> (see above point).</p>
+</li>
+<li>
+<p>Make sure you pass <code>--pkg gmodule-2.0</code> to your <code>valac</code>. If you’re using Autotools, this means you pass it to <code>VALAFLAGS</code>.</p>
+</li>
+<li>
+<p>sure your C compiler is called with <code>-dynamic-export</code>. I’m told this enabled support for <code>dlopen</code> in the binary produced.</p>
+</li>
+<li>
+<p>Mangle your names properly. <code>Cheese.MainWindow.on_quit()</code> becomes <code>cheese_main_window_on_quit</code> on C, and that is what GTKBuilder expects. If you are not sure how your function name is mangled by <code>valac</code>, checkout the generated <code>.c</code> file.</p>
+</li>
 </ol>
-
-<p>If you do all these 5 things right and you&#8217;re still having trouble, turn up on #vala at irc.gimp.net and ask the helpful folks there :)</p>
+<p>If you do all these 5 things right and you’re still having trouble, turn up on #vala at irc.gimp.net and ask the helpful folks there :)</p>
 
 
   
@@ -147,7 +152,6 @@ I spent quite a some time today trying to get GTKBuilder to automagically connec
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -155,7 +159,6 @@ I spent quite a some time today trying to get GTKBuilder to automagically connec
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -173,6 +176,8 @@ I spent quite a some time today trying to get GTKBuilder to automagically connec
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -180,8 +185,6 @@ I spent quite a some time today trying to get GTKBuilder to automagically connec
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>

@@ -11,15 +11,17 @@ Today, almost all of &lsquo;the cloud&rsquo; is run by ruthlessly competitive hy
 When writing open source applications that primarily run on the cloud, I try to make sure my users (primarily people deploying my software for their users) have the following freedoms:
  They can run the software on any cloud provider they choose to They can run the software on a bunch of computers they physically own, with the help of other open source software only  Ensuring these freedoms for my users requires the following restrictions on me:" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://words.yuvi.in/post/oss-in-the-cloud/" /><meta property="article:published_time" content="2018-08-15T22:41:17-06:00"/>
-<meta property="article:modified_time" content="2018-08-15T22:41:17-06:00"/>
+<meta property="og:url" content="http://words.yuvi.in/post/oss-in-the-cloud/" />
+<meta property="article:published_time" content="2018-08-15T22:41:17-06:00" />
+<meta property="article:modified_time" content="2018-08-15T22:41:17-06:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Freedoms for Open Source Software users in the Cloud"/>
 <meta name="twitter:description" content="This post is from conversations with Matt Rocklin and others at the PANGEO developer meeting at NCAR
 Today, almost all of &lsquo;the cloud&rsquo; is run by ruthlessly competitive hypercapitalist large scale organizations. This is great &amp; terrible.
 When writing open source applications that primarily run on the cloud, I try to make sure my users (primarily people deploying my software for their users) have the following freedoms:
  They can run the software on any cloud provider they choose to They can run the software on a bunch of computers they physically own, with the help of other open source software only  Ensuring these freedoms for my users requires the following restrictions on me:"/>
-<meta name="generator" content="Hugo 0.47.1" />
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -28,7 +30,7 @@ When writing open source applications that primarily run on the cloud, I try to 
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "Freedoms for Open Source Software users in the Cloud",
-  "url": "http://words.yuvi.in/post/oss-in-the-cloud/",
+  "url": "http:\/\/words.yuvi.in\/post\/oss-in-the-cloud\/",
   "wordCount": "241",
   "datePublished": "2018-08-15T22:41:17-06:00",
   "dateModified": "2018-08-15T22:41:17-06:00",
@@ -95,16 +97,13 @@ When writing open source applications that primarily run on the cloud, I try to 
 Rocklin</a> and others at the
 <a href="http://pangeo.io/">PANGEO</a> developer meeting at
 <a href="https://ncar.ucar.edu/">NCAR</a></em></p>
-
 <p>Today, almost all of &lsquo;the cloud&rsquo; is run by
 ruthlessly competitive hypercapitalist large scale
 organizations. This is great &amp; terrible.</p>
-
 <p>When writing open source applications that primarily
 run on the cloud, I try to make sure my users (primarily
 people deploying my software for <em>their</em> users) have
 the following freedoms:</p>
-
 <ol>
 <li><strong>They can run the software on any cloud provider they
 choose to</strong></li>
@@ -112,29 +111,25 @@ choose to</strong></li>
 physically own, with the help of other open source software
 only</strong></li>
 </ol>
-
 <p>Ensuring these freedoms for my users requires the following
 restrictions on me:</p>
-
 <ol>
-<li>Depend on Open Source Software with hosted cloud versions,
-not proprietary cloud-vendor-only software.</li>
-</ol>
-
+<li>
+<p>Depend on Open Source Software with hosted cloud versions,
+not proprietary cloud-vendor-only software.</p>
 <p>I&rsquo;ll use PostgreSQL over Google Cloud Datastore. Kubernetes with
-   autoscaling over talking to the EC2 api directly.</p>
-
-<ol>
-<li>Use abstractions that allow swappable implementations anytime
-you have to talk to a cloud provider API directly.</li>
-</ol>
-
+autoscaling over talking to the EC2 api directly.</p>
+</li>
+<li>
+<p>Use abstractions that allow swappable implementations anytime
+you have to talk to a cloud provider API directly.</p>
 <p>Don&rsquo;t talk to the S3 API directly, but have an abstract
-   interface that defines exactly what your application needs,
-   and then write an S3 implementation for it. Ideally, also
-   write a minio / ceph / file-system implementation for it,
-   to make sure your abstraction actually works.</p>
-
+interface that defines exactly what your application needs,
+and then write an S3 implementation for it. Ideally, also
+write a minio / ceph / file-system implementation for it,
+to make sure your abstraction actually works.</p>
+</li>
+</ol>
 <p>These are easy to follow once you are aware of them, and provide
 good design tradeoffs for Open Source projects. Remember these are
 necessary but not sufficient to ensure some of your users&rsquo; fundamental
@@ -180,7 +175,6 @@ freedoms.</p>
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -188,7 +182,6 @@ freedoms.</p>
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -206,6 +199,8 @@ freedoms.</p>
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -213,8 +208,6 @@ freedoms.</p>
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>

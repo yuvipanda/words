@@ -9,11 +9,12 @@
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/post/" />
-<meta property="og:updated_time" content="2014-09-24T15:17:10&#43;00:00"/>
+<meta property="og:updated_time" content="2020-05-17T11:25:35+05:30" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
-<meta name="generator" content="Hugo 0.47.1" />
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -22,14 +23,14 @@
   "@context": "http://schema.org",
   "@type": "Blog",
   "headline": "Yuvi Panda",
-  "url" : "http://words.yuvi.in/post/",
+  "url" : "http:\/\/words.yuvi.in\/post\/",
   "author": {
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2014-09-24T15:17:10&#43;00:00",
+  "dateModified": "2020-05-17T11:25:35\x2b05:30",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
-  "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
+  "description": "[JupyterHub](https:\/\/github.com\/jupyterhub\/jupyterhub) | [MyBinder](https:\/\/mybinder.org) | [Kubernetes](https:\/\/k8s.io) | Open Culture"
 }
 </script>
 
@@ -84,6 +85,26 @@
 
 <article class="blog-post">
   <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/plugging-a-keyboard-into-my-nexus-7/">Plugging a keyboard into my Nexus 7</a></h2>
+    <p class="blog-post-meta"><time datetime="2014-10-12T18:35:19Z">Sun Oct 12, 2014</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/personal" rel="category tag">personal</a>
+
+
+</p>
+  </header>
+  <p>Was a great idea! It just worked (with an OTP cable), and I can now probably find much more uses for this thing than I could before. Yay!</p>
+<p>I wonder if I can use this to write code. However, a 7 inch tablet is very poorly suited for that task – would need at least a 10″ one. But there aren’t many of those going around these days…</p>
+<p>I’ll probably use this for random browsing / commenting, and use my Mac for actual programming.</p>
+
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
     <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-sep-12-24-2014/">DevLog Sep 12-24, 2014</a></h2>
     <p class="blog-post-meta"><time datetime="2014-09-24T15:17:10Z">Wed Sep 24, 2014</time> by yuvipanda in 
 <i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
@@ -91,21 +112,18 @@
 
 </p>
   </header>
-  <p>That was a long break. Should get into better habits. I&#8217;m sure I&#8217;d miss some here. Oh well.</p>
-
+  <p>That was a long break. Should get into better habits. I’m sure I’d miss some here. Oh well.</p>
 <p>It was a very interesting week, culminating in some very interesting things at Trafalgar Square. I feel much better as a person and more calmer/chilled out now :) Should remember to take weekends off.</p>
-
 <ul>
-<li>Helped the <a href="http://metrics.wmflabs.org/">WikiMetrics</a> people with some puppet changes. They were requiring mysql directly instead of using the class we have in ops/puppet, which meant it put data in the /var partition instead of in /srv. This was because they want to be a &#8216;proper&#8217; independent puppet module, not depending on the other modules in ops/puppet (since the module is used in vagrant as well). Puppet has <em>terrible</em> support for this kind of thing, and ops/puppet by itself also suffers from an incredible amount of NIH syndrome when it comes to modules. Some of the NIH-so-rewrite is justified, but I don&#8217;t think all of it is. Oh well. Hopefully something that can be fixed over time&#8230;</li>
+<li>Helped the <a href="http://metrics.wmflabs.org/">WikiMetrics</a> people with some puppet changes. They were requiring mysql directly instead of using the class we have in ops/puppet, which meant it put data in the /var partition instead of in /srv. This was because they want to be a ‘proper’ independent puppet module, not depending on the other modules in ops/puppet (since the module is used in vagrant as well). Puppet has <em>terrible</em> support for this kind of thing, and ops/puppet by itself also suffers from an incredible amount of NIH syndrome when it comes to modules. Some of the NIH-so-rewrite is justified, but I don’t think all of it is. Oh well. Hopefully something that can be fixed over time…</li>
 <li>Added basic icinga/graphite based monitoring for contint project (runs our jenkins installation). Quite trivial, but should be ported over to shinken at some point soon.</li>
-<li>Contributed a fair bit to the <a href="https://github.com/erming/shout">Shout</a> Web IRC project. I was looking around for an open source replacement to <a href="https://irccloud.com">IRCCloud</a>, and found a bunch of OSS projects (<a href="https://github.com/thedjpetersen/subway">Subway</a> and <a href="http://ircanywhere.com/">http://ircanywhere.com/</a> being the others). Shout seemed the most active (and simplest) of them all &#8211; I couldn&#8217;t actually get the others to a working installation. I fixed a bunch of code formatting issues, and also added a couple of features (<a href="https://github.com/erming/shout/pull/138">Desktop notifications</a> being the most significant, I think). The maintainer was fun to work with, and merged most of my changes quite promptly. I hang out on <code>#shout-irc</code> channel now, and activity seems to be speeding along. Should be fun to see how it goes :)</li>
-<li>Moved off IRCCloud. Stopped paying for it. I&#8217;ve also stopped doing email on my phone, in an effort to be more minimalistic / less distracted all the time. This meant no more IRC on phone, so my primary reason for using IRCCloud disappeared. Am back to using LimeChat with my ZNC bouncer now. And nothing on my phone. In case of emergencies, I still have the IRCCloud app on my phone, and can use the free edition to connect to my bouncer temporarily.</li>
-<li>Started working on labs-specific monitoring, with <a href="http://shinken-monitoring.org">shinken</a> &#8211; test instance at <a href="http://shinken.wmflabs.org">shinken.wmflabs.org</a>. Discussion in the ops list about how to best implement this. Shinken is supposed to horizontally scale much better than icinga since it is implemented as a bunch of different daemons that can talk over the network. Right now they are just one machine, but will probably expand at some point not too far away. They are running as a labs project rather than on a physical machine (<code>labmon1001</code>) because it is much easier from a networking perspective. Right now it only has a simple http check for betacluster, but more coming.</li>
-<li>Started refactoring all our icinga code. Separating them out into <code>nagios_commmon</code> module for config that can be shared between shinken and icinga, and into an <code>icinga</code> module for everything else. Moved all the custom checks and check config we have, moving other things as we go. This is a bit hard / frustrating since I don&#8217;t have access to the machine icinga runs on (<code>neon</code>), and also because I still do not have +2 in our ops repo (should change in a month, tho!). Am about 40 patches in (small ones!), let&#8217;s see how many more it takes!</li>
+<li>Contributed a fair bit to the <a href="https://github.com/erming/shout">Shout</a> Web IRC project. I was looking around for an open source replacement to <a href="https://irccloud.com">IRCCloud</a>, and found a bunch of OSS projects (<a href="https://github.com/thedjpetersen/subway">Subway</a> and <a href="http://ircanywhere.com/">http://ircanywhere.com/</a> being the others). Shout seemed the most active (and simplest) of them all – I couldn’t actually get the others to a working installation. I fixed a bunch of code formatting issues, and also added a couple of features (<a href="https://github.com/erming/shout/pull/138">Desktop notifications</a> being the most significant, I think). The maintainer was fun to work with, and merged most of my changes quite promptly. I hang out on <code>#shout-irc</code> channel now, and activity seems to be speeding along. Should be fun to see how it goes :)</li>
+<li>Moved off IRCCloud. Stopped paying for it. I’ve also stopped doing email on my phone, in an effort to be more minimalistic / less distracted all the time. This meant no more IRC on phone, so my primary reason for using IRCCloud disappeared. Am back to using LimeChat with my ZNC bouncer now. And nothing on my phone. In case of emergencies, I still have the IRCCloud app on my phone, and can use the free edition to connect to my bouncer temporarily.</li>
+<li>Started working on labs-specific monitoring, with <a href="http://shinken-monitoring.org">shinken</a> – test instance at <a href="http://shinken.wmflabs.org">shinken.wmflabs.org</a>. Discussion in the ops list about how to best implement this. Shinken is supposed to horizontally scale much better than icinga since it is implemented as a bunch of different daemons that can talk over the network. Right now they are just one machine, but will probably expand at some point not too far away. They are running as a labs project rather than on a physical machine (<code>labmon1001</code>) because it is much easier from a networking perspective. Right now it only has a simple http check for betacluster, but more coming.</li>
+<li>Started refactoring all our icinga code. Separating them out into <code>nagios_commmon</code> module for config that can be shared between shinken and icinga, and into an <code>icinga</code> module for everything else. Moved all the custom checks and check config we have, moving other things as we go. This is a bit hard / frustrating since I don’t have access to the machine icinga runs on (<code>neon</code>), and also because I still do not have +2 in our ops repo (should change in a month, tho!). Am about 40 patches in (small ones!), let’s see how many more it takes!</li>
 <li>Moved our <code>dsh</code> code into a module. Was fairly trivial. Now to find ways to get it merged :)</li>
-<li>Started trying out <a href="http://pinboard.in">pinboard</a>. Interesting, barebones design. The bookmarklet is a bit slow to load, though. Let&#8217;s see how often I use this. (I did pay for it)</li>
+<li>Started trying out <a href="http://pinboard.in">pinboard</a>. Interesting, barebones design. The bookmarklet is a bit slow to load, though. Let’s see how often I use this. (I did pay for it)</li>
 </ul>
-
 <p>Five more days left in the UK :( Let me see if I can continue doing these when here, in a more prompt manner.</p>
 
 </article> 
@@ -125,20 +143,17 @@
 </p>
   </header>
   <p>Back from an <em>awesome</em> vacation. Too awesome to write about, even :) Suffice it to say, England has some really pretty places.</p>
-
 <p>Some Android app work, and lots of monitoring work</p>
-
 <ul>
-<li>Fixed bugs causing the <a href="https://tools.wmflabs.org/wikipedia-android-builds/">Wikipedia Android Alpha</a> from building properly. Now it builds properly whenever there is a new commit. Hooray! This was primarily caused by me forgetting to give it lots of RAM (8G VMEM) to execute the <code>mvn</code> build commands (<a href="https://gerrit.wikimedia.org/r/#/c/159482/">https://gerrit.wikimedia.org/r/#/c/159482/</a>) and also not cleaning up previous <code>.alpha</code> subfolders (<a href="https://gerrit.wikimedia.org/r/#/c/159481/">https://gerrit.wikimedia.org/r/#/c/159481/</a>) &#8211; this causes a chain of <code>.alpha.alpha.alpha.*</code> subfolders, breaking the build.</li>
-<li>Added a <a href="https://gerrit.wikimedia.org/r/#/c/159506/">patch</a> to the Android alpha app itself that checks for updates every day or so and notifies you if there&#8217;s a new one. Was fairly trivial to write, although I was hoping to make it more seamless (i.e. download the apk myself and just pop it up for people to tap). It now requires 4 clicks to install it, should be able to bring it down to 2 at some point in the future if people care enough.</li>
-<li>Added a method to our <code>check_graphite</code> code that lets you individually check a bunch of metrics for thresholds (<a href="https://gerrit.wikimedia.org/r/#/c/159473/">https://gerrit.wikimedia.org/r/#/c/159473/</a>). This makes it much simpler to do icinga checks on a bunch of metrics that are all measuring the same thing but from different machines. BetaLabs and ToolLabs checks use this.</li>
-<li>Cleaned up a bunch of minor things with our <code>check_graphite</code> script. Also fucked up trying to replace all double quotes in it with single quotes for consistency &#8211; it replaced the double quotes being used inside single quotes, and caused all checks to fail. Fixed shortly by <a href="https://gerrit.wikimedia.org/r/#/c/159711/">https://gerrit.wikimedia.org/r/#/c/159711/</a></li>
-<li>Added more monitoring for betalabs! Now checks for stale puppet runs (<a href="https://gerrit.wikimedia.org/r/#/c/159701/">https://gerrit.wikimedia.org/r/#/c/159701/</a>) and low space on the root partition (<a href="https://gerrit.wikimedia.org/r/#/c/159694/">https://gerrit.wikimedia.org/r/#/c/159694/</a>). All are green now, thanks to some work from bd808.</li>
-<li>Added monitoring for ToolLabs! Now checks for stale puppet runs, low space on root and /var, and puppet failure events (<a href="https://gerrit.wikimedia.org/r/#/c/159709/">https://gerrit.wikimedia.org/r/#/c/159709/</a>). Also checks for high sustained CPU usage (<a href="https://gerrit.wikimedia.org/r/#/c/159751/">https://gerrit.wikimedia.org/r/#/c/159751/</a>). Then spent some time (with help from scfc_de (whose nick I kept spelling as scfe_de until today)) cleaning up the puppet failures. They are all green now as well.</li>
-<li>Did a bunch of cleaning up work around the graphite role, removing the realm branching (<a href="https://gerrit.wikimedia.org/r/#/c/159759/">https://gerrit.wikimedia.org/r/#/c/159759/</a>). Ori says everytime realm branching code is removed, an angel gets its wings, so well done there.</li>
+<li>Fixed bugs causing the <a href="https://tools.wmflabs.org/wikipedia-android-builds/">Wikipedia Android Alpha</a> from building properly. Now it builds properly whenever there is a new commit. Hooray! This was primarily caused by me forgetting to give it lots of RAM (8G VMEM) to execute the <code>mvn</code> build commands (<a href="https://gerrit.wikimedia.org/r/#/c/159482/">https://gerrit.wikimedia.org/r/#/c/159482/</a>) and also not cleaning up previous <code>.alpha</code> subfolders (<a href="https://gerrit.wikimedia.org/r/#/c/159481/">https://gerrit.wikimedia.org/r/#/c/159481/</a>) – this causes a chain of <code>.alpha.alpha.alpha.*</code> subfolders, breaking the build.</li>
+<li>Added a <a href="https://gerrit.wikimedia.org/r/#/c/159506/">patch</a> to the Android alpha app itself that checks for updates every day or so and notifies you if there’s a new one. Was fairly trivial to write, although I was hoping to make it more seamless (i.e. download the apk myself and just pop it up for people to tap). It now requires 4 clicks to install it, should be able to bring it down to 2 at some point in the future if people care enough.</li>
+<li>Added a method to our <code>check_graphite</code> code that lets you individually check a bunch of metrics for thresholds (<a href="https://gerrit.wikimedia.org/r/#/c/159473/)">https://gerrit.wikimedia.org/r/#/c/159473/)</a>. This makes it much simpler to do icinga checks on a bunch of metrics that are all measuring the same thing but from different machines. BetaLabs and ToolLabs checks use this.</li>
+<li>Cleaned up a bunch of minor things with our <code>check_graphite</code> script. Also fucked up trying to replace all double quotes in it with single quotes for consistency – it replaced the double quotes being used inside single quotes, and caused all checks to fail. Fixed shortly by <a href="https://gerrit.wikimedia.org/r/#/c/159711/">https://gerrit.wikimedia.org/r/#/c/159711/</a></li>
+<li>Added more monitoring for betalabs! Now checks for stale puppet runs (<a href="https://gerrit.wikimedia.org/r/#/c/159701/">https://gerrit.wikimedia.org/r/#/c/159701/</a>) and low space on the root partition (<a href="https://gerrit.wikimedia.org/r/#/c/159694/)">https://gerrit.wikimedia.org/r/#/c/159694/)</a>. All are green now, thanks to some work from bd808.</li>
+<li>Added monitoring for ToolLabs! Now checks for stale puppet runs, low space on root and /var, and puppet failure events (<a href="https://gerrit.wikimedia.org/r/#/c/159709/)">https://gerrit.wikimedia.org/r/#/c/159709/)</a>. Also checks for high sustained CPU usage (<a href="https://gerrit.wikimedia.org/r/#/c/159751/)">https://gerrit.wikimedia.org/r/#/c/159751/)</a>. Then spent some time (with help from scfc_de (whose nick I kept spelling as scfe_de until today)) cleaning up the puppet failures. They are all green now as well.</li>
+<li>Did a bunch of cleaning up work around the graphite role, removing the realm branching (<a href="https://gerrit.wikimedia.org/r/#/c/159759/)">https://gerrit.wikimedia.org/r/#/c/159759/)</a>. Ori says everytime realm branching code is removed, an angel gets its wings, so well done there.</li>
 </ul>
-
-<p>Not a bad day, eh? I&#8217;ve been trying to wake up early, perhaps that is helping.</p>
+<p>Not a bad day, eh? I’ve been trying to wake up early, perhaps that is helping.</p>
 
 </article> 
 
@@ -156,11 +171,9 @@
 
 </p>
   </header>
-  <p><a href="http://yuvi.in/blog/wp-content/uploads/2014/09/wpid-screenshot_2014-09-10-13-03-34.png"><img title="Screenshot_2014-09-10-13-03-34.png" class="alignnone size-full" alt="image" src="http://yuvi.in/blog/wp-content/uploads/2014/09/wpid-screenshot_2014-09-10-13-03-34.png" /></a></p>
-
+  <p><a href="http://yuvi.in/blog/wp-content/uploads/2014/09/wpid-screenshot_2014-09-10-13-03-34.png"><!-- raw HTML omitted --></a></p>
 <p>The message icon was flashing obnoxiously. I wonder how much money CNet made off that.</p>
-
-<p>I don&#8217;t notice these on desktop thanks to Adblock. Should set it up on my phone too.</p>
+<p>I don’t notice these on desktop thanks to Adblock. Should set it up on my phone too.</p>
 
 </article> 
 
@@ -179,18 +192,15 @@
 </p>
   </header>
   <p>Missed DevLogging for a while.</p>
-
 <p>Am in London now.</p>
-
 <ul>
-<li>Started using a spare <a href="http://www.keyboardco.com/keyboard/uk-filco-ninja-majestouch-2-tenkeyless-nkr-tactile-action-keyboard.asp">Majestouch Ninja 2</a> over my regular <a href="https://www.kinesis-ergo.com/shop/advantage-for-pc-mac/">Kinesis Advantage</a>. This is way more portable, and my hand does not seem to be hurting while using it (so far only about 4-5 hours). If this keeps up, I should be able to move to a similar smaller keyboard over the much bulkier kinesis. There&#8217;s still a little bit of discomfort, so I&#8217;ll probably want a very portable and mechanical split keyboard. Can&#8217;t sadly seem to find any, though :( Maybe I should just build one with an arduino :)</li>
-<li>Setup icinga checks for puppet failures and disk space issues on betalabs, and fixed a bunch of issues/docs in our icinga puppet code during that time. This still doesn&#8217;t properly work since our implementation of <code>check_graphite</code> does not support wildcard metrics properly &#8211; it should check thresholds for each series, but it seems to do that only across the entire series combined, which is kinda useless. Should fix that soon by adding more features to it. Also might try out other alternatives to icinga, since our icinga puppet code is a fuckball anyway.</li>
-<li>Fix a couple more Quarry bugs. There&#8217;s still a random bug where <code>celery</code> seems to be attempting to read data about a query run from mysql before the web has committed it, which is theoretically impossible (I do a commit before sending the task to celery with the id), so I suspect some mysql fuckery. Will need to debug that sooner than later, and also consider moving to <code>postgres</code>. But then Quarry will have to deal with SQLite (for result storage), MySQL (for connecting to labsdb) and with postgres for local data, which sounds insanely complex. I also added CORS support to resultsets, and Magnus is playing with it (wooohhooooo!!!). I&#8217;m going to add more features to make it easier for people to use results from quarry in their JS applications elsewhere. Should be fun.</li>
-<li>Finished videos for the first week of the Coursera <a href="https://class.coursera.org/statistics-002">Data Analysis and Statistical Inference</a> class I&#8217;m taking. Started poking around R since the labs for that class are from R, should be fun.</li>
+<li>Started using a spare <a href="http://www.keyboardco.com/keyboard/uk-filco-ninja-majestouch-2-tenkeyless-nkr-tactile-action-keyboard.asp">Majestouch Ninja 2</a> over my regular <a href="https://www.kinesis-ergo.com/shop/advantage-for-pc-mac/">Kinesis Advantage</a>. This is way more portable, and my hand does not seem to be hurting while using it (so far only about 4-5 hours). If this keeps up, I should be able to move to a similar smaller keyboard over the much bulkier kinesis. There’s still a little bit of discomfort, so I’ll probably want a very portable and mechanical split keyboard. Can’t sadly seem to find any, though :( Maybe I should just build one with an arduino :)</li>
+<li>Setup icinga checks for puppet failures and disk space issues on betalabs, and fixed a bunch of issues/docs in our icinga puppet code during that time. This still doesn’t properly work since our implementation of <code>check_graphite</code> does not support wildcard metrics properly – it should check thresholds for each series, but it seems to do that only across the entire series combined, which is kinda useless. Should fix that soon by adding more features to it. Also might try out other alternatives to icinga, since our icinga puppet code is a fuckball anyway.</li>
+<li>Fix a couple more Quarry bugs. There’s still a random bug where <code>celery</code> seems to be attempting to read data about a query run from mysql before the web has committed it, which is theoretically impossible (I do a commit before sending the task to celery with the id), so I suspect some mysql fuckery. Will need to debug that sooner than later, and also consider moving to <code>postgres</code>. But then Quarry will have to deal with SQLite (for result storage), MySQL (for connecting to labsdb) and with postgres for local data, which sounds insanely complex. I also added CORS support to resultsets, and Magnus is playing with it (wooohhooooo!!!). I’m going to add more features to make it easier for people to use results from quarry in their JS applications elsewhere. Should be fun.</li>
+<li>Finished videos for the first week of the Coursera <a href="https://class.coursera.org/statistics-002">Data Analysis and Statistical Inference</a> class I’m taking. Started poking around R since the labs for that class are from R, should be fun.</li>
 <li>Chad has started his <a href="http://anyonecanedit.org/blog">devlog</a>. He does search stuff at Wikimedia and is a co-whiner about all things Java. Do check out :)</li>
 </ul>
-
-<p>Am away on &#8216;vacation&#8217; till Wednesday, yay! :) Should disconnect well.</p>
+<p>Am away on ‘vacation’ till Wednesday, yay! :) Should disconnect well.</p>
 
 </article> 
 
@@ -208,8 +218,7 @@
 
 </p>
   </header>
-  <p>Chill weekend. Didn&#8217;t really do anything code related. Recovering from friday night party :)</p>
-
+  <p>Chill weekend. Didn’t really do anything code related. Recovering from friday night party :)</p>
 <p>Started reading <a href="https://infoactive.co/data-design/">Data + Design</a> which seems quite nice. Also starting a coursera course on <a href="https://class.coursera.org/statistics-002">Data analysis and Statistical Inference</a> on Sep 1, should be fun.</p>
 
 </article> 
@@ -228,15 +237,13 @@
 
 </p>
   </header>
-  <p>Let&#8217;s see. I&#8217;m also going to attempt to include patch links wherever possible.</p>
-
+  <p>Let’s see. I’m also going to attempt to include patch links wherever possible.</p>
 <ul>
-<li>Cleaned up <code>session</code> handling bugs in Quarry. They were previously not closing properly, causing SQLAlchemy exceptions now and then that&#8217;ll let queries die in a &#8216;queued&#8217; state. This should <em>hopefully</em> be fixed by <a href="https://gerrit.wikimedia.org/r/#/c/156909/">https://gerrit.wikimedia.org/r/#/c/156909/</a>.</li>
-<li>Made <a href="https://graphite.wmflabs.org">https://graphite.wmflabs.org</a> somewhat more stable again for use by Wikimedia BetaLabs folks by just blacklisting all other projects from sending data to it (with a local whitelist hack + <a href="https://gerrit.wikimedia.org/r/#/c/156966/">https://gerrit.wikimedia.org/r/#/c/156966/</a>). This would let them use it, and they said they would find it massively useful. All this is a hack until <a href="https://rt.wikimedia.org/Ticket/Display.html?id=8163">https://rt.wikimedia.org/Ticket/Display.html?id=8163</a> could be resolved and I can deploy graphite on a &#8216;real&#8217; machine.</li>
-<li>Minor patch to my Gerrit -&gt; IRC bot to make it strip a common prefix (&#8216;operations/&#8217;) from change messages posted to the operations channel &#8211; <a href="https://gerrit.wikimedia.org/r/#/c/156877/">https://gerrit.wikimedia.org/r/#/c/156877/</a>. Also made one that calls jenkins-bot jerkins-bot if it -1&#8217;s your patch (<a href="https://gerrit.wikimedia.org/r/#/c/156878/">https://gerrit.wikimedia.org/r/#/c/156878/</a>) but it seems to have a bug that I can&#8217;t be bothered to debug atm.</li>
+<li>Cleaned up <code>session</code> handling bugs in Quarry. They were previously not closing properly, causing SQLAlchemy exceptions now and then that’ll let queries die in a ‘queued’ state. This should <em>hopefully</em> be fixed by <a href="https://gerrit.wikimedia.org/r/#/c/156909/">https://gerrit.wikimedia.org/r/#/c/156909/</a>.</li>
+<li>Made <a href="https://graphite.wmflabs.org">https://graphite.wmflabs.org</a> somewhat more stable again for use by Wikimedia BetaLabs folks by just blacklisting all other projects from sending data to it (with a local whitelist hack + <a href="https://gerrit.wikimedia.org/r/#/c/156966/)">https://gerrit.wikimedia.org/r/#/c/156966/)</a>. This would let them use it, and they said they would find it massively useful. All this is a hack until <a href="https://rt.wikimedia.org/Ticket/Display.html?id=8163">https://rt.wikimedia.org/Ticket/Display.html?id=8163</a> could be resolved and I can deploy graphite on a ‘real’ machine.</li>
+<li>Minor patch to my Gerrit -&gt; IRC bot to make it strip a common prefix (‘operations/’) from change messages posted to the operations channel – <a href="https://gerrit.wikimedia.org/r/#/c/156877/">https://gerrit.wikimedia.org/r/#/c/156877/</a>. Also made one that calls jenkins-bot jerkins-bot if it -1’s your patch (<a href="https://gerrit.wikimedia.org/r/#/c/156878/">https://gerrit.wikimedia.org/r/#/c/156878/</a>) but it seems to have a bug that I can’t be bothered to debug atm.</li>
 </ul>
-
-<p>Might spend some more time with Hive over the next few days &#8211; figured out an approach for using it from Python, and it should be fun to do so!</p>
+<p>Might spend some more time with Hive over the next few days – figured out an approach for using it from Python, and it should be fun to do so!</p>
 
 </article> 
 
@@ -255,14 +262,12 @@
 </p>
   </header>
   <p>Not very code heavy</p>
-
 <ul>
-<li>Couple of pull requests(<a href="https://github.com/atom/autosave/pull/22">#1</a> and <a href="https://github.com/atom/autosave/pull/21">#2</a>) for the <a href="https://github.com/atom/autosave">Atom Autosave plugin</a>. One adds a preference to not autosave by when you are explicitly closing a window / pane, and the other just sets the &#8216;enabled&#8217; preference to default. CoffeeScript isn&#8217;t too bad either! I should consider writing more plugins (I currently use Atom for CSS/JS/Puppet, should try other languages)</li>
-<li>Added CSV, TSV and JSON download options to Quarry. There&#8217;s another Webinar tomorrow by the Grantmaking team, and J-Mo asked for it. Streaming TSV and CSV implemented in a neat way, will write a blog post tomorrow about it.</li>
-<li>Started work on a &#8216;number of editors&#8217; per country metric for WPDMZ, needs to be finished up.</li>
+<li>Couple of pull requests(<a href="https://github.com/atom/autosave/pull/22">#1</a> and <a href="https://github.com/atom/autosave/pull/21">#2</a>) for the <a href="https://github.com/atom/autosave">Atom Autosave plugin</a>. One adds a preference to not autosave by when you are explicitly closing a window / pane, and the other just sets the ‘enabled’ preference to default. CoffeeScript isn’t too bad either! I should consider writing more plugins (I currently use Atom for CSS/JS/Puppet, should try other languages)</li>
+<li>Added CSV, TSV and JSON download options to Quarry. There’s another Webinar tomorrow by the Grantmaking team, and J-Mo asked for it. Streaming TSV and CSV implemented in a neat way, will write a blog post tomorrow about it.</li>
+<li>Started work on a ‘number of editors’ per country metric for WPDMZ, needs to be finished up.</li>
 </ul>
-
-<p>I feel a bit exhausted (physically and mentally) from the intense coding over the last few weeks, might have a few chill days to recharge myself. I&#8217;m growing old! :(</p>
+<p>I feel a bit exhausted (physically and mentally) from the intense coding over the last few weeks, might have a few chill days to recharge myself. I’m growing old! :(</p>
 
 </article> 
 
@@ -281,23 +286,21 @@
 </p>
   </header>
   <p>Wooooo!</p>
-
 <ul>
-<li>Moved <a href="https://github.com/yuvipanda/labsbooks">labsbooks</a> (described in <a href="http://yuvi.in/blog/devlog-23-aug-2014/">yesterday&#8217;s devlog</a>) to use a shared readonly IPython virtualenv maintained by me. Also installed a bunch of modules people might want to use (SciPy, NumPy, Pandas, PyTables, matplotlib). Am considering just installing IPython notebook globally via puppet and using that, since that&#8217;ll enable users to just use the system packages. However, the version of IPython notebook from Ubuntu is ancient, so that&#8217;s probably a non-starter.</li>
+<li>Moved <a href="https://github.com/yuvipanda/labsbooks">labsbooks</a> (described in <a href="http://yuvi.in/blog/devlog-23-aug-2014/">yesterday’s devlog</a>) to use a shared readonly IPython virtualenv maintained by me. Also installed a bunch of modules people might want to use (SciPy, NumPy, Pandas, PyTables, matplotlib). Am considering just installing IPython notebook globally via puppet and using that, since that’ll enable users to just use the system packages. However, the version of IPython notebook from Ubuntu is ancient, so that’s probably a non-starter.</li>
 <li>Have a basic version of the IPython publishing process working! Any toollabs user can create a notebook by:
-
 <ul>
 <li>Creating a <code>~/notebooks</code> folder</li>
 <li>Doing a <code>chmod +x ~/notebooks</code></li>
 <li>Doing a <code>chmod +x ~</code></li>
 <li>Putting IPython notebooks into <code>~/notebooks</code> (as <code>.ipynb</code>) files</li>
-<li>Going to <code>https://tools.wmflabs.org/notebooks/&lt;user-shell-name&gt;/&lt;path-to-ipynb-file&gt;</code> Will have to do a bit more work before it can be considered &#8216;production grade&#8217; (such as user pages, a nicer theme, etc, etc) BUT YAY GOOD START. It already caches the html output in Redis and invalidates with the <code>mtime</code> of the file, so should be pretty quick.</li>
-</ul></li>
-<li>Made the ssh tunneling process for <code>labsbooks</code> purely python, without requiring the <code>ProxyCommand</code>. This makes things simpler (and more portable!). I&#8217;ll need to work on securing this properly before I can publish it for broader use.</li>
-<li>Wrote <a href="https://lists.wikimedia.org/pipermail/analytics/2014-August/002437.html">an email</a> to the analytics mailing list about making public the &#8216;edits per country&#8217; data. I hope to make this publicly available with enough granularity that not just me but others can use this for fun research as well.</li>
+<li>Going to <code>https://tools.wmflabs.org/notebooks/&lt;user-shell-name&gt;/&lt;path-to-ipynb-file&gt;</code> Will have to do a bit more work before it can be considered ‘production grade’ (such as user pages, a nicer theme, etc, etc) BUT YAY GOOD START. It already caches the html output in Redis and invalidates with the <code>mtime</code> of the file, so should be pretty quick.</li>
 </ul>
-
-<p>I&#8217;ve been using <a href="https://atom.io">Atom</a> for puppet stuff, <a href="http://www.jetbrains.com/pycharm/">PyCharm</a> for Python and <a href="http://www.jetbrains.com/idea/">IntelliJ</a> for Java stuff, and that seems to be doing ok. They all have decent Vim keybindings as well, and good replacements for other functionality &#8211; and I might stick with Atom for a while to see how it goes :)</p>
+</li>
+<li>Made the ssh tunneling process for <code>labsbooks</code> purely python, without requiring the <code>ProxyCommand</code>. This makes things simpler (and more portable!). I’ll need to work on securing this properly before I can publish it for broader use.</li>
+<li>Wrote <a href="https://lists.wikimedia.org/pipermail/analytics/2014-August/002437.html">an email</a> to the analytics mailing list about making public the ‘edits per country’ data. I hope to make this publicly available with enough granularity that not just me but others can use this for fun research as well.</li>
+</ul>
+<p>I’ve been using <a href="https://atom.io">Atom</a> for puppet stuff, <a href="http://www.jetbrains.com/pycharm/">PyCharm</a> for Python and <a href="http://www.jetbrains.com/idea/">IntelliJ</a> for Java stuff, and that seems to be doing ok. They all have decent Vim keybindings as well, and good replacements for other functionality – and I might stick with Atom for a while to see how it goes :)</p>
 
 </article> 
 
@@ -316,53 +319,22 @@
 </p>
   </header>
   <p>Back in Glasgow! It was actually not very cold today, only cold! Progress.</p>
-
-<p>Started working on my long-abandoned <code>labsbook</code> project, which aims to make <a href="https://tools.wmflabs.org">Tool Labs</a> a first class environment for people who want to run (and publish) <a href="http://ipython.org/notebook.html">iPython Notebooks</a> while also being able to access the replica databases and the dumps. Doing this in a secure manner is kinda hard, but I think I&#8217;ve a neat solution that lets everyone run a personal iPython kernel on the Grid, access it from their local machine, and also publish it to the web from a standard location. So far, I&#8217;ve gotten my script to a point where it&#8217;ll setup an iPython environment for you if it doesn&#8217;t already exist, start the kernel if it isn&#8217;t already running, and tunnel the editing interface back to you to use! Things left to do include:</p>
-
+<p>Started working on my long-abandoned <code>labsbook</code> project, which aims to make <a href="https://tools.wmflabs.org">Tool Labs</a> a first class environment for people who want to run (and publish) <a href="http://ipython.org/notebook.html">iPython Notebooks</a> while also being able to access the replica databases and the dumps. Doing this in a secure manner is kinda hard, but I think I’ve a neat solution that lets everyone run a personal iPython kernel on the Grid, access it from their local machine, and also publish it to the web from a standard location. So far, I’ve gotten my script to a point where it’ll setup an iPython environment for you if it doesn’t already exist, start the kernel if it isn’t already running, and tunnel the editing interface back to you to use! Things left to do include:</p>
 <ol>
 <li>Open up the browser when tunnel is open</li>
-<li>Find a sane way to kill a kernel that hasn&#8217;t been doing anything since forever</li>
-<li>Setup a shared iPython environment (just code, readonly) so people don&#8217;t have to setup their own environments everytime (this is primarily a performance enhancement)</li>
-<li>Find a nice and simple way for iPython notebooks to be published. I&#8217;m currently thinking of an URL such as <code>tools.wmflabs.org/notebooks/&lt;username&gt;/&lt;notebookname&gt;' to display them, and an index at</code>tools.wmflabs.org/notebooks/<username>`. This shouldn&#8217;t be too hard with appropriate permission munging.</li>
+<li>Find a sane way to kill a kernel that hasn’t been doing anything since forever</li>
+<li>Setup a shared iPython environment (just code, readonly) so people don’t have to setup their own environments everytime (this is primarily a performance enhancement)</li>
+<li>Find a nice and simple way for iPython notebooks to be published. I’m currently thinking of an URL such as <code>tools.wmflabs.org/notebooks/&lt;username&gt;/&lt;notebookname&gt;' to display them, and an index at</code>tools.wmflabs.org/notebooks/<!-- raw HTML omitted -->`. This shouldn’t be too hard with appropriate permission munging.</li>
 </ol>
-
-<p>I&#8217;m also using <a href="http://www.paramiko.org/">paramiko</a> for this, which makes writing SSH related code with Python a breeze. It even supports <code>proxycommand</code>! Blunders I&#8217;ve done while getting up to this point include:</p>
-
+<p>I’m also using <a href="http://www.paramiko.org/">paramiko</a> for this, which makes writing SSH related code with Python a breeze. It even supports <code>proxycommand</code>! Blunders I’ve done while getting up to this point include:</p>
 <ol>
 <li>Running <code>jsub run.bash -mem 4G</code> instead of <code>jsub -mem 4G run.bash</code> and wondering why my script kept getting killed with OOM.</li>
-<li>Trying to do a <code>pip install</code> on the Grid nodes (which don&#8217;t have build tools) instead of on <code>tools-dev</code> and wondering why running it from the commandline works but from <code>jsub</code> does not.</li>
+<li>Trying to do a <code>pip install</code> on the Grid nodes (which don’t have build tools) instead of on <code>tools-dev</code> and wondering why running it from the commandline works but from <code>jsub</code> does not.</li>
 <li>Wondering why my SSH Tunnel kept dying and trying to debug that without realizing that it was dying because the iPython process was dying because it was OOMing because of my earlier <code>jsub</code> error</li>
 <li>Thinking that user accounts (rather than tool accounts) can not submit jobs to the grid, while the problem was that I had not set the <code>execute</code> bit on my script.</li>
 </ol>
-
-<p>Once this is done (I suspect tomorrow), I&#8217;ll work on getting the data from my work with <a href="https://github.com/Ironholds/WPDMZ">WPDMZ</a> into a form good enough for publicizing (removing ways of de-anonymization), and then use iPython notebooks to make graphs! This should be fun :)</p>
-
+<p>Once this is done (I suspect tomorrow), I’ll work on getting the data from my work with <a href="https://github.com/Ironholds/WPDMZ">WPDMZ</a> into a form good enough for publicizing (removing ways of de-anonymization), and then use iPython notebooks to make graphs! This should be fun :)</p>
 <p>Source so far available <a href="https://github.com/yuvipanda/labsbooks">on Github</a>. Needs more work / documentation / cleaning up.</p>
-
-</article> 
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-aug-22-2014/">Devlog for Aug 22 2014</a></h2>
-    <p class="blog-post-meta"><time datetime="2014-08-23T14:43:09Z">Sat Aug 23, 2014</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
-
-
-</p>
-  </header>
-  <p>Was in Edinburgh again, missed writing it as I went along. Oh well.</p>
-
-<ul>
-<li>Ported the code for the Wikipedia Android app automated builds to Python, and you can see it in action at <a href="http://tools.wmflabs.org/wikipedia-android-builds/">http://tools.wmflabs.org/wikipedia-android-builds/</a> now. It lets you download the latest build, and notes the last successful build time. Good enough :) It was originally in bash, and porting it to python allowed me to create a &#8216;fake&#8217; API (just JSON blobs written to known locations in the file system). Next step is to write a helper app</li>
-<li>The Atom experiment is coming along well. Am using it for most of my Puppet work these days. Should give LightTable another go as well.</li>
-</ul>
-
-<p>That&#8217;s it!</p>
 
 </article> 
 
@@ -394,7 +366,6 @@
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -402,7 +373,6 @@
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -420,6 +390,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -427,8 +399,6 @@
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>

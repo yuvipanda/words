@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>book on Yuvi Panda</title>
@@ -17,8 +17,8 @@
       <pubDate>Mon, 28 Nov 2011 10:40:50 +0000</pubDate>
       
       <guid>http://words.yuvi.in/learnt-reading-javascript-good-parts/</guid>
-      <description>Just finished reading &amp;#8216;Javascript &amp;#8211; The Good Parts&amp;#8217;. Here is what I learnt:
- I knew jack shit about JavaScript. I was able to get along so far simply because I knew jQuery and understood how closures work. Holy shit that&amp;#8217;s one fucked up language. Quite schizophrenic, saved by almost limitless extensibility/monkey-patchability/watcha-gonna-do-write-a-java-applet-hahaha . If you&amp;#8217;re going to write Javascript, you&amp;#8217;ll have to subset. Subsetting/augmenting has its own share of problems &amp;#8211; primarily that map in your code might not be the same as map in someone else&amp;#8217;s code, even if they seem to be working on the same &amp;#8216;type&amp;#8217; jQuery is incredible.</description>
+      <description>Just finished reading ‘Javascript – The Good Parts’. Here is what I learnt:
+ I knew jack shit about JavaScript. I was able to get along so far simply because I knew jQuery and understood how closures work. Holy shit that’s one fucked up language. Quite schizophrenic, saved by almost limitless extensibility/monkey-patchability/watcha-gonna-do-write-a-java-applet-hahaha . If you’re going to write Javascript, you’ll have to subset. Subsetting/augmenting has its own share of problems – primarily that map in your code might not be the same as map in someone else’s code, even if they seem to be working on the same ‘type’ jQuery is incredible.</description>
     </item>
     
   </channel>

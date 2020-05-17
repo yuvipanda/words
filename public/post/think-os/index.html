@@ -9,13 +9,15 @@
 <meta property="og:description" content="Following a trail from a wonderful Julia Evans post led me to Allen Downey&rsquo;s nice textbook manifesto. Also led me to the nice Think OS book, which seems like a super nice introduction to Operating System principles.
 It is short enough (~100 pages) that I wanted to read through it. I&rsquo;ve spent a good chunk of time absorbing how Operating Systems work by dint of diving into things and working through them, but it would be nice to get a refresher on the basics." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://words.yuvi.in/post/think-os/" /><meta property="article:published_time" content="2017-05-13T11:41:20-07:00"/>
-<meta property="article:modified_time" content="2017-05-13T11:41:20-07:00"/>
+<meta property="og:url" content="http://words.yuvi.in/post/think-os/" />
+<meta property="article:published_time" content="2017-05-13T11:41:20-07:00" />
+<meta property="article:modified_time" content="2017-05-13T11:41:20-07:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="think os"/>
 <meta name="twitter:description" content="Following a trail from a wonderful Julia Evans post led me to Allen Downey&rsquo;s nice textbook manifesto. Also led me to the nice Think OS book, which seems like a super nice introduction to Operating System principles.
 It is short enough (~100 pages) that I wanted to read through it. I&rsquo;ve spent a good chunk of time absorbing how Operating Systems work by dint of diving into things and working through them, but it would be nice to get a refresher on the basics."/>
-<meta name="generator" content="Hugo 0.47.1" />
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -24,8 +26,8 @@ It is short enough (~100 pages) that I wanted to read through it. I&rsquo;ve spe
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "think os",
-  "url": "http://words.yuvi.in/post/think-os/",
-  "wordCount": "477",
+  "url": "http:\/\/words.yuvi.in\/post\/think-os\/",
+  "wordCount": "476",
   "datePublished": "2017-05-13T11:41:20-07:00",
   "dateModified": "2017-05-13T11:41:20-07:00",
   "author": {
@@ -87,66 +89,44 @@ It is short enough (~100 pages) that I wanted to read through it. I&rsquo;ve spe
 
 </p>
   </header>
-  
-
-<p>Following a trail from a <a href="http://jvns.ca/blog/2017/04/17/statistics-for-programmers/">wonderful Julia Evans post</a> led me to Allen Downey&rsquo;s nice <a href="http://greenteapress.com/wp/textbook-manifesto/">textbook manifesto</a>. Also led me to the nice <a href="http://greenteapress.com/thinkos/index.html">Think OS</a> book, which seems like a super nice introduction to Operating System principles.</p>
-
+  <p>Following a trail from a <a href="http://jvns.ca/blog/2017/04/17/statistics-for-programmers/">wonderful Julia Evans post</a> led me to Allen Downey&rsquo;s nice <a href="http://greenteapress.com/wp/textbook-manifesto/">textbook manifesto</a>. Also led me to the nice <a href="http://greenteapress.com/thinkos/index.html">Think OS</a> book, which seems like a super nice introduction to Operating System principles.</p>
 <p>It is short enough (~100 pages) that I wanted to read through it. I&rsquo;ve spent a good chunk of time absorbing how Operating Systems work by dint of diving into things and working through them, but it would be nice to get a refresher on the basics. There are clearly basic things I do not understand, and this seemed like a good way to explore.</p>
-
 <p>This post is just a running series of notes from me reading it on a nice saturday morning.</p>
-
-<h2 id="stack-vs-heap">Stack vs Heap</h2>
-
+<h2 id="stack-vs-heap-">Stack vs Heap</h2>
 <p>This is something that has always bugged me. I&rsquo;ve understood just enough of this by being burnt with pointers when writing C (and primitive types in the CLR, etc), but was lacking a deep understanding of wtf was going on. The fact that these are just process program segments (like text or data) was quite a revelation :D <a href="http://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap">This stackoverflow answer</a> was also quite nice.</p>
-
 <p>One interesting thing for me to investigate later from the book is how this program:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdlib.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> global;
 
-<pre><code class="language-C">#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+  <span style="color:#66d9ef">int</span> local <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
+  <span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span>p <span style="color:#f92672">=</span> malloc(<span style="color:#ae81ff">128</span>);
 
-int global;
-
-int main() {
-  int local = 5;
-  void *p = malloc(128);
-
-  printf(&quot;Address of main is %p\n&quot;, main);
-  printf(&quot;Address of local is %p\n&quot;, &amp;local);
-  printf(&quot;Address of global is %p\n&quot;, &amp;global);
-  printf(&quot;Address of p is %p\n&quot;, p);
+  printf(<span style="color:#e6db74">&#34;Address of main is %p</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, main);
+  printf(<span style="color:#e6db74">&#34;Address of local is %p</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#f92672">&amp;</span>local);
+  printf(<span style="color:#e6db74">&#34;Address of global is %p</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#f92672">&amp;</span>global);
+  printf(<span style="color:#e6db74">&#34;Address of p is %p</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, p);
 
 }
 
-</code></pre>
-
-<p>produces the following output for the author:</p>
-
+</code></pre></div><p>produces the following output for the author:</p>
 <pre><code>Address of main   is 0x      40057c
 Address of local  is 0x7fffd26139c4
 Address of global is 0x      60104c
 Address of p      is 0x     1c3b010
-</code></pre>
-
-<p>but for me,</p>
-
+</code></pre><p>but for me,</p>
 <pre><code>Address of main   is 0x5598fc64c740
 Address of local  is 0x7ffeacfaf75c
 Address of global is 0x5598fc84d014
 Address of p      is 0x5598fc85b010
-</code></pre>
-
-<p>The point of the program was to demonstrate that text (<code>main</code>), static (<code>global</code>) and heap (<code>p</code>) are near beginning of memory and stack (<code>local</code>) is towards the end. While on my laptop it does seem to be the case too, the &lsquo;start&rsquo; seems to be much farther out than on the author&rsquo;s computer. Need to understand why this is the case. I&rsquo;ve vaguely heard of address randomization &amp; other security measures in OS kernels - maybe related? For another day!</p>
-
-<h2 id="bit-twiddling">Bit twiddling</h2>
-
+</code></pre><p>The point of the program was to demonstrate that text (<code>main</code>), static (<code>global</code>) and heap (<code>p</code>) are near beginning of memory and stack (<code>local</code>) is towards the end. While on my laptop it does seem to be the case too, the &lsquo;start&rsquo; seems to be much farther out than on the author&rsquo;s computer. Need to understand why this is the case. I&rsquo;ve vaguely heard of address randomization &amp; other security measures in OS kernels - maybe related? For another day!</p>
+<h2 id="bit-twiddling-">Bit twiddling</h2>
 <p>I continue to find it hard to care about bit twiddling. Most things do use it of course, but it seems to be abstracted away pretty well without leaking too much (except for things that have their own nuances, like floating point representations).</p>
-
-<h2 id="malloc">malloc</h2>
-
+<h2 id="malloc-">malloc</h2>
 <p>Nice link to <a href="http://gee.cs.oswego.edu/dl/html/malloc.html">a paper</a> about a common malloc implementation. I also know there are other malloc implementations that programs use (such as <a href="http://jemalloc.net/">jemalloc</a>). Something for me to dive into when I&rsquo;ve more time.</p>
-
-<h2 id="tbc">tbc</h2>
-
+<h2 id="tbc-">tbc</h2>
 <p>I didn&rsquo;t have time to finish it all, unfortunately. But shall come back to it whenever I can!</p>
 
 
@@ -189,7 +169,6 @@ Address of p      is 0x5598fc85b010
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -197,7 +176,6 @@ Address of p      is 0x5598fc85b010
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -215,6 +193,8 @@ Address of p      is 0x5598fc85b010
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -222,8 +202,6 @@ Address of p      is 0x5598fc85b010
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>

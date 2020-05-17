@@ -9,13 +9,15 @@
 <meta property="og:description" content="I was in a conversation about the Python GIL with friends a few days ago, and realized that my understanding of the specifics of the GIL problem were super hand-wavy &amp; unstructured. So I spent some time collecting resources to learn more, and now have a better understanding!
 Python&rsquo;s Infamous GIL (Larry Hastings) This was a great introduction to the history of the GIL, why it was necessary &amp; reasons why getting rid of it is complicated." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://words.yuvi.in/post/python-gil-resources/" /><meta property="article:published_time" content="2017-04-05T23:18:19-07:00"/>
-<meta property="article:modified_time" content="2017-04-05T23:18:19-07:00"/>
+<meta property="og:url" content="http://words.yuvi.in/post/python-gil-resources/" />
+<meta property="article:published_time" content="2017-04-05T23:18:19-07:00" />
+<meta property="article:modified_time" content="2017-04-05T23:18:19-07:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="python gil resources"/>
 <meta name="twitter:description" content="I was in a conversation about the Python GIL with friends a few days ago, and realized that my understanding of the specifics of the GIL problem were super hand-wavy &amp; unstructured. So I spent some time collecting resources to learn more, and now have a better understanding!
 Python&rsquo;s Infamous GIL (Larry Hastings) This was a great introduction to the history of the GIL, why it was necessary &amp; reasons why getting rid of it is complicated."/>
-<meta name="generator" content="Hugo 0.47.1" />
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -24,7 +26,7 @@ Python&rsquo;s Infamous GIL (Larry Hastings) This was a great introduction to th
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "python gil resources",
-  "url": "http://words.yuvi.in/post/python-gil-resources/",
+  "url": "http:\/\/words.yuvi.in\/post\/python-gil-resources\/",
   "wordCount": "458",
   "datePublished": "2017-04-05T23:18:19-07:00",
   "dateModified": "2017-04-05T23:18:19-07:00",
@@ -87,60 +89,34 @@ Python&rsquo;s Infamous GIL (Larry Hastings) This was a great introduction to th
 
 </p>
   </header>
-  
-
-<p>I was in a conversation about the Python GIL with friends a few days ago, and realized that my understanding of the specifics of the GIL problem were super hand-wavy &amp; unstructured. So I spent some time collecting resources to learn more, and now have a better understanding!</p>
-
-<h4 id="python-s-infamous-gil-larry-hastings">Python&rsquo;s Infamous GIL (Larry Hastings)</h4>
-
+  <p>I was in a conversation about the Python GIL with friends a few days ago, and realized that my understanding of the specifics of the GIL problem were super hand-wavy &amp; unstructured. So I spent some time collecting resources to learn more, and now have a better understanding!</p>
+<h4 id="pythons-infamous-gil-larry-hastings">Python&rsquo;s Infamous GIL (Larry Hastings)</h4>
 <p>This was a <em>great</em> introduction to the history of the GIL, why it was necessary &amp; reasons why getting rid of it is complicated.</p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4zeHStBowEk?ecver=1" frameborder="0" allowfullscreen></iframe>
-
+<!-- raw HTML omitted -->
 <h4 id="understanding-the-python-gil-david-beazley">Understanding the Python GIL (David Beazley)</h4>
-
 <p>This has wonderful visualizations that really helped me understand exactly <em>why</em> multi-threaded python behaves the way it does. Multithreading decreases performance, adding more cores decreases performance &amp; disabling cores increases performance :) All of this made vague hand-wavy sense to me before, and make much more concrete sense now.</p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Obt-vMVdM8s?ecver=1" frameborder="0" allowfullscreen></iframe>
-
-<h4 id="it-isn-t-easy-to-remove-the-gil-guido-van-rossum">It isn&rsquo;t easy to remove the GIL (Guido van Rossum)</h4>
-
+<!-- raw HTML omitted -->
+<h4 id="it-isnt-easy-to-remove-the-gil-guido-van-rossum">It isn&rsquo;t easy to remove the GIL (Guido van Rossum)</h4>
 <p>A <a href="http://www.artima.com/weblogs/viewpost.jsp?thread=214235">blog post</a> from the BDFL of python, after yet another request to &lsquo;just get rid of the GIL&rsquo;.</p>
-
 <p>It set the (pretty high) bar for inclusion of a GIL removal patch (that he makes clear he will not write) in Python:</p>
-
 <blockquote>
 <p>I&rsquo;d welcome a set of patches into Py3k only if the performance for a single-threaded program (and for a multi-threaded but I/O-bound program) does not decrease.</p>
 </blockquote>
-
 <p>Not been met yet!</p>
-
 <h4 id="an-inside-look-at-the-gil-removal-patch-of-lore-dave-beazley">An Inside Look at the GIL Removal Patch of Lore (Dave Beazley)</h4>
-
 <p>There was an attempt in about 1999 to remove the GIL - the &lsquo;freethreading&rsquo; patch. This is a <a href="http://dabeaz.blogspot.com/2011/08/inside-look-at-gil-removal-patch-of.html">wonderful analysis</a> of that patch - what it tried to do, why it disappeared, what the performance costs of it were, etc. Something that really stood out to me and makes me feel not very hopeful about GIL removal in CPython was:</p>
-
 <blockquote>
 <p>Despite removing the GIL, I was unable to produce any performance experiment that showed a noticeable improvement on multiple cores. Really, the only benefit (ignoring the horrible performance) seen in pure Python code, was having preemptible instructions.</p>
 </blockquote>
-
 <p>This seems to be still true, even in the Gilectomy branch.</p>
-
 <h4 id="gilectomy-larry-hastings">Gilectomy (Larry Hastings)</h4>
-
 <p>This is the only talk about a recent (~2016) GIL removal attempt.</p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/P3AyI_u66Bw?ecver=1" frameborder="0" allowfullscreen></iframe>
-
+<!-- raw HTML omitted -->
 <p>It is amazing work, but doesn&rsquo;t give me much hope. There&rsquo;s been no new commits to the <a href="https://github.com/larryhastings/gilectomy/tree/gilectomy">public git repo</a> for about 5 months now, so am unsure what the state of it now is.</p>
-
 <p>There&rsquo;s probably many more - let me know if you know any, and I&rsquo;ll update this when I find out more!</p>
-
-<h4 id="gilectomy-2017-larry-hastings">Gilectomy - 2017 (Larry Hastings)</h4>
-
+<h4 id="gilectomy---2017-larry-hastings">Gilectomy - 2017 (Larry Hastings)</h4>
 <p>PyCon 2017 just happened, and Larry Hastings gave another talk!</p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pLqv11ScGsQ" frameborder="0" allowfullscreen></iframe>
-
+<!-- raw HTML omitted -->
 <p>It seems to have had a lot of intense work done on it, and the wall clock time graph in it warms my heart! I&rsquo;ve a little more hope now than I did after the 2016 talk :D</p>
 
 
@@ -183,7 +159,6 @@ Python&rsquo;s Infamous GIL (Larry Hastings) This was a great introduction to th
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -191,7 +166,6 @@ Python&rsquo;s Infamous GIL (Larry Hastings) This was a great introduction to th
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -209,6 +183,8 @@ Python&rsquo;s Infamous GIL (Larry Hastings) This was a great introduction to th
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -216,8 +192,6 @@ Python&rsquo;s Infamous GIL (Larry Hastings) This was a great introduction to th
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>

@@ -5,15 +5,16 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="Code" />
+<meta property="og:title" content="code" />
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/categories/code/" />
-<meta property="og:updated_time" content="2010-05-30T02:22:41&#43;00:00"/>
+<meta property="og:updated_time" content="2018-12-26T10:23:40-08:00" />
+
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Code"/>
+<meta name="twitter:title" content="code"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
-<meta name="generator" content="Hugo 0.47.1" />
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -22,14 +23,14 @@
   "@context": "http://schema.org",
   "@type": "Blog",
   "headline": "Yuvi Panda",
-  "url" : "http://words.yuvi.in/categories/code/",
+  "url" : "http:\/\/words.yuvi.in\/categories\/code\/",
   "author": {
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2010-05-30T02:22:41&#43;00:00",
+  "dateModified": "2018-12-26T10:23:40-08:00",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
-  "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
+  "description": "[JupyterHub](https:\/\/github.com\/jupyterhub\/jupyterhub) | [MyBinder](https:\/\/mybinder.org) | [Kubernetes](https:\/\/k8s.io) | Open Culture"
 }
 </script>
 
@@ -92,7 +93,6 @@
 </p>
   </header>
   <p>First week of official coding is over. What do I have to show for it?</p>
-
 <ol>
 <li>Moved code from Github to GNOME Git (Thanks fargiolas!)</li>
 <li>Learnt how to use GTKBuilder, and how to autoconnect signals to vala callback functions.</li>
@@ -100,23 +100,18 @@
 <li>Got a very basic version of the basic Cheese window up and running.</li>
 <li>Learnt how to embed Clutter into the Gtk+ base of Cheese.</li>
 </ol>
-
-<p>So far so good. I don&#8217;t quite like the pace of my work &#8211; I should be going faster. Hopefully I won&#8217;t be feeling like this at the end of next week :)</p>
-
-<p>By next week, I hope to have accomplished&#8230;</p>
-
+<p>So far so good. I don’t quite like the pace of my work – I should be going faster. Hopefully I won’t be feeling like this at the end of next week :)</p>
+<p>By next week, I hope to have accomplished…</p>
 <ol>
 <li>Pixel perfect UI, replicating exactly what is in cheese right now (except for the viewport, ofcourse)</li>
 <li>Vala bindings (<code>.vapi</code> files, basically) for <code>libcheese</code></li>
 <li>Thumbnail View finished (either wrap and use current code, steal some some other project or write my own)</li>
 <li>Basic work on modifying libcheese to support video output to a ClutterTexture</li>
 </ol>
-
 <p>GSoC is primarily about learning, so what have I learnt so far?</p>
-
 <ol>
 <li><code>git</code> is a powerful tool, provided you do not fight it (thanks fargiolas!)</li>
-<li>Just because code works, doesn&#8217;t mean it is good enough! (thanks _ke!)</li>
+<li>Just because code works, doesn’t mean it is good enough! (thanks _ke!)</li>
 <li>When you are stuck, STOP AND ASK FOR DIRECTIONS! (thanks fargiolas!)</li>
 </ol>
 
@@ -136,23 +131,26 @@
 
 </p>
   </header>
-  <p><strong>Note</strong>: I&#8217;m not an expert on Vala, GTK+, or anything else for that matter. If I am off base someplace, comment.</p>
-
+  <p><strong>Note</strong>: I’m not an expert on Vala, GTK+, or anything else for that matter. If I am off base someplace, comment.</p>
 <p>I spent quite a some time today trying to get GTKBuilder to automagically connect all my signals to their handlers. I tripped up at a few places, and so recording them here for posterity.</p>
-
 <ol>
-<li><p>If you are using instance methods (like most of us are), you&#8217;ve to decorate your handler function with the attribute <code>[CCode (instance_pos=-1)]</code>. This makes sure that the function is passed the <code>this</code> pointer as last argument, rather than first. You&#8217;ve to do this because <code>Builder.connect_signals</code> passes the instance as last parameter (<code>user_data</code>), and by aligning your <code>this</code> pointer with <code>user_data</code>, you make sure the correct instance is called.</p></li>
-
-<li><p>Make sure your handler function signature matches what is expected. Ignore the <code>user_data</code> parameter of most signals &#8211; it is used internally by <code>Builder.connect_signals</code> (see above point).</p></li>
-
-<li><p>Make sure you pass <code>--pkg gmodule-2.0</code> to your <code>valac</code>. If you&#8217;re using Autotools, this means you pass it to <code>VALAFLAGS</code>.</p></li>
-
-<li><p>sure your C compiler is called with <code>-dynamic-export</code>. I&#8217;m told this enabled support for <code>dlopen</code> in the binary produced.</p></li>
-
-<li><p>Mangle your names properly. <code>Cheese.MainWindow.on_quit()</code> becomes <code>cheese_main_window_on_quit</code> on C, and that is what GTKBuilder expects. If you are not sure how your function name is mangled by <code>valac</code>, checkout the generated <code>.c</code> file.</p></li>
+<li>
+<p>If you are using instance methods (like most of us are), you’ve to decorate your handler function with the attribute <code>[CCode (instance_pos=-1)]</code>. This makes sure that the function is passed the <code>this</code> pointer as last argument, rather than first. You’ve to do this because <code>Builder.connect_signals</code> passes the instance as last parameter (<code>user_data</code>), and by aligning your <code>this</code> pointer with <code>user_data</code>, you make sure the correct instance is called.</p>
+</li>
+<li>
+<p>Make sure your handler function signature matches what is expected. Ignore the <code>user_data</code> parameter of most signals – it is used internally by <code>Builder.connect_signals</code> (see above point).</p>
+</li>
+<li>
+<p>Make sure you pass <code>--pkg gmodule-2.0</code> to your <code>valac</code>. If you’re using Autotools, this means you pass it to <code>VALAFLAGS</code>.</p>
+</li>
+<li>
+<p>sure your C compiler is called with <code>-dynamic-export</code>. I’m told this enabled support for <code>dlopen</code> in the binary produced.</p>
+</li>
+<li>
+<p>Mangle your names properly. <code>Cheese.MainWindow.on_quit()</code> becomes <code>cheese_main_window_on_quit</code> on C, and that is what GTKBuilder expects. If you are not sure how your function name is mangled by <code>valac</code>, checkout the generated <code>.c</code> file.</p>
+</li>
 </ol>
-
-<p>If you do all these 5 things right and you&#8217;re still having trouble, turn up on #vala at irc.gimp.net and ask the helpful folks there :)</p>
+<p>If you do all these 5 things right and you’re still having trouble, turn up on #vala at irc.gimp.net and ask the helpful folks there :)</p>
 
 </article> 
 
@@ -170,22 +168,14 @@
 
 </p>
   </header>
-  <p><em>I&#8217;m using a <a href="http://www.rememberthemilk.com/home/yuvipanda/13485943/">RTM List</a> to track my milestones for this <a href="http://yuvi.in/blog/gsoc-2010-the-beginning.html">my GSoC</a> this year. I&#8217;ll be making a blog post for each item ticked off that list, to share what I&#8217;ve learnt in my journey from n00b to someone whose code is good enough to be included in GNOME. This is part 1 in the series, where I tell you about autotools</em></p>
-
-<p>My GSoC project involves, moving major parts (UI) of Cheese to a new language &#8211; <a href="http://live.gnome.org/Vala">Vala</a>. Vala is more an extremely glorious C preprocessor than a language of its own &#8211; it just translates down to GObject based C code, rather than bytecode/objectcode. The syntax is very C#ish &#8211; I was using <a href="http://www.emacswiki.org/emacs/CSharpMode">csharp-mode</a> in emacs to code vala till I got bored enough to download <a href="http://live.gnome.org/Vala/Emacs">vala-mode</a>. It&#8217;s got closures &#8211; haven&#8217;t used them yet, here is to hoping they&#8217;re real closures. It has <em>tons</em> of libraries &#8211; it takes a few (minutes|hours) to write a binding for any C library, so many bindings already exist. You don&#8217;t lose speed &#8211; Vala is compiled down to C code. It also has one of Java&#8217;s suckiest features &#8211; <em>Checked Exceptions</em>. The documentation is non existent &#8211; you&#8217;ve to pretty much read through the bindings, or the original C library&#8217;s documentation to get anything done. And not many people know such a language exists (<a href="http://kausikram.net/">Kausik</a> for example &#8211; but he also didn&#8217;t know you could output pdf from latex, so I don&#8217;t think his opinion counts :D)</p>
-
-<p>Cheese uses autotools for building. I had to tweak their script to make it build my Vala code as well. I&#8217;ve never worked with any of the autotools stuff before &#8211; I didn&#8217;t even know <code>.ac</code> stood for <code>autoconf</code> and <code>.am</code> stood for automake. No big deal &#8211; Google knows it all and will tell you for free. I JFGI and found a bunch of articles about using autotools to successfully build vala projects. After reading <a href="http://www.lrde.epita.fr/~adl/autotools.html">this monstrous (180+ slides, but ~500 pages) Autotools presentation</a> (which is actually very, <em>very</em> good, btw), I had a working build script. It built my single <code>cheese.vala</code> file that did nothing but run a loop and wait to be terminated. It had a place where I could add more <code>.vala</code> files and they should (should) be included in the build. It was hackish, but like most hacks, it worked. <a href="http://www.codinghorror.com/blog/2007/03/the-works-on-my-machine-certification-program.html">On My Machine</a>&trade;.</p>
-
-<p>Nowhere else. Turned out my script wasn&#8217;t working at all &#8211; just faking it to me. I had initially tested out <code>valac</code> (the vala compiler), which had produced a <code>.c</code> file. Since <code>make</code> was supposed to produce the same file, and it wasn&#8217;t stale (I hadn&#8217;t touched my <code>cheese.vala</code>), it just proceeded to compiling the <code>.c</code> files with <code>gcc</code>. The Vala part of the build script wasn&#8217;t being executed at all. Removing the <code>.c</code> file told me that my hackish script hadn&#8217;t worked at all.</p>
-
-<p>After banging my head for a while to figure out <em>why</em> it wasn&#8217;t working, I finally landed up on the official autotools docs. Autotools had added <a href="http://www.gnu.org/software/hello/manual/automake/Vala-Support.html">native vala support</a>. The hack I found was not necessary.</p>
-
+  <p><em>I’m using a <a href="http://www.rememberthemilk.com/home/yuvipanda/13485943/">RTM List</a> to track my milestones for this <a href="http://yuvi.in/blog/gsoc-2010-the-beginning.html">my GSoC</a> this year. I’ll be making a blog post for each item ticked off that list, to share what I’ve learnt in my journey from n00b to someone whose code is good enough to be included in GNOME. This is part 1 in the series, where I tell you about autotools</em></p>
+<p>My GSoC project involves, moving major parts (UI) of Cheese to a new language – <a href="http://live.gnome.org/Vala">Vala</a>. Vala is more an extremely glorious C preprocessor than a language of its own – it just translates down to GObject based C code, rather than bytecode/objectcode. The syntax is very C#ish – I was using <a href="http://www.emacswiki.org/emacs/CSharpMode">csharp-mode</a> in emacs to code vala till I got bored enough to download <a href="http://live.gnome.org/Vala/Emacs">vala-mode</a>. It’s got closures – haven’t used them yet, here is to hoping they’re real closures. It has <em>tons</em> of libraries – it takes a few (minutes|hours) to write a binding for any C library, so many bindings already exist. You don’t lose speed – Vala is compiled down to C code. It also has one of Java’s suckiest features – <em>Checked Exceptions</em>. The documentation is non existent – you’ve to pretty much read through the bindings, or the original C library’s documentation to get anything done. And not many people know such a language exists (<a href="http://kausikram.net/">Kausik</a> for example – but he also didn’t know you could output pdf from latex, so I don’t think his opinion counts :D)</p>
+<p>Cheese uses autotools for building. I had to tweak their script to make it build my Vala code as well. I’ve never worked with any of the autotools stuff before – I didn’t even know <code>.ac</code> stood for <code>autoconf</code> and <code>.am</code> stood for automake. No big deal – Google knows it all and will tell you for free. I JFGI and found a bunch of articles about using autotools to successfully build vala projects. After reading <a href="http://www.lrde.epita.fr/~adl/autotools.html">this monstrous (180+ slides, but ~500 pages) Autotools presentation</a> (which is actually very, <em>very</em> good, btw), I had a working build script. It built my single <code>cheese.vala</code> file that did nothing but run a loop and wait to be terminated. It had a place where I could add more <code>.vala</code> files and they should (should) be included in the build. It was hackish, but like most hacks, it worked. <a href="http://www.codinghorror.com/blog/2007/03/the-works-on-my-machine-certification-program.html">On My Machine</a>(tm).</p>
+<p>Nowhere else. Turned out my script wasn’t working at all – just faking it to me. I had initially tested out <code>valac</code> (the vala compiler), which had produced a <code>.c</code> file. Since <code>make</code> was supposed to produce the same file, and it wasn’t stale (I hadn’t touched my <code>cheese.vala</code>), it just proceeded to compiling the <code>.c</code> files with <code>gcc</code>. The Vala part of the build script wasn’t being executed at all. Removing the <code>.c</code> file told me that my hackish script hadn’t worked at all.</p>
+<p>After banging my head for a while to figure out <em>why</em> it wasn’t working, I finally landed up on the official autotools docs. Autotools had added <a href="http://www.gnu.org/software/hello/manual/automake/Vala-Support.html">native vala support</a>. The hack I found was not necessary.</p>
 <p><em>facepalm</em></p>
-
 <p><strong>Moral of the Story</strong>: RTFM comes first, not JFGI.</p>
-
 <p>Anyway, I rewrote the build script to be much more cleaner in a couple of minutes. And it worked.</p>
-
 <p>Build systems are actually a lot of fun once you get the hang of it. A black screen with fast scrolling green text cryptic to everyone else but totally sensible to you is incredibly attractive, no? :)</p>
 
 </article> 
@@ -204,22 +194,17 @@
 
 </p>
   </header>
-  <p><em>I&#8217;m using a <a href="http://www.rememberthemilk.com/home/yuvipanda/13485943/">RTM List</a> to track my milestones for this <a href="http://yuvi.in/blog/gsoc-2010-the-beginning.html">my GSoC</a> this year. I&#8217;ll be making a blog post for each item ticked off that list, to share what I&#8217;ve learnt in my journey from n00b to someone whose code is good enough to be included in GNOME. This is part 0 in the series, where I tell you what my project is all about and how <a href="http://projects.gnome.org/cheese">Cheese</a> is going to become awesomer.</em></p>
-
+  <p><em>I’m using a <a href="http://www.rememberthemilk.com/home/yuvipanda/13485943/">RTM List</a> to track my milestones for this <a href="http://yuvi.in/blog/gsoc-2010-the-beginning.html">my GSoC</a> this year. I’ll be making a blog post for each item ticked off that list, to share what I’ve learnt in my journey from n00b to someone whose code is good enough to be included in GNOME. This is part 0 in the series, where I tell you what my project is all about and how <a href="http://projects.gnome.org/cheese">Cheese</a> is going to become awesomer.</em></p>
 <p>So, what exactly does <a href="http://gist.github.com/356202">my proposal</a> mean for Cheese?</p>
-
 <ol>
 <li>Moving the UI to <a href="http://live.gnome.org/Vala">Vala</a> (from C)</li>
 <li>Move display bits from <a href="http://www.gtk.org/">GTK+</a> to <a href="http://clutter-project.org/">clutter</a></li>
 <li>Implement Live Preview to show people how applying an effect will look before applying it</li>
-<li>Implement loadable effects so you aren&#8217;t stuck with just 12 preloaded effects.</li>
+<li>Implement loadable effects so you aren’t stuck with just 12 preloaded effects.</li>
 </ol>
-
-<p>I&#8217;m told that the scope is kinda too big for 3 months &#8211; but I&#8217;m sure that with careful planning (hah!), around 40 hours of work a week (haha!), lots of time away from college (hahaha!) I can do this stuff :)</p>
-
-<p>I&#8217;m keeping my code in a <a href="http://github.com/yuvipanda/cheese">github repo</a>, so watch that for code updates. And will be updating this blog at the completion of every milestone, so subscribe if you haven&#8217;t :)</p>
-
-<p><strong>Note</strong>: My exams are still going on. Won&#8217;t be coding much till they end (May 19th).</p>
+<p>I’m told that the scope is kinda too big for 3 months – but I’m sure that with careful planning (hah!), around 40 hours of work a week (haha!), lots of time away from college (hahaha!) I can do this stuff :)</p>
+<p>I’m keeping my code in a <a href="http://github.com/yuvipanda/cheese">github repo</a>, so watch that for code updates. And will be updating this blog at the completion of every milestone, so subscribe if you haven’t :)</p>
+<p><strong>Note</strong>: My exams are still going on. Won’t be coding much till they end (May 19th).</p>
 
 </article> 
 
@@ -237,10 +222,8 @@
 
 </p>
   </header>
-  <p>As part of my <a href="http://yuvi.in/blog/gsoc-2010-the-beginning.html">GSoC</a> preparations, I wrote a few patches for <a href="http://projects.gnome.org/cheese">Cheese</a>. <a href="http://git.gnome.org/browse/cheese/commit/?id=fba61486adb3fb9e0172e79ffd8beeaef079ab30">One of them</a> (a one liner to fix a crash) has made it to <a href="http://permalink.gmane.org/gmane.comp.gnome.devel.announce/94">GNOME 2.30.1</a> &#8211; the other two (<a href="https://bugzilla.gnome.org/show_bug.cgi?id=592081">1</a> and <a href="https://bugzilla.gnome.org/show_bug.cgi?id=597226">2</a>) are slightly more significant and involve UI changes, and so will be integrated later.</p>
-
+  <p>As part of my <a href="http://yuvi.in/blog/gsoc-2010-the-beginning.html">GSoC</a> preparations, I wrote a few patches for <a href="http://projects.gnome.org/cheese">Cheese</a>. <a href="http://git.gnome.org/browse/cheese/commit/?id=fba61486adb3fb9e0172e79ffd8beeaef079ab30">One of them</a> (a one liner to fix a crash) has made it to <a href="http://permalink.gmane.org/gmane.comp.gnome.devel.announce/94">GNOME 2.30.1</a> – the other two (<a href="https://bugzilla.gnome.org/show_bug.cgi?id=592081">1</a> and <a href="https://bugzilla.gnome.org/show_bug.cgi?id=597226">2</a>) are slightly more significant and involve UI changes, and so will be integrated later.</p>
 <p>Free beer to everyone who can catch me in a bar! Free Pepsi/Sprite/Egg Puff to anyone who can catch me in the College Stores ;)</p>
-
 <p>P.S. Obligatory thanks to <a href="http://home.cs.tum.edu/~siegel/">_ke</a> and <a href="http://blogs.gnome.org/fargiolas/">fargiolas</a> for guiding me through the difficult bits :)</p>
 
 </article> 
@@ -259,18 +242,11 @@
 
 </p>
   </header>
-  
-
-<p>I mentioned this in passing in my <a href="http://yuvi.in/blog/hacking-more.html">earlier post</a>, and was tweeting about it quite furiously &#8211; I&#8217;ve been selected to work on <a href="http://yuvi.in/blog/hacking-more.html">Cheese</a> for this year&#8217;s <a href="http://socghop.appspot.com/gsoc/program/list_projects/google/gsoc2010">Google Summer of Code</a> :D</p>
-
+  <p>I mentioned this in passing in my <a href="http://yuvi.in/blog/hacking-more.html">earlier post</a>, and was tweeting about it quite furiously – I’ve been selected to work on <a href="http://yuvi.in/blog/hacking-more.html">Cheese</a> for this year’s <a href="http://socghop.appspot.com/gsoc/program/list_projects/google/gsoc2010">Google Summer of Code</a> :D</p>
 <p><a href="http://gist.github.com/356202">Link to my, uhm, <em>cheesy</em> proposal</a></p>
-
 <h3 id="what-now">What Now?</h3>
-
-<p>Getting accepted doesn&#8217;t mean shit. Actually finishing whatever I was supposed to within 3 months does mean <em>something</em> &#8211; especially since I&#8217;ve taken on quite a bit of stuff to do (Move to new language + 2 new features). I&#8217;m quite the n00b &#8211; first time I&#8217;ll be doing just <em>one</em> thing over 3 months. Will be setting up a way of monitoring progress (probably via set milestones) soon enough. Will keep this place posted :)</p>
-
-<p>Also, say Hi to my mentor <a href="http://home.cs.tum.edu/~siegel/">daniel siegel</a>. Him and fellow cheese-dev <a href="http://blogs.gnome.org/fargiolas/">Flippio Argiolas</a>, who were extremely helpful in getting my proposal whipped into shape (It&#8217;s a gist, so you can see how it eveolved over time).</p>
-
+<p>Getting accepted doesn’t mean shit. Actually finishing whatever I was supposed to within 3 months does mean <em>something</em> – especially since I’ve taken on quite a bit of stuff to do (Move to new language + 2 new features). I’m quite the n00b – first time I’ll be doing just <em>one</em> thing over 3 months. Will be setting up a way of monitoring progress (probably via set milestones) soon enough. Will keep this place posted :)</p>
+<p>Also, say Hi to my mentor <a href="http://home.cs.tum.edu/~siegel/">daniel siegel</a>. Him and fellow cheese-dev <a href="http://blogs.gnome.org/fargiolas/">Flippio Argiolas</a>, who were extremely helpful in getting my proposal whipped into shape (It’s a gist, so you can see how it eveolved over time).</p>
 <p>The Oscar acceptance style blog post will be turned in once the three months are over and the newer, improved Cheese is accepted as good enough :D</p>
 
 </article> 
@@ -289,23 +265,20 @@
 
 </p>
   </header>
-  <p>Quoting from <a href="http://en.wikipedia.org/wiki/Steven_Levy">Steven Levy</a>&#8216;s <a href="http://www.gutenberg.org/etext/729">Hackers</a>:</p>
-
+  <p>Quoting from <a href="http://en.wikipedia.org/wiki/Steven_Levy">Steven Levy</a>‘s <a href="http://www.gutenberg.org/etext/729">Hackers</a>:</p>
 <blockquote>
 <p>[..] a project undertaken or a product built not solely to fulfill</p>
-
-<p>some constructive goal, but with some wild pleasure taken in mere</p>
-
-<p>involvement, was called a &#8220;hack.&#8221;</p>
 </blockquote>
-
+<blockquote>
+<p>some constructive goal, but with some wild pleasure taken in mere</p>
+</blockquote>
+<blockquote>
+<p>involvement, was called a “hack.”</p>
+</blockquote>
 <p>Building things for the fun of building them is hacking. And <a href="http://db.glug-bom.org/lug-authors/philip/docs/hackers-not-crackers.html">hacking is not illegally breaking into computers</a>.</p>
-
-<p>I like hacking. I want to be a real hacker. I can&#8217;t call myself one yet.</p>
-
-<p>I&#8217;m putting this up as a reminder to myself &#8211; about what is important and what isn&#8217;t. Here is to hoping I remember to say <em>No</em> more often. Here is to hoping that the next time I&#8217;m bored, I write something rather than idle on IRC. GSoC (a bigger post about it coming up) is helping &#8211; a lot.</p>
-
-<p>I&#8217;ll do a monthly &#8216;things I&#8217;ve hacked on&#8217; post, and see how many things turn up on that :)</p>
+<p>I like hacking. I want to be a real hacker. I can’t call myself one yet.</p>
+<p>I’m putting this up as a reminder to myself – about what is important and what isn’t. Here is to hoping I remember to say <em>No</em> more often. Here is to hoping that the next time I’m bored, I write something rather than idle on IRC. GSoC (a bigger post about it coming up) is helping – a lot.</p>
+<p>I’ll do a monthly ‘things I’ve hacked on’ post, and see how many things turn up on that :)</p>
 
 </article> 
 
@@ -324,7 +297,6 @@
 </p>
   </header>
   <p>I <strong>love</strong> <a href="http://gist.github.com">Gist</a>.</p>
-
 <p>I recently started a project that required me to embed gists in <a href="http://dokuwiki.org">Dokuwiki</a>. I hunted around and found no plugins, so <a href="http://www.dokuwiki.org/doku.php?id=plugin:gist">created</a> my own. Needs the superawesome <a href="http://www.dokuwiki.org/doku.php?id=plugin:command">command</a> plugin too. Released under the 3 clause BSD License.</p>
 
 </article> 
@@ -343,8 +315,7 @@
 
 </p>
   </header>
-  <p>Here is an approximate timeline of the <strong>editors</strong> I&#8217;ve used so far:</p>
-
+  <p>Here is an approximate timeline of the <strong>editors</strong> I’ve used so far:</p>
 <ul>
 <li>Turbo C++ (4th grade to 8th grade)</li>
 <li>Visual Basic 6 (8th grade to 10th grade)</li>
@@ -353,11 +324,8 @@
 <li>gVim (1st year of college)</li>
 <li>GNU Emacs (after gVim)</li>
 </ul>
-
-<p>Now, the one thing, maybe even the <em>only</em> thing I miss is the fact that gVim gives me the I-Bar cursor, while Emacs by default gave me the block cursor. I like the I-Bar better than the block, and so far, couldn&#8217;t figure out how to change that. It&#8217;s not helping that I don&#8217;t have access to the internet.</p>
-
+<p>Now, the one thing, maybe even the <em>only</em> thing I miss is the fact that gVim gives me the I-Bar cursor, while Emacs by default gave me the block cursor. I like the I-Bar better than the block, and so far, couldn’t figure out how to change that. It’s not helping that I don’t have access to the internet.</p>
 <p>So what does a sane man do?</p>
-
 <p>He stops using the GTK version of Emacs, and switches to the console version :D</p>
 
 </article> 
@@ -376,59 +344,46 @@
 
 </p>
   </header>
-  
-
-<p>One of the (good) things that came out of the <a href="http://yuvi.in/blog/what-i-learnt-from-the-hackfest-at-iitm.html">IIT Hackfest</a> was me hanging out on the #hackers-india IRC channel. It is wild, swingy and usually fun. Usually.</p>
-
-<p>So yesterday night, <a href="http://ideamonk.blogspot.com/">ideamonk</a> casually mentioned that he was working on something called <a href="http://github.com/yuvipanda/pymos">pymos</a>. It was a python script that made mosiacs. Now that was something I was totally interested in &#8211; I tried making a similar &#8216;script&#8217; a long time back (in C#), and totally utterly failed, simply because I was so caught up with the part that downloaded pictures from flickr that I didn&#8217;t do the part that generated the actual Mosaic. Since ideamonk&#8217;s code already generated the mosaics (and since it was in Python), I forked it, and began to work on the to do items.</p>
-
-<p>Note that ideamonk and I don&#8217;t know each other (we were apparently sitting next to each other at PyCon India &#8217;09, but that doesn&#8217;t count!). We were on the channel, he&#8217;s commented on my blog once, and that&#8217;s about it. But still, we worked together all night fixing code. I could bore you with details of the work that was done within the next five or so hours (1 AM &#8211; 6 AM), but I will just point you to to this <a href="http://github.com/ideamonk/PyMos/network">commit graph</a> generated by GitHub. There was a flurry of commits, and there should be a tagged version up for download (and on PyPI) soon.</p>
-
-<h4 id="if-not-for-github-8230">If not for github&#8230;</h4>
-
+  <p>One of the (good) things that came out of the <a href="http://yuvi.in/blog/what-i-learnt-from-the-hackfest-at-iitm.html">IIT Hackfest</a> was me hanging out on the #hackers-india IRC channel. It is wild, swingy and usually fun. Usually.</p>
+<p>So yesterday night, <a href="http://ideamonk.blogspot.com/">ideamonk</a> casually mentioned that he was working on something called <a href="http://github.com/yuvipanda/pymos">pymos</a>. It was a python script that made mosiacs. Now that was something I was totally interested in – I tried making a similar ‘script’ a long time back (in C#), and totally utterly failed, simply because I was so caught up with the part that downloaded pictures from flickr that I didn’t do the part that generated the actual Mosaic. Since ideamonk’s code already generated the mosaics (and since it was in Python), I forked it, and began to work on the to do items.</p>
+<p>Note that ideamonk and I don’t know each other (we were apparently sitting next to each other at PyCon India ’09, but that doesn’t count!). We were on the channel, he’s commented on my blog once, and that’s about it. But still, we worked together all night fixing code. I could bore you with details of the work that was done within the next five or so hours (1 AM – 6 AM), but I will just point you to to this <a href="http://github.com/ideamonk/PyMos/network">commit graph</a> generated by GitHub. There was a flurry of commits, and there should be a tagged version up for download (and on PyPI) soon.</p>
+<h4 id="if-not-for-github8230">If not for github…</h4>
 <p>Let us, for a moment, assume that this code was on, say, <a href="http://code.google.com">Google Code</a> instead of <a href="http://github.com">GitHub</a>. How could I have contributed?</p>
-
 <ol>
 <li>Checkout the code via SVN</li>
 <li>Fix one thing</li>
-<li>Send ideamonk a patch file (I can&#8217;t commit anything anywhere!)</li>
-
-<li><p>Wait for him to:</p>
-
-<p>4a. Open up his mail client</p>
-
-<p>4ai. Get lost in <a href="http://programming.reddit.com">proggit</a> (or <a href="http://facebook.com">FaceBook</a>)</p>
-
-<p>4b. Grab the patch file</p>
-
-<p>4c. Apply patch</p>
-
-<p>4d. Test things to make sure I didn&#8217;t break things</p>
-
-<p>4e. Wonder if the code is good enough to be merged in</p>
-
-<p>4f. Commit code with my patch in it</p>
-
-<p>4g. Notify me that my patch is in, so i can do an svn up</p></li>
-
-<li><p>Go to 2</p></li>
+<li>Send ideamonk a patch file (I can’t commit anything anywhere!)</li>
+<li>Wait for him to:</li>
 </ol>
-
-<p>No code gets committed, simply because step 4 is a huge involvement for ideamonk. Knowing that step 4 is a huge involvement for ideamonk is a huge block for me too. Obviously, he&#8217;d rather be coding than dealing with patches. Who wouldn&#8217;t? Being a developer &gt; Being a maintainer. One of the reasons I respect maintainers of projects a lot.</p>
-
+<pre><code>4a. Open up his mail client
+              
+4ai. Get lost in [proggit][7] (or [FaceBook][8])
+              
+4b. Grab the patch file
+              
+4c. Apply patch
+              
+4d. Test things to make sure I didn&amp;#8217;t break things
+              
+4e. Wonder if the code is good enough to be merged in
+              
+4f. Commit code with my patch in it
+              
+4g. Notify me that my patch is in, so i can do an svn up
+</code></pre>
+<ol start="5">
+<li>Go to 2</li>
+</ol>
+<p>No code gets committed, simply because step 4 is a huge involvement for ideamonk. Knowing that step 4 is a huge involvement for ideamonk is a huge block for me too. Obviously, he’d rather be coding than dealing with patches. Who wouldn’t? Being a developer &gt; Being a maintainer. One of the reasons I respect maintainers of projects a lot.</p>
 <p>Now, how does it work with github?</p>
-
 <ol>
 <li>I fork <a href="http://github.com/ideamonk/pymos">it</a> (1 click)</li>
 <li>Fix one thing</li>
 <li>Commit, Push to <a href="http://github.com/yuvipanda/pymos">my repo</a></li>
 <li>If there is something significant in, notify ideamonk to pull from me. Else go to 2.</li>
 </ol>
-
 <p>Much simpler, and note that all four are things <strong>I could do myself</strong>. Nothing depends on ideamonk. Maintainence works is almost zero. Nobody has keys to the cathedral, since this is not one.</p>
-
 <h4 id="please-put-your-code-on-github">Please put your code on GitHub</h4>
-
 <p>It has the least amount of friction for developers looking to contribute, and the least amount of work for you as maintainer. Thanks!</p>
 
 </article> 
@@ -461,7 +416,6 @@
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -469,7 +423,6 @@
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -487,6 +440,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -494,8 +449,6 @@
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>

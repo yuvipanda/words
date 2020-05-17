@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>devlog-dec-2011 on Yuvi Panda</title>
@@ -17,8 +17,8 @@
       <pubDate>Mon, 05 Dec 2011 20:31:14 +0000</pubDate>
       
       <guid>http://words.yuvi.in/devlog-december-5-2011/</guid>
-      <description>Am migrating to per-day posts now. More granularity + I can fit more info in. The ultimate aim of the DevLog is to keep me on my toes and make sure I don&amp;#8217;t relapse into no-productivity hellholes. Daily DevLogs should do a better job at them.
- Spent some more time trying to get Kiwix to compile under OS X. Macports issue fixed, but more issues persist. It&amp;#8217;s one damn complicated build system :| Not to mention that OS X sucks balls.</description>
+      <description>Am migrating to per-day posts now. More granularity + I can fit more info in. The ultimate aim of the DevLog is to keep me on my toes and make sure I don’t relapse into no-productivity hellholes. Daily DevLogs should do a better job at them.
+ Spent some more time trying to get Kiwix to compile under OS X. Macports issue fixed, but more issues persist. It’s one damn complicated build system :| Not to mention that OS X sucks balls.</description>
     </item>
     
   </channel>

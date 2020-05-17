@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Yuvi Panda</title>
@@ -89,6 +89,15 @@
       <pubDate>Sun, 26 Mar 2017 22:45:36 -0700</pubDate>
       
       <guid>http://words.yuvi.in/tags/democratizing-programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>talk</title>
+      <link>http://words.yuvi.in/tags/talk/</link>
+      <pubDate>Sun, 26 Mar 2017 22:45:36 -0700</pubDate>
+      
+      <guid>http://words.yuvi.in/tags/talk/</guid>
       <description></description>
     </item>
     
@@ -354,6 +363,15 @@
     </item>
     
     <item>
+      <title>photo</title>
+      <link>http://words.yuvi.in/tags/photo/</link>
+      <pubDate>Thu, 09 Jun 2011 15:03:25 +0000</pubDate>
+      
+      <guid>http://words.yuvi.in/tags/photo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>photography</title>
       <link>http://words.yuvi.in/tags/photography/</link>
       <pubDate>Thu, 09 Jun 2011 15:03:25 +0000</pubDate>
@@ -417,15 +435,6 @@
     </item>
     
     <item>
-      <title>photo</title>
-      <link>http://words.yuvi.in/tags/photo/</link>
-      <pubDate>Tue, 07 Jun 2011 13:20:40 +0000</pubDate>
-      
-      <guid>http://words.yuvi.in/tags/photo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>android</title>
       <link>http://words.yuvi.in/tags/android/</link>
       <pubDate>Tue, 07 Jun 2011 02:50:05 +0000</pubDate>
@@ -458,15 +467,6 @@
       <pubDate>Sat, 14 May 2011 09:04:03 +0000</pubDate>
       
       <guid>http://words.yuvi.in/tags/blogging/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>talk</title>
-      <link>http://words.yuvi.in/tags/talk/</link>
-      <pubDate>Sun, 10 Apr 2011 23:02:48 +0000</pubDate>
-      
-      <guid>http://words.yuvi.in/tags/talk/</guid>
       <description></description>
     </item>
     

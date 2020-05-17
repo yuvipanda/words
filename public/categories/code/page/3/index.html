@@ -5,15 +5,16 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="Code" />
+<meta property="og:title" content="code" />
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/categories/code/" />
-<meta property="og:updated_time" content="2013-07-22T14:00:17&#43;00:00"/>
+<meta property="og:updated_time" content="2018-12-26T10:23:40-08:00" />
+
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Code"/>
+<meta name="twitter:title" content="code"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
-<meta name="generator" content="Hugo 0.47.1" />
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -22,14 +23,14 @@
   "@context": "http://schema.org",
   "@type": "Blog",
   "headline": "Yuvi Panda",
-  "url" : "http://words.yuvi.in/categories/code/",
+  "url" : "http:\/\/words.yuvi.in\/categories\/code\/",
   "author": {
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2013-07-22T14:00:17&#43;00:00",
+  "dateModified": "2018-12-26T10:23:40-08:00",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
-  "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
+  "description": "[JupyterHub](https:\/\/github.com\/jupyterhub\/jupyterhub) | [MyBinder](https:\/\/mybinder.org) | [Kubernetes](https:\/\/k8s.io) | Open Culture"
 }
 </script>
 
@@ -92,7 +93,6 @@
 </p>
   </header>
   <p>First there was <a href="https://gerrit.wikimedia.org/r/#/c/74079/">this</a>.</p>
-
 <p>I was bored, and so there was <a href="https://gerrit.wikimedia.org/r/#/c/75056/">this</a>. That of course, brought a swift end to the bikeshed. I&rsquo;m only <em>slightly</em> ashamed.</p>
 
 </article> 
@@ -111,45 +111,26 @@
 
 </p>
   </header>
-  
-
-<p>When running <a href="http://redis.io/">Redis</a> in a shared cluster/hosting environment (such as <a href="https://wikitech.wikimedia.org/wiki/Nova_Resource:Tools/Help">Wikimedia Tool Labs</a>, on which I&rsquo;ve been having fun doing a lot of work on), you would want to try to provide at least <em>some</em> guarantee of isolation for your keys from everyone else&rsquo;s keys. Since Redis doesn&rsquo;t do ACLs, this is problematic.</p>
-
+  <p>When running <a href="http://redis.io/">Redis</a> in a shared cluster/hosting environment (such as <a href="https://wikitech.wikimedia.org/wiki/Nova_Resource:Tools/Help">Wikimedia Tool Labs</a>, on which I&rsquo;ve been having fun doing a lot of work on), you would want to try to provide at least <em>some</em> guarantee of isolation for your keys from everyone else&rsquo;s keys. Since Redis doesn&rsquo;t do ACLs, this is problematic.</p>
 <p>This can be solved in a couple of ways</p>
-
 <h2 id="run-a-redis-instance-for-each-user">Run a Redis instance for each user</h2>
-
-<p>This is simple enough to do &#8211; each user runs their own Redis instance, and has full access to it. Security is handled by setting a secret password, and running <code>redis-server</code> as the user in question. Boom, secure!</p>
-
-<p>This doesn&rsquo;t really scale with a large number of users, because they each have lesser memory to work with now. Also having users who just want to run their tools have to deal with making sure their Redis instance is up and running fine isn&rsquo;t really good. Having the sysadmins be responsible for users&rsquo; Redis instance is&#8230; not going to work :) This would also require all the redis instances to run on one box and/or have a separate cluster just for them, which isn&rsquo;t good either.</p>
-
+<p>This is simple enough to do – each user runs their own Redis instance, and has full access to it. Security is handled by setting a secret password, and running <code>redis-server</code> as the user in question. Boom, secure!</p>
+<p>This doesn&rsquo;t really scale with a large number of users, because they each have lesser memory to work with now. Also having users who just want to run their tools have to deal with making sure their Redis instance is up and running fine isn&rsquo;t really good. Having the sysadmins be responsible for users&rsquo; Redis instance is… not going to work :) This would also require all the redis instances to run on one box and/or have a separate cluster just for them, which isn&rsquo;t good either.</p>
 <h2 id="add-acl-support-to-redis">Add ACL support to Redis</h2>
-
 <p>Not happening, because I&rsquo;m not good enough to do that yet :P But more realistically, it won&rsquo;t ever happen, since this will probably add a lot of overhead for what is arguably an edge case.</p>
-
 <h2 id="build-a-small-server-that-sits-in-front-of-redis">Build a small server that sits in front of Redis</h2>
-
-<p>Such a server would simply authenticate incoming requests via some mechanism (<a href="http://keystone.openstack.org/">Keystone</a> perhaps), and then enforce ACLs. It will have to speak the exact same protocol as Redis, since users should be able to use any library that connects to Redis. This isn&rsquo;t too hard &#8211; just replace the <code>password</code> functionality of Redis protocol to take in both a username and password (or token, or some other method of auth).</p>
-
-<p>This also I discarded &#8211; it will still affect performance, which will now be limited by how fast <em>this</em> server runs, and that is definitely not faster than Redis. And it will also be hard to maintain, since I&rsquo;ll have to completely mimic Redis&rsquo; protocol and make sure it is kept up to date. Debugging protocol issues with random client libraries is not my idea of fun. Another <strong>major</strong> disadvantage is that <strong>I</strong> would now be writing auth code, and I don&rsquo;t think handrolling auth code is a good idea, ever.</p>
-
+<p>Such a server would simply authenticate incoming requests via some mechanism (<a href="http://keystone.openstack.org/">Keystone</a> perhaps), and then enforce ACLs. It will have to speak the exact same protocol as Redis, since users should be able to use any library that connects to Redis. This isn&rsquo;t too hard – just replace the <code>password</code> functionality of Redis protocol to take in both a username and password (or token, or some other method of auth).</p>
+<p>This also I discarded – it will still affect performance, which will now be limited by how fast <em>this</em> server runs, and that is definitely not faster than Redis. And it will also be hard to maintain, since I&rsquo;ll have to completely mimic Redis&rsquo; protocol and make sure it is kept up to date. Debugging protocol issues with random client libraries is not my idea of fun. Another <strong>major</strong> disadvantage is that <strong>I</strong> would now be writing auth code, and I don&rsquo;t think handrolling auth code is a good idea, ever.</p>
 <h2 id="security-by-obscurity">Security By Obscurity!</h2>
-
-<p>This is what we finally settled on :D It sounds horrible by the title, but I think it is Good Enough<sup>TM</sup>.</p>
-
+<p>This is what we finally settled on :D It sounds horrible by the title, but I think it is Good Enough<!-- raw HTML omitted -->TM<!-- raw HTML omitted -->.</p>
 <p>Since Redis is a key value store at heart, you can do anything once you know the key. So, if an &lsquo;attacker&rsquo; doesn&rsquo;t know the key, there isn&rsquo;t much they can do. So it can be considered SecureEnough for our purposes if we can make it so that other users can not find out or guess your keys.</p>
-
 <p>We essentially did so with the following:</p>
-
 <ol>
 <li>Disable all Redis commands that let users list all / many keys.</li>
 <li>Have users use a random and long key prefix for all their keys.</li>
 </ol>
-
 <p>(1) prevents someone from just listing all keys to find something interesting. (2) prevents people from brute-forcing or guessing keys. Since all code run on Tool Labs must be open source, guessing keys is super easy. By having a &lsquo;secret&rsquo; prefix, having the actual keys is useless. This also prevents accidental key overwrites from different tools using a common key name.</p>
-
 <p>Disabling commands is easy to do by using Redis&rsquo; <code>RENAME COMMAND</code> config feature. I added support for <code>RENAME COMMAND</code> to Wikimedia&rsquo;s <a href="https://github.com/wikimedia/operations-puppet/tree/production/modules/redis">Redis puppet module</a>, and then it was simple enough to <a href="https://github.com/wikimedia/operations-puppet/blob/production/modules/toollabs/manifests/redis.pp">configure</a> a specific instance to disable &lsquo;list keys&rsquo; type commands. That&rsquo;s the following commands:</p>
-
 <ol>
 <li><code>CONFIG</code></li>
 <li><code>FLUSHALL</code></li>
@@ -161,22 +142,14 @@
 <li><code>RANDOMKEY</code></li>
 <li><code>DEBUG</code>.</li>
 </ol>
-
 <p>After going through the list of Redis commands, I am guessing this is going to be GoodEnough to prevent key listing. (Note: if there&rsquo;s more that I&rsquo;m missing, please, <em>please</em> let me know).</p>
-
 <p>We also tell people to use a secure prefix that&rsquo;s at least 64bytes long, saved in a file that is only user readable. Generating that is as simple as:</p>
-
 <p>openssl rand -base64 64</p>
-
 <p>That should be long enough to be hard to brute force, even with Redis being as fast as it is.</p>
-
 <h3 id="problems">Problems</h3>
-
-<p>The major problem with this is, of course &#8211; the fact that humans are involved :) I&rsquo;ve heard &ldquo;I do not care about my keys, do not need security&rdquo; a fair amount of times already. The fact that the prefix generation is optional means that there will be people who do not use prefixes, and it will work for them for a (probably) long time &#8211; until it doesn&rsquo;t, and they have no idea why. This is personally acceptable to me, since they have been made aware of the risks beforehand.</p>
-
+<p>The major problem with this is, of course – the fact that humans are involved :) I&rsquo;ve heard &ldquo;I do not care about my keys, do not need security&rdquo; a fair amount of times already. The fact that the prefix generation is optional means that there will be people who do not use prefixes, and it will work for them for a (probably) long time – until it doesn&rsquo;t, and they have no idea why. This is personally acceptable to me, since they have been made aware of the risks beforehand.</p>
 <h2 id="fun">Fun</h2>
-
-<p>This has now been deployed on toollabs for a month or so, and I&rsquo;ve a couple of fun tools already written using it (and other people too). We had a patched memcached server we had that we&rsquo;ll kill in a few weeks, so people who used memcached before are also migrating to redis. And I was able to do all this without even having root! This is mostly thanks to the fact that we try to keep all our configuration in puppet (<a href="https://github.com/wikimedia/operations-puppet">Wikimedia&rsquo;s Puppet repository</a>) &#8211; for both our production cluster and for everything else. So I could re-use our production redis module, make changes to it, and build the new solution &#8211; all while being vetted by &lsquo;proper&rsquo; ops people (whom I dearly love and respect). Building infrastructure in such a collaborative manner is a lot of fun, and I think I&rsquo;m hooked. It&rsquo;s fun!</p>
+<p>This has now been deployed on toollabs for a month or so, and I&rsquo;ve a couple of fun tools already written using it (and other people too). We had a patched memcached server we had that we&rsquo;ll kill in a few weeks, so people who used memcached before are also migrating to redis. And I was able to do all this without even having root! This is mostly thanks to the fact that we try to keep all our configuration in puppet (<a href="https://github.com/wikimedia/operations-puppet">Wikimedia&rsquo;s Puppet repository</a>) – for both our production cluster and for everything else. So I could re-use our production redis module, make changes to it, and build the new solution – all while being vetted by &lsquo;proper&rsquo; ops people (whom I dearly love and respect). Building infrastructure in such a collaborative manner is a lot of fun, and I think I&rsquo;m hooked. It&rsquo;s fun!</p>
 
 </article> 
 
@@ -194,15 +167,10 @@
 
 </p>
   </header>
-  <p style="text-align: center;">
-  <a href="http://yuvi.in/blog/wp-content/uploads/2013/04/2013-04-22-02.57.36.png"><img class="aligncenter  wp-image-575" alt="Screenshot of Tamil autocomplete" src="http://yuvi.in/blog/wp-content/uploads/2013/04/2013-04-22-02.57.36-580x1031.png" width="348" height="619" srcset="http://yuvi.in/blog/wp-content/uploads/2013/04/2013-04-22-02.57.36-580x1031.png 580w, http://yuvi.in/blog/wp-content/uploads/2013/04/2013-04-22-02.57.36-508x904.png 508w, http://yuvi.in/blog/wp-content/uploads/2013/04/2013-04-22-02.57.36.png 720w" sizes="(max-width: 348px) 100vw, 348px" /></a>
-</p>
-
-<p>Screenshot of Autosuggest working in Tamil on <a href="http://github.com/wikimedia/aosp-morelangs-ime">my variant</a> of the Android keyboard. I&#8217;ve been working on this on and off for the last few months (this is also my final year project in college). I&#8217;ve ported all of the <a href="https://github.com/wikimedia/jquery.ime">jQuery.IME</a> languages to work on the keyboard natively.</p>
-
-<p>Now experimenting with Autosuggest. It only needs an appropriate dictionary now and we&#8217;ll be good to go. Currently I&#8217;m getting Autosuggest working only on Tamil, but the plan is to get it to work for all Indian languages. The method I am using (convert everything back to latin chars, then do autocorrect / autosuggest) means it should be trivial to extend to any transliteration based input method.</p>
-
-<p>Wheeee! This is very much a simple &#8216;celebratory&#8217; post. Will blog actual details soon.</p>
+  <!-- raw HTML omitted -->
+<p>Screenshot of Autosuggest working in Tamil on <a href="http://github.com/wikimedia/aosp-morelangs-ime">my variant</a> of the Android keyboard. I’ve been working on this on and off for the last few months (this is also my final year project in college). I’ve ported all of the <a href="https://github.com/wikimedia/jquery.ime">jQuery.IME</a> languages to work on the keyboard natively.</p>
+<p>Now experimenting with Autosuggest. It only needs an appropriate dictionary now and we’ll be good to go. Currently I’m getting Autosuggest working only on Tamil, but the plan is to get it to work for all Indian languages. The method I am using (convert everything back to latin chars, then do autocorrect / autosuggest) means it should be trivial to extend to any transliteration based input method.</p>
+<p>Wheeee! This is very much a simple ‘celebratory’ post. Will blog actual details soon.</p>
 
 </article> 
 
@@ -220,8 +188,7 @@
 
 </p>
   </header>
-  <p>Mediawiki has a <a href="https://bugzilla.wikimedia.org/showdependencytree.cgi?id=29079&amp;hide_resolved=0">number of humorous bug reports</a>, though not as many as I&#8217;d like. Still, they&#8217;re quite funny.</p>
-
+  <p>Mediawiki has a <a href="https://bugzilla.wikimedia.org/showdependencytree.cgi?id=29079&amp;hide_resolved=0">number of humorous bug reports</a>, though not as many as I’d like. Still, they’re quite funny.</p>
 <p>I think my favorites are the <a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=42595">request for RESOLVED MURDERED</a>, the <a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=30561#c1">real reason why MediaWiki runs on MySQL</a>, someone asking <a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=23223#c53">where the community consensus is</a> to stop Volcanoes exploding, <a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=23223#c66">offers of shamanic help</a>, a <a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=25236">ground breaking report</a> on US Government corruption, and a warning about <a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=23029#c2">zoning laws required for shipping Ponies</a>,</p>
 
 </article> 
@@ -240,9 +207,8 @@
 
 </p>
   </header>
-  <p>Tor is one of those things that you don&#8217;t really need at all until you really really need it. I don&#8217;t need it right now, but I still try to help it as much as possible. One of the easiest way to do so is to run a <a href="https://crypto.stanford.edu/flashproxy">flashproxy</a> (has nothing to do with Adobe!) on your browser &#8211; super simple to setup, and effective for people looking for <a href="https://www.torproject.org/docs/bridges">bridges</a>.</p>
-
-<p>The easiest way to use it if you&#8217;re a Chrome user is to use the <a href="https://chrome.google.com/webstore/detail/cupcake/dajjbehmbnbppjkcnpdkaniapgdppdnc">CupCake</a> extension (the initial colorscheme is a bit&#8230; geocities-y, but I&#8217;ve sent in <a href="https://github.com/glamrock/cupcake/pull/1">a patch</a> to fix that). You can also add <a href="https://gitweb.torproject.org/flashproxy.git/blob/HEAD:/modules/mediawiki/custom.js">this snippet</a> to your Mediawiki wiki either as a userscript or gadget. If you&#8217;re running a site, you can simply use <a href="https://crypto.stanford.edu/flashproxy/#badge-howto">the snippet on the flashproxy site</a> to have it run for all your visitors.</p>
+  <p>Tor is one of those things that you don’t really need at all until you really really need it. I don’t need it right now, but I still try to help it as much as possible. One of the easiest way to do so is to run a <a href="https://crypto.stanford.edu/flashproxy">flashproxy</a> (has nothing to do with Adobe!) on your browser – super simple to setup, and effective for people looking for <a href="https://www.torproject.org/docs/bridges">bridges</a>.</p>
+<p>The easiest way to use it if you’re a Chrome user is to use the <a href="https://chrome.google.com/webstore/detail/cupcake/dajjbehmbnbppjkcnpdkaniapgdppdnc">CupCake</a> extension (the initial colorscheme is a bit… geocities-y, but I’ve sent in <a href="https://github.com/glamrock/cupcake/pull/1">a patch</a> to fix that). You can also add <a href="https://gitweb.torproject.org/flashproxy.git/blob/HEAD:/modules/mediawiki/custom.js">this snippet</a> to your Mediawiki wiki either as a userscript or gadget. If you’re running a site, you can simply use <a href="https://crypto.stanford.edu/flashproxy/#badge-howto">the snippet on the flashproxy site</a> to have it run for all your visitors.</p>
 
 </article> 
 
@@ -261,7 +227,6 @@
 </p>
   </header>
   <p>You might have heard of <a href="http://bash.org">bash.org</a>. If not, do go there! (And I am sorry about your afternoon)</p>
-
 <p>Mediawiki maintains something similar, but much shorter in size &amp; form, at <a href="https://bugzilla.wikimedia.org/quips.cgi?action=show">Bugzilla quips</a>. I already appear a few times, but will try to appear some more!</p>
 
 </article> 
@@ -280,19 +245,11 @@
 
 </p>
   </header>
-  <p>Android&#8217;s <a href="https://developer.android.com/reference/java/util/regex/Pattern.html">Regular Expressions</a> engine is API compatible with the generic Java implementation, but under the hood uses <a href="http://userguide.icu-project.org/strings/regexp">ICU&#8217;s RegEx engine</a>. This usually causes no problems, until it does and then you&#8217;re sortof fucked, but not really.</p>
-
-<p>On a recent project, a subtle bug in Android&#8217;s <code>Matcher.replaceAll</code> behavior bit me. When replacing values of captured groups (<code>'$1'&lt;/code,&lt;code&gt;'$2'</code>, etc), Android&#8217;s implementation replaced a reference to an empty group with the literal string <code>'null'</code> instead of just skipping it (aka replacing with empty string <code>''</code>), which is what most other Java implemetations do. The string <code>'null'</code> is, I think, <em>never</em> the right behavior. And the inconsistency causes unit tests to pass when run on the desktop JRE to fail when run in Android, which is a major pain.</p>
-
+  <p>Android’s <a href="https://developer.android.com/reference/java/util/regex/Pattern.html">Regular Expressions</a> engine is API compatible with the generic Java implementation, but under the hood uses <a href="http://userguide.icu-project.org/strings/regexp">ICU’s RegEx engine</a>. This usually causes no problems, until it does and then you’re sortof fucked, but not really.</p>
+<p>On a recent project, a subtle bug in Android’s <code>Matcher.replaceAll</code> behavior bit me. When replacing values of captured groups (<code>'$1'&lt;/code,&lt;code&gt;'$2'</code>, etc), Android’s implementation replaced a reference to an empty group with the literal string <code>'null'</code> instead of just skipping it (aka replacing with empty string <code>''</code>), which is what most other Java implemetations do. The string <code>'null'</code> is, I think, <em>never</em> the right behavior. And the inconsistency causes unit tests to pass when run on the desktop JRE to fail when run in Android, which is a major pain.</p>
 <p>Fortunately Android is Open Source, and I was able to track down the <a href="http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/6-b14/java/util/regex/Matcher.java#Matcher.replaceAll%28java.lang.String%29">offending piece of code</a>, and just write myself <a href="https://gist.github.com/yuvipanda/5225151">a simple replacement</a> that has the bug fixed:</p>
-
-<noscript>
-  <p>
-    View the code on <a href="https://gist.github.com/5225151">Gist</a>.
-  </p>
-</noscript>
-
-<p>You&#8217;re welcome. Yay Open Source!</p>
+<!-- raw HTML omitted -->
+<p>You’re welcome. Yay Open Source!</p>
 
 </article> 
 
@@ -310,25 +267,20 @@
 
 </p>
   </header>
-  <p>Richard Gabriel&#8217;s <a href="http://www.jwz.org/doc/worse-is-better.html">Worse is Better</a> (falsly attributed to <a href="http://www.jwz.org">jwz</a> by many), is a piece on how LISP lost out to C, despite being &#8216;better&#8217;.</p>
-
-<p>Jim Waldo&#8217;s <a href="http://www.artima.com/weblogs/viewpost.jsp?thread=24807">Worse is Worse</a> notes, quite accurately, that what us geeks consider &#8216;better&#8217; might not what is, in the context of the universe at large, &#8216;better&#8217;. To quote,</p>
-
+  <p>Richard Gabriel’s <a href="http://www.jwz.org/doc/worse-is-better.html">Worse is Better</a> (falsly attributed to <a href="http://www.jwz.org">jwz</a> by many), is a piece on how LISP lost out to C, despite being ‘better’.</p>
+<p>Jim Waldo’s <a href="http://www.artima.com/weblogs/viewpost.jsp?thread=24807">Worse is Worse</a> notes, quite accurately, that what us geeks consider ‘better’ might not what is, in the context of the universe at large, ‘better’. To quote,</p>
 <blockquote>
-<p>[&#8230;] what we see is that better is a complicated notion, and can depend on a variety of different metrics. It may be disappointing to find out that what we geeks think of as better may not be what our customers think is better. But finding this out shouldn&#8217;t surprise us too much.</p>
+<p>[…] what we see is that better is a complicated notion, and can depend on a variety of different metrics. It may be disappointing to find out that what we geeks think of as better may not be what our customers think is better. But finding this out shouldn’t surprise us too much.</p>
 </blockquote>
-
-<p>There is also explanations on how on many of the examples used to justify worse as being &#8216;better&#8217;, the wrong criteria was being used.</p>
-
+<p>There is also explanations on how on many of the examples used to justify worse as being ‘better’, the wrong criteria was being used.</p>
 <p>The original piece has been used to justify people producing shoddy, shitty work quite frequently. Waldo agrees:</p>
-
 <blockquote>
-<p>My problem with the slogan is that it has become a catch phrase for those who either haven&#8217;t read the original article, or have read it and either have forgotten what it really talked about or never understood it in the first place. As a catch phrase, it is often used to justify shoddy design, or following the crowd rather than doing what is right, or as short-hand for the real claim that our customers are too stupid to either appreciate or deserve high quality products. Why spend the time doing things right, this line of reasoning goes, when we all know that worse is better. You are far better off giving the customer something that you know is less than what you could produce, because they (those simple customers) will think that it is better.</p>
-
-<p>The end result of this thinking is sloppy products that don&#8217;t work, are hard to use, or are unreliable (or all of the above). We try to convince our customers that this is the way software has to be, and then turn around and convince ourselves that they won&#8217;t pay for anything better. But we short-change our customers, and we cheapen our craft, when we put up with this sort of thinking. When the original article was produced, I don&#8217;t think that this is what the author had in mind; even if it was, it is time for us to reject the simple-minded interpretation of the slogan, and start putting out software that really is better (on the dimension of goodness that our customers have, not necessarily our own).</p>
+<p>My problem with the slogan is that it has become a catch phrase for those who either haven’t read the original article, or have read it and either have forgotten what it really talked about or never understood it in the first place. As a catch phrase, it is often used to justify shoddy design, or following the crowd rather than doing what is right, or as short-hand for the real claim that our customers are too stupid to either appreciate or deserve high quality products. Why spend the time doing things right, this line of reasoning goes, when we all know that worse is better. You are far better off giving the customer something that you know is less than what you could produce, because they (those simple customers) will think that it is better.</p>
 </blockquote>
-
-<p>I&#8217;ve sadly had to personally witness this at a few places. When &#8216;shit work&#8217; becomes acceptable, it very soon becomes the norm. Eventually people consider that not just the norm, but <em>something to aspire to</em> &#8211; as if producing something that is actually shit is, somehow, <em>better</em> than producing something actually better. If you notice that happening to yourself / your project, please step back a bit, <a href="https://en.wikipedia.org/wiki/Wikipedia:Whacking_with_a_wet_trout">trout</a> yourself, and do the right thing.</p>
+<blockquote>
+<p>The end result of this thinking is sloppy products that don’t work, are hard to use, or are unreliable (or all of the above). We try to convince our customers that this is the way software has to be, and then turn around and convince ourselves that they won’t pay for anything better. But we short-change our customers, and we cheapen our craft, when we put up with this sort of thinking. When the original article was produced, I don’t think that this is what the author had in mind; even if it was, it is time for us to reject the simple-minded interpretation of the slogan, and start putting out software that really is better (on the dimension of goodness that our customers have, not necessarily our own).</p>
+</blockquote>
+<p>I’ve sadly had to personally witness this at a few places. When ‘shit work’ becomes acceptable, it very soon becomes the norm. Eventually people consider that not just the norm, but <em>something to aspire to</em> – as if producing something that is actually shit is, somehow, <em>better</em> than producing something actually better. If you notice that happening to yourself / your project, please step back a bit, <a href="https://en.wikipedia.org/wiki/Wikipedia:Whacking_with_a_wet_trout">trout</a> yourself, and do the right thing.</p>
 
 </article> 
 
@@ -364,17 +316,12 @@
 
 </p>
   </header>
-  <p>I&#8217;m blogging from (one of the many) browsers on this Raspberry Pi. Testing setting it up to do slideshows during <a href="http://jsfoo.in">JSFoo 2012</a>.</p>
-
+  <p>I’m blogging from (one of the many) browsers on this Raspberry Pi. Testing setting it up to do slideshows during <a href="http://jsfoo.in">JSFoo 2012</a>.</p>
 <p>THIS IS SO COOL!</p>
-
 <p>I am now editing this blog post from my new Nexus 7.</p>
-
 <p>THIS IS SO COOL!</p>
-
 <p>I am a few years behind the curve on this. Last year was spent slogging my ass out at a wonderful startup and travelling to a lot of places meeting and working with some wonderful people. Left very little time for staying on the bleeding edge.</p>
-
-<p>Changing that fast &#8211; trying to produce useful stuff while also staying close to the bleeding edge. Fun times ahead :-)</p>
+<p>Changing that fast – trying to produce useful stuff while also staying close to the bleeding edge. Fun times ahead :-)</p>
 
 </article> 
 
@@ -406,7 +353,6 @@
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -414,7 +360,6 @@
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -432,6 +377,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -439,8 +386,6 @@
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>

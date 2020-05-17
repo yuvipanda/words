@@ -5,15 +5,16 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="Code" />
+<meta property="og:title" content="code" />
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/categories/code/" />
-<meta property="og:updated_time" content="2010-07-22T19:57:53&#43;00:00"/>
+<meta property="og:updated_time" content="2018-12-26T10:23:40-08:00" />
+
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Code"/>
+<meta name="twitter:title" content="code"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
-<meta name="generator" content="Hugo 0.47.1" />
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -22,14 +23,14 @@
   "@context": "http://schema.org",
   "@type": "Blog",
   "headline": "Yuvi Panda",
-  "url" : "http://words.yuvi.in/categories/code/",
+  "url" : "http:\/\/words.yuvi.in\/categories\/code\/",
   "author": {
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2010-07-22T19:57:53&#43;00:00",
+  "dateModified": "2018-12-26T10:23:40-08:00",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
-  "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
+  "description": "[JupyterHub](https:\/\/github.com\/jupyterhub\/jupyterhub) | [MyBinder](https:\/\/mybinder.org) | [Kubernetes](https:\/\/k8s.io) | Open Culture"
 }
 </script>
 
@@ -91,35 +92,30 @@
 
 </p>
   </header>
-  <p>If you had read my <a href="http://yuvi.in/blog/gsoc-2010-proposal.html">Cheese GSoC proposal</a>, it would&#8217;ve stressed on one major point &#8211; make Cheese sexy.</p>
-
-<p>Two days ago, one of my classmates spent 5 minutes on the bus using Cheese and trying out different effects (and poses!). Today, my brother spent 20 minutes trying to get the perfect combination of style and vagueness for his Facebook profile picture &#8211; using Cheese. He then asked me to create an account for him in Ubuntu (he was an exclusively Win7 user till then) before leaving.</p>
-
-<p>I&#8217;m still not where I want to be (the girls haven&#8217;t gone gaga over it&#8230;yet!), but I know very well that I am on the right path.</p>
-
-<p>And a major milestone in that path is the release of Cheese 2.31.1. The &#8216;release&#8217; means that the code is now stable enough to be actually shown off. The major features (rewrite in Vala, use Clutter, user defined Effects and most importantly, Live Previews) are in working condition. We are no longer walking through a minefield of segfaults. You can build it and show it off. When something breaks and <a href="http://ftp.gnome.org/pub/GNOME/sources/cheese/2.31/">you tell us</a>, we&#8217;ll most probably not reply with &#8216;yeah, we know that. We&#8217;ll fix it when we get to it&#8217;. The road to Cheese 3.0 has begun.</p>
-
-<p>So, what&#8217;s all in this release?</p>
-
+  <p>If you had read my <a href="http://yuvi.in/blog/gsoc-2010-proposal.html">Cheese GSoC proposal</a>, it would’ve stressed on one major point – make Cheese sexy.</p>
+<p>Two days ago, one of my classmates spent 5 minutes on the bus using Cheese and trying out different effects (and poses!). Today, my brother spent 20 minutes trying to get the perfect combination of style and vagueness for his Facebook profile picture – using Cheese. He then asked me to create an account for him in Ubuntu (he was an exclusively Win7 user till then) before leaving.</p>
+<p>I’m still not where I want to be (the girls haven’t gone gaga over it…yet!), but I know very well that I am on the right path.</p>
+<p>And a major milestone in that path is the release of Cheese 2.31.1. The ‘release’ means that the code is now stable enough to be actually shown off. The major features (rewrite in Vala, use Clutter, user defined Effects and most importantly, Live Previews) are in working condition. We are no longer walking through a minefield of segfaults. You can build it and show it off. When something breaks and <a href="http://ftp.gnome.org/pub/GNOME/sources/cheese/2.31/">you tell us</a>, we’ll most probably not reply with ‘yeah, we know that. We’ll fix it when we get to it’. The road to Cheese 3.0 has begun.</p>
+<p>So, what’s all in this release?</p>
 <ol>
-<li><p>Rewrite of the UI code. We removed the entire old src/ folder, and rewrote everything from scratch. Using <a href="http://live.gnome.org/Vala">Vala</a>. Why? Because ~7000 lines of C code is now ~1500 lines of Vala code. And the Vala code has more features (Live preview, for one!). The Vala compiler is pretty mature &#8211; only one &#8216;real&#8217; bug so far (rest have been mostly binding bugs, fixed with single line of code changes). And #vala has been incredibly helpful too! And we are re-using most of the &#8216;backend&#8217; code (Camera detection, pipeline linking, etc) &#8211; it is still in C, and writing Vala bindings was incredibly simple.</p></li>
-
-<li><p>Move from Gtk to Clutter for display. Means I can do stuff like overlay semi-transparent text on top of the effects. Or have animated page transitions. Or (in the future), use OpenGL effects without having to do an extra to-fro copy from memory. Have drop shadows for everything. Make the effects tilt and rotate around when hovered over. Etc, etc, etc. Clutter is the major contributor to the &#8216;sexy&#8217; part.</p></li>
-
-<li><p>User created effects. Effects are no longer hardcoded. A simple 4 line text file and enthusiasm for reading documentation is all that is required to create your own effect. The effects are based on GStreamer, and are very flexible &#8211; you can create something as simple as monochrome + hue, or something as complex as face detection + extra limb addition to specific people :P</p></li>
-
-<li><p>Live Streaming &#8211; biggie. All effects are arranged in grids of 3&#215;3 in multiple pages that you can swipe through. Simply clicking one will activate it pretty much instantaneously. No more &#8216;select effect, apply, no-it-sucks, let&#8217;s go back and do it again&#8217; games :)</p></li>
+<li>
+<p>Rewrite of the UI code. We removed the entire old src/ folder, and rewrote everything from scratch. Using <a href="http://live.gnome.org/Vala">Vala</a>. Why? Because ~7000 lines of C code is now ~1500 lines of Vala code. And the Vala code has more features (Live preview, for one!). The Vala compiler is pretty mature – only one ‘real’ bug so far (rest have been mostly binding bugs, fixed with single line of code changes). And #vala has been incredibly helpful too! And we are re-using most of the ‘backend’ code (Camera detection, pipeline linking, etc) – it is still in C, and writing Vala bindings was incredibly simple.</p>
+</li>
+<li>
+<p>Move from Gtk to Clutter for display. Means I can do stuff like overlay semi-transparent text on top of the effects. Or have animated page transitions. Or (in the future), use OpenGL effects without having to do an extra to-fro copy from memory. Have drop shadows for everything. Make the effects tilt and rotate around when hovered over. Etc, etc, etc. Clutter is the major contributor to the ‘sexy’ part.</p>
+</li>
+<li>
+<p>User created effects. Effects are no longer hardcoded. A simple 4 line text file and enthusiasm for reading documentation is all that is required to create your own effect. The effects are based on GStreamer, and are very flexible – you can create something as simple as monochrome + hue, or something as complex as face detection + extra limb addition to specific people :P</p>
+</li>
+<li>
+<p>Live Streaming – biggie. All effects are arranged in grids of 3×3 in multiple pages that you can swipe through. Simply clicking one will activate it pretty much instantaneously. No more ‘select effect, apply, no-it-sucks, let’s go back and do it again’ games :)</p>
+</li>
 </ol>
-
-<p><a href="http://dl.dropbox.com/u/8768784/cheese-midterm.ogv"><img src="http://dl.dropbox.com/u/8768784/cheese-midterm.png" alt="" /></a></p>
-
-<p>I made a <a href="http://dl.dropbox.com/u/8768784/cheese-midterm.ogv">quick screencast</a> to show the new Live preview stuff to those of you too lazy to actually get the source and compile. And the subject is a pink+green teddy bear sitting on my white netbook. (And the weird stuff that turns up after I exit fullscreen is a bug in <a href="http://recordmydesktop.sourceforge.net/about.php">RecordMyDesktop</a> &#8211; and is an incentive for you to actually <a href="http://ftp.gnome.org/pub/GNOME/sources/cheese/2.31/">get the source</a> and check it out :P)</p>
-
+<p><a href="http://dl.dropbox.com/u/8768784/cheese-midterm.ogv"><img src="http://dl.dropbox.com/u/8768784/cheese-midterm.png" alt=""></a></p>
+<p>I made a <a href="http://dl.dropbox.com/u/8768784/cheese-midterm.ogv">quick screencast</a> to show the new Live preview stuff to those of you too lazy to actually get the source and compile. And the subject is a pink+green teddy bear sitting on my white netbook. (And the weird stuff that turns up after I exit fullscreen is a bug in <a href="http://recordmydesktop.sourceforge.net/about.php">RecordMyDesktop</a> – and is an incentive for you to actually <a href="http://ftp.gnome.org/pub/GNOME/sources/cheese/2.31/">get the source</a> and check it out :P)</p>
 <p>These are the four <em>major</em> features that are new. All the other parts of previous Cheese UI have also been implemented (preferences, thumbnail viewer, fullscreen, wide mode, device detection, etc.)</p>
-
-<p>As for the next release &#8211; keep looking out for it, it will land soon! It will primarily be a bug fix and code cleanup release &#8211; fixing crashes, UI inconsistencies and making sure everything works as intended.</p>
-
-<p>A lot of late night hackery (mostly because my college takes up 10 hours of &#8216;regular&#8217; time) has gone into this release &#8211; so check it out <a href="http://ftp.gnome.org/pub/GNOME/sources/cheese/2.31/">here</a> and tell us what you think. Especially about the parts that suck. Especially useful would be if you can get someone non-technical to sit in front of Cheese, observe where all they fail (and succeed) and then report your observations back to us.</p>
+<p>As for the next release – keep looking out for it, it will land soon! It will primarily be a bug fix and code cleanup release – fixing crashes, UI inconsistencies and making sure everything works as intended.</p>
+<p>A lot of late night hackery (mostly because my college takes up 10 hours of ‘regular’ time) has gone into this release – so check it out <a href="http://ftp.gnome.org/pub/GNOME/sources/cheese/2.31/">here</a> and tell us what you think. Especially about the parts that suck. Especially useful would be if you can get someone non-technical to sit in front of Cheese, observe where all they fail (and succeed) and then report your observations back to us.</p>
 
 </article> 
 
@@ -137,13 +133,8 @@
 
 </p>
   </header>
-  <div class="codehilite">
-  <pre>    <span class="s">"I can&#39;t tell you how wonderful it was - I walked into this room, and it was full of people like me"</span>
-                </pre>
-</div>
-
+  <!-- raw HTML omitted -->
 <p>I would give an arm, a leg, an eye and other assorted body parts if I could find such a room. And live there.</p>
-
 <p><a href="http://blog.senthil.me/hackerspace-talk-presentation-for-barcampchen">Hackerpace Chennai</a> or <a href="http://www.thestartupcentre.in/">The Startup Center</a> better turn up fast :)</p>
 
 </article> 
@@ -162,11 +153,9 @@
 
 </p>
   </header>
-  <p>I used <a href="http://gist.github.com">gist</a> to publish <a href="http://gist.github.com/356202">my GSoC proposal</a>. Diffs, easy to show off, and Markdown support &#8211; made gist perfect for me to make modifications and get feedback easily.</p>
-
-<p>It is the first &#8216;real&#8217; document I&#8217;ve written &#8211; it actually had a tangible effect.</p>
-
-<p>Now that I don&#8217;t need to make any modifications, I&#8217;ve <a href="http://yuvi.in/blog/gsoc-2010-proposal.html">moved it to my site</a>.</p>
+  <p>I used <a href="http://gist.github.com">gist</a> to publish <a href="http://gist.github.com/356202">my GSoC proposal</a>. Diffs, easy to show off, and Markdown support – made gist perfect for me to make modifications and get feedback easily.</p>
+<p>It is the first ‘real’ document I’ve written – it actually had a tangible effect.</p>
+<p>Now that I don’t need to make any modifications, I’ve <a href="http://yuvi.in/blog/gsoc-2010-proposal.html">moved it to my site</a>.</p>
 
 </article> 
 
@@ -184,46 +173,37 @@
 
 </p>
   </header>
-  <p>This week on Cheese&#8230;.</p>
-
+  <p>This week on Cheese….</p>
 <p>WE MADE A RELEASE! :)</p>
-
 <p><a href="http://ftp.gnome.org/pub/GNOME/sources/cheese/2.31/">http://ftp.gnome.org/pub/GNOME/sources/cheese/2.31/</a></p>
-
-<p>Cheese 2.31.1 is out. It&#8217;s a dev release. Does not have zarro boogs.</p>
-
+<p>Cheese 2.31.1 is out. It’s a dev release. Does not have zarro boogs.</p>
 <p>But it is a release!</p>
-
 <p>This week, we</p>
-
 <ol>
 <li>Fixed several perf bugs.</li>
 <li>Fixed some weird preferences dialog bugs</li>
 <li>Filed (and eventually had fixed) a bug in GStreamer.</li>
 <li>Fixed a regression</li>
 <li>Beautified the UI a bit (text name overlay of effects, etc)</li>
-
-<li><p>Assorted administrative work to prepare for release (Copyright</p>
-
-<p>updating, merging back into master, etc)</p></li>
+<li>Assorted administrative work to prepare for release (Copyright</li>
 </ol>
-
+<pre><code>updating, merging back into master, etc)
+</code></pre>
 <p>I also passed my mid terms :)</p>
-
-<p>Next week&#8230;</p>
-
+<p>Next week…</p>
 <ol>
-<li><p>Remove dependency on Mx Toolkit (it is not a blessed dependency,</p>
-
-<p>and i&#8217;m not using large parts of it anyway)</p></li>
-
-<li><p>Performance improvements, especially at startup time. It is taking</p>
-
-<p><em>waaay</em> too long .</p></li>
-
-<li><p>Fix problems in video mode.</p></li>
-
-<li><p>Make the TODO list shorter.</p></li>
+<li>Remove dependency on Mx Toolkit (it is not a blessed dependency,</li>
+</ol>
+<pre><code>and i&amp;#8217;m not using large parts of it anyway)
+</code></pre>
+<ol start="2">
+<li>Performance improvements, especially at startup time. It is taking</li>
+</ol>
+<pre><code>_waaay_ too long .
+</code></pre>
+<ol start="3">
+<li>Fix problems in video mode.</li>
+<li>Make the TODO list shorter.</li>
 </ol>
 
 </article> 
@@ -242,22 +222,17 @@
 
 </p>
   </header>
-  <p>This week on Cheese&#8230;.</p>
-
+  <p>This week on Cheese….</p>
 <ol>
 <li>Performance enhancements. Sacrificed some startup time for <strong>much</strong> improved usage time. Viewing live effects are now a snap. So is selecting an effect. We went in some cases from ~15s to &lt;1s. Thanks to Tester (and other folks) at #gstreamer for helping out :)</li>
 <li>Paging of effects. Effects are now in pages of 9 each, instead of a huge scroller area.</li>
 <li>Applying effects without stopping the pipeline. Makes things much faster.</li>
 <li>Implementing the popup menu for thumbnails.</li>
 </ol>
-
-<p>We&#8217;ll be making a release anytime now :)</p>
-
-<p>All of last week&#8217;s goals were met, except the code cleanup. It will probably have to wait after release.</p>
-
+<p>We’ll be making a release anytime now :)</p>
+<p>All of last week’s goals were met, except the code cleanup. It will probably have to wait after release.</p>
 <p>As I type this, there are 6 blockers before we can make a release. Will make a post when we do a release, hopefully with a screencast too!</p>
-
-<p>Next week is kinda unpredictable &#8211; I&#8217;ll douse fires as they arise in the code (reported by people who hopefully test the release), and also work on reducing the length of items in the TODO.</p>
+<p>Next week is kinda unpredictable – I’ll douse fires as they arise in the code (reported by people who hopefully test the release), and also work on reducing the length of items in the TODO.</p>
 
 </article> 
 
@@ -275,9 +250,8 @@
 
 </p>
   </header>
-  <p>I&#8217;ve joined <a href="http://universityofreddit.com/v2/">Reddit University</a>&#8216;s <a href="http://universityofreddit.com/v2/class.php?id=57">SICP Reading Group</a> class. I&#8217;ve wanted to read through <a href="http://mitpress.mit.edu/sicp/full-text/book/book.html">SICP</a> for a long time, and have gotten started many times &#8211; never completed it. Maybe the group effects will help me finish this time :)</p>
-
-<p>If you&#8217;re interested in expanding your horizons beyond mere code-monkey programming, <a href="http://universityofreddit.com/v2/class.php?id=57">join up!</a></p>
+  <p>I’ve joined <a href="http://universityofreddit.com/v2/">Reddit University</a>‘s <a href="http://universityofreddit.com/v2/class.php?id=57">SICP Reading Group</a> class. I’ve wanted to read through <a href="http://mitpress.mit.edu/sicp/full-text/book/book.html">SICP</a> for a long time, and have gotten started many times – never completed it. Maybe the group effects will help me finish this time :)</p>
+<p>If you’re interested in expanding your horizons beyond mere code-monkey programming, <a href="http://universityofreddit.com/v2/class.php?id=57">join up!</a></p>
 
 </article> 
 
@@ -296,27 +270,21 @@
 </p>
   </header>
   <p>Late report. But I did get quite a bit done!</p>
-
-<p>Last week&#8230;</p>
-
+<p>Last week…</p>
 <ol>
 <li>Video Effects file format reader</li>
 <li>Live Preview of Effects! (YAY!)</li>
 <li>Effect files added</li>
 </ol>
-
-<p>Live Preview took most of my time. We bought down CPU usage from ~90% to a more manageable ~50%. Cleaned up code a bit (still needs more cleanup). It is rather very &#8216;demoable&#8217;, provided you gloss over the slowdowns.</p>
-
-<p>Coming up next week would be&#8230;</p>
-
+<p>Live Preview took most of my time. We bought down CPU usage from ~90% to a more manageable ~50%. Cleaned up code a bit (still needs more cleanup). It is rather very ‘demoable’, provided you gloss over the slowdowns.</p>
+<p>Coming up next week would be…</p>
 <ol>
-<li>Even less CPU Usage! We&#8217;re now even with current Cheese (which does not give you live previews). I want to bring this down even more.</li>
+<li>Even less CPU Usage! We’re now even with current Cheese (which does not give you live previews). I want to bring this down even more.</li>
 <li>Reduced latency for switching operations. Moving between effects/screens now has more than a second of latency. I should reduce this to much lesser than a second.</li>
-<li>Code cleanup. Some of the C code is a mess &#8211; needs to be cleaned up much.</li>
+<li>Code cleanup. Some of the C code is a mess – needs to be cleaned up much.</li>
 <li>Error fixing. You can now crash it by looking at it at a 58 degree angle, during new moon days. Bugs like these will be fixed.</li>
 </ol>
-
-<p>Cya in a week, with a very-usable Cheese! I&#8217;ll post a screencast as soon as I&#8217;ve made Cheese a bit more sexy :)</p>
+<p>Cya in a week, with a very-usable Cheese! I’ll post a screencast as soon as I’ve made Cheese a bit more sexy :)</p>
 
 </article> 
 
@@ -334,27 +302,20 @@
 
 </p>
   </header>
-  <p>Fourth week of the Summer of Code was over a few days back, and this report is overdue :( I&#8217;ve not been able to code as much as I wanted to this week &#8211; due to various non-technical issues. Will compensate in the next week.</p>
-
-<p>Last week&#8230;</p>
-
+  <p>Fourth week of the Summer of Code was over a few days back, and this report is overdue :( I’ve not been able to code as much as I wanted to this week – due to various non-technical issues. Will compensate in the next week.</p>
+<p>Last week…</p>
 <ol>
 <li>Countdown Animations (Thanks to _ke for cleanup!)</li>
 <li>GConf Cleanup</li>
 </ol>
-
 <p>Yes, that was it.</p>
-
-<p>Totally failed to meet last week&#8217;s goals. Sigh.</p>
-
-<p>By next week, I hope to have accomplished&#8230;</p>
-
+<p>Totally failed to meet last week’s goals. Sigh.</p>
+<p>By next week, I hope to have accomplished…</p>
 <ol>
 <li>Video Effects file format reader</li>
 <li>Basic Effects application to the currently playing pipeline.</li>
 <li>Mockups on best weay to present effects UI to user</li>
 </ol>
-
 <p>Here is to hoping the coming week turns out better than last one :)</p>
 
 </article> 
@@ -373,8 +334,7 @@
 
 </p>
   </header>
-  <p>Third week of the Summer of Code is over! And during this week&#8230;.</p>
-
+  <p>Third week of the Summer of Code is over! And during this week….</p>
 <ol>
 <li>Successfully wrapped up the core cheese functionality (<code>libcheese</code>) with a vala wrapper</li>
 <li>Made Photo Mode work</li>
@@ -383,13 +343,9 @@
 <li>Made cheese single instance using <code>libunique</code></li>
 <li>Started work on cleaning up GConf code.</li>
 </ol>
-
-<p>In <a href="http://yuvi.in/blog/cheese-gsoc-report-week-2.html">last week&#8217;s report</a>, I mentioned that I didn&#8217;t quite like my pace of work. It is still the same (approx. 3 hours a day on average, excluding overhead) &#8211; but I&#8217;ve come to accept that it is okay. No more bitching about it, as long as I&#8217;m meeting my goals.</p>
-
-<p>Last week&#8217;s predictions were to complete libcheese wrapping, photo mode, video mode and burst mode. Set goals accomplished with ample time to spare &#8211; time that was spent trying to get countdown animations to work (still haven&#8217;t managed), and make cheese single instance. I under-estimated last week &#8211; should improve accuracy.</p>
-
-<p>By next week, I hope to have accomplished&#8230;</p>
-
+<p>In <a href="http://yuvi.in/blog/cheese-gsoc-report-week-2.html">last week’s report</a>, I mentioned that I didn’t quite like my pace of work. It is still the same (approx. 3 hours a day on average, excluding overhead) – but I’ve come to accept that it is okay. No more bitching about it, as long as I’m meeting my goals.</p>
+<p>Last week’s predictions were to complete libcheese wrapping, photo mode, video mode and burst mode. Set goals accomplished with ample time to spare – time that was spent trying to get countdown animations to work (still haven’t managed), and make cheese single instance. I under-estimated last week – should improve accuracy.</p>
+<p>By next week, I hope to have accomplished…</p>
 <ol>
 <li>Fully functional preferences dialog box</li>
 <li>Countdown animations</li>
@@ -397,14 +353,11 @@
 <li>Full blown keybindings (Basically <code>&lt;Esc&gt;</code> to cancel, since the others are already implemented)</li>
 <li>Trash/Delete implementation</li>
 </ol>
-
 <p>It would have everything Cheese 2.30.1 has, except for Effects.</p>
-
 <p>And what did I learn this week?</p>
-
 <ol>
 <li>RTFM. Again. And again. THEN ask on IRC.</li>
-<li>How to use gdb. I&#8217;ve only cursorily used it before &#8211; but digging into it deeper now (thank you, segfault!)</li>
+<li>How to use gdb. I’ve only cursorily used it before – but digging into it deeper now (thank you, segfault!)</li>
 </ol>
 
 </article> 
@@ -423,8 +376,7 @@
 
 </p>
   </header>
-  <p>Second week of the (rather hot and sweaty) Summer of Code is over! And during this week&#8230;.</p>
-
+  <p>Second week of the (rather hot and sweaty) Summer of Code is over! And during this week….</p>
 <ol>
 <li>Replicated most of the UI of Cheese</li>
 <li>Learnt how to make C and Vala code co-exist (Thanks folks at #vala!)</li>
@@ -432,31 +384,23 @@
 <li>Implemented fullscreen mode, with autohiding of the action buttons</li>
 <li>Started modifying parts of libcheese to support clutter for video output</li>
 </ol>
-
-<p>In <a href="http://yuvi.in/blog/cheese-gsoc-report-week-1.html">last week&#8217;s report</a>, I mentioned that I didn&#8217;t quite like my pace of work. I <em>still</em> don&#8217;t like it &#8211; <a href="http://projecthamster.wordpress.com/">Hamster</a> reports I&#8217;ve spent 15.2 hours since Monday on Cheese, which is just about 3 hours a day! Totally unacceptable, and I&#8217;d like to increase that number considerably.</p>
-
-<p>Last week&#8217;s predictions were for libcheese integration, UI replication and Thumbnail view implementation. I&#8217;ve finished the last two, and have made a start on the first. Needs improvement.</p>
-
-<p>By next week, I hope to have accomplished&#8230;</p>
-
+<p>In <a href="http://yuvi.in/blog/cheese-gsoc-report-week-1.html">last week’s report</a>, I mentioned that I didn’t quite like my pace of work. I <em>still</em> don’t like it – <a href="http://projecthamster.wordpress.com/">Hamster</a> reports I’ve spent 15.2 hours since Monday on Cheese, which is just about 3 hours a day! Totally unacceptable, and I’d like to increase that number considerably.</p>
+<p>Last week’s predictions were for libcheese integration, UI replication and Thumbnail view implementation. I’ve finished the last two, and have made a start on the first. Needs improvement.</p>
+<p>By next week, I hope to have accomplished…</p>
 <ol>
 <li>Working video preview showing up!</li>
 <li>Photo taking works</li>
 <li>Video taking works</li>
 <li>Burst mode works</li>
 </ol>
-
 <p>Basically, it would be usable. In a basic way.</p>
-
 <p>And what did I learn this week?</p>
-
 <ol>
-<li>Don&#8217;t try to be too clever. Clear Code &gt; Lesser LoC.</li>
+<li>Don’t try to be too clever. Clear Code &gt; Lesser LoC.</li>
 <li>Ask first. Verify assumptions.</li>
 <li>Just because something can be rewritten, does not mean it should be :)</li>
 </ol>
-
-<p>On an unrelated note, my sleep cycle is totally messed up &#8211; I&#8217;ve been sleeping at 6 AM and waking up at 2 PM. Sunlight feels weird to me. I haven&#8217;t been able to do my biweekly bicycle rides :( I should also try to fix that before the end of next week.</p>
+<p>On an unrelated note, my sleep cycle is totally messed up – I’ve been sleeping at 6 AM and waking up at 2 PM. Sunlight feels weird to me. I haven’t been able to do my biweekly bicycle rides :( I should also try to fix that before the end of next week.</p>
 
 </article> 
 
@@ -488,7 +432,6 @@
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -496,7 +439,6 @@
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -514,6 +456,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -521,8 +465,6 @@
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>

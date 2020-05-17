@@ -5,15 +5,16 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="Work Plan" />
+<meta property="og:title" content="work-plan" />
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/categories/work-plan/" />
-<meta property="og:updated_time" content="2018-07-21T18:32:53-07:00"/>
+<meta property="og:updated_time" content="2018-07-21T18:32:53-07:00" />
+
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Work Plan"/>
+<meta name="twitter:title" content="work-plan"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
-<meta name="generator" content="Hugo 0.47.1" />
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -22,14 +23,14 @@
   "@context": "http://schema.org",
   "@type": "Blog",
   "headline": "Yuvi Panda",
-  "url" : "http://words.yuvi.in/categories/work-plan/",
+  "url" : "http:\/\/words.yuvi.in\/categories\/work-plan\/",
   "author": {
     "@type": "Person",
     "name": ""
   },
   "dateModified": "2018-07-21T18:32:53-07:00",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
-  "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
+  "description": "[JupyterHub](https:\/\/github.com\/jupyterhub\/jupyterhub) | [MyBinder](https:\/\/mybinder.org) | [Kubernetes](https:\/\/k8s.io) | Open Culture"
 }
 </script>
 
@@ -91,73 +92,53 @@
 
 </p>
   </header>
-  
-
-<p>I&rsquo;m writing up monthly &lsquo;work plans&rsquo; to plan what work I&rsquo;m trying to do every
+  <p>I&rsquo;m writing up monthly &lsquo;work plans&rsquo; to plan what work I&rsquo;m trying to do every
 month, and do a retrospective after to see how much I got done. I work across
 a variety of open source projects with ambiguous responsibilities, so work
 planning isn&rsquo;t very set. This has proven to be somewhat quite stressful for
 everyone involved. Let&rsquo;s see if this helps!</p>
-
-<h2 id="jupytercon">JupyterCon</h2>
-
+<h2 id="jupytercon-">JupyterCon</h2>
 <p>JupyterCon is in NYC towards the end of August, and it is going to set the pace
 for a bunch of stuff. I have 2.5-ish talks to give. Need to prepare for those and
 do a good job.</p>
-
-<h2 id="matomo-formerly-piwiki-on-mybinder-org">Matomo (formerly Piwiki) on mybinder.org</h2>
-
+<h2 id="matomo-formerly-piwiki-on-mybinderorg-">Matomo (formerly Piwiki) on mybinder.org</h2>
 <p>mybinder.org currently uses Google Analytics. I am not a big fan. It has troubling
 privacy implications, and we don&rsquo;t get data as granularly as we want to. I am going
 to try deploying <a href="https://matomo.org/">Matomo</a> (formerly Piwiki) and using that
 instead. Run both together for a while and see how we like it! Matomo requires
 a MySQL database &amp; is written in PHP - let&rsquo;s see how this goes ;)</p>
-
-<h2 id="the-littlest-jupyterhub-0-1-release">The Littlest JupyterHub 0.1 release</h2>
-
+<h2 id="the-littlest-jupyterhub-01-release-">The Littlest JupyterHub 0.1 release</h2>
 <p><a href="https://github.com/jupyterhub/the-littlest-jupyterhub">The Littlest JupyterHub</a> is
 doing great! I&rsquo;ve done a <strong>lot</strong> of user tests, and the distribution has changed
 drastically over time. It&rsquo;s also the first time I&rsquo;m putting my newly found
 strong convictions around testing, CI &amp; documentation to practice. You can already
 check it out <a href="https://github.com/jupyterhub/the-littlest-jupyterhub">on GitHub</a>. I
 want to make sure we (the JupyterHub team) gets out a 0.1 release early August.</p>
-
-<h2 id="pangeo-workshop">Pangeo Workshop</h2>
-
+<h2 id="pangeo-workshop-">Pangeo Workshop</h2>
 <p>I despair about climate change and how little agency I seem to have around it
 quite a bit. I&rsquo;m excited to go to the <a href="https://www2.cisl.ucar.edu/events/workshops/2018-pangeo-workshop/2018/2018-pangeo-workshop">PANGEO workshop</a>
 in Colorado. I&rsquo;m mostly hoping to listen &amp; understand their world some more.</p>
-
-<h2 id="berkeley-datahub-deployment">Berkeley DataHub deployment</h2>
-
+<h2 id="berkeley-datahub-deployment-">Berkeley DataHub deployment</h2>
 <p>Aug 20-ish is when next semester starts at UC Berkeley. I need to have a pretty
 solid JupyterHub running there by then. I&rsquo;d like it to have good CI/CD set up
 in a generic way, rather than something super specific to Berkeley. However,
 I&rsquo;m happy to shortcut this if needed, since there&rsquo;s already so many things on
 my plate haha.</p>
-
-<h2 id="uc-davis">UC Davis</h2>
-
+<h2 id="uc-davis-">UC Davis</h2>
 <p>I&rsquo;m trying to spend a day or two a month at UC Davis. Partially because I like
 being on Amtrak! I also think there&rsquo;s a lot of cool work happening there,
 and I&rsquo;d like to hang out with all the cool people doing all the cool work.</p>
-
-<h2 id="personal">Personal</h2>
-
+<h2 id="personal-">Personal</h2>
 <p>On top of this, there&rsquo;s ongoing medical conditions to be managed. I&rsquo;m getting
 Carpel Tunnel Release surgery sometime in October, so need to make sure I do
 not super fuck up my hands before then. I&rsquo;m also getting a cortisone shot
 for my back in early August to deal with Sciatica. Fun!</p>
-
-<h2 id="things-i-m-not-doing">Things I&rsquo;m not doing!</h2>
-
+<h2 id="things-im-not-doing-">Things I&rsquo;m not doing!</h2>
 <p>The grading related stuff I&rsquo;ve been working on is going to the backburner
 for a while. I think I bit off far more than I can chew, so time to back off.
 I also do not have a good intuition for the problem domain since I&rsquo;ve never
 written grading keys nor have I been a student in a class that got autograded.</p>
-
-<h2 id="in-conclusion">In conclusion&hellip;</h2>
-
+<h2 id="in-conclusion-">In conclusion&hellip;</h2>
 <p>Shit, I&rsquo;ve a lot of things to do lol! I&rsquo;m sure I&rsquo;m forgetting some things
 here that I&rsquo;ve promised people. Let&rsquo;s see how this goes!</p>
 
@@ -182,7 +163,6 @@ here that I&rsquo;ve promised people. Let&rsquo;s see how this goes!</p>
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -190,7 +170,6 @@ here that I&rsquo;ve promised people. Let&rsquo;s see how this goes!</p>
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -208,6 +187,8 @@ here that I&rsquo;ve promised people. Let&rsquo;s see how this goes!</p>
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -215,8 +196,6 @@ here that I&rsquo;ve promised people. Let&rsquo;s see how this goes!</p>
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>

@@ -6,18 +6,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <meta property="og:title" content="DevLog for 17 Aug 2014" />
-<meta property="og:description" content="Devlogs again! Let&#8217;s see how long I can keep this one up.
-Been a whirlwind few months. I&#8217;m moving to the Wikimedia Ops team soon! The Wikipedia app has been released! Lots of excitement around, should do a bigger post sometime with details. This should just follow usual devlog format of stuff for the day
+<meta property="og:description" content="Devlogs again! Let’s see how long I can keep this one up.
+Been a whirlwind few months. I’m moving to the Wikimedia Ops team soon! The Wikipedia app has been released! Lots of excitement around, should do a bigger post sometime with details. This should just follow usual devlog format of stuff for the day
  Completed deployment of changing the results backend of Quarry to SQLite. That was a fun exercise, and I should write about that separately." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://words.yuvi.in/devlog-17-mon-2014/" /><meta property="article:published_time" content="2014-08-18T12:37:51&#43;00:00"/>
-<meta property="article:modified_time" content="2014-08-18T12:37:51&#43;00:00"/>
+<meta property="og:url" content="http://words.yuvi.in/devlog-17-mon-2014/" />
+<meta property="article:published_time" content="2014-08-18T12:37:51+00:00" />
+<meta property="article:modified_time" content="2014-08-18T12:37:51+00:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="DevLog for 17 Aug 2014"/>
-<meta name="twitter:description" content="Devlogs again! Let&#8217;s see how long I can keep this one up.
-Been a whirlwind few months. I&#8217;m moving to the Wikimedia Ops team soon! The Wikipedia app has been released! Lots of excitement around, should do a bigger post sometime with details. This should just follow usual devlog format of stuff for the day
+<meta name="twitter:description" content="Devlogs again! Let’s see how long I can keep this one up.
+Been a whirlwind few months. I’m moving to the Wikimedia Ops team soon! The Wikipedia app has been released! Lots of excitement around, should do a bigger post sometime with details. This should just follow usual devlog format of stuff for the day
  Completed deployment of changing the results backend of Quarry to SQLite. That was a fun exercise, and I should write about that separately."/>
-<meta name="generator" content="Hugo 0.47.1" />
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -26,10 +28,10 @@ Been a whirlwind few months. I&#8217;m moving to the Wikimedia Ops team soon! Th
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "DevLog for 17 Aug 2014",
-  "url": "http://words.yuvi.in/devlog-17-mon-2014/",
+  "url": "http:\/\/words.yuvi.in\/devlog-17-mon-2014\/",
   "wordCount": "395",
-  "datePublished": "2014-08-18T12:37:51&#43;00:00",
-  "dateModified": "2014-08-18T12:37:51&#43;00:00",
+  "datePublished": "2014-08-18T12:37:51\x2b00:00",
+  "dateModified": "2014-08-18T12:37:51\x2b00:00",
   "author": {
     "@type": "Person",
     "name": "yuvipanda"
@@ -89,16 +91,14 @@ Been a whirlwind few months. I&#8217;m moving to the Wikimedia Ops team soon! Th
 
 </p>
   </header>
-  <p>Devlogs again! Let&#8217;s see how long I can keep this one up.</p>
-
-<p>Been a whirlwind few months. I&#8217;m moving to the Wikimedia Ops team soon! The Wikipedia app has been released! Lots of excitement around, should do a bigger post sometime with details. This should just follow usual devlog format of stuff for the day</p>
-
+  <p>Devlogs again! Let’s see how long I can keep this one up.</p>
+<p>Been a whirlwind few months. I’m moving to the Wikimedia Ops team soon! The Wikipedia app has been released! Lots of excitement around, should do a bigger post sometime with details. This should just follow usual devlog format of stuff for the day</p>
 <ul>
-<li>Completed deployment of changing the results backend of <a href="https://quarry.wmflabs.org">Quarry</a> to SQLite. That was a fun exercise, and I should write about that separately. Still have some unicode issues left (mostly from the MySQL side) that I&#8217;ve hacked around for now.</li>
-<li>Quarry now uses a cron based query killer instead of relying on Celery. The day before I had force killed the celery deamons and this meant the query kill tasks didn&#8217;t run, leaving zombie queries behind. The simpler cron based killer won&#8217;t have this issue, since it&#8217;s super simple and does only one thing. The only reason I didn&#8217;t do this before was that I had not known about <code>SHOW PROCESSLIST</code> before (yes, I suck). It seems to be working fine now, but doesn&#8217;t kill superseeded queries immediately. Should be interesting to figure out how to get that done properly.</li>
-<li>I&#8217;ve started trying out <a href="https://atom.io">Atom</a> again. My previous attempt ended quickly when I ran into a bug which didn&#8217;t wrap text at all. A restart seems to have fixed that. The Vim keybindings are &#8216;ok&#8217; &#8211; there&#8217;s no <code>hlsearch</code>, which is painful, but I can live with it. I prefer the fuzzy finder in it to Ctrl-P in Vim.</li>
-<li>Started working on making labs monitoring with graphite possible again. Our graphite / txstatsd roles weren&#8217;t meant to be run on trusty, so working on porting things to make sure they work fine on both. I&#8217;ve immensely come to appreciate ops over the last year or so, and am quite enjoying my work in that area :) I&#8217;ll probably be doing more of these over the next week, since Quarry has reached a nice state now and I await more usage before I spend more time on it.</li>
-<li>Also did some code review on the Android app. It&#8217;s been chugging along quite happily these days :)</li>
+<li>Completed deployment of changing the results backend of <a href="https://quarry.wmflabs.org">Quarry</a> to SQLite. That was a fun exercise, and I should write about that separately. Still have some unicode issues left (mostly from the MySQL side) that I’ve hacked around for now.</li>
+<li>Quarry now uses a cron based query killer instead of relying on Celery. The day before I had force killed the celery deamons and this meant the query kill tasks didn’t run, leaving zombie queries behind. The simpler cron based killer won’t have this issue, since it’s super simple and does only one thing. The only reason I didn’t do this before was that I had not known about <code>SHOW PROCESSLIST</code> before (yes, I suck). It seems to be working fine now, but doesn’t kill superseeded queries immediately. Should be interesting to figure out how to get that done properly.</li>
+<li>I’ve started trying out <a href="https://atom.io">Atom</a> again. My previous attempt ended quickly when I ran into a bug which didn’t wrap text at all. A restart seems to have fixed that. The Vim keybindings are ‘ok’ – there’s no <code>hlsearch</code>, which is painful, but I can live with it. I prefer the fuzzy finder in it to Ctrl-P in Vim.</li>
+<li>Started working on making labs monitoring with graphite possible again. Our graphite / txstatsd roles weren’t meant to be run on trusty, so working on porting things to make sure they work fine on both. I’ve immensely come to appreciate ops over the last year or so, and am quite enjoying my work in that area :) I’ll probably be doing more of these over the next week, since Quarry has reached a nice state now and I await more usage before I spend more time on it.</li>
+<li>Also did some code review on the Android app. It’s been chugging along quite happily these days :)</li>
 <li>Ran into a awake-when-he-should-not-have been <a href="http://blog.ironholds.org/">Oliver Keyes</a> and we have conspired to start some <a href="https://etherpad.wikimedia.org/p/flagellating-funnel">researchy</a> <a href="https://github.com/Ironholds/WPDMZ">things</a>. I cleaned up some of the python code, and am writing out things to do. This should be fun!</li>
 </ul>
 
@@ -142,7 +142,6 @@ Been a whirlwind few months. I&#8217;m moving to the Wikimedia Ops team soon! Th
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -150,7 +149,6 @@ Been a whirlwind few months. I&#8217;m moving to the Wikimedia Ops team soon! Th
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -168,6 +166,8 @@ Been a whirlwind few months. I&#8217;m moving to the Wikimedia Ops team soon! Th
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -175,8 +175,6 @@ Been a whirlwind few months. I&#8217;m moving to the Wikimedia Ops team soon! Th
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>

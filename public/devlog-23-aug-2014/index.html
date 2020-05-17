@@ -7,15 +7,17 @@
 
 <meta property="og:title" content="DevLog for 23 Aug 2014" />
 <meta property="og:description" content="Back in Glasgow! It was actually not very cold today, only cold! Progress.
-Started working on my long-abandoned labsbook project, which aims to make Tool Labs a first class environment for people who want to run (and publish) iPython Notebooks while also being able to access the replica databases and the dumps. Doing this in a secure manner is kinda hard, but I think I&#8217;ve a neat solution that lets everyone run a personal iPython kernel on the Grid, access it from their local machine, and also publish it to the web from a standard location." />
+Started working on my long-abandoned labsbook project, which aims to make Tool Labs a first class environment for people who want to run (and publish) iPython Notebooks while also being able to access the replica databases and the dumps. Doing this in a secure manner is kinda hard, but I think I’ve a neat solution that lets everyone run a personal iPython kernel on the Grid, access it from their local machine, and also publish it to the web from a standard location." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://words.yuvi.in/devlog-23-aug-2014/" /><meta property="article:published_time" content="2014-08-24T02:56:40&#43;00:00"/>
-<meta property="article:modified_time" content="2014-08-24T02:56:40&#43;00:00"/>
+<meta property="og:url" content="http://words.yuvi.in/devlog-23-aug-2014/" />
+<meta property="article:published_time" content="2014-08-24T02:56:40+00:00" />
+<meta property="article:modified_time" content="2014-08-24T02:56:40+00:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="DevLog for 23 Aug 2014"/>
 <meta name="twitter:description" content="Back in Glasgow! It was actually not very cold today, only cold! Progress.
-Started working on my long-abandoned labsbook project, which aims to make Tool Labs a first class environment for people who want to run (and publish) iPython Notebooks while also being able to access the replica databases and the dumps. Doing this in a secure manner is kinda hard, but I think I&#8217;ve a neat solution that lets everyone run a personal iPython kernel on the Grid, access it from their local machine, and also publish it to the web from a standard location."/>
-<meta name="generator" content="Hugo 0.47.1" />
+Started working on my long-abandoned labsbook project, which aims to make Tool Labs a first class environment for people who want to run (and publish) iPython Notebooks while also being able to access the replica databases and the dumps. Doing this in a secure manner is kinda hard, but I think I’ve a neat solution that lets everyone run a personal iPython kernel on the Grid, access it from their local machine, and also publish it to the web from a standard location."/>
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -24,10 +26,10 @@ Started working on my long-abandoned labsbook project, which aims to make Tool L
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "DevLog for 23 Aug 2014",
-  "url": "http://words.yuvi.in/devlog-23-aug-2014/",
+  "url": "http:\/\/words.yuvi.in\/devlog-23-aug-2014\/",
   "wordCount": "429",
-  "datePublished": "2014-08-24T02:56:40&#43;00:00",
-  "dateModified": "2014-08-24T02:56:40&#43;00:00",
+  "datePublished": "2014-08-24T02:56:40\x2b00:00",
+  "dateModified": "2014-08-24T02:56:40\x2b00:00",
   "author": {
     "@type": "Person",
     "name": "yuvipanda"
@@ -88,27 +90,21 @@ Started working on my long-abandoned labsbook project, which aims to make Tool L
 </p>
   </header>
   <p>Back in Glasgow! It was actually not very cold today, only cold! Progress.</p>
-
-<p>Started working on my long-abandoned <code>labsbook</code> project, which aims to make <a href="https://tools.wmflabs.org">Tool Labs</a> a first class environment for people who want to run (and publish) <a href="http://ipython.org/notebook.html">iPython Notebooks</a> while also being able to access the replica databases and the dumps. Doing this in a secure manner is kinda hard, but I think I&#8217;ve a neat solution that lets everyone run a personal iPython kernel on the Grid, access it from their local machine, and also publish it to the web from a standard location. So far, I&#8217;ve gotten my script to a point where it&#8217;ll setup an iPython environment for you if it doesn&#8217;t already exist, start the kernel if it isn&#8217;t already running, and tunnel the editing interface back to you to use! Things left to do include:</p>
-
+<p>Started working on my long-abandoned <code>labsbook</code> project, which aims to make <a href="https://tools.wmflabs.org">Tool Labs</a> a first class environment for people who want to run (and publish) <a href="http://ipython.org/notebook.html">iPython Notebooks</a> while also being able to access the replica databases and the dumps. Doing this in a secure manner is kinda hard, but I think I’ve a neat solution that lets everyone run a personal iPython kernel on the Grid, access it from their local machine, and also publish it to the web from a standard location. So far, I’ve gotten my script to a point where it’ll setup an iPython environment for you if it doesn’t already exist, start the kernel if it isn’t already running, and tunnel the editing interface back to you to use! Things left to do include:</p>
 <ol>
 <li>Open up the browser when tunnel is open</li>
-<li>Find a sane way to kill a kernel that hasn&#8217;t been doing anything since forever</li>
-<li>Setup a shared iPython environment (just code, readonly) so people don&#8217;t have to setup their own environments everytime (this is primarily a performance enhancement)</li>
-<li>Find a nice and simple way for iPython notebooks to be published. I&#8217;m currently thinking of an URL such as <code>tools.wmflabs.org/notebooks/&lt;username&gt;/&lt;notebookname&gt;' to display them, and an index at</code>tools.wmflabs.org/notebooks/<username>`. This shouldn&#8217;t be too hard with appropriate permission munging.</li>
+<li>Find a sane way to kill a kernel that hasn’t been doing anything since forever</li>
+<li>Setup a shared iPython environment (just code, readonly) so people don’t have to setup their own environments everytime (this is primarily a performance enhancement)</li>
+<li>Find a nice and simple way for iPython notebooks to be published. I’m currently thinking of an URL such as <code>tools.wmflabs.org/notebooks/&lt;username&gt;/&lt;notebookname&gt;' to display them, and an index at</code>tools.wmflabs.org/notebooks/<!-- raw HTML omitted -->`. This shouldn’t be too hard with appropriate permission munging.</li>
 </ol>
-
-<p>I&#8217;m also using <a href="http://www.paramiko.org/">paramiko</a> for this, which makes writing SSH related code with Python a breeze. It even supports <code>proxycommand</code>! Blunders I&#8217;ve done while getting up to this point include:</p>
-
+<p>I’m also using <a href="http://www.paramiko.org/">paramiko</a> for this, which makes writing SSH related code with Python a breeze. It even supports <code>proxycommand</code>! Blunders I’ve done while getting up to this point include:</p>
 <ol>
 <li>Running <code>jsub run.bash -mem 4G</code> instead of <code>jsub -mem 4G run.bash</code> and wondering why my script kept getting killed with OOM.</li>
-<li>Trying to do a <code>pip install</code> on the Grid nodes (which don&#8217;t have build tools) instead of on <code>tools-dev</code> and wondering why running it from the commandline works but from <code>jsub</code> does not.</li>
+<li>Trying to do a <code>pip install</code> on the Grid nodes (which don’t have build tools) instead of on <code>tools-dev</code> and wondering why running it from the commandline works but from <code>jsub</code> does not.</li>
 <li>Wondering why my SSH Tunnel kept dying and trying to debug that without realizing that it was dying because the iPython process was dying because it was OOMing because of my earlier <code>jsub</code> error</li>
 <li>Thinking that user accounts (rather than tool accounts) can not submit jobs to the grid, while the problem was that I had not set the <code>execute</code> bit on my script.</li>
 </ol>
-
-<p>Once this is done (I suspect tomorrow), I&#8217;ll work on getting the data from my work with <a href="https://github.com/Ironholds/WPDMZ">WPDMZ</a> into a form good enough for publicizing (removing ways of de-anonymization), and then use iPython notebooks to make graphs! This should be fun :)</p>
-
+<p>Once this is done (I suspect tomorrow), I’ll work on getting the data from my work with <a href="https://github.com/Ironholds/WPDMZ">WPDMZ</a> into a form good enough for publicizing (removing ways of de-anonymization), and then use iPython notebooks to make graphs! This should be fun :)</p>
 <p>Source so far available <a href="https://github.com/yuvipanda/labsbooks">on Github</a>. Needs more work / documentation / cleaning up.</p>
 
 
@@ -151,7 +147,6 @@ Started working on my long-abandoned labsbook project, which aims to make Tool L
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -159,7 +154,6 @@ Started working on my long-abandoned labsbook project, which aims to make Tool L
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -177,6 +171,8 @@ Started working on my long-abandoned labsbook project, which aims to make Tool L
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -184,8 +180,6 @@ Started working on my long-abandoned labsbook project, which aims to make Tool L
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>

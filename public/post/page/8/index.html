@@ -9,11 +9,12 @@
 <meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/post/" />
-<meta property="og:updated_time" content="2013-11-05T07:53:32&#43;00:00"/>
+<meta property="og:updated_time" content="2020-05-17T11:25:35+05:30" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
-<meta name="generator" content="Hugo 0.47.1" />
+<meta name="generator" content="Hugo 0.70.0" />
 
 
     
@@ -22,14 +23,14 @@
   "@context": "http://schema.org",
   "@type": "Blog",
   "headline": "Yuvi Panda",
-  "url" : "http://words.yuvi.in/post/",
+  "url" : "http:\/\/words.yuvi.in\/post\/",
   "author": {
     "@type": "Person",
     "name": ""
   },
-  "dateModified": "2013-11-05T07:53:32&#43;00:00",
+  "dateModified": "2020-05-17T11:25:35\x2b05:30",
   "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
-  "description": "[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"
+  "description": "[JupyterHub](https:\/\/github.com\/jupyterhub\/jupyterhub) | [MyBinder](https:\/\/mybinder.org) | [Kubernetes](https:\/\/k8s.io) | Open Culture"
 }
 </script>
 
@@ -84,6 +85,25 @@
 
 <article class="blog-post">
   <header>
+    <h2 class="blog-post-title"><a href="http://words.yuvi.in/lots-discussion-tiny-matter-long-run-part-5321/">Lots of discussion over tiny things that do not matter in the long run, part 5321</a></h2>
+    <p class="blog-post-meta"><time datetime="2013-12-03T21:00:36Z">Tue Dec 3, 2013</time> by yuvipanda in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/links" rel="category tag">links</a>, <a href="/categories/wiki" rel="category tag">wiki</a>
+
+
+</p>
+  </header>
+  <p><a href="https://gerrit.wikimedia.org/r/#/c/97185/">On gerrit this time</a></p>
+<p>Sigh.</p>
+
+</article> 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
     <h2 class="blog-post-title"><a href="http://words.yuvi.in/doing-laundry/">Doing Laundry</a></h2>
     <p class="blog-post-meta"><time datetime="2013-11-05T07:53:32Z">Tue Nov 5, 2013</time> by yuvipanda in 
 <i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/personal" rel="category tag">personal</a>
@@ -109,19 +129,13 @@
 
 </p>
   </header>
-  <p>I&#8217;ve given up on trying to make DevLogs really comprehensive and complete, and just try to make them &#8211; even if they are incomplete. Perhaps this will help me actually write more devlogs, and thus make it more comprehensive&#8230;</p>
-
-<p>I started on the <a href="https://www.coursera.org/course/progfun">Functional Programming in Scala</a> course today. I wanted to do it the last time, but did not find the time. This time will be different &#8211; I&#8217;m in a different spot mentally, and a big drain on my emotional / time resources (&#8220;college&#8221;) is no longer a factor. I&#8217;ve already gone through the first week&#8217;s lectures (most seem straight ports from <a href="https://mitpress.mit.edu/sicp/">SICP</a>), and am <sup>2</sup>&frasl;<sub>3</sub> of my way through the assignments for the first week. Though I&#8217;m normally not fond of the typical types of exercises (&#8220;How many ways can you make change for this scenario?&#8221;), doing them functionally seems to be enough of a twist to keep me interested. The regular languages I seem to work with these days (Java, PHP, Puppet, Python and a bit of JS) aren&#8217;t exactly well tuned to the functional style of programming (except JS, but I don&#8217;t really do that much JS these days) &#8211; so going through this course and hopefully building something in Scala can exercise my &#8216;OMG HOLY SHIT THIS NEW THING IS AWESOME!!1&#8217; muscles.</p>
-
-<p>The course recommends using Scala IDE. Which is Eclipse based. Despite my deep distaste for Eclipse, I&#8217;ve given it a shot and it seems fairly stable and much less shitty than the Eclipse I&#8217;m used to! Let&#8217;s see how that goes.</p>
-
-<p>The way I learn the best seems to be to find a project I want to build, and then build it in a new language. I&#8217;m looking around for fun projects that I could build with Scala, and I&#8217;m pretty sure I&#8217;ll find one at some point. I should also try to diversify the communities I contribute to, so perhaps I should look for a non-Wikimedia project where I can contribute to in Scala. Should be fun :D</p>
-
-<p>Other than that &#8211; I&#8217;ve been <a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=54465">investigating performance problems</a> with the Campaigns API &#8211; turns out Mediawiki&#8217;s Parser is really, really slow. Who would&#8217;ve thought, eh? ;). The &#8216;solution&#8217;, of course &#8211; is to just add more caching. Which is a sortof biggish, hairy-ish problem because of the number of changes that can cause cache invalidation. The way Mediawiki handles caching is&#8230; rather complex &#8211; but that is more due to how much functionality exists rather than anything else. Needs a proper &#8216;clean&#8217; solution that is not just &#8220;Let&#8217;s cache everything for 5 minutes!!!1&#8221;. Should be fun to write up and fix!</p>
-
-<p>I&#8217;ve also been spending time integrating <a href="https://www.mediawiki.org/wiki/MediaWiki-Vagrant">Mediawiki-Vagrant</a> with <a href="https://wikitech.wikimedia.org">Wikimedia Labs</a>. This will make it easy for anyone to setup a base mediawiki installation on Labs, and save time dicking around various mundane deployment-of-test-instance issues (did I turn on caching? How do I get this extension on? etc). This is interesting because it merges two different puppet repos &#8211; operations/puppet.git and mediawiki/vagrant.git on one machine and provides different ways of managing them. Since this is also using puppet as a sort of &#8216;deployment&#8217; tool (rather than just a configuration-of-systems tool), that is an interesting / fun aspect too. Should be able to get the <a href="https://gerrit.wikimedia.org/r/#/c/85814/">patch</a> merged in a few weeks.</p>
-
-<p>I visited San Francisco for the last 2 weeks. I don&#8217;t really feel insecure anymore :)</p>
+  <p>I’ve given up on trying to make DevLogs really comprehensive and complete, and just try to make them – even if they are incomplete. Perhaps this will help me actually write more devlogs, and thus make it more comprehensive…</p>
+<p>I started on the <a href="https://www.coursera.org/course/progfun">Functional Programming in Scala</a> course today. I wanted to do it the last time, but did not find the time. This time will be different – I’m in a different spot mentally, and a big drain on my emotional / time resources (“college”) is no longer a factor. I’ve already gone through the first week’s lectures (most seem straight ports from <a href="https://mitpress.mit.edu/sicp/">SICP</a>), and am 2/3 of my way through the assignments for the first week. Though I’m normally not fond of the typical types of exercises (“How many ways can you make change for this scenario?”), doing them functionally seems to be enough of a twist to keep me interested. The regular languages I seem to work with these days (Java, PHP, Puppet, Python and a bit of JS) aren’t exactly well tuned to the functional style of programming (except JS, but I don’t really do that much JS these days) – so going through this course and hopefully building something in Scala can exercise my ‘OMG HOLY SHIT THIS NEW THING IS AWESOME!!1’ muscles.</p>
+<p>The course recommends using Scala IDE. Which is Eclipse based. Despite my deep distaste for Eclipse, I’ve given it a shot and it seems fairly stable and much less shitty than the Eclipse I’m used to! Let’s see how that goes.</p>
+<p>The way I learn the best seems to be to find a project I want to build, and then build it in a new language. I’m looking around for fun projects that I could build with Scala, and I’m pretty sure I’ll find one at some point. I should also try to diversify the communities I contribute to, so perhaps I should look for a non-Wikimedia project where I can contribute to in Scala. Should be fun :D</p>
+<p>Other than that – I’ve been <a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=54465">investigating performance problems</a> with the Campaigns API – turns out Mediawiki’s Parser is really, really slow. Who would’ve thought, eh? ;). The ‘solution’, of course – is to just add more caching. Which is a sortof biggish, hairy-ish problem because of the number of changes that can cause cache invalidation. The way Mediawiki handles caching is… rather complex – but that is more due to how much functionality exists rather than anything else. Needs a proper ‘clean’ solution that is not just “Let’s cache everything for 5 minutes!!!1”. Should be fun to write up and fix!</p>
+<p>I’ve also been spending time integrating <a href="https://www.mediawiki.org/wiki/MediaWiki-Vagrant">Mediawiki-Vagrant</a> with <a href="https://wikitech.wikimedia.org">Wikimedia Labs</a>. This will make it easy for anyone to setup a base mediawiki installation on Labs, and save time dicking around various mundane deployment-of-test-instance issues (did I turn on caching? How do I get this extension on? etc). This is interesting because it merges two different puppet repos – operations/puppet.git and mediawiki/vagrant.git on one machine and provides different ways of managing them. Since this is also using puppet as a sort of ‘deployment’ tool (rather than just a configuration-of-systems tool), that is an interesting / fun aspect too. Should be able to get the <a href="https://gerrit.wikimedia.org/r/#/c/85814/">patch</a> merged in a few weeks.</p>
+<p>I visited San Francisco for the last 2 weeks. I don’t really feel insecure anymore :)</p>
 
 </article> 
 
@@ -157,8 +171,7 @@
 
 </p>
   </header>
-  <p>WordPress decided to be a dick and turned off comments without telling me. They&#8217;re back on now.</p>
-
+  <p>WordPress decided to be a dick and turned off comments without telling me. They’re back on now.</p>
 <p>Why does all software suck?</p>
 
 </article> 
@@ -178,13 +191,9 @@
 </p>
   </header>
   <p>[Warning: Childish rant ahead]</p>
-
-<p>My natural sleep cycle seems to be one that tends towards the darker times &#8211; sleeping before 3AM feels like an abomination, before midnight unheard of. My best work seems to be done between 2AM and 5AM. My current &lsquo;sleep cycle&rsquo; has me sleeping at about 8AM, and waking up at about 5PM. Plenty of sleep for the day, eh?</p>
-
+<p>My natural sleep cycle seems to be one that tends towards the darker times – sleeping before 3AM feels like an abomination, before midnight unheard of. My best work seems to be done between 2AM and 5AM. My current &lsquo;sleep cycle&rsquo; has me sleeping at about 8AM, and waking up at about 5PM. Plenty of sleep for the day, eh?</p>
 <p>It is probably not healthy. I don&rsquo;t look, or feel healthy. But that is the way it is.</p>
-
 <p>SO IT FUCKING SUCKS WHEN THE POWER GOES OUT AT MIDNIGHT, BECAUSE I HAD JUST STARTED GETTING SHIT DONE. AND THEN YOUR PHONE REFUSES TO TETHER INTERNET, BECAUSE FUCKING ASSHOLES. AND THEN THE POWER COMES BACK AFTER THREE FUCKING HOURS AND YOU STILL CAN NOT GET ON THE INTERNET BECAUSE THE FUCKING LINE IS DEAD. IT IS MIDNIGHT AND YOU ARE IN FUCKING CHENNAI SO YOU CAN NOT EVEN GET THE FUCK OUT OF THIS PRISON. YOU CAN NOT SLEEP BECAUSE YOU JUST WOKE UP. FUCK THIS SHIT.</p>
-
 <p>I&rsquo;m scarily addicted to the internet. All my friends are there.</p>
 
 </article> 
@@ -203,7 +212,7 @@
 
 </p>
   </header>
-  <p>Nothing new started. The UploadCampaigns <a href="https://gerrit.wikimedia.org/r/#/c/80782/">API patch</a> I <a href="http://yuvi.in/blog/devlog-for-sun-aug-25-2013/">talked about</a> yesterday was fixed and merged. I also helped merge some of <a href="http://marktraceur.info/">MarkTraceur&rsquo;s</a> JS cleanup patches to UploadWizard. And <a href="https://brionv.com/log/">Brion</a>&rsquo;s big <a href="https://gerrit.wikimedia.org/r/#/c/81139/">detail view patch</a> for Android Commons app. Also another cleanup/api <a href="https://gerrit.wikimedia.org/r/#/c/81162/">feature patch</a> to UploadWizard.</p>
+  <p>Nothing new started. The UploadCampaigns <a href="https://gerrit.wikimedia.org/r/#/c/80782/">API patch</a> I <a href="http://yuvi.in/blog/devlog-for-sun-aug-25-2013/">talked about</a> yesterday was fixed and merged. I also helped merge some of <a href="http://marktraceur.info/">MarkTraceur&rsquo;s</a> JS cleanup patches to UploadWizard. And <a href="https://brionv.com/log/">Brion</a>&lsquo;s big <a href="https://gerrit.wikimedia.org/r/#/c/81139/">detail view patch</a> for Android Commons app. Also another cleanup/api <a href="https://gerrit.wikimedia.org/r/#/c/81162/">feature patch</a> to UploadWizard.</p>
 
 </article> 
 
@@ -222,13 +231,9 @@
 </p>
   </header>
   <blockquote>
-<p>I don&rsquo;t understand how ad-blocking is even legal. It&rsquo;s like stealing &#8211; stealing content for free, IMHO there&rsquo;s no difference between stealing MP3s and news or any other content. There&rsquo;s some kind of user agreement between websites and its users &#8211; &ldquo;you can use our site for free, but you have to watch the ads&rdquo;. Adblock violates this agreement. The people responsible for this should be in prison, they&rsquo;re thieves. And I&rsquo;m pretty sure the time will come they will.</p>
+<p>I don&rsquo;t understand how ad-blocking is even legal. It&rsquo;s like stealing – stealing content for free, IMHO there&rsquo;s no difference between stealing MP3s and news or any other content. There&rsquo;s some kind of user agreement between websites and its users – &ldquo;you can use our site for free, but you have to watch the ads&rdquo;. Adblock violates this agreement. The people responsible for this should be in prison, they&rsquo;re thieves. And I&rsquo;m pretty sure the time will come they will.</p>
 </blockquote>
-
-<dl>
-<dt>From <a href="https://news.ycombinator.com/item?id=6276291">HN</a></dt>
-</dl>
-
+<p>From <a href="https://news.ycombinator.com/item?id=6276291">HN</a></p>
 <p>:D</p>
 
 </article> 
@@ -247,26 +252,15 @@
 
 </p>
   </header>
-  
-
-<p>DevLogs have been something I&rsquo;ve not been writing much of of late. Time to fix that!</p>
-
+  <p>DevLogs have been something I&rsquo;ve not been writing much of of late. Time to fix that!</p>
 <h2 id="wlm-android-app">WLM Android App</h2>
-
-<p>Spent some time <a href="http://lists.wikimedia.org/pipermail/wikilovesmonuments/2013-August/006249.html">reviving the WLM Android App</a>. Wasn&rsquo;t too hard, and am surprised at how well it still runs :) Some work still needed to update the <a href="https://github.com/wikimedia/WLMMobile/commit/113d9abf7b675b147ece3f2be005ef1b6ba0e4cf#assets/www/js/campaigns-data.js">templates</a> and other metadata to refer to WLM2013 rather than WLM2012 &#8211; but that should not be too hard. The fact that it is an issue at all is simply because I ripped out all the Campaign related APIs a few weeks ago with my UploadCampaign rewrite.</p>
-
-<p><a href="https://commons.wikimedia.org/wiki/User:Multichill">multichill</a> was awesome in moving the <a href="https://tools.wmflabs.org/heritage/api/api.php">Monuments API</a> to <a href="https://tools.wmflabs.org">Tool Labs</a> &#8211; hence making it much faster! Initially we thought that the Toollabs DB was too slow for writes &#8211; but this turned out to be a mistake, since apparently the Replica Databases had slow writes, but <code>tools-db</code> itself was fine. There&rsquo;s <a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=48851">a bug</a> tracking this now. Toollabs version of the API still seems much faster to me than Toolserver&rsquo;s :)</p>
-
+<p>Spent some time <a href="http://lists.wikimedia.org/pipermail/wikilovesmonuments/2013-August/006249.html">reviving the WLM Android App</a>. Wasn&rsquo;t too hard, and am surprised at how well it still runs :) Some work still needed to update the <a href="https://github.com/wikimedia/WLMMobile/commit/113d9abf7b675b147ece3f2be005ef1b6ba0e4cf#assets/www/js/campaigns-data.js">templates</a> and other metadata to refer to WLM2013 rather than WLM2012 – but that should not be too hard. The fact that it is an issue at all is simply because I ripped out all the Campaign related APIs a few weeks ago with my UploadCampaign rewrite.</p>
+<p><a href="https://commons.wikimedia.org/wiki/User:Multichill">multichill</a> was awesome in moving the <a href="https://tools.wmflabs.org/heritage/api/api.php">Monuments API</a> to <a href="https://tools.wmflabs.org">Tool Labs</a> – hence making it much faster! Initially we thought that the Toollabs DB was too slow for writes – but this turned out to be a mistake, since apparently the Replica Databases had slow writes, but <code>tools-db</code> itself was fine. There&rsquo;s <a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=48851">a bug</a> tracking this now. Toollabs version of the API still seems much faster to me than Toolserver&rsquo;s :)</p>
 <h2 id="uploadcampaigns-api">UploadCampaigns API</h2>
-
-<p>Mediawiki sucks. Eeeew! Specifically, writing API modules &#8211; why can&rsquo;t we just be happy and have everything be JSON? Sigh!</p>
-
-<p>I&rsquo;m adding <a href="https://gerrit.wikimedia.org/r/#/c/80782/">a patch</a> that allows <a href="https://www.mediawiki.org/wiki/Extension:UploadWizard/Campaigns">UploadCampaigns</a> to be queried selectively, rather than just via the normal page APIs. Right now, this only lets us filter by <code>enabled</code> status &#8211; but in the future, this should be able to also filter on a vast array of other properties. Properties about Geographic location come to mind as the most useful. That patch still has a good way to go before it can be merged (continue support being the foremost one), but it is getting there :)</p>
-
-<p>The ickiest part of the patch is perhaps that it sends out raw JSON data as a&#8230; string. So no matter which format you are using on your client, you <em>need</em> to use a JSON parser to deal with the Campaigns data. This sortof makes sense, since that is how the data is stored anyway. Doesn&rsquo;t make it any less icky, though!</p>
-
+<p>Mediawiki sucks. Eeeew! Specifically, writing API modules – why can&rsquo;t we just be happy and have everything be JSON? Sigh!</p>
+<p>I&rsquo;m adding <a href="https://gerrit.wikimedia.org/r/#/c/80782/">a patch</a> that allows <a href="https://www.mediawiki.org/wiki/Extension:UploadWizard/Campaigns">UploadCampaigns</a> to be queried selectively, rather than just via the normal page APIs. Right now, this only lets us filter by <code>enabled</code> status – but in the future, this should be able to also filter on a vast array of other properties. Properties about Geographic location come to mind as the most useful. That patch still has a good way to go before it can be merged (continue support being the foremost one), but it is getting there :)</p>
+<p>The ickiest part of the patch is perhaps that it sends out raw JSON data as a… string. So no matter which format you are using on your client, you <em>need</em> to use a JSON parser to deal with the Campaigns data. This sortof makes sense, since that is how the data is stored anyway. Doesn&rsquo;t make it any less icky, though!</p>
 <p>Not bad for a lazy Sunday, eh?</p>
-
 <p><strong>Update</strong>: After not being able to sleep, I also submitted <a href="https://gerrit.wikimedia.org/r/#/c/80946/">a patch</a> to make phpcs pass for UploadWizard, and also fought with the UploadCampaigns API patch to have it (brokenly?) support continuing. Yay?</p>
 
 </article> 
@@ -285,38 +279,11 @@
 
 </p>
   </header>
-  <p>I&rsquo;ve been on the Internet since I was 14. And I don&rsquo;t remember a time when I did not have a computer &#8211; I think I got mine when I was 10. Growing up, writing code has always been a major part of me &#8211; my identity. I&rsquo;ve never quite managed to separate &lsquo;me&rsquo; from &lsquo;my code&rsquo; &#8211; despite mouthing off the soundbite &lsquo;You are not your code!&rsquo; to plenty of people.</p>
-
-<p>After Wikimania 2013, I spent a week in Hong Kong. The first few days were rough, but after that &#8211; it was amazing. For the first time I could imagine, I had completely managed to not think about code at all! I had my laptop locked in a locker somewhere, and didn&rsquo;t even bother getting to it. I didn&rsquo;t feel the burning urge to make a commit. The feeling of guilt that keeps gnawing at you from the back of the head &lsquo;teehee you have been so unproductive today!&rsquo;.</p>
-
+  <p>I&rsquo;ve been on the Internet since I was 14. And I don&rsquo;t remember a time when I did not have a computer – I think I got mine when I was 10. Growing up, writing code has always been a major part of me – my identity. I&rsquo;ve never quite managed to separate &lsquo;me&rsquo; from &lsquo;my code&rsquo; – despite mouthing off the soundbite &lsquo;You are not your code!&rsquo; to plenty of people.</p>
+<p>After Wikimania 2013, I spent a week in Hong Kong. The first few days were rough, but after that – it was amazing. For the first time I could imagine, I had completely managed to not think about code at all! I had my laptop locked in a locker somewhere, and didn&rsquo;t even bother getting to it. I didn&rsquo;t feel the burning urge to make a commit. The feeling of guilt that keeps gnawing at you from the back of the head &lsquo;teehee you have been so unproductive today!'.</p>
 <p>That was a rather great feeling. Put things into a little bit more perspective. A step towards separating my identity from my code. I gave up on my GitHub streaks after that. I&rsquo;ll probably also be less of a codeaholic.</p>
-
-<p>I could write about &lsquo;oh my god, this was amazing!&rsquo; and detail where I travelled in Hong Kong, but I think what was far more fascinating was <em>how</em>. I did not feel in a hurry. Did not feel like having to &lsquo;tick all boxes&rsquo; before leaving. Just&#8230; actually relaxing. And doing whatever.</p>
-
+<p>I could write about &lsquo;oh my god, this was amazing!&rsquo; and detail where I travelled in Hong Kong, but I think what was far more fascinating was <em>how</em>. I did not feel in a hurry. Did not feel like having to &lsquo;tick all boxes&rsquo; before leaving. Just… actually relaxing. And doing whatever.</p>
 <p>Vacations are good :)</p>
-
-</article> 
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/die-80-cols-or-die-guidelines/">Die ’80 cols or die!’ guidelines!</a></h2>
-    <p class="blog-post-meta"><time datetime="2013-08-01T16:51:09Z">Thu Aug 1, 2013</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/code" rel="category tag">code</a>, <a href="/categories/links" rel="category tag">links</a>
-
-
-</p>
-  </header>
-  <p>Python&rsquo;s <a href="http://www.python.org/dev/peps/pep-0008/">PEP8</a> has just been <a href="http://hg.python.org/peps/rev/fb24c80e9afb">changed</a> to no longer recommend sticking to 79 columns! The new text says:</p>
-
-<pre><code>Aim to limit all lines to a maximum of 79 characters, but up to 99 characters is acceptable when it improves readability.
-</code></pre>
-
-<p>It would be nice to not have any such set limits at all, and just depend on programmers not being insane, but this is still an improvement!</p>
 
 </article> 
 
@@ -348,7 +315,6 @@
   <section class="sidebar-module sidebar-module-inset">
     <h4>projects</h4>
     <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-
 <p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
 </p>
   </section>
@@ -356,7 +322,6 @@
   <section class="sidebar-module sidebar-module-inset">
     <h4>work</h4>
     <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-
 <p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
 </p>
   </section>
@@ -374,6 +339,8 @@
     <ol class="list-unstyled">
 
 
+<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
+
 <li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
 
 <li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
@@ -381,8 +348,6 @@
 <li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
 
 <li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-<li><a href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></li>
 
     </ol>
   </section>
