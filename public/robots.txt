@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: http://words.yuvi.in/sitemap.xml

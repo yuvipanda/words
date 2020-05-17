@@ -1,432 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>devlog · Yuvi Panda</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-  <head>
-    <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Yuvi Panda" /><meta name="description" content="Blog of Yuvi Panda" /><meta name="keywords" content="yuvi, yuvipanda" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.70.0 with theme even" />
+
+
+<link rel="canonical" href="http://words.yuvi.in/categories/devlog/" />
+  <link href="http://words.yuvi.in/categories/devlog/index.xml" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
+  <link href="http://words.yuvi.in/categories/devlog/index.xml" rel="feed" type="application/rss+xml" title="Yuvi Panda" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
 
 <meta property="og:title" content="devlog" />
-<meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
+<meta property="og:description" content="Blog of Yuvi Panda" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/categories/devlog/" />
 <meta property="og:updated_time" content="2018-12-26T10:23:40-08:00" />
-
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="name" content="devlog">
+<meta itemprop="description" content="Blog of Yuvi Panda"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="devlog"/>
-<meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
-<meta name="generator" content="Hugo 0.70.0" />
+<meta name="twitter:description" content="Blog of Yuvi Panda"/>
 
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
 
-    
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Blog",
-  "headline": "Yuvi Panda",
-  "url" : "http:\/\/words.yuvi.in\/categories\/devlog\/",
-  "author": {
-    "@type": "Person",
-    "name": ""
-  },
-  "dateModified": "2018-12-26T10:23:40-08:00",
-  "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
-  "description": "[JupyterHub](https:\/\/github.com\/jupyterhub\/jupyterhub) | [MyBinder](https:\/\/mybinder.org) | [Kubernetes](https:\/\/k8s.io) | Open Culture"
-}
-</script>
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
 
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Yuvi Panda</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="https://github.com/yuvipanda">
+        <li class="mobile-menu-item">GitHub</li>
+      </a><a href="https://twitter.com/yuvipanda">
+        <li class="mobile-menu-item">Twitter</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Yuvi Panda</a>
+</div>
 
-    <link rel="canonical" href="http://words.yuvi.in/categories/devlog/">
-
-    <title>Yuvi Panda</title>
-
-    <!-- combined, minified CSS -->
-    <link href="http://words.yuvi.in/css/style.css" rel="stylesheet" integrity="sha384-O8wjsnz02XiyrPxnhfF6AVOv6YLBaEGRCnVF&#43;DL3gCPBy9cieyHcpixIrVyD2JS5" crossorigin="anonymous">
-
-    
-    <!-- RSS 2.0 feed -->
-    <link href="http://words.yuvi.in/categories/devlog/index.xml" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
-    
-
-    
-
-    
-
-    
-
-  </head>
-
-  <body>
-
-    <div class="blog-masthead">
-    
-    </div>
-
-    <header class="blog-header">
-      <div class="container">
-        <h1 class="blog-title">
-            
-            <img src='/profile.jpg' width=80 style="border-radius: 50%; margin-bottom: 12px;">
-            <a href="http://words.yuvi.in/" rel="home">Yuvi Panda</a></h1>
-        <p class="lead blog-description"><a href="https://github.com/jupyterhub/jupyterhub">JupyterHub</a> | <a href="https://mybinder.org">MyBinder</a> | <a href="https://k8s.io">Kubernetes</a> | Open Culture</p>
-      </div>
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="https://github.com/yuvipanda">GitHub</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="https://twitter.com/yuvipanda">Twitter</a>
+      </li>
+  </ul>
+</nav>
     </header>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 blog-main">
-
-          
-
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-sep-10-11-2014/">DevLog for Sep 10-11 2014</a></h2>
-    <p class="blog-post-meta"><time datetime="2014-09-11T20:16:39Z">Thu Sep 11, 2014</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
-
-
-</p>
-  </header>
-  <p>Back from an <em>awesome</em> vacation. Too awesome to write about, even :) Suffice it to say, England has some really pretty places.</p>
-<p>Some Android app work, and lots of monitoring work</p>
-<ul>
-<li>Fixed bugs causing the <a href="https://tools.wmflabs.org/wikipedia-android-builds/">Wikipedia Android Alpha</a> from building properly. Now it builds properly whenever there is a new commit. Hooray! This was primarily caused by me forgetting to give it lots of RAM (8G VMEM) to execute the <code>mvn</code> build commands (<a href="https://gerrit.wikimedia.org/r/#/c/159482/">https://gerrit.wikimedia.org/r/#/c/159482/</a>) and also not cleaning up previous <code>.alpha</code> subfolders (<a href="https://gerrit.wikimedia.org/r/#/c/159481/">https://gerrit.wikimedia.org/r/#/c/159481/</a>) – this causes a chain of <code>.alpha.alpha.alpha.*</code> subfolders, breaking the build.</li>
-<li>Added a <a href="https://gerrit.wikimedia.org/r/#/c/159506/">patch</a> to the Android alpha app itself that checks for updates every day or so and notifies you if there’s a new one. Was fairly trivial to write, although I was hoping to make it more seamless (i.e. download the apk myself and just pop it up for people to tap). It now requires 4 clicks to install it, should be able to bring it down to 2 at some point in the future if people care enough.</li>
-<li>Added a method to our <code>check_graphite</code> code that lets you individually check a bunch of metrics for thresholds (<a href="https://gerrit.wikimedia.org/r/#/c/159473/)">https://gerrit.wikimedia.org/r/#/c/159473/)</a>. This makes it much simpler to do icinga checks on a bunch of metrics that are all measuring the same thing but from different machines. BetaLabs and ToolLabs checks use this.</li>
-<li>Cleaned up a bunch of minor things with our <code>check_graphite</code> script. Also fucked up trying to replace all double quotes in it with single quotes for consistency – it replaced the double quotes being used inside single quotes, and caused all checks to fail. Fixed shortly by <a href="https://gerrit.wikimedia.org/r/#/c/159711/">https://gerrit.wikimedia.org/r/#/c/159711/</a></li>
-<li>Added more monitoring for betalabs! Now checks for stale puppet runs (<a href="https://gerrit.wikimedia.org/r/#/c/159701/">https://gerrit.wikimedia.org/r/#/c/159701/</a>) and low space on the root partition (<a href="https://gerrit.wikimedia.org/r/#/c/159694/)">https://gerrit.wikimedia.org/r/#/c/159694/)</a>. All are green now, thanks to some work from bd808.</li>
-<li>Added monitoring for ToolLabs! Now checks for stale puppet runs, low space on root and /var, and puppet failure events (<a href="https://gerrit.wikimedia.org/r/#/c/159709/)">https://gerrit.wikimedia.org/r/#/c/159709/)</a>. Also checks for high sustained CPU usage (<a href="https://gerrit.wikimedia.org/r/#/c/159751/)">https://gerrit.wikimedia.org/r/#/c/159751/)</a>. Then spent some time (with help from scfc_de (whose nick I kept spelling as scfe_de until today)) cleaning up the puppet failures. They are all green now as well.</li>
-<li>Did a bunch of cleaning up work around the graphite role, removing the realm branching (<a href="https://gerrit.wikimedia.org/r/#/c/159759/)">https://gerrit.wikimedia.org/r/#/c/159759/)</a>. Ori says everytime realm branching code is removed, an angel gets its wings, so well done there.</li>
-</ul>
-<p>Not a bad day, eh? I’ve been trying to wake up early, perhaps that is helping.</p>
-
-</article> 
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-31-aug-1-4-sep-2014/">DevLog for 31 Aug, 1-4 Sep 2014</a></h2>
-    <p class="blog-post-meta"><time datetime="2014-09-06T10:27:26Z">Sat Sep 6, 2014</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
-
-
-</p>
-  </header>
-  <p>Missed DevLogging for a while.</p>
-<p>Am in London now.</p>
-<ul>
-<li>Started using a spare <a href="http://www.keyboardco.com/keyboard/uk-filco-ninja-majestouch-2-tenkeyless-nkr-tactile-action-keyboard.asp">Majestouch Ninja 2</a> over my regular <a href="https://www.kinesis-ergo.com/shop/advantage-for-pc-mac/">Kinesis Advantage</a>. This is way more portable, and my hand does not seem to be hurting while using it (so far only about 4-5 hours). If this keeps up, I should be able to move to a similar smaller keyboard over the much bulkier kinesis. There’s still a little bit of discomfort, so I’ll probably want a very portable and mechanical split keyboard. Can’t sadly seem to find any, though :( Maybe I should just build one with an arduino :)</li>
-<li>Setup icinga checks for puppet failures and disk space issues on betalabs, and fixed a bunch of issues/docs in our icinga puppet code during that time. This still doesn’t properly work since our implementation of <code>check_graphite</code> does not support wildcard metrics properly – it should check thresholds for each series, but it seems to do that only across the entire series combined, which is kinda useless. Should fix that soon by adding more features to it. Also might try out other alternatives to icinga, since our icinga puppet code is a fuckball anyway.</li>
-<li>Fix a couple more Quarry bugs. There’s still a random bug where <code>celery</code> seems to be attempting to read data about a query run from mysql before the web has committed it, which is theoretically impossible (I do a commit before sending the task to celery with the id), so I suspect some mysql fuckery. Will need to debug that sooner than later, and also consider moving to <code>postgres</code>. But then Quarry will have to deal with SQLite (for result storage), MySQL (for connecting to labsdb) and with postgres for local data, which sounds insanely complex. I also added CORS support to resultsets, and Magnus is playing with it (wooohhooooo!!!). I’m going to add more features to make it easier for people to use results from quarry in their JS applications elsewhere. Should be fun.</li>
-<li>Finished videos for the first week of the Coursera <a href="https://class.coursera.org/statistics-002">Data Analysis and Statistical Inference</a> class I’m taking. Started poking around R since the labs for that class are from R, should be fun.</li>
-<li>Chad has started his <a href="http://anyonecanedit.org/blog">devlog</a>. He does search stuff at Wikimedia and is a co-whiner about all things Java. Do check out :)</li>
-</ul>
-<p>Am away on ‘vacation’ till Wednesday, yay! :) Should disconnect well.</p>
-
-</article> 
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-29-30-aug-2014/">DevLog for 29, 30 Aug 2014</a></h2>
-    <p class="blog-post-meta"><time datetime="2014-09-01T11:41:55Z">Mon Sep 1, 2014</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
-
-
-</p>
-  </header>
-  <p>Chill weekend. Didn’t really do anything code related. Recovering from friday night party :)</p>
-<p>Started reading <a href="https://infoactive.co/data-design/">Data + Design</a> which seems quite nice. Also starting a coursera course on <a href="https://class.coursera.org/statistics-002">Data analysis and Statistical Inference</a> on Sep 1, should be fun.</p>
-
-</article> 
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-28-aug-2014/">DevLog for 28 Aug 2014</a></h2>
-    <p class="blog-post-meta"><time datetime="2014-08-28T22:56:53Z">Thu Aug 28, 2014</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
-
-
-</p>
-  </header>
-  <p>Let’s see. I’m also going to attempt to include patch links wherever possible.</p>
-<ul>
-<li>Cleaned up <code>session</code> handling bugs in Quarry. They were previously not closing properly, causing SQLAlchemy exceptions now and then that’ll let queries die in a ‘queued’ state. This should <em>hopefully</em> be fixed by <a href="https://gerrit.wikimedia.org/r/#/c/156909/">https://gerrit.wikimedia.org/r/#/c/156909/</a>.</li>
-<li>Made <a href="https://graphite.wmflabs.org">https://graphite.wmflabs.org</a> somewhat more stable again for use by Wikimedia BetaLabs folks by just blacklisting all other projects from sending data to it (with a local whitelist hack + <a href="https://gerrit.wikimedia.org/r/#/c/156966/)">https://gerrit.wikimedia.org/r/#/c/156966/)</a>. This would let them use it, and they said they would find it massively useful. All this is a hack until <a href="https://rt.wikimedia.org/Ticket/Display.html?id=8163">https://rt.wikimedia.org/Ticket/Display.html?id=8163</a> could be resolved and I can deploy graphite on a ‘real’ machine.</li>
-<li>Minor patch to my Gerrit -&gt; IRC bot to make it strip a common prefix (‘operations/’) from change messages posted to the operations channel – <a href="https://gerrit.wikimedia.org/r/#/c/156877/">https://gerrit.wikimedia.org/r/#/c/156877/</a>. Also made one that calls jenkins-bot jerkins-bot if it -1’s your patch (<a href="https://gerrit.wikimedia.org/r/#/c/156878/">https://gerrit.wikimedia.org/r/#/c/156878/</a>) but it seems to have a bug that I can’t be bothered to debug atm.</li>
-</ul>
-<p>Might spend some more time with Hive over the next few days – figured out an approach for using it from Python, and it should be fun to do so!</p>
-
-</article> 
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-26-27-aug-2014/">DevLog for 25 and 26 Aug 2014</a></h2>
-    <p class="blog-post-meta"><time datetime="2014-08-27T00:29:35Z">Wed Aug 27, 2014</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
-
-
-</p>
-  </header>
-  <p>Not very code heavy</p>
-<ul>
-<li>Couple of pull requests(<a href="https://github.com/atom/autosave/pull/22">#1</a> and <a href="https://github.com/atom/autosave/pull/21">#2</a>) for the <a href="https://github.com/atom/autosave">Atom Autosave plugin</a>. One adds a preference to not autosave by when you are explicitly closing a window / pane, and the other just sets the ‘enabled’ preference to default. CoffeeScript isn’t too bad either! I should consider writing more plugins (I currently use Atom for CSS/JS/Puppet, should try other languages)</li>
-<li>Added CSV, TSV and JSON download options to Quarry. There’s another Webinar tomorrow by the Grantmaking team, and J-Mo asked for it. Streaming TSV and CSV implemented in a neat way, will write a blog post tomorrow about it.</li>
-<li>Started work on a ‘number of editors’ per country metric for WPDMZ, needs to be finished up.</li>
-</ul>
-<p>I feel a bit exhausted (physically and mentally) from the intense coding over the last few weeks, might have a few chill days to recharge myself. I’m growing old! :(</p>
-
-</article> 
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-aug-24-2014/">DevLog for Aug 24, 2014</a></h2>
-    <p class="blog-post-meta"><time datetime="2014-08-25T02:37:17Z">Mon Aug 25, 2014</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
-
-
-</p>
-  </header>
-  <p>Wooooo!</p>
-<ul>
-<li>Moved <a href="https://github.com/yuvipanda/labsbooks">labsbooks</a> (described in <a href="http://yuvi.in/blog/devlog-23-aug-2014/">yesterday’s devlog</a>) to use a shared readonly IPython virtualenv maintained by me. Also installed a bunch of modules people might want to use (SciPy, NumPy, Pandas, PyTables, matplotlib). Am considering just installing IPython notebook globally via puppet and using that, since that’ll enable users to just use the system packages. However, the version of IPython notebook from Ubuntu is ancient, so that’s probably a non-starter.</li>
-<li>Have a basic version of the IPython publishing process working! Any toollabs user can create a notebook by:
-<ul>
-<li>Creating a <code>~/notebooks</code> folder</li>
-<li>Doing a <code>chmod +x ~/notebooks</code></li>
-<li>Doing a <code>chmod +x ~</code></li>
-<li>Putting IPython notebooks into <code>~/notebooks</code> (as <code>.ipynb</code>) files</li>
-<li>Going to <code>https://tools.wmflabs.org/notebooks/&lt;user-shell-name&gt;/&lt;path-to-ipynb-file&gt;</code> Will have to do a bit more work before it can be considered ‘production grade’ (such as user pages, a nicer theme, etc, etc) BUT YAY GOOD START. It already caches the html output in Redis and invalidates with the <code>mtime</code> of the file, so should be pretty quick.</li>
-</ul>
-</li>
-<li>Made the ssh tunneling process for <code>labsbooks</code> purely python, without requiring the <code>ProxyCommand</code>. This makes things simpler (and more portable!). I’ll need to work on securing this properly before I can publish it for broader use.</li>
-<li>Wrote <a href="https://lists.wikimedia.org/pipermail/analytics/2014-August/002437.html">an email</a> to the analytics mailing list about making public the ‘edits per country’ data. I hope to make this publicly available with enough granularity that not just me but others can use this for fun research as well.</li>
-</ul>
-<p>I’ve been using <a href="https://atom.io">Atom</a> for puppet stuff, <a href="http://www.jetbrains.com/pycharm/">PyCharm</a> for Python and <a href="http://www.jetbrains.com/idea/">IntelliJ</a> for Java stuff, and that seems to be doing ok. They all have decent Vim keybindings as well, and good replacements for other functionality – and I might stick with Atom for a while to see how it goes :)</p>
-
-</article> 
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-23-aug-2014/">DevLog for 23 Aug 2014</a></h2>
-    <p class="blog-post-meta"><time datetime="2014-08-24T02:56:40Z">Sun Aug 24, 2014</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
-
-
-</p>
-  </header>
-  <p>Back in Glasgow! It was actually not very cold today, only cold! Progress.</p>
-<p>Started working on my long-abandoned <code>labsbook</code> project, which aims to make <a href="https://tools.wmflabs.org">Tool Labs</a> a first class environment for people who want to run (and publish) <a href="http://ipython.org/notebook.html">iPython Notebooks</a> while also being able to access the replica databases and the dumps. Doing this in a secure manner is kinda hard, but I think I’ve a neat solution that lets everyone run a personal iPython kernel on the Grid, access it from their local machine, and also publish it to the web from a standard location. So far, I’ve gotten my script to a point where it’ll setup an iPython environment for you if it doesn’t already exist, start the kernel if it isn’t already running, and tunnel the editing interface back to you to use! Things left to do include:</p>
-<ol>
-<li>Open up the browser when tunnel is open</li>
-<li>Find a sane way to kill a kernel that hasn’t been doing anything since forever</li>
-<li>Setup a shared iPython environment (just code, readonly) so people don’t have to setup their own environments everytime (this is primarily a performance enhancement)</li>
-<li>Find a nice and simple way for iPython notebooks to be published. I’m currently thinking of an URL such as <code>tools.wmflabs.org/notebooks/&lt;username&gt;/&lt;notebookname&gt;' to display them, and an index at</code>tools.wmflabs.org/notebooks/<!-- raw HTML omitted -->`. This shouldn’t be too hard with appropriate permission munging.</li>
-</ol>
-<p>I’m also using <a href="http://www.paramiko.org/">paramiko</a> for this, which makes writing SSH related code with Python a breeze. It even supports <code>proxycommand</code>! Blunders I’ve done while getting up to this point include:</p>
-<ol>
-<li>Running <code>jsub run.bash -mem 4G</code> instead of <code>jsub -mem 4G run.bash</code> and wondering why my script kept getting killed with OOM.</li>
-<li>Trying to do a <code>pip install</code> on the Grid nodes (which don’t have build tools) instead of on <code>tools-dev</code> and wondering why running it from the commandline works but from <code>jsub</code> does not.</li>
-<li>Wondering why my SSH Tunnel kept dying and trying to debug that without realizing that it was dying because the iPython process was dying because it was OOMing because of my earlier <code>jsub</code> error</li>
-<li>Thinking that user accounts (rather than tool accounts) can not submit jobs to the grid, while the problem was that I had not set the <code>execute</code> bit on my script.</li>
-</ol>
-<p>Once this is done (I suspect tomorrow), I’ll work on getting the data from my work with <a href="https://github.com/Ironholds/WPDMZ">WPDMZ</a> into a form good enough for publicizing (removing ways of de-anonymization), and then use iPython notebooks to make graphs! This should be fun :)</p>
-<p>Source so far available <a href="https://github.com/yuvipanda/labsbooks">on Github</a>. Needs more work / documentation / cleaning up.</p>
-
-</article> 
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-aug-22-2014/">Devlog for Aug 22 2014</a></h2>
-    <p class="blog-post-meta"><time datetime="2014-08-23T14:43:09Z">Sat Aug 23, 2014</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
-
-
-</p>
-  </header>
-  <p>Was in Edinburgh again, missed writing it as I went along. Oh well.</p>
-<ul>
-<li>Ported the code for the Wikipedia Android app automated builds to Python, and you can see it in action at <a href="http://tools.wmflabs.org/wikipedia-android-builds/">http://tools.wmflabs.org/wikipedia-android-builds/</a> now. It lets you download the latest build, and notes the last successful build time. Good enough :) It was originally in bash, and porting it to python allowed me to create a ‘fake’ API (just JSON blobs written to known locations in the file system). Next step is to write a helper app</li>
-<li>The Atom experiment is coming along well. Am using it for most of my Puppet work these days. Should give LightTable another go as well.</li>
-</ul>
-<p>That’s it!</p>
-
-</article> 
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-21-aug-2014/">Devlog for 21 Aug 2014</a></h2>
-    <p class="blog-post-meta"><time datetime="2014-08-22T11:01:50Z">Fri Aug 22, 2014</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
-
-
-</p>
-  </header>
-  <p>In Edinburgh! I’ve finally stopped spelling it as Edinborough!</p>
-<ul>
-<li>Added ‘user group’ functionality to Quarry, and added a <code>sudo</code> user group that does what you would think it does. Will be assigned super, super sparingly.</li>
-<li>Found out that I’d have to explicitly specify charset of the database when I’m creating it or MySQL will default to a stupid charset. Forced all tables and columns to utf8 and that seems to have fixed a bunch of unicode issues. Yay?</li>
-<li>Still facing occasional <code>MySQL server has gone away</code> errors with SQLAlchemy for local MySQL instance, despite asking SQLAlchemy to recycle connections every hour or so. Reduced the recycle time to 10m, hopefully that helps.</li>
-<li>Read Tony Hoare’s Turing Award speech from 1980, titled <a href="http://zoo.cs.yale.edu/classes/cs422/2014/bib/hoare81emperor.pdf">“The Emperor’s Old Clothes”</a>. I think I should read more of these papers / speeches, helps keep perspective and ‘learn from history’. Lots of warnings against complexity seem to be a very common theme, and one I’ve also personally encountered many times. Recommend reading :)</li>
-<li>More DMZ work! Now running edits per country stats separated by mobile vs desktop for all countries for all wikipedias! EXCITING!</li>
-</ul>
-
-</article> 
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-20-aug-2014/">Devlog for 20 Aug 2014</a></h2>
-    <p class="blog-post-meta"><time datetime="2014-08-21T03:39:15Z">Thu Aug 21, 2014</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
-
-
-</p>
-  </header>
-  <p>Woke up at 11AM again! w000t!</p>
-<ul>
-<li>Fixed a stupid bug in Quarry that made it fail if MySQL decided that a column you were selecting is a <code>Decimal</code>. Fixed this in time for…</li>
-<li>Helped out with a <a href="https://plus.google.com/u/0/b/117126229120807344920/events/cngcjcmm1tcn1omqpalcm686044">webinar</a> from J-Mo for people to learn SQL and do research against Wikimedia stuff with Quarry! Went without a glitch mostly, so yay :) Oren asked for an API for Quarry, I’ll investigate ways to get that done</li>
-<li>Found that some queries against enwiki succeed on <code>s1.labsdb</code> but not on <code>s4.labsdb</code>. I attribute this to cache characteristics, and have switched Quarry to use s1 for now.</li>
-<li>Did more work on <a href="https://github.com/Ironholds/WPDMZ">DMZ</a>, getting in place a runner / processor infrastructure and sqlite backed intermediary storage so I can write simpler code to get the data I want. Super excited to see how this goes. It’ll be much easier for me to add new queries now.</li>
-<li>More work on DMZ! I had a late night sprint and split edits by mobile and desktop (and was surprised by seeing how much lesser edits came from mobile). Next would be to gather up population and internet penetration data and then GO MAKE SOME GRAPHS, probably with iPython. I’m returning to making graphs for real after, what, 6 years or so? :) I was using C# and Excel then :) /nick ExcitedPanda</li>
-<li>Also made some progress on our makeshift Android CI-ish build system for the Wikipedia app. Should be done soon.</li>
-</ul>
-
-</article> 
-
-
-
-
-
-<nav class="blog-pagination">
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <section id="archive" class="archive">
   
-  <a class="btn btn-outline-primary" href="/categories/devlog/" rel="prev" role="button">Previous page</a>
-  <a class="btn btn-outline-primary" href="/categories/devlog/page/3/" rel="next" role="button">Next page</a>
-  
-  
-  
+
+  <div class="archive-post">
+      <span class="archive-post-time">
+        2015-12-20
+      </span>
+      <span class="archive-post-title">
+        <a href="/devlog-2015-dec-19/" class="archive-post-link">
+          DevLog for 2015 Dec 19
+        </a>
+      </span>
+    </div><div class="archive-post">
+      <span class="archive-post-time">
+        2015-01-05
+      </span>
+      <span class="archive-post-title">
+        <a href="/devlog-for-jan-5-2015/" class="archive-post-link">
+          DevLog for Jan 5, 2015
+        </a>
+      </span>
+    </div><div class="archive-post">
+      <span class="archive-post-time">
+        2015-01-04
+      </span>
+      <span class="archive-post-title">
+        <a href="/devlog-jan-3-4-2015/" class="archive-post-link">
+          DevLog for Jan 3-4 2015
+        </a>
+      </span>
+    </div><div class="archive-post">
+      <span class="archive-post-time">
+        2015-01-02
+      </span>
+      <span class="archive-post-title">
+        <a href="/devlog-jan-2-2015/" class="archive-post-link">
+          DevLog for Jan 2, 2015
+        </a>
+      </span>
+    </div><div class="archive-post">
+      <span class="archive-post-time">
+        2014-09-24
+      </span>
+      <span class="archive-post-title">
+        <a href="/devlog-sep-12-24-2014/" class="archive-post-link">
+          DevLog Sep 12-24, 2014
+        </a>
+      </span>
+    </div>
+</section>
+
+<nav class="pagination">
+  <a class="prev" href="/categories/devlog/">
+      <i class="iconfont icon-left"></i>
+      <span class="prev-text">Prev</span>
+    </a>
+  <a class="next" href="/categories/devlog/page/3/">
+      <span class="next-text">Next</span>
+      <i class="iconfont icon-right"></i>
+    </a>
 </nav>
+        </div>
+        
 
+      </div>
+    </main>
 
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="http://localhost:1313" class="iconfont icon--pocket" title="-pocket"></a>
+      <a href="mailto:yuvipanda@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/yuvipanda" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/yuvipanda" class="iconfont icon-github" title="github"></a>
+  <a href="http://words.yuvi.in/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
 
-
-        </div> <!-- /.blog-main -->
-
-        <aside class="col-sm-3 ml-auto blog-sidebar">
-  
-  <section class="sidebar-module sidebar-module-inset">
-    <h4>about</h4>
-    <p>I build infrastructure that helps reduce accidental complexities when using code to solve problems.</p>
-  </section>
-  
-  <section class="sidebar-module sidebar-module-inset">
-    <h4>projects</h4>
-    <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-<p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
-</p>
-  </section>
-  
-  <section class="sidebar-module sidebar-module-inset">
-    <h4>work</h4>
-    <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-<p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
-</p>
-  </section>
-  
-  <section class="sidebar-module sidebar-module-inset">
-    <h4>contact</h4>
-    <p><a href="mailto:yuvipanda@gmail.com">Email</a> is the best way to contact me privately.
-<a href="https://twitter.com/yuvipanda">Twitter</a> is the best way to contact me publicly.</p>
-  </section>
-  
-
-  
-        <section class="sidebar-module">
-    <h4>Recent Posts</h4>
-    <ol class="list-unstyled">
-
-
-<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
-
-<li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
-
-<li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
-
-<li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
-
-<li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-    </ol>
-  </section>
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
 
   
 
-  
-</aside>
-
-
-      </div> <!-- /.row -->
-    </div> <!-- /.container -->
-
-    <footer class="blog-footer">
-      <p>
-      
-      Blog template created by <a href="https://twitter.com/mdo">@mdo</a>, ported to Hugo by <a href='https://twitter.com/mralanorth'>@mralanorth</a>.
-      
-      </p>
-      <p>
-      <a href="#">Back to top</a>
-      </p>
+  <span class="copyright-year">
+    &copy; 
+    2005 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Yuvi Panda</span>
+  </span>
+</div>
     </footer>
 
-  </body>
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
 
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
 </html>

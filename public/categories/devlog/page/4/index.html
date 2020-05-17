@@ -1,585 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>devlog · Yuvi Panda</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-  <head>
-    <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Yuvi Panda" /><meta name="description" content="Blog of Yuvi Panda" /><meta name="keywords" content="yuvi, yuvipanda" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.70.0 with theme even" />
+
+
+<link rel="canonical" href="http://words.yuvi.in/categories/devlog/" />
+  <link href="http://words.yuvi.in/categories/devlog/index.xml" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
+  <link href="http://words.yuvi.in/categories/devlog/index.xml" rel="feed" type="application/rss+xml" title="Yuvi Panda" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
 
 <meta property="og:title" content="devlog" />
-<meta property="og:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture" />
+<meta property="og:description" content="Blog of Yuvi Panda" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/categories/devlog/" />
 <meta property="og:updated_time" content="2018-12-26T10:23:40-08:00" />
-
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="name" content="devlog">
+<meta itemprop="description" content="Blog of Yuvi Panda"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="devlog"/>
-<meta name="twitter:description" content="[JupyterHub](https://github.com/jupyterhub/jupyterhub) | [MyBinder](https://mybinder.org) | [Kubernetes](https://k8s.io) | Open Culture"/>
-<meta name="generator" content="Hugo 0.70.0" />
+<meta name="twitter:description" content="Blog of Yuvi Panda"/>
 
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
 
-    
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Blog",
-  "headline": "Yuvi Panda",
-  "url" : "http:\/\/words.yuvi.in\/categories\/devlog\/",
-  "author": {
-    "@type": "Person",
-    "name": ""
-  },
-  "dateModified": "2018-12-26T10:23:40-08:00",
-  "keywords": "books,class-notes,code,devlog,education,events,jupyter,kubernetes,links,lol-culture,papers,personal,project-ideas,retrospective,so-called-it,uncategorized,wiki,work-plan,algorithm,android,anniversary,answers,athiesm,atleast-not-yet,bigco,bigotry,binder,blogging,book,code,crime,democratizing-programming,devlog,devlog-dec-2011,education,external-enforcement,fiction,flipkart,india,interview,it,js,learning,link,linux,note-to-future-self,opensource,parenting,personal,photo,photography,php,python,rant,reddit,reprint,resistance,review,rights,sick,sriram,systemd,talk,talks,travel,twitter,wordpress,work,yahoo,",
-  "description": "[JupyterHub](https:\/\/github.com\/jupyterhub\/jupyterhub) | [MyBinder](https:\/\/mybinder.org) | [Kubernetes](https:\/\/k8s.io) | Open Culture"
-}
-</script>
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
 
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Yuvi Panda</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="https://github.com/yuvipanda">
+        <li class="mobile-menu-item">GitHub</li>
+      </a><a href="https://twitter.com/yuvipanda">
+        <li class="mobile-menu-item">Twitter</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Yuvi Panda</a>
+</div>
 
-    <link rel="canonical" href="http://words.yuvi.in/categories/devlog/">
-
-    <title>Yuvi Panda</title>
-
-    <!-- combined, minified CSS -->
-    <link href="http://words.yuvi.in/css/style.css" rel="stylesheet" integrity="sha384-O8wjsnz02XiyrPxnhfF6AVOv6YLBaEGRCnVF&#43;DL3gCPBy9cieyHcpixIrVyD2JS5" crossorigin="anonymous">
-
-    
-    <!-- RSS 2.0 feed -->
-    <link href="http://words.yuvi.in/categories/devlog/index.xml" rel="alternate" type="application/rss+xml" title="Yuvi Panda" />
-    
-
-    
-
-    
-
-    
-
-  </head>
-
-  <body>
-
-    <div class="blog-masthead">
-    
-    </div>
-
-    <header class="blog-header">
-      <div class="container">
-        <h1 class="blog-title">
-            
-            <img src='/profile.jpg' width=80 style="border-radius: 50%; margin-bottom: 12px;">
-            <a href="http://words.yuvi.in/" rel="home">Yuvi Panda</a></h1>
-        <p class="lead blog-description"><a href="https://github.com/jupyterhub/jupyterhub">JupyterHub</a> | <a href="https://mybinder.org">MyBinder</a> | <a href="https://k8s.io">Kubernetes</a> | Open Culture</p>
-      </div>
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="https://github.com/yuvipanda">GitHub</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="https://twitter.com/yuvipanda">Twitter</a>
+      </li>
+  </ul>
+</nav>
     </header>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 blog-main">
-
-          
-
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-december-21-2011/">DevLog: December 21 2011</a></h2>
-    <p class="blog-post-meta"><time datetime="2011-12-21T23:55:51Z">Wed Dec 21, 2011</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
-
-
-</p>
-  </header>
-  <ol>
-<li>livetrains work. Trying to move (minimal) build system to waf. Somewhat complicated, not as fluid as I’d like. Go to rake. Feel weird about starting from scratch, come back to waf. Not get anything done Another rake diversion. Final Makefile editing desperation. I give up – I need to spend atleast a day to get back on proper build tools. That day is not today.</li>
-<li>Added feature to change font size to wikipedia app. That took almost a couple of days and ended up being less than 20 lines of code. First was trying to enable pinch and zoom, but only for an iframe – proved impossible. And then a long time of headwalling about how I’m not able to manipulate the DOM inside the iframe (despite code in other places being able to do it just fine (no crossdomain issues here)), I had given up and moved elsewhere. Finally brion suggested I try inserting a <!-- raw HTML omitted --> into <!-- raw HTML omitted -->, which actually did work. So much for the browser being sane</li>
-<li>‘Refined’ the search behavior of the wikipedia app a bit more. Also got bit by a difference between zepto (that we use) and jQuery (whose docs I have to read, since zepto by itself seems to have no docs). Had to read through the code to fix it, and managed to.</li>
-<li>Closed a *lot* of bugs. BOY THAT FEELS GREAT!</li>
-</ol>
-
-</article> 
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-december-11-2011/">DevLog: December 11, 2011</a></h2>
-    <p class="blog-post-meta"><time datetime="2011-12-12T09:47:48Z">Mon Dec 12, 2011</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
-
-
-</p>
-  </header>
-  <ol>
-<li>Added UI for AssessmentLog [SelectionSifter]</li>
-<li>Removed lots of dead code in SelectionSifter.</li>
-<li>Went to Bangalore Wikipedia Meetup. Was nice meeting people I knew online face to face. Talked about yenWikipedia, and learnt a lot about how article selection for offline wikipedia is done.</li>
-<li>Shot myself in the foot multiple times (over use of empty(), incomplete commit summaries and a tab/spaces issue). I’m rusty and it is showing. Shouldn’t be a problem anymore, though – because of you-know-what.</li>
-<li>Built myself a local copy of mediawiki docs. No more annoying huge-images.</li>
-<li>Got myself the solarized theme. And increased font size to normal levels (13pt). My eyes thank me.</li>
-<li>Fixed timestamp related bugs in SelectionSifter.</li>
-</ol>
-
-</article> 
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-december-10-2011/">Devlog December 10, 2011</a></h2>
-    <p class="blog-post-meta"><time datetime="2011-12-11T18:23:51Z">Sun Dec 11, 2011</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
-
-
-</p>
-  </header>
-  <ol>
-<li>Looks like I’m going to be rewriting SelectionSifter’s UI a lot. No more QuickTemplates, as I found TablePager. Mediawik definitely needs to fix <a href="https://bugzilla.wikimedia.org/show_bug.cgi?id=1">Bug #1</a> soon.</li>
-<li>Added proper i18n for SelectionSifter.</li>
-<li>Redid FilterRatings page completely.</li>
-<li>Went through PhoneGap documentation, checked out state of its Photo handling API. Looks good.</li>
-<li>Checked out <a href="https://github.com/Tpt/Wikipedia">patch</a> to official Wikipedia app that adds upload functionality. Needs lot more polish.</li>
-</ol>
-
-</article> 
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-december-7-2011/">DevLog December 7, 2011</a></h2>
-    <p class="blog-post-meta"><time datetime="2011-12-07T23:34:19Z">Wed Dec 7, 2011</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
-
-
-</p>
-  </header>
-  <ol>
-<li>Redid Blog template. Recategorized all blog posts</li>
-<li>Finally enabled mobile banking on ICICI. Still need 8 days for Internet activation. Sigh.</li>
-<li>Ordered HyperJuice 60W battery + Airline Adapter</li>
-<li>Read through the <a href="http://en.wikipedia.org/w/index.php?title=Template:WPBannerMeta">WPBannerMeta</a> template (and its subtemplates), figured out where to get the assessment markers in. Poof that was hard. These templates are perfect examples of ‘hacks’ – initially ‘designed’ for templating text, they’ve grown into homebrew programming languages that are worse than PHP. True evolution :)</li>
-<li>Read through, replied to <strong>very</strong> detailed questions about MW development from the KovaiGeeks folks. Both me and Sumanah were amazed at the enthusiasm shown. Should be one fun workshop!</li>
-<li>Fixed arbit bugs in in SelectionSifter, moved away from anything in QueryPage</li>
-<li>Started using SparrowApp and WunderList. Amazing they are.</li>
-</ol>
-
-</article> 
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-december-5-2011/">DevLog: December 5, 2011</a></h2>
-    <p class="blog-post-meta"><time datetime="2011-12-05T20:31:14Z">Mon Dec 5, 2011</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
-
-
-<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/devlog" rel="tag">devlog</a>, <a href="/tags/devlog-dec-2011" rel="tag">devlog-dec-2011</a>
-
-</p>
-  </header>
-  <p>Am migrating to per-day posts now. More granularity + I can fit more info in. The ultimate aim of the DevLog is to keep me on my toes and make sure I don’t relapse into no-productivity hellholes. Daily DevLogs should do a better job at them.</p>
-<ul>
-<li>Spent some more time trying to get Kiwix to compile under OS X. Macports issue fixed, but more issues persist. It’s one damn complicated build system :| Not to mention that OS X sucks balls. Still no luck.</li>
-<li>Moved my extension from GPoC to SelectionSifter, as picked by Sumanah (and remembered by Siebrand)</li>
-<li>Added more content to my ‘<a href="http://www.mediawiki.org/wiki/User:Yuvipanda/How_to_become_a_mediaWiki_hacker">How to become a mediawiki hacker</a>‘ page. Outline in shape, needs content. (<a href="http://www.mediawiki.org/wiki/How_to_become_a_MediaWiki_hacker">This</a> is the page I am rewriting)</li>
-<li>Cleaned up my Mediawiki.org <a href="http://www.mediawiki.org/wiki/User:Yuvipanda">userpage</a>. Added stuff I’m working on there. Archived lots of older pages.</li>
-<li>Published <a href="http://github.com/yuvipanda/livetrains">livetrains</a> to GitHub. As expected Kishore cleaned it up a bit. Have figured out how to do the time modelling (Thanks lifeeth!). Should finish up when I get time</li>
-</ul>
-<p>Need.To.Be.More.Productive!</p>
-<p> </p>
-
-</article> 
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-december-2011/">Devlog December 2011</a></h2>
-    <p class="blog-post-meta"><time datetime="2011-12-04T21:19:50Z">Sun Dec 4, 2011</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
-
-
-<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/devlog" rel="tag">devlog</a>
-
-</p>
-  </header>
-  <p>With me back to a place where I can be completely open about what code I am writing (yay!), I think it’s time I restart <a href="http://yuvi.in/blog/tag/devlog/">my devlog</a> :)</p>
-<p>Last time, I was using my old blogging engine, and hand-wrote them in a markdown file on my netbook. Things have changed a lot since then, and this time I’ll be directly writing/publishing them daily from WordPress</p>
-<p>–</p>
-<h4 id="dec-4">Dec 4</h4>
-<p>I finally grokked Indexes in databases. It all makes perfect sense now. Yay! (And this was thanks to being able to read on the Kindle, so yay for that too). Nothing productive done though.</p>
-<h4 id="dec-3">Dec 3</h4>
-<p>Serious push to get livetrains project out within a few days. GeoJSON output done properly. Moved from OpenLayers to Leaflet.js on geohacker’s suggestion. Don’t regret that a bit. Also, coffeescript is fun!</p>
-<p>I got to a point where I’ve got GeoJSON rendering routes. No live animation yet. Spent some time trying to find a easy screenshot saving app, found none. All the ones I found suck. Sigh.</p>
-<h4 id="dec-1-8211-2">Dec 1 – 2</h4>
-<p>Kindle arrived. Loading it up with books to read. SICP is good enough on it. Loading up as much as I can find about Hacker Culture/History.  Moved my entire vim setup to vundle. Not bad.</p>
-<p> </p>
-<p> </p>
-
-</article> 
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-may-2011/">Devlog May 2011</a></h2>
-    <p class="blog-post-meta"><time datetime="2011-06-14T13:27:41Z">Tue Jun 14, 2011</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
-
-
-<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/devlog" rel="tag">devlog</a>
-
-</p>
-  </header>
-  <h3 id="may-25-june-13">May 25-June 13</h3>
-<p>Loads of things happened.</p>
-<p>Finished/polished up ShortUrl. Pending review. Would go into not just tawiki, but possibly all wmf wikis. YAY!</p>
-<p>Moved to a dual monitor setup. Dual 23″ Monitors, one Samsung LED and one Acer LCD. Also moved to 8G of RAM. VMs are much less painful now.</p>
-<p>Did a few back/forths with the GSoC extension architecture. It’s still blocking, so working with the non-blocking parts of GSoC now.</p>
-<p>Moved to bangalore, atleast temperoarily for now.</p>
-<p>Did a tiny bit of work for a friend organizing MP3s with a script. Was fun, operating at that scale. Helped me get back in touch with bash/awk etc.</p>
-<p>Rooted/Flashed my Galaxy 3 with a custom ROM. SO MUCH FRIGGIN BETTER, WHY DID I NOT DO THIS BEFORE? The audio is now atleast a few orders of magnitude better.</p>
-<p>Moved blog to wordpress. Archived the HiSlain project.</p>
-<p>Got my camera. Need to postprocess more. But still :D</p>
-<h3 id="may-25">May 25</h3>
-<p>Put in a lot of effort into ShortUrl. Want to finish it up and push it to prod before ‘leaving’. Also learnt a bit more vimfoo. Moved it to svn and got it ready in translatewiki</p>
-<h3 id="may-17-24">May 17-24</h3>
-<p>Nothing positive done. Whatsoever. At all. Exams done, yeah. That’s about it.</p>
-<h3 id="may-16">May 16</h3>
-<p>Some TwitterBots work. Increased vim-fu a bit more. Got started on interviewStreet.</p>
-<p>Also some work done on new version of ShortURL extension.</p>
-<h3 id="may-13-15">May 13-15</h3>
-<p>Talked out with mentor about components in my GSoC. Got toolserver account. More work on MarathonSin – @ssnbot now runs on it. Moved them all to a server. Increased my vim-fu a bit. Released 2 new versions of yenWikipedia, using a cache to reduce network traffic.</p>
-<p>Still not productive enough. The number of Commits I’m doing per day is at an all time low…</p>
-<h3 id="may-12-13">May 12-13</h3>
-<p>Wrote MarathonSin (Declarative Twitter Bots) to keep myself awake. Started on the detailed plans for Mediawiki GSoC.</p>
-<p>NEED.TO.BE.MORE.PRODUCTIVE.AAARRGGHHH</p>
-<h3 id="may-10-11">May 10-11</h3>
-<p>Nothing got done for last 3 days. Tried resetting sleep cycle twice, failed.</p>
-<p>Did some SICP exercises. Whiteboarded components for GSoC. Nothing much. Sigh.</p>
-<h3 id="may-9">May 9</h3>
-<p>Reasonably productive day.</p>
-<p>Finished PoC. Talked about bringing back ShortUrl Development. Started doing design work for rest of GSoC project. Read up on MySQL a bit more.</p>
-<p>The other thing is coming along nicely too.</p>
-<h3 id="may-8">May 8</h3>
-<p>Not very productive day again.</p>
-<p>Wrote sql for PoC. Read up on the db functions. Looks like I’ll be done with the PoC by monday.</p>
-<p>Went on a Star Trek mini-binge. Tapestry was incredibly timely, even more than usual. Ended with me laughing alongside Picard when he gets finally stabbed. I think I made the right decision :)</p>
-<h3 id="may-7">May 7</h3>
-<p>Half of PoC is done. Calling it GPoC. Went off to sleep, but couldn’t so came back and worked. Feels good.</p>
-<p>Have a basic extension. Figured out that I can’t just grab a preprocessed DOM off any hook. Need to work that out, but since this is just a ‘Proof of Concept’, I can get away with just running preprocess again. Also investigated the Job Queue and the data table update stuff.</p>
-<p>Helped out @msnarain with the #goldenrulesofchennai bit. Wrote code to retreive more tweets further back out.</p>
-<h3 id="may-6">May 6</h3>
-<p>Need to break free. Not productive much. Got started on PoC. Ran around trying to get myself camera. Failed.</p>
-<p>Helped msnarain with some ‘goldenrulesofchennai’ bits. Let’s see how that works out.</p>
-<p>Three days of failure in one day.</p>
-<p>Ah, took heart after that, sketched out plan for completing PoC. Looks like one – two days work to me now. Let’s see :)</p>
-<h3 id="may-5">May 5</h3>
-<p>Again, not much code. Slight work on geekweekend.in. More progress on planning for PoC. Turns out I don’t have much of a chance making it to Israel. Sigh.</p>
-<p>Again, not a very productive day.</p>
-<h3 id="may-4">May 4</h3>
-<p>Nice productive discussions with rkirti about various issues. Thanks for doing that :)</p>
-<p>Started writing design docs for my GSoC Project. Need to codename that.</p>
-<p>Unproductive day code wise.</p>
-<h3 id="may-3">May 3</h3>
-<p>My Language Wikipedia works on DuckDuckGo standard. Had given up getting it to work, but the DDG guys pinged me on twitter about it and I <em>had</em> to respect that, no?</p>
-<p>My pull req for opensearch module was accepted. Yay.</p>
-<p>Made geekcalendar.in. Built a very very tiny static generator that generates it. Deployed it. Tried compass/sass, but in the end came back to plain blueprint+CSS.</p>
-<p>Got Ubuntu+Unity and Win7+Photoshop+Fireworks to work under Virtualbox. Yay! Fixed hard disk too.</p>
-<h3 id="may-2">May 2</h3>
-<p>Started talking to awjr about beginning GSoC work. My prelim work starts tomorrow, with a Proof of Concept.</p>
-<p>Started work on making My Language Wikipedia work on DuckDuckGo.com as well.</p>
-<p>Also started work on transliterated search for wikipedia. Fundamental ideas are in place.</p>
-<p>Made a commit + pull req for opensearch python module, to let it support setting useragent (since wikipedia will 403 you if you don’t identify yourself)</p>
-<p>Met vimzard, sujeet, kashyap and others today. Was fun. vimzard has grown taller.</p>
-<h3 id="may-1">May 1</h3>
-<p>Made two releases of My Language Wikipedia extension (formerly yenWikipedia). Works in Google Instant, and Options page auto opens now.</p>
-<p>Did some brainfuck related language work. Should complete those soon.</p>
-<p>Bought a new domain (geekcalendar.in). Should build/launch it soon.</p>
-
-</article> 
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-april-2011/">DevLog: April 2011</a></h2>
-    <p class="blog-post-meta"><time datetime="2011-05-02T01:50:17Z">Mon May 2, 2011</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
-
-
-<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/devlog" rel="tag">devlog</a>
-
-</p>
-  </header>
-  <p><em>I’ve started keeping devlogs, recording productive activity every day in an attempt to publicly shame myself into doing productive things. This is the delayed april edition</em></p>
-<h3 id="apr-30">Apr 30</h3>
-<p>Impromptu talk at ChennaiPy meet. Then fun discussions at Nerd Dinner. No code, sadly.</p>
-<h3 id="apr-29">Apr 29</h3>
-<p>Google Instant mostly works on yenWikipedia. Made a release. More exams.</p>
-<h3 id="apr-22-8211-28">Apr 22 – 28</h3>
-<p>Nothing much done. Exams and stuff.</p>
-<p>Tecoholic forked yenWikipedia and created a Firefox extension. Adding features faster than me. Yay! :)</p>
-<h3 id="apr-21">Apr 21</h3>
-<p>Started exam mode. Two units in OOAD done. Fixed proto.in.</p>
-<h3 id="apr-20">Apr 20</h3>
-<p>Long discussions with Kishore about data model for BRi. We’re going with the simpler one. Also, spent a lot of time discussing ideas for his new project with @notnarainan. Was fun!</p>
-<p>Scraped entire Pune bus data into neatly structured JSON files and sent ’em to Planemad. Let’s see how that turns out.</p>
-<p>Started using SIO. Installed Variables Extension and started on Loop Extensions.</p>
-<h3 id="apr-19">Apr 19</h3>
-<p>Updated ShortURL to use base64 instead of 36. Helped Kishore start writing tests. Nothing productive much</p>
-<h3 id="apr-18">Apr 18</h3>
-<p>Removed / <em>private</em> / from LoadBalancer and Title. Patch got through. hexmode believes I’ll not have any problems getting commit access. Nice :)</p>
-<p>Met gsathya, genghiz9, stattrav, superkiddo and idlecool at bessie beach today. Was fun.</p>
-<h3 id="apr-17">Apr 17</h3>
-<p>Not so productive day. Finally applied for commit access after more prodding. Removed one more / <em>private</em> / from Title.php. And that’s about it. Incredibly unproductive day today.</p>
-<h3 id="apr-16">Apr 16</h3>
-<p>Slept through most of the day. @since calculator turned into a statistics generator, and lead to discussions about removing / <em>private</em> / declarations. I poked around, found a change to $wgLanguageNames that tstarling had made that had broken a few extensions. Went in, fixed them (except one of them, which was so incredibly broken beyond repair). bawolf committed them (YAY!). Unlike the UtfNormal patch, which was second hand, this was my own code so felt good :)</p>
-<p>They (Happy-melon and bawolff) also suggested that I apply for commit access, since I seem to ‘not break things too often’ :) Let’s see if I can keep that reputation.</p>
-<p>Have work lined up for tomororw – get rid of as many / <em>private</em> / bits as possible.</p>
-<p>Woke up, checked/fixed visibility modifiers in 3 more files. My sleep schedule is <em>very</em> messed up.</p>
-<h3 id="apr-15">Apr 15</h3>
-<p>Meat of code for @since calculator ready. Not many people enthusiastic about it in ###mediawiki though. Sigh. Think I’ll sleep early today.</p>
-<h3 id="apr-14">Apr 14</h3>
-<p>Chrome extension close to v0.2. Options page now pretty. Learnt some more awk. Slight IRC stats mentioned on ###mediawiki (Reedy came out on top!). Have my own bug to fix now. Might have to resort to awk and grep skills (hope it won’t come down to that though).</p>
-<p>Kishore came home. Fun time. Spent lots of time discussing BRiWiki and how it fits into the new architecture. He tried to build out 21H with his ‘Segments’ idea, but (as I had predicted :P) it was rather very complicated. Let’s see how this turns out.</p>
-<h3 id="apr-13">Apr 13</h3>
-<p>Chrome Extension for adding links to other language wikis works! Took me a while to figure out the entire thing, but finally! Wheee! Have it ‘released’ on Chrome Extensions site. Srikanth paid the one time 5$ fee for me (Thanks:D). Wrote an email to wikimediaindia-l, should wait till tomorrow for response.</p>
-<p>Learnt quite a bit about Chrome extensions. Not bad at all. Also started learning awk. Useful tool.</p>
-<h3 id="apr-12">Apr 12</h3>
-<p>Working on Chrome Extension to add links to other language wikis when english wikipedia link turns up in google results. Reasonably working (with Instant turned off, that is). Need to figure out a few more things and I can get it to ‘run’ and release.</p>
-<p>Discussion about Extension:ShortUrl on wikitech-l. Apparently IDs aren’t exactly unique ‘identifiers’ in MediaWiki. Need to find a way around.</p>
-<p>Fixed a bug in the MediaWiki API documentation. Yay!</p>
-<h3 id="apr-11">Apr 11</h3>
-<p>After long winded attempts to fix Extension:ShortUrl’s toolbox functionality ended with me banging my head repeatedly on dead ends, I <em>finally</em> fixed it. The issue was addHTML not doing what I thought it would (add HTML to current position), misunderstanding what die() does (kill output at current location, not output in general) and not asking clear enough questions on ###mediawiki.</p>
-<p>Also hit a bug when it wasn’t documented when (version) a particular method was added to a class. While I was able to workaround, might work on a script that adds ‘since’ information to all functions.</p>
-<p>Chat with PlaneMad about good things for briwiki. Kishore is doing wonderful work with the recursive RDF export. Should be fun, the days ahead!</p>
-<p>Also, fixed audio issues on desktop by moving to PulseAudio.</p>
-<h3 id="apr-10">Apr 10</h3>
-<p>Slept most of the day. Fixed mwclient issues and made 0.6.5 available from PyPI. Tried installing GNOME 3 again (via jhbuild, released moduleset). Failed miserably again.</p>
-<h3 id="apr-9">Apr 9</h3>
-<p>Played Cricket with Kishore. I won (HAHAHAHA).</p>
-<p>Spent the night there. Packaged mwclient 0.6.5 to fix login bug. Kishore wrote code to import current stage data into briwiki. Yay.</p>
-<h3 id="apr-7-8">Apr 7-8</h3>
-<p>Frantic last minute grab to get GSoC proposal done. It still has typos and style issues I didn’t have time to fix :(</p>
-<p>Everyone has their GSoC proposal in. Madhu’s went in after a bit of late drama about her application status being set to ‘withdrawn’ in mentor’s dashboard. Intervention by _ke fixed things up, and everyone lived happily ever after :)</p>
-<h3 id="apr-6">Apr 6</h3>
-<p>Madhu’s patch was accepted :)</p>
-<p>Wrote good amount of GSoC proposal. awjr says it’s in good shape. Sumanah suggested I fix more bugs, so on the lookout. Had a skype convo with awjr about the current, twisted manual workflow that I’m going to help automate.</p>
-<h3 id="apr-5">Apr 5</h3>
-<p>Helped madhu write a patch. Pointed karthik in right direction for sound systems.</p>
-<p>Started writing proposal. First long chat with awjr. Helped Kishore a bit with his GSoC proposal.</p>
-<h3 id="apr-4">Apr 4</h3>
-<p>Helped Madhu with GSoC a bit more. Started working on the wikipedia offline bits. Finally got in touch with awjr.</p>
-<h3 id="apr-3">Apr 3</h3>
-<p>Speech at GNOME.asia. Best I’ve given so far. Hall of around 100 poeple was full, and people were actually sitting on the damn stairs! I was damn in the zone, and it was quite well receieved. Even the jokes went over well! After the GStreamer talk, I gave a pitch about GSoC. Then there were <em>lots</em> of questions. Fun!</p>
-<p>And then hung out with people from #h-i. Super fun :D Then spent a few hours at jace’s place, trying to coax mwclient to work.</p>
-<p>Left bangalore and landed in chennai in a bus.</p>
-<h3 id="apr-2">Apr 2</h3>
-<p>Nothing at all. Developed parts of my presentation for GNOME.asia. Missed first day ‘coz I overslept.</p>
-<h3 id="apr-1">Apr 1</h3>
-<p>Went to bangalore by unreserved general compartment for GNOME.asia. Fixed up CV on the way – stealing template from lut4rp. Also talked on IRC to apergos from the train – prompting her to tell me to ‘set a Hitman on her’.</p>
-<p>Wrote Extension:ShortUrl, my first mediawiki extension. Works, and was well received in the Indian Wikimedia community.</p>
-
-</article> 
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-mar-2011/">DevLog: Mar 2011</a></h2>
-    <p class="blog-post-meta"><time datetime="2011-04-11T21:45:12Z">Mon Apr 11, 2011</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
-
-
-<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/devlog" rel="tag">devlog</a>
-
-</p>
-  </header>
-  <p><em>I’ve started keeping devlogs, recording productive activity every day in an attempt to publicly shame myself into doing productive things. This is the delayed march edition</em></p>
-<h3 id="mar-20-8211-31">Mar 20 – 31</h3>
-<p>More contract work for more money.</p>
-<p>My dump patch to meidawiki got commited, then blasted during Code Review. This is what I get for trusting other people’s code blindly, especially after 5 years. Lesson learnt. Fixed all issues, and now waiting for a review before commit.</p>
-<p>More help for Madhu’s GSoC, on and off. Same for Arun and Karthik.</p>
-<p>Decide to give up on dumps (no concrete work found) and pick up wikipedia offline, after post to wikitech-l by the offline guy saying he is looking for people.</p>
-<p>Channels #mediawiki and #wikimedia-tech are quite fun, actually. Not bad at all.</p>
-<p>Started writing php code. Not that ugh, actually.</p>
-<p>Spent 3 days at In50Hrs. Prototyped the CollegeReviews thing I was always dreaming about. Concepts were fleshed out really well. Need to spend more time on this thing.</p>
-<h3 id="mar-15-8211-20">Mar 15 – 20</h3>
-<p>Almost got fix to Mediawiki that made dumps 5% faster. Now just need to prove it on a larger scale before it gets accepted.</p>
-<p>Did contracting work for some decent money. Feels pretty good.</p>
-<p>Started helping madhu with her gsoc. She’s darn smart.</p>
-<h3 id="mar-14">Mar 14</h3>
-<p>Did bits of resume.</p>
-<h3 id="mar-1-13">Mar 1-13</h3>
-<p>Some amount of Mediawiki work – getting it to run, learning how to profile it, profiling the import and export process. Identified a hotspot in the export process (UtfNormal), need to try to get a fix in.</p>
-<p>Moved main system from Ubuntu 32 bit to Debian 64 bit. Yay. Tried to jhbuild gnome-shell and failed miserably. Boo.</p>
-<p>Started helping other folks with their GSoC. Yay.</p>
-
-</article> 
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title"><a href="http://words.yuvi.in/devlog-feb-2011/">DevLog: Feb 2011</a></h2>
-    <p class="blog-post-meta"><time datetime="2011-04-11T21:24:26Z">Mon Apr 11, 2011</time> by yuvipanda in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/categories/devlog" rel="category tag">devlog</a>
-
-
-<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/tags/devlog" rel="tag">devlog</a>
-
-</p>
-  </header>
-  <p><em>I’ve started keeping devlogs, recording everyday productive activity in an attempt to publicly shaming myselfinto doing something productive everyday. This is the delayed february editin</em></p>
-<p>Links: <a href="http://32hourstartup.com/">32HourStartup</a>, <a href="http://pitivi.org">PiTiVi</a>, <a href="http://tedxssn.com">TEDxSSN</a></p>
-<h3 id="feb-26">Feb 26</h3>
-<p>Initial work on Busroutes.in wiki import script.</p>
-<h3 id="feb-25">Feb 25</h3>
-<p>Audio Save Dialog mostly works now.</p>
-<h3 id="feb-23">Feb 23</h3>
-<p>Started implementing Audio Name dialog box in PiTiVi. Dad fixed laptop – new Ethernet port, and working speakers.</p>
-<h3 id="feb-22">Feb 22</h3>
-<p>Started doing layouts for WhyKCGRocks.com</p>
-<h3 id="feb-18-8211-21">Feb 18 – 21</h3>
-<p>Spent at NIT Trichy. Gave GNOME Talk. Started on briclient. Discussed various models with Kishore (for the wiki). Helped lut4rp compile gstreamer. Started contributing to PyLINQ</p>
-<h3 id="feb-16">Feb 16</h3>
-<p>Worked on pitivi a bit more. Once recording is done, the track gets inserted into the timeline.</p>
-<h3 id="feb-15">Feb 15</h3>
-<p>Worked on pitivi a bit. Moved recording inside main pipeline itself. Started #chennai-hackers for people from Chennai who are planning to do GSoC. Madhu, Karthik, Arun, Bala, Feroze on it so far. Fun!</p>
-<p>Wrote a simple color changer in gtk that is controlled by the wii. Roll controls hue and pitch controls s and v. Fun!</p>
-<h3 id="feb-9-8211-feb-14">Feb 9 – Feb 14</h3>
-<p>TEDxSSN, Banagalore, etc. Nothing got done.</p>
-<h3 id="feb-8">Feb 8</h3>
-<p>‘Open House Project Day’ demo at college. Showed off gstreamer based video streaming via nn ad-hoc network, then wii+torcs. Fun with gibberwocky :P</p>
-<h3 id="feb-5-6">Feb 5-6</h3>
-<p>32HourStartup. Ran around helping people out. Worked with Karthik and Madhu on a PHP/FB app. Fun :)</p>
-<h3 id="feb-3-4">Feb 3-4</h3>
-<p>More 32HourStartup stuff. Busroutes.in still down.</p>
-<h3 id="feb-2">Feb 2</h3>
-<p>Read ~100 pages of the libc manual. Worked on badges for 32HourStartup.</p>
-<p>Busroutes.in is down. DNS issue. Out of our control – We’re trying to bring it to our control.</p>
-<h3 id="feb-1">Feb 1</h3>
-<p>Wrote ‘Functionalish’ C# to be posted in response to the Accumulator in Java thread at fpug-c. Haven’t posted it yet.</p>
-
-</article> 
-
-
-
-
-
-<nav class="blog-pagination">
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <section id="archive" class="archive">
   
-  
-  <a class="btn btn-outline-primary" href="/categories/devlog/page/3/" rel="prev" role="button">Previous page</a>
-  <a class="btn btn-outline-primary disabled" href="#" role="button" aria-disabled="true">Next page</a>
-  
-  
+
+  <div class="archive-post">
+      <span class="archive-post-time">
+        2014-08-25
+      </span>
+      <span class="archive-post-title">
+        <a href="/devlog-aug-24-2014/" class="archive-post-link">
+          DevLog for Aug 24, 2014
+        </a>
+      </span>
+    </div><div class="archive-post">
+      <span class="archive-post-time">
+        2014-08-24
+      </span>
+      <span class="archive-post-title">
+        <a href="/devlog-23-aug-2014/" class="archive-post-link">
+          DevLog for 23 Aug 2014
+        </a>
+      </span>
+    </div><div class="archive-post">
+      <span class="archive-post-time">
+        2014-08-23
+      </span>
+      <span class="archive-post-title">
+        <a href="/devlog-aug-22-2014/" class="archive-post-link">
+          Devlog for Aug 22 2014
+        </a>
+      </span>
+    </div><div class="archive-post">
+      <span class="archive-post-time">
+        2014-08-22
+      </span>
+      <span class="archive-post-title">
+        <a href="/devlog-21-aug-2014/" class="archive-post-link">
+          Devlog for 21 Aug 2014
+        </a>
+      </span>
+    </div><div class="archive-post">
+      <span class="archive-post-time">
+        2014-08-21
+      </span>
+      <span class="archive-post-title">
+        <a href="/devlog-20-aug-2014/" class="archive-post-link">
+          Devlog for 20 Aug 2014
+        </a>
+      </span>
+    </div>
+</section>
+
+<nav class="pagination">
+  <a class="prev" href="/categories/devlog/page/3/">
+      <i class="iconfont icon-left"></i>
+      <span class="prev-text">Prev</span>
+    </a>
+  <a class="next" href="/categories/devlog/page/5/">
+      <span class="next-text">Next</span>
+      <i class="iconfont icon-right"></i>
+    </a>
 </nav>
+        </div>
+        
 
+      </div>
+    </main>
 
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="http://localhost:1313" class="iconfont icon--pocket" title="-pocket"></a>
+      <a href="mailto:yuvipanda@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/yuvipanda" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/yuvipanda" class="iconfont icon-github" title="github"></a>
+  <a href="http://words.yuvi.in/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
 
-
-        </div> <!-- /.blog-main -->
-
-        <aside class="col-sm-3 ml-auto blog-sidebar">
-  
-  <section class="sidebar-module sidebar-module-inset">
-    <h4>about</h4>
-    <p>I build infrastructure that helps reduce accidental complexities when using code to solve problems.</p>
-  </section>
-  
-  <section class="sidebar-module sidebar-module-inset">
-    <h4>projects</h4>
-    <p><p>Primarily working on <a href="https://z2jh.jupyter.org">Zero to JupyterHub</a> and <a href="https://mybinder.org">MyBinder</a></p>
-<p>See more on my <a href="https://github.com/yuvipanda">GitHub Profile</a></p>
-</p>
-  </section>
-  
-  <section class="sidebar-module sidebar-module-inset">
-    <h4>work</h4>
-    <p><p>I design, build &amp; operate large scale teaching infrastructure for the <a href="https://data.berkeley.edu/">Data Science Division at UC Berkeley</a>.</p>
-<p>I also help run <a href="https://mybinder.org">MyBinder</a> thanks to a generous grant from the Gordon &amp; Betty Moore Foundation.</p>
-</p>
-  </section>
-  
-  <section class="sidebar-module sidebar-module-inset">
-    <h4>contact</h4>
-    <p><a href="mailto:yuvipanda@gmail.com">Email</a> is the best way to contact me privately.
-<a href="https://twitter.com/yuvipanda">Twitter</a> is the best way to contact me publicly.</p>
-  </section>
-  
-
-  
-        <section class="sidebar-module">
-    <h4>Recent Posts</h4>
-    <ol class="list-unstyled">
-
-
-<li><a href="/post/miss-blogging/">I miss blogging too</a></li>
-
-<li><a href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></li>
-
-<li><a href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></li>
-
-<li><a href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></li>
-
-<li><a href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></li>
-
-    </ol>
-  </section>
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
 
   
 
-  
-</aside>
-
-
-      </div> <!-- /.row -->
-    </div> <!-- /.container -->
-
-    <footer class="blog-footer">
-      <p>
-      
-      Blog template created by <a href="https://twitter.com/mdo">@mdo</a>, ported to Hugo by <a href='https://twitter.com/mralanorth'>@mralanorth</a>.
-      
-      </p>
-      <p>
-      <a href="#">Back to top</a>
-      </p>
+  <span class="copyright-year">
+    &copy; 
+    2005 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Yuvi Panda</span>
+  </span>
+</div>
     </footer>
 
-  </body>
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
 
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
 </html>

@@ -1,7 +1,7 @@
 ---
 title: "I miss blogging too"
 date: 2020-05-17T11:25:35+05:30
-tags: personal
+tags: ["personal"]
 ---
 
 This person [misses blogs a lot](http://tttthis.com/blog/if-i-could-bring-one-thing-back-to-the-internet-it-would-be-blogs).
