@@ -45,7 +45,7 @@
 <meta property="og:description" content="Blog of Yuvi Panda" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/" />
-<meta property="og:updated_time" content="2020-05-17T11:25:35+05:30" />
+<meta property="og:updated_time" content="2020-05-17T13:59:46+05:30" />
 <meta itemprop="name" content="Yuvi Panda">
 <meta itemprop="description" content="Blog of Yuvi Panda"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Yuvi Panda"/>
@@ -102,6 +102,31 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/disconnecting-for-real/">Disconnecting, for real</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2013-08-24 </span>
+      <div class="post-category">
+          <a href="/categories/personal/"> personal </a>
+          </div>
+        <span class="more-meta"> 257 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>I&rsquo;ve been on the Internet since I was 14. And I don&rsquo;t remember a time when I did not have a computer – I think I got mine when I was 10. Growing up, writing code has always been a major part of me – my identity. I&rsquo;ve never quite managed to separate &lsquo;me&rsquo; from &lsquo;my code&rsquo; – despite mouthing off the soundbite &lsquo;You are not your code!&rsquo; to plenty of people.</p>
+<p>After Wikimania 2013, I spent a week in Hong Kong. The first few days were rough, but after that – it was amazing. For the first time I could imagine, I had completely managed to not think about code at all! I had my laptop locked in a locker somewhere, and didn&rsquo;t even bother getting to it. I didn&rsquo;t feel the burning urge to make a commit. The feeling of guilt that keeps gnawing at you from the back of the head &lsquo;teehee you have been so unproductive today!'.</p>
+<p>That was a rather great feeling. Put things into a little bit more perspective. A step towards separating my identity from my code. I gave up on my GitHub streaks after that. I&rsquo;ll probably also be less of a codeaholic.</p>
+<p>I could write about &lsquo;oh my god, this was amazing!&rsquo; and detail where I travelled in Hong Kong, but I think what was far more fascinating was <em>how</em>. I did not feel in a hurry. Did not feel like having to &lsquo;tick all boxes&rsquo; before leaving. Just… actually relaxing. And doing whatever.</p>
+<p>Vacations are good :)</p>
+
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/die-80-cols-or-die-guidelines/">Die ’80 cols or die!’ guidelines!</a></h1>
@@ -317,67 +342,6 @@
   <div class="post-content">
     <div class="post-summary">
       <p><a href="http://www.fullmoon.nu/articles/art.php?id=tal">Talking to God</a> is an interesting piece about apparent &lsquo;dangers&rsquo; of knowledge and the necessary side effects of evolution. Thought provoking.</p>
-
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/attempting-to-secure-redis-in-a-multi-tenant-environment/">Attempting to Secure Redis in a Multi Tenant environment</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2013-07-20 </span>
-      <div class="post-category">
-          <a href="/categories/code/"> code </a>
-          <a href="/categories/devlog/"> devlog </a>
-          <a href="/categories/wiki/"> wiki </a>
-          </div>
-        <span class="more-meta"> 959 words </span>
-        <span class="more-meta"> 5 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p>When running <a href="http://redis.io/">Redis</a> in a shared cluster/hosting environment (such as <a href="https://wikitech.wikimedia.org/wiki/Nova_Resource:Tools/Help">Wikimedia Tool Labs</a>, on which I&rsquo;ve been having fun doing a lot of work on), you would want to try to provide at least <em>some</em> guarantee of isolation for your keys from everyone else&rsquo;s keys. Since Redis doesn&rsquo;t do ACLs, this is problematic.</p>
-<p>This can be solved in a couple of ways</p>
-<h2 id="run-a-redis-instance-for-each-user">Run a Redis instance for each user</h2>
-<p>This is simple enough to do – each user runs their own Redis instance, and has full access to it. Security is handled by setting a secret password, and running <code>redis-server</code> as the user in question. Boom, secure!</p>
-<p>This doesn&rsquo;t really scale with a large number of users, because they each have lesser memory to work with now. Also having users who just want to run their tools have to deal with making sure their Redis instance is up and running fine isn&rsquo;t really good. Having the sysadmins be responsible for users&rsquo; Redis instance is… not going to work :) This would also require all the redis instances to run on one box and/or have a separate cluster just for them, which isn&rsquo;t good either.</p>
-<h2 id="add-acl-support-to-redis">Add ACL support to Redis</h2>
-<p>Not happening, because I&rsquo;m not good enough to do that yet :P But more realistically, it won&rsquo;t ever happen, since this will probably add a lot of overhead for what is arguably an edge case.</p>
-<h2 id="build-a-small-server-that-sits-in-front-of-redis">Build a small server that sits in front of Redis</h2>
-<p>Such a server would simply authenticate incoming requests via some mechanism (<a href="http://keystone.openstack.org/">Keystone</a> perhaps), and then enforce ACLs. It will have to speak the exact same protocol as Redis, since users should be able to use any library that connects to Redis. This isn&rsquo;t too hard – just replace the <code>password</code> functionality of Redis protocol to take in both a username and password (or token, or some other method of auth).</p>
-<p>This also I discarded – it will still affect performance, which will now be limited by how fast <em>this</em> server runs, and that is definitely not faster than Redis. And it will also be hard to maintain, since I&rsquo;ll have to completely mimic Redis&rsquo; protocol and make sure it is kept up to date. Debugging protocol issues with random client libraries is not my idea of fun. Another <strong>major</strong> disadvantage is that <strong>I</strong> would now be writing auth code, and I don&rsquo;t think handrolling auth code is a good idea, ever.</p>
-<h2 id="security-by-obscurity">Security By Obscurity!</h2>
-<p>This is what we finally settled on :D It sounds horrible by the title, but I think it is Good Enough<!-- raw HTML omitted -->TM<!-- raw HTML omitted -->.</p>
-<p>Since Redis is a key value store at heart, you can do anything once you know the key. So, if an &lsquo;attacker&rsquo; doesn&rsquo;t know the key, there isn&rsquo;t much they can do. So it can be considered SecureEnough for our purposes if we can make it so that other users can not find out or guess your keys.</p>
-<p>We essentially did so with the following:</p>
-<ol>
-<li>Disable all Redis commands that let users list all / many keys.</li>
-<li>Have users use a random and long key prefix for all their keys.</li>
-</ol>
-<p>(1) prevents someone from just listing all keys to find something interesting. (2) prevents people from brute-forcing or guessing keys. Since all code run on Tool Labs must be open source, guessing keys is super easy. By having a &lsquo;secret&rsquo; prefix, having the actual keys is useless. This also prevents accidental key overwrites from different tools using a common key name.</p>
-<p>Disabling commands is easy to do by using Redis&rsquo; <code>RENAME COMMAND</code> config feature. I added support for <code>RENAME COMMAND</code> to Wikimedia&rsquo;s <a href="https://github.com/wikimedia/operations-puppet/tree/production/modules/redis">Redis puppet module</a>, and then it was simple enough to <a href="https://github.com/wikimedia/operations-puppet/blob/production/modules/toollabs/manifests/redis.pp">configure</a> a specific instance to disable &lsquo;list keys&rsquo; type commands. That&rsquo;s the following commands:</p>
-<ol>
-<li><code>CONFIG</code></li>
-<li><code>FLUSHALL</code></li>
-<li><code>FLUSHDB</code></li>
-<li><code>KEYS</code></li>
-<li><code>SHUTDOWN</code></li>
-<li><code>SLAVEOF</code></li>
-<li><code>CLIENT</code></li>
-<li><code>RANDOMKEY</code></li>
-<li><code>DEBUG</code>.</li>
-</ol>
-<p>After going through the list of Redis commands, I am guessing this is going to be GoodEnough to prevent key listing. (Note: if there&rsquo;s more that I&rsquo;m missing, please, <em>please</em> let me know).</p>
-<p>We also tell people to use a secure prefix that&rsquo;s at least 64bytes long, saved in a file that is only user readable. Generating that is as simple as:</p>
-<p>openssl rand -base64 64</p>
-<p>That should be long enough to be hard to brute force, even with Redis being as fast as it is.</p>
-<h3 id="problems">Problems</h3>
-<p>The major problem with this is, of course – the fact that humans are involved :) I&rsquo;ve heard &ldquo;I do not care about my keys, do not need security&rdquo; a fair amount of times already. The fact that the prefix generation is optional means that there will be people who do not use prefixes, and it will work for them for a (probably) long time – until it doesn&rsquo;t, and they have no idea why. This is personally acceptable to me, since they have been made aware of the risks beforehand.</p>
-<h2 id="fun">Fun</h2>
-<p>This has now been deployed on toollabs for a month or so, and I&rsquo;ve a couple of fun tools already written using it (and other people too). We had a patched memcached server we had that we&rsquo;ll kill in a few weeks, so people who used memcached before are also migrating to redis. And I was able to do all this without even having root! This is mostly thanks to the fact that we try to keep all our configuration in puppet (<a href="https://github.com/wikimedia/operations-puppet">Wikimedia&rsquo;s Puppet repository</a>) – for both our production cluster and for everything else. So I could re-use our production redis module, make changes to it, and build the new solution – all while being vetted by &lsquo;proper&rsquo; ops people (whom I dearly love and respect). Building infrastructure in such a collaborative manner is a lot of fun, and I think I&rsquo;m hooked. It&rsquo;s fun!</p>
 
     </div>
   </div>

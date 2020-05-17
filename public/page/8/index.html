@@ -45,7 +45,7 @@
 <meta property="og:description" content="Blog of Yuvi Panda" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/" />
-<meta property="og:updated_time" content="2020-05-17T11:25:35+05:30" />
+<meta property="og:updated_time" content="2020-05-17T13:59:46+05:30" />
 <meta itemprop="name" content="Yuvi Panda">
 <meta itemprop="description" content="Blog of Yuvi Panda"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Yuvi Panda"/>
@@ -102,6 +102,33 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/php-insane-part-5832/">PHP being insane, part 5832</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2013-12-13 </span>
+      <div class="post-category">
+          <a href="/categories/code/"> code </a>
+          <a href="/categories/wiki/"> wiki </a>
+          </div>
+        <span class="more-meta"> 75 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>Somehow: <code>( $a &amp;&amp; $b ) || ( $b &amp;&amp; $c ) || ( $a &amp;&amp; $c )</code></p>
+<p>Became: <code>$a ? ( $b || $c ) : ( $b &amp;&amp; $c )</code></p>
+<p>Became: <code>count( array_filter( array( $a, $b, $c ) ) ) &gt;= 2</code></p>
+<p>Became: <code>&quot;$a$b$c&quot; &gt; 1</code></p>
+<p>God dammit PHP…</p>
+<p>(from discussion among me, ^d, ori-l, bd808 and anomie on <code>#mediawiki-core</code> about how to represent ‘if at least 2 of three conditions are true’)</p>
+
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/lots-discussion-tiny-matter-long-run-part-5321/">Lots of discussion over tiny things that do not matter in the long run, part 5321</a></h1>
@@ -316,31 +343,6 @@
 <p>The ickiest part of the patch is perhaps that it sends out raw JSON data as a… string. So no matter which format you are using on your client, you <em>need</em> to use a JSON parser to deal with the Campaigns data. This sortof makes sense, since that is how the data is stored anyway. Doesn&rsquo;t make it any less icky, though!</p>
 <p>Not bad for a lazy Sunday, eh?</p>
 <p><strong>Update</strong>: After not being able to sleep, I also submitted <a href="https://gerrit.wikimedia.org/r/#/c/80946/">a patch</a> to make phpcs pass for UploadWizard, and also fought with the UploadCampaigns API patch to have it (brokenly?) support continuing. Yay?</p>
-
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/disconnecting-for-real/">Disconnecting, for real</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2013-08-24 </span>
-      <div class="post-category">
-          <a href="/categories/personal/"> personal </a>
-          </div>
-        <span class="more-meta"> 257 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p>I&rsquo;ve been on the Internet since I was 14. And I don&rsquo;t remember a time when I did not have a computer – I think I got mine when I was 10. Growing up, writing code has always been a major part of me – my identity. I&rsquo;ve never quite managed to separate &lsquo;me&rsquo; from &lsquo;my code&rsquo; – despite mouthing off the soundbite &lsquo;You are not your code!&rsquo; to plenty of people.</p>
-<p>After Wikimania 2013, I spent a week in Hong Kong. The first few days were rough, but after that – it was amazing. For the first time I could imagine, I had completely managed to not think about code at all! I had my laptop locked in a locker somewhere, and didn&rsquo;t even bother getting to it. I didn&rsquo;t feel the burning urge to make a commit. The feeling of guilt that keeps gnawing at you from the back of the head &lsquo;teehee you have been so unproductive today!'.</p>
-<p>That was a rather great feeling. Put things into a little bit more perspective. A step towards separating my identity from my code. I gave up on my GitHub streaks after that. I&rsquo;ll probably also be less of a codeaholic.</p>
-<p>I could write about &lsquo;oh my god, this was amazing!&rsquo; and detail where I travelled in Hong Kong, but I think what was far more fascinating was <em>how</em>. I did not feel in a hurry. Did not feel like having to &lsquo;tick all boxes&rsquo; before leaving. Just… actually relaxing. And doing whatever.</p>
-<p>Vacations are good :)</p>
 
     </div>
   </div>
