@@ -81,6 +81,6 @@ I'll look at Roam research later, but for now, I'm enjoying having a note taking
 
 ## Credits
 
-Lots of good conversations about this in various places with [Steve Deobald](https://twitter.com/deobald), [Pratul Kalia](https://twitter.com/prxtl), [Robla](https://twitter.com/robla), [Prateek](https://twitter.com/prtksxna), [Ankur Sethi](https://ankursethi.in/) and many others who I am clearly forgetting.
+Lots of good conversations about this in various places with [Steve Deobald](https://www.deobald.ca/), [Pratul Kalia](https://twitter.com/prxtl), [Robla](https://twitter.com/robla), [Prateek](https://prtksxna.com/), [Ankur Sethi](https://ankursethi.in/) and many others who I am clearly forgetting.
 
 Would love to hear about what you use, via [Email](mailto:yuvipanda@gmail.com) or [Twitter](https://twitter.com/yuvipanda).
