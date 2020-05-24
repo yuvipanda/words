@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 17 May 2020 13:59:46 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 24 May 2020 11:13:57 +0530</lastBuildDate>
     
 	<atom:link href="http://words.yuvi.in/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>productivity</title>
+      <link>http://words.yuvi.in/tags/productivity/</link>
+      <pubDate>Sun, 24 May 2020 11:13:57 +0530</pubDate>
+      
+      <guid>http://words.yuvi.in/tags/productivity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>page</title>
+      <link>http://words.yuvi.in/tags/page/</link>
+      <pubDate>Mon, 18 May 2020 12:42:58 +0530</pubDate>
+      
+      <guid>http://words.yuvi.in/tags/page/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>personal</title>
@@ -17,15 +35,6 @@
       <pubDate>Sun, 17 May 2020 13:59:46 +0530</pubDate>
       
       <guid>http://words.yuvi.in/tags/personal/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>productivity</title>
-      <link>http://words.yuvi.in/tags/productivity/</link>
-      <pubDate>Sun, 17 May 2020 13:59:46 +0530</pubDate>
-      
-      <guid>http://words.yuvi.in/tags/productivity/</guid>
       <description></description>
     </item>
     

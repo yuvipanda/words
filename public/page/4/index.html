@@ -45,7 +45,7 @@
 <meta property="og:description" content="Blog of Yuvi Panda" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/" />
-<meta property="og:updated_time" content="2020-05-17T13:59:46+05:30" />
+<meta property="og:updated_time" content="2020-05-24T11:13:57+05:30" />
 <meta itemprop="name" content="Yuvi Panda">
 <meta itemprop="description" content="Blog of Yuvi Panda"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Yuvi Panda"/>
@@ -102,6 +102,31 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/dns-servers-localhost-asynchronous-code/">DNS servers, localhost and asynchronous code</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2016-02-04 </span>
+      <div class="post-category">
+          <a href="/categories/code/"> code </a>
+          </div>
+        <span class="more-meta"> 225 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p><code>localhost</code> is always <code>127.0.0.1</code>, right? Nope, can also be <code>::1</code> if your system only has IPV6 (apparently).</p>
+<p>Asking a DNS server for an A record for <code>localhost</code> should give you back <code>127.0.0.1</code> right? Nope – it varies wildly! <code>8.8.8.8</code> gives me an <code>NXDOMAIN</code> which means it tells you straight up THIS DOMAIN DOES NOT EXIST! Which is true, since localhost isn’t a domain. But if you ask the same thing of any dnsmasq server, it’ll tell you localhost is 127.0.0.1. Other servers vary wildly – I found one that returned an <code>NXDOMAIN</code> for AAAA but 127.0.0.1 for A (which is pretty wild, since <code>NXDOMAIN</code> makes most software treat the domain as not existing and not attempt other lookups). So localhost and DNS servers don’t mix very well.</p>
+<p>But why is this a problem, in general? Most DNS resolution happens via <code>gethostbyname</code> libc call, which reads <code>/etc/hosts</code> properly, right? Problem there is that there is popular software that’s completely asynchronous (<em>cough_nginx_cough</em>) that does <em>not</em> use <code>gethostbyname</code> (since that’s synchronous) and directly queries DNS servers (asynchronously). This works perfectly well until you try to hit <code>localhost</code> and it tells you ‘no such thing!’.</p>
+<p>I should probably file a bug with nginx to have them read <code>/etc/hosts</code> as well, and in the mean-time work around by sending <code>127.0.0.1</code> to nginx rather than localhost.</p>
+<p>How did <em>your</em> thursday go?</p>
+
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/devlog-21-30-dec-2015/">DevLog for 21-30 Dec 2015</a></h1>
@@ -374,34 +399,6 @@
 <li>Fixed a consistency bug in the perl script that maintians public view replicas (<a href="https://gerrit.wikimedia.org/r/#/c/182819/)">https://gerrit.wikimedia.org/r/#/c/182819/)</a>.</li>
 </ul>
 <p>Reading list: * <a href="http://joostdevblog.blogspot.in/2015/01/what-most-young-programmers-need-to.html">What most young programmers need to learn</a> was nice. I just feel lucky to have been gifted a copy of Code Complete and Pragmatic Programmer when I was 15 (by <a href="http://colinizer.com/">Colinizer</a>).</p>
-
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/devlog-jan-3-4-2015/">DevLog for Jan 3-4 2015</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015-01-04 </span>
-      <div class="post-category">
-          <a href="/categories/devlog/"> devlog </a>
-          </div>
-        <span class="more-meta"> 125 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p>Nothing much going on…</p>
-<ul>
-<li>Continue reading Real World Haskell. This is indeed expanding my horizons, but I haven’t found any project I could use haskell in yet. Will keep looking.</li>
-<li>Helped fix a parsoid outage yesterday. No biggie. I still do not understand fully how parsoid works / how it is set up, should do.</li>
-<li>Spend most of the rest of the time in ‘weekend mode’, which includes mostly not doing things. That went mostly well.</li>
-<li>Watched ‘Pink Floyd The Wall’ movie. HOLY FUCK MY MIND IT IS GONE OMG IT IS QUITE REALLY NICE. Recommended.</li>
-</ul>
-<p>I should probably write a ‘Year in Review 2014’ post, but so much of that is going to be NSFW and private that there probably is no point… ;)</p>
 
     </div>
   </div>

@@ -45,7 +45,7 @@
 <meta property="og:description" content="Blog of Yuvi Panda" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/" />
-<meta property="og:updated_time" content="2020-05-17T13:59:46+05:30" />
+<meta property="og:updated_time" content="2020-05-24T11:13:57+05:30" />
 <meta itemprop="name" content="Yuvi Panda">
 <meta itemprop="description" content="Blog of Yuvi Panda"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Yuvi Panda"/>
@@ -102,6 +102,34 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/devlog-jan-3-4-2015/">DevLog for Jan 3-4 2015</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2015-01-04 </span>
+      <div class="post-category">
+          <a href="/categories/devlog/"> devlog </a>
+          </div>
+        <span class="more-meta"> 125 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>Nothing much going on…</p>
+<ul>
+<li>Continue reading Real World Haskell. This is indeed expanding my horizons, but I haven’t found any project I could use haskell in yet. Will keep looking.</li>
+<li>Helped fix a parsoid outage yesterday. No biggie. I still do not understand fully how parsoid works / how it is set up, should do.</li>
+<li>Spend most of the rest of the time in ‘weekend mode’, which includes mostly not doing things. That went mostly well.</li>
+<li>Watched ‘Pink Floyd The Wall’ movie. HOLY FUCK MY MIND IT IS GONE OMG IT IS QUITE REALLY NICE. Recommended.</li>
+</ul>
+<p>I should probably write a ‘Year in Review 2014’ post, but so much of that is going to be NSFW and private that there probably is no point… ;)</p>
+
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/devlog-jan-2-2015/">DevLog for Jan 2, 2015</a></h1>
@@ -341,42 +369,6 @@
 <li>Started work on a ‘number of editors’ per country metric for WPDMZ, needs to be finished up.</li>
 </ul>
 <p>I feel a bit exhausted (physically and mentally) from the intense coding over the last few weeks, might have a few chill days to recharge myself. I’m growing old! :(</p>
-
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/devlog-aug-24-2014/">DevLog for Aug 24, 2014</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-08-25 </span>
-      <div class="post-category">
-          <a href="/categories/devlog/"> devlog </a>
-          </div>
-        <span class="more-meta"> 290 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p>Wooooo!</p>
-<ul>
-<li>Moved <a href="https://github.com/yuvipanda/labsbooks">labsbooks</a> (described in <a href="http://yuvi.in/blog/devlog-23-aug-2014/">yesterday’s devlog</a>) to use a shared readonly IPython virtualenv maintained by me. Also installed a bunch of modules people might want to use (SciPy, NumPy, Pandas, PyTables, matplotlib). Am considering just installing IPython notebook globally via puppet and using that, since that’ll enable users to just use the system packages. However, the version of IPython notebook from Ubuntu is ancient, so that’s probably a non-starter.</li>
-<li>Have a basic version of the IPython publishing process working! Any toollabs user can create a notebook by:
-<ul>
-<li>Creating a <code>~/notebooks</code> folder</li>
-<li>Doing a <code>chmod +x ~/notebooks</code></li>
-<li>Doing a <code>chmod +x ~</code></li>
-<li>Putting IPython notebooks into <code>~/notebooks</code> (as <code>.ipynb</code>) files</li>
-<li>Going to <code>https://tools.wmflabs.org/notebooks/&lt;user-shell-name&gt;/&lt;path-to-ipynb-file&gt;</code> Will have to do a bit more work before it can be considered ‘production grade’ (such as user pages, a nicer theme, etc, etc) BUT YAY GOOD START. It already caches the html output in Redis and invalidates with the <code>mtime</code> of the file, so should be pretty quick.</li>
-</ul>
-</li>
-<li>Made the ssh tunneling process for <code>labsbooks</code> purely python, without requiring the <code>ProxyCommand</code>. This makes things simpler (and more portable!). I’ll need to work on securing this properly before I can publish it for broader use.</li>
-<li>Wrote <a href="https://lists.wikimedia.org/pipermail/analytics/2014-August/002437.html">an email</a> to the analytics mailing list about making public the ‘edits per country’ data. I hope to make this publicly available with enough granularity that not just me but others can use this for fun research as well.</li>
-</ul>
-<p>I’ve been using <a href="https://atom.io">Atom</a> for puppet stuff, <a href="http://www.jetbrains.com/pycharm/">PyCharm</a> for Python and <a href="http://www.jetbrains.com/idea/">IntelliJ</a> for Java stuff, and that seems to be doing ok. They all have decent Vim keybindings as well, and good replacements for other functionality – and I might stick with Atom for a while to see how it goes :)</p>
 
     </div>
   </div>

@@ -45,7 +45,7 @@
 <meta property="og:description" content="Blog of Yuvi Panda" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/" />
-<meta property="og:updated_time" content="2020-05-17T13:59:46+05:30" />
+<meta property="og:updated_time" content="2020-05-24T11:13:57+05:30" />
 <meta itemprop="name" content="Yuvi Panda">
 <meta itemprop="description" content="Blog of Yuvi Panda"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Yuvi Panda"/>
@@ -102,6 +102,59 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/note-taking-ii-bookmarks/">Note Taking II - Retaining consumed content</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-05-24 </span>
+      
+        <span class="more-meta"> 1044 words </span>
+        <span class="more-meta"> 5 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>In conversation with <a href="https://nirbheek.in/">Nirbheek</a> about <a href="http://words.yuvi.in/post/note-taking-part-i/">my blog post on note taking</a>, he said something like &lsquo;my system of knowledge has holes, and I lose track of stuff I learnt because of that&rsquo;. This was slightly complementary to my earlier quest - the outliner helped me in structuring how I thought and produced content. However, a bookmarking system will help me consume and <strong>retain</strong> knowledge. Both need to be integrated, but I currently had only one half of the puzzle.</p>
+<p>We ended up talking about &lsquo;bookmarks&rsquo; and how he has a lot of them. I&rsquo;ve felt the need for saving stuff I read in useful ways, but never used bookmarks because I never look at them again. It would be awesome to have a system of that sort - especially if it was integrated into my notetaking and todo list solutions.</p>
+<p>We talked about some current solutions - <a href="https://twitter.com/prxtl">Pratul</a>&lsquo;s meticulously tagged <a href="https://pinboard.in/">pinboard</a> account, <a href="https://ankursethi.in/">Ankur</a>&lsquo;s blog&rsquo;s <a href="https://ankursethi.in/category/links/">links category</a>. All this was too much work for me, but I couldn&rsquo;t quite articulate why. I&rsquo;ve tried both these options before and couldn&rsquo;t keep them up. Longevity was my goal here, so I kept looking.</p>
+<h2 id="memex">Memex</h2>
+<p>This lead us to <a href="https://github.com/WorldBrain/Memex">Memex</a>, and open source system (with a paid hosted version) that seemed to do everything we wanted. They made a particular point of <a href="https://github.com/WorldBrain/Memex#no-vc-money-no-exit-your-data--attention-stays-yours">not taking VC money</a>, which is a big draw for me.</p>
+<p>Nirbheek tried it out, and found it buggy / wanting. Particularly, it only worked on half his bookmarks - the rest had rotten, or the import itself was buggy. This could be fixed with <a href="https://archive.org/">Internet Archive</a> integration, but there were a few more bugs about data loss in their <a href="https://github.com/WorldBrain/Memex/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc">issue tracker</a> that didn&rsquo;t give me too much confidence. It does still look amazing, and I will try it out at some point soon - unlike Nirbheek, I don&rsquo;t have a few thousand bookmarks to import.</p>
+<p>However, it gave met he name <strong>Memex</strong>, with a history behind it - an article by Vannevar Bush (Claude Shannon was his student) from 1945 called <strong><a href="https://en.wikipedia.org/wiki/Memex">As we may think</a></strong>. This was an extremely fascinating read - I read it in the <a href="http://worrydream.com/refs/Bush%20-%20As%20We%20May%20Think%20(Life%20Magazine%209-10-1945).pdf">original layout</a>, with fascinating ads by the side (Men&rsquo;s garters, for example).</p>
+<p>Here is my <a href="/papers/as-we-may-think.pdf">annotated version</a>, with the origins of the rest of this blog post at the bottom. It&rsquo;s fairly short, so I suggest you read the original. I&rsquo;m not going to rehash it, but just talk about what I think I need in my &lsquo;bookmarking&rsquo; solution.</p>
+<h2 id="what-is-a-bookmark">What is a bookmark?</h2>
+<p>Bookmark is a terrible word for what I want, but I can&rsquo;t think of a better one right now. Bush defines the &lsquo;memex&rsquo; as:</p>
+<blockquote>
+<p>A memex is a device in which an individual stores all his books, records and communications, and which is mechanized so that it may be consulted with <strong>exceeding speed and flexibility</strong>. It is an <strong>enlarged intimate supplement to his memory</strong>.</p>
+</blockquote>
+<p>(Gendered pronouns in the source left in for for faithful reproduction. I&rsquo;d like to think that if this was written today, it would use gender neutral pronouns)</p>
+<p>So a &lsquo;bookmark&rsquo; is an individual thing that I come across that I might possibly ever want to remember again. I can&rsquo;t remember it all, so I want to toss it into a &lsquo;bookmarking system&rsquo; that can be searched with &lsquo;exceeding speed and flexibility&rsquo;.</p>
+<p>Based on this, I figured out my current criteria for looking at &amp; trying out such systems to find one that meets my needs.</p>
+<h2 id="search-first">Search first</h2>
+<p>I want my interface to be a simple text box into which I can type things, and it&rsquo;ll search the entire contents of everything I&rsquo;ve &lsquo;bookmarked&rsquo;. This should be articles I&rsquo;ve read, books, tweets, videos I&rsquo;ve watched, podcasts I&rsquo;ve listened to, my notes, etc. I don&rsquo;t want to do any tagging or categorizing myself.</p>
+<p>Tagging and categorizing remind me of <a href="https://en.wikipedia.org/wiki/DMOZ">dmoz</a> and <a href="https://en.wikipedia.org/wiki/Yahoo!_Directory">Yahoo Directories</a>. Way too much work for me, and I&rsquo;ll never look at them again.</p>
+<p>Bush calls <strong>selection</strong> (we would call that &lsquo;search&rsquo; today) as the primary problem , and rails against <strong>indexing</strong> (IMO we would call this tagging / categorizing) as insufficient.</p>
+<p>This search needs to be <strong>extremely fast</strong>, and very relevant.</p>
+<h2 id="never-forgets">Never forgets</h2>
+<p>I should have access to these &lsquo;bookmarks&rsquo; all the time. This means cross-device sync (Android, iPad, Mac OS for me).</p>
+<p>It also needs to actually archive all the content I throw at it. Save web pages fully. Download (and transcribe) videos / podcats. Find some way to keep books in there. No link rot, no &lsquo;shit this content is now behind a paywall&rsquo;, no &lsquo;damn, I wish I had my laptop with me&rsquo;.</p>
+<h2 id="hyperlinking">Hyperlinking</h2>
+<p>I should be able to connect bookmarks together. I guess this could be done with tagss, but I want something else that&rsquo;s better. Bush talks about being able to link &lsquo;bookmarks&rsquo; to each other with a blurb about the link - this is what we would call a &lsquo;hyperlink&rsquo; now.</p>
+<p>My note taker has hyperlinks with other notes, but I should be able to hyperlink to content I have saved. I should also be able to link together content I&rsquo;ve saved that doesn&rsquo;t have links themselves.</p>
+<p>Strong integration between this and my note taker is probably the way to go. <strong>Each piece of content should have highlights, and notes attached to them</strong>. These could contain hyperlinks easily. The highlights and notes should also be searchable.</p>
+<h2 id="publishable">Publishable</h2>
+<p>Bush talks about &lsquo;trailblazers&rsquo; - people who find new content, link it together in useful ways, and publish it for others.</p>
+<p>This was how I used <a href="https://en.wikipedia.org/wiki/Google_Reader#Sharing">Google Reader&rsquo;s Shared</a> functionality. You could publish a link with all the content you have consumed that you marked as &lsquo;shared&rsquo;, with a note as well. I would subscribe to other people&rsquo;s shared feeds, and find useful content (and blogs) to follow.</p>
+<p>RIP Google Reader. It continues to make me wary of relying on any of Google&rsquo;s services.</p>
+<p>Having a note taker has already drastically changed how I think and  produce content. I feel integrating this into my life will have similar effects on how I consume content. Now that I have a better idea of what I <strong>want</strong>, I&rsquo;ll spend some more time looking.</p>
+<h2 id="credits">Credits</h2>
+<p>Thanks to <a href="https://nirbheek.in/">Nirbheek</a>, <a href="https://ankursethi.in/">Ankur Sethi</a> and <a href="https://prtksxna.com/">Prateek</a> for conversations and thoughts on this topic :)</p>
+
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/note-taking-part-i/">Note Taking Part I</a></h1>
@@ -750,93 +803,6 @@ distribution embraces its constraints &amp; does well!</p>
 <p>Are you a person who would use a distribution like this? We would love to
 hear from you! Make an issue <a href="https://github.com/yuvipanda/the-littlest-jupyterhub">on GitHub</a>,
 <a href="https://twitter.com/yuvipanda">tweet at me</a>, or send me <a href="mailto:yuvipanda@gmail.com">an email</a>.</p>
-
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/kubectl-rbac/">Kubectl verbose logging tricks</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2018-01-11 </span>
-      <div class="post-category">
-          <a href="/categories/kubernetes/"> kubernetes </a>
-          <a href="/categories/code/"> code </a>
-          </div>
-        <span class="more-meta"> 301 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p>Recently I had to write some code that had to call the kubernetes API directly,
-without any language wrappers. While there is pretty good <a href="https://kubernetes.io/docs/reference/">reference docs</a>,
-I didn&rsquo;t want to go and construct all the JSON manually in my programming language.</p>
-<p>I discovered that <code>kubectl</code>'s <code>-v</code> parameter is very useful for this! With this,
-I can do the following:</p>
-<ol>
-<li>Perform the actions I need to perform with just <code>kubectl</code> commands</li>
-<li>Pass <code>-v=8</code> to kubectl when doing this, and this will print all the HTTP traffic
-(requests and responses!) in an easy to read way</li>
-<li>Copy paste the JSON requests and template them as needed!</li>
-</ol>
-<p>This was very useful! The fact you can see the response bodies is also nice,
-since it gives you a good intuition of how to handle this in your own code.</p>
-<p>If you&rsquo;re shelling out to <code>kubectl</code> directly in your code (for some reason!),
-you can also use this to figure out all the RBAC rules your code would need. For
-example, if I&rsquo;m going to run the following in my script:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">kubectl get node
-</code></pre></td></tr></table>
-</div>
-</div><p>and need to figure out which RBAC rules are needed for this, I can run:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">kubectl -v<span class="o">=</span><span class="m">8</span> get node 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> grep -P <span class="s1">&#39;GET|POST|DELETE|PATCH|PUT&#39;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>This should list all the API requests the code is making, making it easier
-to figure out what rules are needed.</p>
-<p>Note that you might have to <code>rm -rf ~/.kube/cache</code> to &lsquo;really&rsquo; get the
-full API requests list, since <code>kubectl</code> caches a bunch of API autodiscovery.
-The minimum RBAC for kubectl is:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">kind</span><span class="p">:</span><span class="w"> </span>ClusterRole<span class="w">
-</span><span class="w"></span><span class="k">apiVersion</span><span class="p">:</span><span class="w"> </span>rbac.authorization.k8s.io/v1beta1<span class="w">
-</span><span class="w"></span><span class="k">metadata</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="k">name</span><span class="p">:</span><span class="w"> </span>kubectl-minimum<span class="w">
-</span><span class="w"></span><span class="k">rules</span><span class="p">:</span><span class="w">
-</span><span class="w"></span>- <span class="k">nonResourceURLs</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;/api&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;/apis/*&#34;</span><span class="p">]</span><span class="w">
-</span><span class="w">  </span><span class="k">verbs</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;get&#34;</span><span class="p">]</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><p>You will need to add additional rules for the specific commands you
-want to execute.</p>
-<p><strong>More Kubectl Tips</strong></p>
-<ol start="0">
-<li><a href="https://schd.ws/hosted_files/kccncna17/de/Stupid%20Kubectl%20Tricks.pdf">Slides from the &lsquo;Stupid Kubectl Tricks&rsquo; KubeCon talk</a></li>
-<li><a href="https://coreos.com/blog/kubectl-tips-and-tricks">On the CoreOS blog</a></li>
-<li><a href="https://kubernetes.io/docs/reference/kubectl/cheatsheet/">Terse but useful official documentation</a></li>
-</ol>
 
     </div>
   </div>

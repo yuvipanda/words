@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 17 May 2020 13:59:46 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 24 May 2020 11:13:57 +0530</lastBuildDate>
     
 	<atom:link href="http://words.yuvi.in/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Note Taking II - Retaining consumed content</title>
+      <link>http://words.yuvi.in/post/note-taking-ii-bookmarks/</link>
+      <pubDate>Sun, 24 May 2020 11:13:57 +0530</pubDate>
+      
+      <guid>http://words.yuvi.in/post/note-taking-ii-bookmarks/</guid>
+      <description>In conversation with Nirbheek about my blog post on note taking, he said something like &amp;lsquo;my system of knowledge has holes, and I lose track of stuff I learnt because of that&amp;rsquo;. This was slightly complementary to my earlier quest - the outliner helped me in structuring how I thought and produced content. However, a bookmarking system will help me consume and retain knowledge. Both need to be integrated, but I currently had only one half of the puzzle.</description>
+    </item>
     
     <item>
       <title>Note Taking Part I</title>

@@ -45,7 +45,7 @@
 <meta property="og:description" content="Blog of Yuvi Panda" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/" />
-<meta property="og:updated_time" content="2020-05-17T13:59:46+05:30" />
+<meta property="og:updated_time" content="2020-05-24T11:13:57+05:30" />
 <meta itemprop="name" content="Yuvi Panda">
 <meta itemprop="description" content="Blog of Yuvi Panda"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Yuvi Panda"/>
@@ -102,6 +102,111 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/systemd-gui-applications/">systemd gui applications</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-03-29 </span>
+      
+        <span class="more-meta"> 667 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p><strong>Update</strong>: There&rsquo;s a <a href="//words.yuvi.in/post/systemd-simple-containment/">follow-up post</a> with a simpler solution now.</p>
+<p>Ever since I read <a href="https://blog.jessfraz.com">Jessie Frazelle</a>&lsquo;s amazing setup (<a href="https://blog.jessfraz.com/post/ultimate-linux-on-the-desktop/">1</a>, <a href="https://blog.jessfraz.com/post/docker-containers-on-the-desktop/">2</a>, <a href="https://blog.jessfraz.com/post/runc-containers-on-the-desktop/">3</a>) for running GUI applications in docker containers, I&rsquo;ve wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&rsquo;m also not as awesome (or knowledgeable!) as Jess, so will have to naturally settle for less&hellip;</p>
+<p>So I am doing it in systemd!</p>
+<p>Before proceeding, I want to warn y&rsquo;all that I don&rsquo;t entirely know what I am doing. Don&rsquo;t take any of this as security advice, since I don&rsquo;t entirely understand X&rsquo;s security model. Works fine for me though!</p>
+<h2 id="gui-applications-">GUI applications</h2>
+<p>I started out using a simple systemd <a href="https://fedoramagazine.org/systemd-template-unit-files/">templated service</a> to launch GUI applications, but soon realized that <a href="https://www.freedesktop.org/software/systemd/man/systemd-run.html">systemd-run</a> is probably the better way. So I&rsquo;ve a simple script, <code>/usr/local/bin/safeapp</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
+</span><span class="cp"></span><span class="nb">exec</span> sudo systemd-run  <span class="se">\
+</span><span class="se"></span>    -p <span class="nv">CPUQuota</span><span class="o">=</span>100% <span class="se">\
+</span><span class="se"></span>    -p <span class="nv">MemoryMax</span><span class="o">=</span>70% <span class="se">\
+</span><span class="se"></span>    -p <span class="nv">WorkingDirectory</span><span class="o">=</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span> <span class="se">\
+</span><span class="se"></span>    -p <span class="nv">PrivateTmp</span><span class="o">=</span>yes <span class="se">\
+</span><span class="se"></span>    -p <span class="nv">NoNewPrivileges</span><span class="o">=</span>yes <span class="se">\
+</span><span class="se"></span>    --setenv <span class="nv">DISPLAY</span><span class="o">=</span><span class="si">${</span><span class="nv">DISPLAY</span><span class="si">}</span> <span class="se">\
+</span><span class="se"></span>    --setenv <span class="nv">DBUS_SESSION_BUS_ADDRESS</span><span class="o">=</span><span class="si">${</span><span class="nv">DBUS_SESSION_BUS_ADDRESS</span><span class="si">}</span> <span class="se">\
+</span><span class="se"></span>    --uid <span class="si">${</span><span class="nv">USER</span><span class="si">}</span> <span class="se">\
+</span><span class="se"></span>    --gid <span class="si">${</span><span class="nv">USER</span><span class="si">}</span> <span class="se">\
+</span><span class="se"></span>    --quiet <span class="se">\
+</span><span class="se"></span>    <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>I can run <code>safeapp /opt/firefox/firefox</code> now and it&rsquo;ll start firefox inside a nice systemd unit with a 70% Memory usage cap and CPU usage of at most 1 CPU. There&rsquo;s also other minimal security stuff applied - <code>NoNewPrivileges</code> being the most important one. I want to get <code>ProtectSystem</code> + <code>ReadWriteDirectories</code> going too, but there seems to be a bug in <code>systemd-run</code> that doesn&rsquo;t let it parse <code>ProtectSystem</code> properly&hellip;</p>
+<p>Also, there&rsquo;s <a href="https://github.com/systemd/systemd/issues/3851">an annoying bug</a> in systemd v231 (which is what my current system has) - you can&rsquo;t set <code>CPUQuotas</code> over 100% (aka &gt; 1 CPU core). This is annoying if you want to give each application 3 of your 4 cores (which is what I want). Next version of Ubuntu has v232, so my GUI applications will just have to do with an aggregate of 1 full core until then.</p>
+<p>The two environment variables seem to be all that&rsquo;s necessary for X applications to work.</p>
+<p>And yes, this might ask you for your password. I&rsquo;ll clean this up into a nice non-bash script hopefully soon, and make all of these better.</p>
+<p>Anyway, <em>it works</em>! I can now open sketchy websites with scroll hijacking without fear it&rsquo;ll kill my machine!</p>
+<h2 id="cli-">CLI</h2>
+<p>I wanted each tab in my terminal to be its own systemd service, so they all get equitable amount of  CPU time &amp; can&rsquo;t crash machine by themselves with OOM.</p>
+<p>So I&rsquo;ve this script as <code>/usr/local/bin/safeshell</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="sb">`</span><span class="c1">#!/bin/bash</span>
+<span class="nb">exec</span> sudo systemd-run <span class="se">\
+</span><span class="se"></span>    -p <span class="nv">CPUQuota</span><span class="o">=</span>100% <span class="se">\
+</span><span class="se"></span>    -p <span class="nv">MemoryMax</span><span class="o">=</span>70% <span class="se">\
+</span><span class="se"></span>    -p <span class="nv">WorkingDirectory</span><span class="o">=</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span> <span class="se">\
+</span><span class="se"></span>    --uid yuvipanda <span class="se">\
+</span><span class="se"></span>    --gid yuvipanda <span class="se">\
+</span><span class="se"></span>    --quiet <span class="se">\
+</span><span class="se"></span>    --tty <span class="se">\
+</span><span class="se"></span>    /bin/bash -i
+</code></pre></td></tr></table>
+</div>
+</div><p>The <code>--tty</code> is magic here, and does the right things wrt passing the tty that GNOME terminal is passing in all the way to the shell. Now, my login command (set under profile preferences &gt; command in gnome-terminal) is <code>sudo /usr/local/bin/safeshell</code>. In addition, I add the following line to <code>/etc/sudoers</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">%sudo ALL = (root) NOPASSWD:SETENV: /usr/local/bin/safeshell
+</code></pre></td></tr></table>
+</div>
+</div><p>This + just specifying the username directly in <code>safeshell</code> are both hacks that make me cringe a little. I need to either fully understand how sudo&rsquo;s <code>-E</code> works, or use this as an opportunity to learn more Go and make a setuid binary.</p>
+<h2 id="to-do-">To do</h2>
+<p>[ ] Generalize this to not need hacks (either with better sudo usage or a setuid binary)
+[ ] Investigate adding more security related options.
+[ ] Make these work with desktop / dock icons.</p>
+<p>I&rsquo;d normally have just never written this post, on account of &lsquo;oh no, it is imperfect&rsquo; or something like that. However, that also seems to have come in the way of ability to find joy in learning simple things :D So I shall follow <a href="https://jvns.ca/">b0rk</a>&lsquo;s lead in spending time <a href="http://words.yuvi.in/post/things-to-learn/">learning</a> for fun again :)</p>
+
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/things-to-learn/">things to learn</a></h1>
@@ -402,31 +507,6 @@
   <div class="post-content">
     <div class="post-summary">
       <p><a href="http://www.lua.org/spe.html">http://www.lua.org/spe.html</a> is a pretty nice read!</p>
-
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/dns-servers-localhost-asynchronous-code/">DNS servers, localhost and asynchronous code</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2016-02-04 </span>
-      <div class="post-category">
-          <a href="/categories/code/"> code </a>
-          </div>
-        <span class="more-meta"> 225 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p><code>localhost</code> is always <code>127.0.0.1</code>, right? Nope, can also be <code>::1</code> if your system only has IPV6 (apparently).</p>
-<p>Asking a DNS server for an A record for <code>localhost</code> should give you back <code>127.0.0.1</code> right? Nope – it varies wildly! <code>8.8.8.8</code> gives me an <code>NXDOMAIN</code> which means it tells you straight up THIS DOMAIN DOES NOT EXIST! Which is true, since localhost isn’t a domain. But if you ask the same thing of any dnsmasq server, it’ll tell you localhost is 127.0.0.1. Other servers vary wildly – I found one that returned an <code>NXDOMAIN</code> for AAAA but 127.0.0.1 for A (which is pretty wild, since <code>NXDOMAIN</code> makes most software treat the domain as not existing and not attempt other lookups). So localhost and DNS servers don’t mix very well.</p>
-<p>But why is this a problem, in general? Most DNS resolution happens via <code>gethostbyname</code> libc call, which reads <code>/etc/hosts</code> properly, right? Problem there is that there is popular software that’s completely asynchronous (<em>cough_nginx_cough</em>) that does <em>not</em> use <code>gethostbyname</code> (since that’s synchronous) and directly queries DNS servers (asynchronously). This works perfectly well until you try to hit <code>localhost</code> and it tells you ‘no such thing!’.</p>
-<p>I should probably file a bug with nginx to have them read <code>/etc/hosts</code> as well, and in the mean-time work around by sending <code>127.0.0.1</code> to nginx rather than localhost.</p>
-<p>How did <em>your</em> thursday go?</p>
 
     </div>
   </div>

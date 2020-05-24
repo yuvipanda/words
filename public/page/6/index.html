@@ -45,7 +45,7 @@
 <meta property="og:description" content="Blog of Yuvi Panda" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/" />
-<meta property="og:updated_time" content="2020-05-17T13:59:46+05:30" />
+<meta property="og:updated_time" content="2020-05-24T11:13:57+05:30" />
 <meta itemprop="name" content="Yuvi Panda">
 <meta itemprop="description" content="Blog of Yuvi Panda"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Yuvi Panda"/>
@@ -102,6 +102,42 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/devlog-aug-24-2014/">DevLog for Aug 24, 2014</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-08-25 </span>
+      <div class="post-category">
+          <a href="/categories/devlog/"> devlog </a>
+          </div>
+        <span class="more-meta"> 290 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>Wooooo!</p>
+<ul>
+<li>Moved <a href="https://github.com/yuvipanda/labsbooks">labsbooks</a> (described in <a href="http://yuvi.in/blog/devlog-23-aug-2014/">yesterday’s devlog</a>) to use a shared readonly IPython virtualenv maintained by me. Also installed a bunch of modules people might want to use (SciPy, NumPy, Pandas, PyTables, matplotlib). Am considering just installing IPython notebook globally via puppet and using that, since that’ll enable users to just use the system packages. However, the version of IPython notebook from Ubuntu is ancient, so that’s probably a non-starter.</li>
+<li>Have a basic version of the IPython publishing process working! Any toollabs user can create a notebook by:
+<ul>
+<li>Creating a <code>~/notebooks</code> folder</li>
+<li>Doing a <code>chmod +x ~/notebooks</code></li>
+<li>Doing a <code>chmod +x ~</code></li>
+<li>Putting IPython notebooks into <code>~/notebooks</code> (as <code>.ipynb</code>) files</li>
+<li>Going to <code>https://tools.wmflabs.org/notebooks/&lt;user-shell-name&gt;/&lt;path-to-ipynb-file&gt;</code> Will have to do a bit more work before it can be considered ‘production grade’ (such as user pages, a nicer theme, etc, etc) BUT YAY GOOD START. It already caches the html output in Redis and invalidates with the <code>mtime</code> of the file, so should be pretty quick.</li>
+</ul>
+</li>
+<li>Made the ssh tunneling process for <code>labsbooks</code> purely python, without requiring the <code>ProxyCommand</code>. This makes things simpler (and more portable!). I’ll need to work on securing this properly before I can publish it for broader use.</li>
+<li>Wrote <a href="https://lists.wikimedia.org/pipermail/analytics/2014-August/002437.html">an email</a> to the analytics mailing list about making public the ‘edits per country’ data. I hope to make this publicly available with enough granularity that not just me but others can use this for fun research as well.</li>
+</ul>
+<p>I’ve been using <a href="https://atom.io">Atom</a> for puppet stuff, <a href="http://www.jetbrains.com/pycharm/">PyCharm</a> for Python and <a href="http://www.jetbrains.com/idea/">IntelliJ</a> for Java stuff, and that seems to be doing ok. They all have decent Vim keybindings as well, and good replacements for other functionality – and I might stick with Atom for a while to see how it goes :)</p>
+
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/devlog-23-aug-2014/">DevLog for 23 Aug 2014</a></h1>
@@ -360,105 +396,6 @@
 <li>Also did some code review on the Android app. It’s been chugging along quite happily these days :)</li>
 <li>Ran into a awake-when-he-should-not-have been <a href="http://blog.ironholds.org/">Oliver Keyes</a> and we have conspired to start some <a href="https://etherpad.wikimedia.org/p/flagellating-funnel">researchy</a> <a href="https://github.com/Ironholds/WPDMZ">things</a>. I cleaned up some of the python code, and am writing out things to do. This should be fun!</li>
 </ul>
-
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/english-translation-tamil-hip-hop-song/">English Translation of ‘Tamil Hip Hop’ song</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-07-15 </span>
-      <div class="post-category">
-          <a href="/categories/lol-culture/"> lol-culture </a>
-          </div>
-        <span class="more-meta"> 495 words </span>
-        <span class="more-meta"> 3 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p>This is a best effort translation of the song ‘<a href="https://www.youtube.com/watch?v=wK7shf-5soU">Clubbule Mabbule</a>‘ (Drunk in a Club) from Tamil to English.</p>
-<blockquote>
-<!-- raw HTML omitted -->
-</blockquote>
-<p>Fuck, get lost. This is modern culture, eh?
-If you call this westernization modern culture, 
-then this song is dedicated right for you.
-Hip hop tamizha, your Aaadheeee.</p>
-<p>Women roaming around drunk in clubs
-What the fuck is happening in Tamil Nadu
-I salute you all
-All your honor is flying away</p>
-<p>Women roaming around drunk in clubs
-What the fuck is happening in Tamil Nadu
-I salute you all
-All your honor is flying away</p>
-<p>Hi girls, first you say &lsquo;how are you?&rsquo;
-After knowing me for 10 months you say
-&lsquo;Who are you?&rsquo;
-Just three words &lsquo;I love you&rsquo;
-Don&rsquo;t you even know the meaning of that?</p>
-<p>Hey Sheena, Leena, Meena, Veena,
-Don&rsquo;t show off as knowing only little bits
-of tamil with a foreign accent,
-If you leave Tamil Nadu and go out,
-does not mean you have to forget your mother tongue Tamil</p>
-<p>Rohini, Yohini, Yamini, Kamini,
-Think they are hot but are actually funny,
-Don&rsquo;t blame men pointlessly,
-(He is looking at me only!) Why do you do this?</p>
-<p>Women roaming around drunk in clubs
-What the fuck is happening in Tamil Nadu
-I salute you all
-All your honor is flying away</p>
-<p>Women roaming around drunk in clubs
-What the fuck is happening in Tamil Nadu
-I salute you all
-All your honor is flying away</p>
-<p>I&rsquo;m not blaming all women,
-The deity who gave birth to me is also a woman.
-All the guys come to my side, 
-or these girls will spoil you as well</p>
-<p>Of 100, 50 are like these,
-Roaming around clubs drinking and smoking,
-From the time when women cooked nice food,
-OH MY GOD NOW THEY ARE SMOOKING GANJA WHAT A SHAME</p>
-<p>Women roaming around drunk in clubs
-What the fuck is happening in Tamil Nadu
-I salute you all
-All your honor is flying away</p>
-<p>Women roaming around drunk in clubs
-What the fuck is happening in Tamil Nadu
-I salute you all
-All your honor is flying away</p>
-<p>Pretty woman, with pretty eyes
-BUT SHE HAS ONE BOTTLE OF RUM!</p>
-<p>Pretty woman, with pretty eyes,
-BUT WITH RUM SHE HAS HALF A PACK OF CIGARETTES</p>
-<p>Pretty fairy, I don&rsquo;t need you,
-You are dancing heavily drunk.</p>
-<p>Gone are the times when women wore jewellery,
-Now they keep smoking everywhere.
-Instead of wearing sarees,
-THEY ARE WEARING HANDKERCHEIFS!</p>
-<p>Women roaming around drunk in clubs
-What the fuck is happening in Tamil Nadu
-I salute you all
-All your honor is flying away</p>
-<p>Women roaming around drunk in clubs
-What the fuck is happening in Tamil Nadu
-I salute you all
-All your honor is flying away</p>
-<p>Gone are the times when women wore jewellery,
-Now they keep smoking everywhere.
-Instead of wearing sarees,
-THEY ARE WEARING HANDKERCHEIFS!
-THEY ARE WEARING HANDKERCHEIFS!
-(Shows handkerchief for emphasis)<!-- raw HTML omitted --></p>
-<p>As far as I know, this is not satire.</p>
 
     </div>
   </div>

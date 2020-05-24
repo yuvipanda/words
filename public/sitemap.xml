@@ -2,6 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://words.yuvi.in/post/note-taking-ii-bookmarks/</loc>
+    <lastmod>2020-05-24T11:13:57+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/post/</loc>
+    <lastmod>2020-05-24T11:13:57+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/productivity/</loc>
+    <lastmod>2020-05-24T11:13:57+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/</loc>
+    <lastmod>2020-05-24T11:13:57+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/</loc>
+    <lastmod>2020-05-24T11:13:57+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/page/blogroll/</loc>
+    <lastmod>2020-05-18T12:42:58+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/tags/page/</loc>
+    <lastmod>2020-05-18T12:42:58+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/page/</loc>
+    <lastmod>2020-05-18T12:42:58+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/post/note-taking-part-i/</loc>
     <lastmod>2020-05-17T13:59:46+05:30</lastmod>
     <changefreq>weekly</changefreq>
@@ -10,34 +66,6 @@
   
   <url>
     <loc>http://words.yuvi.in/tags/personal/</loc>
-    <lastmod>2020-05-17T13:59:46+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/post/</loc>
-    <lastmod>2020-05-17T13:59:46+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/productivity/</loc>
-    <lastmod>2020-05-17T13:59:46+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/tags/</loc>
-    <lastmod>2020-05-17T13:59:46+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/</loc>
     <lastmod>2020-05-17T13:59:46+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
