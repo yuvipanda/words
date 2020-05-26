@@ -45,7 +45,7 @@
 <meta property="og:description" content="Blog of Yuvi Panda" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/" />
-<meta property="og:updated_time" content="2020-05-24T11:13:57+05:30" />
+<meta property="og:updated_time" content="2020-05-26T14:05:29+05:30" />
 <meta itemprop="name" content="Yuvi Panda">
 <meta itemprop="description" content="Blog of Yuvi Panda"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Yuvi Panda"/>
@@ -102,6 +102,33 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/devlog-26-27-aug-2014/">DevLog for 25 and 26 Aug 2014</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-08-27 </span>
+      <div class="post-category">
+          <a href="/categories/devlog/"> devlog </a>
+          </div>
+        <span class="more-meta"> 149 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>Not very code heavy</p>
+<ul>
+<li>Couple of pull requests(<a href="https://github.com/atom/autosave/pull/22">#1</a> and <a href="https://github.com/atom/autosave/pull/21">#2</a>) for the <a href="https://github.com/atom/autosave">Atom Autosave plugin</a>. One adds a preference to not autosave by when you are explicitly closing a window / pane, and the other just sets the ‘enabled’ preference to default. CoffeeScript isn’t too bad either! I should consider writing more plugins (I currently use Atom for CSS/JS/Puppet, should try other languages)</li>
+<li>Added CSV, TSV and JSON download options to Quarry. There’s another Webinar tomorrow by the Grantmaking team, and J-Mo asked for it. Streaming TSV and CSV implemented in a neat way, will write a blog post tomorrow about it.</li>
+<li>Started work on a ‘number of editors’ per country metric for WPDMZ, needs to be finished up.</li>
+</ul>
+<p>I feel a bit exhausted (physically and mentally) from the intense coding over the last few weeks, might have a few chill days to recharge myself. I’m growing old! :(</p>
+
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/devlog-aug-24-2014/">DevLog for Aug 24, 2014</a></h1>
@@ -365,36 +392,6 @@
 <li>Fixed annoying bug with mysql connections being reset in Quarry’s query runners after a few hours. I had fixed this earlier when I was using <code>pymysql</code> directly with reconnect(ping=True), and assumed that switching to <a href="http://www.sqlalchemy.org/">SQLAlchemy</a> would’ve fixed it for me automagically. <a href="http://docs.sqlalchemy.org/en/latest/faq.html#mysql-server-has-gone-away">Apparently not</a>. MySQL Y U SO BAD?</li>
 <li>I have <code>sudo</code> access on <code>labmon1001</code> in prod! First Wikimedia production cluster machine I have root on, and will spend time over the next few weeks setting it up to run graphite. Should be fun!</li>
 <li>Getting slightly better at packaging python things. Packaged <a href="https://github.com/sidnei/txstatsd">python-txstatsd</a> with no lintian errors, and only a couple warnings :)</li>
-</ul>
-
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/devlog-17-mon-2014/">DevLog for 17 Aug 2014</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-08-18 </span>
-      <div class="post-category">
-          <a href="/categories/devlog/"> devlog </a>
-          </div>
-        <span class="more-meta"> 395 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p>Devlogs again! Let’s see how long I can keep this one up.</p>
-<p>Been a whirlwind few months. I’m moving to the Wikimedia Ops team soon! The Wikipedia app has been released! Lots of excitement around, should do a bigger post sometime with details. This should just follow usual devlog format of stuff for the day</p>
-<ul>
-<li>Completed deployment of changing the results backend of <a href="https://quarry.wmflabs.org">Quarry</a> to SQLite. That was a fun exercise, and I should write about that separately. Still have some unicode issues left (mostly from the MySQL side) that I’ve hacked around for now.</li>
-<li>Quarry now uses a cron based query killer instead of relying on Celery. The day before I had force killed the celery deamons and this meant the query kill tasks didn’t run, leaving zombie queries behind. The simpler cron based killer won’t have this issue, since it’s super simple and does only one thing. The only reason I didn’t do this before was that I had not known about <code>SHOW PROCESSLIST</code> before (yes, I suck). It seems to be working fine now, but doesn’t kill superseeded queries immediately. Should be interesting to figure out how to get that done properly.</li>
-<li>I’ve started trying out <a href="https://atom.io">Atom</a> again. My previous attempt ended quickly when I ran into a bug which didn’t wrap text at all. A restart seems to have fixed that. The Vim keybindings are ‘ok’ – there’s no <code>hlsearch</code>, which is painful, but I can live with it. I prefer the fuzzy finder in it to Ctrl-P in Vim.</li>
-<li>Started working on making labs monitoring with graphite possible again. Our graphite / txstatsd roles weren’t meant to be run on trusty, so working on porting things to make sure they work fine on both. I’ve immensely come to appreciate ops over the last year or so, and am quite enjoying my work in that area :) I’ll probably be doing more of these over the next week, since Quarry has reached a nice state now and I await more usage before I spend more time on it.</li>
-<li>Also did some code review on the Android app. It’s been chugging along quite happily these days :)</li>
-<li>Ran into a awake-when-he-should-not-have been <a href="http://blog.ironholds.org/">Oliver Keyes</a> and we have conspired to start some <a href="https://etherpad.wikimedia.org/p/flagellating-funnel">researchy</a> <a href="https://github.com/Ironholds/WPDMZ">things</a>. I cleaned up some of the python code, and am writing out things to do. This should be fun!</li>
 </ul>
 
     </div>

@@ -45,7 +45,7 @@
 <meta property="og:description" content="Blog of Yuvi Panda" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/" />
-<meta property="og:updated_time" content="2020-05-24T11:13:57+05:30" />
+<meta property="og:updated_time" content="2020-05-26T14:05:29+05:30" />
 <meta itemprop="name" content="Yuvi Panda">
 <meta itemprop="description" content="Blog of Yuvi Panda"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Yuvi Panda"/>
@@ -102,6 +102,35 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/devlog-december-7-2011/">DevLog December 7, 2011</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2011-12-07 </span>
+      <div class="post-category">
+          <a href="/categories/devlog/"> devlog </a>
+          </div>
+        <span class="more-meta"> 125 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <ol>
+<li>Redid Blog template. Recategorized all blog posts</li>
+<li>Finally enabled mobile banking on ICICI. Still need 8 days for Internet activation. Sigh.</li>
+<li>Ordered HyperJuice 60W battery + Airline Adapter</li>
+<li>Read through the <a href="http://en.wikipedia.org/w/index.php?title=Template:WPBannerMeta">WPBannerMeta</a> template (and its subtemplates), figured out where to get the assessment markers in. Poof that was hard. These templates are perfect examples of ‘hacks’ – initially ‘designed’ for templating text, they’ve grown into homebrew programming languages that are worse than PHP. True evolution :)</li>
+<li>Read through, replied to <strong>very</strong> detailed questions about MW development from the KovaiGeeks folks. Both me and Sumanah were amazed at the enthusiasm shown. Should be one fun workshop!</li>
+<li>Fixed arbit bugs in in SelectionSifter, moved away from anything in QueryPage</li>
+<li>Started using SparrowApp and WunderList. Amazing they are.</li>
+</ol>
+
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/story-average-indian-techie/">Story of Average Indian ‘Techie’</a></h1>
@@ -799,30 +828,6 @@
 <p>We bought a fridge two days ago, and spent a day stocking it up. Perhaps it needs a bit more non-liquid content in it, but I think the choco fills and Dark Fantasy biscuits (not to mention the litres of Ice Cream we’ve stocked up on) would do just fine for now :)</p>
 <p>And before you start harping on about ‘health’ – the bottom tray has a mysterious cover full of apples shipped from Chennai by mom.</p>
 <!-- raw HTML omitted -->
-
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/non-ascii-characters-http-headers/">Non-ASCII Characters in HTTP Headers</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2011-08-13 </span>
-      <div class="post-category">
-          <a href="/categories/code/"> code </a>
-          </div>
-        <span class="more-meta"> 150 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p>I was debugging an issue <a href="http://interviewstreet.com">at work</a> today where a (generated) file refused to download in Chrome, but the same URL worked just fine with wget. I remember reading in the <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec2.html#sec2.2">HTTP Spec</a> that HTTP headers can only be lower ASCII, so when wget mangled the output file’s name, the problem was obvious – the file name contained a character that wasn’t in lower ASCII (an accented A). Chrome had borked on encountering it, while wget soldiered on. Using <code>iconv</code> to strip non-ASCII characters in the file name on the server side fixed the issue.</p>
-<p>Moral of the story? Read the RFCs! The <a href="http://www.w3.org/Protocols/rfc2616/rfc2616.html">HTTP one</a>, in particular, is remarkably readable and you <em>should</em> read it if you’re doing non-trivial Web Development.</p>
-<p>P.S: If I had had time, I’d have went around testing this behavior in several user agents and documenting their behavior (and possibly submitting bug reports) – but <!-- raw HTML omitted -->.</p>
-<p> </p>
 
     </div>
   </div>

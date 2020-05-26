@@ -2,35 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://words.yuvi.in/post/note-taking-ii-bookmarks/</loc>
-    <lastmod>2020-05-24T11:13:57+05:30</lastmod>
+    <loc>http://words.yuvi.in/post/note-taking-why/</loc>
+    <lastmod>2020-05-26T14:05:29+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://words.yuvi.in/post/</loc>
-    <lastmod>2020-05-24T11:13:57+05:30</lastmod>
+    <lastmod>2020-05-26T14:05:29+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://words.yuvi.in/tags/productivity/</loc>
-    <lastmod>2020-05-24T11:13:57+05:30</lastmod>
+    <lastmod>2020-05-26T14:05:29+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://words.yuvi.in/tags/</loc>
-    <lastmod>2020-05-24T11:13:57+05:30</lastmod>
+    <lastmod>2020-05-26T14:05:29+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://words.yuvi.in/</loc>
+    <lastmod>2020-05-26T14:05:29+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/post/note-taking-ii-bookmarks/</loc>
     <lastmod>2020-05-24T11:13:57+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

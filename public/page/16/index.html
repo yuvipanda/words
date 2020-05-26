@@ -45,7 +45,7 @@
 <meta property="og:description" content="Blog of Yuvi Panda" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/" />
-<meta property="og:updated_time" content="2020-05-24T11:13:57+05:30" />
+<meta property="og:updated_time" content="2020-05-26T14:05:29+05:30" />
 <meta itemprop="name" content="Yuvi Panda">
 <meta itemprop="description" content="Blog of Yuvi Panda"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Yuvi Panda"/>
@@ -102,6 +102,30 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/non-ascii-characters-http-headers/">Non-ASCII Characters in HTTP Headers</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2011-08-13 </span>
+      <div class="post-category">
+          <a href="/categories/code/"> code </a>
+          </div>
+        <span class="more-meta"> 150 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>I was debugging an issue <a href="http://interviewstreet.com">at work</a> today where a (generated) file refused to download in Chrome, but the same URL worked just fine with wget. I remember reading in the <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec2.html#sec2.2">HTTP Spec</a> that HTTP headers can only be lower ASCII, so when wget mangled the output file’s name, the problem was obvious – the file name contained a character that wasn’t in lower ASCII (an accented A). Chrome had borked on encountering it, while wget soldiered on. Using <code>iconv</code> to strip non-ASCII characters in the file name on the server side fixed the issue.</p>
+<p>Moral of the story? Read the RFCs! The <a href="http://www.w3.org/Protocols/rfc2616/rfc2616.html">HTTP one</a>, in particular, is remarkably readable and you <em>should</em> read it if you’re doing non-trivial Web Development.</p>
+<p>P.S: If I had had time, I’d have went around testing this behavior in several user agents and documenting their behavior (and possibly submitting bug reports) – but <!-- raw HTML omitted -->.</p>
+<p> </p>
+
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/programmer-run-code-head/">You are a programmer if you can run code in your head</a></h1>
@@ -469,30 +493,6 @@
 <p>ALERT: If you are not interested in making a career in engineering, lack the confidence to do so, or you are very content with working for one of these three companies for reasons that are valid to you, you may stop reading this and go back to what you were doing before landing on this page.</p>
 </blockquote>
 <p>Thanks to <a href="http://shankarganesh.com">Shankar Ganesh</a> for pointing this out to me.</p>
-
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/my-new-canon-550d-from-flipkart/">My New Canon 550D from Flipkart</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2011-06-07 </span>
-      <div class="post-category">
-          <a href="/categories/personal/"> personal </a>
-          </div>
-        <span class="more-meta"> 173 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <!-- raw HTML omitted -->
-<p>I was finally able to order my <a href="http://www.flipkart.com/cameras/canon/itmczftxkzsprmvk?pid=camcvydjt4rff96g&amp;&amp;affid=yuvipandag">Canon 550D</a> from Flipkart. Their customer service was <strong>awesome</strong> – both on <a href="http://twitter.com/flipkart">twitter</a> (when the camera was out of stock) and via the phone after it was ordered. I ordered Cash on Delivery, and despite some minor issues with the delivery person (uhm, so I’m supposed to hand over 39k, <strong>and then</strong> open the box? What if I found a box of bricks?) – I got the camera within 3 working days of ordering it. Impressive. Flipkart is awesome :)</p>
-<p>I also got the <a href="http://www.flipkart.com/cameras/lenses/itmczyhazkk9uzvg?pid=acccx3sgep6yd7sw&amp;_l=zmivCgZMFx0bMwIECa6Cow--&amp;_r=r9BKq32uPQ7B1KhXaW5zZg--&amp;ref=ffeaeef8-5805-4e94-a60d-2e6ee69c9f36&amp;affid=yuvipandag">50mm 1.8</a> (underhanded practice by flipkart – they say free and then bump up the cost to match. Didn’t matter in this case since I was ordering it anyway, but definitely <em>not cool)<strong>.</strong></em> Incredible lens. I haven’t even tried on the Kit Lens yet – playing with the 50mm has been so much fun. Will review both camera and lens once I’ve played with it enough.</p>
-<p>Might renew <a href="http://flickr.com">my flickr</a> membership soon – tried <a href="http://500px.com">500px</a> but wasn’t good enough. Any other suggestions?</p>
 
     </div>
   </div>

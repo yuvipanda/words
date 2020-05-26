@@ -45,7 +45,7 @@
 <meta property="og:description" content="Blog of Yuvi Panda" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/" />
-<meta property="og:updated_time" content="2020-05-24T11:13:57+05:30" />
+<meta property="og:updated_time" content="2020-05-26T14:05:29+05:30" />
 <meta itemprop="name" content="Yuvi Panda">
 <meta itemprop="description" content="Blog of Yuvi Panda"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Yuvi Panda"/>
@@ -102,6 +102,36 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/devlog-17-mon-2014/">DevLog for 17 Aug 2014</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-08-18 </span>
+      <div class="post-category">
+          <a href="/categories/devlog/"> devlog </a>
+          </div>
+        <span class="more-meta"> 395 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>Devlogs again! Let’s see how long I can keep this one up.</p>
+<p>Been a whirlwind few months. I’m moving to the Wikimedia Ops team soon! The Wikipedia app has been released! Lots of excitement around, should do a bigger post sometime with details. This should just follow usual devlog format of stuff for the day</p>
+<ul>
+<li>Completed deployment of changing the results backend of <a href="https://quarry.wmflabs.org">Quarry</a> to SQLite. That was a fun exercise, and I should write about that separately. Still have some unicode issues left (mostly from the MySQL side) that I’ve hacked around for now.</li>
+<li>Quarry now uses a cron based query killer instead of relying on Celery. The day before I had force killed the celery deamons and this meant the query kill tasks didn’t run, leaving zombie queries behind. The simpler cron based killer won’t have this issue, since it’s super simple and does only one thing. The only reason I didn’t do this before was that I had not known about <code>SHOW PROCESSLIST</code> before (yes, I suck). It seems to be working fine now, but doesn’t kill superseeded queries immediately. Should be interesting to figure out how to get that done properly.</li>
+<li>I’ve started trying out <a href="https://atom.io">Atom</a> again. My previous attempt ended quickly when I ran into a bug which didn’t wrap text at all. A restart seems to have fixed that. The Vim keybindings are ‘ok’ – there’s no <code>hlsearch</code>, which is painful, but I can live with it. I prefer the fuzzy finder in it to Ctrl-P in Vim.</li>
+<li>Started working on making labs monitoring with graphite possible again. Our graphite / txstatsd roles weren’t meant to be run on trusty, so working on porting things to make sure they work fine on both. I’ve immensely come to appreciate ops over the last year or so, and am quite enjoying my work in that area :) I’ll probably be doing more of these over the next week, since Quarry has reached a nice state now and I await more usage before I spend more time on it.</li>
+<li>Also did some code review on the Android app. It’s been chugging along quite happily these days :)</li>
+<li>Ran into a awake-when-he-should-not-have been <a href="http://blog.ironholds.org/">Oliver Keyes</a> and we have conspired to start some <a href="https://etherpad.wikimedia.org/p/flagellating-funnel">researchy</a> <a href="https://github.com/Ironholds/WPDMZ">things</a>. I cleaned up some of the python code, and am writing out things to do. This should be fun!</li>
+</ul>
+
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/english-translation-tamil-hip-hop-song/">English Translation of ‘Tamil Hip Hop’ song</a></h1>
@@ -436,28 +466,6 @@ THEY ARE WEARING HANDKERCHEIFS!
     <div class="post-summary">
       <p><img src="https://pbs.twimg.com/media/BN2kt2HCMAA0_Z4.jpg" alt=""></p>
 <p>From <a href="https://twitter.com/chrisfrancis27/status/350617453526659072/photo/1">twitter</a></p>
-
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/write-once-debug-everywhere/">“Write once, attempt to debug everywhere”</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2013-12-15 </span>
-      <div class="post-category">
-          <a href="/categories/code/"> code </a>
-          </div>
-        <span class="more-meta"> 120 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p>“Write once, attempt to debug everywhere” is probably way more accurate than “Write once, run anywhere” – at least for GUI apps. There’s something rather special about ideas that are theoretically amazingly wonderful yet end up being a major pain in the butt when you try to put them in practice, isn’t it?</p>
-<p>The older <a href="https://play.google.com/store/apps/details?id=org.wikipedia">Wikipedia App</a> happened to be in <a href="http://phonegap.com/">PhoneGap</a>, and I consider it one of my biggest blunders to not have torn it down on day 0 and rewritten it in something saner. I once started writing a blog post for the <a href="https://blog.wikimedia.org">Wikimedia Blog</a> about why we switched from PhoneGap to native apps, but it was killed for having too much profanity in it :) Someday, perhaps.</p>
 
     </div>
   </div>
