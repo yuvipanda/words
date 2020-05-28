@@ -117,10 +117,8 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>Nothing new started. The UploadCampaigns <a href="https://gerrit.wikimedia.org/r/#/c/80782/">API patch</a> I <a href="http://yuvi.in/blog/devlog-for-sun-aug-25-2013/">talked about</a> yesterday was fixed and merged. I also helped merge some of <a href="http://marktraceur.info/">MarkTraceur&rsquo;s</a> JS cleanup patches to UploadWizard. And <a href="https://brionv.com/log/">Brion</a>&lsquo;s big <a href="https://gerrit.wikimedia.org/r/#/c/81139/">detail view patch</a> for Android Commons app. Also another cleanup/api <a href="https://gerrit.wikimedia.org/r/#/c/81162/">feature patch</a> to UploadWizard.</p>
 
-    </div>
   </div>
 </article>
 
@@ -138,14 +136,12 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <blockquote>
 <p>I don&rsquo;t understand how ad-blocking is even legal. It&rsquo;s like stealing – stealing content for free, IMHO there&rsquo;s no difference between stealing MP3s and news or any other content. There&rsquo;s some kind of user agreement between websites and its users – &ldquo;you can use our site for free, but you have to watch the ads&rdquo;. Adblock violates this agreement. The people responsible for this should be in prison, they&rsquo;re thieves. And I&rsquo;m pretty sure the time will come they will.</p>
 </blockquote>
 <p>From <a href="https://news.ycombinator.com/item?id=6276291">HN</a></p>
 <p>:D</p>
 
-    </div>
   </div>
 </article>
 
@@ -165,7 +161,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>DevLogs have been something I&rsquo;ve not been writing much of of late. Time to fix that!</p>
 <h2 id="wlm-android-app">WLM Android App</h2>
 <p>Spent some time <a href="http://lists.wikimedia.org/pipermail/wikilovesmonuments/2013-August/006249.html">reviving the WLM Android App</a>. Wasn&rsquo;t too hard, and am surprised at how well it still runs :) Some work still needed to update the <a href="https://github.com/wikimedia/WLMMobile/commit/113d9abf7b675b147ece3f2be005ef1b6ba0e4cf#assets/www/js/campaigns-data.js">templates</a> and other metadata to refer to WLM2013 rather than WLM2012 – but that should not be too hard. The fact that it is an issue at all is simply because I ripped out all the Campaign related APIs a few weeks ago with my UploadCampaign rewrite.</p>
@@ -177,7 +172,6 @@
 <p>Not bad for a lazy Sunday, eh?</p>
 <p><strong>Update</strong>: After not being able to sleep, I also submitted <a href="https://gerrit.wikimedia.org/r/#/c/80946/">a patch</a> to make phpcs pass for UploadWizard, and also fought with the UploadCampaigns API patch to have it (brokenly?) support continuing. Yay?</p>
 
-    </div>
   </div>
 </article>
 
@@ -195,14 +189,12 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>I&rsquo;ve been on the Internet since I was 14. And I don&rsquo;t remember a time when I did not have a computer – I think I got mine when I was 10. Growing up, writing code has always been a major part of me – my identity. I&rsquo;ve never quite managed to separate &lsquo;me&rsquo; from &lsquo;my code&rsquo; – despite mouthing off the soundbite &lsquo;You are not your code!&rsquo; to plenty of people.</p>
 <p>After Wikimania 2013, I spent a week in Hong Kong. The first few days were rough, but after that – it was amazing. For the first time I could imagine, I had completely managed to not think about code at all! I had my laptop locked in a locker somewhere, and didn&rsquo;t even bother getting to it. I didn&rsquo;t feel the burning urge to make a commit. The feeling of guilt that keeps gnawing at you from the back of the head &lsquo;teehee you have been so unproductive today!'.</p>
 <p>That was a rather great feeling. Put things into a little bit more perspective. A step towards separating my identity from my code. I gave up on my GitHub streaks after that. I&rsquo;ll probably also be less of a codeaholic.</p>
 <p>I could write about &lsquo;oh my god, this was amazing!&rsquo; and detail where I travelled in Hong Kong, but I think what was far more fascinating was <em>how</em>. I did not feel in a hurry. Did not feel like having to &lsquo;tick all boxes&rsquo; before leaving. Just… actually relaxing. And doing whatever.</p>
 <p>Vacations are good :)</p>
 
-    </div>
   </div>
 </article>
 
@@ -221,13 +213,11 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>Python&rsquo;s <a href="http://www.python.org/dev/peps/pep-0008/">PEP8</a> has just been <a href="http://hg.python.org/peps/rev/fb24c80e9afb">changed</a> to no longer recommend sticking to 79 columns! The new text says:</p>
 <pre><code>Aim to limit all lines to a maximum of 79 characters, but up to 99 characters is acceptable when it improves readability.
 </code></pre>
 <p>It would be nice to not have any such set limits at all, and just depend on programmers not being insane, but this is still an improvement!</p>
 
-    </div>
   </div>
 </article>
 
@@ -246,7 +236,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>After being frustrated at Java&rsquo;s lack of a generic &lsquo;callback&rsquo; type, I created this interface:</p>
 <pre><code>    public interface ContributionUploadProgress {
         void onUploadStarted(Contribution contribution);
@@ -259,7 +248,6 @@
 <p>This, of course, is trivial to fix with an IDE. Should be more fun with a dynamic language :)</p>
 <p>(And yes, I removed that code before committing)</p>
 
-    </div>
   </div>
 </article>
 
@@ -279,10 +267,8 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>Someone pointed out <a href="https://gerrit.wikimedia.org/r/#/c/76342/4/wmf-config/InitialiseSettings.php">this</a> happening on Gerrit…</p>
 
-    </div>
   </div>
 </article>
 
@@ -301,11 +287,9 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>I&rsquo;m on my <a href="https://github.com/yuvipanda">longest</a> GitHub Streak this year – currently 20 days (was previously 18 days). That means I&rsquo;ve had at least one commit (though usually more!) each day for the last 20 days. Sounds much easier than it actually is. Wanting to keep my streak unbroken is also making me write more diverse code – I think those 20 days feature code in Javascript, Python, Java, PHP and Python. It&rsquo;s also distributed across a lot of projects – at least 8-9 different ones on last count. Streaks are helping me a fair bit! Getting the first commit of the day is the hardest – seems to get easier to keep things after.</p>
 <p>So I&rsquo;ve beat my previous streak length for this year (18 days). Next step would be to get over the awesome/scarily productive <a href="https://github.com/legoktm">legoktm</a>&lsquo;s longest streak (29 days). Eventual goal would be to match <a href="https://github.com/atdt">ori-l</a> at some point in productivity.</p>
 
-    </div>
   </div>
 </article>
 
@@ -324,11 +308,9 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>Ran across a video explaining <a href="https://www.youtube.com/watch?v=a9xAKttWgP4">building Game of Life in APL</a>. Pretty awesome, and surprisingly – quite understandable too!</p>
 <p>I should learn <a href="http://www.jsoftware.com/">J</a> at some point, I think. My problem with trying to learn such languages is that I find it hard to find something to build that&rsquo;s not a mere academic exercise, and I still do not have a solution as such. Just &lsquo;try harder&rsquo; doesn&rsquo;t really work. Perhaps invent some sort of wonderful number crunching idea and then implement it?</p>
 
-    </div>
   </div>
 </article>
 
@@ -347,14 +329,12 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>Presenting, the <a href="http://www.w3cindia.in/HTML5-tour-2013/index.html">W3C India website</a>, <em>apparently</em> from 2013. Funniest bit was probably:</p>
 <blockquote>
 <p>Best view in IE 9+, latest version of chrome, mozilla, opera and safari.</p>
 </blockquote>
 <p>Number of interactions with <a href="http://cdac.in/">CDAC</a> that have given me faith in any semblance of their competence: 0</p>
 
-    </div>
   </div>
 </article>
 
@@ -429,6 +409,17 @@
   </script>
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
 
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-110578237-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 

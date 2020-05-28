@@ -116,7 +116,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>Inspired by conversations with <a href="https://github.com/bollwyvl">Nick Bollweg</a> and
 <a href="http://matthewrocklin.com/">Matt Rocklin</a>, I experimented with using
 <a href="https://github.com/conda/constructor">conda constructor</a> as the installer for
@@ -170,7 +169,6 @@ that downloads miniconda, &amp; bootstraps from there to a full JupyterHub insta
 Things like systemd units &amp; sudo rules are managed by a <a href="https://github.com/yuvipanda/the-littlest-jupyterhub/tree/9cc05a9d627515a01b68e244a970079481be7d9e/tljh">python module</a>
 that is called from the bootstrap script.</p>
 
-    </div>
   </div>
 </article>
 
@@ -189,7 +187,6 @@ that is called from the bootstrap script.</p>
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>This idea comes from brainstorming along with <a href="https://lindseyjh.ca/">Lindsey
 Heagy</a>, <a href="https://www.willingconsulting.com/">Carol
 Willing</a>, <a href="https://github.com/betatim">Tim
@@ -290,7 +287,6 @@ distribution embraces its constraints &amp; does well!</p>
 hear from you! Make an issue <a href="https://github.com/yuvipanda/the-littlest-jupyterhub">on GitHub</a>,
 <a href="https://twitter.com/yuvipanda">tweet at me</a>, or send me <a href="mailto:yuvipanda@gmail.com">an email</a>.</p>
 
-    </div>
   </div>
 </article>
 
@@ -309,7 +305,6 @@ hear from you! Make an issue <a href="https://github.com/yuvipanda/the-littlest-
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>Recently I had to write some code that had to call the kubernetes API directly,
 without any language wrappers. While there is pretty good <a href="https://kubernetes.io/docs/reference/">reference docs</a>,
 I didn&rsquo;t want to go and construct all the JSON manually in my programming language.</p>
@@ -377,7 +372,6 @@ want to execute.</p>
 <li><a href="https://kubernetes.io/docs/reference/kubectl/cheatsheet/">Terse but useful official documentation</a></li>
 </ol>
 
-    </div>
   </div>
 </article>
 
@@ -396,7 +390,6 @@ want to execute.</p>
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>I haven&rsquo;t done a &lsquo;year in retrospective&rsquo; publicly for a long time, but after reading
 Alice Goldfuss&rsquo; <a href="http://blog.alicegoldfuss.com/2017-year-in-review/">2017 year in review</a> decided
 to do one for me too!</p>
@@ -596,7 +589,6 @@ This has had a lot of good cascading changes.</li>
 </ul>
 <p>&lsquo;18!</p>
 
-    </div>
   </div>
 </article>
 
@@ -612,7 +604,6 @@ This has had a lot of good cascading changes.</li>
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p><img src="https://imgs.xkcd.com/comics/standards.png" alt="https://xkcd.com/927/"></p>
 <p>The wonderful <a href="https://twitter.com/GrahamDumpleton">Graham Dumpleton</a> asked <a href="https://twitter.com/GrahamDumpleton/status/936740552304836608">on twitter</a> why we built an entirely new tool (<a href="https://github.com/jupyter/repo2docker">repo2docker</a>) instead of using OpenShift&rsquo;s cool <a href="https://github.com/openshift/source-to-image">source2image</a> tool.</p>
 <p>This is a very good question, and not a decision we made lightly. This post lays out some history, and explains the reasons we decided to stop using s2i. s2i is still a great tool for most production use cases, and you should use it if you&rsquo;re building anything like a PaaS!</p>
@@ -654,7 +645,6 @@ This has had a lot of good cascading changes.</li>
 <p>S2I was great for generating a best-practices production container that runs one thing and does it well, but for binder we wanted to generate container images that captured complex environments without regard to what can run in them. Forcing s2i to do what we wanted seemed like trying to get a square peg into a round hole.</p>
 <p><em>Thanks to Chris Holgraf, MinRK and Carol Willing for helping read, reason about and edit this blog post</em></p>
 
-    </div>
   </div>
 </article>
 
@@ -670,7 +660,6 @@ This has had a lot of good cascading changes.</li>
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>I was at <a href="http://maintainerati.org/">maintainerati</a> today, which was super fun &amp; quite intense! I highly appreciate GitHub &amp; the individuals involved in making it happen!</p>
 <p>Here&rsquo;s my key takeaways from this (and several other conversations over the last few weeks leading up to this):</p>
 <ol>
@@ -681,7 +670,6 @@ This has had a lot of good cascading changes.</li>
 </ol>
 <p>It was also great to go to a short, well organized (un)conference targeted at diverse group of people who are still like me in some sense! Would go again, A+++!</p>
 
-    </div>
   </div>
 </article>
 
@@ -697,7 +685,6 @@ This has had a lot of good cascading changes.</li>
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>I&rsquo;ve been reading <a href="http://dataintensive.net/">Designing Data Intensive Applications</a> book &amp; am using this post to keep notes!</p>
 <p>I&rsquo;ve picked up ideas on scaling systems through the years, but never actually sat down to actually study them semi-formally. This seems like a great start to it!</p>
 <p>It&rsquo;s a pretty big book, and it&rsquo;s gonna take me a while to go through it :) Will update these notes as I go! Trying to do a chapter a week!</p>
@@ -763,7 +750,6 @@ Alan Kay, in <a href="www.drdobbs.com/architecture-and-design/interview-with-ala
 <p><strong>Evolvability</strong></p>
 <p>If your software is simple &amp; has good abstractions, you can change it over time without wanting to pull all your hair out.</p>
 
-    </div>
   </div>
 </article>
 
@@ -779,7 +765,6 @@ Alan Kay, in <a href="www.drdobbs.com/architecture-and-design/interview-with-ala
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>Following a trail from a <a href="http://jvns.ca/blog/2017/04/17/statistics-for-programmers/">wonderful Julia Evans post</a> led me to Allen Downey&rsquo;s nice <a href="http://greenteapress.com/wp/textbook-manifesto/">textbook manifesto</a>. Also led me to the nice <a href="http://greenteapress.com/thinkos/index.html">Think OS</a> book, which seems like a super nice introduction to Operating System principles.</p>
 <p>It is short enough (~100 pages) that I wanted to read through it. I&rsquo;ve spent a good chunk of time absorbing how Operating Systems work by dint of diving into things and working through them, but it would be nice to get a refresher on the basics. There are clearly basic things I do not understand, and this seemed like a good way to explore.</p>
 <p>This post is just a running series of notes from me reading it on a nice saturday morning.</p>
@@ -862,7 +847,6 @@ Address of p      is 0x5598fc85b010
 <h2 id="tbc-">tbc</h2>
 <p>I didn&rsquo;t have time to finish it all, unfortunately. But shall come back to it whenever I can!</p>
 
-    </div>
   </div>
 </article>
 
@@ -878,7 +862,6 @@ Address of p      is 0x5598fc85b010
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>I am trying to understand SELinux and AppArmor, and collecting resources here as I learn. k</p>
 <h2 id="selinux-for-mere-mortals-2014">SELinux for mere mortals (2014)</h2>
 <!-- raw HTML omitted -->
@@ -900,7 +883,6 @@ Address of p      is 0x5598fc85b010
 <p>The biggest thing against SELinux it talks about seems to be &lsquo;SELinux is complex&rsquo;, and not much else. I don&rsquo;t know how much I buy that - but then again, I haven&rsquo;t actually <em>used</em> SELinux anywhere :D</p>
 <p>Unlike SELinux, I can actually see AppArmor rules on my local machine (since it is running Ubuntu). Seems fairly readable!</p>
 
-    </div>
   </div>
 </article>
 
@@ -916,7 +898,6 @@ Address of p      is 0x5598fc85b010
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>This is a running list of things I want to build!</p>
 <p>There&rsquo;s an analogous running list of <a href="http://words.yuvi.in/post/things-to-learn/">things I want to learn</a>. Things move between them :) I also have higher standards of documentation (other people should be able to use it) before marking these as complete.</p>
 <ul>
@@ -933,7 +914,6 @@ Written for pedagogy and personal understanding rather than production use.</p>
 </li>
 </ul>
 
-    </div>
   </div>
 </article>
 
@@ -1008,6 +988,17 @@ Written for pedagogy and personal understanding rather than production use.</p>
   </script>
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
 
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-110578237-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 

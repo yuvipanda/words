@@ -114,7 +114,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>I was in a conversation about the Python GIL with friends a few days ago, and realized that my understanding of the specifics of the GIL problem were super hand-wavy &amp; unstructured. So I spent some time collecting resources to learn more, and now have a better understanding!</p>
 <h4 id="pythons-infamous-gil-larry-hastings">Python&rsquo;s Infamous GIL (Larry Hastings)</h4>
 <p>This was a <em>great</em> introduction to the history of the GIL, why it was necessary &amp; reasons why getting rid of it is complicated.</p>
@@ -145,7 +144,6 @@
 <!-- raw HTML omitted -->
 <p>It seems to have had a lot of intense work done on it, and the wall clock time graph in it warms my heart! I&rsquo;ve a little more hope now than I did after the 2016 talk :D</p>
 
-    </div>
   </div>
 </article>
 
@@ -161,7 +159,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>I earlier had <a href="http://words.yuvi.in/post/systemd-gui-applications/">a vaguely working setup</a> for making sure browsers, shells and other applications don&rsquo;t eat all RAM / CPU on my machine with systemd + sudo + shell scripts.</p>
 <p>It was a hacky solution, and also had complications when used to launch shells. It wasn&rsquo;t passing in all the environment varialbes it should, causing interesting-to-debug issues. <code>sudo</code> rules were complex, and hard to do securely.</p>
 <p>I had also been looking for an excuse to learn more Golang, so I ended up writing <a href="https://github.com/yuvipanda/systemd-simple-containment"><code>systemd-simple-containment</code></a> or <code>ssc</code>.</p>
@@ -177,7 +174,6 @@
 <p>My Gnome Terminal shell command is now <code>ssc -isolation=relaxed /bin/bash -i</code> and it works great :)</p>
 <p>I am pretty happy with <code>ssc</code> as it exists now. Only thing I now want to do is to be able to use it from the GNOME launcher (I am using GNOME3 with gnome-shell). Apparently <em>shortcuts</em> are no longer cool and hence pretty hard to create in modern desktop environments :| I shall keep digging!</p>
 
-    </div>
   </div>
 </article>
 
@@ -193,7 +189,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p><strong>Update</strong>: There&rsquo;s a <a href="//words.yuvi.in/post/systemd-simple-containment/">follow-up post</a> with a simpler solution now.</p>
 <p>Ever since I read <a href="https://blog.jessfraz.com">Jessie Frazelle</a>&lsquo;s amazing setup (<a href="https://blog.jessfraz.com/post/ultimate-linux-on-the-desktop/">1</a>, <a href="https://blog.jessfraz.com/post/docker-containers-on-the-desktop/">2</a>, <a href="https://blog.jessfraz.com/post/runc-containers-on-the-desktop/">3</a>) for running GUI applications in docker containers, I&rsquo;ve wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&rsquo;m also not as awesome (or knowledgeable!) as Jess, so will have to naturally settle for less&hellip;</p>
 <p>So I am doing it in systemd!</p>
@@ -282,7 +277,6 @@
 [ ] Make these work with desktop / dock icons.</p>
 <p>I&rsquo;d normally have just never written this post, on account of &lsquo;oh no, it is imperfect&rsquo; or something like that. However, that also seems to have come in the way of ability to find joy in learning simple things :D So I shall follow <a href="https://jvns.ca/">b0rk</a>&lsquo;s lead in spending time <a href="http://words.yuvi.in/post/things-to-learn/">learning</a> for fun again :)</p>
 
-    </div>
   </div>
 </article>
 
@@ -298,7 +292,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>Keeping a running list of things I want to learn!</p>
 <p>There&rsquo;s also a list of <a href="http://words.yuvi.in/post/things-to-learn/">things I want to build</a>.</p>
 <ul>
@@ -326,7 +319,6 @@
 </ul>
 <p>If you know of resources that&rsquo;ll help me learn these things, do let me know!</p>
 
-    </div>
   </div>
 </article>
 
@@ -342,11 +334,9 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>I&rsquo;m attempting to now blog at <a href="http://words.yuvi.in">http://words.yuvi.in</a>, using <a href="https://gohugo.io/">hugo</a> rather than wordpress.</p>
 <p>Over the last few years, IRC, Twitter &amp; WhatsApp have ruined my public writing. I shall now slowly attempt to bring that back :)</p>
 
-    </div>
   </div>
 </article>
 
@@ -362,7 +352,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <!-- raw HTML omitted -->
 <p>I ran into this thought provoking though when randomly attempting to relax this weekend. There&rsquo;s a summary at <a href="https://lwn.net/Articles/712376/">LWN</a> if you do not want to watch the talk - but as the lwn summarizer admits, the video definitely conveys things that are hard to capture on text.</p>
 <p>The core takeaway for me is to think about:</p>
@@ -371,7 +360,6 @@
 </blockquote>
 <p>This seems somehow connected to &lsquo;democratizing programming&rsquo;, which I had earlier given a <a href="https://www.youtube.com/watch?v=rEyqVXzCJJc">talk about</a>. Somehow, it feels like there needs to be an update / rebirth of the <a href="https://www.gnu.org/philosophy/free-sw.en.html">GNU Freedoms</a> for the world we live in.</p>
 
-    </div>
   </div>
 </article>
 
@@ -387,7 +375,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>I went to the protests at SFO last weekend. It was the first real set of protests I&rsquo;ve been to. I write this to attempt to capture a sliver of what I felt that day.</p>
 <p>I was there for about 10h on day 1, and came home exhausted. I went back on Day 2, and this time stayed for much shorter period of time (~4h?) before heading back home.</p>
 <p>To everyone who was at the protest even if it does not directly affect you yet - <em>thank you</em>!</p>
@@ -405,7 +392,6 @@
 </blockquote>
 <p><em>- from a sign at the protest</em></p>
 
-    </div>
   </div>
 </article>
 
@@ -421,7 +407,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>I&rsquo;ve unfollowed everyone I follow on Twitter, and am slowly starting back up from scratch. I&rsquo;m only going to follow people who are:</p>
 <ol>
 <li>Underrepresented people in Tech (as broadly construed)</li>
@@ -433,7 +418,6 @@
 <p>h/t to <a href="http://www.gaijin.com/">Jorm</a> for the idea of targetted following!</p>
 <p><strong>Update</strong>: I&rsquo;ve also setup <a href="https://addons.mozilla.org/en-US/firefox/addon/leechblock/">LeechBlock</a> to only allow me 5mins of Twitter every 2h, and I don&rsquo;t have the twitter app on my phone. I wish there was a leechblock type thing for my Phone tho.</p>
 
-    </div>
   </div>
 </article>
 
@@ -451,7 +435,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>I’ve started taking a Coursera class on <a href="https://www.coursera.org/learn/types-of-conflict/">Conflicts</a> from UCI.</p>
 <p>Just dumping notes from me going through the video lectures here. I’ve a bunch more videos to go through for Week 1, but dumping what I have for now.</p>
 <p>Types of Conflict:</p>
@@ -498,7 +481,6 @@
 <p>Positive conflict can raise the bar, for things that other people did not think are possible.</p>
 <p>For destructive conflict, figure out when is the right time to discuss it.</p>
 
-    </div>
   </div>
 </article>
 
@@ -516,7 +498,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p><em>Note: I’m trying to spend time explicitly writing random side projects that are not related to what I’m actively working on as my main project in some form.</em></p>
 <p>A random thread started by <a href="https://twitter.com/quominus">Ironholds</a> on a random mailing list I was wearily catching up on contained a joke from <a href="https://twitter.com/bearloga">bearloga</a> about malformed User Agents. This prompted me to write <a href="https://addons.mozilla.org/en-US/firefox/addon/uauliver/?src=search">UAuliver</a> (<a href="https://github.com/yuvipanda/uauliver-firefox-extension">source</a>), a Firefox extension that randomizes your user agent to be a random string of emoji. This breaks a surprisingly large number of software, I’m told! (GMail &amp; Gerrit being the ones I explicitly remember)</p>
 <p>Things I learnt from writing this:</p>
@@ -528,7 +509,6 @@
 </ol>
 <p>It was a fun exercise, and I might write more Firefox extensions in the future!</p>
 
-    </div>
   </div>
 </article>
 
@@ -603,6 +583,17 @@
   </script>
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
 
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-110578237-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 

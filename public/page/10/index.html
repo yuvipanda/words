@@ -118,11 +118,9 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>My <a href="https://mediawiki.org/wiki/User:Yuvipanda/Campaigns_namespace_proposal">UploadWizard work</a> has just been deployed to <a href="https://commons.wikimedia.org">Wikimedia Commons</a> and my name is listed in the on site <a href="https://commons.wikimedia.org/wiki/Special:Version">credits</a>. Special thanks to <a href="http://marktraceur.info/">Mark Traceur</a> for code review!</p>
 <p>This feels very, <em>very</em> nice :) Now to sneak more code into other extensions…</p>
 
-    </div>
   </div>
 </article>
 
@@ -141,11 +139,9 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>First there was <a href="https://gerrit.wikimedia.org/r/#/c/74079/">this</a>.</p>
 <p>I was bored, and so there was <a href="https://gerrit.wikimedia.org/r/#/c/75056/">this</a>. That of course, brought a swift end to the bikeshed. I&rsquo;m only <em>slightly</em> ashamed.</p>
 
-    </div>
   </div>
 </article>
 
@@ -163,10 +159,8 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p><a href="http://www.fullmoon.nu/articles/art.php?id=tal">Talking to God</a> is an interesting piece about apparent &lsquo;dangers&rsquo; of knowledge and the necessary side effects of evolution. Thought provoking.</p>
 
-    </div>
   </div>
 </article>
 
@@ -186,7 +180,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>When running <a href="http://redis.io/">Redis</a> in a shared cluster/hosting environment (such as <a href="https://wikitech.wikimedia.org/wiki/Nova_Resource:Tools/Help">Wikimedia Tool Labs</a>, on which I&rsquo;ve been having fun doing a lot of work on), you would want to try to provide at least <em>some</em> guarantee of isolation for your keys from everyone else&rsquo;s keys. Since Redis doesn&rsquo;t do ACLs, this is problematic.</p>
 <p>This can be solved in a couple of ways</p>
 <h2 id="run-a-redis-instance-for-each-user">Run a Redis instance for each user</h2>
@@ -227,7 +220,6 @@
 <h2 id="fun">Fun</h2>
 <p>This has now been deployed on toollabs for a month or so, and I&rsquo;ve a couple of fun tools already written using it (and other people too). We had a patched memcached server we had that we&rsquo;ll kill in a few weeks, so people who used memcached before are also migrating to redis. And I was able to do all this without even having root! This is mostly thanks to the fact that we try to keep all our configuration in puppet (<a href="https://github.com/wikimedia/operations-puppet">Wikimedia&rsquo;s Puppet repository</a>) – for both our production cluster and for everything else. So I could re-use our production redis module, make changes to it, and build the new solution – all while being vetted by &lsquo;proper&rsquo; ops people (whom I dearly love and respect). Building infrastructure in such a collaborative manner is a lot of fun, and I think I&rsquo;m hooked. It&rsquo;s fun!</p>
 
-    </div>
   </div>
 </article>
 
@@ -245,11 +237,9 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>Ever since the death of <a href="https://en.wikipedia.org/wiki/Windows_Live_Writer">Windows Live Writer</a>, I’ve never managed to find a nice blog editor that I really liked and also worked fine. I had a nice Vim plugin that posted to wordpress for a while, but that seems to have stopped working. The WordPress interface itself is mostly fine, but still a fair bit ‘meh’.</p>
 <p><a href="http://tatiyants.com/introducing-platen-markdown-wordpress-editor-2/">Platen</a> is a markdown based editor that’s a Chrome Web Store app that looks cool so far. Let me see if it actually works.</p>
 
-    </div>
   </div>
 </article>
 
@@ -268,7 +258,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>Comedy Central has <a href="http://mib.nic.in/writereaddata/html_en_files/content_reg/ComedyCentral.pdf">been banned</a> in India for the next ten days. Reasons?</p>
 <blockquote>
 <p>Whereas, the programme showed a man performing an act of stand_up comedy and mouthing vulgar words accompanied by obscene and suggestive gesture and gyration. During his performance, the man was shown uttering dialogues denigrating women, indecently and crudely referred to sex organs of men-and women and the sing-song rendition by the man sought to pornographically describe .the male lust, depicting women as a commodify of sex. The portrayal appeared to deprave, corrupt and injure the public morality or morals</p>
@@ -276,7 +265,6 @@
 <p>By that logic, I suppose 90% of all Indian Movies (and especially songs) should be banned too.</p>
 <p>“Science progresses one funeral at a time” – Max Plank. Not just science….</p>
 
-    </div>
   </div>
 </article>
 
@@ -294,12 +282,10 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p><strong>Potential trigger warning</strong></p>
 <p>I keep trying to tell myself “People are not evil. They are just doing the best they can with what they have”. But then I’ve to read shit like <a href="http://www.quora.com/Arranged-Marriages/How-does-it-feel-to-have-sex-with-a-stranger-on-your-wedding-night">this</a>, and I’m not so sure anymore.</p>
 <p>Growing up to lose respect for people you considered heros is a horrible thing. Friends don’t let friends fall prey to emotional blackmail.</p>
 
-    </div>
   </div>
 </article>
 
@@ -318,13 +304,11 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <!-- raw HTML omitted -->
 <p>Screenshot of Autosuggest working in Tamil on <a href="http://github.com/wikimedia/aosp-morelangs-ime">my variant</a> of the Android keyboard. I’ve been working on this on and off for the last few months (this is also my final year project in college). I’ve ported all of the <a href="https://github.com/wikimedia/jquery.ime">jQuery.IME</a> languages to work on the keyboard natively.</p>
 <p>Now experimenting with Autosuggest. It only needs an appropriate dictionary now and we’ll be good to go. Currently I’m getting Autosuggest working only on Tamil, but the plan is to get it to work for all Indian languages. The method I am using (convert everything back to latin chars, then do autocorrect / autosuggest) means it should be trivial to extend to any transliteration based input method.</p>
 <p>Wheeee! This is very much a simple ‘celebratory’ post. Will blog actual details soon.</p>
 
-    </div>
   </div>
 </article>
 
@@ -343,7 +327,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>Not sure if you’ve noticed, but over the last few days Wikipedia has a new Favicon – featuring (<a href="https://github.com/wikimedia/operations-mediawiki-config/commit/3f8ee12b8429e0f37316edb7a161ec51e9ebfc47">according to the commit message</a>), “Multi-resolution, new render, rounded corners, <a href="https://en.wikipedia.org/wiki/User:Isarra">very confused and angry graphic designer</a>” :)</p>
 <p>New Favicon:</p>
 <p><a href="http://yuvi.in/blog/wp-content/uploads/2013/04/wiki-new-favicon.png"><!-- raw HTML omitted --></a></p>
@@ -351,7 +334,6 @@
 <p><a href="http://yuvi.in/blog/wp-content/uploads/2013/04/wikipedia-old-favicon.png"><!-- raw HTML omitted --></a></p>
 <p>Looks much nicer when not on a light background.</p>
 
-    </div>
   </div>
 </article>
 
@@ -369,7 +351,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p><strong>Potential trigger warning</strong></p>
 <blockquote>
 <p>Like if you ask three separate groups of Canadian households how much they’ll pay to save two thousand, twenty thousand, or two hundred thousand birds from dying in oil ponds, the three groups will respectively state that they’re willing to pay seventy-eight, eighty-eight, and eighty dollars. No difference, in other words. It’s called scope insensitivity. Your brain imagines a single bird struggling in an oil pond, and that image creates some amount of emotion that determines your willingness to pay. But no one can visualize even two thousand of anything, so the quantity just gets thrown straight out the window.</p>
@@ -385,7 +366,6 @@
 <p>As brion mentioned on IRC a while ago, us humans aren’t really doing that good, are we?</p>
 <p>I feel helpless and crushed. I am helpless and crushed. But not as much as the 20 kids who died in this country while I was writing this post.</p>
 
-    </div>
   </div>
 </article>
 
@@ -460,6 +440,17 @@
   </script>
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
 
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-110578237-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 

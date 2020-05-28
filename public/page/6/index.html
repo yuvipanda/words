@@ -116,7 +116,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>Let’s see. I’m also going to attempt to include patch links wherever possible.</p>
 <ul>
 <li>Cleaned up <code>session</code> handling bugs in Quarry. They were previously not closing properly, causing SQLAlchemy exceptions now and then that’ll let queries die in a ‘queued’ state. This should <em>hopefully</em> be fixed by <a href="https://gerrit.wikimedia.org/r/#/c/156909/">https://gerrit.wikimedia.org/r/#/c/156909/</a>.</li>
@@ -125,7 +124,6 @@
 </ul>
 <p>Might spend some more time with Hive over the next few days – figured out an approach for using it from Python, and it should be fun to do so!</p>
 
-    </div>
   </div>
 </article>
 
@@ -143,7 +141,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>Not very code heavy</p>
 <ul>
 <li>Couple of pull requests(<a href="https://github.com/atom/autosave/pull/22">#1</a> and <a href="https://github.com/atom/autosave/pull/21">#2</a>) for the <a href="https://github.com/atom/autosave">Atom Autosave plugin</a>. One adds a preference to not autosave by when you are explicitly closing a window / pane, and the other just sets the ‘enabled’ preference to default. CoffeeScript isn’t too bad either! I should consider writing more plugins (I currently use Atom for CSS/JS/Puppet, should try other languages)</li>
@@ -152,7 +149,6 @@
 </ul>
 <p>I feel a bit exhausted (physically and mentally) from the intense coding over the last few weeks, might have a few chill days to recharge myself. I’m growing old! :(</p>
 
-    </div>
   </div>
 </article>
 
@@ -170,7 +166,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>Wooooo!</p>
 <ul>
 <li>Moved <a href="https://github.com/yuvipanda/labsbooks">labsbooks</a> (described in <a href="http://yuvi.in/blog/devlog-23-aug-2014/">yesterday’s devlog</a>) to use a shared readonly IPython virtualenv maintained by me. Also installed a bunch of modules people might want to use (SciPy, NumPy, Pandas, PyTables, matplotlib). Am considering just installing IPython notebook globally via puppet and using that, since that’ll enable users to just use the system packages. However, the version of IPython notebook from Ubuntu is ancient, so that’s probably a non-starter.</li>
@@ -188,7 +183,6 @@
 </ul>
 <p>I’ve been using <a href="https://atom.io">Atom</a> for puppet stuff, <a href="http://www.jetbrains.com/pycharm/">PyCharm</a> for Python and <a href="http://www.jetbrains.com/idea/">IntelliJ</a> for Java stuff, and that seems to be doing ok. They all have decent Vim keybindings as well, and good replacements for other functionality – and I might stick with Atom for a while to see how it goes :)</p>
 
-    </div>
   </div>
 </article>
 
@@ -206,7 +200,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>Back in Glasgow! It was actually not very cold today, only cold! Progress.</p>
 <p>Started working on my long-abandoned <code>labsbook</code> project, which aims to make <a href="https://tools.wmflabs.org">Tool Labs</a> a first class environment for people who want to run (and publish) <a href="http://ipython.org/notebook.html">iPython Notebooks</a> while also being able to access the replica databases and the dumps. Doing this in a secure manner is kinda hard, but I think I’ve a neat solution that lets everyone run a personal iPython kernel on the Grid, access it from their local machine, and also publish it to the web from a standard location. So far, I’ve gotten my script to a point where it’ll setup an iPython environment for you if it doesn’t already exist, start the kernel if it isn’t already running, and tunnel the editing interface back to you to use! Things left to do include:</p>
 <ol>
@@ -225,7 +218,6 @@
 <p>Once this is done (I suspect tomorrow), I’ll work on getting the data from my work with <a href="https://github.com/Ironholds/WPDMZ">WPDMZ</a> into a form good enough for publicizing (removing ways of de-anonymization), and then use iPython notebooks to make graphs! This should be fun :)</p>
 <p>Source so far available <a href="https://github.com/yuvipanda/labsbooks">on Github</a>. Needs more work / documentation / cleaning up.</p>
 
-    </div>
   </div>
 </article>
 
@@ -243,7 +235,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>Was in Edinburgh again, missed writing it as I went along. Oh well.</p>
 <ul>
 <li>Ported the code for the Wikipedia Android app automated builds to Python, and you can see it in action at <a href="http://tools.wmflabs.org/wikipedia-android-builds/">http://tools.wmflabs.org/wikipedia-android-builds/</a> now. It lets you download the latest build, and notes the last successful build time. Good enough :) It was originally in bash, and porting it to python allowed me to create a ‘fake’ API (just JSON blobs written to known locations in the file system). Next step is to write a helper app</li>
@@ -251,7 +242,6 @@
 </ul>
 <p>That’s it!</p>
 
-    </div>
   </div>
 </article>
 
@@ -269,7 +259,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>In Edinburgh! I’ve finally stopped spelling it as Edinborough!</p>
 <ul>
 <li>Added ‘user group’ functionality to Quarry, and added a <code>sudo</code> user group that does what you would think it does. Will be assigned super, super sparingly.</li>
@@ -279,7 +268,6 @@
 <li>More DMZ work! Now running edits per country stats separated by mobile vs desktop for all countries for all wikipedias! EXCITING!</li>
 </ul>
 
-    </div>
   </div>
 </article>
 
@@ -297,7 +285,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>Woke up at 11AM again! w000t!</p>
 <ul>
 <li>Fixed a stupid bug in Quarry that made it fail if MySQL decided that a column you were selecting is a <code>Decimal</code>. Fixed this in time for…</li>
@@ -308,7 +295,6 @@
 <li>Also made some progress on our makeshift Android CI-ish build system for the Wikipedia app. Should be done soon.</li>
 </ul>
 
-    </div>
   </div>
 </article>
 
@@ -326,7 +312,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>Here we go again.</p>
 <ul>
 <li>Wrote <a href="http://yuvi.in/blog/simple-python-packaging-debian-ubuntu/">a small blog post</a> talking about how to package python packages as debian packages.</li>
@@ -336,7 +321,6 @@
 <li>Started doing some SQL about editors from different countries. Did you know that there are 2x as many edits to english wikipedia from India as from Germany? And that Wikidata has had 10x as many edits from Toollabs as from Germany (the largest contributing country)? I didn’t either! This is fun.</li>
 </ul>
 
-    </div>
   </div>
 </article>
 
@@ -354,7 +338,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>(As requested by <a href="https://twitter.com/JeanFred">Jean-Fred</a>)</p>
 <p>One of the ‘pain points’ with working on deploying python stuff at Wikimedia is that <code>pip</code> and <code>virtualenvs</code> are banned on production, for some (what I now understand as) good reasons (the solid Signing / Security issues with PYPI, and the slightly less solid but nonetheless valid ‘If we use pip for python and gem for ruby and npm for node, EXPLOSION OF PACKAGE MANAGERS and makes things harder to manage’). I was whining about how hard debian packaging was for quite a while without checking how easy/hard it was to package python specifically, and when I finally did, it turned out to be quite not that hard.</p>
 <p>Use <a href="https://pypi.python.org/pypi/stdeb">python-stdeb</a>.</p>
@@ -370,7 +353,6 @@
 <p>That’s pretty much it! Much simpler than I originally expected, and not much confusing / conflicting docs. The docs for <code>stdeb</code> are pretty nice and complete, so do read these!</p>
 <p>Will update the post as I learn more.</p>
 
-    </div>
   </div>
 </article>
 
@@ -388,13 +370,11 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>I’ve started paying for <a href="https://irccloud.com">IRCCloud</a>.</p>
 <p>It is the first ‘service’ I am paying for as a subscriber, I think. I’ve considered doing that for a long time, but ‘paying for IRC’ just felt… odd. I’ve been using <a href="http://wiki.znc.in/ZNC">ZNC</a> + <a href="http://limechat.net/mac/">LimeChat</a>. It’s decent, but sucks on Mobile. Keeping a socket open all the time on a phone just kills the battery, plus the UX on most Android clients sucks.</p>
 <p>So after seeing <a href="http://samsmith.io/">Sam Smith</a> use IRCCloud during Wikimania, I made the plunge and paid for IRCCloud. It is still connecting to my bouncer, so I have logs under my control. It also has a very usable Android client, and syncs ‘read’ status across devices, and is quite fast.</p>
 <p>Convenience and UX won over ‘Free Software’ this time.</p>
 
-    </div>
   </div>
 </article>
 
@@ -469,6 +449,17 @@
   </script>
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
 
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-110578237-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 

@@ -116,7 +116,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>This week on Cheese….</p>
 <ol>
 <li>Performance enhancements. Sacrificed some startup time for <strong>much</strong> improved usage time. Viewing live effects are now a snap. So is selecting an effect. We went in some cases from ~15s to &lt;1s. Thanks to Tester (and other folks) at #gstreamer for helping out :)</li>
@@ -129,7 +128,6 @@
 <p>As I type this, there are 6 blockers before we can make a release. Will make a post when we do a release, hopefully with a screencast too!</p>
 <p>Next week is kinda unpredictable – I’ll douse fires as they arise in the code (reported by people who hopefully test the release), and also work on reducing the length of items in the TODO.</p>
 
-    </div>
   </div>
 </article>
 
@@ -148,11 +146,9 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>I’ve joined <a href="http://universityofreddit.com/v2/">Reddit University</a>‘s <a href="http://universityofreddit.com/v2/class.php?id=57">SICP Reading Group</a> class. I’ve wanted to read through <a href="http://mitpress.mit.edu/sicp/full-text/book/book.html">SICP</a> for a long time, and have gotten started many times – never completed it. Maybe the group effects will help me finish this time :)</p>
 <p>If you’re interested in expanding your horizons beyond mere code-monkey programming, <a href="http://universityofreddit.com/v2/class.php?id=57">join up!</a></p>
 
-    </div>
   </div>
 </article>
 
@@ -170,7 +166,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>Late report. But I did get quite a bit done!</p>
 <p>Last week…</p>
 <ol>
@@ -188,7 +183,6 @@
 </ol>
 <p>Cya in a week, with a very-usable Cheese! I’ll post a screencast as soon as I’ve made Cheese a bit more sexy :)</p>
 
-    </div>
   </div>
 </article>
 
@@ -206,7 +200,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>Fourth week of the Summer of Code was over a few days back, and this report is overdue :( I’ve not been able to code as much as I wanted to this week – due to various non-technical issues. Will compensate in the next week.</p>
 <p>Last week…</p>
 <ol>
@@ -223,7 +216,6 @@
 </ol>
 <p>Here is to hoping the coming week turns out better than last one :)</p>
 
-    </div>
   </div>
 </article>
 
@@ -241,7 +233,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>Third week of the Summer of Code is over! And during this week….</p>
 <ol>
 <li>Successfully wrapped up the core cheese functionality (<code>libcheese</code>) with a vala wrapper</li>
@@ -268,7 +259,6 @@
 <li>How to use gdb. I’ve only cursorily used it before – but digging into it deeper now (thank you, segfault!)</li>
 </ol>
 
-    </div>
   </div>
 </article>
 
@@ -286,7 +276,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>Second week of the (rather hot and sweaty) Summer of Code is over! And during this week….</p>
 <ol>
 <li>Replicated most of the UI of Cheese</li>
@@ -313,7 +302,6 @@
 </ol>
 <p>On an unrelated note, my sleep cycle is totally messed up – I’ve been sleeping at 6 AM and waking up at 2 PM. Sunlight feels weird to me. I haven’t been able to do my biweekly bicycle rides :( I should also try to fix that before the end of next week.</p>
 
-    </div>
   </div>
 </article>
 
@@ -331,7 +319,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p>First week of official coding is over. What do I have to show for it?</p>
 <ol>
 <li>Moved code from Github to GNOME Git (Thanks fargiolas!)</li>
@@ -355,7 +342,6 @@
 <li>When you are stuck, STOP AND ASK FOR DIRECTIONS! (thanks fargiolas!)</li>
 </ol>
 
-    </div>
   </div>
 </article>
 
@@ -373,7 +359,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p><strong>Note</strong>: I’m not an expert on Vala, GTK+, or anything else for that matter. If I am off base someplace, comment.</p>
 <p>I spent quite a some time today trying to get GTKBuilder to automagically connect all my signals to their handlers. I tripped up at a few places, and so recording them here for posterity.</p>
 <ol>
@@ -395,7 +380,6 @@
 </ol>
 <p>If you do all these 5 things right and you’re still having trouble, turn up on #vala at irc.gimp.net and ask the helpful folks there :)</p>
 
-    </div>
   </div>
 </article>
 
@@ -413,7 +397,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p><em>I’m using a <a href="http://www.rememberthemilk.com/home/yuvipanda/13485943/">RTM List</a> to track my milestones for this <a href="http://yuvi.in/blog/gsoc-2010-the-beginning.html">my GSoC</a> this year. I’ll be making a blog post for each item ticked off that list, to share what I’ve learnt in my journey from n00b to someone whose code is good enough to be included in GNOME. This is part 1 in the series, where I tell you about autotools</em></p>
 <p>My GSoC project involves, moving major parts (UI) of Cheese to a new language – <a href="http://live.gnome.org/Vala">Vala</a>. Vala is more an extremely glorious C preprocessor than a language of its own – it just translates down to GObject based C code, rather than bytecode/objectcode. The syntax is very C#ish – I was using <a href="http://www.emacswiki.org/emacs/CSharpMode">csharp-mode</a> in emacs to code vala till I got bored enough to download <a href="http://live.gnome.org/Vala/Emacs">vala-mode</a>. It’s got closures – haven’t used them yet, here is to hoping they’re real closures. It has <em>tons</em> of libraries – it takes a few (minutes|hours) to write a binding for any C library, so many bindings already exist. You don’t lose speed – Vala is compiled down to C code. It also has one of Java’s suckiest features – <em>Checked Exceptions</em>. The documentation is non existent – you’ve to pretty much read through the bindings, or the original C library’s documentation to get anything done. And not many people know such a language exists (<a href="http://kausikram.net/">Kausik</a> for example – but he also didn’t know you could output pdf from latex, so I don’t think his opinion counts :D)</p>
 <p>Cheese uses autotools for building. I had to tweak their script to make it build my Vala code as well. I’ve never worked with any of the autotools stuff before – I didn’t even know <code>.ac</code> stood for <code>autoconf</code> and <code>.am</code> stood for automake. No big deal – Google knows it all and will tell you for free. I JFGI and found a bunch of articles about using autotools to successfully build vala projects. After reading <a href="http://www.lrde.epita.fr/~adl/autotools.html">this monstrous (180+ slides, but ~500 pages) Autotools presentation</a> (which is actually very, <em>very</em> good, btw), I had a working build script. It built my single <code>cheese.vala</code> file that did nothing but run a loop and wait to be terminated. It had a place where I could add more <code>.vala</code> files and they should (should) be included in the build. It was hackish, but like most hacks, it worked. <a href="http://www.codinghorror.com/blog/2007/03/the-works-on-my-machine-certification-program.html">On My Machine</a>(tm).</p>
@@ -424,7 +407,6 @@
 <p>Anyway, I rewrote the build script to be much more cleaner in a couple of minutes. And it worked.</p>
 <p>Build systems are actually a lot of fun once you get the hang of it. A black screen with fast scrolling green text cryptic to everyone else but totally sensible to you is incredibly attractive, no? :)</p>
 
-    </div>
   </div>
 </article>
 
@@ -442,7 +424,6 @@
   </header>
   
   <div class="post-content">
-    <div class="post-summary">
       <p><em>I’m using a <a href="http://www.rememberthemilk.com/home/yuvipanda/13485943/">RTM List</a> to track my milestones for this <a href="http://yuvi.in/blog/gsoc-2010-the-beginning.html">my GSoC</a> this year. I’ll be making a blog post for each item ticked off that list, to share what I’ve learnt in my journey from n00b to someone whose code is good enough to be included in GNOME. This is part 0 in the series, where I tell you what my project is all about and how <a href="http://projects.gnome.org/cheese">Cheese</a> is going to become awesomer.</em></p>
 <p>So, what exactly does <a href="http://gist.github.com/356202">my proposal</a> mean for Cheese?</p>
 <ol>
@@ -455,7 +436,6 @@
 <p>I’m keeping my code in a <a href="http://github.com/yuvipanda/cheese">github repo</a>, so watch that for code updates. And will be updating this blog at the completion of every milestone, so subscribe if you haven’t :)</p>
 <p><strong>Note</strong>: My exams are still going on. Won’t be coding much till they end (May 19th).</p>
 
-    </div>
   </div>
 </article>
 
@@ -530,6 +510,17 @@
   </script>
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
 
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-110578237-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 
