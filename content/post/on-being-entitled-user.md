@@ -5,6 +5,7 @@ lastmod: 2020-05-28T12:34:19+05:30
 description: "Symptoms I exhibited as an entitled open source user"
 tags: ["opensource"]
 comment: true
+toc: false
 ---
 
 Entitled users burn out maintainers. While my massive burning out wasn't directly related, it didn't help either. For a __lot__ of other maintainers, it has been a primary source of burnout. This is an unfortunate reality of our time. There are a ton of stories from maintainers out there -see [this](https://twitter.com/michaelwaskom/status/1264295556475731969?s=20) for a recent example. Not going to rehash that.
