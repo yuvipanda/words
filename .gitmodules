@@ -4,3 +4,6 @@
 [submodule "theme/hugo-theme-bootstrap4-blog"]
 	path = themes/hugo-theme-bootstrap4-blog
 	url = https://github.com/yuvipanda/hugo-theme-bootstrap4-blog.git
+[submodule "themes/even"]
+	path = themes/even
+	url = https://github.com/yuvipanda/hugo-theme-even.git
