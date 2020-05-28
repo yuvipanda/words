@@ -6,10 +6,20 @@
     <description>Recent content on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 26 May 2020 14:05:29 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 28 May 2020 12:34:19 +0530</lastBuildDate>
     
 	<atom:link href="http://words.yuvi.in/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>On Being an &#39;Entitled User&#39;</title>
+      <link>http://words.yuvi.in/post/on-being-entitled-user/</link>
+      <pubDate>Thu, 28 May 2020 12:34:19 +0530</pubDate>
+      
+      <guid>http://words.yuvi.in/post/on-being-entitled-user/</guid>
+      <description>Entitled users burn out maintainers. While my massive burning out wasn&amp;rsquo;t directly related, it didn&amp;rsquo;t help either. For a lot of other maintainers, it has been a primary source of burnout. This is an unfortunate reality of our time. There are a ton of stories from maintainers out there -see this for a recent example. Not going to rehash that.
+However, I&amp;rsquo;ve recently found myself on the &amp;lsquo;other side&amp;rsquo; of this coin.</description>
+    </item>
     
     <item>
       <title>Note taking: Why bother?</title>
