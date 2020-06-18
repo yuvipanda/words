@@ -45,7 +45,7 @@
 <meta property="og:description" content="Blog of Yuvi Panda" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/" />
-<meta property="og:updated_time" content="2020-05-28T12:34:19+05:30" />
+<meta property="og:updated_time" content="2020-06-18T17:01:34+05:30" />
 <meta itemprop="name" content="Yuvi Panda">
 <meta itemprop="description" content="Blog of Yuvi Panda"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Yuvi Panda"/>
@@ -102,6 +102,74 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2018-07-21 </span>
+      <div class="post-category">
+          <a href="/categories/work-plan/"> work-plan </a>
+          <a href="/categories/code/"> code </a>
+          </div>
+        <span class="more-meta"> 543 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+      <p>I&rsquo;m writing up monthly &lsquo;work plans&rsquo; to plan what work I&rsquo;m trying to do every
+month, and do a retrospective after to see how much I got done. I work across
+a variety of open source projects with ambiguous responsibilities, so work
+planning isn&rsquo;t very set. This has proven to be somewhat quite stressful for
+everyone involved. Let&rsquo;s see if this helps!</p>
+<h2 id="jupytercon-">JupyterCon</h2>
+<p>JupyterCon is in NYC towards the end of August, and it is going to set the pace
+for a bunch of stuff. I have 2.5-ish talks to give. Need to prepare for those and
+do a good job.</p>
+<h2 id="matomo-formerly-piwiki-on-mybinderorg-">Matomo (formerly Piwiki) on mybinder.org</h2>
+<p>mybinder.org currently uses Google Analytics. I am not a big fan. It has troubling
+privacy implications, and we don&rsquo;t get data as granularly as we want to. I am going
+to try deploying <a href="https://matomo.org/">Matomo</a> (formerly Piwiki) and using that
+instead. Run both together for a while and see how we like it! Matomo requires
+a MySQL database &amp; is written in PHP - let&rsquo;s see how this goes ;)</p>
+<h2 id="the-littlest-jupyterhub-01-release-">The Littlest JupyterHub 0.1 release</h2>
+<p><a href="https://github.com/jupyterhub/the-littlest-jupyterhub">The Littlest JupyterHub</a> is
+doing great! I&rsquo;ve done a <strong>lot</strong> of user tests, and the distribution has changed
+drastically over time. It&rsquo;s also the first time I&rsquo;m putting my newly found
+strong convictions around testing, CI &amp; documentation to practice. You can already
+check it out <a href="https://github.com/jupyterhub/the-littlest-jupyterhub">on GitHub</a>. I
+want to make sure we (the JupyterHub team) gets out a 0.1 release early August.</p>
+<h2 id="pangeo-workshop-">Pangeo Workshop</h2>
+<p>I despair about climate change and how little agency I seem to have around it
+quite a bit. I&rsquo;m excited to go to the <a href="https://www2.cisl.ucar.edu/events/workshops/2018-pangeo-workshop/2018/2018-pangeo-workshop">PANGEO workshop</a>
+in Colorado. I&rsquo;m mostly hoping to listen &amp; understand their world some more.</p>
+<h2 id="berkeley-datahub-deployment-">Berkeley DataHub deployment</h2>
+<p>Aug 20-ish is when next semester starts at UC Berkeley. I need to have a pretty
+solid JupyterHub running there by then. I&rsquo;d like it to have good CI/CD set up
+in a generic way, rather than something super specific to Berkeley. However,
+I&rsquo;m happy to shortcut this if needed, since there&rsquo;s already so many things on
+my plate haha.</p>
+<h2 id="uc-davis-">UC Davis</h2>
+<p>I&rsquo;m trying to spend a day or two a month at UC Davis. Partially because I like
+being on Amtrak! I also think there&rsquo;s a lot of cool work happening there,
+and I&rsquo;d like to hang out with all the cool people doing all the cool work.</p>
+<h2 id="personal-">Personal</h2>
+<p>On top of this, there&rsquo;s ongoing medical conditions to be managed. I&rsquo;m getting
+Carpel Tunnel Release surgery sometime in October, so need to make sure I do
+not super fuck up my hands before then. I&rsquo;m also getting a cortisone shot
+for my back in early August to deal with Sciatica. Fun!</p>
+<h2 id="things-im-not-doing-">Things I&rsquo;m not doing!</h2>
+<p>The grading related stuff I&rsquo;ve been working on is going to the backburner
+for a while. I think I bit off far more than I can chew, so time to back off.
+I also do not have a good intuition for the problem domain since I&rsquo;ve never
+written grading keys nor have I been a student in a class that got autograded.</p>
+<h2 id="in-conclusion-">In conclusion&hellip;</h2>
+<p>Shit, I&rsquo;ve a lot of things to do lol! I&rsquo;m sure I&rsquo;m forgetting some things
+here that I&rsquo;ve promised people. Let&rsquo;s see how this goes!</p>
+
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/conda-constructor-thoughts/">Conda Constructor Thoughts</a></h1>
@@ -882,37 +950,6 @@ Address of p      is 0x5598fc85b010
 <p>This is me trying to understand AppArmor, which seems to have lower base of support (just Ubuntu? Maybe SUSE, but idk anyone who uses SUSE) but theoretically simpler (mostly file path based). The video seems to be shot with a potato, so the slides aren&rsquo;t super clear - but the content is good enough to give me a super general overview.</p>
 <p>The biggest thing against SELinux it talks about seems to be &lsquo;SELinux is complex&rsquo;, and not much else. I don&rsquo;t know how much I buy that - but then again, I haven&rsquo;t actually <em>used</em> SELinux anywhere :D</p>
 <p>Unlike SELinux, I can actually see AppArmor rules on my local machine (since it is running Ubuntu). Seems fairly readable!</p>
-
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/things-to-build/">things to build</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2017-04-15 </span>
-      
-        <span class="more-meta"> 103 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-      <p>This is a running list of things I want to build!</p>
-<p>There&rsquo;s an analogous running list of <a href="http://words.yuvi.in/post/things-to-learn/">things I want to learn</a>. Things move between them :) I also have higher standards of documentation (other people should be able to use it) before marking these as complete.</p>
-<ul>
-<li>
-<p><strong>kubernetes-login</strong>
-A helper to openssh that allows users to log in to a configurable user pod
-running on a kubernetes cluster. Should ideally support scp / sftp too.
-Helps get rid of SPOF login nodes</p>
-</li>
-<li>
-<p><strong>just-enough-containment</strong>
-A purely for-learning docker-ish container project written purely in python.
-Written for pedagogy and personal understanding rather than production use.</p>
-</li>
-</ul>
 
   </div>
 </article>

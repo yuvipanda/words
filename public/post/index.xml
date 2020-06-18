@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 28 May 2020 12:34:19 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jun 2020 17:01:34 +0530</lastBuildDate>
     
 	<atom:link href="http://words.yuvi.in/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Check if an organization is using GSuite</title>
+      <link>http://words.yuvi.in/post/google-domain/</link>
+      <pubDate>Thu, 18 Jun 2020 17:01:34 +0530</pubDate>
+      
+      <guid>http://words.yuvi.in/post/google-domain/</guid>
+      <description>I needed to find out if an organization was using GSuite for their emails, so I can allow their users to login to a JupyterHub I was setting up. I use Google Auth in other places, so I wanted to find out if this organization was using GSuite.
+I could&amp;rsquo;ve just asked them, but where&amp;rsquo;s the fun in that? Instead, you can use dig to find out!
+For example, if I were to test berkeley.</description>
+    </item>
     
     <item>
       <title>On Being an &#39;Entitled User&#39;</title>

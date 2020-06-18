@@ -45,7 +45,7 @@
 <meta property="og:description" content="Blog of Yuvi Panda" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/" />
-<meta property="og:updated_time" content="2020-05-28T12:34:19+05:30" />
+<meta property="og:updated_time" content="2020-06-18T17:01:34+05:30" />
 <meta itemprop="name" content="Yuvi Panda">
 <meta itemprop="description" content="Blog of Yuvi Panda"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Yuvi Panda"/>
@@ -102,6 +102,55 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/google-domain/">Check if an organization is using GSuite</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-06-18 </span>
+      <div class="post-category">
+          <a href="/categories/code/"> code </a>
+          </div>
+        <span class="more-meta"> 157 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+      <p>I needed to find out if an organization was using <a href="https://gsuite.google.com/">GSuite</a> for their emails, so I can allow their users to login to a <a href="https://github.com/berkeley-dsep-infra/datahub/tree/ab2bf49be680480cf9de07968561257e7810850f/deployments/buds-2020">JupyterHub</a> I was setting up. I use Google Auth in other places, so I wanted to find out if this organization was using GSuite.</p>
+<p>I could&rsquo;ve just <em>asked</em> them, but where&rsquo;s the fun in that? Instead, you can use <code>dig</code> to find out!</p>
+<p>For example, if I were to test <code>berkeley.edu</code>, I can run:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ dig -t mx berkeley.edu
+</code></pre></td></tr></table>
+</div>
+</div><p>This gives me a bunch of output, the important bits of which are:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">;; ANSWER SECTION:
+berkeley.edu.		242	IN	MX	5 alt1.aspmx.l.google.com.
+berkeley.edu.		242	IN	MX	10 alt3.aspmx.l.google.com.
+berkeley.edu.		242	IN	MX	10 alt4.aspmx.l.google.com.
+berkeley.edu.		242	IN	MX	1 aspmx.l.google.com.
+berkeley.edu.		242	IN	MX	5 alt2.aspmx.l.google.com.
+</code></pre></td></tr></table>
+</div>
+</div><p>This means that mail to <code>anyone@berkeley.edu</code> is routed via Google, so I know this organization is using GSuite for their users!</p>
+
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/on-being-entitled-user/">On Being an &#39;Entitled User&#39;</a></h1>
@@ -592,74 +641,6 @@ to make sure your abstraction actually works.</p>
 good design tradeoffs for Open Source projects. Remember these are
 necessary but not sufficient to ensure some of your users&rsquo; fundamental
 freedoms.</p>
-
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2018-07-21 </span>
-      <div class="post-category">
-          <a href="/categories/work-plan/"> work-plan </a>
-          <a href="/categories/code/"> code </a>
-          </div>
-        <span class="more-meta"> 543 words </span>
-        <span class="more-meta"> 3 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-      <p>I&rsquo;m writing up monthly &lsquo;work plans&rsquo; to plan what work I&rsquo;m trying to do every
-month, and do a retrospective after to see how much I got done. I work across
-a variety of open source projects with ambiguous responsibilities, so work
-planning isn&rsquo;t very set. This has proven to be somewhat quite stressful for
-everyone involved. Let&rsquo;s see if this helps!</p>
-<h2 id="jupytercon-">JupyterCon</h2>
-<p>JupyterCon is in NYC towards the end of August, and it is going to set the pace
-for a bunch of stuff. I have 2.5-ish talks to give. Need to prepare for those and
-do a good job.</p>
-<h2 id="matomo-formerly-piwiki-on-mybinderorg-">Matomo (formerly Piwiki) on mybinder.org</h2>
-<p>mybinder.org currently uses Google Analytics. I am not a big fan. It has troubling
-privacy implications, and we don&rsquo;t get data as granularly as we want to. I am going
-to try deploying <a href="https://matomo.org/">Matomo</a> (formerly Piwiki) and using that
-instead. Run both together for a while and see how we like it! Matomo requires
-a MySQL database &amp; is written in PHP - let&rsquo;s see how this goes ;)</p>
-<h2 id="the-littlest-jupyterhub-01-release-">The Littlest JupyterHub 0.1 release</h2>
-<p><a href="https://github.com/jupyterhub/the-littlest-jupyterhub">The Littlest JupyterHub</a> is
-doing great! I&rsquo;ve done a <strong>lot</strong> of user tests, and the distribution has changed
-drastically over time. It&rsquo;s also the first time I&rsquo;m putting my newly found
-strong convictions around testing, CI &amp; documentation to practice. You can already
-check it out <a href="https://github.com/jupyterhub/the-littlest-jupyterhub">on GitHub</a>. I
-want to make sure we (the JupyterHub team) gets out a 0.1 release early August.</p>
-<h2 id="pangeo-workshop-">Pangeo Workshop</h2>
-<p>I despair about climate change and how little agency I seem to have around it
-quite a bit. I&rsquo;m excited to go to the <a href="https://www2.cisl.ucar.edu/events/workshops/2018-pangeo-workshop/2018/2018-pangeo-workshop">PANGEO workshop</a>
-in Colorado. I&rsquo;m mostly hoping to listen &amp; understand their world some more.</p>
-<h2 id="berkeley-datahub-deployment-">Berkeley DataHub deployment</h2>
-<p>Aug 20-ish is when next semester starts at UC Berkeley. I need to have a pretty
-solid JupyterHub running there by then. I&rsquo;d like it to have good CI/CD set up
-in a generic way, rather than something super specific to Berkeley. However,
-I&rsquo;m happy to shortcut this if needed, since there&rsquo;s already so many things on
-my plate haha.</p>
-<h2 id="uc-davis-">UC Davis</h2>
-<p>I&rsquo;m trying to spend a day or two a month at UC Davis. Partially because I like
-being on Amtrak! I also think there&rsquo;s a lot of cool work happening there,
-and I&rsquo;d like to hang out with all the cool people doing all the cool work.</p>
-<h2 id="personal-">Personal</h2>
-<p>On top of this, there&rsquo;s ongoing medical conditions to be managed. I&rsquo;m getting
-Carpel Tunnel Release surgery sometime in October, so need to make sure I do
-not super fuck up my hands before then. I&rsquo;m also getting a cortisone shot
-for my back in early August to deal with Sciatica. Fun!</p>
-<h2 id="things-im-not-doing-">Things I&rsquo;m not doing!</h2>
-<p>The grading related stuff I&rsquo;ve been working on is going to the backburner
-for a while. I think I bit off far more than I can chew, so time to back off.
-I also do not have a good intuition for the problem domain since I&rsquo;ve never
-written grading keys nor have I been a student in a class that got autograded.</p>
-<h2 id="in-conclusion-">In conclusion&hellip;</h2>
-<p>Shit, I&rsquo;ve a lot of things to do lol! I&rsquo;m sure I&rsquo;m forgetting some things
-here that I&rsquo;ve promised people. Let&rsquo;s see how this goes!</p>
 
   </div>
 </article>

@@ -45,7 +45,7 @@
 <meta property="og:description" content="Blog of Yuvi Panda" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/" />
-<meta property="og:updated_time" content="2020-05-28T12:34:19+05:30" />
+<meta property="og:updated_time" content="2020-06-18T17:01:34+05:30" />
 <meta itemprop="name" content="Yuvi Panda">
 <meta itemprop="description" content="Blog of Yuvi Panda"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Yuvi Panda"/>
@@ -102,6 +102,34 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/side-project-ua-emoji-firefox-extension/">Side Project: UA Emoji Firefox Extension</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2016-03-28 </span>
+      <div class="post-category">
+          <a href="/categories/code/"> code </a>
+          </div>
+        <span class="more-meta"> 278 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+      <p><em>Note: I’m trying to spend time explicitly writing random side projects that are not related to what I’m actively working on as my main project in some form.</em></p>
+<p>A random thread started by <a href="https://twitter.com/quominus">Ironholds</a> on a random mailing list I was wearily catching up on contained a joke from <a href="https://twitter.com/bearloga">bearloga</a> about malformed User Agents. This prompted me to write <a href="https://addons.mozilla.org/en-US/firefox/addon/uauliver/?src=search">UAuliver</a> (<a href="https://github.com/yuvipanda/uauliver-firefox-extension">source</a>), a Firefox extension that randomizes your user agent to be a random string of emoji. This breaks a surprisingly large number of software, I’m told! (GMail &amp; Gerrit being the ones I explicitly remember)</p>
+<p>Things I learnt from writing this:</p>
+<ol>
+<li>Writing Addons for Firefox is far easier to get started with than they were the last time I looked. Despite the confusing naming (Jetpack API == SDK != WordPress’ Jetpack API != Addons != Plugins != WebExtension), the documentation and tooling were nice enough that I could finish all of this in a few hours!</li>
+<li>I can still write syntactically correct Javascript! \o/</li>
+<li>Generating a ‘string of emoji’ is easier/harder than you would think, depending on how you would like to define ’emoji’. The fact that Unicode deals in blocks that at least in this case aren’t too split up made this quite easy (I used the <a href="https://en.wikipedia.org/wiki/Emoji#Unicode_blocks">list</a> on Wikipedia to generate them). JS’s <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCodePoint">String.fromCodePoint</a> can also be used to detect if the codepoint you just generated randomly is actually allocated.</li>
+<li>I don’t actually know how HTTP headers deal with encoding and unicode. This is something I need to actually look up. Perhaps a re-read of the HTTP RfC is in order!</li>
+</ol>
+<p>It was a fun exercise, and I might write more Firefox extensions in the future!</p>
+
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/the-impact-syntax-colouring-program-comprehension-paper-notes/">Paper notes: ‘The impact of syntax colouring on program comprehension’</a></h1>
@@ -368,26 +396,6 @@
   <div class="post-content">
       <p><a href="https://lists.wikimedia.org/pipermail/foundation-l/2009-May/051656.html">“Green Stuff”</a></p>
 <p>TIL that Gregory Kohs was actually allowed to post on wikimedia-l at some point in the past.</p>
-
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/global-merge-accounts-wikimedia/">Global merge of accounts at Wikimedia</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015-07-04 </span>
-      <div class="post-category">
-          <a href="/categories/uncategorized/"> Uncategorized </a>
-          <a href="/categories/wiki/"> wiki </a>
-          </div>
-        <span class="more-meta"> 10 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-      <p>is now slowly happening, and <a href="https://meta.wikimedia.org/wiki/Special:GlobalRenameProgress/YuviPanda">I am the test subject!</a></p>
 
   </div>
 </article>

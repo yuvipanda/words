@@ -45,7 +45,7 @@
 <meta property="og:description" content="Blog of Yuvi Panda" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/" />
-<meta property="og:updated_time" content="2020-05-28T12:34:19+05:30" />
+<meta property="og:updated_time" content="2020-06-18T17:01:34+05:30" />
 <meta itemprop="name" content="Yuvi Panda">
 <meta itemprop="description" content="Blog of Yuvi Panda"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Yuvi Panda"/>
@@ -102,6 +102,33 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/devlog-december-11-2011/">DevLog: December 11, 2011</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2011-12-12 </span>
+      <div class="post-category">
+          <a href="/categories/devlog/"> devlog </a>
+          </div>
+        <span class="more-meta"> 112 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+      <ol>
+<li>Added UI for AssessmentLog [SelectionSifter]</li>
+<li>Removed lots of dead code in SelectionSifter.</li>
+<li>Went to Bangalore Wikipedia Meetup. Was nice meeting people I knew online face to face. Talked about yenWikipedia, and learnt a lot about how article selection for offline wikipedia is done.</li>
+<li>Shot myself in the foot multiple times (over use of empty(), incomplete commit summaries and a tab/spaces issue). I’m rusty and it is showing. Shouldn’t be a problem anymore, though – because of you-know-what.</li>
+<li>Built myself a local copy of mediawiki docs. No more annoying huge-images.</li>
+<li>Got myself the solarized theme. And increased font size to normal levels (13pt). My eyes thank me.</li>
+<li>Fixed timestamp related bugs in SelectionSifter.</li>
+</ol>
+
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/devlog-december-10-2011/">Devlog December 10, 2011</a></h1>
@@ -772,46 +799,6 @@
                                   Be a tinkerer!&lt;/span&gt;&lt;/span&gt;
                                 &lt;/p&gt;
 </code></pre>
-
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/my-vim-setup/">My Vim setup</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2011-08-23 </span>
-      <div class="post-category">
-          <a href="/categories/code/"> code </a>
-          </div>
-        <span class="more-meta"> 414 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-      <p>I <a href="http://yuvi.in/blog/moving-to-vim-from-emacs.html">moved</a> from emacs to vim a while ago, and have been steadily accumulating a series of plugins in my <code>.vim</code>. They’re all up in my rather messy <a href="http://github.com/yuvipanda/dotfiles">dotfiles repo</a>. Here’s a slightly more neatly organized list of the plugins I currently use:</p>
-<ol>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=3025">command-t</a> – File opener and buffer switcher. In-fuckin-credibly useful.</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=1953">vimpress</a> – What I use to blog since <a href="http://yuvi.in/blog/moving-back-to-wordpress/">moving to wordpress</a>.</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=39">matchit</a> – Lets <code>%</code> work with html tags</li>
-<li><!-- raw HTML omitted --><a href="http://www.vim.org/scripts/script.php?script_id=3695">commentary</a> – Generic commenting and uncommenting script<!-- raw HTML omitted --> <a href="http://www.vim.org/scripts/script.php?script_id=1218">NERDCommenter</a> has replaced commentary due to being more flexible and having more options.</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=2975">fugitive</a> – Incredibly awesome git wrapper for vim. I rarely go to the commandline for git these days</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=3465">tagbar</a> – Useful code-exploratory plugin when I’m looking around a codebase trying to familiarize myself.</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=1643">supertab</a> – Buffer completion in insert mode only when I need it.</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=2423">gist</a> – Put stuff up in gist to pass it around</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=559">BufClose</a> – So I can close a buffer without messing up my splits</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=3509">extradite</a> – <code>:Glog</code> replacement that builds on top of fugitive. I don’t understand why this isn’t bundled with fugitive</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=2204">TwitVim</a> – Yes, so I don’t have to go to the browser (and be consumed by chat/reddit/hn) just to post a tweet.</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=2572">ack.vim</a> – Ack integration for vim. Do yourself a favor and use <a href="http://betterthangrep.com">ack</a> instead of grep.</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=2736">Syntastic</a> – Automatic syntax checking so that I don’t miss a semicolon and not know about it</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=1355">php-doc</a> – Insert boilerplate PHP doc compatible strings in my PHP files whenever I want to. Very PHP specific, need to find something that works across languages. (Note: This plugin has quite some identity crisis. It’s named PDV but it’s filename is php-doc. Since php-doc is more descriptive, I’m using that)</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=2754">delimitMate</a> – Automatically closes quotes, parens, braces, etc for you. I initially thought this would be super annoying, but in fact it is rather very pleasant.</li>
-</ol>
-<p><!-- raw HTML omitted -->I’m also on the default <code>desert</code> color theme – haven’t found anything better. Suggestions welcome – both for the color scheme and for new/replacement plugins.<!-- raw HTML omitted --> After trying out <a href="http://www.vim.org/scripts/script.php?script_id=1778">wombat</a> and <a href="http://www.vim.org/scripts/script.php?script_id=2555">jellybeans</a> color schemes, I have settled on wombat for now.</p>
-<p>Suggestions for more plugins still welcome :)</p>
-<p><!-- raw HTML omitted -->This is the list as of 24 Aug 2011.<!-- raw HTML omitted --> <!-- raw HTML omitted -->Updated as of September 2 2011 (added 10, 11, 12 since last update).<!-- raw HTML omitted --> <!-- raw HTML omitted -->Updated as of September 5 2011 (changed 4, added colorscheme change).<!-- raw HTML omitted --> Updated as of September 12 2011 (added 13, 14, 15). I am moving quite fast, am I not? Will keep this post updated as and when things change.</p>
-<!-- raw HTML omitted -->
 
   </div>
 </article>

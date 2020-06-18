@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://words.yuvi.in/categories/</loc>
+    <lastmod>2020-06-18T17:01:34+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/post/google-domain/</loc>
+    <lastmod>2020-06-18T17:01:34+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/categories/code/</loc>
+    <lastmod>2020-06-18T17:01:34+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/post/</loc>
+    <lastmod>2020-06-18T17:01:34+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/</loc>
+    <lastmod>2020-06-18T17:01:34+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://words.yuvi.in/post/on-being-entitled-user/</loc>
     <lastmod>2020-05-28T12:34:19+05:30</lastmod>
     <changefreq>weekly</changefreq>
@@ -16,21 +51,7 @@
   </url>
   
   <url>
-    <loc>http://words.yuvi.in/post/</loc>
-    <lastmod>2020-05-28T12:34:19+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://words.yuvi.in/tags/</loc>
-    <lastmod>2020-05-28T12:34:19+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/</loc>
     <lastmod>2020-05-28T12:34:19+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -95,20 +116,6 @@
   <url>
     <loc>http://words.yuvi.in/post/miss-blogging/</loc>
     <lastmod>2020-05-17T11:25:35+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/categories/</loc>
-    <lastmod>2018-12-26T10:23:40-08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/categories/code/</loc>
-    <lastmod>2018-12-26T10:23:40-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
