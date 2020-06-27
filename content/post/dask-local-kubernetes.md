@@ -1,8 +1,8 @@
 ---
-title: "Run dask-kubernetes clusters on a cloud from your Laptop"
+title: "Access dask-kubernetes clusters running on a cloud from your local machine"
 date: 2020-06-27T13:27:49+05:30
 lastmod: 2020-06-27T13:27:49+05:30
-description: "Access dask-kubernetes clusters in the cloud from your local machine"
+description: "'Burst' from your local machine when you need some extra compute with dask-kubernetes"
 categories: ["code", "dask"]
 ---
 
