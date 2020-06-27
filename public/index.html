@@ -111,8 +111,8 @@
           <a href="/categories/code/"> code </a>
           <a href="/categories/dask/"> dask </a>
           </div>
-        <span class="more-meta"> 637 words </span>
-        <span class="more-meta"> 3 mins read </span>
+        <span class="more-meta"> 811 words </span>
+        <span class="more-meta"> 4 mins read </span>
     </div>
   </header>
   
@@ -279,7 +279,14 @@ clean that up manually</p>
 <pre class="chroma"><code class="language-python" data-lang="python"><span class="n">cluster</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></td></tr></table>
 </div>
-</div>
+</div><h2 id="next-steps">Next steps?</h2>
+<p>Lots more we can do from here.</p>
+<h3 id="ephemeral-kuberentes-clusters">Ephemeral Kuberentes Clusters</h3>
+<p>We can wrap kubernetes cluster creation in some nice python functions, letting users create kubernetes clusters just-in-time for running a dask-kubernetes cluster, and tearing it down when they&rsquo;re done. Users can thus &lsquo;bring their own compute&rsquo; - since the clusters will be in their cloud accounts - without having the complication of understanding how the cloud works. This is where this would be different from the wonderful <a href="https://gateway.dask.org">dask-gateway</a> project I think.</p>
+<h3 id="remove-kubefwd">Remove kubefwd</h3>
+<p><code>kubefwd</code> isn&rsquo;t strictly necessary, and should ideally be replaced by a <code>kubectl port-forward</code> call that doesn&rsquo;t require root. This should be possible with some changes to the <code>dask-kubernetes</code> code, so the client can connect to the scheduler via a different address (say, <code>localhost:8974</code>, since that&rsquo;s what <code>kubectl port-forward</code> gives us) vs the workers (which need something like <code>dask-cluster-scheduler-c12.namespace:8786</code>, since that is in-cluster address).</p>
+<p>Longer term, it would be great if we can get rid of spawning other processes altogether, if/when the python kubernetes client gains the <a href="https://github.com/kubernetes-client/python/issues/166">ability to port-forward</a>.</p>
+
   </div>
 </article>
 

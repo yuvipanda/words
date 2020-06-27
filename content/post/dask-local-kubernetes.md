@@ -146,3 +146,17 @@ clean that up manually
 ```python
 cluster.close()
 ```
+
+## Next steps?
+
+Lots more we can do from here.
+
+### Ephemeral Kuberentes Clusters
+
+We can wrap kubernetes cluster creation in some nice python functions, letting users create kubernetes clusters just-in-time for running a dask-kubernetes cluster, and tearing it down when they're done. Users can thus 'bring their own compute' - since the clusters will be in their cloud accounts - without having the complication of understanding how the cloud works. This is where this would be different from the wonderful [dask-gateway](https://gateway.dask.org) project I think.
+
+### Remove kubefwd
+
+`kubefwd` isn't strictly necessary, and should ideally be replaced by a `kubectl port-forward` call that doesn't require root. This should be possible with some changes to the `dask-kubernetes` code, so the client can connect to the scheduler via a different address (say, `localhost:8974`, since that's what `kubectl port-forward` gives us) vs the workers (which need something like `dask-cluster-scheduler-c12.namespace:8786`, since that is in-cluster address).
+
+Longer term, it would be great if we can get rid of spawning other processes altogether, if/when the python kubernetes client gains the [ability to port-forward](https://github.com/kubernetes-client/python/issues/166).
