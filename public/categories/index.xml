@@ -6,7 +6,7 @@
     <description>Recent content in Categories on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 18 Jun 2020 17:01:34 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jun 2020 13:27:49 +0530</lastBuildDate>
     
 	<atom:link href="http://words.yuvi.in/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>code</title>
       <link>http://words.yuvi.in/categories/code/</link>
-      <pubDate>Thu, 18 Jun 2020 17:01:34 +0530</pubDate>
+      <pubDate>Sat, 27 Jun 2020 13:27:49 +0530</pubDate>
       
       <guid>http://words.yuvi.in/categories/code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dask</title>
+      <link>http://words.yuvi.in/categories/dask/</link>
+      <pubDate>Sat, 27 Jun 2020 13:27:49 +0530</pubDate>
+      
+      <guid>http://words.yuvi.in/categories/dask/</guid>
       <description></description>
     </item>
     

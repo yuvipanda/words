@@ -45,7 +45,7 @@
 <meta property="og:description" content="Blog of Yuvi Panda" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/" />
-<meta property="og:updated_time" content="2020-06-18T17:01:34+05:30" />
+<meta property="og:updated_time" content="2020-06-27T13:27:49+05:30" />
 <meta itemprop="name" content="Yuvi Panda">
 <meta itemprop="description" content="Blog of Yuvi Panda"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Yuvi Panda"/>
@@ -102,6 +102,65 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2018-08-15 </span>
+      <div class="post-category">
+          <a href="/categories/code/"> code </a>
+          </div>
+        <span class="more-meta"> 241 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+      <p><em>This post is from conversations with <a href="http://matthewrocklin.com/">Matt
+Rocklin</a> and others at the
+<a href="http://pangeo.io/">PANGEO</a> developer meeting at
+<a href="https://ncar.ucar.edu/">NCAR</a></em></p>
+<p>Today, almost all of &lsquo;the cloud&rsquo; is run by
+ruthlessly competitive hypercapitalist large scale
+organizations. This is great &amp; terrible.</p>
+<p>When writing open source applications that primarily
+run on the cloud, I try to make sure my users (primarily
+people deploying my software for <em>their</em> users) have
+the following freedoms:</p>
+<ol>
+<li><strong>They can run the software on any cloud provider they
+choose to</strong></li>
+<li><strong>They can run the software on a bunch of computers they
+physically own, with the help of other open source software
+only</strong></li>
+</ol>
+<p>Ensuring these freedoms for my users requires the following
+restrictions on me:</p>
+<ol>
+<li>
+<p>Depend on Open Source Software with hosted cloud versions,
+not proprietary cloud-vendor-only software.</p>
+<p>I&rsquo;ll use PostgreSQL over Google Cloud Datastore. Kubernetes with
+autoscaling over talking to the EC2 api directly.</p>
+</li>
+<li>
+<p>Use abstractions that allow swappable implementations anytime
+you have to talk to a cloud provider API directly.</p>
+<p>Don&rsquo;t talk to the S3 API directly, but have an abstract
+interface that defines exactly what your application needs,
+and then write an S3 implementation for it. Ideally, also
+write a minio / ceph / file-system implementation for it,
+to make sure your abstraction actually works.</p>
+</li>
+</ol>
+<p>These are easy to follow once you are aware of them, and provide
+good design tradeoffs for Open Source projects. Remember these are
+necessary but not sufficient to ensure some of your users&rsquo; fundamental
+freedoms.</p>
+
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></h1>
@@ -914,42 +973,6 @@ Address of p      is 0x5598fc85b010
 <p>Nice link to <a href="http://gee.cs.oswego.edu/dl/html/malloc.html">a paper</a> about a common malloc implementation. I also know there are other malloc implementations that programs use (such as <a href="http://jemalloc.net/">jemalloc</a>). Something for me to dive into when I&rsquo;ve more time.</p>
 <h2 id="tbc-">tbc</h2>
 <p>I didn&rsquo;t have time to finish it all, unfortunately. But shall come back to it whenever I can!</p>
-
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/learning-selinux/">learning selinux and apparmor</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2017-04-18 </span>
-      
-        <span class="more-meta"> 362 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-      <p>I am trying to understand SELinux and AppArmor, and collecting resources here as I learn. k</p>
-<h2 id="selinux-for-mere-mortals-2014">SELinux for mere mortals (2014)</h2>
-<!-- raw HTML omitted -->
-<p>This was the first video I watched, and it helped me understanding what SELinux does at a fundamental basic level. It&rsquo;s probably useless in a container-filled world (where I doubt Fedora shipes pre-configured SELinux rules for my containers), but it helped me think I understood types / labels, so that seems like a positive step?</p>
-<p>The fact the presenter keeps saying things like &lsquo;you being a good sysadmin, ssh into the server and edit the apache config file&rsquo; is freakin me out. If I&rsquo;m constantly editing config files on servers manually that seems like a massive failure to me :D How times change!</p>
-<h2 id="docker-and-selinux-2014">Docker and SELinux (2014)</h2>
-<!-- raw HTML omitted -->
-<p>This one made a lot more sense to me as an answer to the following questions:</p>
-<ol>
-<li>Aren&rsquo;t containers secure enough? (Partial answer)</li>
-<li>What does SELinux do for container security?</li>
-</ol>
-<p>It&rsquo;s convinced me that container -&gt; host isolation and container &lt;-&gt; container isolation provided by SELinux is pretty simple and super useful, and should be turned on.</p>
-<p>This talk also showed me this most wonderful <a href="https://people.redhat.com/duffy/selinux/selinux-coloring-book_A4-Stapled.pdf">coloring book</a> that tries to explain SELinux. If this is all that is to SELinux, it seems pretty simple and useful (for the container use case).</p>
-<p>Also, it looks like there are more recent versions of both these two talks - I should look &lsquo;em up!</p>
-<h2 id="securing-linux-applications-with-apparmor-2007">Securing Linux Applications with AppArmor (2007?)</h2>
-<!-- raw HTML omitted -->
-<p>This is me trying to understand AppArmor, which seems to have lower base of support (just Ubuntu? Maybe SUSE, but idk anyone who uses SUSE) but theoretically simpler (mostly file path based). The video seems to be shot with a potato, so the slides aren&rsquo;t super clear - but the content is good enough to give me a super general overview.</p>
-<p>The biggest thing against SELinux it talks about seems to be &lsquo;SELinux is complex&rsquo;, and not much else. I don&rsquo;t know how much I buy that - but then again, I haven&rsquo;t actually <em>used</em> SELinux anywhere :D</p>
-<p>Unlike SELinux, I can actually see AppArmor rules on my local machine (since it is running Ubuntu). Seems fairly readable!</p>
 
   </div>
 </article>

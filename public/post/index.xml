@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 18 Jun 2020 17:01:34 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jun 2020 13:27:49 +0530</lastBuildDate>
     
 	<atom:link href="http://words.yuvi.in/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Run dask-kubernetes clusters on a cloud from your Laptop</title>
+      <link>http://words.yuvi.in/post/dask-local-kubernetes/</link>
+      <pubDate>Sat, 27 Jun 2020 13:27:49 +0530</pubDate>
+      
+      <guid>http://words.yuvi.in/post/dask-local-kubernetes/</guid>
+      <description>You can run your Jupyter Notebook locally, and connect easily to a remote dask-kubernetes cluster on a cloud-based Kubernetes Cluster with the help of kubefwd. This notebook will show you an example of how to do so. While this example is a Jupyter Notebook, the code will work any local python medium - REPL, IDE (vscode), or just plain ol&amp;rsquo; .py files
+Latest executable version of this notebook can be found in this repository</description>
+    </item>
     
     <item>
       <title>Check if an organization is using GSuite</title>

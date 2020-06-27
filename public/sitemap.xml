@@ -3,34 +3,48 @@
   
   <url>
     <loc>http://words.yuvi.in/categories/</loc>
-    <lastmod>2020-06-18T17:01:34+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://words.yuvi.in/post/google-domain/</loc>
-    <lastmod>2020-06-18T17:01:34+05:30</lastmod>
+    <lastmod>2020-06-27T13:27:49+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://words.yuvi.in/categories/code/</loc>
-    <lastmod>2020-06-18T17:01:34+05:30</lastmod>
+    <lastmod>2020-06-27T13:27:49+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/categories/dask/</loc>
+    <lastmod>2020-06-27T13:27:49+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://words.yuvi.in/post/</loc>
-    <lastmod>2020-06-18T17:01:34+05:30</lastmod>
+    <lastmod>2020-06-27T13:27:49+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/post/dask-local-kubernetes/</loc>
+    <lastmod>2020-06-27T13:27:49+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://words.yuvi.in/</loc>
+    <lastmod>2020-06-27T13:27:49+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://words.yuvi.in/post/google-domain/</loc>
     <lastmod>2020-06-18T17:01:34+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

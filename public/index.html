@@ -45,7 +45,7 @@
 <meta property="og:description" content="Blog of Yuvi Panda" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/" />
-<meta property="og:updated_time" content="2020-06-18T17:01:34+05:30" />
+<meta property="og:updated_time" content="2020-06-27T13:27:49+05:30" />
 <meta itemprop="name" content="Yuvi Panda">
 <meta itemprop="description" content="Blog of Yuvi Panda"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Yuvi Panda"/>
@@ -102,6 +102,187 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/dask-local-kubernetes/">Run dask-kubernetes clusters on a cloud from your Laptop</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-06-27 </span>
+      <div class="post-category">
+          <a href="/categories/code/"> code </a>
+          <a href="/categories/dask/"> dask </a>
+          </div>
+        <span class="more-meta"> 637 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+      <p>You can run your Jupyter Notebook locally, and connect easily to a remote <code>dask-kubernetes</code> cluster
+on a cloud-based Kubernetes Cluster with the help of <a href="https://kubefwd.com/">kubefwd</a>. This notebook
+will show you an example of how to do so. While this example is a Jupyter Notebook, the code will work
+any local python medium - REPL, IDE (vscode), or just plain ol&rsquo; <code>.py</code> files</p>
+<p>Latest executable version of this notebook can be found in <a href="https://github.com/yuvipanda/cloud-local-dask-kubernetes">this repository</a></p>
+<h2 id="credit">Credit</h2>
+<p>This work was sponsored by <a href="https://www.quansight.com/">Quansight</a> ❤️</p>
+<h2 id="create--setup-a-kubernetes-cluster">Create &amp; setup a Kubernetes cluster</h2>
+<p>You need to have a working kubernetes cluster that is configured correctly. If you can get
+<code>kubectl get ns</code> to work properly, it means your cluster is working fine &amp; connected for
+this to go.</p>
+<h2 id="install--run-kubefwd">Install &amp; run kubefwd</h2>
+<p><code>kubefwd</code> lets you access services in your cloud Kubernetes cluster as if they were
+localy, with a clever combination of ol&rsquo; school <code>/etc/hosts</code> hacks &amp; fancy kubernetes
+port-forwarding. It requires root on Mac OS &amp; Linux, and should theoretically work on
+Windows too (haven&rsquo;t tested).</p>
+<p>Once you have installed it, run it in a separate terminal.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo kubefwd svc -n default -n kube-system
+</code></pre></td></tr></table>
+</div>
+</div><p>If you&rsquo;ve created your own namespace for your cluster, use that instead of <code>default</code>.
+The <code>kube-system</code> is required until <a href="https://github.com/txn2/kubefwd/issues/132">this issue</a>
+is fixed.</p>
+<p>If the <code>kubefwd</code> command runs successfully, we&rsquo;re good to go!</p>
+<h2 id="install-libraries-well-need">Install libraries we&rsquo;ll need</h2>
+<p>In addition to <code>dask-kubernetes</code>, we&rsquo;ll also need <code>numpy</code> to test our cluster with dask arrays.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="o">%</span><span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span> <span class="n">dask</span> <span class="n">distributed</span> <span class="n">dask</span><span class="o">-</span><span class="n">kubernetes</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="setup-dask-kubernetes-configuration">Setup dask-kubernetes configuration</h2>
+<p>Normally, the pod template would come from an external configuration file.
+We keep this in the notebook to make it more self contained.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">POD_SPEC</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;kind&#39;</span><span class="p">:</span> <span class="s1">&#39;Pod&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;metadata&#39;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="s1">&#39;spec&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;restartPolicy&#39;</span><span class="p">:</span> <span class="s1">&#39;Never&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;containers&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s1">&#39;image&#39;</span><span class="p">:</span> <span class="s1">&#39;daskdev/dask:latest&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;args&#39;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s1">&#39;dask-worker&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;--death-timeout&#39;</span><span class="p">,</span> <span class="s1">&#39;60&#39;</span>
+                <span class="p">],</span>
+                <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;dask&#39;</span><span class="p">,</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="create-a-remote-cluster--connect-to-it">Create a remote cluster &amp; connect to it</h2>
+<p>We create a <code>KubeCluster</code> object, with <code>deploymode='remote'</code>. This creates
+the scheduler as a pod on the cluster, so worker &lt;-&gt; scheduler communication
+is easy &amp; efficient. <code>kubefwd</code> helps us communicate to this remote scheduler,
+so we can pretend we are actually on the remote cluster.</p>
+<p>If you are using <code>kubectl</code> to watch the objects created in your namespace,
+you&rsquo;ll see a <code>service</code> and a <code>pod</code> created for this. <code>kubefwd</code> should
+also list a log line about forwarding the service port locally.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">dask_kubernetes</span> <span class="kn">import</span> <span class="n">KubeCluster</span>
+
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">KubeCluster</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">POD_SPEC</span><span class="p">,</span> <span class="n">deploy_mode</span><span class="o">=</span><span class="s1">&#39;remote&#39;</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="create-some-workers">Create some workers</h2>
+<p>We have a scheduler in the cloud, now time to create some workers in the
+cloud! We create 2, and can watch the worker pods come up with glee in
+<code>kubectl</code></p>
+<p>All scaling methods (adaptive scaling, using the widget, etc) should work
+here.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">cluster</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="run-some-computation">Run some computation!</h2>
+<p>We test our cluster by doing some trivial calculations with dask arrays.
+You can use any dask code as you normally would here, and it would
+run on the cloud Kubernetes cluster. This is especially helpful if you
+have large amounts of data in the cloud, since the workers would be
+really close to where the data is.</p>
+<p>You might get warnings about version mismatches. This is ok for the demo,
+in production you&rsquo;d probably build your own docker image that will
+have fixed versions.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="kn">import</span> <span class="n">Client</span>
+<span class="kn">import</span> <span class="nn">dask.array</span> <span class="kn">as</span> <span class="nn">da</span>
+
+<span class="c1"># Connect Dask to the cluster</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">cluster</span><span class="p">)</span>
+
+<span class="c1"># Create a large array and calculate the mean</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">array</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">compute</span><span class="p">())</span>  <span class="c1"># Should print 1.0</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="cleanup-dask-cluster">Cleanup dask cluster</h2>
+<p>When you&rsquo;re done with your cluster, remember to clean it up to release
+the resources!</p>
+<p>This doesn&rsquo;t affect your kubernetes cluster itself - you&rsquo;ll need to
+clean that up manually</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">cluster</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/google-domain/">Check if an organization is using GSuite</a></h1>
@@ -582,65 +763,6 @@ I&rsquo;m still writing concurrent code, even without threads.
 Gotta be careefull. Especially with signals thrown in. Although
 I guess once you get a SIGTERM or SIGINT inconsistent state
 is not particularly worrysome.</p>
-
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/oss-in-the-cloud/">Freedoms for Open Source Software users in the Cloud</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2018-08-15 </span>
-      <div class="post-category">
-          <a href="/categories/code/"> code </a>
-          </div>
-        <span class="more-meta"> 241 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-      <p><em>This post is from conversations with <a href="http://matthewrocklin.com/">Matt
-Rocklin</a> and others at the
-<a href="http://pangeo.io/">PANGEO</a> developer meeting at
-<a href="https://ncar.ucar.edu/">NCAR</a></em></p>
-<p>Today, almost all of &lsquo;the cloud&rsquo; is run by
-ruthlessly competitive hypercapitalist large scale
-organizations. This is great &amp; terrible.</p>
-<p>When writing open source applications that primarily
-run on the cloud, I try to make sure my users (primarily
-people deploying my software for <em>their</em> users) have
-the following freedoms:</p>
-<ol>
-<li><strong>They can run the software on any cloud provider they
-choose to</strong></li>
-<li><strong>They can run the software on a bunch of computers they
-physically own, with the help of other open source software
-only</strong></li>
-</ol>
-<p>Ensuring these freedoms for my users requires the following
-restrictions on me:</p>
-<ol>
-<li>
-<p>Depend on Open Source Software with hosted cloud versions,
-not proprietary cloud-vendor-only software.</p>
-<p>I&rsquo;ll use PostgreSQL over Google Cloud Datastore. Kubernetes with
-autoscaling over talking to the EC2 api directly.</p>
-</li>
-<li>
-<p>Use abstractions that allow swappable implementations anytime
-you have to talk to a cloud provider API directly.</p>
-<p>Don&rsquo;t talk to the S3 API directly, but have an abstract
-interface that defines exactly what your application needs,
-and then write an S3 implementation for it. Ideally, also
-write a minio / ceph / file-system implementation for it,
-to make sure your abstraction actually works.</p>
-</li>
-</ol>
-<p>These are easy to follow once you are aware of them, and provide
-good design tradeoffs for Open Source projects. Remember these are
-necessary but not sufficient to ensure some of your users&rsquo; fundamental
-freedoms.</p>
 
   </div>
 </article>

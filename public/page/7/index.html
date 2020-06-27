@@ -45,7 +45,7 @@
 <meta property="og:description" content="Blog of Yuvi Panda" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://words.yuvi.in/" />
-<meta property="og:updated_time" content="2020-06-18T17:01:34+05:30" />
+<meta property="og:updated_time" content="2020-06-27T13:27:49+05:30" />
 <meta itemprop="name" content="Yuvi Panda">
 <meta itemprop="description" content="Blog of Yuvi Panda"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Yuvi Panda"/>
@@ -102,6 +102,38 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/simple-python-packaging-debian-ubuntu/">Simple python packaging for Debian / Ubuntu</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-08-19 </span>
+      <div class="post-category">
+          <a href="/categories/code/"> code </a>
+          </div>
+        <span class="more-meta"> 453 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+      <p>(As requested by <a href="https://twitter.com/JeanFred">Jean-Fred</a>)</p>
+<p>One of the ‘pain points’ with working on deploying python stuff at Wikimedia is that <code>pip</code> and <code>virtualenvs</code> are banned on production, for some (what I now understand as) good reasons (the solid Signing / Security issues with PYPI, and the slightly less solid but nonetheless valid ‘If we use pip for python and gem for ruby and npm for node, EXPLOSION OF PACKAGE MANAGERS and makes things harder to manage’). I was whining about how hard debian packaging was for quite a while without checking how easy/hard it was to package python specifically, and when I finally did, it turned out to be quite not that hard.</p>
+<p>Use <a href="https://pypi.python.org/pypi/stdeb">python-stdeb</a>.</p>
+<p>Really, that is it. Ignore most other things (until you run into issues that require them :P). It can translate most python packages that are packaged for PyPI into .debs that mostly pass <a href="https://lintian.debian.org/">lintian</a> checks. Simplest way to package, that I’ve been following for a while is:</p>
+<ol>
+<li>Install <code>python-stdeb</code> (from pip or apt). Usually requires the packages <code>python-all</code>, <code>fakeroot</code> and <code>build-essential</code>, although for some reason these aren’t required by the debian package for <code>stdeb</code>. Make sure you’re on the same distro you are building the package for.</li>
+<li><code>git clone</code> the package from its source</li>
+<li>Run <code>python setup.py --command-packages=stdeb.command bdist_deb</code> (or <code>python3</code> if you want to make Python 3 package)</li>
+<li>Run <code>lintian</code> on it. If it spots errors, go back and fix them, usually by editing the <code>setup.py</code> file (or sometimes a <code>stdeb.cfg</code> file). This is usually rather obvious and easy enough to fix.</li>
+<li>Run <code>dpkg -i &lt;package&gt;</code> to try to install the package. This will error out if it can’t find the packages that your package depends on. This means that they haven’t been packaged for debian yet. You can mostly fix this by finding that package, and making a deb for it, and installing it as well (recursively making debs for packages as you need them). While this sounds onerous, the fact is that most python packages already exist as deb packages and you <code>stdeb</code> will just work for them. You might have to do this more if you’re packaging for an older distro (<em>cough</em> <em>cough</em> <code>precise</code> <em>cough</em> <em>cough</em>), but is much easier on newer distros.</li>
+<li>Put your package in a repository! If you want to use this on Wikimedia Labs, you should use <a href="https://wikitech.wikimedia.org/wiki/Help:Using_debs_in_labs">Labsdebrepo</a>. Other environments will have similar ways to make the package available via <code>apt-get</code>. Avoid the temptation to just <code>dpkg -i</code> it on machines manually :)</li>
+</ol>
+<p>That’s pretty much it! Much simpler than I originally expected, and not much confusing / conflicting docs. The docs for <code>stdeb</code> are pretty nice and complete, so do read these!</p>
+<p>Will update the post as I learn more.</p>
+
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/paying-irccloud/">Paying for IRCCloud</a></h1>
@@ -370,88 +402,6 @@ THEY ARE WEARING HANDKERCHEIFS!
       <p>I’ve been reading a lot over the last few months (<a href="http://yuvi.in/blog/discworld-series-progress/">Discworld</a> + Foundation gives me about 24 books in the last 3 months), and figured I’d extend that for the next year with a little more underlying planning. So <a href="https://www.facebook.com/yuvipanda/posts/10151752346096191">along</a> with Bala, Arun &amp; Surya, I’ll try to read a hundred books this year, and also do a blog post each about them.</p>
 <p><a href="http://wiki.lspace.org/mediawiki/index.php/Book:Hogfather">Hogfather</a> is the 21st book in the Discworld series I’ve read. Rather wonderful commentary on rampant consumerization of… everything, incredibly well placed (and funny!) <a href="http://en.wikipedia.org/wiki/ELIZA">ELIZA</a> references and an undercurrent of ‘importance of belief’. The God of Hangovers was a nice touch.</p>
 <p>4/5.</p>
-
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/discworld-series-progress/">Discworld Series progress</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-01-01 </span>
-      <div class="post-category">
-          <a href="/categories/personal/"> personal </a>
-          </div>
-        <span class="more-meta"> 371 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-      <p>Contains a list of Discworld Novels. Am reading them all, and will cross them out here as I finish each. Number of books currently finished: 24 (as of 16 Jan 2014)</p>
-<ul>
-<li><!-- raw HTML omitted -->The Colour of Magic (1983) (Rincewind)<!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted -->The Light Fantastic (1986) (Rincewind)<!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted -->Equal Rites (1987) (Witches)<!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted -->Mort (1987) (Death)<!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted -->Sourcery (1988) (Rincewind)<!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted -->Wyrd Sisters (1988) (Witches)<!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted -->Pyramids (1989) (One-off)<!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted -->Guards! Guards! (1989) (City Watch)<!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted -->Eric (1990) (Rincewind)<!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted -->Moving Pictures (1990) (One-off)<!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted -->Reaper Man (1991) (Death)<!-- raw HTML omitted --></li>
-<li>Witches Abroad (1991) (Witches)</li>
-<li><!-- raw HTML omitted -->Small Gods (1992) (One-off)<!-- raw HTML omitted --></li>
-<li>Lords and Ladies (1992) (Witches)</li>
-<li>Troll Bridge (1992) (Short story)</li>
-<li><!-- raw HTML omitted -->Men at Arms (1993) (City Watch)<!-- raw HTML omitted --></li>
-<li>Theatre of Cruelty (1993) (Short story)</li>
-<li>Soul Music (1994) (Death)</li>
-<li>Interesting Times (1994) (Rincewind)</li>
-<li>The Discworld Companion (1994) (Companion)</li>
-<li>Maskerade (1995) (Witches)</li>
-<li><!-- raw HTML omitted -->Feet of Clay (1996) (City Watch)<!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted -->Hogfather (1996) (Death)<!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted -->Jingo (1997) (City Watch)<!-- raw HTML omitted --></li>
-<li>The Unseen University Diary (1998) (Diary)</li>
-<li>The Last Continent (1998) (Rincewind)</li>
-<li>Carpe Jugulum (1998) (Witches)</li>
-<li>The Sea and Little Fishes (1998) (Short story)</li>
-<li>The Ankh-Morpork City Watch Diary (1999) (Diary)</li>
-<li><!-- raw HTML omitted -->The Fifth Elephant (1999) (City Watch)<!-- raw HTML omitted --></li>
-<li>The Science of Discworld (1999) (Science)</li>
-<li>Nanny Ogg’s Cookbook (1999) (Recipes)</li>
-<li>The Assassins’ Guild Yearbook and Diary (2000)</li>
-<li>The Truth (2000) (One-off)</li>
-<li>The Fools’ Guild Yearbook and Diary (2001) (Diary)</li>
-<li><!-- raw HTML omitted -->Thief of Time (2001) (Death)<!-- raw HTML omitted --></li>
-<li>The Last Hero (2001) (Rincewind, although this is debatable)</li>
-<li>The Amazing Maurice and his Educated Rodents (2001) (One-off, children’s)</li>
-<li>The Thieves’ Guild Yearbook and Diary (2002) (Diary)</li>
-<li><!-- raw HTML omitted -->Night Watch (2002) (City Watch)<!-- raw HTML omitted --></li>
-<li>Death and What Comes Next (2002) (Short story)</li>
-<li>The Science of Discworld II: The Globe (2002)(Science)</li>
-<li>The Wyrdest Link (2002) (Quizbook)</li>
-<li>The (Reformed) Vampyre’s Diary (2003) (Diary)</li>
-<li>The Wee Free Men (2003) (Wee Free Men)</li>
-<li>The New Discworld Companion (2003) (Companion)</li>
-<li>Monstrous Regiment (2003) (One-off)</li>
-<li>A Hat Full of Sky (2004) (Wee Free Men)</li>
-<li><!-- raw HTML omitted -->Going Postal (2004) (Post Office)<!-- raw HTML omitted --></li>
-<li>Once More* *With Footnotes (2004) (Compilation of short works)</li>
-<li>The Discworld Almanack (2005) (Almanack)</li>
-<li><!-- raw HTML omitted -->Thud! (2005) (City Watch)<!-- raw HTML omitted --></li>
-<li>Where’s My Cow? (2005) (Picture Book)</li>
-<li>The Science of Discworld III: Darwin’s Watch (2005) (Science)</li>
-<li>Wintersmith (2006) (Wee Free Men)</li>
-<li>The Post Office Diary (2007) (Diary)</li>
-<li><!-- raw HTML omitted -->Making Money (2007) (Post Office)<!-- raw HTML omitted --></li>
-<li>Unseen Academicals (2009) (The Wizards, Rincewind)</li>
-<li>I Shall Wear Midnight (2010) (Wee Free Men)</li>
-<li><!-- raw HTML omitted -->Snuff (2011) (City Watch / Sam Vimes)<!-- raw HTML omitted --></li>
-<li>Raising Steam (2013) (Post office)</li>
-</ul>
 
   </div>
 </article>
