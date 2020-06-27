@@ -151,7 +151,7 @@ cluster.close()
 
 Lots more we can do from here.
 
-### Ephemeral Kuberentes Clusters
+### Ephemeral Kubernetes Clusters
 
 We can wrap kubernetes cluster creation in some nice python functions, letting users create kubernetes clusters just-in-time for running a dask-kubernetes cluster, and tearing it down when they're done. Users can thus 'bring their own compute' - since the clusters will be in their cloud accounts - without having the complication of understanding how the cloud works. This is where this would be different from the wonderful [dask-gateway](https://gateway.dask.org) project I think.
 
@@ -160,3 +160,19 @@ We can wrap kubernetes cluster creation in some nice python functions, letting u
 `kubefwd` isn't strictly necessary, and should ideally be replaced by a `kubectl port-forward` call that doesn't require root. This should be possible with some changes to the `dask-kubernetes` code, so the client can connect to the scheduler via a different address (say, `localhost:8974`, since that's what `kubectl port-forward` gives us) vs the workers (which need something like `dask-cluster-scheduler-c12.namespace:8786`, since that is in-cluster address).
 
 Longer term, it would be great if we can get rid of spawning other processes altogether, if/when the python kubernetes client gains the [ability to port-forward](https://github.com/kubernetes-client/python/issues/166).
+
+### Integration with TLJH
+
+I love [The Littlest JupyterHub (TLJH)](https://tljh.jupyter.org). A common use case is that a group of
+users need a JupyterHub, mostly doing work that's well seved by TLJH. However, sometimes they
+need to scale up to a big dask cluster to do some work, but not for long. In these cases, I believe
+a combination of TLJH + Ephemeral Kubernetes Clusters is far simpler & easier to manage than running
+a full Kubernetes based JupyterHub. In addition, we can share the conda environment from TLJH with
+the dask workers, **removing the need for users to think about docker images or environment
+mismatches completely**. This is a massive win, and merits further exploration.
+
+### ???
+
+I am not actually an end user of dask, so I'm sure actual dask users will have much more ideas.
+Or they won't, and this will just end up being a clever hack that gives me some joy :D Who
+knows!

@@ -111,8 +111,8 @@
           <a href="/categories/code/"> code </a>
           <a href="/categories/dask/"> dask </a>
           </div>
-        <span class="more-meta"> 811 words </span>
-        <span class="more-meta"> 4 mins read </span>
+        <span class="more-meta"> 967 words </span>
+        <span class="more-meta"> 5 mins read </span>
     </div>
   </header>
   
@@ -281,11 +281,23 @@ clean that up manually</p>
 </div>
 </div><h2 id="next-steps">Next steps?</h2>
 <p>Lots more we can do from here.</p>
-<h3 id="ephemeral-kuberentes-clusters">Ephemeral Kuberentes Clusters</h3>
+<h3 id="ephemeral-kubernetes-clusters">Ephemeral Kubernetes Clusters</h3>
 <p>We can wrap kubernetes cluster creation in some nice python functions, letting users create kubernetes clusters just-in-time for running a dask-kubernetes cluster, and tearing it down when they&rsquo;re done. Users can thus &lsquo;bring their own compute&rsquo; - since the clusters will be in their cloud accounts - without having the complication of understanding how the cloud works. This is where this would be different from the wonderful <a href="https://gateway.dask.org">dask-gateway</a> project I think.</p>
 <h3 id="remove-kubefwd">Remove kubefwd</h3>
 <p><code>kubefwd</code> isn&rsquo;t strictly necessary, and should ideally be replaced by a <code>kubectl port-forward</code> call that doesn&rsquo;t require root. This should be possible with some changes to the <code>dask-kubernetes</code> code, so the client can connect to the scheduler via a different address (say, <code>localhost:8974</code>, since that&rsquo;s what <code>kubectl port-forward</code> gives us) vs the workers (which need something like <code>dask-cluster-scheduler-c12.namespace:8786</code>, since that is in-cluster address).</p>
 <p>Longer term, it would be great if we can get rid of spawning other processes altogether, if/when the python kubernetes client gains the <a href="https://github.com/kubernetes-client/python/issues/166">ability to port-forward</a>.</p>
+<h3 id="integration-with-tljh">Integration with TLJH</h3>
+<p>I love <a href="https://tljh.jupyter.org">The Littlest JupyterHub (TLJH)</a>. A common use case is that a group of
+users need a JupyterHub, mostly doing work that&rsquo;s well seved by TLJH. However, sometimes they
+need to scale up to a big dask cluster to do some work, but not for long. In these cases, I believe
+a combination of TLJH + Ephemeral Kubernetes Clusters is far simpler &amp; easier to manage than running
+a full Kubernetes based JupyterHub. In addition, we can share the conda environment from TLJH with
+the dask workers, <strong>removing the need for users to think about docker images or environment
+mismatches completely</strong>. This is a massive win, and merits further exploration.</p>
+<h3 id="heading">???</h3>
+<p>I am not actually an end user of dask, so I&rsquo;m sure actual dask users will have much more ideas.
+Or they won&rsquo;t, and this will just end up being a clever hack that gives me some joy :D Who
+knows!</p>
 
   </div>
 </article>
