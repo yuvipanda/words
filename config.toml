@@ -1,4 +1,4 @@
-baseURL = "http://words.yuvi.in/"
+baseURL = "https://words.yuvi.in/"
 languageCode = "en"
 defaultContentLanguage = "en"
 title = "Yuvi Panda"
