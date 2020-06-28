@@ -34,17 +34,6 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   priority = 0.5
   filename = "sitemap.xml"
 
-[[menu.main]]
-  name = "GitHub"
-  weight = 40
-  identifier = "github"
-  url = "https://github.com/yuvipanda"
-[[menu.main]]
-  name = "Twitter"
-  weight = 50
-  identifier = "twitter"
-  url = "https://twitter.com/yuvipanda"
-
 [params]
   version = "4.x"           # Used to give a friendly message when you have an incompatible update
   debug = false             # If true, load `eruda.min.js`. See https://github.com/liriliri/eruda
