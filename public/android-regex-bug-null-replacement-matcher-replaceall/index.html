@@ -24,10 +24,10 @@ On a recent project, a subtle bug in Android’s Matcher.replaceAll behavior bit
 
 
 
-<meta name="generator" content="Hugo 0.70.0 with theme even" />
+<meta name="generator" content="Hugo 0.75.1 with theme even" />
 
 
-<link rel="canonical" href="http://words.yuvi.in/android-regex-bug-null-replacement-matcher-replaceall/" />
+<link rel="canonical" href="https://words.yuvi.in/android-regex-bug-null-replacement-matcher-replaceall/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -36,27 +36,31 @@ On a recent project, a subtle bug in Android’s Matcher.replaceAll behavior bit
 
 
 
-<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link href="/sass/main.min.fd028de9698f3177a6c19af3f7e269107c2710dd1eaf98d83106b3ad594c81c6.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
+
+
+<link rel="stylesheet" href="/lib/fontawesome-free-5.13.1-web/css/all.min.css">
 
 <meta property="og:title" content="Android RegEx bug: ‘null’ replacement with Matcher.replaceAll" />
 <meta property="og:description" content="Android’s Regular Expressions engine is API compatible with the generic Java implementation, but under the hood uses ICU’s RegEx engine. This usually causes no problems, until it does and then you’re sortof fucked, but not really.
 On a recent project, a subtle bug in Android’s Matcher.replaceAll behavior bit me. When replacing values of captured groups (&#39;$1&#39;&lt;/code,&lt;code&gt;&#39;$2&#39;, etc), Android’s implementation replaced a reference to an empty group with the literal string &#39;null&#39; instead of just skipping it (aka replacing with empty string &#39;&#39;), which is what most other Java implemetations do." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://words.yuvi.in/android-regex-bug-null-replacement-matcher-replaceall/" />
+<meta property="og:url" content="https://words.yuvi.in/android-regex-bug-null-replacement-matcher-replaceall/" />
 <meta property="article:published_time" content="2013-03-22T22:18:21+00:00" />
 <meta property="article:modified_time" content="2013-03-22T22:18:21+00:00" />
 <meta itemprop="name" content="Android RegEx bug: ‘null’ replacement with Matcher.replaceAll">
 <meta itemprop="description" content="Android’s Regular Expressions engine is API compatible with the generic Java implementation, but under the hood uses ICU’s RegEx engine. This usually causes no problems, until it does and then you’re sortof fucked, but not really.
 On a recent project, a subtle bug in Android’s Matcher.replaceAll behavior bit me. When replacing values of captured groups (&#39;$1&#39;&lt;/code,&lt;code&gt;&#39;$2&#39;, etc), Android’s implementation replaced a reference to an empty group with the literal string &#39;null&#39; instead of just skipping it (aka replacing with empty string &#39;&#39;), which is what most other Java implemetations do.">
-<meta itemprop="datePublished" content="2013-03-22T22:18:21&#43;00:00" />
-<meta itemprop="dateModified" content="2013-03-22T22:18:21&#43;00:00" />
+<meta itemprop="datePublished" content="2013-03-22T22:18:21+00:00" />
+<meta itemprop="dateModified" content="2013-03-22T22:18:21+00:00" />
 <meta itemprop="wordCount" content="159">
 
 
 
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Android RegEx bug: ‘null’ replacement with Matcher.replaceAll"/>
 <meta name="twitter:description" content="Android’s Regular Expressions engine is API compatible with the generic Java implementation, but under the hood uses ICU’s RegEx engine. This usually causes no problems, until it does and then you’re sortof fucked, but not really.
 On a recent project, a subtle bug in Android’s Matcher.replaceAll behavior bit me. When replacing values of captured groups (&#39;$1&#39;&lt;/code,&lt;code&gt;&#39;$2&#39;, etc), Android’s implementation replaced a reference to an empty group with the literal string &#39;null&#39; instead of just skipping it (aka replacing with empty string &#39;&#39;), which is what most other Java implemetations do."/>
@@ -72,40 +76,20 @@ On a recent project, a subtle bug in Android’s Matcher.replaceAll behavior bit
 
 </head>
 <body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">Yuvi Panda</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="https://github.com/yuvipanda">
-        <li class="mobile-menu-item">GitHub</li>
-      </a><a href="https://twitter.com/yuvipanda">
-        <li class="mobile-menu-item">Twitter</li>
-      </a>
-  </ul>
-</nav>
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Yuvi Panda</a>
+  <div class='logo-site-description'><a href='https://jupyter.org'>Project Jupyter</a> contributor | <a href='https://en.wikipedia.org/wiki/Free-culture_movement'>Free Culture</a> enthusiast
+  </div>
 </div>
 
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="https://github.com/yuvipanda">GitHub</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="https://twitter.com/yuvipanda">Twitter</a>
-      </li>
-  </ul>
-</nav>
+<div class="logo-social">
+      <a href="mailto:yuvipanda@gmail.com" class="fas fa-envelope" title="envelope"></a>
+      <a href="https://twitter.com/yuvipanda" class="fab fa-twitter" title="twitter"></a>
+      <a href="https://github.com/yuvipanda" class="fab fa-github" title="github"></a>
+  <a href="https://words.yuvi.in/index.xml" type="application/rss+xml" class="fas fa-rss" title="rss"></a>
+</div>
     </header>
 
     <main id="main" class="main">
@@ -174,20 +158,7 @@ On a recent project, a subtle bug in Android’s Matcher.replaceAll behavior bit
     </footer>
   </article>
         </div>
-        <div id="disqus_thread"></div>
-    <script type="text/javascript">
-    (function() {
-      
-      
-      if (window.location.hostname === 'localhost') return;
-
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      var disqus_shortname = 'yuvipanda';
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        
 
   
 
@@ -197,29 +168,21 @@ On a recent project, a subtle bug in Android’s Matcher.replaceAll behavior bit
     </main>
 
     <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="http://localhost:1313" class="iconfont icon--pocket" title="-pocket"></a>
-      <a href="mailto:yuvipanda@gmail.com" class="iconfont icon-email" title="email"></a>
-      <a href="https://twitter.com/yuvipanda" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="https://github.com/yuvipanda" class="iconfont icon-github" title="github"></a>
-  <a href="http://words.yuvi.in/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
+      <div class="copyright">
   <span class="power-by">
     Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+    Theme -
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
 
   
 
   <span class="copyright-year">
-    &copy; 
-    2005 - 
+    &copy;
+    2005 -
     2020
     <span class="heart">
       <i class="iconfont icon-heart"></i>
@@ -249,17 +212,6 @@ On a recent project, a subtle bug in Android’s Matcher.replaceAll behavior bit
   </script>
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-110578237-1', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 

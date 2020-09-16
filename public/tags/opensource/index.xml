@@ -2,31 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>opensource on Yuvi Panda</title>
-    <link>http://words.yuvi.in/tags/opensource/</link>
+    <link>https://words.yuvi.in/tags/opensource/</link>
     <description>Recent content in opensource on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 28 May 2020 12:34:19 +0530</lastBuildDate>
-    
-	<atom:link href="http://words.yuvi.in/tags/opensource/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Wed, 16 Sep 2020 17:09:42 +0530</lastBuildDate><atom:link href="https://words.yuvi.in/tags/opensource/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting up a &#34;Production Ready&#34; TLJH</title>
+      <link>https://words.yuvi.in/post/production-tljh/</link>
+      <pubDate>Wed, 16 Sep 2020 17:09:42 +0530</pubDate>
+      
+      <guid>https://words.yuvi.in/post/production-tljh/</guid>
+      <description>The Littlest JupyterHub is an extremely capable hub distribution that I&amp;rsquo;d recommend for situations where you expect, on average, under 100 active users.
+Why not Kubernetes? The primary reason to use Zero to JupyterHub on k8s over TLJH in cases with smaller number of users would be to reduce costs - Kubernetes can spin down nodes when not in use. However, you&amp;rsquo;ll always have at least one node running - for the hub / proxy pods.</description>
+    </item>
     
     <item>
       <title>On Being an &#39;Entitled User&#39;</title>
-      <link>http://words.yuvi.in/post/on-being-entitled-user/</link>
+      <link>https://words.yuvi.in/post/on-being-entitled-user/</link>
       <pubDate>Thu, 28 May 2020 12:34:19 +0530</pubDate>
       
-      <guid>http://words.yuvi.in/post/on-being-entitled-user/</guid>
+      <guid>https://words.yuvi.in/post/on-being-entitled-user/</guid>
       <description>Entitled users burn out maintainers. While my massive burning out wasn&amp;rsquo;t directly related, it didn&amp;rsquo;t help either. For a lot of other maintainers, it has been a primary source of burnout. This is an unfortunate reality of our time. There are a ton of stories from maintainers out there -see this for a recent example. Not going to rehash that.
 However, I&amp;rsquo;ve recently found myself on the &amp;lsquo;other side&amp;rsquo; of this coin.</description>
     </item>
     
     <item>
       <title>maintainerati 2017</title>
-      <link>http://words.yuvi.in/post/maintainerati-2017/</link>
+      <link>https://words.yuvi.in/post/maintainerati-2017/</link>
       <pubDate>Tue, 10 Oct 2017 23:15:01 -0700</pubDate>
       
-      <guid>http://words.yuvi.in/post/maintainerati-2017/</guid>
+      <guid>https://words.yuvi.in/post/maintainerati-2017/</guid>
       <description>I was at maintainerati today, which was super fun &amp;amp; quite intense! I highly appreciate GitHub &amp;amp; the individuals involved in making it happen!
 Here&amp;rsquo;s my key takeaways from this (and several other conversations over the last few weeks leading up to this):
  I am now a maintainer, which is quite a different thing from a core contributor or just a contributor. The power dynamics are very different, and so are the responsibilities.</description>

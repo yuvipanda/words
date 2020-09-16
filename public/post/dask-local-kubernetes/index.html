@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Run dask-kubernetes clusters on a cloud from your Laptop - Yuvi Panda</title>
+  <title>Access dask-kubernetes clusters running on a cloud from your local machine - Yuvi Panda</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,17 +16,17 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Yuvi Panda" /><meta name="description" content="Access dask-kubernetes clusters in the cloud from your local machine" /><meta name="keywords" content="yuvi, yuvipanda" />
+<meta name="author" content="Yuvi Panda" /><meta name="description" content="&#39;Burst&#39; from your local machine when you need some extra compute with dask-kubernetes" /><meta name="keywords" content="yuvi, yuvipanda" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.70.0 with theme even" />
+<meta name="generator" content="Hugo 0.75.1 with theme even" />
 
 
-<link rel="canonical" href="http://words.yuvi.in/post/dask-local-kubernetes/" />
+<link rel="canonical" href="https://words.yuvi.in/post/dask-local-kubernetes/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -35,27 +35,31 @@
 
 
 
-<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link href="/sass/main.min.fd028de9698f3177a6c19af3f7e269107c2710dd1eaf98d83106b3ad594c81c6.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Run dask-kubernetes clusters on a cloud from your Laptop" />
-<meta property="og:description" content="Access dask-kubernetes clusters in the cloud from your local machine" />
+
+<link rel="stylesheet" href="/lib/fontawesome-free-5.13.1-web/css/all.min.css">
+
+<meta property="og:title" content="Access dask-kubernetes clusters running on a cloud from your local machine" />
+<meta property="og:description" content="&#39;Burst&#39; from your local machine when you need some extra compute with dask-kubernetes" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://words.yuvi.in/post/dask-local-kubernetes/" />
+<meta property="og:url" content="https://words.yuvi.in/post/dask-local-kubernetes/" />
 <meta property="article:published_time" content="2020-06-27T13:27:49+05:30" />
 <meta property="article:modified_time" content="2020-06-27T13:27:49+05:30" />
-<meta itemprop="name" content="Run dask-kubernetes clusters on a cloud from your Laptop">
-<meta itemprop="description" content="Access dask-kubernetes clusters in the cloud from your local machine">
-<meta itemprop="datePublished" content="2020-06-27T13:27:49&#43;05:30" />
-<meta itemprop="dateModified" content="2020-06-27T13:27:49&#43;05:30" />
-<meta itemprop="wordCount" content="967">
+<meta itemprop="name" content="Access dask-kubernetes clusters running on a cloud from your local machine">
+<meta itemprop="description" content="&#39;Burst&#39; from your local machine when you need some extra compute with dask-kubernetes">
+<meta itemprop="datePublished" content="2020-06-27T13:27:49+05:30" />
+<meta itemprop="dateModified" content="2020-06-27T13:27:49+05:30" />
+<meta itemprop="wordCount" content="934">
 
 
 
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Run dask-kubernetes clusters on a cloud from your Laptop"/>
-<meta name="twitter:description" content="Access dask-kubernetes clusters in the cloud from your local machine"/>
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Access dask-kubernetes clusters running on a cloud from your local machine"/>
+<meta name="twitter:description" content="&#39;Burst&#39; from your local machine when you need some extra compute with dask-kubernetes"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -68,40 +72,20 @@
 
 </head>
 <body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">Yuvi Panda</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="https://github.com/yuvipanda">
-        <li class="mobile-menu-item">GitHub</li>
-      </a><a href="https://twitter.com/yuvipanda">
-        <li class="mobile-menu-item">Twitter</li>
-      </a>
-  </ul>
-</nav>
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Yuvi Panda</a>
+  <div class='logo-site-description'><a href='https://jupyter.org'>Project Jupyter</a> contributor | <a href='https://en.wikipedia.org/wiki/Free-culture_movement'>Free Culture</a> enthusiast
+  </div>
 </div>
 
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="https://github.com/yuvipanda">GitHub</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="https://twitter.com/yuvipanda">Twitter</a>
-      </li>
-  </ul>
-</nav>
+<div class="logo-social">
+      <a href="mailto:yuvipanda@gmail.com" class="fas fa-envelope" title="envelope"></a>
+      <a href="https://twitter.com/yuvipanda" class="fab fa-twitter" title="twitter"></a>
+      <a href="https://github.com/yuvipanda" class="fab fa-github" title="github"></a>
+  <a href="https://words.yuvi.in/index.xml" type="application/rss+xml" class="fas fa-rss" title="rss"></a>
+</div>
     </header>
 
     <main id="main" class="main">
@@ -110,7 +94,7 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">Run dask-kubernetes clusters on a cloud from your Laptop</h1>
+      <h1 class="post-title">Access dask-kubernetes clusters running on a cloud from your local machine</h1>
 
       <div class="post-meta">
         <span class="post-time"> 2020-06-27 </span>
@@ -118,7 +102,7 @@
             <a href="/categories/code/"> code </a>
             <a href="/categories/dask/"> dask </a>
             </div>
-          <span class="more-meta"> 967 words </span>
+          <span class="more-meta"> 934 words </span>
           <span class="more-meta"> 5 mins read </span>
         
       </div>
@@ -154,7 +138,7 @@
       <p>You can run your Jupyter Notebook locally, and connect easily to a remote <code>dask-kubernetes</code> cluster
 on a cloud-based Kubernetes Cluster with the help of <a href="https://kubefwd.com/">kubefwd</a>. This notebook
 will show you an example of how to do so. While this example is a Jupyter Notebook, the code will work
-any local python medium - REPL, IDE (vscode), or just plain ol&rsquo; <code>.py</code> files</p>
+any local python medium - REPL, IDE (vscode), or just plain ol' <code>.py</code> files</p>
 <p>Latest executable version of this notebook can be found in <a href="https://github.com/yuvipanda/cloud-local-dask-kubernetes">this repository</a></p>
 <h2 id="credit">Credit</h2>
 <p>This work was sponsored by <a href="https://www.quansight.com/">Quansight</a> ❤️</p>
@@ -164,76 +148,39 @@ any local python medium - REPL, IDE (vscode), or just plain ol&rsquo; <code>.py<
 this to go.</p>
 <h2 id="install--run-kubefwd">Install &amp; run kubefwd</h2>
 <p><code>kubefwd</code> lets you access services in your cloud Kubernetes cluster as if they were
-localy, with a clever combination of ol&rsquo; school <code>/etc/hosts</code> hacks &amp; fancy kubernetes
+localy, with a clever combination of ol' school <code>/etc/hosts</code> hacks &amp; fancy kubernetes
 port-forwarding. It requires root on Mac OS &amp; Linux, and should theoretically work on
 Windows too (haven&rsquo;t tested).</p>
 <p>Once you have installed it, run it in a separate terminal.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo kubefwd svc -n default -n kube-system
-</code></pre></td></tr></table>
-</div>
-</div><p>If you&rsquo;ve created your own namespace for your cluster, use that instead of <code>default</code>.
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo kubefwd svc -n default -n kube-system
+</code></pre></div><p>If you&rsquo;ve created your own namespace for your cluster, use that instead of <code>default</code>.
 The <code>kube-system</code> is required until <a href="https://github.com/txn2/kubefwd/issues/132">this issue</a>
 is fixed.</p>
 <p>If the <code>kubefwd</code> command runs successfully, we&rsquo;re good to go!</p>
 <h2 id="install-libraries-well-need">Install libraries we&rsquo;ll need</h2>
 <p>In addition to <code>dask-kubernetes</code>, we&rsquo;ll also need <code>numpy</code> to test our cluster with dask arrays.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="o">%</span><span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span> <span class="n">dask</span> <span class="n">distributed</span> <span class="n">dask</span><span class="o">-</span><span class="n">kubernetes</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="setup-dask-kubernetes-configuration">Setup dask-kubernetes configuration</h2>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">%</span><span style="color:#111">pip</span> <span style="color:#111">install</span> <span style="color:#111">numpy</span> <span style="color:#111">dask</span> <span style="color:#111">distributed</span> <span style="color:#111">dask</span><span style="color:#f92672">-</span><span style="color:#111">kubernetes</span>
+</code></pre></div><h2 id="setup-dask-kubernetes-configuration">Setup dask-kubernetes configuration</h2>
 <p>Normally, the pod template would come from an external configuration file.
 We keep this in the notebook to make it more self contained.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">POD_SPEC</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;kind&#39;</span><span class="p">:</span> <span class="s1">&#39;Pod&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;metadata&#39;</span><span class="p">:</span> <span class="p">{},</span>
-    <span class="s1">&#39;spec&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s1">&#39;restartPolicy&#39;</span><span class="p">:</span> <span class="s1">&#39;Never&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;containers&#39;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-                <span class="s1">&#39;image&#39;</span><span class="p">:</span> <span class="s1">&#39;daskdev/dask:latest&#39;</span><span class="p">,</span>
-                <span class="s1">&#39;args&#39;</span><span class="p">:</span> <span class="p">[</span>
-                    <span class="s1">&#39;dask-worker&#39;</span><span class="p">,</span>
-                    <span class="s1">&#39;--death-timeout&#39;</span><span class="p">,</span> <span class="s1">&#39;60&#39;</span>
-                <span class="p">],</span>
-                <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;dask&#39;</span><span class="p">,</span>
-            <span class="p">}</span>
-        <span class="p">]</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="create-a-remote-cluster--connect-to-it">Create a remote cluster &amp; connect to it</h2>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#111">POD_SPEC</span> <span style="color:#f92672">=</span> <span style="color:#111">{</span>
+    <span style="color:#d88200">&#39;kind&#39;</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;Pod&#39;</span><span style="color:#111">,</span>
+    <span style="color:#d88200">&#39;metadata&#39;</span><span style="color:#111">:</span> <span style="color:#111">{},</span>
+    <span style="color:#d88200">&#39;spec&#39;</span><span style="color:#111">:</span> <span style="color:#111">{</span>
+        <span style="color:#d88200">&#39;restartPolicy&#39;</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;Never&#39;</span><span style="color:#111">,</span>
+        <span style="color:#d88200">&#39;containers&#39;</span><span style="color:#111">:</span> <span style="color:#111">[</span>
+            <span style="color:#111">{</span>
+                <span style="color:#d88200">&#39;image&#39;</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;daskdev/dask:latest&#39;</span><span style="color:#111">,</span>
+                <span style="color:#d88200">&#39;args&#39;</span><span style="color:#111">:</span> <span style="color:#111">[</span>
+                    <span style="color:#d88200">&#39;dask-worker&#39;</span><span style="color:#111">,</span>
+                    <span style="color:#d88200">&#39;--death-timeout&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;60&#39;</span>
+                <span style="color:#111">],</span>
+                <span style="color:#d88200">&#39;name&#39;</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;dask&#39;</span><span style="color:#111">,</span>
+            <span style="color:#111">}</span>
+        <span style="color:#111">]</span>
+    <span style="color:#111">}</span>
+<span style="color:#111">}</span>
+</code></pre></div><h2 id="create-a-remote-cluster--connect-to-it">Create a remote cluster &amp; connect to it</h2>
 <p>We create a <code>KubeCluster</code> object, with <code>deploymode='remote'</code>. This creates
 the scheduler as a pod on the cluster, so worker &lt;-&gt; scheduler communication
 is easy &amp; efficient. <code>kubefwd</code> helps us communicate to this remote scheduler,
@@ -241,33 +188,17 @@ so we can pretend we are actually on the remote cluster.</p>
 <p>If you are using <code>kubectl</code> to watch the objects created in your namespace,
 you&rsquo;ll see a <code>service</code> and a <code>pod</code> created for this. <code>kubefwd</code> should
 also list a log line about forwarding the service port locally.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">dask_kubernetes</span> <span class="kn">import</span> <span class="n">KubeCluster</span>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> <span style="color:#111">dask_kubernetes</span> <span style="color:#f92672">import</span> <span style="color:#111">KubeCluster</span>
 
-<span class="n">cluster</span> <span class="o">=</span> <span class="n">KubeCluster</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">POD_SPEC</span><span class="p">,</span> <span class="n">deploy_mode</span><span class="o">=</span><span class="s1">&#39;remote&#39;</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="create-some-workers">Create some workers</h2>
+<span style="color:#111">cluster</span> <span style="color:#f92672">=</span> <span style="color:#111">KubeCluster</span><span style="color:#f92672">.</span><span style="color:#111">from_dict</span><span style="color:#111">(</span><span style="color:#111">POD_SPEC</span><span style="color:#111">,</span> <span style="color:#111">deploy_mode</span><span style="color:#f92672">=</span><span style="color:#d88200">&#39;remote&#39;</span><span style="color:#111">)</span>
+</code></pre></div><h2 id="create-some-workers">Create some workers</h2>
 <p>We have a scheduler in the cloud, now time to create some workers in the
 cloud! We create 2, and can watch the worker pods come up with glee in
 <code>kubectl</code></p>
 <p>All scaling methods (adaptive scaling, using the widget, etc) should work
 here.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">cluster</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="run-some-computation">Run some computation!</h2>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#111">cluster</span><span style="color:#f92672">.</span><span style="color:#111">scale</span><span style="color:#111">(</span><span style="color:#ae81ff">2</span><span style="color:#111">)</span>
+</code></pre></div><h2 id="run-some-computation">Run some computation!</h2>
 <p>We test our cluster by doing some trivial calculations with dask arrays.
 You can use any dask code as you normally would here, and it would
 run on the cloud Kubernetes cluster. This is especially helpful if you
@@ -276,44 +207,22 @@ really close to where the data is.</p>
 <p>You might get warnings about version mismatches. This is ok for the demo,
 in production you&rsquo;d probably build your own docker image that will
 have fixed versions.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="kn">import</span> <span class="n">Client</span>
-<span class="kn">import</span> <span class="nn">dask.array</span> <span class="kn">as</span> <span class="nn">da</span>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> <span style="color:#111">dask.distributed</span> <span style="color:#f92672">import</span> <span style="color:#111">Client</span>
+<span style="color:#f92672">import</span> <span style="color:#111">dask.array</span> <span style="color:#f92672">as</span> <span style="color:#111">da</span>
 
-<span class="c1"># Connect Dask to the cluster</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">cluster</span><span class="p">)</span>
+<span style="color:#75715e"># Connect Dask to the cluster</span>
+<span style="color:#111">client</span> <span style="color:#f92672">=</span> <span style="color:#111">Client</span><span style="color:#111">(</span><span style="color:#111">cluster</span><span style="color:#111">)</span>
 
-<span class="c1"># Create a large array and calculate the mean</span>
-<span class="n">array</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="n">array</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">compute</span><span class="p">())</span>  <span class="c1"># Should print 1.0</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="cleanup-dask-cluster">Cleanup dask cluster</h2>
+<span style="color:#75715e"># Create a large array and calculate the mean</span>
+<span style="color:#111">array</span> <span style="color:#f92672">=</span> <span style="color:#111">da</span><span style="color:#f92672">.</span><span style="color:#111">ones</span><span style="color:#111">((</span><span style="color:#ae81ff">1000</span><span style="color:#111">,</span> <span style="color:#ae81ff">1000</span><span style="color:#111">,</span> <span style="color:#ae81ff">1000</span><span style="color:#111">))</span>
+<span style="color:#00a8c8">print</span><span style="color:#111">(</span><span style="color:#111">array</span><span style="color:#f92672">.</span><span style="color:#111">mean</span><span style="color:#111">()</span><span style="color:#f92672">.</span><span style="color:#111">compute</span><span style="color:#111">())</span>  <span style="color:#75715e"># Should print 1.0</span>
+</code></pre></div><h2 id="cleanup-dask-cluster">Cleanup dask cluster</h2>
 <p>When you&rsquo;re done with your cluster, remember to clean it up to release
 the resources!</p>
 <p>This doesn&rsquo;t affect your kubernetes cluster itself - you&rsquo;ll need to
 clean that up manually</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">cluster</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="next-steps">Next steps?</h2>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#111">cluster</span><span style="color:#f92672">.</span><span style="color:#111">close</span><span style="color:#111">()</span>
+</code></pre></div><h2 id="next-steps">Next steps?</h2>
 <p>Lots more we can do from here.</p>
 <h3 id="ephemeral-kubernetes-clusters">Ephemeral Kubernetes Clusters</h3>
 <p>We can wrap kubernetes cluster creation in some nice python functions, letting users create kubernetes clusters just-in-time for running a dask-kubernetes cluster, and tearing it down when they&rsquo;re done. Users can thus &lsquo;bring their own compute&rsquo; - since the clusters will be in their cloud accounts - without having the complication of understanding how the cloud works. This is where this would be different from the wonderful <a href="https://gateway.dask.org">dask-gateway</a> project I think.</p>
@@ -353,7 +262,11 @@ knows!</p>
 <footer class="post-footer">
       
       <nav class="post-nav">
-        
+        <a class="prev" href="/post/production-tljh/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Setting up a &#34;Production Ready&#34; TLJH</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
         <a class="next" href="/post/google-domain/">
             <span class="next-text nav-default">Check if an organization is using GSuite</span>
             <span class="next-text nav-mobile">Next</span>
@@ -363,20 +276,7 @@ knows!</p>
     </footer>
   </article>
         </div>
-        <div id="disqus_thread"></div>
-    <script type="text/javascript">
-    (function() {
-      
-      
-      if (window.location.hostname === 'localhost') return;
-
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      var disqus_shortname = 'yuvipanda';
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        
 
   
 
@@ -386,29 +286,21 @@ knows!</p>
     </main>
 
     <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="http://localhost:1313" class="iconfont icon--pocket" title="-pocket"></a>
-      <a href="mailto:yuvipanda@gmail.com" class="iconfont icon-email" title="email"></a>
-      <a href="https://twitter.com/yuvipanda" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="https://github.com/yuvipanda" class="iconfont icon-github" title="github"></a>
-  <a href="http://words.yuvi.in/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
+      <div class="copyright">
   <span class="power-by">
     Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+    Theme -
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
 
   
 
   <span class="copyright-year">
-    &copy; 
-    2005 - 
+    &copy;
+    2005 -
     2020
     <span class="heart">
       <i class="iconfont icon-heart"></i>
@@ -438,17 +330,6 @@ knows!</p>
   </script>
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-110578237-1', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 

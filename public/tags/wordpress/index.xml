@@ -2,21 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>wordpress on Yuvi Panda</title>
-    <link>http://words.yuvi.in/tags/wordpress/</link>
+    <link>https://words.yuvi.in/tags/wordpress/</link>
     <description>Recent content in wordpress on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 06 Jun 2011 18:21:40 +0000</lastBuildDate>
-    
-	<atom:link href="http://words.yuvi.in/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 06 Jun 2011 18:21:40 +0000</lastBuildDate><atom:link href="https://words.yuvi.in/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Moving back to WordPress</title>
-      <link>http://words.yuvi.in/moving-back-to-wordpress/</link>
+      <link>https://words.yuvi.in/moving-back-to-wordpress/</link>
       <pubDate>Mon, 06 Jun 2011 18:21:40 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/moving-back-to-wordpress/</guid>
+      <guid>https://words.yuvi.in/moving-back-to-wordpress/</guid>
       <description>A while back, I moved my blog (from a wordpress install whose data I lost) to my own platform (HiSlain).
 After several close calls, I’m officially moving from HiSlain back to WordPress. I just don’t have enough time to maintain all the things I wanted in a blog platform in HiSlain, hence the move back. However, it satisfied it’s purpose – I learnt to write code I could use, others could use, and others could contribute to.</description>
     </item>

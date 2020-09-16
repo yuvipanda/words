@@ -2,49 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>wiki on Yuvi Panda</title>
-    <link>http://words.yuvi.in/categories/wiki/</link>
+    <link>https://words.yuvi.in/categories/wiki/</link>
     <description>Recent content in wiki on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 06 Jul 2015 20:58:35 +0000</lastBuildDate>
-    
-	<atom:link href="http://words.yuvi.in/categories/wiki/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 06 Jul 2015 20:58:35 +0000</lastBuildDate><atom:link href="https://words.yuvi.in/categories/wiki/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>“Green Stuff”</title>
-      <link>http://words.yuvi.in/green-stuff/</link>
+      <link>https://words.yuvi.in/green-stuff/</link>
       <pubDate>Mon, 06 Jul 2015 20:58:35 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/green-stuff/</guid>
+      <guid>https://words.yuvi.in/green-stuff/</guid>
       <description>“Green Stuff”
 TIL that Gregory Kohs was actually allowed to post on wikimedia-l at some point in the past.</description>
     </item>
     
     <item>
       <title>Global merge of accounts at Wikimedia</title>
-      <link>http://words.yuvi.in/global-merge-accounts-wikimedia/</link>
+      <link>https://words.yuvi.in/global-merge-accounts-wikimedia/</link>
       <pubDate>Sat, 04 Jul 2015 12:49:15 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/global-merge-accounts-wikimedia/</guid>
+      <guid>https://words.yuvi.in/global-merge-accounts-wikimedia/</guid>
       <description>is now slowly happening, and I am the test subject!</description>
     </item>
     
     <item>
       <title>Wikipedia Apps reboot taking shape nicely</title>
-      <link>http://words.yuvi.in/wikipedia-apps-reboot-taking-shape-nicely/</link>
+      <link>https://words.yuvi.in/wikipedia-apps-reboot-taking-shape-nicely/</link>
       <pubDate>Sat, 14 Dec 2013 15:06:28 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/wikipedia-apps-reboot-taking-shape-nicely/</guid>
+      <guid>https://words.yuvi.in/wikipedia-apps-reboot-taking-shape-nicely/</guid>
       <description>Prettier, faster and more feature packed! Native Wikipedia app for Android coming real soon!</description>
     </item>
     
     <item>
       <title>PHP being insane, part 5832</title>
-      <link>http://words.yuvi.in/php-insane-part-5832/</link>
+      <link>https://words.yuvi.in/php-insane-part-5832/</link>
       <pubDate>Fri, 13 Dec 2013 17:58:15 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/php-insane-part-5832/</guid>
+      <guid>https://words.yuvi.in/php-insane-part-5832/</guid>
       <description>Somehow: ( $a &amp;amp;&amp;amp; $b ) || ( $b &amp;amp;&amp;amp; $c ) || ( $a &amp;amp;&amp;amp; $c )
 Became: $a ? ( $b || $c ) : ( $b &amp;amp;&amp;amp; $c )
 Became: count( array_filter( array( $a, $b, $c ) ) ) &amp;gt;= 2
@@ -55,78 +51,78 @@ God dammit PHP…
     
     <item>
       <title>Lots of discussion over tiny things that do not matter in the long run, part 5321</title>
-      <link>http://words.yuvi.in/lots-discussion-tiny-matter-long-run-part-5321/</link>
+      <link>https://words.yuvi.in/lots-discussion-tiny-matter-long-run-part-5321/</link>
       <pubDate>Tue, 03 Dec 2013 21:00:36 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/lots-discussion-tiny-matter-long-run-part-5321/</guid>
+      <guid>https://words.yuvi.in/lots-discussion-tiny-matter-long-run-part-5321/</guid>
       <description>On gerrit this time
 Sigh.</description>
     </item>
     
     <item>
       <title>Devlog for Tuesday, September 24, 2013</title>
-      <link>http://words.yuvi.in/devlog-tuesday-september-24-2013/</link>
+      <link>https://words.yuvi.in/devlog-tuesday-september-24-2013/</link>
       <pubDate>Tue, 24 Sep 2013 11:29:47 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-tuesday-september-24-2013/</guid>
+      <guid>https://words.yuvi.in/devlog-tuesday-september-24-2013/</guid>
       <description>I’ve given up on trying to make DevLogs really comprehensive and complete, and just try to make them – even if they are incomplete. Perhaps this will help me actually write more devlogs, and thus make it more comprehensive…
 I started on the Functional Programming in Scala course today. I wanted to do it the last time, but did not find the time. This time will be different – I’m in a different spot mentally, and a big drain on my emotional / time resources (“college”) is no longer a factor.</description>
     </item>
     
     <item>
       <title>Devlog for Monday, Aug 26, 2013</title>
-      <link>http://words.yuvi.in/devlog-for-monday-aug-26-2013/</link>
+      <link>https://words.yuvi.in/devlog-for-monday-aug-26-2013/</link>
       <pubDate>Tue, 27 Aug 2013 13:55:31 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-for-monday-aug-26-2013/</guid>
-      <description>Nothing new started. The UploadCampaigns API patch I talked about yesterday was fixed and merged. I also helped merge some of MarkTraceur&amp;rsquo;s JS cleanup patches to UploadWizard. And Brion&amp;lsquo;s big detail view patch for Android Commons app. Also another cleanup/api feature patch to UploadWizard.</description>
+      <guid>https://words.yuvi.in/devlog-for-monday-aug-26-2013/</guid>
+      <description>Nothing new started. The UploadCampaigns API patch I talked about yesterday was fixed and merged. I also helped merge some of MarkTraceur&amp;rsquo;s JS cleanup patches to UploadWizard. And Brion&amp;rsquo;s big detail view patch for Android Commons app. Also another cleanup/api feature patch to UploadWizard.</description>
     </item>
     
     <item>
       <title>DevLog for Sun, Aug 25, 2013</title>
-      <link>http://words.yuvi.in/devlog-for-sun-aug-25-2013/</link>
+      <link>https://words.yuvi.in/devlog-for-sun-aug-25-2013/</link>
       <pubDate>Sun, 25 Aug 2013 23:44:25 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-for-sun-aug-25-2013/</guid>
+      <guid>https://words.yuvi.in/devlog-for-sun-aug-25-2013/</guid>
       <description>DevLogs have been something I&amp;rsquo;ve not been writing much of of late. Time to fix that!
 WLM Android App Spent some time reviving the WLM Android App. Wasn&amp;rsquo;t too hard, and am surprised at how well it still runs :) Some work still needed to update the templates and other metadata to refer to WLM2013 rather than WLM2012 – but that should not be too hard. The fact that it is an issue at all is simply because I ripped out all the Campaign related APIs a few weeks ago with my UploadCampaign rewrite.</description>
     </item>
     
     <item>
       <title>Nitpicking about the Order of Cards</title>
-      <link>http://words.yuvi.in/nitpicking-about-the-order-of-cards/</link>
+      <link>https://words.yuvi.in/nitpicking-about-the-order-of-cards/</link>
       <pubDate>Mon, 29 Jul 2013 01:18:42 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/nitpicking-about-the-order-of-cards/</guid>
+      <guid>https://words.yuvi.in/nitpicking-about-the-order-of-cards/</guid>
       <description>Someone pointed out this happening on Gerrit…</description>
     </item>
     
     <item>
       <title>First major feature to Commons deployed</title>
-      <link>http://words.yuvi.in/first-major-feature-to-commons-deployed/</link>
+      <link>https://words.yuvi.in/first-major-feature-to-commons-deployed/</link>
       <pubDate>Tue, 23 Jul 2013 00:40:26 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/first-major-feature-to-commons-deployed/</guid>
+      <guid>https://words.yuvi.in/first-major-feature-to-commons-deployed/</guid>
       <description>My UploadWizard work has just been deployed to Wikimedia Commons and my name is listed in the on site credits. Special thanks to Mark Traceur for code review!
 This feels very, very nice :) Now to sneak more code into other extensions…</description>
     </item>
     
     <item>
       <title>Bikeshedding on Gerrit #1</title>
-      <link>http://words.yuvi.in/bikeshedding-on-gerrit-1/</link>
+      <link>https://words.yuvi.in/bikeshedding-on-gerrit-1/</link>
       <pubDate>Mon, 22 Jul 2013 14:00:17 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/bikeshedding-on-gerrit-1/</guid>
+      <guid>https://words.yuvi.in/bikeshedding-on-gerrit-1/</guid>
       <description>First there was this.
 I was bored, and so there was this. That of course, brought a swift end to the bikeshed. I&amp;rsquo;m only slightly ashamed.</description>
     </item>
     
     <item>
       <title>Attempting to Secure Redis in a Multi Tenant environment</title>
-      <link>http://words.yuvi.in/attempting-to-secure-redis-in-a-multi-tenant-environment/</link>
+      <link>https://words.yuvi.in/attempting-to-secure-redis-in-a-multi-tenant-environment/</link>
       <pubDate>Sat, 20 Jul 2013 23:48:43 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/attempting-to-secure-redis-in-a-multi-tenant-environment/</guid>
+      <guid>https://words.yuvi.in/attempting-to-secure-redis-in-a-multi-tenant-environment/</guid>
       <description>When running Redis in a shared cluster/hosting environment (such as Wikimedia Tool Labs, on which I&amp;rsquo;ve been having fun doing a lot of work on), you would want to try to provide at least some guarantee of isolation for your keys from everyone else&amp;rsquo;s keys. Since Redis doesn&amp;rsquo;t do ACLs, this is problematic.
 This can be solved in a couple of ways
 Run a Redis instance for each user This is simple enough to do – each user runs their own Redis instance, and has full access to it.</description>
@@ -134,10 +130,10 @@ Run a Redis instance for each user This is simple enough to do – each user run
     
     <item>
       <title>Wikipedia has a new Favicon!</title>
-      <link>http://words.yuvi.in/wikipedia-favicon/</link>
+      <link>https://words.yuvi.in/wikipedia-favicon/</link>
       <pubDate>Thu, 18 Apr 2013 12:56:08 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/wikipedia-favicon/</guid>
+      <guid>https://words.yuvi.in/wikipedia-favicon/</guid>
       <description>Not sure if you’ve noticed, but over the last few days Wikipedia has a new Favicon – featuring (according to the commit message), “Multi-resolution, new render, rounded corners, very confused and angry graphic designer” :)
 New Favicon:
 
@@ -148,29 +144,29 @@ Looks much nicer when not on a light background.</description>
     
     <item>
       <title>Bugs RESOLVED HUMOROUS</title>
-      <link>http://words.yuvi.in/bugs-resolved-humorous/</link>
+      <link>https://words.yuvi.in/bugs-resolved-humorous/</link>
       <pubDate>Sun, 07 Apr 2013 14:49:24 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/bugs-resolved-humorous/</guid>
+      <guid>https://words.yuvi.in/bugs-resolved-humorous/</guid>
       <description>Mediawiki has a number of humorous bug reports, though not as many as I’d like. Still, they’re quite funny.
 I think my favorites are the request for RESOLVED MURDERED, the real reason why MediaWiki runs on MySQL, someone asking where the community consensus is to stop Volcanoes exploding, offers of shamanic help, a ground breaking report on US Government corruption, and a warning about zoning laws required for shipping Ponies,</description>
     </item>
     
     <item>
       <title>Puppy pregnancy syndrome</title>
-      <link>http://words.yuvi.in/puppy-pregnancy-syndrome/</link>
+      <link>https://words.yuvi.in/puppy-pregnancy-syndrome/</link>
       <pubDate>Thu, 04 Apr 2013 12:58:53 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/puppy-pregnancy-syndrome/</guid>
+      <guid>https://words.yuvi.in/puppy-pregnancy-syndrome/</guid>
       <description>Today’s share of well sourced but WTF wikipedia article is the Puppy pregnancy syndrome, a psychosomatic illness in humans that makes them believe that they’re pregnant with a puppy.</description>
     </item>
     
     <item>
       <title>Death by toilet</title>
-      <link>http://words.yuvi.in/death-by-toile/</link>
+      <link>https://words.yuvi.in/death-by-toile/</link>
       <pubDate>Wed, 03 Apr 2013 12:28:34 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/death-by-toile/</guid>
+      <guid>https://words.yuvi.in/death-by-toile/</guid>
       <description>I will start posting amusing but fairly well sourced wiki articles here occasionally.
 Starting with the article on Toilet related deaths &amp;amp; injuries. I love the caption for the photograph :)
 Also has fun part about how Elvis probably died. Highly recommended read :)</description>
@@ -178,10 +174,10 @@ Also has fun part about how Elvis probably died. Highly recommended read :)</des
     
     <item>
       <title>Calculating the population of India on Wikipedia</title>
-      <link>http://words.yuvi.in/calculating-population-india-wikipedia/</link>
+      <link>https://words.yuvi.in/calculating-population-india-wikipedia/</link>
       <pubDate>Sun, 31 Mar 2013 01:47:40 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/calculating-population-india-wikipedia/</guid>
+      <guid>https://words.yuvi.in/calculating-population-india-wikipedia/</guid>
       <description>Exploring the English Wikipedia randomly, I encountered this template used to approximate the current live population of India. It uses the following simple formula:
   It’s based on population at a specific data + projected growth. The ‘update’ is done by (best guess) some bot hitting action=purge every night to re-do the calculation.
 And where is this used? After looking at the template’s info page, the only article this seems to be used in is the India article, and that too only for population density statistics, rather than actual population statistics.</description>
@@ -189,10 +185,10 @@ And where is this used? After looking at the template’s info page, the only ar
     
     <item>
       <title>Mediawiki Bugzilla quips, aka ‘Behind the Scenes (sortof)’</title>
-      <link>http://words.yuvi.in/mediawiki-bugzilla-quips-aka-behind-scenes-sortof/</link>
+      <link>https://words.yuvi.in/mediawiki-bugzilla-quips-aka-behind-scenes-sortof/</link>
       <pubDate>Fri, 22 Mar 2013 22:37:00 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/mediawiki-bugzilla-quips-aka-behind-scenes-sortof/</guid>
+      <guid>https://words.yuvi.in/mediawiki-bugzilla-quips-aka-behind-scenes-sortof/</guid>
       <description>You might have heard of bash.org. If not, do go there! (And I am sorry about your afternoon)
 Mediawiki maintains something similar, but much shorter in size &amp;amp; form, at Bugzilla quips. I already appear a few times, but will try to appear some more!</description>
     </item>

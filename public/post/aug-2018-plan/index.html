@@ -24,10 +24,10 @@ JupyterCon JupyterCon is in NYC towards the end of August, and it is going to se
 
 
 
-<meta name="generator" content="Hugo 0.70.0 with theme even" />
+<meta name="generator" content="Hugo 0.75.1 with theme even" />
 
 
-<link rel="canonical" href="http://words.yuvi.in/post/aug-2018-plan/" />
+<link rel="canonical" href="https://words.yuvi.in/post/aug-2018-plan/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -36,15 +36,18 @@ JupyterCon JupyterCon is in NYC towards the end of August, and it is going to se
 
 
 
-<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link href="/sass/main.min.fd028de9698f3177a6c19af3f7e269107c2710dd1eaf98d83106b3ad594c81c6.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
+
+
+<link rel="stylesheet" href="/lib/fontawesome-free-5.13.1-web/css/all.min.css">
 
 <meta property="og:title" content="Aug 2018 Work Plan" />
 <meta property="og:description" content="I&rsquo;m writing up monthly &lsquo;work plans&rsquo; to plan what work I&rsquo;m trying to do every month, and do a retrospective after to see how much I got done. I work across a variety of open source projects with ambiguous responsibilities, so work planning isn&rsquo;t very set. This has proven to be somewhat quite stressful for everyone involved. Let&rsquo;s see if this helps!
 JupyterCon JupyterCon is in NYC towards the end of August, and it is going to set the pace for a bunch of stuff." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://words.yuvi.in/post/aug-2018-plan/" />
+<meta property="og:url" content="https://words.yuvi.in/post/aug-2018-plan/" />
 <meta property="article:published_time" content="2018-07-21T18:32:53-07:00" />
 <meta property="article:modified_time" content="2018-07-21T18:32:53-07:00" />
 <meta itemprop="name" content="Aug 2018 Work Plan">
@@ -56,7 +59,8 @@ JupyterCon JupyterCon is in NYC towards the end of August, and it is going to se
 
 
 
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Aug 2018 Work Plan"/>
 <meta name="twitter:description" content="I&rsquo;m writing up monthly &lsquo;work plans&rsquo; to plan what work I&rsquo;m trying to do every month, and do a retrospective after to see how much I got done. I work across a variety of open source projects with ambiguous responsibilities, so work planning isn&rsquo;t very set. This has proven to be somewhat quite stressful for everyone involved. Let&rsquo;s see if this helps!
 JupyterCon JupyterCon is in NYC towards the end of August, and it is going to set the pace for a bunch of stuff."/>
@@ -72,40 +76,20 @@ JupyterCon JupyterCon is in NYC towards the end of August, and it is going to se
 
 </head>
 <body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">Yuvi Panda</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="https://github.com/yuvipanda">
-        <li class="mobile-menu-item">GitHub</li>
-      </a><a href="https://twitter.com/yuvipanda">
-        <li class="mobile-menu-item">Twitter</li>
-      </a>
-  </ul>
-</nav>
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Yuvi Panda</a>
+  <div class='logo-site-description'><a href='https://jupyter.org'>Project Jupyter</a> contributor | <a href='https://en.wikipedia.org/wiki/Free-culture_movement'>Free Culture</a> enthusiast
+  </div>
 </div>
 
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="https://github.com/yuvipanda">GitHub</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="https://twitter.com/yuvipanda">Twitter</a>
-      </li>
-  </ul>
-</nav>
+<div class="logo-social">
+      <a href="mailto:yuvipanda@gmail.com" class="fas fa-envelope" title="envelope"></a>
+      <a href="https://twitter.com/yuvipanda" class="fab fa-twitter" title="twitter"></a>
+      <a href="https://github.com/yuvipanda" class="fab fa-github" title="github"></a>
+  <a href="https://words.yuvi.in/index.xml" type="application/rss+xml" class="fas fa-rss" title="rss"></a>
+</div>
     </header>
 
     <main id="main" class="main">
@@ -133,15 +117,15 @@ JupyterCon JupyterCon is in NYC towards the end of August, and it is going to se
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#jupytercon-">JupyterCon</a></li>
-    <li><a href="#matomo-formerly-piwiki-on-mybinderorg-">Matomo (formerly Piwiki) on mybinder.org</a></li>
-    <li><a href="#the-littlest-jupyterhub-01-release-">The Littlest JupyterHub 0.1 release</a></li>
-    <li><a href="#pangeo-workshop-">Pangeo Workshop</a></li>
-    <li><a href="#berkeley-datahub-deployment-">Berkeley DataHub deployment</a></li>
-    <li><a href="#uc-davis-">UC Davis</a></li>
-    <li><a href="#personal-">Personal</a></li>
-    <li><a href="#things-im-not-doing-">Things I&rsquo;m not doing!</a></li>
-    <li><a href="#in-conclusion-">In conclusion&hellip;</a></li>
+    <li><a href="#jupytercon">JupyterCon</a></li>
+    <li><a href="#matomo-formerly-piwiki-on-mybinderorg">Matomo (formerly Piwiki) on mybinder.org</a></li>
+    <li><a href="#the-littlest-jupyterhub-01-release">The Littlest JupyterHub 0.1 release</a></li>
+    <li><a href="#pangeo-workshop">Pangeo Workshop</a></li>
+    <li><a href="#berkeley-datahub-deployment">Berkeley DataHub deployment</a></li>
+    <li><a href="#uc-davis">UC Davis</a></li>
+    <li><a href="#personal">Personal</a></li>
+    <li><a href="#things-im-not-doing">Things I&rsquo;m not doing!</a></li>
+    <li><a href="#in-conclusion">In conclusion&hellip;</a></li>
   </ul>
 </nav>
   </div>
@@ -152,48 +136,48 @@ month, and do a retrospective after to see how much I got done. I work across
 a variety of open source projects with ambiguous responsibilities, so work
 planning isn&rsquo;t very set. This has proven to be somewhat quite stressful for
 everyone involved. Let&rsquo;s see if this helps!</p>
-<h2 id="jupytercon-">JupyterCon</h2>
+<h2 id="jupytercon">JupyterCon</h2>
 <p>JupyterCon is in NYC towards the end of August, and it is going to set the pace
 for a bunch of stuff. I have 2.5-ish talks to give. Need to prepare for those and
 do a good job.</p>
-<h2 id="matomo-formerly-piwiki-on-mybinderorg-">Matomo (formerly Piwiki) on mybinder.org</h2>
+<h2 id="matomo-formerly-piwiki-on-mybinderorg">Matomo (formerly Piwiki) on mybinder.org</h2>
 <p>mybinder.org currently uses Google Analytics. I am not a big fan. It has troubling
 privacy implications, and we don&rsquo;t get data as granularly as we want to. I am going
 to try deploying <a href="https://matomo.org/">Matomo</a> (formerly Piwiki) and using that
 instead. Run both together for a while and see how we like it! Matomo requires
 a MySQL database &amp; is written in PHP - let&rsquo;s see how this goes ;)</p>
-<h2 id="the-littlest-jupyterhub-01-release-">The Littlest JupyterHub 0.1 release</h2>
+<h2 id="the-littlest-jupyterhub-01-release">The Littlest JupyterHub 0.1 release</h2>
 <p><a href="https://github.com/jupyterhub/the-littlest-jupyterhub">The Littlest JupyterHub</a> is
 doing great! I&rsquo;ve done a <strong>lot</strong> of user tests, and the distribution has changed
 drastically over time. It&rsquo;s also the first time I&rsquo;m putting my newly found
 strong convictions around testing, CI &amp; documentation to practice. You can already
 check it out <a href="https://github.com/jupyterhub/the-littlest-jupyterhub">on GitHub</a>. I
 want to make sure we (the JupyterHub team) gets out a 0.1 release early August.</p>
-<h2 id="pangeo-workshop-">Pangeo Workshop</h2>
+<h2 id="pangeo-workshop">Pangeo Workshop</h2>
 <p>I despair about climate change and how little agency I seem to have around it
 quite a bit. I&rsquo;m excited to go to the <a href="https://www2.cisl.ucar.edu/events/workshops/2018-pangeo-workshop/2018/2018-pangeo-workshop">PANGEO workshop</a>
 in Colorado. I&rsquo;m mostly hoping to listen &amp; understand their world some more.</p>
-<h2 id="berkeley-datahub-deployment-">Berkeley DataHub deployment</h2>
+<h2 id="berkeley-datahub-deployment">Berkeley DataHub deployment</h2>
 <p>Aug 20-ish is when next semester starts at UC Berkeley. I need to have a pretty
 solid JupyterHub running there by then. I&rsquo;d like it to have good CI/CD set up
 in a generic way, rather than something super specific to Berkeley. However,
 I&rsquo;m happy to shortcut this if needed, since there&rsquo;s already so many things on
 my plate haha.</p>
-<h2 id="uc-davis-">UC Davis</h2>
+<h2 id="uc-davis">UC Davis</h2>
 <p>I&rsquo;m trying to spend a day or two a month at UC Davis. Partially because I like
 being on Amtrak! I also think there&rsquo;s a lot of cool work happening there,
 and I&rsquo;d like to hang out with all the cool people doing all the cool work.</p>
-<h2 id="personal-">Personal</h2>
+<h2 id="personal">Personal</h2>
 <p>On top of this, there&rsquo;s ongoing medical conditions to be managed. I&rsquo;m getting
 Carpel Tunnel Release surgery sometime in October, so need to make sure I do
 not super fuck up my hands before then. I&rsquo;m also getting a cortisone shot
 for my back in early August to deal with Sciatica. Fun!</p>
-<h2 id="things-im-not-doing-">Things I&rsquo;m not doing!</h2>
+<h2 id="things-im-not-doing">Things I&rsquo;m not doing!</h2>
 <p>The grading related stuff I&rsquo;ve been working on is going to the backburner
 for a while. I think I bit off far more than I can chew, so time to back off.
 I also do not have a good intuition for the problem domain since I&rsquo;ve never
 written grading keys nor have I been a student in a class that got autograded.</p>
-<h2 id="in-conclusion-">In conclusion&hellip;</h2>
+<h2 id="in-conclusion">In conclusion&hellip;</h2>
 <p>Shit, I&rsquo;ve a lot of things to do lol! I&rsquo;m sure I&rsquo;m forgetting some things
 here that I&rsquo;ve promised people. Let&rsquo;s see how this goes!</p>
 
@@ -231,20 +215,7 @@ here that I&rsquo;ve promised people. Let&rsquo;s see how this goes!</p>
     </footer>
   </article>
         </div>
-        <div id="disqus_thread"></div>
-    <script type="text/javascript">
-    (function() {
-      
-      
-      if (window.location.hostname === 'localhost') return;
-
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      var disqus_shortname = 'yuvipanda';
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        
 
   
 
@@ -254,29 +225,21 @@ here that I&rsquo;ve promised people. Let&rsquo;s see how this goes!</p>
     </main>
 
     <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="http://localhost:1313" class="iconfont icon--pocket" title="-pocket"></a>
-      <a href="mailto:yuvipanda@gmail.com" class="iconfont icon-email" title="email"></a>
-      <a href="https://twitter.com/yuvipanda" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="https://github.com/yuvipanda" class="iconfont icon-github" title="github"></a>
-  <a href="http://words.yuvi.in/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
+      <div class="copyright">
   <span class="power-by">
     Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+    Theme -
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
 
   
 
   <span class="copyright-year">
-    &copy; 
-    2005 - 
+    &copy;
+    2005 -
     2020
     <span class="heart">
       <i class="iconfont icon-heart"></i>
@@ -306,17 +269,6 @@ here that I&rsquo;ve promised people. Let&rsquo;s see how this goes!</p>
   </script>
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-110578237-1', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 

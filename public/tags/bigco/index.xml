@@ -2,21 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>bigco on Yuvi Panda</title>
-    <link>http://words.yuvi.in/tags/bigco/</link>
+    <link>https://words.yuvi.in/tags/bigco/</link>
     <description>Recent content in bigco on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 09 Jun 2011 13:11:47 +0000</lastBuildDate>
-    
-	<atom:link href="http://words.yuvi.in/tags/bigco/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 09 Jun 2011 13:11:47 +0000</lastBuildDate><atom:link href="https://words.yuvi.in/tags/bigco/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Why working at “Big Co” is unsatisfying</title>
-      <link>http://words.yuvi.in/working-big-co-unsatisfying/</link>
+      <link>https://words.yuvi.in/working-big-co-unsatisfying/</link>
       <pubDate>Thu, 09 Jun 2011 13:11:47 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/working-big-co-unsatisfying/</guid>
+      <guid>https://words.yuvi.in/working-big-co-unsatisfying/</guid>
       <description>Update: As usual, good comments at HN.
 I’ve been trying to put it in words for a while, and failing utterly every time. swombat gets to the crux of it wonderfully:
  At the same time, something really bothered me about my work. It felt pointless. One project I did (whose output was basically a PPT and Word document outlining the successes and failures of a client project), which took two and a half months, had, as its only apparent purpose, the promotion of the person who had led the project.</description>

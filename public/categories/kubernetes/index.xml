@@ -2,23 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>kubernetes on Yuvi Panda</title>
-    <link>http://words.yuvi.in/categories/kubernetes/</link>
+    <link>https://words.yuvi.in/categories/kubernetes/</link>
     <description>Recent content in kubernetes on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 11 Jan 2018 15:15:58 -0800</lastBuildDate>
-    
-	<atom:link href="http://words.yuvi.in/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 11 Jan 2018 15:15:58 -0800</lastBuildDate><atom:link href="https://words.yuvi.in/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kubectl verbose logging tricks</title>
-      <link>http://words.yuvi.in/post/kubectl-rbac/</link>
+      <link>https://words.yuvi.in/post/kubectl-rbac/</link>
       <pubDate>Thu, 11 Jan 2018 15:15:58 -0800</pubDate>
       
-      <guid>http://words.yuvi.in/post/kubectl-rbac/</guid>
+      <guid>https://words.yuvi.in/post/kubectl-rbac/</guid>
       <description>Recently I had to write some code that had to call the kubernetes API directly, without any language wrappers. While there is pretty good reference docs, I didn&amp;rsquo;t want to go and construct all the JSON manually in my programming language.
-I discovered that kubectl&#39;s -v parameter is very useful for this! With this, I can do the following:
+I discovered that kubectl&amp;rsquo;s -v parameter is very useful for this! With this, I can do the following:
  Perform the actions I need to perform with just kubectl commands Pass -v=8 to kubectl when doing this, and this will print all the HTTP traffic (requests and responses!</description>
     </item>
     

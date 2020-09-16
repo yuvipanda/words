@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jupyter on Yuvi Panda</title>
+    <link>https://words.yuvi.in/tags/jupyter/</link>
+    <description>Recent content in jupyter on Yuvi Panda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 16 Sep 2020 17:09:42 +0530</lastBuildDate><atom:link href="https://words.yuvi.in/tags/jupyter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting up a &#34;Production Ready&#34; TLJH</title>
+      <link>https://words.yuvi.in/post/production-tljh/</link>
+      <pubDate>Wed, 16 Sep 2020 17:09:42 +0530</pubDate>
+      
+      <guid>https://words.yuvi.in/post/production-tljh/</guid>
+      <description>The Littlest JupyterHub is an extremely capable hub distribution that I&amp;rsquo;d recommend for situations where you expect, on average, under 100 active users.
+Why not Kubernetes? The primary reason to use Zero to JupyterHub on k8s over TLJH in cases with smaller number of users would be to reduce costs - Kubernetes can spin down nodes when not in use. However, you&amp;rsquo;ll always have at least one node running - for the hub / proxy pods.</description>
+    </item>
+    
+  </channel>
+</rss>

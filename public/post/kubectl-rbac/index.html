@@ -23,10 +23,10 @@
 
 
 
-<meta name="generator" content="Hugo 0.70.0 with theme even" />
+<meta name="generator" content="Hugo 0.75.1 with theme even" />
 
 
-<link rel="canonical" href="http://words.yuvi.in/post/kubectl-rbac/" />
+<link rel="canonical" href="https://words.yuvi.in/post/kubectl-rbac/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -35,25 +35,29 @@
 
 
 
-<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link href="/sass/main.min.fd028de9698f3177a6c19af3f7e269107c2710dd1eaf98d83106b3ad594c81c6.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
+
+
+<link rel="stylesheet" href="/lib/fontawesome-free-5.13.1-web/css/all.min.css">
 
 <meta property="og:title" content="Kubectl verbose logging tricks" />
 <meta property="og:description" content="kubectl for exploring the Kubernetes API" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://words.yuvi.in/post/kubectl-rbac/" />
+<meta property="og:url" content="https://words.yuvi.in/post/kubectl-rbac/" />
 <meta property="article:published_time" content="2018-01-11T15:15:58-08:00" />
 <meta property="article:modified_time" content="2018-01-11T15:15:58-08:00" />
 <meta itemprop="name" content="Kubectl verbose logging tricks">
 <meta itemprop="description" content="kubectl for exploring the Kubernetes API">
 <meta itemprop="datePublished" content="2018-01-11T15:15:58-08:00" />
 <meta itemprop="dateModified" content="2018-01-11T15:15:58-08:00" />
-<meta itemprop="wordCount" content="301">
+<meta itemprop="wordCount" content="304">
 
 
 
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Kubectl verbose logging tricks"/>
 <meta name="twitter:description" content="kubectl for exploring the Kubernetes API"/>
 
@@ -68,40 +72,20 @@
 
 </head>
 <body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">Yuvi Panda</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="https://github.com/yuvipanda">
-        <li class="mobile-menu-item">GitHub</li>
-      </a><a href="https://twitter.com/yuvipanda">
-        <li class="mobile-menu-item">Twitter</li>
-      </a>
-  </ul>
-</nav>
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Yuvi Panda</a>
+  <div class='logo-site-description'><a href='https://jupyter.org'>Project Jupyter</a> contributor | <a href='https://en.wikipedia.org/wiki/Free-culture_movement'>Free Culture</a> enthusiast
+  </div>
 </div>
 
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="https://github.com/yuvipanda">GitHub</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="https://twitter.com/yuvipanda">Twitter</a>
-      </li>
-  </ul>
-</nav>
+<div class="logo-social">
+      <a href="mailto:yuvipanda@gmail.com" class="fas fa-envelope" title="envelope"></a>
+      <a href="https://twitter.com/yuvipanda" class="fab fa-twitter" title="twitter"></a>
+      <a href="https://github.com/yuvipanda" class="fab fa-github" title="github"></a>
+  <a href="https://words.yuvi.in/index.xml" type="application/rss+xml" class="fas fa-rss" title="rss"></a>
+</div>
     </header>
 
     <main id="main" class="main">
@@ -118,7 +102,7 @@
             <a href="/categories/kubernetes/"> kubernetes </a>
             <a href="/categories/code/"> code </a>
             </div>
-          <span class="more-meta"> 301 words </span>
+          <span class="more-meta"> 304 words </span>
           <span class="more-meta"> 2 mins read </span>
         
       </div>
@@ -134,7 +118,7 @@
       <p>Recently I had to write some code that had to call the kubernetes API directly,
 without any language wrappers. While there is pretty good <a href="https://kubernetes.io/docs/reference/">reference docs</a>,
 I didn&rsquo;t want to go and construct all the JSON manually in my programming language.</p>
-<p>I discovered that <code>kubectl</code>'s <code>-v</code> parameter is very useful for this! With this,
+<p>I discovered that <code>kubectl</code>&rsquo;s <code>-v</code> parameter is very useful for this! With this,
 I can do the following:</p>
 <ol>
 <li>Perform the actions I need to perform with just <code>kubectl</code> commands</li>
@@ -147,49 +131,22 @@ since it gives you a good intuition of how to handle this in your own code.</p>
 <p>If you&rsquo;re shelling out to <code>kubectl</code> directly in your code (for some reason!),
 you can also use this to figure out all the RBAC rules your code would need. For
 example, if I&rsquo;m going to run the following in my script:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">kubectl get node
-</code></pre></td></tr></table>
-</div>
-</div><p>and need to figure out which RBAC rules are needed for this, I can run:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">kubectl -v<span class="o">=</span><span class="m">8</span> get node 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> grep -P <span class="s1">&#39;GET|POST|DELETE|PATCH|PUT&#39;</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>This should list all the API requests the code is making, making it easier
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl get node
+</code></pre></div><p>and need to figure out which RBAC rules are needed for this, I can run:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl -v<span style="color:#f92672">=</span><span style="color:#ae81ff">8</span> get node 2&gt;<span style="color:#111">&amp;</span><span style="color:#ae81ff">1</span> <span style="color:#111">|</span> grep -P <span style="color:#d88200">&#39;GET|POST|DELETE|PATCH|PUT&#39;</span>
+</code></pre></div><p>This should list all the API requests the code is making, making it easier
 to figure out what rules are needed.</p>
 <p>Note that you might have to <code>rm -rf ~/.kube/cache</code> to &lsquo;really&rsquo; get the
 full API requests list, since <code>kubectl</code> caches a bunch of API autodiscovery.
 The minimum RBAC for kubectl is:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">kind</span><span class="p">:</span><span class="w"> </span>ClusterRole<span class="w">
-</span><span class="w"></span><span class="k">apiVersion</span><span class="p">:</span><span class="w"> </span>rbac.authorization.k8s.io/v1beta1<span class="w">
-</span><span class="w"></span><span class="k">metadata</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="k">name</span><span class="p">:</span><span class="w"> </span>kubectl-minimum<span class="w">
-</span><span class="w"></span><span class="k">rules</span><span class="p">:</span><span class="w">
-</span><span class="w"></span>- <span class="k">nonResourceURLs</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;/api&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;/apis/*&#34;</span><span class="p">]</span><span class="w">
-</span><span class="w">  </span><span class="k">verbs</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;get&#34;</span><span class="p">]</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><p>You will need to add additional rules for the specific commands you
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">kind</span><span style="color:#111">:</span> <span style="color:#ae81ff">ClusterRole</span>
+<span style="color:#f92672">apiVersion</span><span style="color:#111">:</span> <span style="color:#ae81ff">rbac.authorization.k8s.io/v1beta1</span>
+<span style="color:#f92672">metadata</span><span style="color:#111">:</span>
+  <span style="color:#f92672">name</span><span style="color:#111">:</span> <span style="color:#ae81ff">kubectl-minimum</span>
+<span style="color:#f92672">rules</span><span style="color:#111">:</span>
+- <span style="color:#f92672">nonResourceURLs</span><span style="color:#111">:</span> <span style="color:#111">[</span><span style="color:#d88200">&#34;/api&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;/apis/*&#34;</span><span style="color:#111">]</span>
+  <span style="color:#f92672">verbs</span><span style="color:#111">:</span> <span style="color:#111">[</span><span style="color:#d88200">&#34;get&#34;</span><span style="color:#111">]</span>
+</code></pre></div><p>You will need to add additional rules for the specific commands you
 want to execute.</p>
 <p><strong>More Kubectl Tips</strong></p>
 <ol start="0">
@@ -232,20 +189,7 @@ want to execute.</p>
     </footer>
   </article>
         </div>
-        <div id="disqus_thread"></div>
-    <script type="text/javascript">
-    (function() {
-      
-      
-      if (window.location.hostname === 'localhost') return;
-
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      var disqus_shortname = 'yuvipanda';
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        
 
   
 
@@ -255,29 +199,21 @@ want to execute.</p>
     </main>
 
     <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="http://localhost:1313" class="iconfont icon--pocket" title="-pocket"></a>
-      <a href="mailto:yuvipanda@gmail.com" class="iconfont icon-email" title="email"></a>
-      <a href="https://twitter.com/yuvipanda" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="https://github.com/yuvipanda" class="iconfont icon-github" title="github"></a>
-  <a href="http://words.yuvi.in/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
+      <div class="copyright">
   <span class="power-by">
     Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+    Theme -
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
 
   
 
   <span class="copyright-year">
-    &copy; 
-    2005 - 
+    &copy;
+    2005 -
     2020
     <span class="heart">
       <i class="iconfont icon-heart"></i>
@@ -307,17 +243,6 @@ want to execute.</p>
   </script>
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-110578237-1', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 

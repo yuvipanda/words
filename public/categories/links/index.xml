@@ -2,106 +2,102 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>links on Yuvi Panda</title>
-    <link>http://words.yuvi.in/categories/links/</link>
+    <link>https://words.yuvi.in/categories/links/</link>
     <description>Recent content in links on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 11 Feb 2016 21:43:23 +0000</lastBuildDate>
-    
-	<atom:link href="http://words.yuvi.in/categories/links/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 11 Feb 2016 21:43:23 +0000</lastBuildDate><atom:link href="https://words.yuvi.in/categories/links/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Lua Paper</title>
-      <link>http://words.yuvi.in/lua-paper/</link>
+      <link>https://words.yuvi.in/lua-paper/</link>
       <pubDate>Thu, 11 Feb 2016 21:43:23 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/lua-paper/</guid>
+      <guid>https://words.yuvi.in/lua-paper/</guid>
       <description>http://www.lua.org/spe.html is a pretty nice read!</description>
     </item>
     
     <item>
       <title>“Green Stuff”</title>
-      <link>http://words.yuvi.in/green-stuff/</link>
+      <link>https://words.yuvi.in/green-stuff/</link>
       <pubDate>Mon, 06 Jul 2015 20:58:35 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/green-stuff/</guid>
+      <guid>https://words.yuvi.in/green-stuff/</guid>
       <description>“Green Stuff”
 TIL that Gregory Kohs was actually allowed to post on wikimedia-l at some point in the past.</description>
     </item>
     
     <item>
       <title>Best talk ever?</title>
-      <link>http://words.yuvi.in/talk-ever/</link>
+      <link>https://words.yuvi.in/talk-ever/</link>
       <pubDate>Sun, 26 Apr 2015 08:30:41 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/talk-ever/</guid>
+      <guid>https://words.yuvi.in/talk-ever/</guid>
       <description>(Funniest, at least!). Well worth the 27min watch.</description>
     </item>
     
     <item>
       <title>Shitty Web advertising #1</title>
-      <link>http://words.yuvi.in/shitty-web-advertising-1/</link>
+      <link>https://words.yuvi.in/shitty-web-advertising-1/</link>
       <pubDate>Wed, 10 Sep 2014 12:05:45 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/shitty-web-advertising-1/</guid>
+      <guid>https://words.yuvi.in/shitty-web-advertising-1/</guid>
       <description>The message icon was flashing obnoxiously. I wonder how much money CNet made off that.
 I don’t notice these on desktop thanks to Adblock. Should set it up on my phone too.</description>
     </item>
     
     <item>
       <title>Feeling Agile today</title>
-      <link>http://words.yuvi.in/feeling-agile-today/</link>
+      <link>https://words.yuvi.in/feeling-agile-today/</link>
       <pubDate>Mon, 16 Dec 2013 03:54:31 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/feeling-agile-today/</guid>
+      <guid>https://words.yuvi.in/feeling-agile-today/</guid>
       <description>From twitter</description>
     </item>
     
     <item>
       <title>Lots of discussion over tiny things that do not matter in the long run, part 5321</title>
-      <link>http://words.yuvi.in/lots-discussion-tiny-matter-long-run-part-5321/</link>
+      <link>https://words.yuvi.in/lots-discussion-tiny-matter-long-run-part-5321/</link>
       <pubDate>Tue, 03 Dec 2013 21:00:36 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/lots-discussion-tiny-matter-long-run-part-5321/</guid>
+      <guid>https://words.yuvi.in/lots-discussion-tiny-matter-long-run-part-5321/</guid>
       <description>On gerrit this time
 Sigh.</description>
     </item>
     
     <item>
       <title>Science!</title>
-      <link>http://words.yuvi.in/science/</link>
+      <link>https://words.yuvi.in/science/</link>
       <pubDate>Mon, 23 Sep 2013 23:06:20 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/science/</guid>
+      <guid>https://words.yuvi.in/science/</guid>
       <description>This AskReddit thread about a HIV survivor (is that even the right term?) is heartwarming. SCIENCE!!!</description>
     </item>
     
     <item>
       <title>“If you help block Ads, you should be in prison!”</title>
-      <link>http://words.yuvi.in/if-you-help-block-ads-you-should-be-in-prison/</link>
+      <link>https://words.yuvi.in/if-you-help-block-ads-you-should-be-in-prison/</link>
       <pubDate>Mon, 26 Aug 2013 11:55:05 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/if-you-help-block-ads-you-should-be-in-prison/</guid>
+      <guid>https://words.yuvi.in/if-you-help-block-ads-you-should-be-in-prison/</guid>
       <description>I don&amp;rsquo;t understand how ad-blocking is even legal. It&amp;rsquo;s like stealing – stealing content for free, IMHO there&amp;rsquo;s no difference between stealing MP3s and news or any other content. There&amp;rsquo;s some kind of user agreement between websites and its users – &amp;ldquo;you can use our site for free, but you have to watch the ads&amp;rdquo;. Adblock violates this agreement. The people responsible for this should be in prison, they&amp;rsquo;re thieves.</description>
     </item>
     
     <item>
       <title>Die ’80 cols or die!’ guidelines!</title>
-      <link>http://words.yuvi.in/die-80-cols-or-die-guidelines/</link>
+      <link>https://words.yuvi.in/die-80-cols-or-die-guidelines/</link>
       <pubDate>Thu, 01 Aug 2013 16:51:09 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/die-80-cols-or-die-guidelines/</guid>
+      <guid>https://words.yuvi.in/die-80-cols-or-die-guidelines/</guid>
       <description>Python&amp;rsquo;s PEP8 has just been changed to no longer recommend sticking to 79 columns! The new text says:
 Aim to limit all lines to a maximum of 79 characters, but up to 99 characters is acceptable when it improves readability.  It would be nice to not have any such set limits at all, and just depend on programmers not being insane, but this is still an improvement!</description>
     </item>
     
     <item>
       <title>Sprinkling some Douchebaginess in code</title>
-      <link>http://words.yuvi.in/sprinkling-some-douchebaginess-in-code/</link>
+      <link>https://words.yuvi.in/sprinkling-some-douchebaginess-in-code/</link>
       <pubDate>Tue, 30 Jul 2013 08:49:24 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/sprinkling-some-douchebaginess-in-code/</guid>
+      <guid>https://words.yuvi.in/sprinkling-some-douchebaginess-in-code/</guid>
       <description>After being frustrated at Java&amp;rsquo;s lack of a generic &amp;lsquo;callback&amp;rsquo; type, I created this interface:
  public interface ContributionUploadProgress {void onUploadStarted(Contribution contribution);boolean isJavaAPieceOfShit();}  And randomly throw around (with onComplete implementing ContributionUploadProgress)
  assert onComplete.isJavaAPieceOfShit();  This, of course, is trivial to fix with an IDE. Should be more fun with a dynamic language :)
@@ -110,38 +106,38 @@ Aim to limit all lines to a maximum of 79 characters, but up to 99 characters is
     
     <item>
       <title>Nitpicking about the Order of Cards</title>
-      <link>http://words.yuvi.in/nitpicking-about-the-order-of-cards/</link>
+      <link>https://words.yuvi.in/nitpicking-about-the-order-of-cards/</link>
       <pubDate>Mon, 29 Jul 2013 01:18:42 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/nitpicking-about-the-order-of-cards/</guid>
+      <guid>https://words.yuvi.in/nitpicking-about-the-order-of-cards/</guid>
       <description>Someone pointed out this happening on Gerrit…</description>
     </item>
     
     <item>
       <title>GitHub Streaks</title>
-      <link>http://words.yuvi.in/github-streaks/</link>
+      <link>https://words.yuvi.in/github-streaks/</link>
       <pubDate>Sat, 27 Jul 2013 22:41:11 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/github-streaks/</guid>
+      <guid>https://words.yuvi.in/github-streaks/</guid>
       <description>I&amp;rsquo;m on my longest GitHub Streak this year – currently 20 days (was previously 18 days). That means I&amp;rsquo;ve had at least one commit (though usually more!) each day for the last 20 days. Sounds much easier than it actually is. Wanting to keep my streak unbroken is also making me write more diverse code – I think those 20 days feature code in Javascript, Python, Java, PHP and Python. It&amp;rsquo;s also distributed across a lot of projects – at least 8-9 different ones on last count.</description>
     </item>
     
     <item>
       <title>Game of Life in APL</title>
-      <link>http://words.yuvi.in/game-of-life-in-apl/</link>
+      <link>https://words.yuvi.in/game-of-life-in-apl/</link>
       <pubDate>Thu, 25 Jul 2013 10:52:05 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/game-of-life-in-apl/</guid>
+      <guid>https://words.yuvi.in/game-of-life-in-apl/</guid>
       <description>Ran across a video explaining building Game of Life in APL. Pretty awesome, and surprisingly – quite understandable too!
 I should learn J at some point, I think. My problem with trying to learn such languages is that I find it hard to find something to build that&amp;rsquo;s not a mere academic exercise, and I still do not have a solution as such. Just &amp;lsquo;try harder&amp;rsquo; doesn&amp;rsquo;t really work. Perhaps invent some sort of wonderful number crunching idea and then implement it?</description>
     </item>
     
     <item>
       <title>Can’t take the India out of the W3C…</title>
-      <link>http://words.yuvi.in/cant-take-the-india-out-of-the-w3c/</link>
+      <link>https://words.yuvi.in/cant-take-the-india-out-of-the-w3c/</link>
       <pubDate>Wed, 24 Jul 2013 07:12:12 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/cant-take-the-india-out-of-the-w3c/</guid>
+      <guid>https://words.yuvi.in/cant-take-the-india-out-of-the-w3c/</guid>
       <description>Presenting, the W3C India website, apparently from 2013. Funniest bit was probably:
  Best view in IE 9+, latest version of chrome, mozilla, opera and safari.
  Number of interactions with CDAC that have given me faith in any semblance of their competence: 0</description>
@@ -149,29 +145,29 @@ I should learn J at some point, I think. My problem with trying to learn such la
     
     <item>
       <title>God, biological engineering and friendly AIs</title>
-      <link>http://words.yuvi.in/god-biological-engineering-and-friendly-ais/</link>
+      <link>https://words.yuvi.in/god-biological-engineering-and-friendly-ais/</link>
       <pubDate>Sun, 21 Jul 2013 18:09:58 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/god-biological-engineering-and-friendly-ais/</guid>
+      <guid>https://words.yuvi.in/god-biological-engineering-and-friendly-ais/</guid>
       <description>Talking to God is an interesting piece about apparent &amp;lsquo;dangers&amp;rsquo; of knowledge and the necessary side effects of evolution. Thought provoking.</description>
     </item>
     
     <item>
       <title>Comedy Central Censored in India</title>
-      <link>http://words.yuvi.in/comedy-central-censored-india/</link>
+      <link>https://words.yuvi.in/comedy-central-censored-india/</link>
       <pubDate>Sat, 25 May 2013 09:50:25 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/comedy-central-censored-india/</guid>
+      <guid>https://words.yuvi.in/comedy-central-censored-india/</guid>
       <description>Comedy Central has been banned in India for the next ten days. Reasons?
  Whereas, the programme showed a man performing an act of stand_up comedy and mouthing vulgar words accompanied by obscene and suggestive gesture and gyration. During his performance, the man was shown uttering dialogues denigrating women, indecently and crudely referred to sex organs of men-and women and the sing-song rendition by the man sought to pornographically describe .</description>
     </item>
     
     <item>
       <title>Wikipedia has a new Favicon!</title>
-      <link>http://words.yuvi.in/wikipedia-favicon/</link>
+      <link>https://words.yuvi.in/wikipedia-favicon/</link>
       <pubDate>Thu, 18 Apr 2013 12:56:08 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/wikipedia-favicon/</guid>
+      <guid>https://words.yuvi.in/wikipedia-favicon/</guid>
       <description>Not sure if you’ve noticed, but over the last few days Wikipedia has a new Favicon – featuring (according to the commit message), “Multi-resolution, new render, rounded corners, very confused and angry graphic designer” :)
 New Favicon:
 
@@ -182,47 +178,47 @@ Looks much nicer when not on a light background.</description>
     
     <item>
       <title>Greatest Fear</title>
-      <link>http://words.yuvi.in/greatest-fear/</link>
+      <link>https://words.yuvi.in/greatest-fear/</link>
       <pubDate>Mon, 15 Apr 2013 06:47:37 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/greatest-fear/</guid>
+      <guid>https://words.yuvi.in/greatest-fear/</guid>
       <description>A lot of people confuse being physically alone with being lonely. Not even remotely close to being the same thing.</description>
     </item>
     
     <item>
       <title>Bugs RESOLVED HUMOROUS</title>
-      <link>http://words.yuvi.in/bugs-resolved-humorous/</link>
+      <link>https://words.yuvi.in/bugs-resolved-humorous/</link>
       <pubDate>Sun, 07 Apr 2013 14:49:24 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/bugs-resolved-humorous/</guid>
+      <guid>https://words.yuvi.in/bugs-resolved-humorous/</guid>
       <description>Mediawiki has a number of humorous bug reports, though not as many as I’d like. Still, they’re quite funny.
 I think my favorites are the request for RESOLVED MURDERED, the real reason why MediaWiki runs on MySQL, someone asking where the community consensus is to stop Volcanoes exploding, offers of shamanic help, a ground breaking report on US Government corruption, and a warning about zoning laws required for shipping Ponies,</description>
     </item>
     
     <item>
       <title>Puppy pregnancy syndrome</title>
-      <link>http://words.yuvi.in/puppy-pregnancy-syndrome/</link>
+      <link>https://words.yuvi.in/puppy-pregnancy-syndrome/</link>
       <pubDate>Thu, 04 Apr 2013 12:58:53 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/puppy-pregnancy-syndrome/</guid>
+      <guid>https://words.yuvi.in/puppy-pregnancy-syndrome/</guid>
       <description>Today’s share of well sourced but WTF wikipedia article is the Puppy pregnancy syndrome, a psychosomatic illness in humans that makes them believe that they’re pregnant with a puppy.</description>
     </item>
     
     <item>
       <title>Onion on Mass Shootings in the US</title>
-      <link>http://words.yuvi.in/onion-mass-shootings/</link>
+      <link>https://words.yuvi.in/onion-mass-shootings/</link>
       <pubDate>Wed, 03 Apr 2013 15:50:20 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/onion-mass-shootings/</guid>
+      <guid>https://words.yuvi.in/onion-mass-shootings/</guid>
       <description>I do love the Onion Channel on Youtube.</description>
     </item>
     
     <item>
       <title>Death by toilet</title>
-      <link>http://words.yuvi.in/death-by-toile/</link>
+      <link>https://words.yuvi.in/death-by-toile/</link>
       <pubDate>Wed, 03 Apr 2013 12:28:34 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/death-by-toile/</guid>
+      <guid>https://words.yuvi.in/death-by-toile/</guid>
       <description>I will start posting amusing but fairly well sourced wiki articles here occasionally.
 Starting with the article on Toilet related deaths &amp;amp; injuries. I love the caption for the photograph :)
 Also has fun part about how Elvis probably died. Highly recommended read :)</description>
@@ -230,10 +226,10 @@ Also has fun part about how Elvis probably died. Highly recommended read :)</des
     
     <item>
       <title>Code in Times New Roman</title>
-      <link>http://words.yuvi.in/code-times-roman/</link>
+      <link>https://words.yuvi.in/code-times-roman/</link>
       <pubDate>Tue, 02 Apr 2013 19:56:43 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/code-times-roman/</guid>
+      <guid>https://words.yuvi.in/code-times-roman/</guid>
       <description>Quoting from Anna University’s guidelines for submitting a ‘project report’
  Appendix 1: Sample Code. Font style: Times New Roman, Font Size:12 and 1.5 line spacing.
  Shoot me now.</description>
@@ -241,10 +237,10 @@ Also has fun part about how Elvis probably died. Highly recommended read :)</des
     
     <item>
       <title>Calculating the population of India on Wikipedia</title>
-      <link>http://words.yuvi.in/calculating-population-india-wikipedia/</link>
+      <link>https://words.yuvi.in/calculating-population-india-wikipedia/</link>
       <pubDate>Sun, 31 Mar 2013 01:47:40 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/calculating-population-india-wikipedia/</guid>
+      <guid>https://words.yuvi.in/calculating-population-india-wikipedia/</guid>
       <description>Exploring the English Wikipedia randomly, I encountered this template used to approximate the current live population of India. It uses the following simple formula:
   It’s based on population at a specific data + projected growth. The ‘update’ is done by (best guess) some bot hitting action=purge every night to re-do the calculation.
 And where is this used? After looking at the template’s info page, the only article this seems to be used in is the India article, and that too only for population density statistics, rather than actual population statistics.</description>
@@ -252,10 +248,10 @@ And where is this used? After looking at the template’s info page, the only ar
     
     <item>
       <title>Arranged Shag &amp; Childbirth Without Sex</title>
-      <link>http://words.yuvi.in/arranged-shag-childbirth-sex/</link>
+      <link>https://words.yuvi.in/arranged-shag-childbirth-sex/</link>
       <pubDate>Sun, 31 Mar 2013 01:29:42 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/arranged-shag-childbirth-sex/</guid>
+      <guid>https://words.yuvi.in/arranged-shag-childbirth-sex/</guid>
       <description>Absolutely hilarious, but you could easily dub out a few words and have it pass for real. Not sure if funny or sad.
 Has quote about how Jesus was Indian, because among other things, because “Parents had a son without having sex”.
 This entire BBC series (Goodness Gracious Me) is incredibly hilarious. Most of them are on Youtube. Highly recommended.
@@ -264,56 +260,56 @@ Thanks to QCoder from #wikipedia-en for the tip. Cheered up an otherwise bad day
     
     <item>
       <title>Tor Flashproxies on your browser</title>
-      <link>http://words.yuvi.in/tor-flashproxies-browser/</link>
+      <link>https://words.yuvi.in/tor-flashproxies-browser/</link>
       <pubDate>Mon, 25 Mar 2013 14:34:57 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/tor-flashproxies-browser/</guid>
+      <guid>https://words.yuvi.in/tor-flashproxies-browser/</guid>
       <description>Tor is one of those things that you don’t really need at all until you really really need it. I don’t need it right now, but I still try to help it as much as possible. One of the easiest way to do so is to run a flashproxy (has nothing to do with Adobe!) on your browser – super simple to setup, and effective for people looking for bridges.</description>
     </item>
     
     <item>
       <title>Experiencing ‘Embrace, Extend &amp; Extinguish’</title>
-      <link>http://words.yuvi.in/experiencing-embrace/</link>
+      <link>https://words.yuvi.in/experiencing-embrace/</link>
       <pubDate>Sat, 23 Mar 2013 19:08:24 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/experiencing-embrace/</guid>
+      <guid>https://words.yuvi.in/experiencing-embrace/</guid>
       <description>I am too young to remember Microsoft doing anything that could be considered effective ‘Embrace, Extend &amp;amp; Extinguish’ (my first browser when using internet at home was Firefox 0.9), and hence could never appreciate the general suspicion with which everything Microsoft was viewed with. Google’s handling of Reader has remedied that for me, however. I was around to witness all the events that Ed Bott at ZDNet discusses, and hopefully I have learnt my lesson.</description>
     </item>
     
     <item>
       <title>On Whatsapp</title>
-      <link>http://words.yuvi.in/511/</link>
+      <link>https://words.yuvi.in/511/</link>
       <pubDate>Sat, 23 Mar 2013 12:57:01 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/511/</guid>
+      <guid>https://words.yuvi.in/511/</guid>
       <description>Whatsaapp (and GTalk) has completely replaced SMS for me. The only sore point was that it was not ‘Android’y enough – looked too much like an iOS port, but it worked well enough (and had enough people in it) that my forays into Hike were never long enough. The latest update fixes the design to be a lot more flat and pleasing to the eyes, and I’m quite happy to stick to it.</description>
     </item>
     
     <item>
       <title>Mediawiki Bugzilla quips, aka ‘Behind the Scenes (sortof)’</title>
-      <link>http://words.yuvi.in/mediawiki-bugzilla-quips-aka-behind-scenes-sortof/</link>
+      <link>https://words.yuvi.in/mediawiki-bugzilla-quips-aka-behind-scenes-sortof/</link>
       <pubDate>Fri, 22 Mar 2013 22:37:00 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/mediawiki-bugzilla-quips-aka-behind-scenes-sortof/</guid>
+      <guid>https://words.yuvi.in/mediawiki-bugzilla-quips-aka-behind-scenes-sortof/</guid>
       <description>You might have heard of bash.org. If not, do go there! (And I am sorry about your afternoon)
 Mediawiki maintains something similar, but much shorter in size &amp;amp; form, at Bugzilla quips. I already appear a few times, but will try to appear some more!</description>
     </item>
     
     <item>
       <title>How to file a bug report</title>
-      <link>http://words.yuvi.in/file-bug-report/</link>
+      <link>https://words.yuvi.in/file-bug-report/</link>
       <pubDate>Fri, 22 Mar 2013 19:24:21 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/file-bug-report/</guid>
+      <guid>https://words.yuvi.in/file-bug-report/</guid>
       <description>Valerie, our awesome ‘Bug Wrangler in Training’, has written a nice blog post on how to report your first bug.</description>
     </item>
     
     <item>
       <title>Mindless Television</title>
-      <link>http://words.yuvi.in/mindless-television/</link>
+      <link>https://words.yuvi.in/mindless-television/</link>
       <pubDate>Fri, 22 Mar 2013 13:40:52 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/mindless-television/</guid>
+      <guid>https://words.yuvi.in/mindless-television/</guid>
       <description>Somehow, I found http://neave.com/television earlier today. Addictive.
 P.S. Blogging from a tablet with a bluetooth keyboard is not bad at all.</description>
     </item>

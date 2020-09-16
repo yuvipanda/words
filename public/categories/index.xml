@@ -2,183 +2,179 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Yuvi Panda</title>
-    <link>http://words.yuvi.in/categories/</link>
+    <link>https://words.yuvi.in/categories/</link>
     <description>Recent content in Categories on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 27 Jun 2020 13:27:49 +0530</lastBuildDate>
-    
-	<atom:link href="http://words.yuvi.in/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 27 Jun 2020 13:27:49 +0530</lastBuildDate><atom:link href="https://words.yuvi.in/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>code</title>
-      <link>http://words.yuvi.in/categories/code/</link>
+      <link>https://words.yuvi.in/categories/code/</link>
       <pubDate>Sat, 27 Jun 2020 13:27:49 +0530</pubDate>
       
-      <guid>http://words.yuvi.in/categories/code/</guid>
+      <guid>https://words.yuvi.in/categories/code/</guid>
       <description></description>
     </item>
     
     <item>
       <title>dask</title>
-      <link>http://words.yuvi.in/categories/dask/</link>
+      <link>https://words.yuvi.in/categories/dask/</link>
       <pubDate>Sat, 27 Jun 2020 13:27:49 +0530</pubDate>
       
-      <guid>http://words.yuvi.in/categories/dask/</guid>
+      <guid>https://words.yuvi.in/categories/dask/</guid>
       <description></description>
     </item>
     
     <item>
       <title>devlog</title>
-      <link>http://words.yuvi.in/categories/devlog/</link>
+      <link>https://words.yuvi.in/categories/devlog/</link>
       <pubDate>Wed, 26 Dec 2018 10:23:40 -0800</pubDate>
       
-      <guid>http://words.yuvi.in/categories/devlog/</guid>
+      <guid>https://words.yuvi.in/categories/devlog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>work-plan</title>
-      <link>http://words.yuvi.in/categories/work-plan/</link>
+      <link>https://words.yuvi.in/categories/work-plan/</link>
       <pubDate>Sat, 21 Jul 2018 18:32:53 -0700</pubDate>
       
-      <guid>http://words.yuvi.in/categories/work-plan/</guid>
+      <guid>https://words.yuvi.in/categories/work-plan/</guid>
       <description></description>
     </item>
     
     <item>
       <title>jupyter</title>
-      <link>http://words.yuvi.in/categories/jupyter/</link>
+      <link>https://words.yuvi.in/categories/jupyter/</link>
       <pubDate>Mon, 18 Jun 2018 13:14:59 -0700</pubDate>
       
-      <guid>http://words.yuvi.in/categories/jupyter/</guid>
+      <guid>https://words.yuvi.in/categories/jupyter/</guid>
       <description></description>
     </item>
     
     <item>
       <title>project-ideas</title>
-      <link>http://words.yuvi.in/categories/project-ideas/</link>
+      <link>https://words.yuvi.in/categories/project-ideas/</link>
       <pubDate>Mon, 18 Jun 2018 13:14:59 -0700</pubDate>
       
-      <guid>http://words.yuvi.in/categories/project-ideas/</guid>
+      <guid>https://words.yuvi.in/categories/project-ideas/</guid>
       <description></description>
     </item>
     
     <item>
       <title>kubernetes</title>
-      <link>http://words.yuvi.in/categories/kubernetes/</link>
+      <link>https://words.yuvi.in/categories/kubernetes/</link>
       <pubDate>Thu, 11 Jan 2018 15:15:58 -0800</pubDate>
       
-      <guid>http://words.yuvi.in/categories/kubernetes/</guid>
+      <guid>https://words.yuvi.in/categories/kubernetes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>personal</title>
-      <link>http://words.yuvi.in/categories/personal/</link>
+      <link>https://words.yuvi.in/categories/personal/</link>
       <pubDate>Fri, 29 Dec 2017 16:29:00 -0800</pubDate>
       
-      <guid>http://words.yuvi.in/categories/personal/</guid>
+      <guid>https://words.yuvi.in/categories/personal/</guid>
       <description></description>
     </item>
     
     <item>
       <title>retrospective</title>
-      <link>http://words.yuvi.in/categories/retrospective/</link>
+      <link>https://words.yuvi.in/categories/retrospective/</link>
       <pubDate>Fri, 29 Dec 2017 16:29:00 -0800</pubDate>
       
-      <guid>http://words.yuvi.in/categories/retrospective/</guid>
+      <guid>https://words.yuvi.in/categories/retrospective/</guid>
       <description></description>
     </item>
     
     <item>
       <title>class-notes</title>
-      <link>http://words.yuvi.in/categories/class-notes/</link>
+      <link>https://words.yuvi.in/categories/class-notes/</link>
       <pubDate>Sat, 09 Apr 2016 18:39:34 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/categories/class-notes/</guid>
+      <guid>https://words.yuvi.in/categories/class-notes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>papers</title>
-      <link>http://words.yuvi.in/categories/papers/</link>
+      <link>https://words.yuvi.in/categories/papers/</link>
       <pubDate>Wed, 09 Mar 2016 08:03:07 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/categories/papers/</guid>
+      <guid>https://words.yuvi.in/categories/papers/</guid>
       <description></description>
     </item>
     
     <item>
       <title>links</title>
-      <link>http://words.yuvi.in/categories/links/</link>
+      <link>https://words.yuvi.in/categories/links/</link>
       <pubDate>Thu, 11 Feb 2016 21:43:23 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/categories/links/</guid>
+      <guid>https://words.yuvi.in/categories/links/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Uncategorized</title>
-      <link>http://words.yuvi.in/categories/uncategorized/</link>
+      <link>https://words.yuvi.in/categories/uncategorized/</link>
       <pubDate>Sat, 19 Dec 2015 07:55:01 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/categories/uncategorized/</guid>
+      <guid>https://words.yuvi.in/categories/uncategorized/</guid>
       <description></description>
     </item>
     
     <item>
       <title>wiki</title>
-      <link>http://words.yuvi.in/categories/wiki/</link>
+      <link>https://words.yuvi.in/categories/wiki/</link>
       <pubDate>Mon, 06 Jul 2015 20:58:35 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/categories/wiki/</guid>
+      <guid>https://words.yuvi.in/categories/wiki/</guid>
       <description></description>
     </item>
     
     <item>
       <title>lol-culture</title>
-      <link>http://words.yuvi.in/categories/lol-culture/</link>
+      <link>https://words.yuvi.in/categories/lol-culture/</link>
       <pubDate>Tue, 15 Jul 2014 12:44:08 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/categories/lol-culture/</guid>
+      <guid>https://words.yuvi.in/categories/lol-culture/</guid>
       <description></description>
     </item>
     
     <item>
       <title>books</title>
-      <link>http://words.yuvi.in/categories/books/</link>
+      <link>https://words.yuvi.in/categories/books/</link>
       <pubDate>Wed, 15 Jan 2014 18:54:34 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/categories/books/</guid>
+      <guid>https://words.yuvi.in/categories/books/</guid>
       <description></description>
     </item>
     
     <item>
       <title>so-called-IT</title>
-      <link>http://words.yuvi.in/categories/so-called-it/</link>
+      <link>https://words.yuvi.in/categories/so-called-it/</link>
       <pubDate>Wed, 24 Jul 2013 07:12:12 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/categories/so-called-it/</guid>
+      <guid>https://words.yuvi.in/categories/so-called-it/</guid>
       <description></description>
     </item>
     
     <item>
       <title>education</title>
-      <link>http://words.yuvi.in/categories/education/</link>
+      <link>https://words.yuvi.in/categories/education/</link>
       <pubDate>Tue, 02 Apr 2013 19:56:43 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/categories/education/</guid>
+      <guid>https://words.yuvi.in/categories/education/</guid>
       <description></description>
     </item>
     
     <item>
       <title>events</title>
-      <link>http://words.yuvi.in/categories/events/</link>
+      <link>https://words.yuvi.in/categories/events/</link>
       <pubDate>Sun, 10 Apr 2011 23:02:48 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/categories/events/</guid>
+      <guid>https://words.yuvi.in/categories/events/</guid>
       <description></description>
     </item>
     

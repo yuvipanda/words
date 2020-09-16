@@ -2,21 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>js on Yuvi Panda</title>
-    <link>http://words.yuvi.in/tags/js/</link>
+    <link>https://words.yuvi.in/tags/js/</link>
     <description>Recent content in js on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 28 Nov 2011 10:40:50 +0000</lastBuildDate>
-    
-	<atom:link href="http://words.yuvi.in/tags/js/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 28 Nov 2011 10:40:50 +0000</lastBuildDate><atom:link href="https://words.yuvi.in/tags/js/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What I learnt from reading “Javascript – The Good Parts”</title>
-      <link>http://words.yuvi.in/learnt-reading-javascript-good-parts/</link>
+      <link>https://words.yuvi.in/learnt-reading-javascript-good-parts/</link>
       <pubDate>Mon, 28 Nov 2011 10:40:50 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/learnt-reading-javascript-good-parts/</guid>
+      <guid>https://words.yuvi.in/learnt-reading-javascript-good-parts/</guid>
       <description>Just finished reading ‘Javascript – The Good Parts’. Here is what I learnt:
  I knew jack shit about JavaScript. I was able to get along so far simply because I knew jQuery and understood how closures work. Holy shit that’s one fucked up language. Quite schizophrenic, saved by almost limitless extensibility/monkey-patchability/watcha-gonna-do-write-a-java-applet-hahaha . If you’re going to write Javascript, you’ll have to subset. Subsetting/augmenting has its own share of problems – primarily that map in your code might not be the same as map in someone else’s code, even if they seem to be working on the same ‘type’ jQuery is incredible.</description>
     </item>

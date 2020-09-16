@@ -2,40 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>devlog on Yuvi Panda</title>
-    <link>http://words.yuvi.in/categories/devlog/</link>
+    <link>https://words.yuvi.in/categories/devlog/</link>
     <description>Recent content in devlog on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 26 Dec 2018 10:23:40 -0800</lastBuildDate>
-    
-	<atom:link href="http://words.yuvi.in/categories/devlog/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 26 Dec 2018 10:23:40 -0800</lastBuildDate><atom:link href="https://words.yuvi.in/categories/devlog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Devlog 2018 12 26</title>
-      <link>http://words.yuvi.in/post/devlog-2018-12-26/</link>
+      <link>https://words.yuvi.in/post/devlog-2018-12-26/</link>
       <pubDate>Wed, 26 Dec 2018 10:23:40 -0800</pubDate>
       
-      <guid>http://words.yuvi.in/post/devlog-2018-12-26/</guid>
+      <guid>https://words.yuvi.in/post/devlog-2018-12-26/</guid>
       <description>Physical activity I walked for about 6 miles yesterday evening, after doing 3-4 miles each day for about 2-3 days before. The roads were empty, and it was lovely. I&amp;rsquo;ve listened to maybe 6-10 hours of Deborah Frances-White in the last week or so, split between The Guilty Feminist and Global Pillage. Next time though, I&amp;rsquo;m going to try listen to podcasts less &amp;amp; observe my surroundings more. I am doing this (plus PT) to rehab my knee mostly.</description>
     </item>
     
     <item>
       <title>Devlog 2018 12 24</title>
-      <link>http://words.yuvi.in/post/devlog-2018-12-24/</link>
+      <link>https://words.yuvi.in/post/devlog-2018-12-24/</link>
       <pubDate>Mon, 24 Dec 2018 10:51:57 -0800</pubDate>
       
-      <guid>http://words.yuvi.in/post/devlog-2018-12-24/</guid>
+      <guid>https://words.yuvi.in/post/devlog-2018-12-24/</guid>
       <description>Gracefully exiting asyncio application Continuing yesterday&amp;rsquo;s work on my simple supervisor library, I continued trying to propagate signals cleanly to child processes before exiting. I remembered that it isn&amp;rsquo;t enough to just propagate signals - you also have to actually reap them. This meant waiting for wait calls on them to return.
 I had a task running concurrently that is waiting on these processes. So &amp;lsquo;all&amp;rsquo; I had to do was make sure the application does not exit until these tasks are done.</description>
     </item>
     
     <item>
       <title>DevLog 2018 December 23</title>
-      <link>http://words.yuvi.in/post/devlog-2018-12-23/</link>
+      <link>https://words.yuvi.in/post/devlog-2018-12-23/</link>
       <pubDate>Sun, 23 Dec 2018 19:44:53 -0800</pubDate>
       
-      <guid>http://words.yuvi.in/post/devlog-2018-12-23/</guid>
+      <guid>https://words.yuvi.in/post/devlog-2018-12-23/</guid>
       <description>I have enjoyed keeping running logs of my coding work (devlogs) in the past, and am going to start doing those again now.
 This &amp;lsquo;holiday&amp;rsquo; season, I am spending time teaching myself skills I sortof know about but do not have a deep understanding of.
 JupyterLab extension I spent the first part of the day (before I started devlogging) working on finishing up a jupyterlab extension I started the day before.</description>
@@ -43,10 +39,10 @@ JupyterLab extension I spent the first part of the day (before I started devlogg
     
     <item>
       <title>DevLog for 21-30 Dec 2015</title>
-      <link>http://words.yuvi.in/devlog-21-30-dec-2015/</link>
+      <link>https://words.yuvi.in/devlog-21-30-dec-2015/</link>
       <pubDate>Wed, 30 Dec 2015 23:40:38 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-21-30-dec-2015/</guid>
+      <guid>https://words.yuvi.in/devlog-21-30-dec-2015/</guid>
       <description>Clearly I missed an entire week. I need to build a better system to make this easier…
 Random notes.
  Kicked out NFS from the Tool Labs proxies (with 1). Yay! This hopefully explains the lockup of tools-proxy-01 yesterday night, maybe? It’s been restarted since, and I hope to no longer have instances randomly locoking on me. Infrastructure standards of 2009, here we come! :D I’ve also removed NFS from tools-redis, and migrated them to Jessie as well.</description>
@@ -54,10 +50,10 @@ Random notes.
     
     <item>
       <title>DevLog for 2015 Dec 20</title>
-      <link>http://words.yuvi.in/devlog-2015-dec-20/</link>
+      <link>https://words.yuvi.in/devlog-2015-dec-20/</link>
       <pubDate>Mon, 21 Dec 2015 17:09:40 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-2015-dec-20/</guid>
+      <guid>https://words.yuvi.in/devlog-2015-dec-20/</guid>
       <description>Probably going to take it easy and chill. Already sent a trivial PR up though.
 Also saw the old devlog mailing list and feeling happy memories. Clearly need to bring something back like that, but I don’t know / think mailing lists are the best medium. More thinking!
 Ended up learning some Tornad and wrote nbserve to serve rendered notebooks and static files in a configurable way. I should refactor PAWS to have separate jupyterhub, proxy and nbserve pods tomorrow.</description>
@@ -65,19 +61,19 @@ Ended up learning some Tornad and wrote nbserve to serve rendered notebooks and 
     
     <item>
       <title>DevLog for 2015 Dec 19</title>
-      <link>http://words.yuvi.in/devlog-2015-dec-19/</link>
+      <link>https://words.yuvi.in/devlog-2015-dec-19/</link>
       <pubDate>Sun, 20 Dec 2015 09:15:56 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-2015-dec-19/</guid>
+      <guid>https://words.yuvi.in/devlog-2015-dec-19/</guid>
       <description>Today looks like a day of finding, reporting and fixing bugs in WikiChatter. I had made a stupid mistake yesterday that meant not all of the Teahouse pages were being parsed, and I immediately started running into bugs. Have reported (and fixed!) two (1 and 2), and ran into another bug in mediawikiparserfromhell itself. I’m sure I’ll find more. Another bug in WikiChatter! 3 Perils of digging through archives – you find Wikipedians giving relationship advice.</description>
     </item>
     
     <item>
       <title>DevLog for Jan 5, 2015</title>
-      <link>http://words.yuvi.in/devlog-for-jan-5-2015/</link>
+      <link>https://words.yuvi.in/devlog-for-jan-5-2015/</link>
       <pubDate>Mon, 05 Jan 2015 21:52:08 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-for-jan-5-2015/</guid>
+      <guid>https://words.yuvi.in/devlog-for-jan-5-2015/</guid>
       <description>DevLog for Jan 5, 2015
 Trying out the ByWord app, since it has MarkDown support and also publishes to WordPress. Paid Rs. 900 for it, let’s hope it is useful. Hate the default font, though.
  Need to parse View definitions on labsdb public databases and verify that we aren’t leaking any info (https://phabricator.wikimedia.org/T85783). Was going to use the sqlparse library, but that doesn’t seem very complete or useful. Will attempt to use regexes now.</description>
@@ -85,30 +81,30 @@ Trying out the ByWord app, since it has MarkDown support and also publishes to W
     
     <item>
       <title>DevLog for Jan 3-4 2015</title>
-      <link>http://words.yuvi.in/devlog-jan-3-4-2015/</link>
+      <link>https://words.yuvi.in/devlog-jan-3-4-2015/</link>
       <pubDate>Sun, 04 Jan 2015 19:18:34 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-jan-3-4-2015/</guid>
+      <guid>https://words.yuvi.in/devlog-jan-3-4-2015/</guid>
       <description>Nothing much going on…
  Continue reading Real World Haskell. This is indeed expanding my horizons, but I haven’t found any project I could use haskell in yet. Will keep looking. Helped fix a parsoid outage yesterday. No biggie. I still do not understand fully how parsoid works / how it is set up, should do. Spend most of the rest of the time in ‘weekend mode’, which includes mostly not doing things.</description>
     </item>
     
     <item>
       <title>DevLog for Jan 2, 2015</title>
-      <link>http://words.yuvi.in/devlog-jan-2-2015/</link>
+      <link>https://words.yuvi.in/devlog-jan-2-2015/</link>
       <pubDate>Fri, 02 Jan 2015 21:16:09 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-jan-2-2015/</guid>
+      <guid>https://words.yuvi.in/devlog-jan-2-2015/</guid>
       <description>Woohoo, 2015! :) Let’s see if I can keep this going this time :)
  Have started taking weekends slightly more seriously. My brain feels less overwhelmed after that. Should take weekends even more seriously going forward. Merged labsdb-auditor rewrite patch. Code clean enough for my tastes now, although not documented enough. Lots of back and forth CR with valhallasw was really nice – it’s something I’ve been missing for the past few months.</description>
     </item>
     
     <item>
       <title>DevLog Sep 12-24, 2014</title>
-      <link>http://words.yuvi.in/devlog-sep-12-24-2014/</link>
+      <link>https://words.yuvi.in/devlog-sep-12-24-2014/</link>
       <pubDate>Wed, 24 Sep 2014 15:17:10 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-sep-12-24-2014/</guid>
+      <guid>https://words.yuvi.in/devlog-sep-12-24-2014/</guid>
       <description>That was a long break. Should get into better habits. I’m sure I’d miss some here. Oh well.
 It was a very interesting week, culminating in some very interesting things at Trafalgar Square. I feel much better as a person and more calmer/chilled out now :) Should remember to take weekends off.
  Helped the WikiMetrics people with some puppet changes. They were requiring mysql directly instead of using the class we have in ops/puppet, which meant it put data in the /var partition instead of in /srv.</description>
@@ -116,10 +112,10 @@ It was a very interesting week, culminating in some very interesting things at T
     
     <item>
       <title>DevLog for Sep 10-11 2014</title>
-      <link>http://words.yuvi.in/devlog-sep-10-11-2014/</link>
+      <link>https://words.yuvi.in/devlog-sep-10-11-2014/</link>
       <pubDate>Thu, 11 Sep 2014 20:16:39 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-sep-10-11-2014/</guid>
+      <guid>https://words.yuvi.in/devlog-sep-10-11-2014/</guid>
       <description>Back from an awesome vacation. Too awesome to write about, even :) Suffice it to say, England has some really pretty places.
 Some Android app work, and lots of monitoring work
  Fixed bugs causing the Wikipedia Android Alpha from building properly. Now it builds properly whenever there is a new commit. Hooray! This was primarily caused by me forgetting to give it lots of RAM (8G VMEM) to execute the mvn build commands (https://gerrit.</description>
@@ -127,10 +123,10 @@ Some Android app work, and lots of monitoring work
     
     <item>
       <title>DevLog for 31 Aug, 1-4 Sep 2014</title>
-      <link>http://words.yuvi.in/devlog-31-aug-1-4-sep-2014/</link>
+      <link>https://words.yuvi.in/devlog-31-aug-1-4-sep-2014/</link>
       <pubDate>Sat, 06 Sep 2014 10:27:26 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-31-aug-1-4-sep-2014/</guid>
+      <guid>https://words.yuvi.in/devlog-31-aug-1-4-sep-2014/</guid>
       <description>Missed DevLogging for a while.
 Am in London now.
  Started using a spare Majestouch Ninja 2 over my regular Kinesis Advantage. This is way more portable, and my hand does not seem to be hurting while using it (so far only about 4-5 hours). If this keeps up, I should be able to move to a similar smaller keyboard over the much bulkier kinesis. There’s still a little bit of discomfort, so I’ll probably want a very portable and mechanical split keyboard.</description>
@@ -138,110 +134,110 @@ Am in London now.
     
     <item>
       <title>DevLog for 29, 30 Aug 2014</title>
-      <link>http://words.yuvi.in/devlog-29-30-aug-2014/</link>
+      <link>https://words.yuvi.in/devlog-29-30-aug-2014/</link>
       <pubDate>Mon, 01 Sep 2014 11:41:55 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-29-30-aug-2014/</guid>
+      <guid>https://words.yuvi.in/devlog-29-30-aug-2014/</guid>
       <description>Chill weekend. Didn’t really do anything code related. Recovering from friday night party :)
 Started reading Data + Design which seems quite nice. Also starting a coursera course on Data analysis and Statistical Inference on Sep 1, should be fun.</description>
     </item>
     
     <item>
       <title>DevLog for 28 Aug 2014</title>
-      <link>http://words.yuvi.in/devlog-28-aug-2014/</link>
+      <link>https://words.yuvi.in/devlog-28-aug-2014/</link>
       <pubDate>Thu, 28 Aug 2014 22:56:53 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-28-aug-2014/</guid>
+      <guid>https://words.yuvi.in/devlog-28-aug-2014/</guid>
       <description>Let’s see. I’m also going to attempt to include patch links wherever possible.
  Cleaned up session handling bugs in Quarry. They were previously not closing properly, causing SQLAlchemy exceptions now and then that’ll let queries die in a ‘queued’ state. This should hopefully be fixed by https://gerrit.wikimedia.org/r/#/c/156909/. Made https://graphite.wmflabs.org somewhat more stable again for use by Wikimedia BetaLabs folks by just blacklisting all other projects from sending data to it (with a local whitelist hack + https://gerrit.</description>
     </item>
     
     <item>
       <title>DevLog for 25 and 26 Aug 2014</title>
-      <link>http://words.yuvi.in/devlog-26-27-aug-2014/</link>
+      <link>https://words.yuvi.in/devlog-26-27-aug-2014/</link>
       <pubDate>Wed, 27 Aug 2014 00:29:35 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-26-27-aug-2014/</guid>
+      <guid>https://words.yuvi.in/devlog-26-27-aug-2014/</guid>
       <description>Not very code heavy
  Couple of pull requests(#1 and #2) for the Atom Autosave plugin. One adds a preference to not autosave by when you are explicitly closing a window / pane, and the other just sets the ‘enabled’ preference to default. CoffeeScript isn’t too bad either! I should consider writing more plugins (I currently use Atom for CSS/JS/Puppet, should try other languages) Added CSV, TSV and JSON download options to Quarry.</description>
     </item>
     
     <item>
       <title>DevLog for Aug 24, 2014</title>
-      <link>http://words.yuvi.in/devlog-aug-24-2014/</link>
+      <link>https://words.yuvi.in/devlog-aug-24-2014/</link>
       <pubDate>Mon, 25 Aug 2014 02:37:17 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-aug-24-2014/</guid>
+      <guid>https://words.yuvi.in/devlog-aug-24-2014/</guid>
       <description>Wooooo!
  Moved labsbooks (described in yesterday’s devlog) to use a shared readonly IPython virtualenv maintained by me. Also installed a bunch of modules people might want to use (SciPy, NumPy, Pandas, PyTables, matplotlib). Am considering just installing IPython notebook globally via puppet and using that, since that’ll enable users to just use the system packages. However, the version of IPython notebook from Ubuntu is ancient, so that’s probably a non-starter.</description>
     </item>
     
     <item>
       <title>DevLog for 23 Aug 2014</title>
-      <link>http://words.yuvi.in/devlog-23-aug-2014/</link>
+      <link>https://words.yuvi.in/devlog-23-aug-2014/</link>
       <pubDate>Sun, 24 Aug 2014 02:56:40 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-23-aug-2014/</guid>
+      <guid>https://words.yuvi.in/devlog-23-aug-2014/</guid>
       <description>Back in Glasgow! It was actually not very cold today, only cold! Progress.
 Started working on my long-abandoned labsbook project, which aims to make Tool Labs a first class environment for people who want to run (and publish) iPython Notebooks while also being able to access the replica databases and the dumps. Doing this in a secure manner is kinda hard, but I think I’ve a neat solution that lets everyone run a personal iPython kernel on the Grid, access it from their local machine, and also publish it to the web from a standard location.</description>
     </item>
     
     <item>
       <title>Devlog for Aug 22 2014</title>
-      <link>http://words.yuvi.in/devlog-aug-22-2014/</link>
+      <link>https://words.yuvi.in/devlog-aug-22-2014/</link>
       <pubDate>Sat, 23 Aug 2014 14:43:09 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-aug-22-2014/</guid>
+      <guid>https://words.yuvi.in/devlog-aug-22-2014/</guid>
       <description>Was in Edinburgh again, missed writing it as I went along. Oh well.
  Ported the code for the Wikipedia Android app automated builds to Python, and you can see it in action at http://tools.wmflabs.org/wikipedia-android-builds/ now. It lets you download the latest build, and notes the last successful build time. Good enough :) It was originally in bash, and porting it to python allowed me to create a ‘fake’ API (just JSON blobs written to known locations in the file system).</description>
     </item>
     
     <item>
       <title>Devlog for 21 Aug 2014</title>
-      <link>http://words.yuvi.in/devlog-21-aug-2014/</link>
+      <link>https://words.yuvi.in/devlog-21-aug-2014/</link>
       <pubDate>Fri, 22 Aug 2014 11:01:50 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-21-aug-2014/</guid>
+      <guid>https://words.yuvi.in/devlog-21-aug-2014/</guid>
       <description>In Edinburgh! I’ve finally stopped spelling it as Edinborough!
  Added ‘user group’ functionality to Quarry, and added a sudo user group that does what you would think it does. Will be assigned super, super sparingly. Found out that I’d have to explicitly specify charset of the database when I’m creating it or MySQL will default to a stupid charset. Forced all tables and columns to utf8 and that seems to have fixed a bunch of unicode issues.</description>
     </item>
     
     <item>
       <title>Devlog for 20 Aug 2014</title>
-      <link>http://words.yuvi.in/devlog-20-aug-2014/</link>
+      <link>https://words.yuvi.in/devlog-20-aug-2014/</link>
       <pubDate>Thu, 21 Aug 2014 03:39:15 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-20-aug-2014/</guid>
+      <guid>https://words.yuvi.in/devlog-20-aug-2014/</guid>
       <description>Woke up at 11AM again! w000t!
  Fixed a stupid bug in Quarry that made it fail if MySQL decided that a column you were selecting is a Decimal. Fixed this in time for… Helped out with a webinar from J-Mo for people to learn SQL and do research against Wikimedia stuff with Quarry! Went without a glitch mostly, so yay :) Oren asked for an API for Quarry, I’ll investigate ways to get that done Found that some queries against enwiki succeed on s1.</description>
     </item>
     
     <item>
       <title>Devlog for 19 Aug 2014</title>
-      <link>http://words.yuvi.in/devlog-19-aug-2014/</link>
+      <link>https://words.yuvi.in/devlog-19-aug-2014/</link>
       <pubDate>Wed, 20 Aug 2014 11:11:22 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-19-aug-2014/</guid>
+      <guid>https://words.yuvi.in/devlog-19-aug-2014/</guid>
       <description>Here we go again.
  Wrote a small blog post talking about how to package python packages as debian packages. More work on getting Graphite setup for Wikimedia Labs. Everything is up and running now (after a number of embarrassing typos). Need to figure out NAT rules to let labs machines talk to labmon1001, and then it can start receiving data!!!1 Got access to Wikimedia’s Hadoop cluster, and ran my first HIVE query ever!</description>
     </item>
     
     <item>
       <title>DevLog for 18 Aug 2014</title>
-      <link>http://words.yuvi.in/devlog-18-aug-2014/</link>
+      <link>https://words.yuvi.in/devlog-18-aug-2014/</link>
       <pubDate>Mon, 18 Aug 2014 12:39:06 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-18-aug-2014/</guid>
+      <guid>https://words.yuvi.in/devlog-18-aug-2014/</guid>
       <description>I’ve started the habit of opening up a devlog post each morning and just filling it up as I go along. Let’s hope I can keep this up :)
  Merged a couple of Android patches. The app is getting better every day without too much involvement from me, and yay for that :) I’ve gotten closure over the Android app – it was fucking terrible, and now it is quite awesome.</description>
     </item>
     
     <item>
       <title>DevLog for 17 Aug 2014</title>
-      <link>http://words.yuvi.in/devlog-17-mon-2014/</link>
+      <link>https://words.yuvi.in/devlog-17-mon-2014/</link>
       <pubDate>Mon, 18 Aug 2014 12:37:51 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-17-mon-2014/</guid>
+      <guid>https://words.yuvi.in/devlog-17-mon-2014/</guid>
       <description>Devlogs again! Let’s see how long I can keep this one up.
 Been a whirlwind few months. I’m moving to the Wikimedia Ops team soon! The Wikipedia app has been released! Lots of excitement around, should do a bigger post sometime with details. This should just follow usual devlog format of stuff for the day
  Completed deployment of changing the results backend of Quarry to SQLite. That was a fun exercise, and I should write about that separately.</description>
@@ -249,49 +245,49 @@ Been a whirlwind few months. I’m moving to the Wikimedia Ops team soon! The Wi
     
     <item>
       <title>Devlog for Tuesday, September 24, 2013</title>
-      <link>http://words.yuvi.in/devlog-tuesday-september-24-2013/</link>
+      <link>https://words.yuvi.in/devlog-tuesday-september-24-2013/</link>
       <pubDate>Tue, 24 Sep 2013 11:29:47 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-tuesday-september-24-2013/</guid>
+      <guid>https://words.yuvi.in/devlog-tuesday-september-24-2013/</guid>
       <description>I’ve given up on trying to make DevLogs really comprehensive and complete, and just try to make them – even if they are incomplete. Perhaps this will help me actually write more devlogs, and thus make it more comprehensive…
 I started on the Functional Programming in Scala course today. I wanted to do it the last time, but did not find the time. This time will be different – I’m in a different spot mentally, and a big drain on my emotional / time resources (“college”) is no longer a factor.</description>
     </item>
     
     <item>
       <title>Devlog for Monday, Aug 26, 2013</title>
-      <link>http://words.yuvi.in/devlog-for-monday-aug-26-2013/</link>
+      <link>https://words.yuvi.in/devlog-for-monday-aug-26-2013/</link>
       <pubDate>Tue, 27 Aug 2013 13:55:31 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-for-monday-aug-26-2013/</guid>
-      <description>Nothing new started. The UploadCampaigns API patch I talked about yesterday was fixed and merged. I also helped merge some of MarkTraceur&amp;rsquo;s JS cleanup patches to UploadWizard. And Brion&amp;lsquo;s big detail view patch for Android Commons app. Also another cleanup/api feature patch to UploadWizard.</description>
+      <guid>https://words.yuvi.in/devlog-for-monday-aug-26-2013/</guid>
+      <description>Nothing new started. The UploadCampaigns API patch I talked about yesterday was fixed and merged. I also helped merge some of MarkTraceur&amp;rsquo;s JS cleanup patches to UploadWizard. And Brion&amp;rsquo;s big detail view patch for Android Commons app. Also another cleanup/api feature patch to UploadWizard.</description>
     </item>
     
     <item>
       <title>DevLog for Sun, Aug 25, 2013</title>
-      <link>http://words.yuvi.in/devlog-for-sun-aug-25-2013/</link>
+      <link>https://words.yuvi.in/devlog-for-sun-aug-25-2013/</link>
       <pubDate>Sun, 25 Aug 2013 23:44:25 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-for-sun-aug-25-2013/</guid>
+      <guid>https://words.yuvi.in/devlog-for-sun-aug-25-2013/</guid>
       <description>DevLogs have been something I&amp;rsquo;ve not been writing much of of late. Time to fix that!
 WLM Android App Spent some time reviving the WLM Android App. Wasn&amp;rsquo;t too hard, and am surprised at how well it still runs :) Some work still needed to update the templates and other metadata to refer to WLM2013 rather than WLM2012 – but that should not be too hard. The fact that it is an issue at all is simply because I ripped out all the Campaign related APIs a few weeks ago with my UploadCampaign rewrite.</description>
     </item>
     
     <item>
       <title>First major feature to Commons deployed</title>
-      <link>http://words.yuvi.in/first-major-feature-to-commons-deployed/</link>
+      <link>https://words.yuvi.in/first-major-feature-to-commons-deployed/</link>
       <pubDate>Tue, 23 Jul 2013 00:40:26 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/first-major-feature-to-commons-deployed/</guid>
+      <guid>https://words.yuvi.in/first-major-feature-to-commons-deployed/</guid>
       <description>My UploadWizard work has just been deployed to Wikimedia Commons and my name is listed in the on site credits. Special thanks to Mark Traceur for code review!
 This feels very, very nice :) Now to sneak more code into other extensions…</description>
     </item>
     
     <item>
       <title>Attempting to Secure Redis in a Multi Tenant environment</title>
-      <link>http://words.yuvi.in/attempting-to-secure-redis-in-a-multi-tenant-environment/</link>
+      <link>https://words.yuvi.in/attempting-to-secure-redis-in-a-multi-tenant-environment/</link>
       <pubDate>Sat, 20 Jul 2013 23:48:43 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/attempting-to-secure-redis-in-a-multi-tenant-environment/</guid>
+      <guid>https://words.yuvi.in/attempting-to-secure-redis-in-a-multi-tenant-environment/</guid>
       <description>When running Redis in a shared cluster/hosting environment (such as Wikimedia Tool Labs, on which I&amp;rsquo;ve been having fun doing a lot of work on), you would want to try to provide at least some guarantee of isolation for your keys from everyone else&amp;rsquo;s keys. Since Redis doesn&amp;rsquo;t do ACLs, this is problematic.
 This can be solved in a couple of ways
 Run a Redis instance for each user This is simple enough to do – each user runs their own Redis instance, and has full access to it.</description>
@@ -299,76 +295,76 @@ Run a Redis instance for each user This is simple enough to do – each user run
     
     <item>
       <title>DevLog: December 26, 2011 – Jan 3rd, 2012</title>
-      <link>http://words.yuvi.in/devlog-december-26-2011/</link>
+      <link>https://words.yuvi.in/devlog-december-26-2011/</link>
       <pubDate>Wed, 04 Jan 2012 01:05:07 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-december-26-2011/</guid>
+      <guid>https://words.yuvi.in/devlog-december-26-2011/</guid>
       <description>Back in Chennai
  Moving yuvi.in to my prgmr server. I want wordpress for my blog, but I don’t want to run MySQL. Solution? Keep blog where it is (with the awesome webfaction people!) and use nginx to proxy requests to blog/. Seems to work, so yay! Rewrote tawp.in to use python/flask/memcached. Available on github. Replaced older node.js version Reading through The Art of Unix Programming on kindle. Amazing book so far.</description>
     </item>
     
     <item>
       <title>Devlog: December 23, 2011</title>
-      <link>http://words.yuvi.in/devlog-december-23-2011/</link>
+      <link>https://words.yuvi.in/devlog-december-23-2011/</link>
       <pubDate>Fri, 23 Dec 2011 02:13:40 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-december-23-2011/</guid>
+      <guid>https://words.yuvi.in/devlog-december-23-2011/</guid>
       <description>Worked the day first from Domlur bus terminus, and then from Exotel’s office (with @vijaysw).
  Incorporated search results (rather than just suggestions) into the Wikipedia app. Was a slight bitch to get right, but after that have made a bunch of variants that the others are testing out to see which one feels good (Suggestion if exists, else search, or search alone). Took up most of my time. We put out a dud as RC3 for the Wikipedia app.</description>
     </item>
     
     <item>
       <title>DevLog: December 21 2011</title>
-      <link>http://words.yuvi.in/devlog-december-21-2011/</link>
+      <link>https://words.yuvi.in/devlog-december-21-2011/</link>
       <pubDate>Wed, 21 Dec 2011 23:55:51 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-december-21-2011/</guid>
+      <guid>https://words.yuvi.in/devlog-december-21-2011/</guid>
       <description>livetrains work. Trying to move (minimal) build system to waf. Somewhat complicated, not as fluid as I’d like. Go to rake. Feel weird about starting from scratch, come back to waf. Not get anything done Another rake diversion. Final Makefile editing desperation. I give up – I need to spend atleast a day to get back on proper build tools. That day is not today. Added feature to change font size to wikipedia app.</description>
     </item>
     
     <item>
       <title>DevLog: December 11, 2011</title>
-      <link>http://words.yuvi.in/devlog-december-11-2011/</link>
+      <link>https://words.yuvi.in/devlog-december-11-2011/</link>
       <pubDate>Mon, 12 Dec 2011 09:47:48 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-december-11-2011/</guid>
+      <guid>https://words.yuvi.in/devlog-december-11-2011/</guid>
       <description>Added UI for AssessmentLog [SelectionSifter] Removed lots of dead code in SelectionSifter. Went to Bangalore Wikipedia Meetup. Was nice meeting people I knew online face to face. Talked about yenWikipedia, and learnt a lot about how article selection for offline wikipedia is done. Shot myself in the foot multiple times (over use of empty(), incomplete commit summaries and a tab/spaces issue). I’m rusty and it is showing. Shouldn’t be a problem anymore, though – because of you-know-what.</description>
     </item>
     
     <item>
       <title>Devlog December 10, 2011</title>
-      <link>http://words.yuvi.in/devlog-december-10-2011/</link>
+      <link>https://words.yuvi.in/devlog-december-10-2011/</link>
       <pubDate>Sun, 11 Dec 2011 18:23:51 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-december-10-2011/</guid>
+      <guid>https://words.yuvi.in/devlog-december-10-2011/</guid>
       <description> Looks like I’m going to be rewriting SelectionSifter’s UI a lot. No more QuickTemplates, as I found TablePager. Mediawik definitely needs to fix Bug #1 soon. Added proper i18n for SelectionSifter. Redid FilterRatings page completely. Went through PhoneGap documentation, checked out state of its Photo handling API. Looks good. Checked out patch to official Wikipedia app that adds upload functionality. Needs lot more polish.  </description>
     </item>
     
     <item>
       <title>DevLog December 7, 2011</title>
-      <link>http://words.yuvi.in/devlog-december-7-2011/</link>
+      <link>https://words.yuvi.in/devlog-december-7-2011/</link>
       <pubDate>Wed, 07 Dec 2011 23:34:19 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-december-7-2011/</guid>
+      <guid>https://words.yuvi.in/devlog-december-7-2011/</guid>
       <description>Redid Blog template. Recategorized all blog posts Finally enabled mobile banking on ICICI. Still need 8 days for Internet activation. Sigh. Ordered HyperJuice 60W battery + Airline Adapter Read through the WPBannerMeta template (and its subtemplates), figured out where to get the assessment markers in. Poof that was hard. These templates are perfect examples of ‘hacks’ – initially ‘designed’ for templating text, they’ve grown into homebrew programming languages that are worse than PHP.</description>
     </item>
     
     <item>
       <title>DevLog: December 5, 2011</title>
-      <link>http://words.yuvi.in/devlog-december-5-2011/</link>
+      <link>https://words.yuvi.in/devlog-december-5-2011/</link>
       <pubDate>Mon, 05 Dec 2011 20:31:14 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-december-5-2011/</guid>
+      <guid>https://words.yuvi.in/devlog-december-5-2011/</guid>
       <description>Am migrating to per-day posts now. More granularity + I can fit more info in. The ultimate aim of the DevLog is to keep me on my toes and make sure I don’t relapse into no-productivity hellholes. Daily DevLogs should do a better job at them.
  Spent some more time trying to get Kiwix to compile under OS X. Macports issue fixed, but more issues persist. It’s one damn complicated build system :| Not to mention that OS X sucks balls.</description>
     </item>
     
     <item>
       <title>Devlog December 2011</title>
-      <link>http://words.yuvi.in/devlog-december-2011/</link>
+      <link>https://words.yuvi.in/devlog-december-2011/</link>
       <pubDate>Sun, 04 Dec 2011 21:19:50 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-december-2011/</guid>
+      <guid>https://words.yuvi.in/devlog-december-2011/</guid>
       <description>With me back to a place where I can be completely open about what code I am writing (yay!), I think it’s time I restart my devlog :)
 Last time, I was using my old blogging engine, and hand-wrote them in a markdown file on my netbook. Things have changed a lot since then, and this time I’ll be directly writing/publishing them daily from WordPress
 –
@@ -377,10 +373,10 @@ Dec 4 I finally grokked Indexes in databases.</description>
     
     <item>
       <title>Devlog May 2011</title>
-      <link>http://words.yuvi.in/devlog-may-2011/</link>
+      <link>https://words.yuvi.in/devlog-may-2011/</link>
       <pubDate>Tue, 14 Jun 2011 13:27:41 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-may-2011/</guid>
+      <guid>https://words.yuvi.in/devlog-may-2011/</guid>
       <description>May 25-June 13 Loads of things happened.
 Finished/polished up ShortUrl. Pending review. Would go into not just tawiki, but possibly all wmf wikis. YAY!
 Moved to a dual monitor setup. Dual 23″ Monitors, one Samsung LED and one Acer LCD. Also moved to 8G of RAM. VMs are much less painful now.
@@ -389,10 +385,10 @@ Did a few back/forths with the GSoC extension architecture. It’s still blockin
     
     <item>
       <title>DevLog: April 2011</title>
-      <link>http://words.yuvi.in/devlog-april-2011/</link>
+      <link>https://words.yuvi.in/devlog-april-2011/</link>
       <pubDate>Mon, 02 May 2011 01:50:17 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-april-2011/</guid>
+      <guid>https://words.yuvi.in/devlog-april-2011/</guid>
       <description>I’ve started keeping devlogs, recording productive activity every day in an attempt to publicly shame myself into doing productive things. This is the delayed april edition
 Apr 30 Impromptu talk at ChennaiPy meet. Then fun discussions at Nerd Dinner. No code, sadly.
 Apr 29 Google Instant mostly works on yenWikipedia. Made a release. More exams.
@@ -402,10 +398,10 @@ Tecoholic forked yenWikipedia and created a Firefox extension.</description>
     
     <item>
       <title>DevLog: Mar 2011</title>
-      <link>http://words.yuvi.in/devlog-mar-2011/</link>
+      <link>https://words.yuvi.in/devlog-mar-2011/</link>
       <pubDate>Mon, 11 Apr 2011 21:45:12 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-mar-2011/</guid>
+      <guid>https://words.yuvi.in/devlog-mar-2011/</guid>
       <description>I’ve started keeping devlogs, recording productive activity every day in an attempt to publicly shame myself into doing productive things. This is the delayed march edition
 Mar 20 – 31 More contract work for more money.
 My dump patch to meidawiki got commited, then blasted during Code Review. This is what I get for trusting other people’s code blindly, especially after 5 years. Lesson learnt. Fixed all issues, and now waiting for a review before commit.</description>
@@ -413,10 +409,10 @@ My dump patch to meidawiki got commited, then blasted during Code Review. This i
     
     <item>
       <title>DevLog: Feb 2011</title>
-      <link>http://words.yuvi.in/devlog-feb-2011/</link>
+      <link>https://words.yuvi.in/devlog-feb-2011/</link>
       <pubDate>Mon, 11 Apr 2011 21:24:26 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/devlog-feb-2011/</guid>
+      <guid>https://words.yuvi.in/devlog-feb-2011/</guid>
       <description>I’ve started keeping devlogs, recording everyday productive activity in an attempt to publicly shaming myselfinto doing something productive everyday. This is the delayed february editin
 Links: 32HourStartup, PiTiVi, TEDxSSN
 Feb 26 Initial work on Busroutes.in wiki import script.

@@ -2,21 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>android on Yuvi Panda</title>
-    <link>http://words.yuvi.in/tags/android/</link>
+    <link>https://words.yuvi.in/tags/android/</link>
     <description>Recent content in android on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 07 Jun 2011 02:50:05 +0000</lastBuildDate>
-    
-	<atom:link href="http://words.yuvi.in/tags/android/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 07 Jun 2011 02:50:05 +0000</lastBuildDate><atom:link href="https://words.yuvi.in/tags/android/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Belated Samsung Galaxy 3 Review</title>
-      <link>http://words.yuvi.in/belated-samsung-galaxy-3-review/</link>
+      <link>https://words.yuvi.in/belated-samsung-galaxy-3-review/</link>
       <pubDate>Tue, 07 Jun 2011 02:50:05 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/belated-samsung-galaxy-3-review/</guid>
+      <guid>https://words.yuvi.in/belated-samsung-galaxy-3-review/</guid>
       <description>Very late one. I’ve been using this since last September (as those of you on twitter and following me would know).
 It was on 2.1 for a long, long time – and even after 2.2 came out (first unofficially and then officially) I didn’t upgrade for almost a month (thanks to a missing usb cable and some laziness). I then upgraded to official 2.2, then one of the ‘Stock’ bootloaderless ROMs, and then to InDroid 3.</description>
     </item>

@@ -2,21 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>anniversary on Yuvi Panda</title>
-    <link>http://words.yuvi.in/tags/anniversary/</link>
+    <link>https://words.yuvi.in/tags/anniversary/</link>
     <description>Recent content in anniversary on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 14 May 2011 09:04:03 +0000</lastBuildDate>
-    
-	<atom:link href="http://words.yuvi.in/tags/anniversary/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 14 May 2011 09:04:03 +0000</lastBuildDate><atom:link href="https://words.yuvi.in/tags/anniversary/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Six Years of Blogging and Eleven Years of Coding</title>
-      <link>http://words.yuvi.in/six-years-of-blogging-and-eleven-years-of-coding/</link>
+      <link>https://words.yuvi.in/six-years-of-blogging-and-eleven-years-of-coding/</link>
       <pubDate>Sat, 14 May 2011 09:04:03 +0000</pubDate>
       
-      <guid>http://words.yuvi.in/six-years-of-blogging-and-eleven-years-of-coding/</guid>
+      <guid>https://words.yuvi.in/six-years-of-blogging-and-eleven-years-of-coding/</guid>
       <description>It was exactly six years ago that I started blogging. My first blog post ow seems to be rather childish, but considering I was 14 then, maybe it is excusable :)
 I’ve moved across several blogging platforms and urls in the meantime (Blogspot, wordpress and now my own custom engine. I’ve sadly lost a good portion of my blogs thanks to a domain loss and a server crash. Sigh.
 Also, looks like I’ve been writing code for almost eleven years now!</description>
