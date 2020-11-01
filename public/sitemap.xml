@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://words.yuvi.in/categories/</loc>
+    <lastmod>2020-11-01T13:40:27+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/categories/code/</loc>
+    <lastmod>2020-11-01T13:40:27+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/posts/kbatch/</loc>
+    <lastmod>2020-11-01T13:40:27+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/posts/</loc>
+    <lastmod>2020-11-01T13:40:27+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/</loc>
+    <lastmod>2020-11-01T13:40:27+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://words.yuvi.in/tags/jupyter/</loc>
     <lastmod>2020-09-16T17:09:42+05:30</lastmod>
     <changefreq>weekly</changefreq>
@@ -37,28 +72,7 @@
   </url>
   
   <url>
-    <loc>https://words.yuvi.in/</loc>
-    <lastmod>2020-09-16T17:09:42+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://words.yuvi.in/post/dask-local-kubernetes/</loc>
-    <lastmod>2020-06-27T13:27:49+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://words.yuvi.in/categories/</loc>
-    <lastmod>2020-06-27T13:27:49+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://words.yuvi.in/categories/code/</loc>
     <lastmod>2020-06-27T13:27:49+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

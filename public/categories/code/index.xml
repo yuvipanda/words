@@ -6,7 +6,17 @@
     <description>Recent content in code on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 27 Jun 2020 13:27:49 +0530</lastBuildDate><atom:link href="https://words.yuvi.in/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Nov 2020 13:40:27 +0530</lastBuildDate><atom:link href="https://words.yuvi.in/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>kbatch: sbatch, but for kubernetes</title>
+      <link>https://words.yuvi.in/posts/kbatch/</link>
+      <pubDate>Sun, 01 Nov 2020 13:40:27 +0530</pubDate>
+      
+      <guid>https://words.yuvi.in/posts/kbatch/</guid>
+      <description>Submitting &amp;lsquo;non-interactive&amp;rsquo; jobs that can run independent of a user&amp;rsquo;s current session on a JupyterHub is a pressing problem. There are many many solutions to this, but I think there&amp;rsquo;s a lot of value in having an extremely simple solution that solves exactly one extremely well defined problem.
+We will only consider JupyterHubs running on top of Kubernetes, since that has all the actual capabilities we need to solve this problem.</description>
+    </item>
+    
     <item>
       <title>Access dask-kubernetes clusters running on a cloud from your local machine</title>
       <link>https://words.yuvi.in/post/dask-local-kubernetes/</link>
