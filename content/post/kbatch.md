@@ -40,7 +40,7 @@ Options this command would have:
 3. Where to send stdout / stderr (by default, mimic `sbatch` behavior and put it on your homedir)
 4. Job name / comment for you to keep track of it
 
-Users shouldn't have to specify environment or home directories - these should be automatically detected to match current JupyterHub notebook environment.
+Users shouldn't have to specify environment or home directories - these should be automatically detected to match current JupyterHub notebook environment. We could probably allow `KBATCH` commands in the script, similar to `SBATCH` commands - but more conversation with people who actually use this is needed :)
 
 ### `kqueue`
 
