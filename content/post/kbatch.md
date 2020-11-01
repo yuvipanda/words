@@ -48,6 +48,10 @@ Users shouldn't have to specify environment or home directories - these should b
 
 That's it. I think just with these two, we can provide users the ability to run background jobs, from the commandline, similar to how they do so with slurm. We can eventually write GUIs for this fairly easily, since the functionality provided by them is quite simple.
 
+### Extra features?
+
+We can easily add more features - tailing logs, getting a shell into your running job to poke around, array jobs, etc. But it would be very nice if we can keep it a simple tool that can be marked *complete* once it solves the very specific problem it set out to solve.
+
 ## Implementation
 
 [Kubernetes Jobs](https://kubernetes.io/docs/concepts/workloads/controllers/job/) provide literally everything we need. We will write a simple python application that uses the kubernetes API to do everything. All meta-information will be stored as labels in the Kubernetes Job object, and the python application will be responsible for providing the appropriate UX to our users.
