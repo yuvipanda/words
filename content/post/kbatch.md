@@ -2,7 +2,6 @@
 title: "kbatch: sbatch, but for kubernetes"
 date: 2020-11-01T13:40:27+05:30
 lastmod: 2020-11-01T13:40:27+05:30
-draft: true
 description: "What if we had an sbatch, but for Kubernetes?"
 categories: [code]
 ---
@@ -53,4 +52,9 @@ That's it. I think just with these two, we can provide users the ability to run 
 
 [Kubernetes Jobs](https://kubernetes.io/docs/concepts/workloads/controllers/job/) provide literally everything we need. We will write a simple python application that uses the kubernetes API to do everything. All meta-information will be stored as labels in the Kubernetes Job object, and the python application will be responsible for providing the appropriate UX to our users.
 
+## Caveats
+
+This is *extremely* simple, and isn't meant for more complex DAG use cases. For those, look at something like Airflow or Prefect or any of the million other things that exist. This is a small UX improvement over `kubectl`, basically.
+
 Now, let's go do it!
+
