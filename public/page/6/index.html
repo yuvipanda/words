@@ -48,7 +48,7 @@
 <meta property="og:description" content="&lt;a href=&#39;https://jupyter.org&#39;&gt;Project Jupyter&lt;/a&gt; contributor | &lt;a href=&#39;https://en.wikipedia.org/wiki/Free-culture_movement&#39;&gt;Free Culture&lt;/a&gt; enthusiast" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://words.yuvi.in/" />
-<meta property="og:updated_time" content="2020-11-01T13:40:27+05:30" />
+<meta property="og:updated_time" content="2020-11-09T02:15:15+05:30" />
 <meta itemprop="name" content="Yuvi Panda">
 <meta itemprop="description" content="&lt;a href=&#39;https://jupyter.org&#39;&gt;Project Jupyter&lt;/a&gt; contributor | &lt;a href=&#39;https://en.wikipedia.org/wiki/Free-culture_movement&#39;&gt;Free Culture&lt;/a&gt; enthusiast">
 <meta name="twitter:card" content="summary"/>
@@ -86,6 +86,67 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/devlog-sep-12-24-2014/">DevLog Sep 12-24, 2014</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-09-24 </span>
+      <div class="post-category">
+          <a href="/categories/devlog/"> devlog </a>
+          </div>
+        <span class="more-meta"> 664 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+      <p>That was a long break. Should get into better habits. I’m sure I’d miss some here. Oh well.</p>
+<p>It was a very interesting week, culminating in some very interesting things at Trafalgar Square. I feel much better as a person and more calmer/chilled out now :) Should remember to take weekends off.</p>
+<ul>
+<li>Helped the <a href="http://metrics.wmflabs.org/">WikiMetrics</a> people with some puppet changes. They were requiring mysql directly instead of using the class we have in ops/puppet, which meant it put data in the /var partition instead of in /srv. This was because they want to be a ‘proper’ independent puppet module, not depending on the other modules in ops/puppet (since the module is used in vagrant as well). Puppet has <em>terrible</em> support for this kind of thing, and ops/puppet by itself also suffers from an incredible amount of NIH syndrome when it comes to modules. Some of the NIH-so-rewrite is justified, but I don’t think all of it is. Oh well. Hopefully something that can be fixed over time…</li>
+<li>Added basic icinga/graphite based monitoring for contint project (runs our jenkins installation). Quite trivial, but should be ported over to shinken at some point soon.</li>
+<li>Contributed a fair bit to the <a href="https://github.com/erming/shout">Shout</a> Web IRC project. I was looking around for an open source replacement to <a href="https://irccloud.com">IRCCloud</a>, and found a bunch of OSS projects (<a href="https://github.com/thedjpetersen/subway">Subway</a> and <a href="http://ircanywhere.com/">http://ircanywhere.com/</a> being the others). Shout seemed the most active (and simplest) of them all – I couldn’t actually get the others to a working installation. I fixed a bunch of code formatting issues, and also added a couple of features (<a href="https://github.com/erming/shout/pull/138">Desktop notifications</a> being the most significant, I think). The maintainer was fun to work with, and merged most of my changes quite promptly. I hang out on <code>#shout-irc</code> channel now, and activity seems to be speeding along. Should be fun to see how it goes :)</li>
+<li>Moved off IRCCloud. Stopped paying for it. I’ve also stopped doing email on my phone, in an effort to be more minimalistic / less distracted all the time. This meant no more IRC on phone, so my primary reason for using IRCCloud disappeared. Am back to using LimeChat with my ZNC bouncer now. And nothing on my phone. In case of emergencies, I still have the IRCCloud app on my phone, and can use the free edition to connect to my bouncer temporarily.</li>
+<li>Started working on labs-specific monitoring, with <a href="http://shinken-monitoring.org">shinken</a> – test instance at <a href="http://shinken.wmflabs.org">shinken.wmflabs.org</a>. Discussion in the ops list about how to best implement this. Shinken is supposed to horizontally scale much better than icinga since it is implemented as a bunch of different daemons that can talk over the network. Right now they are just one machine, but will probably expand at some point not too far away. They are running as a labs project rather than on a physical machine (<code>labmon1001</code>) because it is much easier from a networking perspective. Right now it only has a simple http check for betacluster, but more coming.</li>
+<li>Started refactoring all our icinga code. Separating them out into <code>nagios_commmon</code> module for config that can be shared between shinken and icinga, and into an <code>icinga</code> module for everything else. Moved all the custom checks and check config we have, moving other things as we go. This is a bit hard / frustrating since I don’t have access to the machine icinga runs on (<code>neon</code>), and also because I still do not have +2 in our ops repo (should change in a month, tho!). Am about 40 patches in (small ones!), let’s see how many more it takes!</li>
+<li>Moved our <code>dsh</code> code into a module. Was fairly trivial. Now to find ways to get it merged :)</li>
+<li>Started trying out <a href="http://pinboard.in">pinboard</a>. Interesting, barebones design. The bookmarklet is a bit slow to load, though. Let’s see how often I use this. (I did pay for it)</li>
+</ul>
+<p>Five more days left in the UK :( Let me see if I can continue doing these when here, in a more prompt manner.</p>
+
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/devlog-sep-10-11-2014/">DevLog for Sep 10-11 2014</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-09-11 </span>
+      <div class="post-category">
+          <a href="/categories/devlog/"> devlog </a>
+          </div>
+        <span class="more-meta"> 409 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+      <p>Back from an <em>awesome</em> vacation. Too awesome to write about, even :) Suffice it to say, England has some really pretty places.</p>
+<p>Some Android app work, and lots of monitoring work</p>
+<ul>
+<li>Fixed bugs causing the <a href="https://tools.wmflabs.org/wikipedia-android-builds/">Wikipedia Android Alpha</a> from building properly. Now it builds properly whenever there is a new commit. Hooray! This was primarily caused by me forgetting to give it lots of RAM (8G VMEM) to execute the <code>mvn</code> build commands (<a href="https://gerrit.wikimedia.org/r/#/c/159482/">https://gerrit.wikimedia.org/r/#/c/159482/</a>) and also not cleaning up previous <code>.alpha</code> subfolders (<a href="https://gerrit.wikimedia.org/r/#/c/159481/">https://gerrit.wikimedia.org/r/#/c/159481/</a>) – this causes a chain of <code>.alpha.alpha.alpha.*</code> subfolders, breaking the build.</li>
+<li>Added a <a href="https://gerrit.wikimedia.org/r/#/c/159506/">patch</a> to the Android alpha app itself that checks for updates every day or so and notifies you if there’s a new one. Was fairly trivial to write, although I was hoping to make it more seamless (i.e. download the apk myself and just pop it up for people to tap). It now requires 4 clicks to install it, should be able to bring it down to 2 at some point in the future if people care enough.</li>
+<li>Added a method to our <code>check_graphite</code> code that lets you individually check a bunch of metrics for thresholds (<a href="https://gerrit.wikimedia.org/r/#/c/159473/)">https://gerrit.wikimedia.org/r/#/c/159473/)</a>. This makes it much simpler to do icinga checks on a bunch of metrics that are all measuring the same thing but from different machines. BetaLabs and ToolLabs checks use this.</li>
+<li>Cleaned up a bunch of minor things with our <code>check_graphite</code> script. Also fucked up trying to replace all double quotes in it with single quotes for consistency – it replaced the double quotes being used inside single quotes, and caused all checks to fail. Fixed shortly by <a href="https://gerrit.wikimedia.org/r/#/c/159711/">https://gerrit.wikimedia.org/r/#/c/159711/</a></li>
+<li>Added more monitoring for betalabs! Now checks for stale puppet runs (<a href="https://gerrit.wikimedia.org/r/#/c/159701/">https://gerrit.wikimedia.org/r/#/c/159701/</a>) and low space on the root partition (<a href="https://gerrit.wikimedia.org/r/#/c/159694/)">https://gerrit.wikimedia.org/r/#/c/159694/)</a>. All are green now, thanks to some work from bd808.</li>
+<li>Added monitoring for ToolLabs! Now checks for stale puppet runs, low space on root and /var, and puppet failure events (<a href="https://gerrit.wikimedia.org/r/#/c/159709/)">https://gerrit.wikimedia.org/r/#/c/159709/)</a>. Also checks for high sustained CPU usage (<a href="https://gerrit.wikimedia.org/r/#/c/159751/)">https://gerrit.wikimedia.org/r/#/c/159751/)</a>. Then spent some time (with help from scfc_de (whose nick I kept spelling as scfe_de until today)) cleaning up the puppet failures. They are all green now as well.</li>
+<li>Did a bunch of cleaning up work around the graphite role, removing the realm branching (<a href="https://gerrit.wikimedia.org/r/#/c/159759/)">https://gerrit.wikimedia.org/r/#/c/159759/)</a>. Ori says everytime realm branching code is removed, an angel gets its wings, so well done there.</li>
+</ul>
+<p>Not a bad day, eh? I’ve been trying to wake up early, perhaps that is helping.</p>
+
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/shitty-web-advertising-1/">Shitty Web advertising #1</a></h1>
@@ -294,59 +355,6 @@
 <li>The Atom experiment is coming along well. Am using it for most of my Puppet work these days. Should give LightTable another go as well.</li>
 </ul>
 <p>That’s it!</p>
-
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/devlog-21-aug-2014/">Devlog for 21 Aug 2014</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-08-22 </span>
-      <div class="post-category">
-          <a href="/categories/devlog/"> devlog </a>
-          </div>
-        <span class="more-meta"> 187 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-      <p>In Edinburgh! I’ve finally stopped spelling it as Edinborough!</p>
-<ul>
-<li>Added ‘user group’ functionality to Quarry, and added a <code>sudo</code> user group that does what you would think it does. Will be assigned super, super sparingly.</li>
-<li>Found out that I’d have to explicitly specify charset of the database when I’m creating it or MySQL will default to a stupid charset. Forced all tables and columns to utf8 and that seems to have fixed a bunch of unicode issues. Yay?</li>
-<li>Still facing occasional <code>MySQL server has gone away</code> errors with SQLAlchemy for local MySQL instance, despite asking SQLAlchemy to recycle connections every hour or so. Reduced the recycle time to 10m, hopefully that helps.</li>
-<li>Read Tony Hoare’s Turing Award speech from 1980, titled <a href="http://zoo.cs.yale.edu/classes/cs422/2014/bib/hoare81emperor.pdf">“The Emperor’s Old Clothes”</a>. I think I should read more of these papers / speeches, helps keep perspective and ‘learn from history’. Lots of warnings against complexity seem to be a very common theme, and one I’ve also personally encountered many times. Recommend reading :)</li>
-<li>More DMZ work! Now running edits per country stats separated by mobile vs desktop for all countries for all wikipedias! EXCITING!</li>
-</ul>
-
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/devlog-20-aug-2014/">Devlog for 20 Aug 2014</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-08-21 </span>
-      <div class="post-category">
-          <a href="/categories/devlog/"> devlog </a>
-          </div>
-        <span class="more-meta"> 243 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-      <p>Woke up at 11AM again! w000t!</p>
-<ul>
-<li>Fixed a stupid bug in Quarry that made it fail if MySQL decided that a column you were selecting is a <code>Decimal</code>. Fixed this in time for…</li>
-<li>Helped out with a <a href="https://plus.google.com/u/0/b/117126229120807344920/events/cngcjcmm1tcn1omqpalcm686044">webinar</a> from J-Mo for people to learn SQL and do research against Wikimedia stuff with Quarry! Went without a glitch mostly, so yay :) Oren asked for an API for Quarry, I’ll investigate ways to get that done</li>
-<li>Found that some queries against enwiki succeed on <code>s1.labsdb</code> but not on <code>s4.labsdb</code>. I attribute this to cache characteristics, and have switched Quarry to use s1 for now.</li>
-<li>Did more work on <a href="https://github.com/Ironholds/WPDMZ">DMZ</a>, getting in place a runner / processor infrastructure and sqlite backed intermediary storage so I can write simpler code to get the data I want. Super excited to see how this goes. It’ll be much easier for me to add new queries now.</li>
-<li>More work on DMZ! I had a late night sprint and split edits by mobile and desktop (and was surprised by seeing how much lesser edits came from mobile). Next would be to gather up population and internet penetration data and then GO MAKE SOME GRAPHS, probably with iPython. I’m returning to making graphs for real after, what, 6 years or so? :) I was using C# and Excel then :) /nick ExcitedPanda</li>
-<li>Also made some progress on our makeshift Android CI-ish build system for the Wikipedia app. Should be done soon.</li>
-</ul>
 
   </div>
 </article>

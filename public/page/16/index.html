@@ -48,7 +48,7 @@
 <meta property="og:description" content="&lt;a href=&#39;https://jupyter.org&#39;&gt;Project Jupyter&lt;/a&gt; contributor | &lt;a href=&#39;https://en.wikipedia.org/wiki/Free-culture_movement&#39;&gt;Free Culture&lt;/a&gt; enthusiast" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://words.yuvi.in/" />
-<meta property="og:updated_time" content="2020-11-01T13:40:27+05:30" />
+<meta property="og:updated_time" content="2020-11-09T02:15:15+05:30" />
 <meta itemprop="name" content="Yuvi Panda">
 <meta itemprop="description" content="&lt;a href=&#39;https://jupyter.org&#39;&gt;Project Jupyter&lt;/a&gt; contributor | &lt;a href=&#39;https://en.wikipedia.org/wiki/Free-culture_movement&#39;&gt;Free Culture&lt;/a&gt; enthusiast">
 <meta name="twitter:card" content="summary"/>
@@ -86,6 +86,61 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/learnt-reading-javascript-good-parts/">What I learnt from reading “Javascript – The Good Parts”</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2011-11-28 </span>
+      <div class="post-category">
+          <a href="/categories/code/"> code </a>
+          </div>
+        <span class="more-meta"> 200 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+      <p>Just finished reading ‘Javascript – The Good Parts’. Here is what I learnt:</p>
+<ul>
+<li>I knew jack shit about JavaScript. I was able to get along so far simply because I knew jQuery and understood how closures work.</li>
+<li>Holy shit that’s one fucked up language. Quite schizophrenic, saved by almost limitless extensibility/monkey-patchability/watcha-gonna-do-write-a-java-applet-hahaha .</li>
+<li>If you’re going to write Javascript, you’ll have to subset. Subsetting/augmenting has its own share of problems – primarily that <code>map</code> in your code might not be the same as <code>map</code> in someone else’s code, even if they seem to be working on the same ‘type’</li>
+<li>jQuery is incredible. I guess it is sort of like a ‘Standard Library’ of sorts, atleast on the client side. I’m sure there exists something similar on the server side as well (underscore.js, perhaps?)</li>
+<li>I haven’t written any sufficiently large Javascript program yet. Need to fix that.</li>
+</ul>
+<h3 id="defensive-programming">Defensive Programming</h3>
+<p>When you’re writing PHP, you program <em>defensively</em>. The language is out to get you. Make one wrong step and it’ll fuck you over. Never assume anything, make sure you always check the documentation. You can’t trust the language. It’s not stupid, it’s schizophrenic.</p>
+<p>I think I should start treating JavaScript also that way.</p>
+
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/3-reasons-people-join-it-companies/">3 reasons why people join ‘IT companies’</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2011-10-28 </span>
+      <div class="post-category">
+          <a href="/categories/education/"> education </a>
+          <a href="/categories/so-called-it/"> so-called-IT </a>
+          </div>
+        <span class="more-meta"> 70 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+      <p>Source: Friend of mine who is sadly ‘training’ at a big ‘IT company’ now (He wishes to remain anonymous, and I could see why)</p>
+<ol>
+<li>Because everyone else did</li>
+<li>Because parents told</li>
+<li>Because it will be very sophisticated and relaxing there, with lots of recreational facilities</li>
+</ol>
+<p>I’m just going to leave this here, and hope that when this boom does bust, it doesn’t leave too many dead bodies in its wake.</p>
+
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/greatest-fear-flash-fade/">Our Greatest Fear – ‘Flash and Fade’</a></h1>
@@ -714,111 +769,6 @@
 <p>That should do the trick.</p>
 </blockquote>
 <p>It is, however, two years old. Maybe if Yahoo had not been the place where products go to die…</p>
-
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/sleepsort-4chan/">SleepSort from 4Chan</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2011-06-19 </span>
-      <div class="post-category">
-          <a href="/categories/code/"> code </a>
-          </div>
-        <span class="more-meta"> 106 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-      <p>4Chan isn’t exactly what you’d associate with ‘shit, that’s a cool piece of code!’, but look <a href="http://dis.4chan.org/read/prog/1295544154">what I found</a>!</p>
-<p>(<a href="http://news.ycombinator.com/item?id=2657277">via HN</a>)</p>
-<p>Nice hack. And it <strong>is</strong> <code>O(N)</code> in bitsize of largest number (Ignoring all the overhead of forking new processes, the problem with the race conditions(Sort 0 and 0.1? How about 0.01 and 0.011?), processor contention, etc,.) They basically delegated the sorting to the process scheduler, treating it as a sort of priority queue.</p>
-<p>Sometimes you just see a hack so out of the box that it makes you say ‘woah!’ and let your mouth hang open there for a while. One such time this :)</p>
-
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/devlog-may-2011/">Devlog May 2011</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2011-06-14 </span>
-      <div class="post-category">
-          <a href="/categories/devlog/"> devlog </a>
-          </div>
-        <span class="more-meta"> 868 words </span>
-        <span class="more-meta"> 5 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-      <h3 id="may-25-june-13">May 25-June 13</h3>
-<p>Loads of things happened.</p>
-<p>Finished/polished up ShortUrl. Pending review. Would go into not just tawiki, but possibly all wmf wikis. YAY!</p>
-<p>Moved to a dual monitor setup. Dual 23″ Monitors, one Samsung LED and one Acer LCD. Also moved to 8G of RAM. VMs are much less painful now.</p>
-<p>Did a few back/forths with the GSoC extension architecture. It’s still blocking, so working with the non-blocking parts of GSoC now.</p>
-<p>Moved to bangalore, atleast temperoarily for now.</p>
-<p>Did a tiny bit of work for a friend organizing MP3s with a script. Was fun, operating at that scale. Helped me get back in touch with bash/awk etc.</p>
-<p>Rooted/Flashed my Galaxy 3 with a custom ROM. SO MUCH FRIGGIN BETTER, WHY DID I NOT DO THIS BEFORE? The audio is now atleast a few orders of magnitude better.</p>
-<p>Moved blog to wordpress. Archived the HiSlain project.</p>
-<p>Got my camera. Need to postprocess more. But still :D</p>
-<h3 id="may-25">May 25</h3>
-<p>Put in a lot of effort into ShortUrl. Want to finish it up and push it to prod before ‘leaving’. Also learnt a bit more vimfoo. Moved it to svn and got it ready in translatewiki</p>
-<h3 id="may-17-24">May 17-24</h3>
-<p>Nothing positive done. Whatsoever. At all. Exams done, yeah. That’s about it.</p>
-<h3 id="may-16">May 16</h3>
-<p>Some TwitterBots work. Increased vim-fu a bit more. Got started on interviewStreet.</p>
-<p>Also some work done on new version of ShortURL extension.</p>
-<h3 id="may-13-15">May 13-15</h3>
-<p>Talked out with mentor about components in my GSoC. Got toolserver account. More work on MarathonSin – @ssnbot now runs on it. Moved them all to a server. Increased my vim-fu a bit. Released 2 new versions of yenWikipedia, using a cache to reduce network traffic.</p>
-<p>Still not productive enough. The number of Commits I’m doing per day is at an all time low…</p>
-<h3 id="may-12-13">May 12-13</h3>
-<p>Wrote MarathonSin (Declarative Twitter Bots) to keep myself awake. Started on the detailed plans for Mediawiki GSoC.</p>
-<p>NEED.TO.BE.MORE.PRODUCTIVE.AAARRGGHHH</p>
-<h3 id="may-10-11">May 10-11</h3>
-<p>Nothing got done for last 3 days. Tried resetting sleep cycle twice, failed.</p>
-<p>Did some SICP exercises. Whiteboarded components for GSoC. Nothing much. Sigh.</p>
-<h3 id="may-9">May 9</h3>
-<p>Reasonably productive day.</p>
-<p>Finished PoC. Talked about bringing back ShortUrl Development. Started doing design work for rest of GSoC project. Read up on MySQL a bit more.</p>
-<p>The other thing is coming along nicely too.</p>
-<h3 id="may-8">May 8</h3>
-<p>Not very productive day again.</p>
-<p>Wrote sql for PoC. Read up on the db functions. Looks like I’ll be done with the PoC by monday.</p>
-<p>Went on a Star Trek mini-binge. Tapestry was incredibly timely, even more than usual. Ended with me laughing alongside Picard when he gets finally stabbed. I think I made the right decision :)</p>
-<h3 id="may-7">May 7</h3>
-<p>Half of PoC is done. Calling it GPoC. Went off to sleep, but couldn’t so came back and worked. Feels good.</p>
-<p>Have a basic extension. Figured out that I can’t just grab a preprocessed DOM off any hook. Need to work that out, but since this is just a ‘Proof of Concept’, I can get away with just running preprocess again. Also investigated the Job Queue and the data table update stuff.</p>
-<p>Helped out @msnarain with the #goldenrulesofchennai bit. Wrote code to retreive more tweets further back out.</p>
-<h3 id="may-6">May 6</h3>
-<p>Need to break free. Not productive much. Got started on PoC. Ran around trying to get myself camera. Failed.</p>
-<p>Helped msnarain with some ‘goldenrulesofchennai’ bits. Let’s see how that works out.</p>
-<p>Three days of failure in one day.</p>
-<p>Ah, took heart after that, sketched out plan for completing PoC. Looks like one – two days work to me now. Let’s see :)</p>
-<h3 id="may-5">May 5</h3>
-<p>Again, not much code. Slight work on geekweekend.in. More progress on planning for PoC. Turns out I don’t have much of a chance making it to Israel. Sigh.</p>
-<p>Again, not a very productive day.</p>
-<h3 id="may-4">May 4</h3>
-<p>Nice productive discussions with rkirti about various issues. Thanks for doing that :)</p>
-<p>Started writing design docs for my GSoC Project. Need to codename that.</p>
-<p>Unproductive day code wise.</p>
-<h3 id="may-3">May 3</h3>
-<p>My Language Wikipedia works on DuckDuckGo standard. Had given up getting it to work, but the DDG guys pinged me on twitter about it and I <em>had</em> to respect that, no?</p>
-<p>My pull req for opensearch module was accepted. Yay.</p>
-<p>Made geekcalendar.in. Built a very very tiny static generator that generates it. Deployed it. Tried compass/sass, but in the end came back to plain blueprint+CSS.</p>
-<p>Got Ubuntu+Unity and Win7+Photoshop+Fireworks to work under Virtualbox. Yay! Fixed hard disk too.</p>
-<h3 id="may-2">May 2</h3>
-<p>Started talking to awjr about beginning GSoC work. My prelim work starts tomorrow, with a Proof of Concept.</p>
-<p>Started work on making My Language Wikipedia work on DuckDuckGo.com as well.</p>
-<p>Also started work on transliterated search for wikipedia. Fundamental ideas are in place.</p>
-<p>Made a commit + pull req for opensearch python module, to let it support setting useragent (since wikipedia will 403 you if you don’t identify yourself)</p>
-<p>Met vimzard, sujeet, kashyap and others today. Was fun. vimzard has grown taller.</p>
-<h3 id="may-1">May 1</h3>
-<p>Made two releases of My Language Wikipedia extension (formerly yenWikipedia). Works in Google Instant, and Options page auto opens now.</p>
-<p>Did some brainfuck related language work. Should complete those soon.</p>
-<p>Bought a new domain (geekcalendar.in). Should build/launch it soon.</p>
 
   </div>
 </article>

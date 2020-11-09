@@ -48,7 +48,7 @@
 <meta property="og:description" content="&lt;a href=&#39;https://jupyter.org&#39;&gt;Project Jupyter&lt;/a&gt; contributor | &lt;a href=&#39;https://en.wikipedia.org/wiki/Free-culture_movement&#39;&gt;Free Culture&lt;/a&gt; enthusiast" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://words.yuvi.in/" />
-<meta property="og:updated_time" content="2020-11-01T13:40:27+05:30" />
+<meta property="og:updated_time" content="2020-11-09T02:15:15+05:30" />
 <meta itemprop="name" content="Yuvi Panda">
 <meta itemprop="description" content="&lt;a href=&#39;https://jupyter.org&#39;&gt;Project Jupyter&lt;/a&gt; contributor | &lt;a href=&#39;https://en.wikipedia.org/wiki/Free-culture_movement&#39;&gt;Free Culture&lt;/a&gt; enthusiast">
 <meta name="twitter:card" content="summary"/>
@@ -86,6 +86,89 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/cheese-gsoc-report-week-2/">Cheese GSoC Report – Week 2</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2010-06-06 </span>
+      <div class="post-category">
+          <a href="/categories/code/"> code </a>
+          </div>
+        <span class="more-meta"> 261 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+      <p>Second week of the (rather hot and sweaty) Summer of Code is over! And during this week….</p>
+<ol>
+<li>Replicated most of the UI of Cheese</li>
+<li>Learnt how to make C and Vala code co-exist (Thanks folks at #vala!)</li>
+<li>Made the thumbnail widget work, in both modes/orientations</li>
+<li>Implemented fullscreen mode, with autohiding of the action buttons</li>
+<li>Started modifying parts of libcheese to support clutter for video output</li>
+</ol>
+<p>In <a href="http://yuvi.in/blog/cheese-gsoc-report-week-1.html">last week’s report</a>, I mentioned that I didn’t quite like my pace of work. I <em>still</em> don’t like it – <a href="http://projecthamster.wordpress.com/">Hamster</a> reports I’ve spent 15.2 hours since Monday on Cheese, which is just about 3 hours a day! Totally unacceptable, and I’d like to increase that number considerably.</p>
+<p>Last week’s predictions were for libcheese integration, UI replication and Thumbnail view implementation. I’ve finished the last two, and have made a start on the first. Needs improvement.</p>
+<p>By next week, I hope to have accomplished…</p>
+<ol>
+<li>Working video preview showing up!</li>
+<li>Photo taking works</li>
+<li>Video taking works</li>
+<li>Burst mode works</li>
+</ol>
+<p>Basically, it would be usable. In a basic way.</p>
+<p>And what did I learn this week?</p>
+<ol>
+<li>Don’t try to be too clever. Clear Code &gt; Lesser LoC.</li>
+<li>Ask first. Verify assumptions.</li>
+<li>Just because something can be rewritten, does not mean it should be :)</li>
+</ol>
+<p>On an unrelated note, my sleep cycle is totally messed up – I’ve been sleeping at 6 AM and waking up at 2 PM. Sunlight feels weird to me. I haven’t been able to do my biweekly bicycle rides :( I should also try to fix that before the end of next week.</p>
+
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/cheese-gsoc-report-week-1/">Cheese GSoC Report – Week 1</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2010-05-30 </span>
+      <div class="post-category">
+          <a href="/categories/code/"> code </a>
+          </div>
+        <span class="more-meta"> 220 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+      <p>First week of official coding is over. What do I have to show for it?</p>
+<ol>
+<li>Moved code from Github to GNOME Git (Thanks fargiolas!)</li>
+<li>Learnt how to use GTKBuilder, and how to autoconnect signals to vala callback functions.</li>
+<li>Learnt <em>some</em> of the intricacies of Gtk+ Layouts (They still have a lot to teach me!)</li>
+<li>Got a very basic version of the basic Cheese window up and running.</li>
+<li>Learnt how to embed Clutter into the Gtk+ base of Cheese.</li>
+</ol>
+<p>So far so good. I don’t quite like the pace of my work – I should be going faster. Hopefully I won’t be feeling like this at the end of next week :)</p>
+<p>By next week, I hope to have accomplished…</p>
+<ol>
+<li>Pixel perfect UI, replicating exactly what is in cheese right now (except for the viewport, ofcourse)</li>
+<li>Vala bindings (<code>.vapi</code> files, basically) for <code>libcheese</code></li>
+<li>Thumbnail View finished (either wrap and use current code, steal some some other project or write my own)</li>
+<li>Basic work on modifying libcheese to support video output to a ClutterTexture</li>
+</ol>
+<p>GSoC is primarily about learning, so what have I learnt so far?</p>
+<ol>
+<li><code>git</code> is a powerful tool, provided you do not fight it (thanks fargiolas!)</li>
+<li>Just because code works, doesn’t mean it is good enough! (thanks _ke!)</li>
+<li>When you are stuck, STOP AND ASK FOR DIRECTIONS! (thanks fargiolas!)</li>
+</ol>
+
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/vala-gtkbuilder-and-autoconnecting-signal-handlers/">Vala, GTKBuilder and Autoconnecting Signal Handlers</a></h1>
@@ -297,54 +380,6 @@
   <div class="post-content">
       <p>I <strong>love</strong> <a href="http://gist.github.com">Gist</a>.</p>
 <p>I recently started a project that required me to embed gists in <a href="http://dokuwiki.org">Dokuwiki</a>. I hunted around and found no plugins, so <a href="http://www.dokuwiki.org/doku.php?id=plugin:gist">created</a> my own. Needs the superawesome <a href="http://www.dokuwiki.org/doku.php?id=plugin:command">command</a> plugin too. Released under the 3 clause BSD License.</p>
-
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/pycon-india-2009/">PyCon India 2009</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2010-04-19 </span>
-      <div class="post-category">
-          <a href="/categories/events/"> events </a>
-          </div>
-        <span class="more-meta"> 571 words </span>
-        <span class="more-meta"> 3 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-      <p><strong>Warning</strong>: Rambling, <em>unedited</em>, 7 month old recollection ahead. Proceed at your own risk.</p>
-<p>Ah, PyCon India 2009. My first solo bit of travel outside Chennai. What fun it was :) Though it was almost 7 months ago, most of the memories are still fresh. Compare that to college, where I struggle to remember what happened last week…</p>
-<p>Anyway, it was fun. I went off by bus with the rather interesting Anirudh – a profitable startupeer and someone I met when working with <a href="http://busroutes.in">Busroutes.in</a>. He has a finances related degree and his startup deals with (rather cool) car electronics. He was also a KDE contributor, and is a very interesting travel partner for reasons too numerous to mention here.</p>
-<p>I spent some time at <a href="http://en.wikipedia.org/wiki/Lal_Bagh">Lalbagh</a>, roaming around by myself (and texting classmates with my legs hanging off a cliff-type place). Was fun! I’d definitely do that again – the place was extremely peaceful.</p>
-<p>I stayed at <a href="http://sudarmuthu.com">Sudar</a>‘s place. Staying at a bachelor’s place was fun – guess that was how my room would look like if I was left all to myself. It was, however, definitely too organized for my tastes – you could actually walk without accidentally stepping on stuff ;) He’s grown up too fast – he actually dragged me to a food place and forced me to have breakfast!</p>
-<p>Hung around mostly with mech-yet-wannabe-geek <a href="http://kausikram.net">Kausik</a> (who once famously said that he ‘doesn’t want to use LaTeX for resumes because most people ask for docx or pdf’), Anirudh and Sudar (who was there only for Day 1). Had a longish talk with <a href="http://lawgon.livejournal.com/">Kenneth</a>, who I later found out was quite a celebrity on IRC/Mailing Lists. Meeting people you knew onlyine online IRL is unsettling at first.</p>
-<p>The event itself went well. I was inside only for a couple of major talks – the one about waffle by <a href="http://twitter.com/cnu">cnu</a> is the only thing I could remember. I was mostly out in the corridors, typing out code in (one of the many) laptops that Sudar has. The lightning talks were way more fun – because they were only 15 mins or so long and packed a lot of tech (I particularly remember the one about Python internals by <a href="http://artagnon.com/">artagnon</a> and one about a GAE app by <a href="http://blog.ideamonk.in/">ideamonk</a>. I gave one too – the last one, so I had no projector, no working laptop, no mic, oh and Kausik who was supposed to present with me ditched me in the last minute :P It still went exceedingly well – it was my first time ever talking on a stage of any stage outside college and the practice I had from giving them in college (Thanks to <a href="http://dorai.wordpress.com/">Dorai</a> and the iCell) helped a ton. I even cracked quite a few jokes that was recieved well. Fun times – and I guess it finally killed the last remaining bits of my ‘shit, you aren’t really expecting me to go up there and talk, are you?’ feelings developed from school days :)</p>
-<p>Before I left, I visited <a href="http://bitterscotch.wordpress.com/">planemad</a> at <a href="http://bangalore.nid.edu/">NID</a>. Awesome place. Someday, I hope someone established a National Institude of Programming at such a scenic place, where people can come together and learn about <em>programming</em> rather than <em>engineering</em> (which is just college-management-speak for <em>IT Industry Zombie Production Factory</em>)</p>
-<p>There you go! That’s a rambling account of my PyCon India 2009 experiences. Next one is probably going to be in Chennai – looking forward to that!</p>
-
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/webfaction-review/">Webfaction Review</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2010-03-22 </span>
-      <div class="post-category">
-          <a href="/categories/uncategorized/"> Uncategorized </a>
-          </div>
-        <span class="more-meta"> 59 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-      <p>I’ve been running <a href="http://yuvi.in">yuvi.in</a> and <a href="http://busroutes.in">busroutes.in</a> on my [Webfaction][3] account for a while. I got the account for free – after Remi Delon from Webfaction noticed one of my tweets.</p>
-<p>Review: I’m going to save that when my free one year plan expires, I can <em>upgrade</em> to one of their better plans. It is <em>so</em> good :)</p>
-<p>Highly Reccomended!</p>
 
   </div>
 </article>

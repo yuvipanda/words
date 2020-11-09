@@ -48,7 +48,7 @@
 <meta property="og:description" content="&lt;a href=&#39;https://jupyter.org&#39;&gt;Project Jupyter&lt;/a&gt; contributor | &lt;a href=&#39;https://en.wikipedia.org/wiki/Free-culture_movement&#39;&gt;Free Culture&lt;/a&gt; enthusiast" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://words.yuvi.in/" />
-<meta property="og:updated_time" content="2020-11-01T13:40:27+05:30" />
+<meta property="og:updated_time" content="2020-11-09T02:15:15+05:30" />
 <meta itemprop="name" content="Yuvi Panda">
 <meta itemprop="description" content="&lt;a href=&#39;https://jupyter.org&#39;&gt;Project Jupyter&lt;/a&gt; contributor | &lt;a href=&#39;https://en.wikipedia.org/wiki/Free-culture_movement&#39;&gt;Free Culture&lt;/a&gt; enthusiast">
 <meta name="twitter:card" content="summary"/>
@@ -86,6 +86,111 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/maintainerati-2017/">maintainerati 2017</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-10-10 </span>
+      
+        <span class="more-meta"> 284 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+      <p>I was at <a href="http://maintainerati.org/">maintainerati</a> today, which was super fun &amp; quite intense! I highly appreciate GitHub &amp; the individuals involved in making it happen!</p>
+<p>Here&rsquo;s my key takeaways from this (and several other conversations over the last few weeks leading up to this):</p>
+<ol>
+<li>I am now a <em>maintainer</em>, which is quite a different thing from a <em>core contributor</em> or just a <em>contributor</em>. The power dynamics are very different, and so are the responsibilities. I can not ostrich myself into thinking I can just keep writing code and not do anything else - that&rsquo;s a disservice to not just other folks in the project, but also myself.</li>
+<li>Being a maintainer is quite hard emotionally &amp; mentally. I&rsquo;ve a lot more respect for long running OSS maintainers now than I did before. I have a lot of personal work to do before I become anything like a decent maintainer.</li>
+<li>Lots of people love Gerrit, and they also hate Gerrit :D Gerrit is very powerful, but the UX is so user hostile - I don&rsquo;t think these are unrelated. I hope that some of the power of Gerrit transfers to GitHub, but at the same time GitHub does not become anything like Gerrit! Also, people have very strong opinions about how their git histories should look like - perhaps they spend a lot more time looking through it than I do?</li>
+<li>We are slowly developing better ways of dealing with Trolls in projects, but still have a long, long way to go. &ldquo;Look for the helpers&rdquo; here.</li>
+</ol>
+<p>It was also great to go to a short, well organized (un)conference targeted at diverse group of people who are still like me in some sense! Would go again, A+++!</p>
+
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/designing-data-intensive-applications/">designing data intensive applications</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-07-02 </span>
+      
+        <span class="more-meta"> 1279 words </span>
+        <span class="more-meta"> 7 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+      <p>I&rsquo;ve been reading <a href="http://dataintensive.net/">Designing Data Intensive Applications</a> book &amp; am using this post to keep notes!</p>
+<p>I&rsquo;ve picked up ideas on scaling systems through the years, but never actually sat down to actually study them semi-formally. This seems like a great start to it!</p>
+<p>It&rsquo;s a pretty big book, and it&rsquo;s gonna take me a while to go through it :) Will update these notes as I go! Trying to do a chapter a week!</p>
+<h2 id="chapter-1-defining-all-the-things">Chapter 1: Defining all the things</h2>
+<blockquote>
+<p>The Internet was done so well that most people think of it as a natural resource like the Pacific Ocean, rather than something that was man-made. When was the last time a technology with a scale like that was so error-free?
+Alan Kay, in <a href="www.drdobbs.com/architecture-and-design/interview-with-alan-kay/240003442">interview with Dr Dobb’s Journal (2012)</a></p>
+</blockquote>
+<p>I keep forgetting what an amazing marvel the internet is and how intensely (and mostly positively, thankfully) it has affected my life. This is a good reminder! However, perhaps to people who haven&rsquo;t had the privileges I&rsquo;ve had the Internet doesn&rsquo;t feel like a natural resource? Unsure! Should ask them!</p>
+<p>Lots of modern applications are data intensive, rather than CPU intensive.</p>
+<blockquote>
+<p>Raw CPU power is rarely a limiting factor for these applications—bigger problems are usually the amount of data, the complexity of data, and the speed at which it is changing.</p>
+</blockquote>
+<p>This has borne out in the infrastructure I&rsquo;ve been setting up to help teach people data science - RAM is often the bottleneck, not CPU (barring machine-learning type stuff, but they want GPUs anyway).</p>
+<p>Common building blocks for data intensive applications are:</p>
+<ol>
+<li>Store data so that they, or another application, can find it again later (databases)</li>
+<li>Remember the result of an expensive operation, to speed up reads (caches)</li>
+<li>Allow users to search data by keyword or filter it in various ways (search indexes)</li>
+<li>Send a message to another process, to be handled asynchronously (stream processing)</li>
+<li>Periodically crunch a large amount of accumulated data (batch processing)</li>
+</ol>
+<p>These <em>do</em> seem to cover a large variety of bases! I feel fairly comfortable in operating, using and building on top of some of these (databases, caches) but not so much in most (never used a search index, batch processing, nor streams outside of redis). Partially I haven&rsquo;t felt an intense need for these, but perhaps if I understand them more I&rsquo;ll use them more? I&rsquo;ve mostly strived to make everything stateless - but perhaps that&rsquo;s causing me to shy away from problems that can only be solved with state? /me ponders.</p>
+<p>Boundaries around &lsquo;data systems&rsquo; are blurring - Redis is a cache but can be a message queue, Apache Kafka is a message queue that can have durability guarantees, etc. Lots of applications also need more than can be done with just one tool (aka a &lsquo;pure LAMP&rsquo; stack is no longer good enough). Applications often have the job of making sure different data sources are in sync. Everyone is a &lsquo;data designer&rsquo;, and everyone is kinda fucked.</p>
+<p>Talk about 3 things that are most important to any software system.</p>
+<h3 id="reliability">Reliability</h3>
+<p>Means &lsquo;continue to work correctly, even when things go wrong&rsquo;. Things that go wrong are &lsquo;faults&rsquo;, and systems need to be &lsquo;fault-tolerent&rsquo; or &lsquo;resilient&rsquo;. Can&rsquo;t be tolerant of all faults, so gotta define what faults we&rsquo;re tolerant of.</p>
+<p>Fault isn&rsquo;t failure - fault is when a component of the system &lsquo;deviates from its spec&rsquo;, <em>failure</em> is when the system as a whole stops providing user server they want. Can&rsquo;t reduce chances of fault to zero, but can work on reducing failures to zero.</p>
+<p><strong>Engineering is building reliable systems from unreliable parts.</strong></p>
+<p>Chaos monkeys are good, increase faults to find ways to reduce failure.</p>
+<p>Hardware reliability - physical components fail. Nothing you can do about it. Fix it in software.</p>
+<p>Hardware faults <em>usually</em> not corelated - one macine failing doesn&rsquo;t cause another machine to fail. To truly fuck shit up you need software - can easily cause massive large scale failure! For example, a leap second bug! Or a runaway process that slowly kills every other process on the machine. One of the microservies that 50 of your microservices depend on is slow! Cascading failures! These bugs all lie dormant, until they suddenly aren&rsquo;t and wreak havok. The software makes some assumption about its environment, which is true until it isn&rsquo;t. No quick solution to systematic software faults.</p>
+<p>Human error is worst error. The book offers some suggestions on how to prevent these.</p>
+<ol>
+<li>Minimize opportunities for errors - make it easy to do the right thing. But if it&rsquo;s too restrictive, people will work around it - tricky balance.</li>
+<li>Provide full featured sandboxes so people can fuck around without fucking shit up.</li>
+<li>AUTOMATICALLY TEST EVERYTHING so when a human does fuck up, they know!</li>
+<li>Set up undo functionality, so when human does fuck up, they can roll back!</li>
+</ol>
+<p>Learn about telemetry from other disciplines that have been doing this shit for far longer than us. <a href="https://xkcd.com/1831/">Relevant XKCD</a></p>
+<p>Reliability isn&rsquo;t just for nukes &amp; aircraft &amp; election systems (haha). Imagine someone loses a video of their kid&rsquo;s first ever step because you didn&rsquo;t care. Fucking up is human and we all do it - what is important is that we care.</p>
+<p>Sometimes you gotta sacrifice reliability, but make sure that is an explicit &amp; conscious decision. Actually throw away your prototypes! Put FIXMEs in your code. Take a shower. Make sure hacks look, feel and sound hacky!</p>
+<h3 id="scalability">Scalability</h3>
+<p>System&rsquo;s ability to adapt to increased &lsquo;load&rsquo; along some axes.</p>
+<p>Load is described with various <em>load parameters</em>, which depend on the system (req/s? active users? etc).</p>
+<p>Carefully define what this means for your application, and explain your reasoning. You might have to scale in some aspects but not in other.</p>
+<p>Once you have the load parameters for your app defined, figure out what happens when you increase load parameters but keep system resources unchanged. After that, try to figure out how much resources need to be increased.</p>
+<p>Throughput - number of things that can be done per second. Latency is time it takes to serve a request. These are common things we care about when we move load parameters up and down.</p>
+<p>You shouldn&rsquo;t think of these as single numbers, since they vary a fair bit. Think of these as <em>probability distributions</em>. Learn some statistics! Use percentiles, rather than &lsquo;average&rsquo; or &lsquo;mean&rsquo;.</p>
+<p>High percentile latencies are especially important when you are a service that&rsquo;s called by many other services - it can cascade down.</p>
+<p>No <em>magic scaling sauce</em> - architecture that can scale is different for each application. But there are general purpose building blocks, so worry a little less!</p>
+<h3 id="maintainability">Maintainability</h3>
+<blockquote>
+<p>Always code as if the person who ends up maintaining your code is a violent psychopath who knows where you live.</p>
+</blockquote>
+<p>Split into three major aspects.</p>
+<p><strong>Operability</strong></p>
+<p>Make it easy for people to operate your service! Help them monitor the health of the system, observe &amp; debug problems, do capacity planning, keep the production environment stable, prevent single human points of failure (oh, only Chad knows about this system) and many other things!</p>
+<p><strong>Simplicity</strong></p>
+<p>Don&rsquo;t make your software a big ball of mud. Take into account that new engineers will have to start working on your software, and they need to understand it quickly.</p>
+<p>Use standard tools &amp; approaches they have a higher likelihood of knowing - look around for standard tools before inventing your own!</p>
+<p>Watch out for accidental complexity, and keep it to a minimum as much as possible. Abstractions are good, but abstractions are also leaky.</p>
+<p><strong>Evolvability</strong></p>
+<p>If your software is simple &amp; has good abstractions, you can change it over time without wanting to pull all your hair out.</p>
+
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/think-os/">think os</a></h1>
@@ -400,61 +505,6 @@ Written for pedagogy and personal understanding rather than production use.</p>
   <div class="post-content">
       <p>I&rsquo;m attempting to now blog at <a href="http://words.yuvi.in">http://words.yuvi.in</a>, using <a href="https://gohugo.io/">hugo</a> rather than wordpress.</p>
 <p>Over the last few years, IRC, Twitter &amp; WhatsApp have ruined my public writing. I shall now slowly attempt to bring that back :)</p>
-
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/liberal-software/">liberal software</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2017-03-26 </span>
-      
-        <span class="more-meta"> 109 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-      <!-- raw HTML omitted -->
-<p>I ran into this thought provoking though when randomly attempting to relax this weekend. There&rsquo;s a summary at <a href="https://lwn.net/Articles/712376/">LWN</a> if you do not want to watch the talk - but as the lwn summarizer admits, the video definitely conveys things that are hard to capture on text.</p>
-<p>The core takeaway for me is to think about:</p>
-<blockquote>
-<p>what is the future of free and open-source software? The answer was: it has no future.</p>
-</blockquote>
-<p>This seems somehow connected to &lsquo;democratizing programming&rsquo;, which I had earlier given a <a href="https://www.youtube.com/watch?v=rEyqVXzCJJc">talk about</a>. Somehow, it feels like there needs to be an update / rebirth of the <a href="https://www.gnu.org/philosophy/free-sw.en.html">GNU Freedoms</a> for the world we live in.</p>
-
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/first-protest/">my first protest</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2017-02-03 </span>
-      
-        <span class="more-meta"> 327 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-      <p>I went to the protests at SFO last weekend. It was the first real set of protests I&rsquo;ve been to. I write this to attempt to capture a sliver of what I felt that day.</p>
-<p>I was there for about 10h on day 1, and came home exhausted. I went back on Day 2, and this time stayed for much shorter period of time (~4h?) before heading back home.</p>
-<p>To everyone who was at the protest even if it does not directly affect you yet - <em>thank you</em>!</p>
-<p>To the wonderful amazing women of color who were leading the protest - <em>thank you</em>. You are an inspiration.</p>
-<p>To the brass band and the troupe of drummers who showed up - <em>thank you</em>!</p>
-<p>To the people I already know from other contexts who I ran into at the protest - <em>thank you</em>!</p>
-<p>To those who were protesting for the first time in their lives (as I was) - <em>thank you</em>!</p>
-<p>To the fucking ACLU - <em>thank you</em>! I&rsquo;ll send you all the money I can :)</p>
-<p>To the people who provided infrastructure (food, water, snacks, first aid, printers, internet, etc) - <em>thank you</em>!</p>
-<p>To the journalists who covered this - <em>thank you</em>.</p>
-<p>I woke up that saturday feeling very depressed, angry, and helpless. By sunday night, I was only depressed and angry - but not helpless. The number and variety of people at the protests was very heartwarming, and made me feel distinctly not alone. Before going I was not sure what going to a protest accomplishes. I still do not know - but I know it gave me hope and restored my sense of agency.</p>
-<p>I promise I&rsquo;ll continue doing all I can, even and especially when it is about things that do not affect me yet. I hope you do too.</p>
-<blockquote>
-<p>What hurts the victim most is not the cruelty of the oppressor but the silence of the bystander</p>
-</blockquote>
-<p><em>- from a sign at the protest</em></p>
 
   </div>
 </article>

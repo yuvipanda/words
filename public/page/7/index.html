@@ -48,7 +48,7 @@
 <meta property="og:description" content="&lt;a href=&#39;https://jupyter.org&#39;&gt;Project Jupyter&lt;/a&gt; contributor | &lt;a href=&#39;https://en.wikipedia.org/wiki/Free-culture_movement&#39;&gt;Free Culture&lt;/a&gt; enthusiast" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://words.yuvi.in/" />
-<meta property="og:updated_time" content="2020-11-01T13:40:27+05:30" />
+<meta property="og:updated_time" content="2020-11-09T02:15:15+05:30" />
 <meta itemprop="name" content="Yuvi Panda">
 <meta itemprop="description" content="&lt;a href=&#39;https://jupyter.org&#39;&gt;Project Jupyter&lt;/a&gt; contributor | &lt;a href=&#39;https://en.wikipedia.org/wiki/Free-culture_movement&#39;&gt;Free Culture&lt;/a&gt; enthusiast">
 <meta name="twitter:card" content="summary"/>
@@ -86,6 +86,59 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/devlog-21-aug-2014/">Devlog for 21 Aug 2014</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-08-22 </span>
+      <div class="post-category">
+          <a href="/categories/devlog/"> devlog </a>
+          </div>
+        <span class="more-meta"> 187 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+      <p>In Edinburgh! I’ve finally stopped spelling it as Edinborough!</p>
+<ul>
+<li>Added ‘user group’ functionality to Quarry, and added a <code>sudo</code> user group that does what you would think it does. Will be assigned super, super sparingly.</li>
+<li>Found out that I’d have to explicitly specify charset of the database when I’m creating it or MySQL will default to a stupid charset. Forced all tables and columns to utf8 and that seems to have fixed a bunch of unicode issues. Yay?</li>
+<li>Still facing occasional <code>MySQL server has gone away</code> errors with SQLAlchemy for local MySQL instance, despite asking SQLAlchemy to recycle connections every hour or so. Reduced the recycle time to 10m, hopefully that helps.</li>
+<li>Read Tony Hoare’s Turing Award speech from 1980, titled <a href="http://zoo.cs.yale.edu/classes/cs422/2014/bib/hoare81emperor.pdf">“The Emperor’s Old Clothes”</a>. I think I should read more of these papers / speeches, helps keep perspective and ‘learn from history’. Lots of warnings against complexity seem to be a very common theme, and one I’ve also personally encountered many times. Recommend reading :)</li>
+<li>More DMZ work! Now running edits per country stats separated by mobile vs desktop for all countries for all wikipedias! EXCITING!</li>
+</ul>
+
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/devlog-20-aug-2014/">Devlog for 20 Aug 2014</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-08-21 </span>
+      <div class="post-category">
+          <a href="/categories/devlog/"> devlog </a>
+          </div>
+        <span class="more-meta"> 243 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+      <p>Woke up at 11AM again! w000t!</p>
+<ul>
+<li>Fixed a stupid bug in Quarry that made it fail if MySQL decided that a column you were selecting is a <code>Decimal</code>. Fixed this in time for…</li>
+<li>Helped out with a <a href="https://plus.google.com/u/0/b/117126229120807344920/events/cngcjcmm1tcn1omqpalcm686044">webinar</a> from J-Mo for people to learn SQL and do research against Wikimedia stuff with Quarry! Went without a glitch mostly, so yay :) Oren asked for an API for Quarry, I’ll investigate ways to get that done</li>
+<li>Found that some queries against enwiki succeed on <code>s1.labsdb</code> but not on <code>s4.labsdb</code>. I attribute this to cache characteristics, and have switched Quarry to use s1 for now.</li>
+<li>Did more work on <a href="https://github.com/Ironholds/WPDMZ">DMZ</a>, getting in place a runner / processor infrastructure and sqlite backed intermediary storage so I can write simpler code to get the data I want. Super excited to see how this goes. It’ll be much easier for me to add new queries now.</li>
+<li>More work on DMZ! I had a late night sprint and split edits by mobile and desktop (and was surprised by seeing how much lesser edits came from mobile). Next would be to gather up population and internet penetration data and then GO MAKE SOME GRAPHS, probably with iPython. I’m returning to making graphs for real after, what, 6 years or so? :) I was using C# and Excel then :) /nick ExcitedPanda</li>
+<li>Also made some progress on our makeshift Android CI-ish build system for the Wikipedia app. Should be done soon.</li>
+</ul>
+
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/devlog-19-aug-2014/">Devlog for 19 Aug 2014</a></h1>
@@ -352,45 +405,6 @@ THEY ARE WEARING HANDKERCHEIFS!
   <div class="post-content">
       <p>Another nice, one off Discworld book. Nice bits about how Gods are created by us, and need us more than the other way around. The philosophers are incredibly funny wherever they turn up too. The Desert after you Die bit was… beautiful – Judgement happens, but by yourself. Fun digs at governments and organized religion throughout made it rather enjoyable :)</p>
 <p>4/5</p>
-
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/book-3-2014-pyramids-discworld/">Book 3 of 2014: Pyramids (Discworld)</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-01-13 </span>
-      <div class="post-category">
-          <a href="/categories/books/"> books </a>
-          </div>
-        <span class="more-meta"> 37 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-      <p>Finished that yesterday. Fun digs at war, and fun digs at people (literally) stuck in a paste despite being in the present. The bit with the Greek philosophers was also nice. No memorable recurring characters, however.</p>
-<p>3/5</p>
-
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/book-2-2014-pro-git/">Book 2 of 2014: Pro Git</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-01-05 </span>
-      <div class="post-category">
-          <a href="/categories/books/"> books </a>
-          </div>
-        <span class="more-meta"> 109 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-      <p><a href="http://git-scm.com/book/en/">Pro Git</a> is a nice book I recommend to newbies – yet I hadn’t fully read it once. I decided to do so, and I think it was reasonably useful. Most of the stuff in here I already knew, and the treatment of the stuff I did not (Git Internals, mostly) wasn’t deep enough to be useful. Nevertheless, reinforced some useful concepts in my head and probably gave me enough strong foundations for when I decide to dive into the actual internals of git more (probably by reading the source code?). Also looked very newbie friendly, so I’ll continue recommending this to people who want to learn about Git.</p>
 
   </div>
 </article>

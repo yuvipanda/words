@@ -48,7 +48,7 @@
 <meta property="og:description" content="&lt;a href=&#39;https://jupyter.org&#39;&gt;Project Jupyter&lt;/a&gt; contributor | &lt;a href=&#39;https://en.wikipedia.org/wiki/Free-culture_movement&#39;&gt;Free Culture&lt;/a&gt; enthusiast" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://words.yuvi.in/" />
-<meta property="og:updated_time" content="2020-11-01T13:40:27+05:30" />
+<meta property="og:updated_time" content="2020-11-09T02:15:15+05:30" />
 <meta itemprop="name" content="Yuvi Panda">
 <meta itemprop="description" content="&lt;a href=&#39;https://jupyter.org&#39;&gt;Project Jupyter&lt;/a&gt; contributor | &lt;a href=&#39;https://en.wikipedia.org/wiki/Free-culture_movement&#39;&gt;Free Culture&lt;/a&gt; enthusiast">
 <meta name="twitter:card" content="summary"/>
@@ -86,6 +86,60 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/program/">My First Program</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-01-07 </span>
+      <div class="post-category">
+          <a href="/categories/code/"> code </a>
+          <a href="/categories/personal/"> personal </a>
+          </div>
+        <span class="more-meta"> 678 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+      <p>Note: These are almost a decade old. Reproduced as close to memory as possible</p>
+<p>My first memories of programming aren’t actually C. They were GW-BASIC, and later on, LOGO. I don’t remember any of my BASIC – but I do remember the look on my computer science teacher’s face in 5th grade when I managed to draw a flower with LOGO when everyone else was doing rectangles and lines. I vividly remember it – you draw an arc for a certain length, then stop, draw another arc in the reverse direction for the same length – and you have a petal. Then you just offset your next arc by a few degrees, repeat the previous thing, and you have another petal. Do this a few times such that <code>offset-degreese * count = 360</code> and you have a flower. That I could just modify the variables <code>length</code> and <code>offset-degree</code> to draw flowers as big, and with as many petals as you want – it blew my mind. This was in 5th grade – and I immediately started pestering my parents to put me in a programming language class outside (I had already gone to classes for <em>cough_MS Office_cough</em> and DOS back then). And the SSI nearby happened to be teaching a reasonably cheap <code>Unix/C/C++</code> class.</p>
+<p>The first thing I remember still is someone telling me “you don’t need to type out clearscreen(); – clrscr() would do”. This was TurboC, and to me, at that point of time, a ‘good program’ was one that had a <code>getch()</code> call at the end and a <code>clrscr()</code> in the beginning :)</p>
+<p>The <code>Unix/C/C++</code> course – I don’t remember any Unix in it. And the C++ was disinteresting to me, because I saw no point in inheriting mammal from animal or car from vehicle. So I went about writing ‘C++’, which was basically C but with <code>cout</code> and <code>cin</code> instead of <code>printf()</code> and <code>scanf()</code> (I wouldn’t understand classes and how/why they were useful until I read <em>Hardcore Visual Basic 5</em> and saw the ways classes are useful and how much it sucks that VB doesn’t have them).</p>
+<p>I had written a program called <code>DOSTutor</code> then (end of 5th grade, I guess?). It had screens and screens of text that ‘taught’ you DOS commands, and then ones that made you type them in and ‘checked’ it. Initially I had written it as a long series of <code>printf()</code> and <code>scanf()</code> statements. Suddenly some bulb went on and I realized I could cut my program size by about 90% if I separated code and data, and put the data (screen text and responses) into arrays. The feeling you get when you can reduce code drastically with no reduction in functionality (+ easier to make ‘fixes’) is quite incredible :)</p>
+<p>But nobody ever used that program, so I wouldn’t consider that my first ‘program’. I spent the next year or so messing around with random <code>sound()</code> and <code>nosound()</code> calls producing ‘music’ (including a few times when my code hit the <code>sound()</code> call, but crashed before the <code>nosound()</code> call – thus making the PC Speaker whine constantly, without any apparent way to turn it off. I used to just reset the computer then – until I learnt what exactly a <code>DOS System Call</code> meant. Then I wrote another small program that just called <code>nosound()</code>). I also remember messing around with BGI Graphics, mostly taking the example programs for <code>graphics.h</code> and modifying them to make somewhat-pretty figures.</p>
+<p>My first ‘real’ program was an implementation of a variant of <a href="http://en.wikipedia.org/wiki/Forms_of_cricket#Book_Cricket">Book Cricket</a>. It even had a stored High Scores file. It was my stint at a ‘programming center’ (SSI, for those who remember), and I kept it in a Network Drive that I accessed using ‘Map Network Drive’. The amount of fun that was had when I discovered <code>rand()</code> was quite something. It even beeped when you got out!</p>
+<p>I lost it all in a server crash. Just do ‘Map Network Drive’ once and it was no longer there. I think I came home and cried :(</p>
+<p>What was <em>your</em> first program?</p>
+
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/devlog-december-26-2011/">DevLog: December 26, 2011 – Jan 3rd, 2012</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-01-04 </span>
+      <div class="post-category">
+          <a href="/categories/devlog/"> devlog </a>
+          </div>
+        <span class="more-meta"> 103 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+      <p>Back in Chennai</p>
+<ol>
+<li>Moving yuvi.in to my <a href="http://prgmr.com">prgmr</a> server. I want wordpress for my blog, but I don’t want to run MySQL. Solution? Keep blog where it is (with the awesome <a href="http://webfaction.com">webfaction</a> people!) and use <a href="http://nginx.org">nginx</a> to proxy requests to blog/. Seems to work, so yay!</li>
+<li>Rewrote tawp.in to use python/flask/memcached. Available on github. Replaced older node.js version</li>
+<li>Reading through <em>The Art of Unix Programming</em> on kindle. Amazing book so far.</li>
+<li>Fixed a few more bugs on Wikipedia App. I think I’ll keep ‘official’ Wiki related stuff off this, unless it’s big?</li>
+<li>Partied along new year’s. Yay. Not particularly ‘dev’, but still :)</li>
+</ol>
+
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/devlog-december-23-2011/">Devlog: December 23, 2011</a></h1>
@@ -317,61 +371,6 @@
 <p>Kindle arrived. Loading it up with books to read. SICP is good enough on it. Loading up as much as I can find about Hacker Culture/History.  Moved my entire vim setup to vundle. Not bad.</p>
 <p> </p>
 <p> </p>
-
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/learnt-reading-javascript-good-parts/">What I learnt from reading “Javascript – The Good Parts”</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2011-11-28 </span>
-      <div class="post-category">
-          <a href="/categories/code/"> code </a>
-          </div>
-        <span class="more-meta"> 200 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-      <p>Just finished reading ‘Javascript – The Good Parts’. Here is what I learnt:</p>
-<ul>
-<li>I knew jack shit about JavaScript. I was able to get along so far simply because I knew jQuery and understood how closures work.</li>
-<li>Holy shit that’s one fucked up language. Quite schizophrenic, saved by almost limitless extensibility/monkey-patchability/watcha-gonna-do-write-a-java-applet-hahaha .</li>
-<li>If you’re going to write Javascript, you’ll have to subset. Subsetting/augmenting has its own share of problems – primarily that <code>map</code> in your code might not be the same as <code>map</code> in someone else’s code, even if they seem to be working on the same ‘type’</li>
-<li>jQuery is incredible. I guess it is sort of like a ‘Standard Library’ of sorts, atleast on the client side. I’m sure there exists something similar on the server side as well (underscore.js, perhaps?)</li>
-<li>I haven’t written any sufficiently large Javascript program yet. Need to fix that.</li>
-</ul>
-<h3 id="defensive-programming">Defensive Programming</h3>
-<p>When you’re writing PHP, you program <em>defensively</em>. The language is out to get you. Make one wrong step and it’ll fuck you over. Never assume anything, make sure you always check the documentation. You can’t trust the language. It’s not stupid, it’s schizophrenic.</p>
-<p>I think I should start treating JavaScript also that way.</p>
-
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/3-reasons-people-join-it-companies/">3 reasons why people join ‘IT companies’</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2011-10-28 </span>
-      <div class="post-category">
-          <a href="/categories/education/"> education </a>
-          <a href="/categories/so-called-it/"> so-called-IT </a>
-          </div>
-        <span class="more-meta"> 70 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-      <p>Source: Friend of mine who is sadly ‘training’ at a big ‘IT company’ now (He wishes to remain anonymous, and I could see why)</p>
-<ol>
-<li>Because everyone else did</li>
-<li>Because parents told</li>
-<li>Because it will be very sophisticated and relaxing there, with lots of recreational facilities</li>
-</ol>
-<p>I’m just going to leave this here, and hope that when this boom does bust, it doesn’t leave too many dead bodies in its wake.</p>
 
   </div>
 </article>

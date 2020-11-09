@@ -6,13 +6,22 @@
     <description>Recent content in code on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 01 Nov 2020 13:40:27 +0530</lastBuildDate><atom:link href="https://words.yuvi.in/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Nov 2020 02:15:15 +0530</lastBuildDate><atom:link href="https://words.yuvi.in/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JupyterHub for all tools</title>
+      <link>https://words.yuvi.in/post/hub-interfaces/</link>
+      <pubDate>Mon, 09 Nov 2020 02:15:15 +0530</pubDate>
+      
+      <guid>https://words.yuvi.in/post/hub-interfaces/</guid>
+      <description>JupyterHub was designed to provide multi-user access to Classic Jupyter notebook and JupyterLab, running on machines far away with access to data &amp;amp; compute your local machines don&amp;rsquo;t have. However, there are a lot of users this leaves out - R users on RStudio, folks who prefer ssh based interfaces, people on local IDEs like vscode or pycharm, etc. We trust that these users know better than &amp;lsquo;us&amp;rsquo; developers &amp;amp; admins what user interface works best for them, and make sure that our JupyterHub setups work for them.</description>
+    </item>
+    
     <item>
       <title>kbatch: sbatch, but for kubernetes</title>
-      <link>https://words.yuvi.in/posts/kbatch/</link>
+      <link>https://words.yuvi.in/post/kbatch/</link>
       <pubDate>Sun, 01 Nov 2020 13:40:27 +0530</pubDate>
       
-      <guid>https://words.yuvi.in/posts/kbatch/</guid>
+      <guid>https://words.yuvi.in/post/kbatch/</guid>
       <description>Submitting &amp;lsquo;non-interactive&amp;rsquo; jobs that can run independent of a user&amp;rsquo;s current session on a JupyterHub is a pressing problem. There are many many solutions to this, but I think there&amp;rsquo;s a lot of value in having an extremely simple solution that solves exactly one extremely well defined problem.
 We will only consider JupyterHubs running on top of Kubernetes, since that has all the actual capabilities we need to solve this problem.</description>
     </item>

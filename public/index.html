@@ -48,7 +48,7 @@
 <meta property="og:description" content="&lt;a href=&#39;https://jupyter.org&#39;&gt;Project Jupyter&lt;/a&gt; contributor | &lt;a href=&#39;https://en.wikipedia.org/wiki/Free-culture_movement&#39;&gt;Free Culture&lt;/a&gt; enthusiast" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://words.yuvi.in/" />
-<meta property="og:updated_time" content="2020-11-01T13:40:27+05:30" />
+<meta property="og:updated_time" content="2020-11-09T02:15:15+05:30" />
 <meta itemprop="name" content="Yuvi Panda">
 <meta itemprop="description" content="&lt;a href=&#39;https://jupyter.org&#39;&gt;Project Jupyter&lt;/a&gt; contributor | &lt;a href=&#39;https://en.wikipedia.org/wiki/Free-culture_movement&#39;&gt;Free Culture&lt;/a&gt; enthusiast">
 <meta name="twitter:card" content="summary"/>
@@ -86,6 +86,111 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/hub-interfaces/">JupyterHub for all tools</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-11-09 </span>
+      <div class="post-category">
+          <a href="/categories/code/"> code </a>
+          </div>
+        <span class="more-meta"> 792 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+      <p>JupyterHub was designed to provide multi-user access to Classic Jupyter notebook and JupyterLab, running on machines far away with access to data &amp; compute your local machines don&rsquo;t have. However, there are a <em>lot</em> of users this leaves out - R users on RStudio, folks who prefer <code>ssh</code> based interfaces, people on local IDEs like vscode or pycharm, etc. We trust that these users know better than &lsquo;us&rsquo; developers &amp; admins what user interface works best for them, and make sure that our JupyterHub setups work for them.</p>
+<p>I propose that we try provide the following in all JupyterHub setups, but particularly on cloud-based deployments focused on research.</p>
+<ol>
+<li>
+<p>Arbitrary web applications on the browser, not just classic notebook &amp; JupyterLab. This could be RStudio / Shiny for R folks, <a href="https://github.com/fonsp/Pluto.jl">Pluto.jl</a> for Julia folks, <a href="https://theia-ide.org/">Theia IDE</a> or <a href="https://github.com/cdr/code-server">vscode</a> for arbitrary languages, etc. These need to be first class citizens with amazing support. <a href="https://github.com/jupyterhub/jupyter-server-proxy/">jupyter-server-proxy</a> does a lot of this already - but still needs to be &lsquo;set up&rsquo; in your deployment. DO IT!</p>
+</li>
+<li>
+<p><code>ssh</code> support, so you can <code>ssh yuvipanda@myhub.org</code>, and have it work as you would expect. It should have the same environment &amp; home directories as your browser based sessions. Along with something like <a href="https://words.yuvi.in/post/kbatch/">kbatch</a>, this could let folks who like their current HPC style workflows keep it. SFTP for file transfer, SSH Tunneling, scripting via command execution, etc should also come along with this, allowing re-use with a vast array of existing tools &amp; workflows.</p>
+</li>
+<li>
+<p>Connecting from local IDEs, for notebook execution. The Jupyter protocol is designed to work with a variety of frontends, and many IDEs support connecting directly to a Jupyter kernel - <a href="https://code.visualstudio.com/docs/python/jupyter-support">Visual Studio Code</a>, <a href="https://www.jetbrains.com/help/pycharm/jupyter-notebook-support.html">PyCharm</a>, <a href="https://medium.com/@halmubarak/connecting-spyder-ide-to-a-remote-ipython-kernel-25a322f2b2be">spyder</a>, <a href="https://github.com/nnicandro/emacs-jupyter">emacs</a>, etc. There is already decent-ish support for this, but would be nice to explicitly document, bugfix and promote this to users.</p>
+</li>
+<li>
+<p>Connecting from local IDEs for a full remote development environment. Connecting to a remote Jupyter kernel often doesn&rsquo;t give you all that you want from your IDE - no access to remote filesystem, limited access from other IDE features (version control, global find, etc). Many IDEs offer a &lsquo;remote development&rsquo; experience that gives you all this, and usually requiring just a few SSH features to work. VSCode&rsquo;s <a href="https://code.visualstudio.com/docs/remote/remote-overview">remote development</a> feature is very well done, popular and <strong>not open source</strong>, but we should support it. <a href="https://blog.jetbrains.com/pycharm/2018/04/running-flask-with-an-ssh-remote-python-interpreter/">PyCharm</a> supports this, and Emacs' <a href="https://www.emacswiki.org/emacs/TrampMode">TRAMP</a> is highly rated as well.</p>
+</li>
+</ol>
+<p>You might not need some of these in your deployment - for example, you might have no R users, rendering RStudio not very useful. However, I think the world is getting more and more polyglot, and we need to move with it. Consider deploying these, even if your users don&rsquo;t explicitly ask for it - I suspect many will use it once it is there. &lt;3</p>
+<h2 id="work-to-be-done">Work to be done</h2>
+<p>There&rsquo;s a lot of work to be done here to make this all a great experience.</p>
+<ol>
+<li>Documentation and publicity for <a href="https://github.com/jupyterhub/jupyter-server-proxy/">jupyter-server-proxy</a>. For example, this <a href="https://github.com/jupyterhub/jupyter-rsession-proxy/">README</a> is all the docs that exist on how to set up RStudio to work in your JupyterHub. This is low hanging fruit with huge impact. Same for running remote <a href="https://github.com/yuvipanda/jupyter-desktop-server/">desktop applications</a>, <a href="https://github.com/IllumiDesk/jupyter-pluto-proxy">Pluto.jl</a>, and many many others.</li>
+<li>Work on <a href="https://github.com/yuvipanda/jupyterhub-ssh">jupyterhub-ssh</a>. Aims to provide full SSH support - terminal emulation, command execution, tunneling and SFTP. This would go a long way in supporting (2) and (4) above. It sortof-kinda works now, but effort poured into it will be well spent. I long for a day when setting this up would be as simple as setting up z2jh or TLJH, and it actually isn&rsquo;t that far away if effort is put into it.</li>
+<li>More outreach to non-Jupyter communities about levaraging JupyterHub for their workflows. The name &lsquo;Jupyter&rsquo; in &lsquo;JupyterHub&rsquo; is no longer fully accurate, given all the other things that can be run with it. We should reach out to other communities and &lsquo;bring them into the fold&rsquo;, so to speak - so their workflows, desires and bugs can drive development.</li>
+<li>A unified setup guide for &lsquo;research hubs&rsquo;, that guides first-time admins through setting these up - including great documentation. A <code>z2jh for research hubs on the cloud</code> would be extremely well received I believe.</li>
+</ol>
+<h2 id="will-you-help">Will you help?</h2>
+<p>I&rsquo;ve been talking to <a href="https://predictablynoisy.com/">Chris Holdgraf</a> a lot on how to go about getting folks into doing stuff like this. I see two primary options:</p>
+<ol>
+<li>Get funding from various entities (foundations, universities, corporations, etc) for folks to do this. Hopefully <a href="https://2i2c.org/">2i2c</a> can be a vehicle for this.</li>
+<li>Pour a lot more effort into getting more new developers into JupyterHub development than we are now. This would mean things like participating in Google Summer of Code, Outreachy, development sprints in various conferences, etc.</li>
+</ol>
+<p>Would love to hear thoughts from you, dear reader :) Email <code>yuvipanda@gmail.com</code>.</p>
+
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/kbatch/">kbatch: sbatch, but for kubernetes</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-11-01 </span>
+      <div class="post-category">
+          <a href="/categories/code/"> code </a>
+          </div>
+        <span class="more-meta"> 639 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+      <p>Submitting &lsquo;non-interactive&rsquo; jobs that can run independent of a user&rsquo;s current
+session on a JupyterHub is a pressing problem. There are many many solutions to
+this, but I think there&rsquo;s a lot of value in having an <em>extremely</em> simple
+solution that solves exactly one extremely well defined problem.</p>
+<p>We will only consider JupyterHubs running on top of Kubernetes, since that has all the actual capabilities we need to solve this problem. We only need to have a UX wrapper around it.</p>
+<h2 id="problem-to-solve">Problem to solve</h2>
+<blockquote>
+<p>If my JupyterHub session is terminated, all the code running there dies -
+including any dask sessions I might have - even though they are handled
+externally by dask-gateway.</p>
+</blockquote>
+<p>This is trivially accomplished in batch scheduling systems like <code>slurm</code>, but
+JupyterHub doesn&rsquo;t have a <em>simple</em> paradigm for it. It would be very, very
+useful for it to have one.</p>
+<h2 id="stealing-from-slurm">Stealing from slurm</h2>
+<p>Slurm has the <a href="https://slurm.schedmd.com/sbatch.html">sbatch</a> command for submitting jobs, and the <a href="https://slurm.schedmd.com/squeue.html">squeue</a> command for viewing job information. They have a large number of options that can do extremely complicated things - but I <em>think</em> we can copy a tiny subset of their functionality to solve our specific problem. We will not be copying all its behaviors, nor try to be compatible with it - just be <em>inspired</em>.</p>
+<h3 id="kbatch"><code>kbatch</code></h3>
+<p><code>kbatch</code> would be an equivalent to <code>sbatch</code> - just submitting jobs. You can specify the resources your job would need (CPUs, memory, GPUs, etc), give it a script to execute, and it&rsquo;ll just submit it and return. Nothing more! At least to begin with, it wouldn&rsquo;t have a lot of the complex features <code>sbatch</code> has - no array tasks, no multi-step jobs, etc. It would just be a script (or a notebook) that can run <em>independent of the current notebook session</em>. If you want parallelism, you should use dask from this script.</p>
+<p>Other names for this could be something like <code>ksubmit</code> or <code>kbackground</code> or similar - the core thing it does is to <code>submit jobs</code>.</p>
+<p>Options this command would have:</p>
+<ol>
+<li>Script (or notebook to run)</li>
+<li>Resources it needs (CPU, memory, GPU, etc)</li>
+<li>Where to send stdout / stderr (by default, mimic <code>sbatch</code> behavior and put it on your homedir)</li>
+<li>Job name / comment for you to keep track of it</li>
+</ol>
+<p>Users shouldn&rsquo;t have to specify environment or home directories - these should be automatically detected to match current JupyterHub notebook environment. We could probably allow <code>KBATCH</code> commands in the script, similar to <code>SBATCH</code> commands - but more conversation with people who actually use this is needed :)</p>
+<h3 id="kqueue"><code>kqueue</code></h3>
+<p><code>kqueue</code> would let you check in on the status of your jobs - wether they were running, stopped, failed, etc.</p>
+<p>That&rsquo;s it. I think just with these two, we can provide users the ability to run background jobs, from the commandline, similar to how they do so with slurm. We can eventually write GUIs for this fairly easily, since the functionality provided by them is quite simple.</p>
+<h3 id="extra-features">Extra features?</h3>
+<p>We can easily add more features - tailing logs, getting a shell into your running job to poke around, array jobs, etc. But it would be very nice if we can keep it a simple tool that can be marked <em>complete</em> once it solves the very specific problem it set out to solve.</p>
+<h2 id="implementation">Implementation</h2>
+<p><a href="https://kubernetes.io/docs/concepts/workloads/controllers/job/">Kubernetes Jobs</a> provide literally everything we need. We will write a simple python application that uses the kubernetes API to do everything. All meta-information will be stored as labels in the Kubernetes Job object, and the python application will be responsible for providing the appropriate UX to our users.</p>
+<h2 id="caveats">Caveats</h2>
+<p>This is <em>extremely</em> simple, and isn&rsquo;t meant for more complex DAG use cases. For those, look at something like Airflow or Prefect or any of the million other things that exist. This is a small UX improvement over <code>kubectl</code>, basically.</p>
+<p>Now, let&rsquo;s go do it!</p>
+
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/production-tljh/">Setting up a &#34;Production Ready&#34; TLJH</a></h1>
@@ -551,124 +656,6 @@ someone&rsquo;s lives. They have brought the internet experience to way more peo
 they have taken something away from me.</p>
 <p>I guess this will be one of those blog posts that end with me saying &ldquo;I will try to blog more&rdquo;
 and then there are no more posts for the next few years :)</p>
-
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2018-12-26 </span>
-      <div class="post-category">
-          <a href="/categories/devlog/"> devlog </a>
-          <a href="/categories/code/"> code </a>
-          </div>
-        <span class="more-meta"> 494 words </span>
-        <span class="more-meta"> 3 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-      <h2 id="physical-activity">Physical activity</h2>
-<p>I walked for about 6 miles yesterday evening, after doing 3-4 miles each day for about 2-3 days before. The roads were empty, and it was lovely. I&rsquo;ve listened to maybe 6-10 hours of <a href="https://en.wikipedia.org/wiki/Deborah_Frances-White">Deborah Frances-White</a> in the last week or so, split between <a href="http://guiltyfeminist.com/">The Guilty Feminist</a> and <a href="http://globalpillage.net/">Global Pillage</a>. Next time though, I&rsquo;m going to try listen to podcasts less &amp; observe my surroundings more. I am doing this (plus PT) to rehab my knee mostly. I slept for 12h yesterday night :)</p>
-<h2 id="asyncio-deadlock">Asyncio deadlock</h2>
-<p>I don&rsquo;t have enough experience with the pitfalls of concurrent programming where you <em>have</em> to use <a href="https://docs.python.org/3/library/asyncio-sync.html">synchronization</a> techniques. I had my first deadlock today, and after a few minutes realized it was actually an infinite recursion from a typo. I need to get a better theoretical understanding of both event loop based async programming and synchronization methods. I&rsquo;ve used them with threading &amp; Java, but feel shaky in asyncio.</p>
-<p>simperviser now has 100% unit test coverage. But it combines asyncio,
-processes &amp; signals - so that doesn&rsquo;t give me enough confidence as it might have otherwise. I&rsquo;ll take it though :)</p>
-<h2 id="vscode-customization">VSCode customization</h2>
-<p>I&rsquo;ve been re-reading the pragmatic programmer again (after initially reading it about 12 years or so ago). A lot of it still holds up, although some stuff is date (love for Broken Window policing &amp; perl). It reminded me that I hadn&rsquo;t really spent much time customizing and being more productive in VSCode, so am spending time today doing that.</p>
-<p>I switch between vscode and my terminal quite a bit, mostly for git operations and running tests. I&rsquo;m going to see if I can stay inside vscode comfortably for running pytest based tests.</p>
-<p>It made me very sad that the only thing I wanted from the pytest integration in vscode is something the maintainers aren&rsquo;t actively working on - <a href="https://github.com/Microsoft/vscode-python/issues/637">shortcut to run test the cursor is currently at</a>. I also can&rsquo;t seem
-to see test output directly.</p>
-<p>I think I&rsquo;ll be using the Terminal for pytest runs for now. I&rsquo;m not even going to try with git.</p>
-<p>If I was younger and not already full of projects to do, I&rsquo;d have picked up and tried to make a PR for this. Boo time commitments.</p>
-<h2 id="readyness-check">Readyness check</h2>
-<p>I rallied late in the day &amp; wrote some code around readyness checks in simpervisor. I don&rsquo;t fully understand what I want it to do, but I&rsquo;m going to look at what kubernetes does &amp; try to follow that. Since this is being written for nbserverproxy, I am also going to try port nbserverproxy to simpervisor to see what kind of API affordances I&rsquo;m missing. Primarily, I feel there should be a lock somewhere, but:</p>
-<ol>
-<li>I don&rsquo;t have a unified theory of what needs locking &amp; why</li>
-<li>I don&rsquo;t know if I need a lock or another synchronization mechanism</li>
-<li>I don&rsquo;t know how it&rsquo;ll actually be used by the application</li>
-</ol>
-<p>So designing by porting nbserverproxy seems right.</p>
-
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2018-12-24 </span>
-      <div class="post-category">
-          <a href="/categories/code/"> code </a>
-          <a href="/categories/devlog/"> devlog </a>
-          </div>
-        <span class="more-meta"> 462 words </span>
-        <span class="more-meta"> 3 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-      <h2 id="gracefully-exiting-asyncio-application">Gracefully exiting asyncio application</h2>
-<p>Continuing yesterday&rsquo;s work on my <a href="https://github.com/yuvipanda/simpervisor">simple supervisor library</a>,
-I continued trying to propagate signals cleanly to child processes
-before exiting. I remembered that it isn&rsquo;t enough to just propagate
-signals - you also have to actually reap them. This meant waiting
-for <code>wait</code> calls on them to return.</p>
-<p>I had a task running concurrently that is waiting on these
-processes. So &lsquo;all&rsquo; I had to do was make sure the application
-does <em>not</em> exit until these tasks are done. This turned
-out to be harder than I thought! After a bunch of reading, I
-recognized that what I needed to do was make sure I wait
-for all pending tasks before actually exiting the application.</p>
-<p>This was more involved than I thought. It also must be done
-at the application level rather than in the library - you don&rsquo;t
-want libraries doing sys.exit, and definitely don&rsquo;t want them
-closing event loops.</p>
-<p>After a bunch of looking and playing, it <em>looks</em> like what I want is
-in my application code is something like:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#00a8c8">if</span> <span style="color:#111">__name__</span> <span style="color:#f92672">==</span> <span style="color:#d88200">&#39;__main__&#39;</span><span style="color:#111">:</span>
-    <span style="color:#111">loop</span> <span style="color:#f92672">=</span> <span style="color:#111">asyncio</span><span style="color:#f92672">.</span><span style="color:#111">get_event_loop</span><span style="color:#111">()</span>
-    <span style="color:#00a8c8">try</span><span style="color:#111">:</span>
-        <span style="color:#111">loop</span><span style="color:#f92672">.</span><span style="color:#111">run_until_complete</span><span style="color:#111">(</span><span style="color:#111">main</span><span style="color:#111">())</span>
-    <span style="color:#00a8c8">finally</span><span style="color:#111">:</span>
-        <span style="color:#111">loop</span><span style="color:#f92672">.</span><span style="color:#111">run_until_complete</span><span style="color:#111">(</span><span style="color:#111">asyncio</span><span style="color:#f92672">.</span><span style="color:#111">gather</span><span style="color:#111">(</span><span style="color:#f92672">*</span><span style="color:#111">asyncio</span><span style="color:#f92672">.</span><span style="color:#111">Task</span><span style="color:#f92672">.</span><span style="color:#111">all_tasks</span><span style="color:#111">()))</span>
-        <span style="color:#111">loop</span><span style="color:#f92672">.</span><span style="color:#111">close</span><span style="color:#111">()</span>
-</code></pre></div><p>This waits for all tasks to complete before exiting, and seems
-to make sure all child processes are reaped. However, I have a
-few unresolved questions:</p>
-<ol>
-<li>What happens when one of the tasks is designed to run forever,
-and never exit? Should we cancel all tasks? Cancel tasks after
-a timeout? Cancelling tasks after a timeout seems most
-appropriate.</li>
-<li>If a task schedules more tasks, do those get run? Or are they
-abandoned? This seems important - can tasks keep adding more
-tasks in a loop?</li>
-</ol>
-<p>I am getting a better handle on what people mean by &lsquo;asyncio is
-more complicated than needed&rsquo;. I&rsquo;m going to find places to read
-up on asyncio internals - particularly how the list of pending
-tasks is maintained.</p>
-<p>This <a href="https://www.roguelynn.com/words/asyncio-we-did-it-wrong-pt-1/">series of blog posts</a>
-and <a href="https://www.youtube.com/watch?v=1lJDZx6f6tY">this EuroPython talk</a>
-from <a href="https://www.roguelynn.com/">Lynn Root</a> helped a lot.
-So did <a href="https://github.com/saghul">Saúl Ibarra Corretgé</a> (one of the asyncio core devs)
-talk on <a href="https://www.youtube.com/watch?v=HppNu0-ANYw">asyncio internals</a></p>
-<h3 id="testing">Testing</h3>
-<p>Testing code that involves asyncio, signals and processes is
-hard. I attempted to do so with <code>os.fork</code>, but decided that is
-super-hard mode and I&rsquo;d rather not play. Instead, I wrote Python
-code verbatim that is then spawned as a subprocess, and use
-stdout to communicate back to the parent process. The child process'
-code itself is <a href="https://github.com/yuvipanda/simpervisor/blob/b130203a0a497d26f438a6ab3c9511a3c3de60ab/tests/test_atexitasync.py#L13">inline</a>
-in the test file, which is terrible. I am going to move it to its
-own file.</p>
-<p>I also added tests for multiple signal handlers. I&rsquo;ve been writing
-a lot more tests in the last few months than I was before. I credit
-<a href="https://github.com/betatim">Tim Head</a> for a lot of this. It definitely
-gives me a lot more confidence in my code.</p>
 
   </div>
 </article>

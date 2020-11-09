@@ -48,7 +48,7 @@
 <meta property="og:description" content="&lt;a href=&#39;https://jupyter.org&#39;&gt;Project Jupyter&lt;/a&gt; contributor | &lt;a href=&#39;https://en.wikipedia.org/wiki/Free-culture_movement&#39;&gt;Free Culture&lt;/a&gt; enthusiast" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://words.yuvi.in/" />
-<meta property="og:updated_time" content="2020-11-01T13:40:27+05:30" />
+<meta property="og:updated_time" content="2020-11-09T02:15:15+05:30" />
 <meta itemprop="name" content="Yuvi Panda">
 <meta itemprop="description" content="&lt;a href=&#39;https://jupyter.org&#39;&gt;Project Jupyter&lt;/a&gt; contributor | &lt;a href=&#39;https://en.wikipedia.org/wiki/Free-culture_movement&#39;&gt;Free Culture&lt;/a&gt; enthusiast">
 <meta name="twitter:card" content="summary"/>
@@ -86,6 +86,124 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/devlog-2018-12-26/">Devlog 2018 12 26</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2018-12-26 </span>
+      <div class="post-category">
+          <a href="/categories/devlog/"> devlog </a>
+          <a href="/categories/code/"> code </a>
+          </div>
+        <span class="more-meta"> 494 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+      <h2 id="physical-activity">Physical activity</h2>
+<p>I walked for about 6 miles yesterday evening, after doing 3-4 miles each day for about 2-3 days before. The roads were empty, and it was lovely. I&rsquo;ve listened to maybe 6-10 hours of <a href="https://en.wikipedia.org/wiki/Deborah_Frances-White">Deborah Frances-White</a> in the last week or so, split between <a href="http://guiltyfeminist.com/">The Guilty Feminist</a> and <a href="http://globalpillage.net/">Global Pillage</a>. Next time though, I&rsquo;m going to try listen to podcasts less &amp; observe my surroundings more. I am doing this (plus PT) to rehab my knee mostly. I slept for 12h yesterday night :)</p>
+<h2 id="asyncio-deadlock">Asyncio deadlock</h2>
+<p>I don&rsquo;t have enough experience with the pitfalls of concurrent programming where you <em>have</em> to use <a href="https://docs.python.org/3/library/asyncio-sync.html">synchronization</a> techniques. I had my first deadlock today, and after a few minutes realized it was actually an infinite recursion from a typo. I need to get a better theoretical understanding of both event loop based async programming and synchronization methods. I&rsquo;ve used them with threading &amp; Java, but feel shaky in asyncio.</p>
+<p>simperviser now has 100% unit test coverage. But it combines asyncio,
+processes &amp; signals - so that doesn&rsquo;t give me enough confidence as it might have otherwise. I&rsquo;ll take it though :)</p>
+<h2 id="vscode-customization">VSCode customization</h2>
+<p>I&rsquo;ve been re-reading the pragmatic programmer again (after initially reading it about 12 years or so ago). A lot of it still holds up, although some stuff is date (love for Broken Window policing &amp; perl). It reminded me that I hadn&rsquo;t really spent much time customizing and being more productive in VSCode, so am spending time today doing that.</p>
+<p>I switch between vscode and my terminal quite a bit, mostly for git operations and running tests. I&rsquo;m going to see if I can stay inside vscode comfortably for running pytest based tests.</p>
+<p>It made me very sad that the only thing I wanted from the pytest integration in vscode is something the maintainers aren&rsquo;t actively working on - <a href="https://github.com/Microsoft/vscode-python/issues/637">shortcut to run test the cursor is currently at</a>. I also can&rsquo;t seem
+to see test output directly.</p>
+<p>I think I&rsquo;ll be using the Terminal for pytest runs for now. I&rsquo;m not even going to try with git.</p>
+<p>If I was younger and not already full of projects to do, I&rsquo;d have picked up and tried to make a PR for this. Boo time commitments.</p>
+<h2 id="readyness-check">Readyness check</h2>
+<p>I rallied late in the day &amp; wrote some code around readyness checks in simpervisor. I don&rsquo;t fully understand what I want it to do, but I&rsquo;m going to look at what kubernetes does &amp; try to follow that. Since this is being written for nbserverproxy, I am also going to try port nbserverproxy to simpervisor to see what kind of API affordances I&rsquo;m missing. Primarily, I feel there should be a lock somewhere, but:</p>
+<ol>
+<li>I don&rsquo;t have a unified theory of what needs locking &amp; why</li>
+<li>I don&rsquo;t know if I need a lock or another synchronization mechanism</li>
+<li>I don&rsquo;t know how it&rsquo;ll actually be used by the application</li>
+</ol>
+<p>So designing by porting nbserverproxy seems right.</p>
+
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/devlog-2018-12-24/">Devlog 2018 12 24</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2018-12-24 </span>
+      <div class="post-category">
+          <a href="/categories/code/"> code </a>
+          <a href="/categories/devlog/"> devlog </a>
+          </div>
+        <span class="more-meta"> 462 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+      <h2 id="gracefully-exiting-asyncio-application">Gracefully exiting asyncio application</h2>
+<p>Continuing yesterday&rsquo;s work on my <a href="https://github.com/yuvipanda/simpervisor">simple supervisor library</a>,
+I continued trying to propagate signals cleanly to child processes
+before exiting. I remembered that it isn&rsquo;t enough to just propagate
+signals - you also have to actually reap them. This meant waiting
+for <code>wait</code> calls on them to return.</p>
+<p>I had a task running concurrently that is waiting on these
+processes. So &lsquo;all&rsquo; I had to do was make sure the application
+does <em>not</em> exit until these tasks are done. This turned
+out to be harder than I thought! After a bunch of reading, I
+recognized that what I needed to do was make sure I wait
+for all pending tasks before actually exiting the application.</p>
+<p>This was more involved than I thought. It also must be done
+at the application level rather than in the library - you don&rsquo;t
+want libraries doing sys.exit, and definitely don&rsquo;t want them
+closing event loops.</p>
+<p>After a bunch of looking and playing, it <em>looks</em> like what I want is
+in my application code is something like:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#00a8c8">if</span> <span style="color:#111">__name__</span> <span style="color:#f92672">==</span> <span style="color:#d88200">&#39;__main__&#39;</span><span style="color:#111">:</span>
+    <span style="color:#111">loop</span> <span style="color:#f92672">=</span> <span style="color:#111">asyncio</span><span style="color:#f92672">.</span><span style="color:#111">get_event_loop</span><span style="color:#111">()</span>
+    <span style="color:#00a8c8">try</span><span style="color:#111">:</span>
+        <span style="color:#111">loop</span><span style="color:#f92672">.</span><span style="color:#111">run_until_complete</span><span style="color:#111">(</span><span style="color:#111">main</span><span style="color:#111">())</span>
+    <span style="color:#00a8c8">finally</span><span style="color:#111">:</span>
+        <span style="color:#111">loop</span><span style="color:#f92672">.</span><span style="color:#111">run_until_complete</span><span style="color:#111">(</span><span style="color:#111">asyncio</span><span style="color:#f92672">.</span><span style="color:#111">gather</span><span style="color:#111">(</span><span style="color:#f92672">*</span><span style="color:#111">asyncio</span><span style="color:#f92672">.</span><span style="color:#111">Task</span><span style="color:#f92672">.</span><span style="color:#111">all_tasks</span><span style="color:#111">()))</span>
+        <span style="color:#111">loop</span><span style="color:#f92672">.</span><span style="color:#111">close</span><span style="color:#111">()</span>
+</code></pre></div><p>This waits for all tasks to complete before exiting, and seems
+to make sure all child processes are reaped. However, I have a
+few unresolved questions:</p>
+<ol>
+<li>What happens when one of the tasks is designed to run forever,
+and never exit? Should we cancel all tasks? Cancel tasks after
+a timeout? Cancelling tasks after a timeout seems most
+appropriate.</li>
+<li>If a task schedules more tasks, do those get run? Or are they
+abandoned? This seems important - can tasks keep adding more
+tasks in a loop?</li>
+</ol>
+<p>I am getting a better handle on what people mean by &lsquo;asyncio is
+more complicated than needed&rsquo;. I&rsquo;m going to find places to read
+up on asyncio internals - particularly how the list of pending
+tasks is maintained.</p>
+<p>This <a href="https://www.roguelynn.com/words/asyncio-we-did-it-wrong-pt-1/">series of blog posts</a>
+and <a href="https://www.youtube.com/watch?v=1lJDZx6f6tY">this EuroPython talk</a>
+from <a href="https://www.roguelynn.com/">Lynn Root</a> helped a lot.
+So did <a href="https://github.com/saghul">Saúl Ibarra Corretgé</a> (one of the asyncio core devs)
+talk on <a href="https://www.youtube.com/watch?v=HppNu0-ANYw">asyncio internals</a></p>
+<h3 id="testing">Testing</h3>
+<p>Testing code that involves asyncio, signals and processes is
+hard. I attempted to do so with <code>os.fork</code>, but decided that is
+super-hard mode and I&rsquo;d rather not play. Instead, I wrote Python
+code verbatim that is then spawned as a subprocess, and use
+stdout to communicate back to the parent process. The child process'
+code itself is <a href="https://github.com/yuvipanda/simpervisor/blob/b130203a0a497d26f438a6ab3c9511a3c3de60ab/tests/test_atexitasync.py#L13">inline</a>
+in the test file, which is terrible. I am going to move it to its
+own file.</p>
+<p>I also added tests for multiple signal handlers. I&rsquo;ve been writing
+a lot more tests in the last few months than I was before. I credit
+<a href="https://github.com/betatim">Tim Head</a> for a lot of this. It definitely
+gives me a lot more confidence in my code.</p>
+
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/devlog-2018-12-23/">DevLog 2018 December 23</a></h1>
@@ -813,111 +931,6 @@ This has had a lot of good cascading changes.</li>
 <h2 id="tldr">TLDR</h2>
 <p>S2I was great for generating a best-practices production container that runs one thing and does it well, but for binder we wanted to generate container images that captured complex environments without regard to what can run in them. Forcing s2i to do what we wanted seemed like trying to get a square peg into a round hole.</p>
 <p><em>Thanks to Chris Holgraf, MinRK and Carol Willing for helping read, reason about and edit this blog post</em></p>
-
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/maintainerati-2017/">maintainerati 2017</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2017-10-10 </span>
-      
-        <span class="more-meta"> 284 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-      <p>I was at <a href="http://maintainerati.org/">maintainerati</a> today, which was super fun &amp; quite intense! I highly appreciate GitHub &amp; the individuals involved in making it happen!</p>
-<p>Here&rsquo;s my key takeaways from this (and several other conversations over the last few weeks leading up to this):</p>
-<ol>
-<li>I am now a <em>maintainer</em>, which is quite a different thing from a <em>core contributor</em> or just a <em>contributor</em>. The power dynamics are very different, and so are the responsibilities. I can not ostrich myself into thinking I can just keep writing code and not do anything else - that&rsquo;s a disservice to not just other folks in the project, but also myself.</li>
-<li>Being a maintainer is quite hard emotionally &amp; mentally. I&rsquo;ve a lot more respect for long running OSS maintainers now than I did before. I have a lot of personal work to do before I become anything like a decent maintainer.</li>
-<li>Lots of people love Gerrit, and they also hate Gerrit :D Gerrit is very powerful, but the UX is so user hostile - I don&rsquo;t think these are unrelated. I hope that some of the power of Gerrit transfers to GitHub, but at the same time GitHub does not become anything like Gerrit! Also, people have very strong opinions about how their git histories should look like - perhaps they spend a lot more time looking through it than I do?</li>
-<li>We are slowly developing better ways of dealing with Trolls in projects, but still have a long, long way to go. &ldquo;Look for the helpers&rdquo; here.</li>
-</ol>
-<p>It was also great to go to a short, well organized (un)conference targeted at diverse group of people who are still like me in some sense! Would go again, A+++!</p>
-
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/designing-data-intensive-applications/">designing data intensive applications</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2017-07-02 </span>
-      
-        <span class="more-meta"> 1279 words </span>
-        <span class="more-meta"> 7 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-      <p>I&rsquo;ve been reading <a href="http://dataintensive.net/">Designing Data Intensive Applications</a> book &amp; am using this post to keep notes!</p>
-<p>I&rsquo;ve picked up ideas on scaling systems through the years, but never actually sat down to actually study them semi-formally. This seems like a great start to it!</p>
-<p>It&rsquo;s a pretty big book, and it&rsquo;s gonna take me a while to go through it :) Will update these notes as I go! Trying to do a chapter a week!</p>
-<h2 id="chapter-1-defining-all-the-things">Chapter 1: Defining all the things</h2>
-<blockquote>
-<p>The Internet was done so well that most people think of it as a natural resource like the Pacific Ocean, rather than something that was man-made. When was the last time a technology with a scale like that was so error-free?
-Alan Kay, in <a href="www.drdobbs.com/architecture-and-design/interview-with-alan-kay/240003442">interview with Dr Dobb’s Journal (2012)</a></p>
-</blockquote>
-<p>I keep forgetting what an amazing marvel the internet is and how intensely (and mostly positively, thankfully) it has affected my life. This is a good reminder! However, perhaps to people who haven&rsquo;t had the privileges I&rsquo;ve had the Internet doesn&rsquo;t feel like a natural resource? Unsure! Should ask them!</p>
-<p>Lots of modern applications are data intensive, rather than CPU intensive.</p>
-<blockquote>
-<p>Raw CPU power is rarely a limiting factor for these applications—bigger problems are usually the amount of data, the complexity of data, and the speed at which it is changing.</p>
-</blockquote>
-<p>This has borne out in the infrastructure I&rsquo;ve been setting up to help teach people data science - RAM is often the bottleneck, not CPU (barring machine-learning type stuff, but they want GPUs anyway).</p>
-<p>Common building blocks for data intensive applications are:</p>
-<ol>
-<li>Store data so that they, or another application, can find it again later (databases)</li>
-<li>Remember the result of an expensive operation, to speed up reads (caches)</li>
-<li>Allow users to search data by keyword or filter it in various ways (search indexes)</li>
-<li>Send a message to another process, to be handled asynchronously (stream processing)</li>
-<li>Periodically crunch a large amount of accumulated data (batch processing)</li>
-</ol>
-<p>These <em>do</em> seem to cover a large variety of bases! I feel fairly comfortable in operating, using and building on top of some of these (databases, caches) but not so much in most (never used a search index, batch processing, nor streams outside of redis). Partially I haven&rsquo;t felt an intense need for these, but perhaps if I understand them more I&rsquo;ll use them more? I&rsquo;ve mostly strived to make everything stateless - but perhaps that&rsquo;s causing me to shy away from problems that can only be solved with state? /me ponders.</p>
-<p>Boundaries around &lsquo;data systems&rsquo; are blurring - Redis is a cache but can be a message queue, Apache Kafka is a message queue that can have durability guarantees, etc. Lots of applications also need more than can be done with just one tool (aka a &lsquo;pure LAMP&rsquo; stack is no longer good enough). Applications often have the job of making sure different data sources are in sync. Everyone is a &lsquo;data designer&rsquo;, and everyone is kinda fucked.</p>
-<p>Talk about 3 things that are most important to any software system.</p>
-<h3 id="reliability">Reliability</h3>
-<p>Means &lsquo;continue to work correctly, even when things go wrong&rsquo;. Things that go wrong are &lsquo;faults&rsquo;, and systems need to be &lsquo;fault-tolerent&rsquo; or &lsquo;resilient&rsquo;. Can&rsquo;t be tolerant of all faults, so gotta define what faults we&rsquo;re tolerant of.</p>
-<p>Fault isn&rsquo;t failure - fault is when a component of the system &lsquo;deviates from its spec&rsquo;, <em>failure</em> is when the system as a whole stops providing user server they want. Can&rsquo;t reduce chances of fault to zero, but can work on reducing failures to zero.</p>
-<p><strong>Engineering is building reliable systems from unreliable parts.</strong></p>
-<p>Chaos monkeys are good, increase faults to find ways to reduce failure.</p>
-<p>Hardware reliability - physical components fail. Nothing you can do about it. Fix it in software.</p>
-<p>Hardware faults <em>usually</em> not corelated - one macine failing doesn&rsquo;t cause another machine to fail. To truly fuck shit up you need software - can easily cause massive large scale failure! For example, a leap second bug! Or a runaway process that slowly kills every other process on the machine. One of the microservies that 50 of your microservices depend on is slow! Cascading failures! These bugs all lie dormant, until they suddenly aren&rsquo;t and wreak havok. The software makes some assumption about its environment, which is true until it isn&rsquo;t. No quick solution to systematic software faults.</p>
-<p>Human error is worst error. The book offers some suggestions on how to prevent these.</p>
-<ol>
-<li>Minimize opportunities for errors - make it easy to do the right thing. But if it&rsquo;s too restrictive, people will work around it - tricky balance.</li>
-<li>Provide full featured sandboxes so people can fuck around without fucking shit up.</li>
-<li>AUTOMATICALLY TEST EVERYTHING so when a human does fuck up, they know!</li>
-<li>Set up undo functionality, so when human does fuck up, they can roll back!</li>
-</ol>
-<p>Learn about telemetry from other disciplines that have been doing this shit for far longer than us. <a href="https://xkcd.com/1831/">Relevant XKCD</a></p>
-<p>Reliability isn&rsquo;t just for nukes &amp; aircraft &amp; election systems (haha). Imagine someone loses a video of their kid&rsquo;s first ever step because you didn&rsquo;t care. Fucking up is human and we all do it - what is important is that we care.</p>
-<p>Sometimes you gotta sacrifice reliability, but make sure that is an explicit &amp; conscious decision. Actually throw away your prototypes! Put FIXMEs in your code. Take a shower. Make sure hacks look, feel and sound hacky!</p>
-<h3 id="scalability">Scalability</h3>
-<p>System&rsquo;s ability to adapt to increased &lsquo;load&rsquo; along some axes.</p>
-<p>Load is described with various <em>load parameters</em>, which depend on the system (req/s? active users? etc).</p>
-<p>Carefully define what this means for your application, and explain your reasoning. You might have to scale in some aspects but not in other.</p>
-<p>Once you have the load parameters for your app defined, figure out what happens when you increase load parameters but keep system resources unchanged. After that, try to figure out how much resources need to be increased.</p>
-<p>Throughput - number of things that can be done per second. Latency is time it takes to serve a request. These are common things we care about when we move load parameters up and down.</p>
-<p>You shouldn&rsquo;t think of these as single numbers, since they vary a fair bit. Think of these as <em>probability distributions</em>. Learn some statistics! Use percentiles, rather than &lsquo;average&rsquo; or &lsquo;mean&rsquo;.</p>
-<p>High percentile latencies are especially important when you are a service that&rsquo;s called by many other services - it can cascade down.</p>
-<p>No <em>magic scaling sauce</em> - architecture that can scale is different for each application. But there are general purpose building blocks, so worry a little less!</p>
-<h3 id="maintainability">Maintainability</h3>
-<blockquote>
-<p>Always code as if the person who ends up maintaining your code is a violent psychopath who knows where you live.</p>
-</blockquote>
-<p>Split into three major aspects.</p>
-<p><strong>Operability</strong></p>
-<p>Make it easy for people to operate your service! Help them monitor the health of the system, observe &amp; debug problems, do capacity planning, keep the production environment stable, prevent single human points of failure (oh, only Chad knows about this system) and many other things!</p>
-<p><strong>Simplicity</strong></p>
-<p>Don&rsquo;t make your software a big ball of mud. Take into account that new engineers will have to start working on your software, and they need to understand it quickly.</p>
-<p>Use standard tools &amp; approaches they have a higher likelihood of knowing - look around for standard tools before inventing your own!</p>
-<p>Watch out for accidental complexity, and keep it to a minimum as much as possible. Abstractions are good, but abstractions are also leaky.</p>
-<p><strong>Evolvability</strong></p>
-<p>If your software is simple &amp; has good abstractions, you can change it over time without wanting to pull all your hair out.</p>
 
   </div>
 </article>
