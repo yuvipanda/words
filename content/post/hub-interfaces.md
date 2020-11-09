@@ -1,5 +1,5 @@
 ---
-title: "JupyterHub for all tools"
+title: "The many ways to access your JupyterHub environment"
 date: 2020-11-09T02:15:15+05:30
 lastmod: 2020-11-09T02:15:15+05:30
 description: "Your tool of choice (ssh, local IDE, notebooks) should be able to access your JupyterHub environment"
