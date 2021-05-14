@@ -48,7 +48,7 @@
 <meta property="og:description" content="&lt;a href=&#39;https://jupyter.org&#39;&gt;Project Jupyter&lt;/a&gt; contributor | &lt;a href=&#39;https://en.wikipedia.org/wiki/Free-culture_movement&#39;&gt;Free Culture&lt;/a&gt; enthusiast" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://words.yuvi.in/" />
-<meta property="og:updated_time" content="2020-11-09T02:15:15+05:30" />
+<meta property="og:updated_time" content="2021-05-14T18:56:41+05:30" />
 <meta itemprop="name" content="Yuvi Panda">
 <meta itemprop="description" content="&lt;a href=&#39;https://jupyter.org&#39;&gt;Project Jupyter&lt;/a&gt; contributor | &lt;a href=&#39;https://en.wikipedia.org/wiki/Free-culture_movement&#39;&gt;Free Culture&lt;/a&gt; enthusiast">
 <meta name="twitter:card" content="summary"/>
@@ -86,6 +86,33 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/passing-headers-proxying-nginx/">Passing Headers along while Proxying with nginx</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-02-20 </span>
+      <div class="post-category">
+          <a href="/categories/code/"> code </a>
+          </div>
+        <span class="more-meta"> 98 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+      <p>When you’re proxying requests via nginx, you might assume after reading [the documentation][1] that every header is forwarded, except for the Host and Connection headers.</p>
+<p>You’d also be wrong.</p>
+<p>nginx <strong>drops</strong> all headers with an underscore in them.</p>
+<p>This is a configurable settings. You can turn it on with a simple</p>
+<!-- raw HTML omitted -->
+<p>I’m still baffled as to *why* this is [a configuration parameter][2]. And why it is turned off by default. And why there is no mention of it in the proxy docs.</p>
+<p>Thanks to <code>kolbyjack</code> on <code>#nginx</code> for helping me figure this out.</p>
+<p>[1]: <a href="http://wiki.nginx.org/HttpProxyModule">http://wiki.nginx.org/HttpProxyModule</a>&quot; data-mce-href=
+[2]: <a href="http://wiki.nginx.org/HttpCoreModule#underscores_in_headers">http://wiki.nginx.org/HttpCoreModule#underscores_in_headers</a></p>
+
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/program/">My First Program</a></h1>
@@ -345,36 +372,6 @@
   </div>
 </article>
 
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/devlog-december-2011/">Devlog December 2011</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2011-12-04 </span>
-      <div class="post-category">
-          <a href="/categories/devlog/"> devlog </a>
-          </div>
-        <span class="more-meta"> 210 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-      <p>With me back to a place where I can be completely open about what code I am writing (yay!), I think it’s time I restart <a href="http://yuvi.in/blog/tag/devlog/">my devlog</a> :)</p>
-<p>Last time, I was using my old blogging engine, and hand-wrote them in a markdown file on my netbook. Things have changed a lot since then, and this time I’ll be directly writing/publishing them daily from WordPress</p>
-<p>–</p>
-<h4 id="dec-4">Dec 4</h4>
-<p>I finally grokked Indexes in databases. It all makes perfect sense now. Yay! (And this was thanks to being able to read on the Kindle, so yay for that too). Nothing productive done though.</p>
-<h4 id="dec-3">Dec 3</h4>
-<p>Serious push to get livetrains project out within a few days. GeoJSON output done properly. Moved from OpenLayers to Leaflet.js on geohacker’s suggestion. Don’t regret that a bit. Also, coffeescript is fun!</p>
-<p>I got to a point where I’ve got GeoJSON rendering routes. No live animation yet. Spent some time trying to find a easy screenshot saving app, found none. All the ones I found suck. Sigh.</p>
-<h4 id="dec-1-8211-2">Dec 1 – 2</h4>
-<p>Kindle arrived. Loading it up with books to read. SICP is good enough on it. Loading up as much as I can find about Hacker Culture/History.  Moved my entire vim setup to vundle. Not bad.</p>
-<p> </p>
-<p> </p>
-
-  </div>
-</article>
-
     </section>
   
   <nav class="pagination">
@@ -409,7 +406,7 @@
   <span class="copyright-year">
     &copy;
     2005 -
-    2020
+    2021
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

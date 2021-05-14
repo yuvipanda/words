@@ -6,9 +6,19 @@
     <description>Recent content in code on Yuvi Panda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 09 Nov 2020 02:15:15 +0530</lastBuildDate><atom:link href="https://words.yuvi.in/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 May 2021 18:56:41 +0530</lastBuildDate><atom:link href="https://words.yuvi.in/categories/code/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>JupyterHub for all tools</title>
+      <title>Learning R</title>
+      <link>https://words.yuvi.in/post/learning-r/</link>
+      <pubDate>Fri, 14 May 2021 18:56:41 +0530</pubDate>
+      
+      <guid>https://words.yuvi.in/post/learning-r/</guid>
+      <description>I&amp;rsquo;m paying money to learn datascience with R via this John Hopkins course on Coursera. Hopefully I can spend about 4h a week on it.
+Why? I try to have a &amp;lsquo;T&amp;rsquo; shaped set of competencies - some competence in a lot of areas, and deeper knowledge in some. Having some competence in many areas lets you notice where a particular skill can be very helpful in solving a problem, and either apply it yourself or bring in someone who can.</description>
+    </item>
+    
+    <item>
+      <title>The many ways to access your JupyterHub environment</title>
       <link>https://words.yuvi.in/post/hub-interfaces/</link>
       <pubDate>Mon, 09 Nov 2020 02:15:15 +0530</pubDate>
       
