@@ -67,416 +67,403 @@ Presenting a reprint from 2006, my interview with [Sriram Krishnan][2], then Mic
 
 <span style="color: #000000;"><span style="font-size: small;"><strong>Any Advice on following your footsteps and cutting classes? Tips and Tricks?:D</strong></span></span>
 
-<span style="color: #000000;"><span style="font-size: small;">Let me be clear by what I meant there. I didn&#8217;t go to college a lot because I did a lot of creative stuff at home. In all my 4 years of college and the many, many times I bunked college, I don&#8217;t think I ever went to a movie, for example.</p> 
+<span style="color: #000000;"><span style="font-size: small;">Let me be clear by what I meant there. I didn&#8217;t go to college a lot because I did a lot of creative stuff at home. In all my 4 years of college and the many, many times I bunked college, I don&#8217;t think I ever went to a movie, for example.</p>
 
-<p>
-  If you&#8217;re looking for me to say “skipping class is ok”, I&#8217;m not going to say it. I&#8217;ve seen too many people waste their college lives by skipping class and wasting their time.
-</p>
+If you&#8217;re looking for me to say “skipping class is ok”, I&#8217;m not going to say it. I&#8217;ve seen too many people waste their college lives by skipping class and wasting their time.
 
-<p>
-  I&#8217;m saying &#8211; do what you want to do and what you think will hold you in good stead later. Follow your passions. Don&#8217;t go party :-)
-</p>
+I&#8217;m saying &#8211; do what you want to do and what you think will hold you in good stead later. Follow your passions. Don&#8217;t go party :-)
 
-<p>
-  One of the reasons I got away with a lot of this was because I had a great academic record and I had a long history of doing well at inter college symposiums and so on. That kind of credibility helps</span></span>
-</p>
+One of the reasons I got away with a lot of this was because I had a great academic record and I had a long history of doing well at inter college symposiums and so on. That kind of credibility helps</span></span>
 
-<p>
-  &nbsp;
-</p>
+<span style="color: #000000;"><span style="font-size: small;"><strong>What do you think of Marks?</strong></span></span>
 
-<p>
-  <span style="color: #000000;"><span style="font-size: small;"><strong>What do you think of Marks?</strong></span></span>
-</p>
+  <span style="color: #000000;"><span style="font-size: small;">Don&#8217;t put too much weight into them. Don&#8217;t spoil your health or your peace of mind over them.</p>
 
-<p>
-  <span style="color: #000000;"><span style="font-size: small;">Don&#8217;t put too much weight into them. Don&#8217;t spoil your health or your peace of mind over them.</p> 
-  
   <p>
     And please don&#8217;t judge people based on them.<br /> </span></span>
   </p>
-  
-  <p>
-    <span style="color: #000000;"><span style="font-size: small;"><strong>What do you think of the current &#8220;Education System&#8221; in India?<br /> </strong></span></span><span style="color: #000000;"><span style="font-size: small;"><br /> Loaded question and one that I pontificate on at length all too often.</p> 
-    
-    <p>
-      I think it is broken. Here&#8217;s why.
-    </p>
-    
-    <p>
-      Human beings think. They are good at it too. However, no school or college encourages you to think. Human beings are good at doing new things. The greatest things in our history have come from someone asking &#8216;What if&#8217; or &#8216;Why&#8217;
-    </p>
-    
-    <p>
-      But in school, you&#8217;ll probably be branded as a brat if you ask &#8216;Why&#8217;.
-    </p>
-    
-    <p>
-      All throughout school and college, I saw people being taught to be the same. I saw individualism suppressed. Being yourself was bad – being like everyone else was good.
-    </p>
-    
-    <p>
-      College was worse than school. If you need to have 250 engineering colleges in Tamil Nadu, what chance do you have of getting quality lecturers? So you make do with what you have &#8211; which is mostly lecturers who couldn&#8217;t get jobs anywhere else.
-    </p>
-    
-    <p>
-      And then they force students through 4 years of mindless torture, while the college authorities devote time to useless things like banning jeans for women and cellphones on campus.
-    </p>
-    
-    <p>
-      I&#8217;ve always dreamed of someday setting up a school where people would be encouraged to think for themselves. Where they would be taught to question everything.
-    </p>
-    
-    <p>
-      I told someone recently &#8216;The most useful time I spent in school and college was in the time away from class. In school, the most valuable thing I learnt was how to speak on stage, thanks to all the culturals I went to. In college, it was all the days I bunked and wrote code at home&#8217;
-    </p>
-    
-    <p>
-      Question Everything. That&#8217;s a good mantra for everyone.</span></span>
-    </p>
-    
-    <p>
-      &nbsp;
-    </p>
-    
-    <p>
-      <span style="color: #000000;"><span style="font-size: small;"><strong>If the Education System is broken, why ain&#8217;t it fixed?</strong></span></span>
-    </p>
-    
-    <p>
-      <span style="color: #000000;"><span style="font-size: small;">Because the people who can don&#8217;t care. And it is the &#8216;broken-ness&#8217; of the system that keeps them in place.</span></span>
-    </p>
-    
-    <p>
-      &nbsp;
-    </p>
-    
-    <p>
-      <span style="color: #000000;"><span style="font-size: small;"><strong>If you were the Education Minister, what would you do?</strong></span></span>
-    </p>
-    
-    <p>
-      <span style="color: #000000;"><span style="font-size: small;">I&#8217;m going to sum up everything in one line.<br /> </span></span>
-    </p>
-    
-    <p>
-      <span style="color: #000000;"><span style="font-size: small;">Teach people to think. Don&#8217;t teach them to be like everyone else.</p> 
-      
-      <p>
-        Have them write essays like &#8216;Why is Isaac Newton wrong&#8217; rather than essays that conclude with &#8216;And thus, we conclude that so and so is true&#8217;.
-      </p>
-      
-      <p>
-        Teach them to question. Teach them irreverence for the status quo :-)<br /> </span></span>
-      </p>
-      
-      <p>
-        <span style="color: #000000;"><span style="font-size: small;"><strong>To the young students out in Schools, what is your advice on becoming a good Developer?<br /> </strong></span></span><span style="color: #000000;"><span style="font-size: small;"><br /> Being a programmer is hard. It means days, weeks of debugging the same problem. It means having to constantly relearn your tools and your materials. Compared to doctors, the human body doesn&#8217;t spout new limbs every decade or so, does it? But, you get new programming languages, new operating systems, new tools and technologies almost every day.</p> 
-        
-        <p>
-          So don&#8217;t do it unless you love it. Please don&#8217;t take up computers because it is fashionable or because it is an easy way to make money. Take up computers because you love it at a very deep level.
-        </p>
-        
-        <p>
-          Be curious. Poke around your machine. Try to understand programming at all levels. Know how to make a button spin. Know how Windows allocates the memory for that button and the data structures involved.
-        </p>
-        
-        <p>
-          Code for fun. Write programs that *you* will use. Write programs that your friends will use. And then write more. The more code you&#8217;ll write, the better you&#8217;ll get. Read good code. You&#8217;ll learn a lot.
-        </p>
-        
-        <p>
-          Read good books. &#8216;Structure and Interpretation of Computer Programs&#8217; and almost all of Tannenbaum&#8217;s books are must reads.
-        </p>
-        
-        <p>
-          Code more. Learn a new programming language atleast every 6 months.
-        </p>
-        
-        <p>
-          Remember this &#8211; no other profession can create so much with so little. You can&#8217;t create an iPod or a Ferrari or even a small pencil from your bedroom. You can create an operating system though :-)
-        </p>
-        
-        <p>
-          Try everything &#8211; atleast once :-)</span></span>
-        </p>
-        
-        <p>
-          <span style="color: #000000;"><span style="font-size: small;">Eric S Raymond and Peter Norvig have written great articles on similar lines. I would strongly recommend you to find them and follow them.</span></span>
-        </p>
-        
-        <p>
-          <span style="color: #000000;"><span style="font-size: small;"><br /> </span></span><span style="color: #000000;"><span style="font-size: small;"><strong>What&#8217;s your advice to students on choosing Colleges?</strong></span></span>
-        </p>
-        
-        <p>
-          <span style="color: #000000;"><span style="font-size: small;">Thanks for asking me this!</span></span>
-        </p>
-        
-        <ul>
-          <li>
-            <span style="color: #000000;"><span style="font-size: small;">Choose a college with good transport facilities. If you need to leave and come home, you should be able to quickly</span></span>
-          </li>
-          <li>
-            <span style="color: #000000;"><span style="font-size: small;">Choose one that lets students go attend symposiums, culturals without any restrictions</span></span>
-          </li>
-          <li>
-            <span style="color: #000000;"><span style="font-size: small;">Don&#8217;t join one that imposes these moronic &#8216;boys and girls shouldn&#8217;t talk&#8217; rules. Inter-gender communication is important in the workplace. </span></span>
-          </li>
-          <li>
-            <span style="color: #000000;"><span style="font-size: small;">Apart from the IITs and Anna University, chances are low that you&#8217;ll find good faculty in other engineering colleges. Yes, there are a lot of gems out there but they are few and far between. So you would do well to ignore claims of a great faculty</span></span>
-          </li>
-          <li>
-            <span style="color: #000000;"><span style="font-size: small;">See what the former students of the college are upto. See how many have gone on to join Microsoft or Google or pursue a Phd.</span></span>
-          </li>
-          <li>
-            <span style="color: #000000;"><span style="font-size: small;">Join a college for the quality of the students, not for the education or the faculty. Trust me it is the people around you that will make the most impact on you</span></span>
-          </li>
-          <li>
-            <span style="color: #000000;"><span style="font-size: small;">Pick one that doesn&#8217;t enforce attendance so strictly (i.e. they won&#8217;t fail you because you have 74.95%)</span></span>
-          </li>
-          <li>
-            <span style="color: #000000;"><span style="font-size: small;">Pick a course that you *know* you enjoy. Don&#8217;t join a course because it is the &#8216;in thing&#8217; right now or because your parents said so. 
-            
-            <p>
-              In fact, the last point merits some more explanation.
-            </p>
-            
-            <p>
-              I see a lot of students doing this &#8211; joining non-computer science departments and then getting a job in an IT company. Please don&#8217;t do this. Why? For it&#8217;ll be a long time before you&#8217;ll get all the CS background required to be a good programmer. Computers are like art &#8211; no one can &#8216;train&#8217; you in 6 months.
-            </p>
-            
-            <p>
-              I need to tell a story here.
-            </p>
-            
-            <p>
-              When I wrote my engineering entrance exams, I had to wait a few days for my counseling. I remember watching on Sun TV, an interview of the guy who had scored the highest marks and who was Rank #1.
-            </p>
-            
-            <p>
-              He had picked some electronics related course at Anna University. When the reporter asked him &#8216;why&#8217;, he said &#8216;Because anyone can learn computers by going to a class for a few weeks&#8217;.
-            </p>
-            
-            <p>
-              I remember shaking my head and thinking &#8216;what an idiot&#8217;. For you cannot learn computers by going to a class for a few weeks.
-            </p>
-            
-            <p>
-              Pick a course you already enjoy.</span></span></li> </ul> 
-              
-              <p>
-                <span style="color: #000000;"><span style="font-size: small;"><strong>What do you think CS Students should be taught in High School? College?</strong></span></span><span style="color: #000000;"><span style="font-size: small;"></p> 
-                
-                <p>
-                  Python? And the Visual Studio Express Editions;-)
-                </p>
-                
-                <p>
-                  Seriously though, students should be taught how to debug. And how to code iteratively. I never understood why you have to write code on a piece of paper and then present it to your examiner &#8211; that&#8217;s not how you write code in real life.
-                </p>
-                
-                <p>
-                  And most importantly, students need to understand the in-depth working of whatever they&#8217;re using. What is the processor doing when you do a printf? You need to understand stuff like that<br /> </span></span>
-                </p>
-                
-                <p>
-                  <span style="color: #000000;"><span style="font-size: small;"><strong>What do you think of &#8220;Computer Institutes&#8221; like CSC, especially for non-entry level courses?</strong></span></span>
-                </p>
-                
-                <p>
-                  &nbsp;
-                </p>
-                
-                <p>
-                  <span style="color: #000000;"><span style="font-size: small;">I shouldn&#8217;t be too hard on them since I would have never got into computers if it weren&#8217;t for one of these institutes. It really depends on the expectations you have.</p> 
-                  
-                  <p>
-                    Please don&#8217;t join an institute because they&#8217;ll get you a certificate or because they&#8217;ll get you a job. That&#8217;s the worst motivation ever. Join to learn something. Don&#8217;t expect them to teach you everything though.<br /> </span></span>
-                  </p>
-                  
-                  <p>
-                    <span style="color: #000000;"><span style="font-size: small;"><strong>What first hooked you on to computers?</strong></span></span>
-                  </p>
-                  
-                  <p>
-                    <span style="color: #000000;"><span style="font-size: small;">This is quite an interesting story. Until 12th standard or so (sometime in 1999), I had never touched or used a computer apart from a few DOS commands we used to learn by rote for our exams. I had wanted to be a writer or get into graphics and animation.</p> 
-                    
-                    <p>
-                      My life changed one day in 12th grade when my Computer Science teacher summoned<br /> me during a lunch break. It turned out that there was an unknown institute (called Comp-U-Learn) that was doing a free, promotional “Introduction to Computers” course.
-                    </p>
-                    
-                    <p>
-                      Guessing that it couldn&#8217;t hurt (and it was free after all), I trotted happily to this computer institute where we learnt things like how to create a folder, how to draw in Paint and so on.
-                    </p>
-                    
-                    <p>
-                      One incident there changed me forever. One particular class, we were being taught how to copy-paste and the instructor happened to say &#8216;Please right-click on the &#8216;My Computer&#8217; icon on the desktop&#8217;. Puzzled, I shot up my hand and eagerly asked &#8216;Sir, where is the desktop?&#8217;
-                    </p>
-                    
-                    <p>
-                      Everyone in the class, including the instructor, burst out laughing.
-                    </p>
-                    
-                    <p>
-                      I was hurt. In an almost cinematic fashion, I vowed to myself then that no one would ever laugh at me regarding computers again.
-                    </p>
-                    
-                    <p>
-                      The &#8216;course&#8217; was for 15 days and the institute wanted students to sign up for an additional 30 day course on C/C++.
-                    </p>
-                    
-                    <p>
-                      I was the only student who signed up for the additional course. Since I was the only guy around, the bunched me with a bunch of older people who were studying Java and I got introduced to wonders like &#8216;import java.awt.*” and so on.
-                    </p>
-                    
-                    <p>
-                      I finished 12th standard and the day after my TNPCEE engineering entrance exams, my dad bought me a computer. It was a P3, 850 MHz machine with an astounding 256 MB of RAM.
-                    </p>
-                    
-                    <p>
-                      I was hooked throughout the holidays. I spent the entire holidays writing code in VB6 and have been coding ever since&#8230;
-                    </p>
-                    
-                    <p>
-                      Why do I love computers so much? I&#8217;m really not sure. I think it has something to do with the sense of creating something, molding something from nothingness into a work of beauty. I tell my non-programmer friends that one of the greatest pleasures of life is seeing something finally work correctly, to track down that last pesky bug.
-                    </p>
-                    
-                    <p>
-                      I&#8217;m also seduced by the idea of so many people using code that I&#8217;ve written. How many artists get to mass deliver? :-)<br /> </span></span>
-                    </p>
-                    
-                    <p>
-                      <span style="color: #000000;"> <span style="font-size: small;"><strong>Which Programming language do you respect the most? And, which one do you find the most useful?</strong></span></span>
-                    </p>
-                    
-                    <p>
-                      &nbsp;
-                    </p>
-                    
-                    <p>
-                      <span style="color: #000000;"><span style="font-size: small;">Well, one of the things that you learn over time is to appreciate different things in different languages. People ask me all the time &#8216;Which programming language do I learn?&#8217; and that is a fundamentally incorrect question.</p> 
-                      
-                      <p>
-                        A programming language is like a tool in your toolbox. You don&#8217;t use a screw driver alone and refuse to use anything else, do you?
-                      </p>
-                      
-                      <p>
-                        Anyway, here&#8217;s a list of some programming languages that I respect and why I like them.
-                      </p>
-                      
-                      <p>
-                        </span></span><span style="color: #000000;"><span style="font-size: small;"><strong>Visual Basic</strong></span></span><span style="color: #000000;"><span style="font-size: small;"> &#8211; My first love. Made programming accessible to the masses. I love the idea that normal people could now code, even if it was only an Excel macro.</p> 
-                        
-                        <p>
-                          </span></span><span style="color: #000000;"><span style="font-size: small;"><strong>Python</strong></span></span><span style="color: #000000;"><span style="font-size: small;"> &#8211; My current favorite. I love its simplicity and the idea of &#8216;batteries included&#8217;. I think this should be the first language taught in school.</p> 
-                          
-                          <p>
-                            </span></span><span style="color: #000000;"><span style="font-size: small;"><strong>C#</strong></span></span><span style="color: #000000;"><span style="font-size: small;"> &#8211; My bread and butter. Anders Hejlsberg is a genius &#8211; I love where he has managed to take C# without making it inaccessible to people who want their curly braces and their semi colons</p> 
-                            
-                            <p>
-                              </span></span><span style="color: #000000;"><span style="font-size: small;"><strong>Lisp/Scheme</strong></span></span><span style="color: #000000;"><span style="font-size: small;">&#8211; Twists my head in some very interesting ways. When you code something in Scheme and you see it work, you get a sense of achievement &#8211; the same thing you get after you&#8217;ve written an exam well. Someday I hope to understand macros. Maybe a day after that, I&#8217;ll understand continuations.</p> 
-                              
-                              <p>
-                                </span></span><span style="color: #000000;"><span style="font-size: small;"><strong>C/C++</strong></span></span><span style="color: #000000;"><span style="font-size: small;"> came close to being on this list but I decided against it. Weird, considering that I write so much code in them.</span></span>
-                              </p>
-                              
-                              <p>
-                                <span style="color: #000000;"><span style="font-size: small;"><strong>Anyone you can call as Role Model in your life?<br /> </strong></span></span><span style="color: #000000;"><span style="font-size: small;"><br /> Interesting question &#8211; I&#8217;ve always had too much of an ego to acknowledge anyone as a role model.</p> 
-                                
-                                <p>
-                                  However, of late, I&#8217;ve realized that I do look up to two people. One is Bill Gates and the other is Steve Jobs.
-                                </p>
-                                
-                                <p>
-                                  With BillG, there&#8217;s this whole side of him that people outside Microsoft never get to know. I am amazed at his depth and breadth of knowledge &#8211; I&#8217;ve read stuff from him on topics as varied as database query processing techniques all the way to virtual worlds and search engines. I&#8217;m amazed at his sheer smartness and intelligence &#8211; there are a lot of stories in Microsoft of &#8216;BillG reviews&#8217; which talk of how smart he is.
-                                </p>
-                                
-                                <p>
-                                  I also love the fact that he&#8217;s so passionate about software, and of late, solving the world&#8217;s problems.
-                                </p>
-                                
-                                <p>
-                                  With Steve Jobs, I love his eye for beauty and perfection. And I would someday like to get his &#8216;Reality Distortion Field&#8217;.
-                                </p>
-                                
-                                <p>
-                                  Kind of politically incorrect for a Microsoft employee to admire Steve Jobs, isn&#8217;t it? :-)
-                                </p>
-                                
-                                <p>
-                                  </span></span><span style="color: #000000;"><span style="font-size: small;"><strong>Quickies<br /> </strong></span></span><span style="color: #000000;"><span style="font-size: small;"><span style="text-decoration: underline;">Your Favorite Books<br /> </span></span></span><span style="color: #000000;"><span style="font-size: small;">               Lord of the Rings, Hitchhiker’s Guide to the Galaxy, anything by Frederick Forsyth and Michael Crichton. And Peter Norvig&#8217;s AI book All of Ayn Rand&#8217;s work deeply influenced (and comforted) me as well.</span></span>
-                                </p>
-                                
-                                <p>
-                                  <span style="color: #000000;"><span style="font-size: small;"><br /> </span></span><span style="color: #000000;"><span style="font-size: small;"><span style="text-decoration: underline;">Your Favorite Authors</span></span></span>
-                                </p>
-                                
-                                <p>
-                                  <span style="color: #000000;"><span style="font-size: small;">Apart from Forsyth and Crichton, I loved Conan Doyle as well. I love Joel Spolsky and Paul Graham. Robert Scoble is a friend and so is Don Box &#8211; I love to read them as well. Of late, I&#8217;ve loved reading Guy Kawasaki. Closer home, India Uncut (Amit Verma) is always fascinating. Am I allowed to list myself? :-)<br /> </span></span>
-                                </p>
-                                
-                                <p>
-                                  <span style="color: #000000;"><span style="font-size: small;"><span style="text-decoration: underline;">Your Favorite Music</span></span></span>
-                                </p>
-                                
-                                <p>
-                                  &nbsp;
-                                </p>
-                                
-                                <p>
-                                  <span style="color: #000000;"><span style="font-size: small;">Anything by U2, Scorpions, mostly classic rock. And a lot of movie themes &#8211; I love the John Williams score to the Superman movies<br /> </span></span>
-                                </p>
-                                
-                                <p>
-                                  <span style="color: #000000;"><span style="font-size: small;"><span style="text-decoration: underline;">Your Favorite Gadgets<br /> </span></span></span><span style="color: #000000;"><span style="font-size: small;"><br /> Zune &#8211; when we release it :) [</span></span><span style="color: #000000;"><span style="font-size: small;"><em>Please prepare for extensive trolling from Apple fans –Ed</em></span></span><span style="color: #000000;"><span style="font-size: small;">]</span></span>
-                                </p>
-                                
-                                <p>
-                                  &nbsp;
-                                </p>
-                                
-                                <p>
-                                  <span style="color: #000000;"><span style="font-size: small;"><span style="text-decoration: underline;">Your Favorite Geeks</span></span></span><span style="color: #000000;"><span style="font-size: small;"><br /> </span></span>
-                                </p>
-                                
-                                <p>
-                                  <span style="color: #000000;"><span style="font-size: small;">Dave Cutler. Barry Bond (he works on my team :-) ).Raymond Chen. Peter Norvig. Rob Pike. Andrew Tannenbaum. Guido Van Rossum<br /> </span></span>
-                                </p>
-                                
-                                <p>
-                                  <span style="color: #000000;"><span style="font-size: small;"><span style="text-decoration: underline;">Your Favorite Software</span></span></span><span style="color: #000000;"><span style="font-size: small;"><br /> Visual Basic 6. Python. Winamp.</span></span>
-                                </p>
-                                
-                                <p>
-                                  <span style="color: #000000;"><span style="font-size: small;"><br /> </span></span><span style="color: #000000;"><span style="font-size: small;"><strong>If a Genie were to give you three Wishes, what would you ask for?<br /> </strong></span></span><span style="color: #000000;"><span style="font-size: small;"><br /> For an infinite number of wishes. Hey, we at Microsoft think big :-) </span></span>
-                                </p>
-                                
-                                <p>
-                                  <span style="color: #000000;"><span style="font-size: small;"><br /> </span></span><span style="color: #000000;"><span style="font-size: small;"><strong>What would you like to say to the Students?</strong></span></span>
-                                </p>
-                                
-                                <p>
-                                  <span style="color: #000000;"><span style="font-size: small;">Question Everything. Never Belong. Ask yourself &#8216;What can I do that I&#8217;ll be remembered for the next 1000 years&#8217;.</p> 
-                                  
-                                  <p>
-                                    And work towards that.
-                                  </p>
-                                  
-                                  <p>
-                                    </span></span><span style="color: #000000;"><span style="font-size: small;"><strong>What would you like to say to the Teachers?<br /> </strong></span></span><span style="color: #000000;"><span style="font-size: small;"><br /> Don&#8217;t teach unless you love to.</span></span>
-                                  </p>
-                                  
-                                  <p>
-                                    <span style="color: #000000;"><span style="font-size: small;"><br /> </span></span><span style="color: #000000;"><span style="font-size: small;"><strong>What&#8217;s your Advice to Parents?<br /> </strong></span></span><span style="color: #000000;"><span style="font-size: small;"><br /> Don&#8217;t put so much pressure on your kids during exam time. Exams really don&#8217;t matter<br /> </span></span><span style="color: #000000;"><span style="font-size: small;"><strong>What&#8217;s your advice to the &#8220;normal guy&#8221; on becoming a geek?</strong></span></span>
-                                  </p>
-                                  
-                                  <p>
-                                    <span style="color: #000000;"><span style="font-size: small;">Be curious. Enjoy technology and poking around technology. Ask yourself the question &#8216;How does that work?&#8217; and &#8216;What if X could do Y&#8217; and so on.</p> 
-                                    
-                                    <p>
-                                      Be a tinkerer!</span></span>
-                                    </p>
 
- [1]: http://sudarmuthu.com
- [2]: http://sriramk.com
+<p>
+<span style="color: #000000;"><span style="font-size: small;"><strong>What do you think of the current &#8220;Education System&#8221; in India?<br /> </strong></span></span><span style="color: #000000;"><span style="font-size: small;"><br /> Loaded question and one that I pontificate on at length all too often.</p>
+
+<p>
+I think it is broken. Here&#8217;s why.
+</p>
+
+<p>
+Human beings think. They are good at it too. However, no school or college encourages you to think. Human beings are good at doing new things. The greatest things in our history have come from someone asking &#8216;What if&#8217; or &#8216;Why&#8217;
+</p>
+
+<p>
+But in school, you&#8217;ll probably be branded as a brat if you ask &#8216;Why&#8217;.
+</p>
+
+<p>
+All throughout school and college, I saw people being taught to be the same. I saw individualism suppressed. Being yourself was bad – being like everyone else was good.
+</p>
+
+<p>
+College was worse than school. If you need to have 250 engineering colleges in Tamil Nadu, what chance do you have of getting quality lecturers? So you make do with what you have &#8211; which is mostly lecturers who couldn&#8217;t get jobs anywhere else.
+</p>
+
+<p>
+And then they force students through 4 years of mindless torture, while the college authorities devote time to useless things like banning jeans for women and cellphones on campus.
+</p>
+
+<p>
+I&#8217;ve always dreamed of someday setting up a school where people would be encouraged to think for themselves. Where they would be taught to question everything.
+</p>
+
+<p>
+I told someone recently &#8216;The most useful time I spent in school and college was in the time away from class. In school, the most valuable thing I learnt was how to speak on stage, thanks to all the culturals I went to. In college, it was all the days I bunked and wrote code at home&#8217;
+</p>
+
+<p>
+Question Everything. That&#8217;s a good mantra for everyone.</span></span>
+</p>
+
+<p>
+&nbsp;
+</p>
+
+<p>
+<span style="color: #000000;"><span style="font-size: small;"><strong>If the Education System is broken, why ain&#8217;t it fixed?</strong></span></span>
+</p>
+
+<p>
+<span style="color: #000000;"><span style="font-size: small;">Because the people who can don&#8217;t care. And it is the &#8216;broken-ness&#8217; of the system that keeps them in place.</span></span>
+</p>
+
+<p>
+&nbsp;
+</p>
+
+<p>
+<span style="color: #000000;"><span style="font-size: small;"><strong>If you were the Education Minister, what would you do?</strong></span></span>
+</p>
+
+<p>
+<span style="color: #000000;"><span style="font-size: small;">I&#8217;m going to sum up everything in one line.<br /> </span></span>
+</p>
+
+<p>
+<span style="color: #000000;"><span style="font-size: small;">Teach people to think. Don&#8217;t teach them to be like everyone else.</p>
+
+<p>
+  Have them write essays like &#8216;Why is Isaac Newton wrong&#8217; rather than essays that conclude with &#8216;And thus, we conclude that so and so is true&#8217;.
+</p>
+
+<p>
+  Teach them to question. Teach them irreverence for the status quo :-)<br /> </span></span>
+</p>
+
+<p>
+<span style="color: #000000;"><span style="font-size: small;"><strong>To the young students out in Schools, what is your advice on becoming a good Developer?<br /> </strong></span></span><span style="color: #000000;"><span style="font-size: small;"><br /> Being a programmer is hard. It means days, weeks of debugging the same problem. It means having to constantly relearn your tools and your materials. Compared to doctors, the human body doesn&#8217;t spout new limbs every decade or so, does it? But, you get new programming languages, new operating systems, new tools and technologies almost every day.</p>
+
+<p>
+So don&#8217;t do it unless you love it. Please don&#8217;t take up computers because it is fashionable or because it is an easy way to make money. Take up computers because you love it at a very deep level.
+</p>
+
+<p>
+Be curious. Poke around your machine. Try to understand programming at all levels. Know how to make a button spin. Know how Windows allocates the memory for that button and the data structures involved.
+</p>
+
+<p>
+Code for fun. Write programs that *you* will use. Write programs that your friends will use. And then write more. The more code you&#8217;ll write, the better you&#8217;ll get. Read good code. You&#8217;ll learn a lot.
+</p>
+
+<p>
+Read good books. &#8216;Structure and Interpretation of Computer Programs&#8217; and almost all of Tannenbaum&#8217;s books are must reads.
+</p>
+
+<p>
+Code more. Learn a new programming language atleast every 6 months.
+</p>
+
+<p>
+Remember this &#8211; no other profession can create so much with so little. You can&#8217;t create an iPod or a Ferrari or even a small pencil from your bedroom. You can create an operating system though :-)
+</p>
+
+<p>
+Try everything &#8211; atleast once :-)</span></span>
+</p>
+
+<p>
+<span style="color: #000000;"><span style="font-size: small;">Eric S Raymond and Peter Norvig have written great articles on similar lines. I would strongly recommend you to find them and follow them.</span></span>
+</p>
+
+<p>
+<span style="color: #000000;"><span style="font-size: small;"><br /> </span></span><span style="color: #000000;"><span style="font-size: small;"><strong>What&#8217;s your advice to students on choosing Colleges?</strong></span></span>
+</p>
+
+<p>
+<span style="color: #000000;"><span style="font-size: small;">Thanks for asking me this!</span></span>
+</p>
+
+<ul>
+<li>
+<span style="color: #000000;"><span style="font-size: small;">Choose a college with good transport facilities. If you need to leave and come home, you should be able to quickly</span></span>
+</li>
+<li>
+<span style="color: #000000;"><span style="font-size: small;">Choose one that lets students go attend symposiums, culturals without any restrictions</span></span>
+</li>
+<li>
+<span style="color: #000000;"><span style="font-size: small;">Don&#8217;t join one that imposes these moronic &#8216;boys and girls shouldn&#8217;t talk&#8217; rules. Inter-gender communication is important in the workplace. </span></span>
+</li>
+<li>
+<span style="color: #000000;"><span style="font-size: small;">Apart from the IITs and Anna University, chances are low that you&#8217;ll find good faculty in other engineering colleges. Yes, there are a lot of gems out there but they are few and far between. So you would do well to ignore claims of a great faculty</span></span>
+</li>
+<li>
+<span style="color: #000000;"><span style="font-size: small;">See what the former students of the college are upto. See how many have gone on to join Microsoft or Google or pursue a Phd.</span></span>
+</li>
+<li>
+<span style="color: #000000;"><span style="font-size: small;">Join a college for the quality of the students, not for the education or the faculty. Trust me it is the people around you that will make the most impact on you</span></span>
+</li>
+<li>
+<span style="color: #000000;"><span style="font-size: small;">Pick one that doesn&#8217;t enforce attendance so strictly (i.e. they won&#8217;t fail you because you have 74.95%)</span></span>
+</li>
+<li>
+<span style="color: #000000;"><span style="font-size: small;">Pick a course that you *know* you enjoy. Don&#8217;t join a course because it is the &#8216;in thing&#8217; right now or because your parents said so.
+
+<p>
+In fact, the last point merits some more explanation.
+</p>
+
+<p>
+I see a lot of students doing this &#8211; joining non-computer science departments and then getting a job in an IT company. Please don&#8217;t do this. Why? For it&#8217;ll be a long time before you&#8217;ll get all the CS background required to be a good programmer. Computers are like art &#8211; no one can &#8216;train&#8217; you in 6 months.
+</p>
+
+<p>
+I need to tell a story here.
+</p>
+
+<p>
+When I wrote my engineering entrance exams, I had to wait a few days for my counseling. I remember watching on Sun TV, an interview of the guy who had scored the highest marks and who was Rank #1.
+</p>
+
+<p>
+He had picked some electronics related course at Anna University. When the reporter asked him &#8216;why&#8217;, he said &#8216;Because anyone can learn computers by going to a class for a few weeks&#8217;.
+</p>
+
+<p>
+I remember shaking my head and thinking &#8216;what an idiot&#8217;. For you cannot learn computers by going to a class for a few weeks.
+</p>
+
+<p>
+Pick a course you already enjoy.</span></span></li> </ul>
+
+<p>
+<span style="color: #000000;"><span style="font-size: small;"><strong>What do you think CS Students should be taught in High School? College?</strong></span></span><span style="color: #000000;"><span style="font-size: small;"></p>
+
+<p>
+Python? And the Visual Studio Express Editions;-)
+</p>
+
+<p>
+Seriously though, students should be taught how to debug. And how to code iteratively. I never understood why you have to write code on a piece of paper and then present it to your examiner &#8211; that&#8217;s not how you write code in real life.
+</p>
+
+<p>
+And most importantly, students need to understand the in-depth working of whatever they&#8217;re using. What is the processor doing when you do a printf? You need to understand stuff like that<br /> </span></span>
+</p>
+
+<p>
+<span style="color: #000000;"><span style="font-size: small;"><strong>What do you think of &#8220;Computer Institutes&#8221; like CSC, especially for non-entry level courses?</strong></span></span>
+</p>
+
+<p>
+&nbsp;
+</p>
+
+<p>
+<span style="color: #000000;"><span style="font-size: small;">I shouldn&#8217;t be too hard on them since I would have never got into computers if it weren&#8217;t for one of these institutes. It really depends on the expectations you have.</p>
+
+<p>
+Please don&#8217;t join an institute because they&#8217;ll get you a certificate or because they&#8217;ll get you a job. That&#8217;s the worst motivation ever. Join to learn something. Don&#8217;t expect them to teach you everything though.<br /> </span></span>
+</p>
+
+<p>
+<span style="color: #000000;"><span style="font-size: small;"><strong>What first hooked you on to computers?</strong></span></span>
+</p>
+
+<p>
+<span style="color: #000000;"><span style="font-size: small;">This is quite an interesting story. Until 12th standard or so (sometime in 1999), I had never touched or used a computer apart from a few DOS commands we used to learn by rote for our exams. I had wanted to be a writer or get into graphics and animation.</p>
+
+<p>
+My life changed one day in 12th grade when my Computer Science teacher summoned<br /> me during a lunch break. It turned out that there was an unknown institute (called Comp-U-Learn) that was doing a free, promotional “Introduction to Computers” course.
+</p>
+
+<p>
+Guessing that it couldn&#8217;t hurt (and it was free after all), I trotted happily to this computer institute where we learnt things like how to create a folder, how to draw in Paint and so on.
+</p>
+
+<p>
+One incident there changed me forever. One particular class, we were being taught how to copy-paste and the instructor happened to say &#8216;Please right-click on the &#8216;My Computer&#8217; icon on the desktop&#8217;. Puzzled, I shot up my hand and eagerly asked &#8216;Sir, where is the desktop?&#8217;
+</p>
+
+<p>
+Everyone in the class, including the instructor, burst out laughing.
+</p>
+
+<p>
+I was hurt. In an almost cinematic fashion, I vowed to myself then that no one would ever laugh at me regarding computers again.
+</p>
+
+<p>
+The &#8216;course&#8217; was for 15 days and the institute wanted students to sign up for an additional 30 day course on C/C++.
+</p>
+
+<p>
+I was the only student who signed up for the additional course. Since I was the only guy around, the bunched me with a bunch of older people who were studying Java and I got introduced to wonders like &#8216;import java.awt.*” and so on.
+</p>
+
+<p>
+I finished 12th standard and the day after my TNPCEE engineering entrance exams, my dad bought me a computer. It was a P3, 850 MHz machine with an astounding 256 MB of RAM.
+</p>
+
+<p>
+I was hooked throughout the holidays. I spent the entire holidays writing code in VB6 and have been coding ever since&#8230;
+</p>
+
+<p>
+Why do I love computers so much? I&#8217;m really not sure. I think it has something to do with the sense of creating something, molding something from nothingness into a work of beauty. I tell my non-programmer friends that one of the greatest pleasures of life is seeing something finally work correctly, to track down that last pesky bug.
+</p>
+
+<p>
+I&#8217;m also seduced by the idea of so many people using code that I&#8217;ve written. How many artists get to mass deliver? :-)<br /> </span></span>
+</p>
+
+<p>
+<span style="color: #000000;"> <span style="font-size: small;"><strong>Which Programming language do you respect the most? And, which one do you find the most useful?</strong></span></span>
+</p>
+
+<p>
+&nbsp;
+</p>
+
+<p>
+<span style="color: #000000;"><span style="font-size: small;">Well, one of the things that you learn over time is to appreciate different things in different languages. People ask me all the time &#8216;Which programming language do I learn?&#8217; and that is a fundamentally incorrect question.</p>
+
+<p>
+  A programming language is like a tool in your toolbox. You don&#8217;t use a screw driver alone and refuse to use anything else, do you?
+</p>
+
+<p>
+  Anyway, here&#8217;s a list of some programming languages that I respect and why I like them.
+</p>
+
+<p>
+</span></span><span style="color: #000000;"><span style="font-size: small;"><strong>Visual Basic</strong></span></span><span style="color: #000000;"><span style="font-size: small;"> &#8211; My first love. Made programming accessible to the masses. I love the idea that normal people could now code, even if it was only an Excel macro.</p>
+
+<p>
+</span></span><span style="color: #000000;"><span style="font-size: small;"><strong>Python</strong></span></span><span style="color: #000000;"><span style="font-size: small;"> &#8211; My current favorite. I love its simplicity and the idea of &#8216;batteries included&#8217;. I think this should be the first language taught in school.</p>
+
+<p>
+</span></span><span style="color: #000000;"><span style="font-size: small;"><strong>C#</strong></span></span><span style="color: #000000;"><span style="font-size: small;"> &#8211; My bread and butter. Anders Hejlsberg is a genius &#8211; I love where he has managed to take C# without making it inaccessible to people who want their curly braces and their semi colons</p>
+
+<p>
+</span></span><span style="color: #000000;"><span style="font-size: small;"><strong>Lisp/Scheme</strong></span></span><span style="color: #000000;"><span style="font-size: small;">&#8211; Twists my head in some very interesting ways. When you code something in Scheme and you see it work, you get a sense of achievement &#8211; the same thing you get after you&#8217;ve written an exam well. Someday I hope to understand macros. Maybe a day after that, I&#8217;ll understand continuations.</p>
+
+<p>
+</span></span><span style="color: #000000;"><span style="font-size: small;"><strong>C/C++</strong></span></span><span style="color: #000000;"><span style="font-size: small;"> came close to being on this list but I decided against it. Weird, considering that I write so much code in them.</span></span>
+</p>
+
+<p>
+<span style="color: #000000;"><span style="font-size: small;"><strong>Anyone you can call as Role Model in your life?<br /> </strong></span></span><span style="color: #000000;"><span style="font-size: small;"><br /> Interesting question &#8211; I&#8217;ve always had too much of an ego to acknowledge anyone as a role model.</p>
+
+<p>
+However, of late, I&#8217;ve realized that I do look up to two people. One is Bill Gates and the other is Steve Jobs.
+</p>
+
+<p>
+With BillG, there&#8217;s this whole side of him that people outside Microsoft never get to know. I am amazed at his depth and breadth of knowledge &#8211; I&#8217;ve read stuff from him on topics as varied as database query processing techniques all the way to virtual worlds and search engines. I&#8217;m amazed at his sheer smartness and intelligence &#8211; there are a lot of stories in Microsoft of &#8216;BillG reviews&#8217; which talk of how smart he is.
+</p>
+
+<p>
+I also love the fact that he&#8217;s so passionate about software, and of late, solving the world&#8217;s problems.
+</p>
+
+<p>
+With Steve Jobs, I love his eye for beauty and perfection. And I would someday like to get his &#8216;Reality Distortion Field&#8217;.
+</p>
+
+<p>
+Kind of politically incorrect for a Microsoft employee to admire Steve Jobs, isn&#8217;t it? :-)
+</p>
+
+<p>
+</span></span><span style="color: #000000;"><span style="font-size: small;"><strong>Quickies<br /> </strong></span></span><span style="color: #000000;"><span style="font-size: small;"><span style="text-decoration: underline;">Your Favorite Books<br /> </span></span></span><span style="color: #000000;"><span style="font-size: small;">               Lord of the Rings, Hitchhiker’s Guide to the Galaxy, anything by Frederick Forsyth and Michael Crichton. And Peter Norvig&#8217;s AI book All of Ayn Rand&#8217;s work deeply influenced (and comforted) me as well.</span></span>
+</p>
+
+<p>
+<span style="color: #000000;"><span style="font-size: small;"><br /> </span></span><span style="color: #000000;"><span style="font-size: small;"><span style="text-decoration: underline;">Your Favorite Authors</span></span></span>
+</p>
+
+<p>
+<span style="color: #000000;"><span style="font-size: small;">Apart from Forsyth and Crichton, I loved Conan Doyle as well. I love Joel Spolsky and Paul Graham. Robert Scoble is a friend and so is Don Box &#8211; I love to read them as well. Of late, I&#8217;ve loved reading Guy Kawasaki. Closer home, India Uncut (Amit Verma) is always fascinating. Am I allowed to list myself? :-)<br /> </span></span>
+</p>
+
+<p>
+<span style="color: #000000;"><span style="font-size: small;"><span style="text-decoration: underline;">Your Favorite Music</span></span></span>
+</p>
+
+<p>
+&nbsp;
+</p>
+
+<p>
+<span style="color: #000000;"><span style="font-size: small;">Anything by U2, Scorpions, mostly classic rock. And a lot of movie themes &#8211; I love the John Williams score to the Superman movies<br /> </span></span>
+</p>
+
+<p>
+<span style="color: #000000;"><span style="font-size: small;"><span style="text-decoration: underline;">Your Favorite Gadgets<br /> </span></span></span><span style="color: #000000;"><span style="font-size: small;"><br /> Zune &#8211; when we release it :) [</span></span><span style="color: #000000;"><span style="font-size: small;"><em>Please prepare for extensive trolling from Apple fans –Ed</em></span></span><span style="color: #000000;"><span style="font-size: small;">]</span></span>
+</p>
+
+<p>
+&nbsp;
+</p>
+
+<p>
+<span style="color: #000000;"><span style="font-size: small;"><span style="text-decoration: underline;">Your Favorite Geeks</span></span></span><span style="color: #000000;"><span style="font-size: small;"><br /> </span></span>
+</p>
+
+<p>
+<span style="color: #000000;"><span style="font-size: small;">Dave Cutler. Barry Bond (he works on my team :-) ).Raymond Chen. Peter Norvig. Rob Pike. Andrew Tannenbaum. Guido Van Rossum<br /> </span></span>
+</p>
+
+<p>
+<span style="color: #000000;"><span style="font-size: small;"><span style="text-decoration: underline;">Your Favorite Software</span></span></span><span style="color: #000000;"><span style="font-size: small;"><br /> Visual Basic 6. Python. Winamp.</span></span>
+</p>
+
+<p>
+<span style="color: #000000;"><span style="font-size: small;"><br /> </span></span><span style="color: #000000;"><span style="font-size: small;"><strong>If a Genie were to give you three Wishes, what would you ask for?<br /> </strong></span></span><span style="color: #000000;"><span style="font-size: small;"><br /> For an infinite number of wishes. Hey, we at Microsoft think big :-) </span></span>
+</p>
+
+<p>
+<span style="color: #000000;"><span style="font-size: small;"><br /> </span></span><span style="color: #000000;"><span style="font-size: small;"><strong>What would you like to say to the Students?</strong></span></span>
+</p>
+
+<p>
+<span style="color: #000000;"><span style="font-size: small;">Question Everything. Never Belong. Ask yourself &#8216;What can I do that I&#8217;ll be remembered for the next 1000 years&#8217;.</p>
+
+<p>
+And work towards that.
+</p>
+
+<p>
+</span></span><span style="color: #000000;"><span style="font-size: small;"><strong>What would you like to say to the Teachers?<br /> </strong></span></span><span style="color: #000000;"><span style="font-size: small;"><br /> Don&#8217;t teach unless you love to.</span></span>
+</p>
+
+<p>
+<span style="color: #000000;"><span style="font-size: small;"><br /> </span></span><span style="color: #000000;"><span style="font-size: small;"><strong>What&#8217;s your Advice to Parents?<br /> </strong></span></span><span style="color: #000000;"><span style="font-size: small;"><br /> Don&#8217;t put so much pressure on your kids during exam time. Exams really don&#8217;t matter<br /> </span></span><span style="color: #000000;"><span style="font-size: small;"><strong>What&#8217;s your advice to the &#8220;normal guy&#8221; on becoming a geek?</strong></span></span>
+</p>
+
+<p>
+<span style="color: #000000;"><span style="font-size: small;">Be curious. Enjoy technology and poking around technology. Ask yourself the question &#8216;How does that work?&#8217; and &#8216;What if X could do Y&#8217; and so on.</p>
+
+<p>
+Be a tinkerer!</span></span>
+</p>
+
+[1]: http://sudarmuthu.com
+[2]: http://sriramk.com
