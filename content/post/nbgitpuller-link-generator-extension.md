@@ -8,6 +8,8 @@ comment: true
 toc: false
 ---
 
+(Leave comments or discuss this post on the [jupyter discourse](https://discourse.jupyter.org/t/announcing-the-nbgitpuller-link-generator-browser-extensions/11701))
+
 [nbgitpuller](https://jupyterhub.github.io/nbgitpuller) is my most favorite way to distribute
 content (notebooks, data files, etc) to students on a JupyterHub. The student mental model is
 'I click a link, and can start working on my notebook', which is as close to ideal as we have today.
