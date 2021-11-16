@@ -70,3 +70,9 @@ so should work easily in other browsers - Safari, Edge, etc. However, since I do
 use them myself, I don't have instructions on how to add them there. However, if you do
 use those browsers, I'd [love contributions](https://github.com/yuvipanda/nbgitpuller-link-generator-webextension)
 on how to install the extension there!
+
+## Contribute!
+
+The extension was a overnight hack, and it made me *very* happy to get it shipped. There is
+a *lot* of room for improvement - I would love for you to provide feedback and
+contribute in any way possible [on GitHub](https://github.com/yuvipanda/nbgitpuller-link-generator-webextension)
