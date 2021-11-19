@@ -25,15 +25,8 @@ I would love for that to be the case, but unfortunately I've found almost nothin
 'crypto' or 'web3' communities attractive. I'm going to try write down why in this post.
 
 Most of this isn't unique thought - others have written about these with much more citations,
-and deeper analysis than I have. I encourate you to seek those out and read them.
-
-## Extremely toxic community
-
-Right out of the bat, the self-proclaimed community around the monikers 'web3' and 'crypto'
-seems *extremely* toxic, in ways that are generally order of magnitude more
-toxic than most open source toxicity. Absolute massive dealbreaker. The amount of money
-sloshing around there seems to be attracting the kinda folks I don't really want in
-my communities.
+and deeper analysis than I have. I encourate you to seek those out and read them. This is also
+not an exhaustive list, but a bare minimum.
 
 ## Environmental impact of proof of work
 
@@ -44,15 +37,11 @@ to stop existing.
 
 ## The rich get richer
 
-In the economic models of almost all 'crypto', growing inequality is a feature, not a bug.
-This is outright formalized in Proof of Stake systems, and is de-facto true in most
-Proof of Work systems. I don't really want to live in a world that is even more unequal
-than the one I live in now.
-
-This seems to be an active area of research, and I'm excited to see newer work (like
-Filecoin) come out of this, although I've no idea if they can ever solve their latency
-problems. Fixes to this would be fundamental to any possible positive outcome from
-the 'crypto' community.
+In the economic models of almost all 'crypto', growing inequality is a feature,
+not a bug.  This is outright formalized in Proof of Stake systems, and is
+de-facto true in most Proof of Work systems. I don't really want to live in a
+world that is even more unequal than the one I live in now. Fixes to this would
+be fundamental to any possible positive outcome from the 'crypto' community.
 
 ## "Distributed Ledger" is not a solution to many problems
 
@@ -60,9 +49,10 @@ The buzzwordiness of 'blockchain', 'crypto' and 'web3' mean they're now being
 forcefit into problems they are very poor solutions for.
 Every time I see the word 'blockchain', I mentally replace it with 'distributed ledger',
 and see if it can still be a good fit for the given problem. Most often, it does not.
-Problems often have to be reframed in economic terms to have a blockchain solve them,
-and I think this reframing is often fundamentally problematic. When all you have is
-a distributed ledger, everything looks like a problem of incentives.
+Problems often have to be reframed in terms of 'transactions' to have a blockchain solve them,
+and I think this reframing is often fundamentally problematic - life isn't
+transactional. When all you have is a distributed ledger, everything looks like
+a problem of incentives.
 
 So any time something purports to solve a problem that is *not* use as a
 currency using a blockchain, consider carefully the problem it is solving, and
@@ -80,5 +70,5 @@ I want to evaluate each tech that might be solving a problem I find important, b
 it has brought in strongly to the 'crypto' or 'web3' hype, it just has a much bigger
 bar to clear to prove that it just isn't a speculative ponzi scheme.
 
-I can't wait for the huge amounts of money and the hype train to die out, so we can
-pick up the useful tech that comes out of this.
+I can't wait for the huge amounts of money, wasteful proof of work and the hype
+train to die out, so we can pick up the useful tech that comes out of this.
