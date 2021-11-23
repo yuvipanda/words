@@ -50,7 +50,8 @@ Or you can directly use the `nbss-upload` commandline tool:
 <video controls src="/screencasts/nbss-launch/commandline.mp4" width="100%" autoplay></video>
 
 On Macs, you can pipe the output of `nbss-upload` to `pbcopy` to automatically put the
-link in your clipboard.
+link in your clipboard. Here is the [example notebook](https://notebooksharing.space/view/db27d9df0768fc62611dbdfa5f5a08525f1b1d637706cc1ad1d6973cb7d4a90e#displayOptions=) that I
+uploaded, so you can check out how it looks.
 
 A [jupyterlab extension](https://github.com/notebook-sharing-space/jupyterlab-nbsss) to
 streamline this process is currently being worked on, and I'd appreciate any help. I'd
@@ -130,5 +131,4 @@ or [tweet at me](https://twitter.com/yuvipanda).
 ## Inspiration
 
 Growing up on IRC, [pastebin](https://en.wikipedia.org/wiki/Pastebin) services are
-part of life. In 2018, [GitHub stopped supporting anonymous gists](https://github.blog/2018-02-18-deprecation-notice-removing-anonymous-gist-creation/),
-so there wasn't really a quick way to share a notebook. Hence, this was born.
+part of life. In 2018, [GitHub stopped supporting anonymous gists](https://github.blog/2018-02-18-deprecation-notice-removing-anonymous-gist-creation/)
