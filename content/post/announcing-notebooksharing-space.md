@@ -126,3 +126,9 @@ Tweets from here on in Ryan's twitter thread sell this vision well.
 
 I *love* feedback! That's why I spend my time building these. [Open an issue](https://github.com/notebook-sharing-space/nbss/issues)
 or [tweet at me](https://twitter.com/yuvipanda).
+
+## Inspiration
+
+Growing up on IRC, [pastebin](https://en.wikipedia.org/wiki/Pastebin) services are
+part of life. In 2018, [GitHub stopped supporting anonymous gists](https://github.blog/2018-02-18-deprecation-notice-removing-anonymous-gist-creation/),
+so there wasn't really a quick way to share a notebook. Hence, this was born.
