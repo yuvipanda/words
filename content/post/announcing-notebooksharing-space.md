@@ -126,7 +126,8 @@ Tweets from here on in Ryan's twitter thread sell this vision well.
 ## Feedback
 
 I *love* feedback! That's why I spend my time building these. [Open an issue](https://github.com/notebook-sharing-space/nbss/issues)
-or [tweet at me](https://twitter.com/yuvipanda).
+or [tweet at me](https://twitter.com/yuvipanda). As with all my projects, this is community built
+and run - so please come join me :)
 
 ## Inspiration
 
