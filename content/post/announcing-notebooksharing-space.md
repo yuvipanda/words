@@ -131,5 +131,9 @@ and run - so please come join me :)
 
 ## Inspiration
 
-Growing up on IRC, [pastebin](https://en.wikipedia.org/wiki/Pastebin) services are
-part of life. In 2018, [GitHub stopped supporting anonymous gists](https://github.blog/2018-02-18-deprecation-notice-removing-anonymous-gist-creation/)
+Growing up on IRC, [pastebin](https://en.wikipedia.org/wiki/Pastebin) services
+are part of life. In 2018, [GitHub stopped supporting anonymous
+gists](https://github.blog/2018-02-18-deprecation-notice-removing-anonymous-gist-creation/)
+- so sharing a notebook with someone became a lot more work.
+NotebookSharing.space hopefully plugs that gap. The excellent
+[rpubs.com](https://rpubs.com/) is also an inspiration!
