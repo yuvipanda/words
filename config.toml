@@ -19,6 +19,8 @@ pygmentsCodefencesGuessSyntax = true
     lineNos = false
     style = "monokailight"
     codeFences = true
+  [markup.goldmark.renderer]
+    unsafe = true
 
 hasCJKLanguage = false     # has chinese/japanese/korean ? # 自动检测是否包含 中文\日文\韩文
 paginate = 10                                              # 首页每页显示的文章数
