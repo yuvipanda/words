@@ -8,7 +8,7 @@ tags: [code, jupyter]
 # You can also close(false) or open(true) something for this content.
 # P.S. comment can only be closed
 comment: true
-toc: true
+toc: false
 ---
 
 Sometimes you want to temporarily disable a JupyterLab extension on a JupyterHub
