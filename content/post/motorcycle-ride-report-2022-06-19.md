@@ -5,7 +5,7 @@ lastmod: 2022-06-21T12:32:39-07:00
 categories: ["motorcycle"]
 ---
 
-I decided to write publicly and publish my mototrcycle riding trip notes now.
+I decided to write publicly and publish my motorcycle riding trip notes now.
 
 ## Montarey Trip notes
 
