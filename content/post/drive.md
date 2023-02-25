@@ -36,7 +36,10 @@ this message:
 And **that** felt really good! I could see how responses like this have driven
 most of my software development projects, for good and ill. It has been a driver
 in picking which communities I can be a part of, what I find interesting, and
-what feels like a slog. I joked to a friend that my 'anxiety response' is to
+what feels like a slog. I definitely find communities that are at intersections
+of various fields, and I try to find them early - so things I could do that 
+would feel 'normal' in one of those fields feels mind blowing to the other.
+I joked to a friend that my 'anxiety response' is to
 start (or get deeply involved in) a new open source projects, but the more
 I think about it the more it seems to be not a joke at all.
 
