@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>class-notes on Yuvi Panda</title>
+    <title>class-notes on Yuvi</title>
     <link>https://words.yuvi.in/categories/class-notes/</link>
-    <description>Recent content in class-notes on Yuvi Panda</description>
+    <description>Recent content in class-notes on Yuvi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 09 Apr 2016 18:39:34 +0000</lastBuildDate><atom:link href="https://words.yuvi.in/categories/class-notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 Apr 2016 18:39:34 +0000</lastBuildDate>
+    <atom:link href="https://words.yuvi.in/categories/class-notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>UCI Conflicts Class: Notes from Week 1 – Part I</title>
       <link>https://words.yuvi.in/uci-conflicts-class-notes-week-1-part/</link>
       <pubDate>Sat, 09 Apr 2016 18:39:34 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/uci-conflicts-class-notes-week-1-part/</guid>
-      <description>I’ve started taking a Coursera class on Conflicts from UCI.
-Just dumping notes from me going through the video lectures here. I’ve a bunch more videos to go through for Week 1, but dumping what I have for now.
-Types of Conflict:
- Constructive Destructive  Caused by lack of flexibility, getting interpersonal things get in the way and the sureness that ones way is the right way Leads to stiffling of anything new, resulting in ‘this is the way things have always been’ being used as an actual legitimate reason for things    Sources of Conflict</description>
+      <description>I’ve started taking a Coursera class on Conflicts from UCI.&#xA;Just dumping notes from me going through the video lectures here. I’ve a bunch more videos to go through for Week 1, but dumping what I have for now.&#xA;Types of Conflict:&#xA;Constructive Destructive Caused by lack of flexibility, getting interpersonal things get in the way and the sureness that ones way is the right way Leads to stiffling of anything new, resulting in ‘this is the way things have always been’ being used as an actual legitimate reason for things Sources of Conflict</description>
     </item>
-    
   </channel>
 </rss>

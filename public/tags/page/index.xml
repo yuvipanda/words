@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>page on Yuvi Panda</title>
+    <title>page on Yuvi</title>
     <link>https://words.yuvi.in/tags/page/</link>
-    <description>Recent content in page on Yuvi Panda</description>
+    <description>Recent content in page on Yuvi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 18 May 2020 12:42:58 +0530</lastBuildDate><atom:link href="https://words.yuvi.in/tags/page/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 May 2020 12:42:58 +0530</lastBuildDate>
+    <atom:link href="https://words.yuvi.in/tags/page/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blogroll</title>
       <link>https://words.yuvi.in/page/blogroll/</link>
       <pubDate>Mon, 18 May 2020 12:42:58 +0530</pubDate>
-      
       <guid>https://words.yuvi.in/page/blogroll/</guid>
       <description>This is a page with links to people&amp;rsquo;s blogs I like.</description>
     </item>
-    
   </channel>
 </rss>

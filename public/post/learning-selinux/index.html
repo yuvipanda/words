@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>learning selinux and apparmor - Yuvi Panda</title>
+  <title>learning selinux and apparmor - Yuvi</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Yuvi Panda" /><meta name="description" content="I am trying to understand SELinux and AppArmor, and collecting resources here as I learn. k
+<meta name="author" content="Yuvi" /><meta name="description" content="I am trying to understand SELinux and AppArmor, and collecting resources here as I learn. k
 SELinux for mere mortals (2014) This was the first video I watched, and it helped me understanding what SELinux does at a fundamental basic level. It&amp;rsquo;s probably useless in a container-filled world (where I doubt Fedora shipes pre-configured SELinux rules for my containers), but it helped me think I understood types / labels, so that seems like a positive step?" /><meta name="keywords" content="yuvi, yuvipanda" />
 
 
@@ -24,7 +24,7 @@ SELinux for mere mortals (2014) This was the first video I watched, and it helpe
 
 
 
-<meta name="generator" content="Hugo 0.75.1 with theme even" />
+<meta name="generator" content="Hugo 0.121.2 with theme even" />
 
 
 <link rel="canonical" href="https://words.yuvi.in/post/learning-selinux/" />
@@ -36,7 +36,7 @@ SELinux for mere mortals (2014) This was the first video I watched, and it helpe
 
 
 
-<link href="/sass/main.min.fd028de9698f3177a6c19af3f7e269107c2710dd1eaf98d83106b3ad594c81c6.css" rel="stylesheet">
+<link href="/sass/main.min.e059920966ff69c21fadbe27d9c4ef213858a17a09e6d3ecfc551eb61c6dcbdc.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -47,21 +47,16 @@ SELinux for mere mortals (2014) This was the first video I watched, and it helpe
 <meta property="og:description" content="I am trying to understand SELinux and AppArmor, and collecting resources here as I learn. k
 SELinux for mere mortals (2014) This was the first video I watched, and it helped me understanding what SELinux does at a fundamental basic level. It&rsquo;s probably useless in a container-filled world (where I doubt Fedora shipes pre-configured SELinux rules for my containers), but it helped me think I understood types / labels, so that seems like a positive step?" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://words.yuvi.in/post/learning-selinux/" />
+<meta property="og:url" content="https://words.yuvi.in/post/learning-selinux/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2017-04-18T00:01:26-07:00" />
 <meta property="article:modified_time" content="2017-04-18T00:01:26-07:00" />
+
 <meta itemprop="name" content="learning selinux and apparmor">
 <meta itemprop="description" content="I am trying to understand SELinux and AppArmor, and collecting resources here as I learn. k
-SELinux for mere mortals (2014) This was the first video I watched, and it helped me understanding what SELinux does at a fundamental basic level. It&rsquo;s probably useless in a container-filled world (where I doubt Fedora shipes pre-configured SELinux rules for my containers), but it helped me think I understood types / labels, so that seems like a positive step?">
-<meta itemprop="datePublished" content="2017-04-18T00:01:26-07:00" />
+SELinux for mere mortals (2014) This was the first video I watched, and it helped me understanding what SELinux does at a fundamental basic level. It&rsquo;s probably useless in a container-filled world (where I doubt Fedora shipes pre-configured SELinux rules for my containers), but it helped me think I understood types / labels, so that seems like a positive step?"><meta itemprop="datePublished" content="2017-04-18T00:01:26-07:00" />
 <meta itemprop="dateModified" content="2017-04-18T00:01:26-07:00" />
 <meta itemprop="wordCount" content="362">
-
-
-
-<meta itemprop="keywords" content="learning,linux," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="learning selinux and apparmor"/>
+<meta itemprop="keywords" content="learning,linux," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="learning selinux and apparmor"/>
 <meta name="twitter:description" content="I am trying to understand SELinux and AppArmor, and collecting resources here as I learn. k
 SELinux for mere mortals (2014) This was the first video I watched, and it helped me understanding what SELinux does at a fundamental basic level. It&rsquo;s probably useless in a container-filled world (where I doubt Fedora shipes pre-configured SELinux rules for my containers), but it helped me think I understood types / labels, so that seems like a positive step?"/>
 
@@ -79,14 +74,14 @@ SELinux for mere mortals (2014) This was the first video I watched, and it helpe
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
-  <a href="/" class="logo">Yuvi Panda</a>
-  <div class='logo-site-description'><a href='https://jupyter.org'>Project Jupyter</a> contributor | <a href='https://en.wikipedia.org/wiki/Free-culture_movement'>Free Culture</a> enthusiast
+  <a href="/" class="logo">Yuvi</a>
+  <div class='logo-site-description'>Recovering overachieving child, now trying to achieve the correct amount
   </div>
 </div>
 
 <div class="logo-social">
       <a href="mailto:yuvipanda@gmail.com" class="fas fa-envelope" title="envelope"></a>
-      <a href="https://twitter.com/yuvipanda" class="fab fa-twitter" title="twitter"></a>
+      <a href="https://hachyderm.io/@yuvipanda" class="fab fa-twitter" title="twitter"></a>
       <a href="https://github.com/yuvipanda" class="fab fa-github" title="github"></a>
   <a href="https://words.yuvi.in/index.xml" type="application/rss+xml" class="fas fa-rss" title="rss"></a>
 </div>
@@ -124,11 +119,11 @@ SELinux for mere mortals (2014) This was the first video I watched, and it helpe
     <div class="post-content">
       <p>I am trying to understand SELinux and AppArmor, and collecting resources here as I learn. k</p>
 <h2 id="selinux-for-mere-mortals-2014">SELinux for mere mortals (2014)</h2>
-<!-- raw HTML omitted -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MxjenQ31b70" frameborder="0" allowfullscreen></iframe>
 <p>This was the first video I watched, and it helped me understanding what SELinux does at a fundamental basic level. It&rsquo;s probably useless in a container-filled world (where I doubt Fedora shipes pre-configured SELinux rules for my containers), but it helped me think I understood types / labels, so that seems like a positive step?</p>
 <p>The fact the presenter keeps saying things like &lsquo;you being a good sysadmin, ssh into the server and edit the apache config file&rsquo; is freakin me out. If I&rsquo;m constantly editing config files on servers manually that seems like a massive failure to me :D How times change!</p>
 <h2 id="docker-and-selinux-2014">Docker and SELinux (2014)</h2>
-<!-- raw HTML omitted -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zWGFqMuEHdw" frameborder="0" allowfullscreen></iframe>
 <p>This one made a lot more sense to me as an answer to the following questions:</p>
 <ol>
 <li>Aren&rsquo;t containers secure enough? (Partial answer)</li>
@@ -136,9 +131,9 @@ SELinux for mere mortals (2014) This was the first video I watched, and it helpe
 </ol>
 <p>It&rsquo;s convinced me that container -&gt; host isolation and container &lt;-&gt; container isolation provided by SELinux is pretty simple and super useful, and should be turned on.</p>
 <p>This talk also showed me this most wonderful <a href="https://people.redhat.com/duffy/selinux/selinux-coloring-book_A4-Stapled.pdf">coloring book</a> that tries to explain SELinux. If this is all that is to SELinux, it seems pretty simple and useful (for the container use case).</p>
-<p>Also, it looks like there are more recent versions of both these two talks - I should look &lsquo;em up!</p>
+<p>Also, it looks like there are more recent versions of both these two talks - I should look &rsquo;em up!</p>
 <h2 id="securing-linux-applications-with-apparmor-2007">Securing Linux Applications with AppArmor (2007?)</h2>
-<!-- raw HTML omitted -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0l21FN81je0" frameborder="0" allowfullscreen></iframe>
 <p>This is me trying to understand AppArmor, which seems to have lower base of support (just Ubuntu? Maybe SUSE, but idk anyone who uses SUSE) but theoretically simpler (mostly file path based). The video seems to be shot with a potato, so the slides aren&rsquo;t super clear - but the content is good enough to give me a super general overview.</p>
 <p>The biggest thing against SELinux it talks about seems to be &lsquo;SELinux is complex&rsquo;, and not much else. I don&rsquo;t know how much I buy that - but then again, I haven&rsquo;t actually <em>used</em> SELinux anywhere :D</p>
 <p>Unlike SELinux, I can actually see AppArmor rules on my local machine (since it is running Ubuntu). Seems fairly readable!</p>
@@ -148,7 +143,7 @@ SELinux for mere mortals (2014) This was the first video I watched, and it helpe
     <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">Author</span>
-    <span class="item-content">Yuvi Panda</span>
+    <span class="item-content">Yuvi</span>
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
@@ -205,11 +200,11 @@ SELinux for mere mortals (2014) This was the first video I watched, and it helpe
   <span class="copyright-year">
     &copy;
     2005 -
-    2021
+    2024
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
-    <span class="author">Yuvi Panda</span>
+    <span class="author">Yuvi</span>
   </span>
 </div>
     </footer>
@@ -225,7 +220,7 @@ SELinux for mere mortals (2014) This was the first video I watched, and it helpe
 
 
 
-<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+<script type="text/javascript" src="/js/main.min.1c70606d1b733282f06230615f5561b5894924b6f9930ba2ab99cf1254f75a1a.js"></script>
   <script type="text/javascript">
     window.MathJax = {
       showProcessingMessages: false,

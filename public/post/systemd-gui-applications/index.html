@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>systemd gui applications - Yuvi Panda</title>
+  <title>systemd gui applications - Yuvi</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Yuvi Panda" /><meta name="description" content="Update: There&amp;rsquo;s a follow-up post with a simpler solution now.
+<meta name="author" content="Yuvi" /><meta name="description" content="Update: There&amp;rsquo;s a follow-up post with a simpler solution now.
 Ever since I read Jessie Frazelle&amp;rsquo;s amazing setup (1, 2, 3) for running GUI applications in docker containers, I&amp;rsquo;ve wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&amp;rsquo;m also not as awesome (or knowledgeable!" /><meta name="keywords" content="yuvi, yuvipanda" />
 
 
@@ -24,7 +24,7 @@ Ever since I read Jessie Frazelle&amp;rsquo;s amazing setup (1, 2, 3) for runnin
 
 
 
-<meta name="generator" content="Hugo 0.75.1 with theme even" />
+<meta name="generator" content="Hugo 0.121.2 with theme even" />
 
 
 <link rel="canonical" href="https://words.yuvi.in/post/systemd-gui-applications/" />
@@ -36,7 +36,7 @@ Ever since I read Jessie Frazelle&amp;rsquo;s amazing setup (1, 2, 3) for runnin
 
 
 
-<link href="/sass/main.min.fd028de9698f3177a6c19af3f7e269107c2710dd1eaf98d83106b3ad594c81c6.css" rel="stylesheet">
+<link href="/sass/main.min.e059920966ff69c21fadbe27d9c4ef213858a17a09e6d3ecfc551eb61c6dcbdc.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -47,21 +47,16 @@ Ever since I read Jessie Frazelle&amp;rsquo;s amazing setup (1, 2, 3) for runnin
 <meta property="og:description" content="Update: There&rsquo;s a follow-up post with a simpler solution now.
 Ever since I read Jessie Frazelle&rsquo;s amazing setup (1, 2, 3) for running GUI applications in docker containers, I&rsquo;ve wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&rsquo;m also not as awesome (or knowledgeable!" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://words.yuvi.in/post/systemd-gui-applications/" />
+<meta property="og:url" content="https://words.yuvi.in/post/systemd-gui-applications/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2017-03-29T20:47:10-07:00" />
 <meta property="article:modified_time" content="2017-03-29T20:47:10-07:00" />
+
 <meta itemprop="name" content="systemd gui applications">
 <meta itemprop="description" content="Update: There&rsquo;s a follow-up post with a simpler solution now.
-Ever since I read Jessie Frazelle&rsquo;s amazing setup (1, 2, 3) for running GUI applications in docker containers, I&rsquo;ve wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&rsquo;m also not as awesome (or knowledgeable!">
-<meta itemprop="datePublished" content="2017-03-29T20:47:10-07:00" />
+Ever since I read Jessie Frazelle&rsquo;s amazing setup (1, 2, 3) for running GUI applications in docker containers, I&rsquo;ve wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&rsquo;m also not as awesome (or knowledgeable!"><meta itemprop="datePublished" content="2017-03-29T20:47:10-07:00" />
 <meta itemprop="dateModified" content="2017-03-29T20:47:10-07:00" />
 <meta itemprop="wordCount" content="643">
-
-
-
-<meta itemprop="keywords" content="systemd,learning,code," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="systemd gui applications"/>
+<meta itemprop="keywords" content="systemd,learning,code," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="systemd gui applications"/>
 <meta name="twitter:description" content="Update: There&rsquo;s a follow-up post with a simpler solution now.
 Ever since I read Jessie Frazelle&rsquo;s amazing setup (1, 2, 3) for running GUI applications in docker containers, I&rsquo;ve wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&rsquo;m also not as awesome (or knowledgeable!"/>
 
@@ -79,14 +74,14 @@ Ever since I read Jessie Frazelle&rsquo;s amazing setup (1, 2, 3) for running GU
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
-  <a href="/" class="logo">Yuvi Panda</a>
-  <div class='logo-site-description'><a href='https://jupyter.org'>Project Jupyter</a> contributor | <a href='https://en.wikipedia.org/wiki/Free-culture_movement'>Free Culture</a> enthusiast
+  <a href="/" class="logo">Yuvi</a>
+  <div class='logo-site-description'>Recovering overachieving child, now trying to achieve the correct amount
   </div>
 </div>
 
 <div class="logo-social">
       <a href="mailto:yuvipanda@gmail.com" class="fas fa-envelope" title="envelope"></a>
-      <a href="https://twitter.com/yuvipanda" class="fab fa-twitter" title="twitter"></a>
+      <a href="https://hachyderm.io/@yuvipanda" class="fab fa-twitter" title="twitter"></a>
       <a href="https://github.com/yuvipanda" class="fab fa-github" title="github"></a>
   <a href="https://words.yuvi.in/index.xml" type="application/rss+xml" class="fas fa-rss" title="rss"></a>
 </div>
@@ -128,20 +123,20 @@ Ever since I read Jessie Frazelle&rsquo;s amazing setup (1, 2, 3) for running GU
 <p>Before proceeding, I want to warn y&rsquo;all that I don&rsquo;t entirely know what I am doing. Don&rsquo;t take any of this as security advice, since I don&rsquo;t entirely understand X&rsquo;s security model. Works fine for me though!</p>
 <h2 id="gui-applications">GUI applications</h2>
 <p>I started out using a simple systemd <a href="https://fedoramagazine.org/systemd-template-unit-files/">templated service</a> to launch GUI applications, but soon realized that <a href="https://www.freedesktop.org/software/systemd/man/systemd-run.html">systemd-run</a> is probably the better way. So I&rsquo;ve a simple script, <code>/usr/local/bin/safeapp</code>:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
-</span><span style="color:#75715e"></span><span style="color:#111">exec</span> sudo systemd-run  <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>    -p <span style="color:#111">CPUQuota</span><span style="color:#f92672">=</span>100% <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>    -p <span style="color:#111">MemoryMax</span><span style="color:#f92672">=</span>70% <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>    -p <span style="color:#111">WorkingDirectory</span><span style="color:#f92672">=</span><span style="color:#00a8c8">$(</span><span style="color:#111">pwd</span><span style="color:#00a8c8">)</span> <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>    -p <span style="color:#111">PrivateTmp</span><span style="color:#f92672">=</span>yes <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>    -p <span style="color:#111">NoNewPrivileges</span><span style="color:#f92672">=</span>yes <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>    --setenv <span style="color:#111">DISPLAY</span><span style="color:#f92672">=</span><span style="color:#d88200">${</span><span style="color:#111">DISPLAY</span><span style="color:#d88200">}</span> <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>    --setenv <span style="color:#111">DBUS_SESSION_BUS_ADDRESS</span><span style="color:#f92672">=</span><span style="color:#d88200">${</span><span style="color:#111">DBUS_SESSION_BUS_ADDRESS</span><span style="color:#d88200">}</span> <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>    --uid <span style="color:#d88200">${</span><span style="color:#111">USER</span><span style="color:#d88200">}</span> <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>    --gid <span style="color:#d88200">${</span><span style="color:#111">USER</span><span style="color:#d88200">}</span> <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>    --quiet <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>    <span style="color:#d88200">&#34;</span><span style="color:#111">$1</span><span style="color:#d88200">&#34;</span>
-</code></pre></div><p>I can run <code>safeapp /opt/firefox/firefox</code> now and it&rsquo;ll start firefox inside a nice systemd unit with a 70% Memory usage cap and CPU usage of at most 1 CPU. There&rsquo;s also other minimal security stuff applied - <code>NoNewPrivileges</code> being the most important one. I want to get <code>ProtectSystem</code> + <code>ReadWriteDirectories</code> going too, but there seems to be a bug in <code>systemd-run</code> that doesn&rsquo;t let it parse <code>ProtectSystem</code> properly&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#111">exec</span> sudo systemd-run  <span style="color:#8045ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8045ff"></span>    -p <span style="color:#111">CPUQuota</span><span style="color:#f92672">=</span>100% <span style="color:#8045ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8045ff"></span>    -p <span style="color:#111">MemoryMax</span><span style="color:#f92672">=</span>70% <span style="color:#8045ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8045ff"></span>    -p <span style="color:#111">WorkingDirectory</span><span style="color:#f92672">=</span><span style="color:#00a8c8">$(</span><span style="color:#111">pwd</span><span style="color:#00a8c8">)</span> <span style="color:#8045ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8045ff"></span>    -p <span style="color:#111">PrivateTmp</span><span style="color:#f92672">=</span>yes <span style="color:#8045ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8045ff"></span>    -p <span style="color:#111">NoNewPrivileges</span><span style="color:#f92672">=</span>yes <span style="color:#8045ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8045ff"></span>    --setenv <span style="color:#111">DISPLAY</span><span style="color:#f92672">=</span><span style="color:#d88200">${</span><span style="color:#111">DISPLAY</span><span style="color:#d88200">}</span> <span style="color:#8045ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8045ff"></span>    --setenv <span style="color:#111">DBUS_SESSION_BUS_ADDRESS</span><span style="color:#f92672">=</span><span style="color:#d88200">${</span><span style="color:#111">DBUS_SESSION_BUS_ADDRESS</span><span style="color:#d88200">}</span> <span style="color:#8045ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8045ff"></span>    --uid <span style="color:#d88200">${</span><span style="color:#111">USER</span><span style="color:#d88200">}</span> <span style="color:#8045ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8045ff"></span>    --gid <span style="color:#d88200">${</span><span style="color:#111">USER</span><span style="color:#d88200">}</span> <span style="color:#8045ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8045ff"></span>    --quiet <span style="color:#8045ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8045ff"></span>    <span style="color:#d88200">&#34;</span><span style="color:#111">$1</span><span style="color:#d88200">&#34;</span>
+</span></span></code></pre></div><p>I can run <code>safeapp /opt/firefox/firefox</code> now and it&rsquo;ll start firefox inside a nice systemd unit with a 70% Memory usage cap and CPU usage of at most 1 CPU. There&rsquo;s also other minimal security stuff applied - <code>NoNewPrivileges</code> being the most important one. I want to get <code>ProtectSystem</code> + <code>ReadWriteDirectories</code> going too, but there seems to be a bug in <code>systemd-run</code> that doesn&rsquo;t let it parse <code>ProtectSystem</code> properly&hellip;</p>
 <p>Also, there&rsquo;s <a href="https://github.com/systemd/systemd/issues/3851">an annoying bug</a> in systemd v231 (which is what my current system has) - you can&rsquo;t set <code>CPUQuotas</code> over 100% (aka &gt; 1 CPU core). This is annoying if you want to give each application 3 of your 4 cores (which is what I want). Next version of Ubuntu has v232, so my GUI applications will just have to do with an aggregate of 1 full core until then.</p>
 <p>The two environment variables seem to be all that&rsquo;s necessary for X applications to work.</p>
 <p>And yes, this might ask you for your password. I&rsquo;ll clean this up into a nice non-bash script hopefully soon, and make all of these better.</p>
@@ -149,19 +144,19 @@ Ever since I read Jessie Frazelle&rsquo;s amazing setup (1, 2, 3) for running GU
 <h2 id="cli">CLI</h2>
 <p>I wanted each tab in my terminal to be its own systemd service, so they all get equitable amount of  CPU time &amp; can&rsquo;t crash machine by themselves with OOM.</p>
 <p>So I&rsquo;ve this script as <code>/usr/local/bin/safeshell</code></p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#d88200">`</span><span style="color:#75715e">#!/bin/bash</span>
-<span style="color:#111">exec</span> sudo systemd-run <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>    -p <span style="color:#111">CPUQuota</span><span style="color:#f92672">=</span>100% <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>    -p <span style="color:#111">MemoryMax</span><span style="color:#f92672">=</span>70% <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>    -p <span style="color:#111">WorkingDirectory</span><span style="color:#f92672">=</span><span style="color:#00a8c8">$(</span><span style="color:#111">pwd</span><span style="color:#00a8c8">)</span> <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>    --uid yuvipanda <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>    --gid yuvipanda <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>    --quiet <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>    --tty <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>    /bin/bash -i
-</code></pre></div><p>The <code>--tty</code> is magic here, and does the right things wrt passing the tty that GNOME terminal is passing in all the way to the shell. Now, my login command (set under profile preferences &gt; command in gnome-terminal) is <code>sudo /usr/local/bin/safeshell</code>. In addition, I add the following line to <code>/etc/sudoers</code>:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">%sudo ALL = (root) NOPASSWD:SETENV: /usr/local/bin/safeshell
-</code></pre></div><p>This + just specifying the username directly in <code>safeshell</code> are both hacks that make me cringe a little. I need to either fully understand how sudo&rsquo;s <code>-E</code> works, or use this as an opportunity to learn more Go and make a setuid binary.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#d88200">`</span><span style="color:#75715e">#!/bin/bash</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">exec</span> sudo systemd-run <span style="color:#8045ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8045ff"></span>    -p <span style="color:#111">CPUQuota</span><span style="color:#f92672">=</span>100% <span style="color:#8045ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8045ff"></span>    -p <span style="color:#111">MemoryMax</span><span style="color:#f92672">=</span>70% <span style="color:#8045ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8045ff"></span>    -p <span style="color:#111">WorkingDirectory</span><span style="color:#f92672">=</span><span style="color:#00a8c8">$(</span><span style="color:#111">pwd</span><span style="color:#00a8c8">)</span> <span style="color:#8045ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8045ff"></span>    --uid yuvipanda <span style="color:#8045ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8045ff"></span>    --gid yuvipanda <span style="color:#8045ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8045ff"></span>    --quiet <span style="color:#8045ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8045ff"></span>    --tty <span style="color:#8045ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8045ff"></span>    /bin/bash -i
+</span></span></code></pre></div><p>The <code>--tty</code> is magic here, and does the right things wrt passing the tty that GNOME terminal is passing in all the way to the shell. Now, my login command (set under profile preferences &gt; command in gnome-terminal) is <code>sudo /usr/local/bin/safeshell</code>. In addition, I add the following line to <code>/etc/sudoers</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>%sudo ALL = (root) NOPASSWD:SETENV: /usr/local/bin/safeshell
+</span></span></code></pre></div><p>This + just specifying the username directly in <code>safeshell</code> are both hacks that make me cringe a little. I need to either fully understand how sudo&rsquo;s <code>-E</code> works, or use this as an opportunity to learn more Go and make a setuid binary.</p>
 <h2 id="to-do">To do</h2>
 <p>[ ] Generalize this to not need hacks (either with better sudo usage or a setuid binary)
 [ ] Investigate adding more security related options.
@@ -173,7 +168,7 @@ Ever since I read Jessie Frazelle&rsquo;s amazing setup (1, 2, 3) for running GU
     <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">Author</span>
-    <span class="item-content">Yuvi Panda</span>
+    <span class="item-content">Yuvi</span>
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
@@ -231,11 +226,11 @@ Ever since I read Jessie Frazelle&rsquo;s amazing setup (1, 2, 3) for running GU
   <span class="copyright-year">
     &copy;
     2005 -
-    2021
+    2024
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
-    <span class="author">Yuvi Panda</span>
+    <span class="author">Yuvi</span>
   </span>
 </div>
     </footer>
@@ -251,7 +246,7 @@ Ever since I read Jessie Frazelle&rsquo;s amazing setup (1, 2, 3) for running GU
 
 
 
-<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+<script type="text/javascript" src="/js/main.min.1c70606d1b733282f06230615f5561b5894924b6f9930ba2ab99cf1254f75a1a.js"></script>
   <script type="text/javascript">
     window.MathJax = {
       showProcessingMessages: false,

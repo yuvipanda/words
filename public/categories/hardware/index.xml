@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hardware on Yuvi</title>
+    <link>https://words.yuvi.in/categories/hardware/</link>
+    <description>Recent content in hardware on Yuvi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 09 Dec 2022 22:58:20 -0800</lastBuildDate>
+    <atom:link href="https://words.yuvi.in/categories/hardware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>First Turn</title>
+      <link>https://words.yuvi.in/post/first-turn/</link>
+      <pubDate>Fri, 09 Dec 2022 22:58:20 -0800</pubDate>
+      <guid>https://words.yuvi.in/post/first-turn/</guid>
+      <description>I walked into a local hardware store, with the following thought in my mind:&#xA;I need a 5mm metric hex key&#xA;And I wandered around aimlessly as I do in stores, almost bought some double sided tape for a different project (decided against it), and eventually made it to the place with all the sockets, hex keys, screwdrivers, etc.&#xA;Words that previously meant nothing to me (Torx, SAE, metric) made sense.</description>
+    </item>
+  </channel>
+</rss>

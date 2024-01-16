@@ -2,35 +2,301 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://words.yuvi.in/categories/</loc>
-    <lastmod>2021-05-14T18:56:41+05:30</lastmod>
+    <loc>https://words.yuvi.in/tags/docker/</loc>
+    <lastmod>2023-11-29T14:27:25-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://words.yuvi.in/categories/code/</loc>
-    <lastmod>2021-05-14T18:56:41+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://words.yuvi.in/post/learning-r/</loc>
-    <lastmod>2021-05-14T18:56:41+05:30</lastmod>
+    <loc>https://words.yuvi.in/tags/julia/</loc>
+    <lastmod>2023-11-29T14:27:25-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://words.yuvi.in/post/</loc>
-    <lastmod>2021-05-14T18:56:41+05:30</lastmod>
+    <lastmod>2023-11-29T14:27:25-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/post/pre-compiling-julia-docker/</loc>
+    <lastmod>2023-11-29T14:27:25-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/tags/</loc>
+    <lastmod>2023-11-29T14:27:25-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://words.yuvi.in/</loc>
+    <lastmod>2023-11-29T14:27:25-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/tags/adhd/</loc>
+    <lastmod>2023-11-22T20:56:40-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/post/adhd-and-me/</loc>
+    <lastmod>2023-11-22T20:56:40-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/tags/mental-health/</loc>
+    <lastmod>2023-11-22T20:56:40-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/tags/personal/</loc>
+    <lastmod>2023-11-22T20:56:40-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/categories/</loc>
+    <lastmod>2023-06-20T10:25:11-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/post/work-report-2023-06-20/</loc>
+    <lastmod>2023-06-20T10:25:11-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/categories/workreport/</loc>
+    <lastmod>2023-06-20T10:25:11-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/categories/drive/</loc>
+    <lastmod>2023-02-25T10:49:48-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/categories/personal/</loc>
+    <lastmod>2023-02-25T10:49:48-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/post/drive/</loc>
+    <lastmod>2023-02-25T10:49:48-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/post/first-turn/</loc>
+    <lastmod>2022-12-09T22:58:20-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/categories/hardware/</loc>
+    <lastmod>2022-12-09T22:58:20-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/categories/tools/</loc>
+    <lastmod>2022-12-09T22:58:20-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/categories/jupyterhub/</loc>
+    <lastmod>2022-11-07T15:55:47-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/post/no-touch-nfs/</loc>
+    <lastmod>2022-11-07T15:55:47-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/categories/nfs/</loc>
+    <lastmod>2022-11-07T15:55:47-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/categories/z2jh/</loc>
+    <lastmod>2022-11-07T15:55:47-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/categories/code/</loc>
+    <lastmod>2022-11-06T23:17:53-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/categories/conda-forge/</loc>
+    <lastmod>2022-11-06T23:17:53-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/categories/github/</loc>
+    <lastmod>2022-11-06T23:17:53-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/post/conda-forge-github-actions/</loc>
+    <lastmod>2022-11-06T23:17:53-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/categories/python/</loc>
+    <lastmod>2022-11-01T23:04:56-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/post/python-in-github-actions/</loc>
+    <lastmod>2022-11-01T23:04:56-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/categories/motorcycle/</loc>
+    <lastmod>2022-06-21T12:32:39-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/post/motorcycle-ride-report-2022-06-19/</loc>
+    <lastmod>2022-06-21T12:32:39-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/categories/customization/</loc>
+    <lastmod>2022-01-06T20:31:13+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/post/show-hide-terminal-vscode/</loc>
+    <lastmod>2022-01-06T20:31:13+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/categories/vscode/</loc>
+    <lastmod>2022-01-06T20:31:13+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/tags/code/</loc>
+    <lastmod>2021-12-15T12:16:47+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/post/jupyterlab-settings-z2jh/</loc>
+    <lastmod>2021-12-15T12:16:47+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/tags/jupyter/</loc>
+    <lastmod>2021-12-15T12:16:47+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/post/on-crypto/</loc>
+    <lastmod>2021-11-18T12:33:09+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/tags/announcement/</loc>
+    <lastmod>2021-11-16T20:43:11+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/post/announcing-notebooksharing-space/</loc>
+    <lastmod>2021-11-16T20:43:11+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/post/nbgitpuller-link-generator-extension/</loc>
+    <lastmod>2021-11-16T18:58:28+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/tags/launch/</loc>
+    <lastmod>2021-11-16T18:58:28+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/post/learning-r/</loc>
     <lastmod>2021-05-14T18:56:41+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -51,13 +317,6 @@
   </url>
   
   <url>
-    <loc>https://words.yuvi.in/tags/jupyter/</loc>
-    <lastmod>2020-09-16T17:09:42+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://words.yuvi.in/tags/opensource/</loc>
     <lastmod>2020-09-16T17:09:42+05:30</lastmod>
     <changefreq>weekly</changefreq>
@@ -66,13 +325,6 @@
   
   <url>
     <loc>https://words.yuvi.in/post/production-tljh/</loc>
-    <lastmod>2020-09-16T17:09:42+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://words.yuvi.in/tags/</loc>
     <lastmod>2020-09-16T17:09:42+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -150,13 +402,6 @@
   
   <url>
     <loc>https://words.yuvi.in/post/note-taking-part-i/</loc>
-    <lastmod>2020-05-17T13:59:46+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://words.yuvi.in/tags/personal/</loc>
     <lastmod>2020-05-17T13:59:46+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -268,13 +513,6 @@
   </url>
   
   <url>
-    <loc>https://words.yuvi.in/categories/personal/</loc>
-    <lastmod>2017-12-29T16:29:00-08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://words.yuvi.in/categories/retrospective/</loc>
     <lastmod>2017-12-29T16:29:00-08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -283,13 +521,6 @@
   
   <url>
     <loc>https://words.yuvi.in/tags/binder/</loc>
-    <lastmod>2017-12-03T01:23:54-08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://words.yuvi.in/tags/code/</loc>
     <lastmod>2017-12-03T01:23:54-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -555,14 +786,14 @@
   </url>
   
   <url>
-    <loc>https://words.yuvi.in/categories/wiki/</loc>
+    <loc>https://words.yuvi.in/green-stuff/</loc>
     <lastmod>2015-07-06T20:58:35+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://words.yuvi.in/green-stuff/</loc>
+    <loc>https://words.yuvi.in/categories/wiki/</loc>
     <lastmod>2015-07-06T20:58:35+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1507,6 +1738,13 @@
   </url>
   
   <url>
+    <loc>https://words.yuvi.in/what-stop-child-athiest/</loc>
+    <lastmod>2011-06-26T13:59:49+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://words.yuvi.in/tags/answers/</loc>
     <lastmod>2011-06-26T13:59:49+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1536,13 +1774,6 @@
   
   <url>
     <loc>https://words.yuvi.in/tags/yahoo/</loc>
-    <lastmod>2011-06-26T13:59:49+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://words.yuvi.in/what-stop-child-athiest/</loc>
     <lastmod>2011-06-26T13:59:49+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1654,14 +1885,14 @@
   </url>
   
   <url>
-    <loc>https://words.yuvi.in/tags/review/</loc>
+    <loc>https://words.yuvi.in/infosys-tcs-or-wipro-none/</loc>
     <lastmod>2011-06-08T04:21:33+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://words.yuvi.in/infosys-tcs-or-wipro-none/</loc>
+    <loc>https://words.yuvi.in/tags/review/</loc>
     <lastmod>2011-06-08T04:21:33+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

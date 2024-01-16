@@ -1,116 +1,103 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>code on Yuvi Panda</title>
+    <title>code on Yuvi</title>
     <link>https://words.yuvi.in/tags/code/</link>
-    <description>Recent content in code on Yuvi Panda</description>
+    <description>Recent content in code on Yuvi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 03 Dec 2017 01:23:54 -0800</lastBuildDate><atom:link href="https://words.yuvi.in/tags/code/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Dec 2021 12:16:47 +0530</lastBuildDate>
+    <atom:link href="https://words.yuvi.in/tags/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Disabling JupyterLab extensions on your z2jh JupyterHub installations</title>
+      <link>https://words.yuvi.in/post/jupyterlab-settings-z2jh/</link>
+      <pubDate>Wed, 15 Dec 2021 12:16:47 +0530</pubDate>
+      <guid>https://words.yuvi.in/post/jupyterlab-settings-z2jh/</guid>
+      <description>Sometimes you want to temporarily disable a JupyterLab extension on a JupyterHub by default, without having to rebuild your docker image. This can be very easily done with z2jh&amp;rsquo;s singleuser.extraFiles, and JupyterLab&amp;rsquo;s page_config.json&#xA;JupyterLab&amp;rsquo;s page_config.json lets you set page configuration by dropping JSON files under a labconfig directory inside any of the directories listed when you run jupyter --paths. We just use singleuser.extraFiles to provide this file!&#xA;singleuser: extraFiles: lab-config: mountPath: /etc/jupyter/labconfig/page_config.</description>
+    </item>
+    <item>
+      <title>The fastest way to share your notebooks - announcing NotebookSharing.space</title>
+      <link>https://words.yuvi.in/post/announcing-notebooksharing-space/</link>
+      <pubDate>Tue, 16 Nov 2021 20:43:11 +0530</pubDate>
+      <guid>https://words.yuvi.in/post/announcing-notebooksharing-space/</guid>
+      <description>Sharing notebooks is harder than it should be.&#xA;You are working on a notebook (in Jupyter, RStudio, Visual Studio Code, whatever), and want to share it quickly with someone. Maybe you want some feedback, or you&amp;rsquo;re demonstrating a technique, or there is a cool result you want to quickly show someone. A million reasons to want to quickly share a notebook, but unfortunately there isn&amp;rsquo;t a quick enough and easy enough solution right now.</description>
+    </item>
+    <item>
+      <title>Announcing the nbgitpuller Link Generator browser extensions</title>
+      <link>https://words.yuvi.in/post/nbgitpuller-link-generator-extension/</link>
+      <pubDate>Tue, 16 Nov 2021 18:58:28 +0530</pubDate>
+      <guid>https://words.yuvi.in/post/nbgitpuller-link-generator-extension/</guid>
+      <description>(Leave comments or discuss this post on the jupyter discourse)&#xA;nbgitpuller is my most favorite way to distribute content (notebooks, data files, etc) to students on a JupyterHub. The student mental model is &amp;lsquo;I click a link, and can start working on my notebook&amp;rsquo;, which is as close to ideal as we have today. That is possible since all the information required for this workflow is embedded in the link itself - so it can be distributed easily via your pre-existing communication channel (like email, course website, etc), rather than requiring your students to use yet another tool.</description>
+    </item>
     <item>
       <title>Why repo2docker? Why not s2i?</title>
       <link>https://words.yuvi.in/post/why-not-s2i/</link>
       <pubDate>Sun, 03 Dec 2017 01:23:54 -0800</pubDate>
-      
       <guid>https://words.yuvi.in/post/why-not-s2i/</guid>
-      <description>The wonderful Graham Dumpleton asked on twitter why we built an entirely new tool (repo2docker) instead of using OpenShift&amp;rsquo;s cool source2image tool.
-This is a very good question, and not a decision we made lightly. This post lays out some history, and explains the reasons we decided to stop using s2i. s2i is still a great tool for most production use cases, and you should use it if you&amp;rsquo;re building anything like a PaaS!</description>
+      <description>The wonderful Graham Dumpleton asked on twitter why we built an entirely new tool (repo2docker) instead of using OpenShift&amp;rsquo;s cool source2image tool.&#xA;This is a very good question, and not a decision we made lightly. This post lays out some history, and explains the reasons we decided to stop using s2i. s2i is still a great tool for most production use cases, and you should use it if you&amp;rsquo;re building anything like a PaaS!</description>
     </item>
-    
     <item>
       <title>systemd simple containment for GUI applications &amp; shells</title>
       <link>https://words.yuvi.in/post/systemd-simple-containment/</link>
       <pubDate>Fri, 31 Mar 2017 23:23:52 -0700</pubDate>
-      
       <guid>https://words.yuvi.in/post/systemd-simple-containment/</guid>
-      <description>I earlier had a vaguely working setup for making sure browsers, shells and other applications don&amp;rsquo;t eat all RAM / CPU on my machine with systemd + sudo + shell scripts.
-It was a hacky solution, and also had complications when used to launch shells. It wasn&amp;rsquo;t passing in all the environment varialbes it should, causing interesting-to-debug issues. sudo rules were complex, and hard to do securely.
-I had also been looking for an excuse to learn more Golang, so I ended up writing systemd-simple-containment or ssc.</description>
+      <description>I earlier had a vaguely working setup for making sure browsers, shells and other applications don&amp;rsquo;t eat all RAM / CPU on my machine with systemd + sudo + shell scripts.&#xA;It was a hacky solution, and also had complications when used to launch shells. It wasn&amp;rsquo;t passing in all the environment varialbes it should, causing interesting-to-debug issues. sudo rules were complex, and hard to do securely.&#xA;I had also been looking for an excuse to learn more Golang, so I ended up writing systemd-simple-containment or ssc.</description>
     </item>
-    
     <item>
       <title>systemd gui applications</title>
       <link>https://words.yuvi.in/post/systemd-gui-applications/</link>
       <pubDate>Wed, 29 Mar 2017 20:47:10 -0700</pubDate>
-      
       <guid>https://words.yuvi.in/post/systemd-gui-applications/</guid>
-      <description>Update: There&amp;rsquo;s a follow-up post with a simpler solution now.
-Ever since I read Jessie Frazelle&amp;rsquo;s amazing setup (1, 2, 3) for running GUI applications in docker containers, I&amp;rsquo;ve wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&amp;rsquo;m also not as awesome (or knowledgeable!</description>
+      <description>Update: There&amp;rsquo;s a follow-up post with a simpler solution now.&#xA;Ever since I read Jessie Frazelle&amp;rsquo;s amazing setup (1, 2, 3) for running GUI applications in docker containers, I&amp;rsquo;ve wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&amp;rsquo;m also not as awesome (or knowledgeable!</description>
     </item>
-    
     <item>
       <title>My Vim setup</title>
       <link>https://words.yuvi.in/my-vim-setup/</link>
       <pubDate>Tue, 23 Aug 2011 22:55:03 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/my-vim-setup/</guid>
-      <description>I moved from emacs to vim a while ago, and have been steadily accumulating a series of plugins in my .vim. They’re all up in my rather messy dotfiles repo. Here’s a slightly more neatly organized list of the plugins I currently use:
- command-t – File opener and buffer switcher. In-fuckin-credibly useful. vimpress – What I use to blog since moving to wordpress. matchit – Lets % work with html tags commentary – Generic commenting and uncommenting scriptNERDCommenter has replaced commentary due to being more flexible and having more options.</description>
+      <description>I moved from emacs to vim a while ago, and have been steadily accumulating a series of plugins in my .vim. They’re all up in my rather messy dotfiles repo. Here’s a slightly more neatly organized list of the plugins I currently use:&#xA;command-t – File opener and buffer switcher. In-fuckin-credibly useful. vimpress – What I use to blog since moving to wordpress. matchit – Lets % work with html tags commentary – Generic commenting and uncommenting script NERDCommenter has replaced commentary due to being more flexible and having more options.</description>
     </item>
-    
     <item>
       <title>Non-ASCII Characters in HTTP Headers</title>
       <link>https://words.yuvi.in/non-ascii-characters-http-headers/</link>
       <pubDate>Sat, 13 Aug 2011 00:56:10 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/non-ascii-characters-http-headers/</guid>
       <description>I was debugging an issue at work today where a (generated) file refused to download in Chrome, but the same URL worked just fine with wget. I remember reading in the HTTP Spec that HTTP headers can only be lower ASCII, so when wget mangled the output file’s name, the problem was obvious – the file name contained a character that wasn’t in lower ASCII (an accented A). Chrome had borked on encountering it, while wget soldiered on.</description>
     </item>
-    
     <item>
       <title>You are a programmer if you can run code in your head</title>
       <link>https://words.yuvi.in/programmer-run-code-head/</link>
       <pubDate>Thu, 11 Aug 2011 04:09:23 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/programmer-run-code-head/</guid>
-      <description>From HN:
- From my experience, the largest hurdle first time programmers have is being able to execute programs in their head. It takes a cognitive leap to go from the source code in front of them, and what happens at runtime.
- (emphasis mine)
-I believe that if you have made that cognitive leap, you can call yourself a programmer. It means you’ve entered into the second hump – you are a programmer.</description>
+      <description>From HN:&#xA;From my experience, the largest hurdle first time programmers have is being able to execute programs in their head. It takes a cognitive leap to go from the source code in front of them, and what happens at runtime.&#xA;(emphasis mine)&#xA;I believe that if you have made that cognitive leap, you can call yourself a programmer. It means you’ve entered into the second hump – you are a programmer.</description>
     </item>
-    
     <item>
       <title>SleepSort from 4Chan</title>
       <link>https://words.yuvi.in/sleepsort-4chan/</link>
       <pubDate>Sun, 19 Jun 2011 01:40:36 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/sleepsort-4chan/</guid>
-      <description>4Chan isn’t exactly what you’d associate with ‘shit, that’s a cool piece of code!’, but look what I found!
-(via HN)
-Nice hack. And it is O(N) in bitsize of largest number (Ignoring all the overhead of forking new processes, the problem with the race conditions(Sort 0 and 0.1? How about 0.01 and 0.011?), processor contention, etc,.) They basically delegated the sorting to the process scheduler, treating it as a sort of priority queue.</description>
+      <description>4Chan isn’t exactly what you’d associate with ‘shit, that’s a cool piece of code!’, but look what I found!&#xA;(via HN)&#xA;Nice hack. And it is O(N) in bitsize of largest number (Ignoring all the overhead of forking new processes, the problem with the race conditions(Sort 0 and 0.1? How about 0.01 and 0.011?), processor contention, etc,.) They basically delegated the sorting to the process scheduler, treating it as a sort of priority queue.</description>
     </item>
-    
     <item>
       <title>Moving back to WordPress</title>
       <link>https://words.yuvi.in/moving-back-to-wordpress/</link>
       <pubDate>Mon, 06 Jun 2011 18:21:40 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/moving-back-to-wordpress/</guid>
-      <description>A while back, I moved my blog (from a wordpress install whose data I lost) to my own platform (HiSlain).
-After several close calls, I’m officially moving from HiSlain back to WordPress. I just don’t have enough time to maintain all the things I wanted in a blog platform in HiSlain, hence the move back. However, it satisfied it’s purpose – I learnt to write code I could use, others could use, and others could contribute to.</description>
+      <description>A while back, I moved my blog (from a wordpress install whose data I lost) to my own platform (HiSlain).&#xA;After several close calls, I’m officially moving from HiSlain back to WordPress. I just don’t have enough time to maintain all the things I wanted in a blog platform in HiSlain, hence the move back. However, it satisfied it’s purpose – I learnt to write code I could use, others could use, and others could contribute to.</description>
     </item>
-    
     <item>
       <title>SICP and BrainFuck</title>
       <link>https://words.yuvi.in/sicp-and-brainfuck/</link>
       <pubDate>Fri, 13 May 2011 05:10:31 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/sicp-and-brainfuck/</guid>
-      <description>No, I’m not going to blow your mind by telling you I’m going to do the SICP exercises in BrainFuck :)
-I just wrote my first brainfuck program. Might as well be my last, but not sure. Tape-based turing-ish programing seems fun, so maybe I’ll try that again with something more expressive than brainfuck (or maybe that is pointless?)
-And I’m doing the SICP Exercises. In MIT-Scheme. I’ve put them up on GitHub.</description>
+      <description>No, I’m not going to blow your mind by telling you I’m going to do the SICP exercises in BrainFuck :)&#xA;I just wrote my first brainfuck program. Might as well be my last, but not sure. Tape-based turing-ish programing seems fun, so maybe I’ll try that again with something more expressive than brainfuck (or maybe that is pointless?)&#xA;And I’m doing the SICP Exercises. In MIT-Scheme. I’ve put them up on GitHub.</description>
     </item>
-    
     <item>
       <title>GStreamer 101 at GNOME Asia 2011</title>
       <link>https://words.yuvi.in/gstreamer-101-at-gnome-asia-2011/</link>
       <pubDate>Sun, 10 Apr 2011 23:02:48 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/gstreamer-101-at-gnome-asia-2011/</guid>
-      <description>My GStreamer 101 presentation at GNOME.asia was very wel received. I was quite happy with the way it turned out. Thanks to Ford_Prefect and Bharath Acharya for pulling me in :)
-My very minimal slides are here. You can reuse them if you want to.
-Sadly, missed the week long hackfest :( Next time!</description>
+      <description>My GStreamer 101 presentation at GNOME.asia was very wel received. I was quite happy with the way it turned out. Thanks to Ford_Prefect and Bharath Acharya for pulling me in :)&#xA;My very minimal slides are here. You can reuse them if you want to.&#xA;Sadly, missed the week long hackfest :( Next time!</description>
     </item>
-    
   </channel>
 </rss>

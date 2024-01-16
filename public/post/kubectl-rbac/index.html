@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Kubectl verbose logging tricks - Yuvi Panda</title>
+  <title>Kubectl verbose logging tricks - Yuvi</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Yuvi Panda" /><meta name="description" content="kubectl for exploring the Kubernetes API" /><meta name="keywords" content="yuvi, yuvipanda" />
+<meta name="author" content="Yuvi" /><meta name="description" content="kubectl for exploring the Kubernetes API" /><meta name="keywords" content="yuvi, yuvipanda" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.75.1 with theme even" />
+<meta name="generator" content="Hugo 0.121.2 with theme even" />
 
 
 <link rel="canonical" href="https://words.yuvi.in/post/kubectl-rbac/" />
@@ -35,7 +35,7 @@
 
 
 
-<link href="/sass/main.min.fd028de9698f3177a6c19af3f7e269107c2710dd1eaf98d83106b3ad594c81c6.css" rel="stylesheet">
+<link href="/sass/main.min.e059920966ff69c21fadbe27d9c4ef213858a17a09e6d3ecfc551eb61c6dcbdc.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -45,20 +45,15 @@
 <meta property="og:title" content="Kubectl verbose logging tricks" />
 <meta property="og:description" content="kubectl for exploring the Kubernetes API" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://words.yuvi.in/post/kubectl-rbac/" />
+<meta property="og:url" content="https://words.yuvi.in/post/kubectl-rbac/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2018-01-11T15:15:58-08:00" />
 <meta property="article:modified_time" content="2018-01-11T15:15:58-08:00" />
+
 <meta itemprop="name" content="Kubectl verbose logging tricks">
-<meta itemprop="description" content="kubectl for exploring the Kubernetes API">
-<meta itemprop="datePublished" content="2018-01-11T15:15:58-08:00" />
+<meta itemprop="description" content="kubectl for exploring the Kubernetes API"><meta itemprop="datePublished" content="2018-01-11T15:15:58-08:00" />
 <meta itemprop="dateModified" content="2018-01-11T15:15:58-08:00" />
 <meta itemprop="wordCount" content="304">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Kubectl verbose logging tricks"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Kubectl verbose logging tricks"/>
 <meta name="twitter:description" content="kubectl for exploring the Kubernetes API"/>
 
 <!--[if lte IE 9]>
@@ -75,14 +70,14 @@
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
-  <a href="/" class="logo">Yuvi Panda</a>
-  <div class='logo-site-description'><a href='https://jupyter.org'>Project Jupyter</a> contributor | <a href='https://en.wikipedia.org/wiki/Free-culture_movement'>Free Culture</a> enthusiast
+  <a href="/" class="logo">Yuvi</a>
+  <div class='logo-site-description'>Recovering overachieving child, now trying to achieve the correct amount
   </div>
 </div>
 
 <div class="logo-social">
       <a href="mailto:yuvipanda@gmail.com" class="fas fa-envelope" title="envelope"></a>
-      <a href="https://twitter.com/yuvipanda" class="fab fa-twitter" title="twitter"></a>
+      <a href="https://hachyderm.io/@yuvipanda" class="fab fa-twitter" title="twitter"></a>
       <a href="https://github.com/yuvipanda" class="fab fa-github" title="github"></a>
   <a href="https://words.yuvi.in/index.xml" type="application/rss+xml" class="fas fa-rss" title="rss"></a>
 </div>
@@ -131,22 +126,22 @@ since it gives you a good intuition of how to handle this in your own code.</p>
 <p>If you&rsquo;re shelling out to <code>kubectl</code> directly in your code (for some reason!),
 you can also use this to figure out all the RBAC rules your code would need. For
 example, if I&rsquo;m going to run the following in my script:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl get node
-</code></pre></div><p>and need to figure out which RBAC rules are needed for this, I can run:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl -v<span style="color:#f92672">=</span><span style="color:#ae81ff">8</span> get node 2&gt;<span style="color:#111">&amp;</span><span style="color:#ae81ff">1</span> <span style="color:#111">|</span> grep -P <span style="color:#d88200">&#39;GET|POST|DELETE|PATCH|PUT&#39;</span>
-</code></pre></div><p>This should list all the API requests the code is making, making it easier
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get node
+</span></span></code></pre></div><p>and need to figure out which RBAC rules are needed for this, I can run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl -v<span style="color:#f92672">=</span><span style="color:#ae81ff">8</span> get node 2&gt;<span style="color:#111">&amp;</span><span style="color:#ae81ff">1</span> <span style="color:#111">|</span> grep -P <span style="color:#d88200">&#39;GET|POST|DELETE|PATCH|PUT&#39;</span>
+</span></span></code></pre></div><p>This should list all the API requests the code is making, making it easier
 to figure out what rules are needed.</p>
 <p>Note that you might have to <code>rm -rf ~/.kube/cache</code> to &lsquo;really&rsquo; get the
 full API requests list, since <code>kubectl</code> caches a bunch of API autodiscovery.
 The minimum RBAC for kubectl is:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">kind</span><span style="color:#111">:</span> <span style="color:#ae81ff">ClusterRole</span>
-<span style="color:#f92672">apiVersion</span><span style="color:#111">:</span> <span style="color:#ae81ff">rbac.authorization.k8s.io/v1beta1</span>
-<span style="color:#f92672">metadata</span><span style="color:#111">:</span>
-  <span style="color:#f92672">name</span><span style="color:#111">:</span> <span style="color:#ae81ff">kubectl-minimum</span>
-<span style="color:#f92672">rules</span><span style="color:#111">:</span>
-- <span style="color:#f92672">nonResourceURLs</span><span style="color:#111">:</span> <span style="color:#111">[</span><span style="color:#d88200">&#34;/api&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;/apis/*&#34;</span><span style="color:#111">]</span>
-  <span style="color:#f92672">verbs</span><span style="color:#111">:</span> <span style="color:#111">[</span><span style="color:#d88200">&#34;get&#34;</span><span style="color:#111">]</span>
-</code></pre></div><p>You will need to add additional rules for the specific commands you
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">kind</span><span style="color:#111">:</span> <span style="color:#ae81ff">ClusterRole</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span><span style="color:#111">:</span> <span style="color:#ae81ff">rbac.authorization.k8s.io/v1beta1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span><span style="color:#111">:</span> <span style="color:#ae81ff">kubectl-minimum</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">rules</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">nonResourceURLs</span><span style="color:#111">:</span> <span style="color:#111">[</span><span style="color:#d88200">&#34;/api&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;/apis/*&#34;</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">verbs</span><span style="color:#111">:</span> <span style="color:#111">[</span><span style="color:#d88200">&#34;get&#34;</span><span style="color:#111">]</span>
+</span></span></code></pre></div><p>You will need to add additional rules for the specific commands you
 want to execute.</p>
 <p><strong>More Kubectl Tips</strong></p>
 <ol start="0">
@@ -160,7 +155,7 @@ want to execute.</p>
     <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">Author</span>
-    <span class="item-content">Yuvi Panda</span>
+    <span class="item-content">Yuvi</span>
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
@@ -214,11 +209,11 @@ want to execute.</p>
   <span class="copyright-year">
     &copy;
     2005 -
-    2021
+    2024
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
-    <span class="author">Yuvi Panda</span>
+    <span class="author">Yuvi</span>
   </span>
 </div>
     </footer>
@@ -234,7 +229,7 @@ want to execute.</p>
 
 
 
-<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+<script type="text/javascript" src="/js/main.min.1c70606d1b733282f06230615f5561b5894924b6f9930ba2ab99cf1254f75a1a.js"></script>
   <script type="text/javascript">
     window.MathJax = {
       showProcessingMessages: false,

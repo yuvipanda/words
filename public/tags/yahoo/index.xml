@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>yahoo on Yuvi Panda</title>
+    <title>yahoo on Yuvi</title>
     <link>https://words.yuvi.in/tags/yahoo/</link>
-    <description>Recent content in yahoo on Yuvi Panda</description>
+    <description>Recent content in yahoo on Yuvi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 26 Jun 2011 13:59:49 +0000</lastBuildDate><atom:link href="https://words.yuvi.in/tags/yahoo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Jun 2011 13:59:49 +0000</lastBuildDate>
+    <atom:link href="https://words.yuvi.in/tags/yahoo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>“What is the best way to stop your child becoming an athiest?”</title>
       <link>https://words.yuvi.in/what-stop-child-athiest/</link>
       <pubDate>Sun, 26 Jun 2011 13:59:49 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/what-stop-child-athiest/</guid>
-      <description>From the usually boring Yahoo answers, we have this gem of a question:
- What is the best way to stop your child becoming an athiest?
-I don’t want any of my children to be punished by God.
- However, it also had this gem of an answer:
- Do not educate them, or expose them to critical thinking, logic or science.
-Lie to them constantly about how the world works.</description>
+      <description>From the usually boring Yahoo answers, we have this gem of a question:&#xA;What is the best way to stop your child becoming an athiest?&#xA;I don’t want any of my children to be punished by God.&#xA;However, it also had this gem of an answer:&#xA;Do not educate them, or expose them to critical thinking, logic or science.&#xA;Lie to them constantly about how the world works. Feed them a steady diet of mumbo jumbo dressed up like real knowledge – the jumbo jet in the whirlwind for example – and pretend that it is deep wisdom.</description>
     </item>
-    
   </channel>
 </rss>

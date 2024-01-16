@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>project-ideas on Yuvi Panda</title>
+    <title>project-ideas on Yuvi</title>
     <link>https://words.yuvi.in/categories/project-ideas/</link>
-    <description>Recent content in project-ideas on Yuvi Panda</description>
+    <description>Recent content in project-ideas on Yuvi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 18 Jun 2018 13:14:59 -0700</lastBuildDate><atom:link href="https://words.yuvi.in/categories/project-ideas/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Jun 2018 13:14:59 -0700</lastBuildDate>
+    <atom:link href="https://words.yuvi.in/categories/project-ideas/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Littlest Jupyterhub</title>
       <link>https://words.yuvi.in/post/the-littlest-jupyterhub/</link>
       <pubDate>Mon, 18 Jun 2018 13:14:59 -0700</pubDate>
-      
       <guid>https://words.yuvi.in/post/the-littlest-jupyterhub/</guid>
-      <description>This idea comes from brainstorming along with Lindsey Heagy, Carol Willing, Tim Head &amp;amp; Nick Bollweg at the Jupyter Team Meeting 2018. Most of the good ideas are theirs! The name is inspired by one of favorite TV series of one of my favorite people.
-I really love the idea of JupyterHub distributions - opinionated combination of components that target a specific use case. The Zero to JupyterHub distribution is awesome &amp;amp; works for most people.</description>
+      <description>This idea comes from brainstorming along with Lindsey Heagy, Carol Willing, Tim Head &amp;amp; Nick Bollweg at the Jupyter Team Meeting 2018. Most of the good ideas are theirs! The name is inspired by one of favorite TV series of one of my favorite people.&#xA;I really love the idea of JupyterHub distributions - opinionated combination of components that target a specific use case. The Zero to JupyterHub distribution is awesome &amp;amp; works for most people.</description>
     </item>
-    
   </channel>
 </rss>

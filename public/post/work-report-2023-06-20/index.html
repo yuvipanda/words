@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Devlog 2023-06-20 - Yuvi</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Yuvi" /><meta name="description" content="Trying to start these back up, as a list of the kind of &amp;lsquo;work&amp;rsquo; I have done the last few weeks. Let&amp;rsquo;s see if this works!
+Last 2 weeks Spent a good chunk of time investigating and fixing issues with AzureAD auth for the UToronto hub. &amp;ldquo;Fixing&amp;rdquo; it meant moving off AzureAD, so we only have CILogon &amp;amp; GitHub in the 2i2c infrastructure as authentication providers! This is now explicitly mentioned in our docs." /><meta name="keywords" content="yuvi, yuvipanda" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.121.2 with theme even" />
+
+
+<link rel="canonical" href="https://words.yuvi.in/post/work-report-2023-06-20/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.e059920966ff69c21fadbe27d9c4ef213858a17a09e6d3ecfc551eb61c6dcbdc.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+
+<link rel="stylesheet" href="/lib/fontawesome-free-5.13.1-web/css/all.min.css">
+
+<meta property="og:title" content="Devlog 2023-06-20" />
+<meta property="og:description" content="Trying to start these back up, as a list of the kind of &lsquo;work&rsquo; I have done the last few weeks. Let&rsquo;s see if this works!
+Last 2 weeks Spent a good chunk of time investigating and fixing issues with AzureAD auth for the UToronto hub. &ldquo;Fixing&rdquo; it meant moving off AzureAD, so we only have CILogon &amp; GitHub in the 2i2c infrastructure as authentication providers! This is now explicitly mentioned in our docs." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://words.yuvi.in/post/work-report-2023-06-20/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-06-20T10:25:11-07:00" />
+<meta property="article:modified_time" content="2023-06-20T10:25:11-07:00" />
+
+<meta itemprop="name" content="Devlog 2023-06-20">
+<meta itemprop="description" content="Trying to start these back up, as a list of the kind of &lsquo;work&rsquo; I have done the last few weeks. Let&rsquo;s see if this works!
+Last 2 weeks Spent a good chunk of time investigating and fixing issues with AzureAD auth for the UToronto hub. &ldquo;Fixing&rdquo; it meant moving off AzureAD, so we only have CILogon &amp; GitHub in the 2i2c infrastructure as authentication providers! This is now explicitly mentioned in our docs."><meta itemprop="datePublished" content="2023-06-20T10:25:11-07:00" />
+<meta itemprop="dateModified" content="2023-06-20T10:25:11-07:00" />
+<meta itemprop="wordCount" content="368">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Devlog 2023-06-20"/>
+<meta name="twitter:description" content="Trying to start these back up, as a list of the kind of &lsquo;work&rsquo; I have done the last few weeks. Let&rsquo;s see if this works!
+Last 2 weeks Spent a good chunk of time investigating and fixing issues with AzureAD auth for the UToronto hub. &ldquo;Fixing&rdquo; it meant moving off AzureAD, so we only have CILogon &amp; GitHub in the 2i2c infrastructure as authentication providers! This is now explicitly mentioned in our docs."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Yuvi</a>
+  <div class='logo-site-description'>Recovering overachieving child, now trying to achieve the correct amount
+  </div>
+</div>
+
+<div class="logo-social">
+      <a href="mailto:yuvipanda@gmail.com" class="fas fa-envelope" title="envelope"></a>
+      <a href="https://hachyderm.io/@yuvipanda" class="fab fa-twitter" title="twitter"></a>
+      <a href="https://github.com/yuvipanda" class="fab fa-github" title="github"></a>
+  <a href="https://words.yuvi.in/index.xml" type="application/rss+xml" class="fas fa-rss" title="rss"></a>
+</div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Devlog 2023-06-20</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2023-06-20 </span>
+        <div class="post-category">
+            <a href="/categories/workreport/"> workreport </a>
+            </div>
+          <span class="more-meta"> 368 words </span>
+          <span class="more-meta"> 2 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#last-2-weeks">Last 2 weeks</a></li>
+        <li><a href="#upcoming-week">Upcoming week</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>Trying to start these back up, as a list of the kind of &lsquo;work&rsquo; I have done
+the last few weeks. Let&rsquo;s see if this works!</p>
+<h3 id="last-2-weeks">Last 2 weeks</h3>
+<ol>
+<li>Spent a good chunk of time investigating and fixing issues with <a href="https://github.com/2i2c-org/infrastructure/issues/2628">AzureAD auth</a> for the UToronto hub. &ldquo;Fixing&rdquo; it meant moving off AzureAD, so we only have CILogon &amp; GitHub in the 2i2c infrastructure as authentication providers! This is now <a href="https://github.com/2i2c-org/docs/pull/187">explicitly mentioned</a> in our docs. An incident report still needs to be written.</li>
+<li>Upgraded Azure AKS for UToronto, leading to a pretty gnarly outage. Incident report needs writing. <a href="https://github.com/2i2c-org/infrastructure/issues/2594">issue</a>.</li>
+<li>Finished setting up the <a href="https://github.com/2i2c-org/infrastructure/issues/2524">ClimateMatch hub</a>. Part of this involved adding terraform support for proper, single-hub nodepools in GCP.</li>
+<li>With help from @sean-morris, all Cloudbank Hubs now use a <a href="https://github.com/2i2c-org/infrastructure/issues/2435">data8 style image</a>. This has reduced the number of non-staging hubs using the old &lsquo;default&rsquo; 2i2c image to 5! When unspecified, the default image in use now is <a href="https://github.com/2i2c-org/infrastructure/pull/2671">jupyter/scipy-notebook</a>. These communities should be <a href="https://github.com/2i2c-org/infrastructure/issues/2674">contacted</a> and a different image be used for them, so we do not have to maintain this &lsquo;default&rsquo; image anymore.</li>
+<li>With the goal of removing special cases from the 2i2c infrastructure, I am working on removing the <a href="https://github.com/2i2c-org/infrastructure/issues/1105">manually maintained NFS servers</a> from our infrastructure. I had thought only the 2i2c shared cluster had it, turns out the cloudbank one does too! The 2i2c shared cluster has been migrated off, the cloudbank one will be soon. With that, home directories are unified for all clusters, and no longer require specialized knowledge of filesystems, etc to manage.</li>
+<li>Did a bunch of cleanup work on our terraform code.
+<ul>
+<li>Remove unused AzureFile SMB support, as we use NFS everywhere. Yay consistency. <a href="https://github.com/2i2c-org/infrastructure/pull/2676">Pull</a></li>
+<li>Fix terraform linting errors and fix the job that was doing the lint to actually do the lint. <a href="https://github.com/2i2c-org/infrastructure/pull/2677">Pull</a>.</li>
+<li>Use optional fields in our terraform variables, for cleaner <code>.tfvars</code> files. <a href="https://github.com/2i2c-org/infrastructure/pull/2664">Pull</a></li>
+</ul>
+</li>
+</ol>
+<h3 id="upcoming-week">Upcoming week</h3>
+<ul>
+<li>Help with stabilizing quarterly goal for next quarter for 2i2c.</li>
+<li>Finish two incident reports for UToronto so we can close that out:
+<ul>
+<li><a href="https://github.com/2i2c-org/infrastructure/issues/2628">https://github.com/2i2c-org/infrastructure/issues/2628</a></li>
+<li><a href="https://github.com/2i2c-org/infrastructure/issues/2594">https://github.com/2i2c-org/infrastructure/issues/2594</a></li>
+</ul>
+</li>
+<li>See this PR through to completion: <a href="https://github.com/2i2c-org/infrastructure/pull/2406">https://github.com/2i2c-org/infrastructure/pull/2406</a>. Mostly documentation.</li>
+<li>See this PR through to completion: <a href="https://github.com/2i2c-org/infrastructure/pull/2621">https://github.com/2i2c-org/infrastructure/pull/2621</a>. Mostly <em>upstream</em> documentation, started in <a href="https://github.com/jupyterhub/grafana-dashboards/pull/84">https://github.com/jupyterhub/grafana-dashboards/pull/84</a>.</li>
+<li>Finish moving cloudbank hubs to filestore, decomission old NFS VMs. <a href="https://github.com/2i2c-org/infrastructure/issues/1105">https://github.com/2i2c-org/infrastructure/issues/1105</a></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Yuvi</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2023-06-20
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/adhd-and-me/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">ADHD and Me</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/drive/">
+            <span class="next-text nav-default">Something that seems to drive me: Part I</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme -
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy;
+    2005 -
+    2024
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Yuvi</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.1c70606d1b733282f06230615f5561b5894924b6f9930ba2ab99cf1254f75a1a.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

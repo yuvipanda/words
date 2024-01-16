@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>binder on Yuvi Panda</title>
+    <title>binder on Yuvi</title>
     <link>https://words.yuvi.in/tags/binder/</link>
-    <description>Recent content in binder on Yuvi Panda</description>
+    <description>Recent content in binder on Yuvi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 03 Dec 2017 01:23:54 -0800</lastBuildDate><atom:link href="https://words.yuvi.in/tags/binder/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Dec 2017 01:23:54 -0800</lastBuildDate>
+    <atom:link href="https://words.yuvi.in/tags/binder/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Why repo2docker? Why not s2i?</title>
       <link>https://words.yuvi.in/post/why-not-s2i/</link>
       <pubDate>Sun, 03 Dec 2017 01:23:54 -0800</pubDate>
-      
       <guid>https://words.yuvi.in/post/why-not-s2i/</guid>
-      <description>The wonderful Graham Dumpleton asked on twitter why we built an entirely new tool (repo2docker) instead of using OpenShift&amp;rsquo;s cool source2image tool.
-This is a very good question, and not a decision we made lightly. This post lays out some history, and explains the reasons we decided to stop using s2i. s2i is still a great tool for most production use cases, and you should use it if you&amp;rsquo;re building anything like a PaaS!</description>
+      <description>The wonderful Graham Dumpleton asked on twitter why we built an entirely new tool (repo2docker) instead of using OpenShift&amp;rsquo;s cool source2image tool.&#xA;This is a very good question, and not a decision we made lightly. This post lays out some history, and explains the reasons we decided to stop using s2i. s2i is still a great tool for most production use cases, and you should use it if you&amp;rsquo;re building anything like a PaaS!</description>
     </item>
-    
   </channel>
 </rss>

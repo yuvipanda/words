@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>twitter on Yuvi Panda</title>
+    <title>twitter on Yuvi</title>
     <link>https://words.yuvi.in/tags/twitter/</link>
-    <description>Recent content in twitter on Yuvi Panda</description>
+    <description>Recent content in twitter on Yuvi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 22 Jan 2017 22:17:12 +0530</lastBuildDate><atom:link href="https://words.yuvi.in/tags/twitter/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Jan 2017 22:17:12 +0530</lastBuildDate>
+    <atom:link href="https://words.yuvi.in/tags/twitter/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>making twitter useful again</title>
       <link>https://words.yuvi.in/post/making-twitter-useful-again/</link>
       <pubDate>Sun, 22 Jan 2017 22:17:12 +0530</pubDate>
-      
       <guid>https://words.yuvi.in/post/making-twitter-useful-again/</guid>
-      <description>I&amp;rsquo;ve unfollowed everyone I follow on Twitter, and am slowly starting back up from scratch. I&amp;rsquo;m only going to follow people who are:
- Underrepresented people in Tech (as broadly construed) Journalists  And that&amp;rsquo;s it. I&amp;rsquo;ll follow back friends I&amp;rsquo;m not otherwise in contact with as well, but might take a while.
-I&amp;rsquo;ve had this for a few days and am already enjoying using it far more than I did before.</description>
+      <description>I&amp;rsquo;ve unfollowed everyone I follow on Twitter, and am slowly starting back up from scratch. I&amp;rsquo;m only going to follow people who are:&#xA;Underrepresented people in Tech (as broadly construed) Journalists And that&amp;rsquo;s it. I&amp;rsquo;ll follow back friends I&amp;rsquo;m not otherwise in contact with as well, but might take a while.&#xA;I&amp;rsquo;ve had this for a few days and am already enjoying using it far more than I did before. A lot of the people I&amp;rsquo;m following now I did not know before, and the vibe is totally different.</description>
     </item>
-    
   </channel>
 </rss>

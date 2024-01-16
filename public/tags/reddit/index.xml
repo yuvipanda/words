@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>reddit on Yuvi Panda</title>
+    <title>reddit on Yuvi</title>
     <link>https://words.yuvi.in/tags/reddit/</link>
-    <description>Recent content in reddit on Yuvi Panda</description>
+    <description>Recent content in reddit on Yuvi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 06 Dec 2011 09:37:13 +0000</lastBuildDate><atom:link href="https://words.yuvi.in/tags/reddit/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Dec 2011 09:37:13 +0000</lastBuildDate>
+    <atom:link href="https://words.yuvi.in/tags/reddit/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Story of Average Indian ‘Techie’</title>
       <link>https://words.yuvi.in/story-average-indian-techie/</link>
       <pubDate>Tue, 06 Dec 2011 09:37:13 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/story-average-indian-techie/</guid>
-      <description>Note: I am just reformatting + putting this in one piece rather than have it split across multiple comments on reddit. Am not the original author
-Beautifully laid out by someone in the under-trafficked r/india:
- my state has 300+ engineering colleges and my parents decided that i am going to be an engineer. so, i wrote an exam and got into one institute (luckily i can make it into a good institute where there are campus interviews.</description>
+      <description>Note: I am just reformatting + putting this in one piece rather than have it split across multiple comments on reddit. Am not the original author&#xA;Beautifully laid out by someone in the under-trafficked r/india:&#xA;my state has 300+ engineering colleges and my parents decided that i am going to be an engineer. so, i wrote an exam and got into one institute (luckily i can make it into a good institute where there are campus interviews.</description>
     </item>
-    
   </channel>
 </rss>

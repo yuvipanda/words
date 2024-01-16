@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>dask on Yuvi Panda</title>
+    <title>dask on Yuvi</title>
     <link>https://words.yuvi.in/categories/dask/</link>
-    <description>Recent content in dask on Yuvi Panda</description>
+    <description>Recent content in dask on Yuvi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 27 Jun 2020 13:27:49 +0530</lastBuildDate><atom:link href="https://words.yuvi.in/categories/dask/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Jun 2020 13:27:49 +0530</lastBuildDate>
+    <atom:link href="https://words.yuvi.in/categories/dask/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Access dask-kubernetes clusters running on a cloud from your local machine</title>
       <link>https://words.yuvi.in/post/dask-local-kubernetes/</link>
       <pubDate>Sat, 27 Jun 2020 13:27:49 +0530</pubDate>
-      
       <guid>https://words.yuvi.in/post/dask-local-kubernetes/</guid>
-      <description>You can run your Jupyter Notebook locally, and connect easily to a remote dask-kubernetes cluster on a cloud-based Kubernetes Cluster with the help of kubefwd. This notebook will show you an example of how to do so. While this example is a Jupyter Notebook, the code will work any local python medium - REPL, IDE (vscode), or just plain ol&#39; .py files
-Latest executable version of this notebook can be found in this repository</description>
+      <description>You can run your Jupyter Notebook locally, and connect easily to a remote dask-kubernetes cluster on a cloud-based Kubernetes Cluster with the help of kubefwd. This notebook will show you an example of how to do so. While this example is a Jupyter Notebook, the code will work any local python medium - REPL, IDE (vscode), or just plain ol&amp;rsquo; .py files&#xA;Latest executable version of this notebook can be found in this repository</description>
     </item>
-    
   </channel>
 </rss>

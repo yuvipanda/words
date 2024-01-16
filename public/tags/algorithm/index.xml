@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>algorithm on Yuvi Panda</title>
+    <title>algorithm on Yuvi</title>
     <link>https://words.yuvi.in/tags/algorithm/</link>
-    <description>Recent content in algorithm on Yuvi Panda</description>
+    <description>Recent content in algorithm on Yuvi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 19 Jun 2011 01:40:36 +0000</lastBuildDate><atom:link href="https://words.yuvi.in/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Jun 2011 01:40:36 +0000</lastBuildDate>
+    <atom:link href="https://words.yuvi.in/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SleepSort from 4Chan</title>
       <link>https://words.yuvi.in/sleepsort-4chan/</link>
       <pubDate>Sun, 19 Jun 2011 01:40:36 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/sleepsort-4chan/</guid>
-      <description>4Chan isn’t exactly what you’d associate with ‘shit, that’s a cool piece of code!’, but look what I found!
-(via HN)
-Nice hack. And it is O(N) in bitsize of largest number (Ignoring all the overhead of forking new processes, the problem with the race conditions(Sort 0 and 0.1? How about 0.01 and 0.011?), processor contention, etc,.) They basically delegated the sorting to the process scheduler, treating it as a sort of priority queue.</description>
+      <description>4Chan isn’t exactly what you’d associate with ‘shit, that’s a cool piece of code!’, but look what I found!&#xA;(via HN)&#xA;Nice hack. And it is O(N) in bitsize of largest number (Ignoring all the overhead of forking new processes, the problem with the race conditions(Sort 0 and 0.1? How about 0.01 and 0.011?), processor contention, etc,.) They basically delegated the sorting to the process scheduler, treating it as a sort of priority queue.</description>
     </item>
-    
   </channel>
 </rss>

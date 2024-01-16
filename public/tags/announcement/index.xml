@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>announcement on Yuvi</title>
+    <link>https://words.yuvi.in/tags/announcement/</link>
+    <description>Recent content in announcement on Yuvi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 16 Nov 2021 20:43:11 +0530</lastBuildDate>
+    <atom:link href="https://words.yuvi.in/tags/announcement/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The fastest way to share your notebooks - announcing NotebookSharing.space</title>
+      <link>https://words.yuvi.in/post/announcing-notebooksharing-space/</link>
+      <pubDate>Tue, 16 Nov 2021 20:43:11 +0530</pubDate>
+      <guid>https://words.yuvi.in/post/announcing-notebooksharing-space/</guid>
+      <description>Sharing notebooks is harder than it should be.&#xA;You are working on a notebook (in Jupyter, RStudio, Visual Studio Code, whatever), and want to share it quickly with someone. Maybe you want some feedback, or you&amp;rsquo;re demonstrating a technique, or there is a cool result you want to quickly show someone. A million reasons to want to quickly share a notebook, but unfortunately there isn&amp;rsquo;t a quick enough and easy enough solution right now.</description>
+    </item>
+  </channel>
+</rss>

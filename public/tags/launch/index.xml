@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>launch on Yuvi</title>
+    <link>https://words.yuvi.in/tags/launch/</link>
+    <description>Recent content in launch on Yuvi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 16 Nov 2021 18:58:28 +0530</lastBuildDate>
+    <atom:link href="https://words.yuvi.in/tags/launch/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Announcing the nbgitpuller Link Generator browser extensions</title>
+      <link>https://words.yuvi.in/post/nbgitpuller-link-generator-extension/</link>
+      <pubDate>Tue, 16 Nov 2021 18:58:28 +0530</pubDate>
+      <guid>https://words.yuvi.in/post/nbgitpuller-link-generator-extension/</guid>
+      <description>(Leave comments or discuss this post on the jupyter discourse)&#xA;nbgitpuller is my most favorite way to distribute content (notebooks, data files, etc) to students on a JupyterHub. The student mental model is &amp;lsquo;I click a link, and can start working on my notebook&amp;rsquo;, which is as close to ideal as we have today. That is possible since all the information required for this workflow is embedded in the link itself - so it can be distributed easily via your pre-existing communication channel (like email, course website, etc), rather than requiring your students to use yet another tool.</description>
+    </item>
+  </channel>
+</rss>

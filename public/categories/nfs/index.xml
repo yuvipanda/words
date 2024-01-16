@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nfs on Yuvi</title>
+    <link>https://words.yuvi.in/categories/nfs/</link>
+    <description>Recent content in nfs on Yuvi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 07 Nov 2022 15:55:47 -0800</lastBuildDate>
+    <atom:link href="https://words.yuvi.in/categories/nfs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JupyterHub tip: Don&#39;t touch NFS unless you must</title>
+      <link>https://words.yuvi.in/post/no-touch-nfs/</link>
+      <pubDate>Mon, 07 Nov 2022 15:55:47 -0800</pubDate>
+      <guid>https://words.yuvi.in/post/no-touch-nfs/</guid>
+      <description>If you are running a JupyterHub on Kubernetes and use NFS for home directory storage (a common occurance), I highly recommend the following settings:&#xA;singleuser: extraEnv: # notebook server writes secure files that don&amp;#39;t need to survive a # restart here. Writing &amp;#39;secure&amp;#39; files on some file systems (like # Azure Files with SMB or NFS) seems buggy, so we just put runtime dir on # /tmp. This is ok in our case, since no two users are on the same # container.</description>
+    </item>
+  </channel>
+</rss>

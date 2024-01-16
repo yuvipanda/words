@@ -1,32 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>systemd on Yuvi Panda</title>
+    <title>systemd on Yuvi</title>
     <link>https://words.yuvi.in/tags/systemd/</link>
-    <description>Recent content in systemd on Yuvi Panda</description>
+    <description>Recent content in systemd on Yuvi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 31 Mar 2017 23:23:52 -0700</lastBuildDate><atom:link href="https://words.yuvi.in/tags/systemd/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 31 Mar 2017 23:23:52 -0700</lastBuildDate>
+    <atom:link href="https://words.yuvi.in/tags/systemd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>systemd simple containment for GUI applications &amp; shells</title>
       <link>https://words.yuvi.in/post/systemd-simple-containment/</link>
       <pubDate>Fri, 31 Mar 2017 23:23:52 -0700</pubDate>
-      
       <guid>https://words.yuvi.in/post/systemd-simple-containment/</guid>
-      <description>I earlier had a vaguely working setup for making sure browsers, shells and other applications don&amp;rsquo;t eat all RAM / CPU on my machine with systemd + sudo + shell scripts.
-It was a hacky solution, and also had complications when used to launch shells. It wasn&amp;rsquo;t passing in all the environment varialbes it should, causing interesting-to-debug issues. sudo rules were complex, and hard to do securely.
-I had also been looking for an excuse to learn more Golang, so I ended up writing systemd-simple-containment or ssc.</description>
+      <description>I earlier had a vaguely working setup for making sure browsers, shells and other applications don&amp;rsquo;t eat all RAM / CPU on my machine with systemd + sudo + shell scripts.&#xA;It was a hacky solution, and also had complications when used to launch shells. It wasn&amp;rsquo;t passing in all the environment varialbes it should, causing interesting-to-debug issues. sudo rules were complex, and hard to do securely.&#xA;I had also been looking for an excuse to learn more Golang, so I ended up writing systemd-simple-containment or ssc.</description>
     </item>
-    
     <item>
       <title>systemd gui applications</title>
       <link>https://words.yuvi.in/post/systemd-gui-applications/</link>
       <pubDate>Wed, 29 Mar 2017 20:47:10 -0700</pubDate>
-      
       <guid>https://words.yuvi.in/post/systemd-gui-applications/</guid>
-      <description>Update: There&amp;rsquo;s a follow-up post with a simpler solution now.
-Ever since I read Jessie Frazelle&amp;rsquo;s amazing setup (1, 2, 3) for running GUI applications in docker containers, I&amp;rsquo;ve wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&amp;rsquo;m also not as awesome (or knowledgeable!</description>
+      <description>Update: There&amp;rsquo;s a follow-up post with a simpler solution now.&#xA;Ever since I read Jessie Frazelle&amp;rsquo;s amazing setup (1, 2, 3) for running GUI applications in docker containers, I&amp;rsquo;ve wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&amp;rsquo;m also not as awesome (or knowledgeable!</description>
     </item>
-    
   </channel>
 </rss>

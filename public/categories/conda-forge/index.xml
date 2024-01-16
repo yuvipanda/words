@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>conda-forge on Yuvi</title>
+    <link>https://words.yuvi.in/categories/conda-forge/</link>
+    <description>Recent content in conda-forge on Yuvi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 06 Nov 2022 23:17:53 -0800</lastBuildDate>
+    <atom:link href="https://words.yuvi.in/categories/conda-forge/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Installing Python (and other packages) from conda-forge in GitHub Actions</title>
+      <link>https://words.yuvi.in/post/conda-forge-github-actions/</link>
+      <pubDate>Sun, 06 Nov 2022 23:17:53 -0800</pubDate>
+      <guid>https://words.yuvi.in/post/conda-forge-github-actions/</guid>
+      <description>Alex Merose asked me on Mastodon how to best set up a conda environment on GitHub Actions. I thought I&amp;rsquo;d write a short blog post about it!&#xA;The short version is, use the conda-incubator/setup-miniconda GitHub action instead of the official setup-python action. Specifically, try out these options for size:&#xA;steps: - uses: conda-incubator/setup-miniconda@v2 with: # Specify python version your environment will have. Remember to quote this, or # YAML will think you want python 3.</description>
+    </item>
+  </channel>
+</rss>

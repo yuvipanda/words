@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>papers on Yuvi Panda</title>
+    <title>papers on Yuvi</title>
     <link>https://words.yuvi.in/categories/papers/</link>
-    <description>Recent content in papers on Yuvi Panda</description>
+    <description>Recent content in papers on Yuvi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 09 Mar 2016 08:03:07 +0000</lastBuildDate><atom:link href="https://words.yuvi.in/categories/papers/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Mar 2016 08:03:07 +0000</lastBuildDate>
+    <atom:link href="https://words.yuvi.in/categories/papers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Paper notes: ‘The impact of syntax colouring on program comprehension’</title>
       <link>https://words.yuvi.in/the-impact-syntax-colouring-program-comprehension-paper-notes/</link>
       <pubDate>Wed, 09 Mar 2016 08:03:07 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/the-impact-syntax-colouring-program-comprehension-paper-notes/</guid>
-      <description>I’ve recently started reading more academic papers, and thought it’d be useful to write notes about them and publish them as I go along! This one is for The impact of syntax colouring on program comprehension
- I was amazed at the amount of prior research it is citing. Why have I not been reading these for the last 10 years of my life? Apparently it is ok to report findings with a sample size of 10 people.</description>
+      <description>I’ve recently started reading more academic papers, and thought it’d be useful to write notes about them and publish them as I go along! This one is for The impact of syntax colouring on program comprehension&#xA;I was amazed at the amount of prior research it is citing. Why have I not been reading these for the last 10 years of my life? Apparently it is ok to report findings with a sample size of 10 people.</description>
     </item>
-    
   </channel>
 </rss>

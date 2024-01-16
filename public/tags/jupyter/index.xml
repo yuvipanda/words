@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>jupyter on Yuvi Panda</title>
+    <title>jupyter on Yuvi</title>
     <link>https://words.yuvi.in/tags/jupyter/</link>
-    <description>Recent content in jupyter on Yuvi Panda</description>
+    <description>Recent content in jupyter on Yuvi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 16 Sep 2020 17:09:42 +0530</lastBuildDate><atom:link href="https://words.yuvi.in/tags/jupyter/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Dec 2021 12:16:47 +0530</lastBuildDate>
+    <atom:link href="https://words.yuvi.in/tags/jupyter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Disabling JupyterLab extensions on your z2jh JupyterHub installations</title>
+      <link>https://words.yuvi.in/post/jupyterlab-settings-z2jh/</link>
+      <pubDate>Wed, 15 Dec 2021 12:16:47 +0530</pubDate>
+      <guid>https://words.yuvi.in/post/jupyterlab-settings-z2jh/</guid>
+      <description>Sometimes you want to temporarily disable a JupyterLab extension on a JupyterHub by default, without having to rebuild your docker image. This can be very easily done with z2jh&amp;rsquo;s singleuser.extraFiles, and JupyterLab&amp;rsquo;s page_config.json&#xA;JupyterLab&amp;rsquo;s page_config.json lets you set page configuration by dropping JSON files under a labconfig directory inside any of the directories listed when you run jupyter --paths. We just use singleuser.extraFiles to provide this file!&#xA;singleuser: extraFiles: lab-config: mountPath: /etc/jupyter/labconfig/page_config.</description>
+    </item>
     <item>
       <title>Setting up a &#34;Production Ready&#34; TLJH</title>
       <link>https://words.yuvi.in/post/production-tljh/</link>
       <pubDate>Wed, 16 Sep 2020 17:09:42 +0530</pubDate>
-      
       <guid>https://words.yuvi.in/post/production-tljh/</guid>
-      <description>The Littlest JupyterHub is an extremely capable hub distribution that I&amp;rsquo;d recommend for situations where you expect, on average, under 100 active users.
-Why not Kubernetes? The primary reason to use Zero to JupyterHub on k8s over TLJH in cases with smaller number of users would be to reduce costs - Kubernetes can spin down nodes when not in use. However, you&amp;rsquo;ll always have at least one node running - for the hub / proxy pods.</description>
+      <description>The Littlest JupyterHub is an extremely capable hub distribution that I&amp;rsquo;d recommend for situations where you expect, on average, under 100 active users.&#xA;Why not Kubernetes? The primary reason to use Zero to JupyterHub on k8s over TLJH in cases with smaller number of users would be to reduce costs - Kubernetes can spin down nodes when not in use. However, you&amp;rsquo;ll always have at least one node running - for the hub / proxy pods.</description>
     </item>
-    
   </channel>
 </rss>

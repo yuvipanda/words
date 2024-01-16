@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker on Yuvi</title>
+    <link>https://words.yuvi.in/tags/docker/</link>
+    <description>Recent content in docker on Yuvi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 29 Nov 2023 14:27:25 -0800</lastBuildDate>
+    <atom:link href="https://words.yuvi.in/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Precompiling Julia Packages in Docker Images</title>
+      <link>https://words.yuvi.in/post/pre-compiling-julia-docker/</link>
+      <pubDate>Wed, 29 Nov 2023 14:27:25 -0800</pubDate>
+      <guid>https://words.yuvi.in/post/pre-compiling-julia-docker/</guid>
+      <description>Julia pre-compiles packages on first load, allowing them to deeply optimize the generated code for the particular CPU architecture the user is running on for maximum performance. However, it does take some time, so there&amp;rsquo;s a startup latency penalty here. If you make docker images with precompiled Julia packages, you can pay this pre-compilation penalty at image build time, rather than at image startup time. Much better for your users!</description>
+    </item>
+  </channel>
+</rss>

@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>blogging on Yuvi Panda</title>
+    <title>blogging on Yuvi</title>
     <link>https://words.yuvi.in/tags/blogging/</link>
-    <description>Recent content in blogging on Yuvi Panda</description>
+    <description>Recent content in blogging on Yuvi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 14 May 2011 09:04:03 +0000</lastBuildDate><atom:link href="https://words.yuvi.in/tags/blogging/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 May 2011 09:04:03 +0000</lastBuildDate>
+    <atom:link href="https://words.yuvi.in/tags/blogging/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Six Years of Blogging and Eleven Years of Coding</title>
       <link>https://words.yuvi.in/six-years-of-blogging-and-eleven-years-of-coding/</link>
       <pubDate>Sat, 14 May 2011 09:04:03 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/six-years-of-blogging-and-eleven-years-of-coding/</guid>
-      <description>It was exactly six years ago that I started blogging. My first blog post ow seems to be rather childish, but considering I was 14 then, maybe it is excusable :)
-I’ve moved across several blogging platforms and urls in the meantime (Blogspot, wordpress and now my own custom engine. I’ve sadly lost a good portion of my blogs thanks to a domain loss and a server crash. Sigh.
-Also, looks like I’ve been writing code for almost eleven years now!</description>
+      <description>It was exactly six years ago that I started blogging. My first blog post ow seems to be rather childish, but considering I was 14 then, maybe it is excusable :)&#xA;I’ve moved across several blogging platforms and urls in the meantime (Blogspot, wordpress and now my own custom engine. I’ve sadly lost a good portion of my blogs thanks to a domain loss and a server crash. Sigh.&#xA;Also, looks like I’ve been writing code for almost eleven years now!</description>
     </item>
-    
   </channel>
 </rss>

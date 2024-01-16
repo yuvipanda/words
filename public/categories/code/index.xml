@@ -1,919 +1,635 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>code on Yuvi Panda</title>
+    <title>code on Yuvi</title>
     <link>https://words.yuvi.in/categories/code/</link>
-    <description>Recent content in code on Yuvi Panda</description>
+    <description>Recent content in code on Yuvi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 14 May 2021 18:56:41 +0530</lastBuildDate><atom:link href="https://words.yuvi.in/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Nov 2022 23:17:53 -0800</lastBuildDate>
+    <atom:link href="https://words.yuvi.in/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Installing Python (and other packages) from conda-forge in GitHub Actions</title>
+      <link>https://words.yuvi.in/post/conda-forge-github-actions/</link>
+      <pubDate>Sun, 06 Nov 2022 23:17:53 -0800</pubDate>
+      <guid>https://words.yuvi.in/post/conda-forge-github-actions/</guid>
+      <description>Alex Merose asked me on Mastodon how to best set up a conda environment on GitHub Actions. I thought I&amp;rsquo;d write a short blog post about it!&#xA;The short version is, use the conda-incubator/setup-miniconda GitHub action instead of the official setup-python action. Specifically, try out these options for size:&#xA;steps: - uses: conda-incubator/setup-miniconda@v2 with: # Specify python version your environment will have. Remember to quote this, or # YAML will think you want python 3.</description>
+    </item>
+    <item>
+      <title>Using Python (instead of bash) to write GitHub actions</title>
+      <link>https://words.yuvi.in/post/python-in-github-actions/</link>
+      <pubDate>Tue, 01 Nov 2022 23:04:56 -0700</pubDate>
+      <guid>https://words.yuvi.in/post/python-in-github-actions/</guid>
+      <description>I am not smart enough to consistently write and debug shell scripts that use any conditional or looping constructs. So as soon as I&amp;rsquo;m writing something in bash that requires use of those, I switch to python. This works fine when writing scripts, but what to do when writing GitHub Actions workflows? You can only write bash in run: stanzas in your steps, right?&#xA;Not at all! You can set the shell parameter to anything you want, and the contents of run will be passed to the shell in the form of a file.</description>
+    </item>
+    <item>
+      <title>Shortcut to Show / Hide Terminal in Visual Studio Code</title>
+      <link>https://words.yuvi.in/post/show-hide-terminal-vscode/</link>
+      <pubDate>Thu, 06 Jan 2022 20:31:13 +0530</pubDate>
+      <guid>https://words.yuvi.in/post/show-hide-terminal-vscode/</guid>
+      <description>I wanted a single keyboard shortcut that would let me switch between the built-in terminal and the editor in vscode. I couldn&amp;rsquo;t find any, so I made a short macro using the VSCode Macros Extension&#xA;First, you define your macros in settings.json. You can open up vscode settings with Cmd+,, search for macros, and edit this under Macros: List.&#xA;&amp;#34;macros.list&amp;#34;: { &amp;#34;showTerminal&amp;#34;: [ &amp;#34;workbench.action.terminal.toggleTerminal&amp;#34;, &amp;#34;workbench.action.terminal.focus&amp;#34;, &amp;#34;workbench.action.toggleMaximizedPanel&amp;#34; ], &amp;#34;hideTerminal&amp;#34;: [ &amp;#34;workbench.action.toggleMaximizedPanel&amp;#34;, &amp;#34;workbench.</description>
+    </item>
     <item>
       <title>Learning R</title>
       <link>https://words.yuvi.in/post/learning-r/</link>
       <pubDate>Fri, 14 May 2021 18:56:41 +0530</pubDate>
-      
       <guid>https://words.yuvi.in/post/learning-r/</guid>
-      <description>I&amp;rsquo;m paying money to learn datascience with R via this John Hopkins course on Coursera. Hopefully I can spend about 4h a week on it.
-Why? I try to have a &amp;lsquo;T&amp;rsquo; shaped set of competencies - some competence in a lot of areas, and deeper knowledge in some. Having some competence in many areas lets you notice where a particular skill can be very helpful in solving a problem, and either apply it yourself or bring in someone who can.</description>
+      <description>I&amp;rsquo;m paying money to learn datascience with R via this John Hopkins course on Coursera. Hopefully I can spend about 4h a week on it.&#xA;Why? I try to have a &amp;lsquo;T&amp;rsquo; shaped set of competencies - some competence in a lot of areas, and deeper knowledge in some. Having some competence in many areas lets you notice where a particular skill can be very helpful in solving a problem, and either apply it yourself or bring in someone who can.</description>
     </item>
-    
     <item>
       <title>The many ways to access your JupyterHub environment</title>
       <link>https://words.yuvi.in/post/hub-interfaces/</link>
       <pubDate>Mon, 09 Nov 2020 02:15:15 +0530</pubDate>
-      
       <guid>https://words.yuvi.in/post/hub-interfaces/</guid>
       <description>JupyterHub was designed to provide multi-user access to Classic Jupyter notebook and JupyterLab, running on machines far away with access to data &amp;amp; compute your local machines don&amp;rsquo;t have. However, there are a lot of users this leaves out - R users on RStudio, folks who prefer ssh based interfaces, people on local IDEs like vscode or pycharm, etc. We trust that these users know better than &amp;lsquo;us&amp;rsquo; developers &amp;amp; admins what user interface works best for them, and make sure that our JupyterHub setups work for them.</description>
     </item>
-    
     <item>
       <title>kbatch: sbatch, but for kubernetes</title>
       <link>https://words.yuvi.in/post/kbatch/</link>
       <pubDate>Sun, 01 Nov 2020 13:40:27 +0530</pubDate>
-      
       <guid>https://words.yuvi.in/post/kbatch/</guid>
-      <description>Submitting &amp;lsquo;non-interactive&amp;rsquo; jobs that can run independent of a user&amp;rsquo;s current session on a JupyterHub is a pressing problem. There are many many solutions to this, but I think there&amp;rsquo;s a lot of value in having an extremely simple solution that solves exactly one extremely well defined problem.
-We will only consider JupyterHubs running on top of Kubernetes, since that has all the actual capabilities we need to solve this problem.</description>
+      <description>Submitting &amp;rsquo;non-interactive&amp;rsquo; jobs that can run independent of a user&amp;rsquo;s current session on a JupyterHub is a pressing problem. There are many many solutions to this, but I think there&amp;rsquo;s a lot of value in having an extremely simple solution that solves exactly one extremely well defined problem.&#xA;We will only consider JupyterHubs running on top of Kubernetes, since that has all the actual capabilities we need to solve this problem.</description>
     </item>
-    
     <item>
       <title>Access dask-kubernetes clusters running on a cloud from your local machine</title>
       <link>https://words.yuvi.in/post/dask-local-kubernetes/</link>
       <pubDate>Sat, 27 Jun 2020 13:27:49 +0530</pubDate>
-      
       <guid>https://words.yuvi.in/post/dask-local-kubernetes/</guid>
-      <description>You can run your Jupyter Notebook locally, and connect easily to a remote dask-kubernetes cluster on a cloud-based Kubernetes Cluster with the help of kubefwd. This notebook will show you an example of how to do so. While this example is a Jupyter Notebook, the code will work any local python medium - REPL, IDE (vscode), or just plain ol&#39; .py files
-Latest executable version of this notebook can be found in this repository</description>
+      <description>You can run your Jupyter Notebook locally, and connect easily to a remote dask-kubernetes cluster on a cloud-based Kubernetes Cluster with the help of kubefwd. This notebook will show you an example of how to do so. While this example is a Jupyter Notebook, the code will work any local python medium - REPL, IDE (vscode), or just plain ol&amp;rsquo; .py files&#xA;Latest executable version of this notebook can be found in this repository</description>
     </item>
-    
     <item>
       <title>Check if an organization is using GSuite</title>
       <link>https://words.yuvi.in/post/google-domain/</link>
       <pubDate>Thu, 18 Jun 2020 17:01:34 +0530</pubDate>
-      
       <guid>https://words.yuvi.in/post/google-domain/</guid>
-      <description>I needed to find out if an organization was using GSuite for their emails, so I can allow their users to login to a JupyterHub I was setting up. I use Google Auth in other places, so I wanted to find out if this organization was using GSuite.
-I could&amp;rsquo;ve just asked them, but where&amp;rsquo;s the fun in that? Instead, you can use dig to find out!
-For example, if I were to test berkeley.</description>
+      <description>I needed to find out if an organization was using GSuite for their emails, so I can allow their users to login to a JupyterHub I was setting up. I use Google Auth in other places, so I wanted to find out if this organization was using GSuite.&#xA;I could&amp;rsquo;ve just asked them, but where&amp;rsquo;s the fun in that? Instead, you can use dig to find out!&#xA;For example, if I were to test berkeley.</description>
     </item>
-    
     <item>
       <title>Devlog 2018 12 26</title>
       <link>https://words.yuvi.in/post/devlog-2018-12-26/</link>
       <pubDate>Wed, 26 Dec 2018 10:23:40 -0800</pubDate>
-      
       <guid>https://words.yuvi.in/post/devlog-2018-12-26/</guid>
       <description>Physical activity I walked for about 6 miles yesterday evening, after doing 3-4 miles each day for about 2-3 days before. The roads were empty, and it was lovely. I&amp;rsquo;ve listened to maybe 6-10 hours of Deborah Frances-White in the last week or so, split between The Guilty Feminist and Global Pillage. Next time though, I&amp;rsquo;m going to try listen to podcasts less &amp;amp; observe my surroundings more. I am doing this (plus PT) to rehab my knee mostly.</description>
     </item>
-    
     <item>
       <title>Devlog 2018 12 24</title>
       <link>https://words.yuvi.in/post/devlog-2018-12-24/</link>
       <pubDate>Mon, 24 Dec 2018 10:51:57 -0800</pubDate>
-      
       <guid>https://words.yuvi.in/post/devlog-2018-12-24/</guid>
-      <description>Gracefully exiting asyncio application Continuing yesterday&amp;rsquo;s work on my simple supervisor library, I continued trying to propagate signals cleanly to child processes before exiting. I remembered that it isn&amp;rsquo;t enough to just propagate signals - you also have to actually reap them. This meant waiting for wait calls on them to return.
-I had a task running concurrently that is waiting on these processes. So &amp;lsquo;all&amp;rsquo; I had to do was make sure the application does not exit until these tasks are done.</description>
+      <description>Gracefully exiting asyncio application Continuing yesterday&amp;rsquo;s work on my simple supervisor library, I continued trying to propagate signals cleanly to child processes before exiting. I remembered that it isn&amp;rsquo;t enough to just propagate signals - you also have to actually reap them. This meant waiting for wait calls on them to return.&#xA;I had a task running concurrently that is waiting on these processes. So &amp;lsquo;all&amp;rsquo; I had to do was make sure the application does not exit until these tasks are done.</description>
     </item>
-    
     <item>
       <title>DevLog 2018 December 23</title>
       <link>https://words.yuvi.in/post/devlog-2018-12-23/</link>
       <pubDate>Sun, 23 Dec 2018 19:44:53 -0800</pubDate>
-      
       <guid>https://words.yuvi.in/post/devlog-2018-12-23/</guid>
-      <description>I have enjoyed keeping running logs of my coding work (devlogs) in the past, and am going to start doing those again now.
-This &amp;lsquo;holiday&amp;rsquo; season, I am spending time teaching myself skills I sortof know about but do not have a deep understanding of.
-JupyterLab extension I spent the first part of the day (before I started devlogging) working on finishing up a jupyterlab extension I started the day before.</description>
+      <description>I have enjoyed keeping running logs of my coding work (devlogs) in the past, and am going to start doing those again now.&#xA;This &amp;lsquo;holiday&amp;rsquo; season, I am spending time teaching myself skills I sortof know about but do not have a deep understanding of.&#xA;JupyterLab extension I spent the first part of the day (before I started devlogging) working on finishing up a jupyterlab extension I started the day before.</description>
     </item>
-    
     <item>
       <title>Freedoms for Open Source Software users in the Cloud</title>
       <link>https://words.yuvi.in/post/oss-in-the-cloud/</link>
       <pubDate>Wed, 15 Aug 2018 22:41:17 -0600</pubDate>
-      
       <guid>https://words.yuvi.in/post/oss-in-the-cloud/</guid>
-      <description>This post is from conversations with Matt Rocklin and others at the PANGEO developer meeting at NCAR
-Today, almost all of &amp;lsquo;the cloud&amp;rsquo; is run by ruthlessly competitive hypercapitalist large scale organizations. This is great &amp;amp; terrible.
-When writing open source applications that primarily run on the cloud, I try to make sure my users (primarily people deploying my software for their users) have the following freedoms:
- They can run the software on any cloud provider they choose to They can run the software on a bunch of computers they physically own, with the help of other open source software only  Ensuring these freedoms for my users requires the following restrictions on me:</description>
+      <description>This post is from conversations with Matt Rocklin and others at the PANGEO developer meeting at NCAR&#xA;Today, almost all of &amp;rsquo;the cloud&amp;rsquo; is run by ruthlessly competitive hypercapitalist large scale organizations. This is great &amp;amp; terrible.&#xA;When writing open source applications that primarily run on the cloud, I try to make sure my users (primarily people deploying my software for their users) have the following freedoms:&#xA;They can run the software on any cloud provider they choose to They can run the software on a bunch of computers they physically own, with the help of other open source software only Ensuring these freedoms for my users requires the following restrictions on me:</description>
     </item>
-    
     <item>
       <title>Aug 2018 Work Plan</title>
       <link>https://words.yuvi.in/post/aug-2018-plan/</link>
       <pubDate>Sat, 21 Jul 2018 18:32:53 -0700</pubDate>
-      
       <guid>https://words.yuvi.in/post/aug-2018-plan/</guid>
-      <description>I&amp;rsquo;m writing up monthly &amp;lsquo;work plans&amp;rsquo; to plan what work I&amp;rsquo;m trying to do every month, and do a retrospective after to see how much I got done. I work across a variety of open source projects with ambiguous responsibilities, so work planning isn&amp;rsquo;t very set. This has proven to be somewhat quite stressful for everyone involved. Let&amp;rsquo;s see if this helps!
-JupyterCon JupyterCon is in NYC towards the end of August, and it is going to set the pace for a bunch of stuff.</description>
+      <description>I&amp;rsquo;m writing up monthly &amp;lsquo;work plans&amp;rsquo; to plan what work I&amp;rsquo;m trying to do every month, and do a retrospective after to see how much I got done. I work across a variety of open source projects with ambiguous responsibilities, so work planning isn&amp;rsquo;t very set. This has proven to be somewhat quite stressful for everyone involved. Let&amp;rsquo;s see if this helps!&#xA;JupyterCon JupyterCon is in NYC towards the end of August, and it is going to set the pace for a bunch of stuff.</description>
     </item>
-    
     <item>
       <title>Conda Constructor Thoughts</title>
       <link>https://words.yuvi.in/post/conda-constructor-thoughts/</link>
       <pubDate>Thu, 28 Jun 2018 22:43:56 -0700</pubDate>
-      
       <guid>https://words.yuvi.in/post/conda-constructor-thoughts/</guid>
       <description>Inspired by conversations with Nick Bollweg and Matt Rocklin, I experimented with using conda constructor as the installer for The Littlest JupyterHub. Theoretically, it fit the bill perfectly - I wanted a way to ship arbitrary packages in multiple languages (python &amp;amp; node) in an easy to install self-contained way, didn&amp;rsquo;t want to make debian packages &amp;amp; wanted to use a tool that people in the Jupyter ecosystem were familiar with.</description>
     </item>
-    
     <item>
       <title>Kubectl verbose logging tricks</title>
       <link>https://words.yuvi.in/post/kubectl-rbac/</link>
       <pubDate>Thu, 11 Jan 2018 15:15:58 -0800</pubDate>
-      
       <guid>https://words.yuvi.in/post/kubectl-rbac/</guid>
-      <description>Recently I had to write some code that had to call the kubernetes API directly, without any language wrappers. While there is pretty good reference docs, I didn&amp;rsquo;t want to go and construct all the JSON manually in my programming language.
-I discovered that kubectl&amp;rsquo;s -v parameter is very useful for this! With this, I can do the following:
- Perform the actions I need to perform with just kubectl commands Pass -v=8 to kubectl when doing this, and this will print all the HTTP traffic (requests and responses!</description>
+      <description>Recently I had to write some code that had to call the kubernetes API directly, without any language wrappers. While there is pretty good reference docs, I didn&amp;rsquo;t want to go and construct all the JSON manually in my programming language.&#xA;I discovered that kubectl&amp;rsquo;s -v parameter is very useful for this! With this, I can do the following:&#xA;Perform the actions I need to perform with just kubectl commands Pass -v=8 to kubectl when doing this, and this will print all the HTTP traffic (requests and responses!</description>
     </item>
-    
     <item>
       <title>Side Project: UA Emoji Firefox Extension</title>
       <link>https://words.yuvi.in/side-project-ua-emoji-firefox-extension/</link>
       <pubDate>Mon, 28 Mar 2016 05:29:05 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/side-project-ua-emoji-firefox-extension/</guid>
-      <description>Note: I’m trying to spend time explicitly writing random side projects that are not related to what I’m actively working on as my main project in some form.
-A random thread started by Ironholds on a random mailing list I was wearily catching up on contained a joke from bearloga about malformed User Agents. This prompted me to write UAuliver (source), a Firefox extension that randomizes your user agent to be a random string of emoji.</description>
+      <description>Note: I’m trying to spend time explicitly writing random side projects that are not related to what I’m actively working on as my main project in some form.&#xA;A random thread started by Ironholds on a random mailing list I was wearily catching up on contained a joke from bearloga about malformed User Agents. This prompted me to write UAuliver (source), a Firefox extension that randomizes your user agent to be a random string of emoji.</description>
     </item>
-    
     <item>
       <title>DNS servers, localhost and asynchronous code</title>
       <link>https://words.yuvi.in/dns-servers-localhost-asynchronous-code/</link>
       <pubDate>Thu, 04 Feb 2016 02:38:03 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/dns-servers-localhost-asynchronous-code/</guid>
-      <description>localhost is always 127.0.0.1, right? Nope, can also be ::1 if your system only has IPV6 (apparently).
-Asking a DNS server for an A record for localhost should give you back 127.0.0.1 right? Nope – it varies wildly! 8.8.8.8 gives me an NXDOMAIN which means it tells you straight up THIS DOMAIN DOES NOT EXIST! Which is true, since localhost isn’t a domain. But if you ask the same thing of any dnsmasq server, it’ll tell you localhost is 127.</description>
+      <description>localhost is always 127.0.0.1, right? Nope, can also be ::1 if your system only has IPV6 (apparently).&#xA;Asking a DNS server for an A record for localhost should give you back 127.0.0.1 right? Nope – it varies wildly! 8.8.8.8 gives me an NXDOMAIN which means it tells you straight up THIS DOMAIN DOES NOT EXIST! Which is true, since localhost isn’t a domain. But if you ask the same thing of any dnsmasq server, it’ll tell you localhost is 127.</description>
     </item>
-    
     <item>
       <title>Simple python packaging for Debian / Ubuntu</title>
       <link>https://words.yuvi.in/simple-python-packaging-debian-ubuntu/</link>
       <pubDate>Tue, 19 Aug 2014 13:08:28 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/simple-python-packaging-debian-ubuntu/</guid>
-      <description>(As requested by Jean-Fred)
-One of the ‘pain points’ with working on deploying python stuff at Wikimedia is that pip and virtualenvs are banned on production, for some (what I now understand as) good reasons (the solid Signing / Security issues with PYPI, and the slightly less solid but nonetheless valid ‘If we use pip for python and gem for ruby and npm for node, EXPLOSION OF PACKAGE MANAGERS and makes things harder to manage’).</description>
+      <description>(As requested by Jean-Fred)&#xA;One of the ‘pain points’ with working on deploying python stuff at Wikimedia is that pip and virtualenvs are banned on production, for some (what I now understand as) good reasons (the solid Signing / Security issues with PYPI, and the slightly less solid but nonetheless valid ‘If we use pip for python and gem for ruby and npm for node, EXPLOSION OF PACKAGE MANAGERS and makes things harder to manage’).</description>
     </item>
-    
     <item>
       <title>Paying for IRCCloud</title>
       <link>https://words.yuvi.in/paying-irccloud/</link>
       <pubDate>Mon, 18 Aug 2014 12:58:45 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/paying-irccloud/</guid>
-      <description>I’ve started paying for IRCCloud.
-It is the first ‘service’ I am paying for as a subscriber, I think. I’ve considered doing that for a long time, but ‘paying for IRC’ just felt… odd. I’ve been using ZNC + LimeChat. It’s decent, but sucks on Mobile. Keeping a socket open all the time on a phone just kills the battery, plus the UX on most Android clients sucks.
-So after seeing Sam Smith use IRCCloud during Wikimania, I made the plunge and paid for IRCCloud.</description>
+      <description>I’ve started paying for IRCCloud.&#xA;It is the first ‘service’ I am paying for as a subscriber, I think. I’ve considered doing that for a long time, but ‘paying for IRC’ just felt… odd. I’ve been using ZNC + LimeChat. It’s decent, but sucks on Mobile. Keeping a socket open all the time on a phone just kills the battery, plus the UX on most Android clients sucks.&#xA;So after seeing Sam Smith use IRCCloud during Wikimania, I made the plunge and paid for IRCCloud.</description>
     </item>
-    
     <item>
       <title>“Write once, attempt to debug everywhere”</title>
       <link>https://words.yuvi.in/write-once-debug-everywhere/</link>
       <pubDate>Sun, 15 Dec 2013 02:20:31 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/write-once-debug-everywhere/</guid>
-      <description>“Write once, attempt to debug everywhere” is probably way more accurate than “Write once, run anywhere” – at least for GUI apps. There’s something rather special about ideas that are theoretically amazingly wonderful yet end up being a major pain in the butt when you try to put them in practice, isn’t it?
-The older Wikipedia App happened to be in PhoneGap, and I consider it one of my biggest blunders to not have torn it down on day 0 and rewritten it in something saner.</description>
+      <description>“Write once, attempt to debug everywhere” is probably way more accurate than “Write once, run anywhere” – at least for GUI apps. There’s something rather special about ideas that are theoretically amazingly wonderful yet end up being a major pain in the butt when you try to put them in practice, isn’t it?&#xA;The older Wikipedia App happened to be in PhoneGap, and I consider it one of my biggest blunders to not have torn it down on day 0 and rewritten it in something saner.</description>
     </item>
-    
     <item>
       <title>Wikipedia Apps reboot taking shape nicely</title>
       <link>https://words.yuvi.in/wikipedia-apps-reboot-taking-shape-nicely/</link>
       <pubDate>Sat, 14 Dec 2013 15:06:28 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/wikipedia-apps-reboot-taking-shape-nicely/</guid>
       <description>Prettier, faster and more feature packed! Native Wikipedia app for Android coming real soon!</description>
     </item>
-    
     <item>
       <title>PHP being insane, part 5832</title>
       <link>https://words.yuvi.in/php-insane-part-5832/</link>
       <pubDate>Fri, 13 Dec 2013 17:58:15 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/php-insane-part-5832/</guid>
-      <description>Somehow: ( $a &amp;amp;&amp;amp; $b ) || ( $b &amp;amp;&amp;amp; $c ) || ( $a &amp;amp;&amp;amp; $c )
-Became: $a ? ( $b || $c ) : ( $b &amp;amp;&amp;amp; $c )
-Became: count( array_filter( array( $a, $b, $c ) ) ) &amp;gt;= 2
-Became: &amp;quot;$a$b$c&amp;quot; &amp;gt; 1
-God dammit PHP…
-(from discussion among me, ^d, ori-l, bd808 and anomie on #mediawiki-core about how to represent ‘if at least 2 of three conditions are true’)</description>
+      <description>Somehow: ( $a &amp;amp;&amp;amp; $b ) || ( $b &amp;amp;&amp;amp; $c ) || ( $a &amp;amp;&amp;amp; $c )&#xA;Became: $a ? ( $b || $c ) : ( $b &amp;amp;&amp;amp; $c )&#xA;Became: count( array_filter( array( $a, $b, $c ) ) ) &amp;gt;= 2&#xA;Became: &amp;quot;$a$b$c&amp;quot; &amp;gt; 1&#xA;God dammit PHP…&#xA;(from discussion among me, ^d, ori-l, bd808 and anomie on #mediawiki-core about how to represent ‘if at least 2 of three conditions are true’)</description>
     </item>
-    
     <item>
       <title>DevLog for Sun, Aug 25, 2013</title>
       <link>https://words.yuvi.in/devlog-for-sun-aug-25-2013/</link>
       <pubDate>Sun, 25 Aug 2013 23:44:25 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/devlog-for-sun-aug-25-2013/</guid>
-      <description>DevLogs have been something I&amp;rsquo;ve not been writing much of of late. Time to fix that!
-WLM Android App Spent some time reviving the WLM Android App. Wasn&amp;rsquo;t too hard, and am surprised at how well it still runs :) Some work still needed to update the templates and other metadata to refer to WLM2013 rather than WLM2012 – but that should not be too hard. The fact that it is an issue at all is simply because I ripped out all the Campaign related APIs a few weeks ago with my UploadCampaign rewrite.</description>
+      <description>DevLogs have been something I&amp;rsquo;ve not been writing much of of late. Time to fix that!&#xA;WLM Android App Spent some time reviving the WLM Android App. Wasn&amp;rsquo;t too hard, and am surprised at how well it still runs :) Some work still needed to update the templates and other metadata to refer to WLM2013 rather than WLM2012 – but that should not be too hard. The fact that it is an issue at all is simply because I ripped out all the Campaign related APIs a few weeks ago with my UploadCampaign rewrite.</description>
     </item>
-    
     <item>
       <title>Die ’80 cols or die!’ guidelines!</title>
       <link>https://words.yuvi.in/die-80-cols-or-die-guidelines/</link>
       <pubDate>Thu, 01 Aug 2013 16:51:09 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/die-80-cols-or-die-guidelines/</guid>
-      <description>Python&amp;rsquo;s PEP8 has just been changed to no longer recommend sticking to 79 columns! The new text says:
-Aim to limit all lines to a maximum of 79 characters, but up to 99 characters is acceptable when it improves readability.  It would be nice to not have any such set limits at all, and just depend on programmers not being insane, but this is still an improvement!</description>
+      <description>Python&amp;rsquo;s PEP8 has just been changed to no longer recommend sticking to 79 columns! The new text says:&#xA;Aim to limit all lines to a maximum of 79 characters, but up to 99 characters is acceptable when it improves readability. It would be nice to not have any such set limits at all, and just depend on programmers not being insane, but this is still an improvement!</description>
     </item>
-    
     <item>
       <title>Sprinkling some Douchebaginess in code</title>
       <link>https://words.yuvi.in/sprinkling-some-douchebaginess-in-code/</link>
       <pubDate>Tue, 30 Jul 2013 08:49:24 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/sprinkling-some-douchebaginess-in-code/</guid>
-      <description>After being frustrated at Java&amp;rsquo;s lack of a generic &amp;lsquo;callback&amp;rsquo; type, I created this interface:
- public interface ContributionUploadProgress {void onUploadStarted(Contribution contribution);boolean isJavaAPieceOfShit();}  And randomly throw around (with onComplete implementing ContributionUploadProgress)
- assert onComplete.isJavaAPieceOfShit();  This, of course, is trivial to fix with an IDE. Should be more fun with a dynamic language :)
-(And yes, I removed that code before committing)</description>
+      <description>After being frustrated at Java&amp;rsquo;s lack of a generic &amp;lsquo;callback&amp;rsquo; type, I created this interface:&#xA;public interface ContributionUploadProgress {&#xD;void onUploadStarted(Contribution contribution);&#xD;boolean isJavaAPieceOfShit();&#xD;} And randomly throw around (with onComplete implementing ContributionUploadProgress)&#xA;assert onComplete.isJavaAPieceOfShit(); This, of course, is trivial to fix with an IDE. Should be more fun with a dynamic language :)&#xA;(And yes, I removed that code before committing)</description>
     </item>
-    
     <item>
       <title>Nitpicking about the Order of Cards</title>
       <link>https://words.yuvi.in/nitpicking-about-the-order-of-cards/</link>
       <pubDate>Mon, 29 Jul 2013 01:18:42 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/nitpicking-about-the-order-of-cards/</guid>
       <description>Someone pointed out this happening on Gerrit…</description>
     </item>
-    
     <item>
       <title>Game of Life in APL</title>
       <link>https://words.yuvi.in/game-of-life-in-apl/</link>
       <pubDate>Thu, 25 Jul 2013 10:52:05 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/game-of-life-in-apl/</guid>
-      <description>Ran across a video explaining building Game of Life in APL. Pretty awesome, and surprisingly – quite understandable too!
-I should learn J at some point, I think. My problem with trying to learn such languages is that I find it hard to find something to build that&amp;rsquo;s not a mere academic exercise, and I still do not have a solution as such. Just &amp;lsquo;try harder&amp;rsquo; doesn&amp;rsquo;t really work. Perhaps invent some sort of wonderful number crunching idea and then implement it?</description>
+      <description>Ran across a video explaining building Game of Life in APL. Pretty awesome, and surprisingly – quite understandable too!&#xA;I should learn J at some point, I think. My problem with trying to learn such languages is that I find it hard to find something to build that&amp;rsquo;s not a mere academic exercise, and I still do not have a solution as such. Just &amp;rsquo;try harder&amp;rsquo; doesn&amp;rsquo;t really work. Perhaps invent some sort of wonderful number crunching idea and then implement it?</description>
     </item>
-    
     <item>
       <title>First major feature to Commons deployed</title>
       <link>https://words.yuvi.in/first-major-feature-to-commons-deployed/</link>
       <pubDate>Tue, 23 Jul 2013 00:40:26 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/first-major-feature-to-commons-deployed/</guid>
-      <description>My UploadWizard work has just been deployed to Wikimedia Commons and my name is listed in the on site credits. Special thanks to Mark Traceur for code review!
-This feels very, very nice :) Now to sneak more code into other extensions…</description>
+      <description>My UploadWizard work has just been deployed to Wikimedia Commons and my name is listed in the on site credits. Special thanks to Mark Traceur for code review!&#xA;This feels very, very nice :) Now to sneak more code into other extensions…</description>
     </item>
-    
     <item>
       <title>Bikeshedding on Gerrit #1</title>
       <link>https://words.yuvi.in/bikeshedding-on-gerrit-1/</link>
       <pubDate>Mon, 22 Jul 2013 14:00:17 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/bikeshedding-on-gerrit-1/</guid>
-      <description>First there was this.
-I was bored, and so there was this. That of course, brought a swift end to the bikeshed. I&amp;rsquo;m only slightly ashamed.</description>
+      <description>First there was this.&#xA;I was bored, and so there was this. That of course, brought a swift end to the bikeshed. I&amp;rsquo;m only slightly ashamed.</description>
     </item>
-    
     <item>
       <title>Attempting to Secure Redis in a Multi Tenant environment</title>
       <link>https://words.yuvi.in/attempting-to-secure-redis-in-a-multi-tenant-environment/</link>
       <pubDate>Sat, 20 Jul 2013 23:48:43 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/attempting-to-secure-redis-in-a-multi-tenant-environment/</guid>
-      <description>When running Redis in a shared cluster/hosting environment (such as Wikimedia Tool Labs, on which I&amp;rsquo;ve been having fun doing a lot of work on), you would want to try to provide at least some guarantee of isolation for your keys from everyone else&amp;rsquo;s keys. Since Redis doesn&amp;rsquo;t do ACLs, this is problematic.
-This can be solved in a couple of ways
-Run a Redis instance for each user This is simple enough to do – each user runs their own Redis instance, and has full access to it.</description>
+      <description>When running Redis in a shared cluster/hosting environment (such as Wikimedia Tool Labs, on which I&amp;rsquo;ve been having fun doing a lot of work on), you would want to try to provide at least some guarantee of isolation for your keys from everyone else&amp;rsquo;s keys. Since Redis doesn&amp;rsquo;t do ACLs, this is problematic.&#xA;This can be solved in a couple of ways&#xA;Run a Redis instance for each user This is simple enough to do – each user runs their own Redis instance, and has full access to it.</description>
     </item>
-    
     <item>
       <title>Autosuggest for Tamil in Android Keyboard</title>
       <link>https://words.yuvi.in/autosuggest-tamil-android-keyboard/</link>
       <pubDate>Sun, 21 Apr 2013 21:35:32 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/autosuggest-tamil-android-keyboard/</guid>
-      <description>Screenshot of Autosuggest working in Tamil on my variant of the Android keyboard. I’ve been working on this on and off for the last few months (this is also my final year project in college). I’ve ported all of the jQuery.IME languages to work on the keyboard natively.
-Now experimenting with Autosuggest. It only needs an appropriate dictionary now and we’ll be good to go. Currently I’m getting Autosuggest working only on Tamil, but the plan is to get it to work for all Indian languages.</description>
+      <description>Screenshot of Autosuggest working in Tamil on my variant of the Android keyboard. I’ve been working on this on and off for the last few months (this is also my final year project in college). I’ve ported all of the jQuery.IME languages to work on the keyboard natively.&#xA;Now experimenting with Autosuggest. It only needs an appropriate dictionary now and we’ll be good to go. Currently I’m getting Autosuggest working only on Tamil, but the plan is to get it to work for all Indian languages.</description>
     </item>
-    
     <item>
       <title>Bugs RESOLVED HUMOROUS</title>
       <link>https://words.yuvi.in/bugs-resolved-humorous/</link>
       <pubDate>Sun, 07 Apr 2013 14:49:24 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/bugs-resolved-humorous/</guid>
-      <description>Mediawiki has a number of humorous bug reports, though not as many as I’d like. Still, they’re quite funny.
-I think my favorites are the request for RESOLVED MURDERED, the real reason why MediaWiki runs on MySQL, someone asking where the community consensus is to stop Volcanoes exploding, offers of shamanic help, a ground breaking report on US Government corruption, and a warning about zoning laws required for shipping Ponies,</description>
+      <description>Mediawiki has a number of humorous bug reports, though not as many as I’d like. Still, they’re quite funny.&#xA;I think my favorites are the request for RESOLVED MURDERED, the real reason why MediaWiki runs on MySQL, someone asking where the community consensus is to stop Volcanoes exploding, offers of shamanic help, a ground breaking report on US Government corruption, and a warning about zoning laws required for shipping Ponies,</description>
     </item>
-    
     <item>
       <title>Tor Flashproxies on your browser</title>
       <link>https://words.yuvi.in/tor-flashproxies-browser/</link>
       <pubDate>Mon, 25 Mar 2013 14:34:57 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/tor-flashproxies-browser/</guid>
       <description>Tor is one of those things that you don’t really need at all until you really really need it. I don’t need it right now, but I still try to help it as much as possible. One of the easiest way to do so is to run a flashproxy (has nothing to do with Adobe!) on your browser – super simple to setup, and effective for people looking for bridges.</description>
     </item>
-    
     <item>
       <title>Mediawiki Bugzilla quips, aka ‘Behind the Scenes (sortof)’</title>
       <link>https://words.yuvi.in/mediawiki-bugzilla-quips-aka-behind-scenes-sortof/</link>
       <pubDate>Fri, 22 Mar 2013 22:37:00 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/mediawiki-bugzilla-quips-aka-behind-scenes-sortof/</guid>
-      <description>You might have heard of bash.org. If not, do go there! (And I am sorry about your afternoon)
-Mediawiki maintains something similar, but much shorter in size &amp;amp; form, at Bugzilla quips. I already appear a few times, but will try to appear some more!</description>
+      <description>You might have heard of bash.org. If not, do go there! (And I am sorry about your afternoon)&#xA;Mediawiki maintains something similar, but much shorter in size &amp;amp; form, at Bugzilla quips. I already appear a few times, but will try to appear some more!</description>
     </item>
-    
     <item>
       <title>Android RegEx bug: ‘null’ replacement with Matcher.replaceAll</title>
       <link>https://words.yuvi.in/android-regex-bug-null-replacement-matcher-replaceall/</link>
       <pubDate>Fri, 22 Mar 2013 22:18:21 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/android-regex-bug-null-replacement-matcher-replaceall/</guid>
-      <description>Android’s Regular Expressions engine is API compatible with the generic Java implementation, but under the hood uses ICU’s RegEx engine. This usually causes no problems, until it does and then you’re sortof fucked, but not really.
-On a recent project, a subtle bug in Android’s Matcher.replaceAll behavior bit me. When replacing values of captured groups (&#39;$1&#39;&amp;lt;/code,&amp;lt;code&amp;gt;&#39;$2&#39;, etc), Android’s implementation replaced a reference to an empty group with the literal string &#39;null&#39; instead of just skipping it (aka replacing with empty string &#39;&#39;), which is what most other Java implemetations do.</description>
+      <description>Android’s Regular Expressions engine is API compatible with the generic Java implementation, but under the hood uses ICU’s RegEx engine. This usually causes no problems, until it does and then you’re sortof fucked, but not really.&#xA;On a recent project, a subtle bug in Android’s Matcher.replaceAll behavior bit me. When replacing values of captured groups (&#39;$1&#39;&amp;lt;/code,&amp;lt;code&amp;gt;&#39;$2&#39;, etc), Android’s implementation replaced a reference to an empty group with the literal string &#39;null&#39; instead of just skipping it (aka replacing with empty string &#39;&#39;), which is what most other Java implemetations do.</description>
     </item>
-    
     <item>
       <title>Worse is Worse</title>
       <link>https://words.yuvi.in/worse-worse/</link>
       <pubDate>Sun, 27 Jan 2013 16:59:06 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/worse-worse/</guid>
-      <description>Richard Gabriel’s Worse is Better (falsly attributed to jwz by many), is a piece on how LISP lost out to C, despite being ‘better’.
-Jim Waldo’s Worse is Worse notes, quite accurately, that what us geeks consider ‘better’ might not what is, in the context of the universe at large, ‘better’. To quote,
- […] what we see is that better is a complicated notion, and can depend on a variety of different metrics.</description>
+      <description>Richard Gabriel’s Worse is Better (falsly attributed to jwz by many), is a piece on how LISP lost out to C, despite being ‘better’.&#xA;Jim Waldo’s Worse is Worse notes, quite accurately, that what us geeks consider ‘better’ might not what is, in the context of the universe at large, ‘better’. To quote,&#xA;[…] what we see is that better is a complicated notion, and can depend on a variety of different metrics.</description>
     </item>
-    
     <item>
       <title>Happiness #1</title>
       <link>https://words.yuvi.in/happiness-1/</link>
       <pubDate>Wed, 31 Oct 2012 19:36:33 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/happiness-1/</guid>
       <description>Happiness is fixing a bug with no obvious cause with a one liner and pushing it out to five million people with wonderful support from a team sitting halfway across the world :-)</description>
     </item>
-    
     <item>
       <title>Staying on the bleeding Edge</title>
       <link>https://words.yuvi.in/blogging-raspberry-pi/</link>
       <pubDate>Thu, 18 Oct 2012 14:58:39 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/blogging-raspberry-pi/</guid>
-      <description>I’m blogging from (one of the many) browsers on this Raspberry Pi. Testing setting it up to do slideshows during JSFoo 2012.
-THIS IS SO COOL!
-I am now editing this blog post from my new Nexus 7.
-THIS IS SO COOL!
-I am a few years behind the curve on this. Last year was spent slogging my ass out at a wonderful startup and travelling to a lot of places meeting and working with some wonderful people.</description>
+      <description>I’m blogging from (one of the many) browsers on this Raspberry Pi. Testing setting it up to do slideshows during JSFoo 2012.&#xA;THIS IS SO COOL!&#xA;I am now editing this blog post from my new Nexus 7.&#xA;THIS IS SO COOL!&#xA;I am a few years behind the curve on this. Last year was spent slogging my ass out at a wonderful startup and travelling to a lot of places meeting and working with some wonderful people.</description>
     </item>
-    
     <item>
       <title>House painters of Programming</title>
       <link>https://words.yuvi.in/house-painters-programming/</link>
       <pubDate>Fri, 05 Oct 2012 07:05:45 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/house-painters-programming/</guid>
-      <description>We’re the Michelangelos of the great age of machine intelligence which is yet to come. We’re sketching out how it’s all going to look. We’re at the forefront of solving incredible problems and creating magical devices. – DanielBMarkham
- If there’s a great age of machine intelligence to come, then one in a million of us may be a Michelangelo. The rest of us are house-painters, and the houses we paint are slated for demolition within our own lifetimes.</description>
+      <description>We’re the Michelangelos of the great age of machine intelligence which is yet to come. We’re sketching out how it’s all going to look. We’re at the forefront of solving incredible problems and creating magical devices. – DanielBMarkham&#xA;If there’s a great age of machine intelligence to come, then one in a million of us may be a Michelangelo. The rest of us are house-painters, and the houses we paint are slated for demolition within our own lifetimes.</description>
     </item>
-    
     <item>
       <title>My .vimrc</title>
       <link>https://words.yuvi.in/my-vimrc/</link>
       <pubDate>Thu, 08 Mar 2012 12:45:06 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/my-vimrc/</guid>
-      <description>I’ve gotten rid of my Vim repo from GitHub, and switched to using Vundle + DropBox to keep my vim environment safely backed up.
-You can find my .vimrc file here. With just this and Vundle setup, I find it much easier to port my settings elsewhere instead of using git.
-Hat tip to tecoholic for pushing me to switch to Vundle :)</description>
+      <description>I’ve gotten rid of my Vim repo from GitHub, and switched to using Vundle + DropBox to keep my vim environment safely backed up.&#xA;You can find my .vimrc file here. With just this and Vundle setup, I find it much easier to port my settings elsewhere instead of using git.&#xA;Hat tip to tecoholic for pushing me to switch to Vundle :)</description>
     </item>
-    
     <item>
       <title>Passing Headers along while Proxying with nginx</title>
       <link>https://words.yuvi.in/passing-headers-proxying-nginx/</link>
       <pubDate>Mon, 20 Feb 2012 20:23:35 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/passing-headers-proxying-nginx/</guid>
-      <description>When you’re proxying requests via nginx, you might assume after reading [the documentation][1] that every header is forwarded, except for the Host and Connection headers.
-You’d also be wrong.
-nginx drops all headers with an underscore in them.
-This is a configurable settings. You can turn it on with a simple
-I’m still baffled as to *why* this is [a configuration parameter][2]. And why it is turned off by default. And why there is no mention of it in the proxy docs.</description>
+      <description>When you’re proxying requests via nginx, you might assume after reading [the documentation][1] that every header is forwarded, except for the Host and Connection headers.&#xA;You’d also be wrong.&#xA;nginx drops all headers with an underscore in them.&#xA;This is a configurable settings. You can turn it on with a simple&#xA;underscores_in_headers on I’m still baffled as to *why* this is [a configuration parameter][2]. And why it is turned off by default.</description>
     </item>
-    
     <item>
       <title>My First Program</title>
       <link>https://words.yuvi.in/program/</link>
       <pubDate>Sat, 07 Jan 2012 21:39:13 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/program/</guid>
-      <description>Note: These are almost a decade old. Reproduced as close to memory as possible
-My first memories of programming aren’t actually C. They were GW-BASIC, and later on, LOGO. I don’t remember any of my BASIC – but I do remember the look on my computer science teacher’s face in 5th grade when I managed to draw a flower with LOGO when everyone else was doing rectangles and lines. I vividly remember it – you draw an arc for a certain length, then stop, draw another arc in the reverse direction for the same length – and you have a petal.</description>
+      <description>Note: These are almost a decade old. Reproduced as close to memory as possible&#xA;My first memories of programming aren’t actually C. They were GW-BASIC, and later on, LOGO. I don’t remember any of my BASIC – but I do remember the look on my computer science teacher’s face in 5th grade when I managed to draw a flower with LOGO when everyone else was doing rectangles and lines. I vividly remember it – you draw an arc for a certain length, then stop, draw another arc in the reverse direction for the same length – and you have a petal.</description>
     </item>
-    
     <item>
       <title>What I learnt from reading “Javascript – The Good Parts”</title>
       <link>https://words.yuvi.in/learnt-reading-javascript-good-parts/</link>
       <pubDate>Mon, 28 Nov 2011 10:40:50 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/learnt-reading-javascript-good-parts/</guid>
-      <description>Just finished reading ‘Javascript – The Good Parts’. Here is what I learnt:
- I knew jack shit about JavaScript. I was able to get along so far simply because I knew jQuery and understood how closures work. Holy shit that’s one fucked up language. Quite schizophrenic, saved by almost limitless extensibility/monkey-patchability/watcha-gonna-do-write-a-java-applet-hahaha . If you’re going to write Javascript, you’ll have to subset. Subsetting/augmenting has its own share of problems – primarily that map in your code might not be the same as map in someone else’s code, even if they seem to be working on the same ‘type’ jQuery is incredible.</description>
+      <description>Just finished reading ‘Javascript – The Good Parts’. Here is what I learnt:&#xA;I knew jack shit about JavaScript. I was able to get along so far simply because I knew jQuery and understood how closures work. Holy shit that’s one fucked up language. Quite schizophrenic, saved by almost limitless extensibility/monkey-patchability/watcha-gonna-do-write-a-java-applet-hahaha . If you’re going to write Javascript, you’ll have to subset. Subsetting/augmenting has its own share of problems – primarily that map in your code might not be the same as map in someone else’s code, even if they seem to be working on the same ‘type’ jQuery is incredible.</description>
     </item>
-    
     <item>
       <title>My Vim setup</title>
       <link>https://words.yuvi.in/my-vim-setup/</link>
       <pubDate>Tue, 23 Aug 2011 22:55:03 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/my-vim-setup/</guid>
-      <description>I moved from emacs to vim a while ago, and have been steadily accumulating a series of plugins in my .vim. They’re all up in my rather messy dotfiles repo. Here’s a slightly more neatly organized list of the plugins I currently use:
- command-t – File opener and buffer switcher. In-fuckin-credibly useful. vimpress – What I use to blog since moving to wordpress. matchit – Lets % work with html tags commentary – Generic commenting and uncommenting scriptNERDCommenter has replaced commentary due to being more flexible and having more options.</description>
+      <description>I moved from emacs to vim a while ago, and have been steadily accumulating a series of plugins in my .vim. They’re all up in my rather messy dotfiles repo. Here’s a slightly more neatly organized list of the plugins I currently use:&#xA;command-t – File opener and buffer switcher. In-fuckin-credibly useful. vimpress – What I use to blog since moving to wordpress. matchit – Lets % work with html tags commentary – Generic commenting and uncommenting script NERDCommenter has replaced commentary due to being more flexible and having more options.</description>
     </item>
-    
     <item>
       <title>Non-ASCII Characters in HTTP Headers</title>
       <link>https://words.yuvi.in/non-ascii-characters-http-headers/</link>
       <pubDate>Sat, 13 Aug 2011 00:56:10 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/non-ascii-characters-http-headers/</guid>
       <description>I was debugging an issue at work today where a (generated) file refused to download in Chrome, but the same URL worked just fine with wget. I remember reading in the HTTP Spec that HTTP headers can only be lower ASCII, so when wget mangled the output file’s name, the problem was obvious – the file name contained a character that wasn’t in lower ASCII (an accented A). Chrome had borked on encountering it, while wget soldiered on.</description>
     </item>
-    
     <item>
       <title>You are a programmer if you can run code in your head</title>
       <link>https://words.yuvi.in/programmer-run-code-head/</link>
       <pubDate>Thu, 11 Aug 2011 04:09:23 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/programmer-run-code-head/</guid>
-      <description>From HN:
- From my experience, the largest hurdle first time programmers have is being able to execute programs in their head. It takes a cognitive leap to go from the source code in front of them, and what happens at runtime.
- (emphasis mine)
-I believe that if you have made that cognitive leap, you can call yourself a programmer. It means you’ve entered into the second hump – you are a programmer.</description>
+      <description>From HN:&#xA;From my experience, the largest hurdle first time programmers have is being able to execute programs in their head. It takes a cognitive leap to go from the source code in front of them, and what happens at runtime.&#xA;(emphasis mine)&#xA;I believe that if you have made that cognitive leap, you can call yourself a programmer. It means you’ve entered into the second hump – you are a programmer.</description>
     </item>
-    
     <item>
       <title>SleepSort from 4Chan</title>
       <link>https://words.yuvi.in/sleepsort-4chan/</link>
       <pubDate>Sun, 19 Jun 2011 01:40:36 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/sleepsort-4chan/</guid>
-      <description>4Chan isn’t exactly what you’d associate with ‘shit, that’s a cool piece of code!’, but look what I found!
-(via HN)
-Nice hack. And it is O(N) in bitsize of largest number (Ignoring all the overhead of forking new processes, the problem with the race conditions(Sort 0 and 0.1? How about 0.01 and 0.011?), processor contention, etc,.) They basically delegated the sorting to the process scheduler, treating it as a sort of priority queue.</description>
+      <description>4Chan isn’t exactly what you’d associate with ‘shit, that’s a cool piece of code!’, but look what I found!&#xA;(via HN)&#xA;Nice hack. And it is O(N) in bitsize of largest number (Ignoring all the overhead of forking new processes, the problem with the race conditions(Sort 0 and 0.1? How about 0.01 and 0.011?), processor contention, etc,.) They basically delegated the sorting to the process scheduler, treating it as a sort of priority queue.</description>
     </item>
-    
     <item>
       <title>SICP and BrainFuck</title>
       <link>https://words.yuvi.in/sicp-and-brainfuck/</link>
       <pubDate>Fri, 13 May 2011 05:10:31 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/sicp-and-brainfuck/</guid>
-      <description>No, I’m not going to blow your mind by telling you I’m going to do the SICP exercises in BrainFuck :)
-I just wrote my first brainfuck program. Might as well be my last, but not sure. Tape-based turing-ish programing seems fun, so maybe I’ll try that again with something more expressive than brainfuck (or maybe that is pointless?)
-And I’m doing the SICP Exercises. In MIT-Scheme. I’ve put them up on GitHub.</description>
+      <description>No, I’m not going to blow your mind by telling you I’m going to do the SICP exercises in BrainFuck :)&#xA;I just wrote my first brainfuck program. Might as well be my last, but not sure. Tape-based turing-ish programing seems fun, so maybe I’ll try that again with something more expressive than brainfuck (or maybe that is pointless?)&#xA;And I’m doing the SICP Exercises. In MIT-Scheme. I’ve put them up on GitHub.</description>
     </item>
-    
     <item>
       <title>GStreamer 101 at GNOME Asia 2011</title>
       <link>https://words.yuvi.in/gstreamer-101-at-gnome-asia-2011/</link>
       <pubDate>Sun, 10 Apr 2011 23:02:48 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/gstreamer-101-at-gnome-asia-2011/</guid>
-      <description>My GStreamer 101 presentation at GNOME.asia was very wel received. I was quite happy with the way it turned out. Thanks to Ford_Prefect and Bharath Acharya for pulling me in :)
-My very minimal slides are here. You can reuse them if you want to.
-Sadly, missed the week long hackfest :( Next time!</description>
+      <description>My GStreamer 101 presentation at GNOME.asia was very wel received. I was quite happy with the way it turned out. Thanks to Ford_Prefect and Bharath Acharya for pulling me in :)&#xA;My very minimal slides are here. You can reuse them if you want to.&#xA;Sadly, missed the week long hackfest :( Next time!</description>
     </item>
-    
     <item>
       <title>DevLog: Jan 2011</title>
       <link>https://words.yuvi.in/devlog-jan-2011/</link>
       <pubDate>Tue, 01 Feb 2011 12:37:06 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/devlog-jan-2011/</guid>
-      <description>I’ve started keeping devlogs, recording everyday ‘productive’ activity I do everyday. Publicly shaming myself into doing something productive every day. Just records for this month, next month on should provide time spent as well. There’s an entry for every day when I’ve touched a computer. I’ll be continuously refining this format, so feedback welcome
-Links: 32HourStartup, Busroutes.in Wiki, PiTiVi, Geekweekend
-27 Jan More of nothing productive. 32HourStartup is eating into my dev time.</description>
+      <description>I’ve started keeping devlogs, recording everyday ‘productive’ activity I do everyday. Publicly shaming myself into doing something productive every day. Just records for this month, next month on should provide time spent as well. There’s an entry for every day when I’ve touched a computer. I’ll be continuously refining this format, so feedback welcome&#xA;Links: 32HourStartup, Busroutes.in Wiki, PiTiVi, Geekweekend&#xA;27 Jan More of nothing productive. 32HourStartup is eating into my dev time.</description>
     </item>
-    
     <item>
       <title>Functional Programming Geekweekend at Thoughtworks</title>
       <link>https://words.yuvi.in/functional-programming-geekweekend-at-thoughtworks/</link>
       <pubDate>Tue, 25 Jan 2011 18:51:26 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/functional-programming-geekweekend-at-thoughtworks/</guid>
-      <description>[Note: I’ve a rather large backlog of blog posts to do, will push them out as soon as I can]
-Saturday (22 Jan 2011) was spent at Geekweekend, organized at Thougtworks Chennai. The event had awesomeness written all over it, even before it started – how can any event where you register through a (rather limited, but still) command line interface on a website be not good? :D
-I was late as usual (damn living so far away from everywhere) – and found my way walking through the underbelly of the Kathipara junction thanks to Google Maps’ Walking Directions :P</description>
+      <description>[Note: I’ve a rather large backlog of blog posts to do, will push them out as soon as I can]&#xA;Saturday (22 Jan 2011) was spent at Geekweekend, organized at Thougtworks Chennai. The event had awesomeness written all over it, even before it started – how can any event where you register through a (rather limited, but still) command line interface on a website be not good? :D&#xA;I was late as usual (damn living so far away from everywhere) – and found my way walking through the underbelly of the Kathipara junction thanks to Google Maps’ Walking Directions :P</description>
     </item>
-    
     <item>
       <title>Enthusiastic Teachers and Naive Implementation of Gauss Seidel Approximations</title>
       <link>https://words.yuvi.in/enthusiastic-teachers-and-naive-implementation-of-gauss-seidel-approximations/</link>
       <pubDate>Sat, 25 Dec 2010 11:50:04 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/enthusiastic-teachers-and-naive-implementation-of-gauss-seidel-approximations/</guid>
-      <description>This semester, one of our so called electives (despite the fact that we have no real choice in them) is Numerical Methods. I don’t quite like the actual way the subject is taught – mind numbing, error prone calculations with a calculator. However, the methods are pretty awesome.
-The staff explained Gauss Seidel yesterday, and it seemed a straightforward recursive solution to me. So in the break, I cooked up a small python script that gave me all the intermediate answers as well – so for any assignments I could just run them through this and copy it to paper.</description>
+      <description>This semester, one of our so called electives (despite the fact that we have no real choice in them) is Numerical Methods. I don’t quite like the actual way the subject is taught – mind numbing, error prone calculations with a calculator. However, the methods are pretty awesome.&#xA;The staff explained Gauss Seidel yesterday, and it seemed a straightforward recursive solution to me. So in the break, I cooked up a small python script that gave me all the intermediate answers as well – so for any assignments I could just run them through this and copy it to paper.</description>
     </item>
-    
     <item>
       <title>More Effects for Cheese!</title>
       <link>https://words.yuvi.in/more-effects-for-cheese/</link>
       <pubDate>Tue, 07 Dec 2010 02:42:49 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/more-effects-for-cheese/</guid>
-      <description>Watch two rather handsome1 dudes (daniel and andreas) in this screencast where they show off some more effects (thanks to fargiolas!). Newer effects are easier to add (feels awesome that that was my work) – and more will be on their way :)
-footnote: 1: Professional opinion from one of my lady friends :P</description>
+      <description>Watch two rather handsome1 dudes (daniel and andreas) in this screencast where they show off some more effects (thanks to fargiolas!). Newer effects are easier to add (feels awesome that that was my work) – and more will be on their way :)&#xA;footnote: 1: Professional opinion from one of my lady friends :P</description>
     </item>
-    
     <item>
       <title>Moving to Vim from Emacs</title>
       <link>https://words.yuvi.in/moving-to-vim-from-emacs/</link>
       <pubDate>Tue, 07 Dec 2010 01:14:21 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/moving-to-vim-from-emacs/</guid>
       <description>I moved to Vim from Emacs a while back. I realized I was not using emacs to its fullest extent – I was using it as ‘just a text editor’, and alt-tabbing to gnome-terminal for most of my work. I was using one tool per job anyway, so why not go all the way and use a text editor for a text editor instead of yet another operating system :P</description>
     </item>
-    
     <item>
       <title>How to increase Cheese’s Burst Mode Photo Count</title>
       <link>https://words.yuvi.in/how-to-increase-cheeses-burst-mode-photo-count/</link>
       <pubDate>Sun, 07 Nov 2010 14:50:51 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/how-to-increase-cheeses-burst-mode-photo-count/</guid>
-      <description>“Why does Cheese have a maximum photo count of 100 in burst mode?” questions have popped up quite a few times on the cheese list. It is just a teeny, tiny bug – fixed in master.
-The work around is simple:
-Till Cheese 2.32
-Raise it to whatever value you want in line 8 of /usr/share/cheese/cheese-prefs.ui.
-(If you don’t know what version you are running, check Help -&amp;gt; About)
-(Fix is just raising the limit from 100 to something that most people will likely not hit.</description>
+      <description>“Why does Cheese have a maximum photo count of 100 in burst mode?” questions have popped up quite a few times on the cheese list. It is just a teeny, tiny bug – fixed in master.&#xA;The work around is simple:&#xA;Till Cheese 2.32&#xA;Raise it to whatever value you want in line 8 of /usr/share/cheese/cheese-prefs.ui.&#xA;(If you don’t know what version you are running, check Help -&amp;gt; About)&#xA;(Fix is just raising the limit from 100 to something that most people will likely not hit.</description>
     </item>
-    
     <item>
       <title>Why I moved off Arch (on my Netbook)</title>
       <link>https://words.yuvi.in/why-i-moved-off-arch-on-my-netbook/</link>
       <pubDate>Mon, 01 Nov 2010 17:24:25 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/why-i-moved-off-arch-on-my-netbook/</guid>
-      <description>I posted a while back that I moved to Arch (from Ubuntu) on my Netbook. That was almost two months back. My Arch experiment, sadly, didn’t work out for long. I moved back to Ubuntu within a couple of week’s time. Why?
- Lack of binary packages. I had to build quite a few packages from source because there were no binary packages available. The tilting point was when I figured there were no binary packges for mit-scheme!</description>
+      <description>I posted a while back that I moved to Arch (from Ubuntu) on my Netbook. That was almost two months back. My Arch experiment, sadly, didn’t work out for long. I moved back to Ubuntu within a couple of week’s time. Why?&#xA;Lack of binary packages. I had to build quite a few packages from source because there were no binary packages available. The tilting point was when I figured there were no binary packges for mit-scheme!</description>
     </item>
-    
     <item>
       <title>Running ArchLinux</title>
       <link>https://words.yuvi.in/running-archlinux/</link>
       <pubDate>Mon, 06 Sep 2010 22:58:20 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/running-archlinux/</guid>
-      <description>I’m blogging from Arch Linux :D
-I’ve been meaning to setup Arch on my netbook for a while, after hearing a lot of people rave about how awesome pacman is and how fast their system is. I didn’t want to spend time on moving to a new distro during my GSoC, so I kept putting it off. Yesterday Ubuntu borked on my netbook for some weird reason (I suspect it was my friend Rathna sitting on it, but might have been because I was thinking of moving to Vim too) – and I took the opportunity to install Arch.</description>
+      <description>I’m blogging from Arch Linux :D&#xA;I’ve been meaning to setup Arch on my netbook for a while, after hearing a lot of people rave about how awesome pacman is and how fast their system is. I didn’t want to spend time on moving to a new distro during my GSoC, so I kept putting it off. Yesterday Ubuntu borked on my netbook for some weird reason (I suspect it was my friend Rathna sitting on it, but might have been because I was thinking of moving to Vim too) – and I took the opportunity to install Arch.</description>
     </item>
-    
     <item>
       <title>The End of GSoC 2010</title>
       <link>https://words.yuvi.in/the-end-of-gsoc-2010/</link>
       <pubDate>Thu, 02 Sep 2010 23:42:20 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/the-end-of-gsoc-2010/</guid>
-      <description>Google Summer of Code ended a while back. Me (and most on #gsoc) agreed on one thing – WHERE DID THOSE 3 MONTHS GO? Amazing time it was – thanks to _ke (Who is frolicking somewhere in Thailand right now), fargiolas and the rest of the GNOME guys (#clutter, #gstreamer and #gtk+ yay!) for making it awesome. #hackers-india was a great venting place too :)
-Cheese‘s master needs quite a bit of work before it can be included in GNOME 3.</description>
+      <description>Google Summer of Code ended a while back. Me (and most on #gsoc) agreed on one thing – WHERE DID THOSE 3 MONTHS GO? Amazing time it was – thanks to _ke (Who is frolicking somewhere in Thailand right now), fargiolas and the rest of the GNOME guys (#clutter, #gstreamer and #gtk+ yay!) for making it awesome. #hackers-india was a great venting place too :)&#xA;Cheese‘s master needs quite a bit of work before it can be included in GNOME 3.</description>
     </item>
-    
     <item>
       <title>Cheese 2.31.1 Released</title>
       <link>https://words.yuvi.in/cheese-2-31-1-released/</link>
       <pubDate>Thu, 22 Jul 2010 19:57:53 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/cheese-2-31-1-released/</guid>
-      <description>If you had read my Cheese GSoC proposal, it would’ve stressed on one major point – make Cheese sexy.
-Two days ago, one of my classmates spent 5 minutes on the bus using Cheese and trying out different effects (and poses!). Today, my brother spent 20 minutes trying to get the perfect combination of style and vagueness for his Facebook profile picture – using Cheese. He then asked me to create an account for him in Ubuntu (he was an exclusively Win7 user till then) before leaving.</description>
+      <description>If you had read my Cheese GSoC proposal, it would’ve stressed on one major point – make Cheese sexy.&#xA;Two days ago, one of my classmates spent 5 minutes on the bus using Cheese and trying out different effects (and poses!). Today, my brother spent 20 minutes trying to get the perfect combination of style and vagueness for his Facebook profile picture – using Cheese. He then asked me to create an account for him in Ubuntu (he was an exclusively Win7 user till then) before leaving.</description>
     </item>
-    
     <item>
       <title>“Room Full of People Like Me”</title>
       <link>https://words.yuvi.in/room-full-of-people-like-me/</link>
       <pubDate>Thu, 22 Jul 2010 03:02:02 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/room-full-of-people-like-me/</guid>
-      <description>I would give an arm, a leg, an eye and other assorted body parts if I could find such a room. And live there.
-Hackerpace Chennai or The Startup Center better turn up fast :)</description>
+      <description>&#34;I can&amp;#39;t tell you how wonderful it was - I walked into this room, and it was full of people like me&#34; I would give an arm, a leg, an eye and other assorted body parts if I could find such a room. And live there.&#xA;Hackerpace Chennai or The Startup Center better turn up fast :)</description>
     </item>
-    
     <item>
       <title>My GSoC 2010 Proposal</title>
       <link>https://words.yuvi.in/my-gsoc-2010-proposal/</link>
       <pubDate>Thu, 22 Jul 2010 02:45:06 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/my-gsoc-2010-proposal/</guid>
-      <description>I used gist to publish my GSoC proposal. Diffs, easy to show off, and Markdown support – made gist perfect for me to make modifications and get feedback easily.
-It is the first ‘real’ document I’ve written – it actually had a tangible effect.
-Now that I don’t need to make any modifications, I’ve moved it to my site.</description>
+      <description>I used gist to publish my GSoC proposal. Diffs, easy to show off, and Markdown support – made gist perfect for me to make modifications and get feedback easily.&#xA;It is the first ‘real’ document I’ve written – it actually had a tangible effect.&#xA;Now that I don’t need to make any modifications, I’ve moved it to my site.</description>
     </item>
-    
     <item>
       <title>Cheese GSoC Report – Week 8</title>
       <link>https://words.yuvi.in/cheese-gsoc-report-week-8/</link>
       <pubDate>Thu, 22 Jul 2010 00:37:31 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/cheese-gsoc-report-week-8/</guid>
-      <description>This week on Cheese….
-WE MADE A RELEASE! :)
-http://ftp.gnome.org/pub/GNOME/sources/cheese/2.31/
-Cheese 2.31.1 is out. It’s a dev release. Does not have zarro boogs.
-But it is a release!
-This week, we
- Fixed several perf bugs. Fixed some weird preferences dialog bugs Filed (and eventually had fixed) a bug in GStreamer. Fixed a regression Beautified the UI a bit (text name overlay of effects, etc) Assorted administrative work to prepare for release (Copyright  updating, merging back into master, etc)  I also passed my mid terms :)</description>
+      <description>This week on Cheese….&#xA;WE MADE A RELEASE! :)&#xA;http://ftp.gnome.org/pub/GNOME/sources/cheese/2.31/&#xA;Cheese 2.31.1 is out. It’s a dev release. Does not have zarro boogs.&#xA;But it is a release!&#xA;This week, we&#xA;Fixed several perf bugs. Fixed some weird preferences dialog bugs Filed (and eventually had fixed) a bug in GStreamer. Fixed a regression Beautified the UI a bit (text name overlay of effects, etc) Assorted administrative work to prepare for release (Copyright updating, merging back into master, etc) I also passed my mid terms :)</description>
     </item>
-    
     <item>
       <title>Cheese GSoC Report – Week 7</title>
       <link>https://words.yuvi.in/cheese-gsoc-report-week-7/</link>
       <pubDate>Mon, 12 Jul 2010 18:26:54 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/cheese-gsoc-report-week-7/</guid>
-      <description>This week on Cheese….
- Performance enhancements. Sacrificed some startup time for much improved usage time. Viewing live effects are now a snap. So is selecting an effect. We went in some cases from ~15s to &amp;lt;1s. Thanks to Tester (and other folks) at #gstreamer for helping out :) Paging of effects. Effects are now in pages of 9 each, instead of a huge scroller area. Applying effects without stopping the pipeline.</description>
+      <description>This week on Cheese….&#xA;Performance enhancements. Sacrificed some startup time for much improved usage time. Viewing live effects are now a snap. So is selecting an effect. We went in some cases from ~15s to &amp;lt;1s. Thanks to Tester (and other folks) at #gstreamer for helping out :) Paging of effects. Effects are now in pages of 9 each, instead of a huge scroller area. Applying effects without stopping the pipeline.</description>
     </item>
-    
     <item>
       <title>Reddit University – SICP Reading Group</title>
       <link>https://words.yuvi.in/reddit-university-sicp-reading-group/</link>
       <pubDate>Sat, 03 Jul 2010 17:59:34 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/reddit-university-sicp-reading-group/</guid>
-      <description>I’ve joined Reddit University‘s SICP Reading Group class. I’ve wanted to read through SICP for a long time, and have gotten started many times – never completed it. Maybe the group effects will help me finish this time :)
-If you’re interested in expanding your horizons beyond mere code-monkey programming, join up!</description>
+      <description>I’ve joined Reddit University‘s SICP Reading Group class. I’ve wanted to read through SICP for a long time, and have gotten started many times – never completed it. Maybe the group effects will help me finish this time :)&#xA;If you’re interested in expanding your horizons beyond mere code-monkey programming, join up!</description>
     </item>
-    
     <item>
       <title>Cheese GSoC Report – Week 5</title>
       <link>https://words.yuvi.in/cheese-gsoc-report-week-5/</link>
       <pubDate>Thu, 01 Jul 2010 02:35:58 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/cheese-gsoc-report-week-5/</guid>
-      <description>Late report. But I did get quite a bit done!
-Last week…
- Video Effects file format reader Live Preview of Effects! (YAY!) Effect files added  Live Preview took most of my time. We bought down CPU usage from ~90% to a more manageable ~50%. Cleaned up code a bit (still needs more cleanup). It is rather very ‘demoable’, provided you gloss over the slowdowns.
-Coming up next week would be…</description>
+      <description>Late report. But I did get quite a bit done!&#xA;Last week…&#xA;Video Effects file format reader Live Preview of Effects! (YAY!) Effect files added Live Preview took most of my time. We bought down CPU usage from ~90% to a more manageable ~50%. Cleaned up code a bit (still needs more cleanup). It is rather very ‘demoable’, provided you gloss over the slowdowns.&#xA;Coming up next week would be…</description>
     </item>
-    
     <item>
       <title>Cheese GSoC Report – Week 4</title>
       <link>https://words.yuvi.in/cheese-gsoc-report-week-4/</link>
       <pubDate>Sun, 20 Jun 2010 04:24:14 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/cheese-gsoc-report-week-4/</guid>
-      <description>Fourth week of the Summer of Code was over a few days back, and this report is overdue :( I’ve not been able to code as much as I wanted to this week – due to various non-technical issues. Will compensate in the next week.
-Last week…
- Countdown Animations (Thanks to _ke for cleanup!) GConf Cleanup  Yes, that was it.
-Totally failed to meet last week’s goals. Sigh.</description>
+      <description>Fourth week of the Summer of Code was over a few days back, and this report is overdue :( I’ve not been able to code as much as I wanted to this week – due to various non-technical issues. Will compensate in the next week.&#xA;Last week…&#xA;Countdown Animations (Thanks to _ke for cleanup!) GConf Cleanup Yes, that was it.&#xA;Totally failed to meet last week’s goals. Sigh.&#xA;By next week, I hope to have accomplished…</description>
     </item>
-    
     <item>
       <title>Cheese GSoC Report – Week 3</title>
       <link>https://words.yuvi.in/cheese-gsoc-report-week-3/</link>
       <pubDate>Sun, 13 Jun 2010 04:24:14 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/cheese-gsoc-report-week-3/</guid>
-      <description>Third week of the Summer of Code is over! And during this week….
- Successfully wrapped up the core cheese functionality (libcheese) with a vala wrapper Made Photo Mode work Made Video Mode work Made Burst Mode work Made cheese single instance using libunique Started work on cleaning up GConf code.  In last week’s report, I mentioned that I didn’t quite like my pace of work. It is still the same (approx.</description>
+      <description>Third week of the Summer of Code is over! And during this week….&#xA;Successfully wrapped up the core cheese functionality (libcheese) with a vala wrapper Made Photo Mode work Made Video Mode work Made Burst Mode work Made cheese single instance using libunique Started work on cleaning up GConf code. In last week’s report, I mentioned that I didn’t quite like my pace of work. It is still the same (approx.</description>
     </item>
-    
     <item>
       <title>Cheese GSoC Report – Week 2</title>
       <link>https://words.yuvi.in/cheese-gsoc-report-week-2/</link>
       <pubDate>Sun, 06 Jun 2010 04:20:42 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/cheese-gsoc-report-week-2/</guid>
-      <description>Second week of the (rather hot and sweaty) Summer of Code is over! And during this week….
- Replicated most of the UI of Cheese Learnt how to make C and Vala code co-exist (Thanks folks at #vala!) Made the thumbnail widget work, in both modes/orientations Implemented fullscreen mode, with autohiding of the action buttons Started modifying parts of libcheese to support clutter for video output  In last week’s report, I mentioned that I didn’t quite like my pace of work.</description>
+      <description>Second week of the (rather hot and sweaty) Summer of Code is over! And during this week….&#xA;Replicated most of the UI of Cheese Learnt how to make C and Vala code co-exist (Thanks folks at #vala!) Made the thumbnail widget work, in both modes/orientations Implemented fullscreen mode, with autohiding of the action buttons Started modifying parts of libcheese to support clutter for video output In last week’s report, I mentioned that I didn’t quite like my pace of work.</description>
     </item>
-    
     <item>
       <title>Cheese GSoC Report – Week 1</title>
       <link>https://words.yuvi.in/cheese-gsoc-report-week-1/</link>
       <pubDate>Sun, 30 May 2010 02:22:41 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/cheese-gsoc-report-week-1/</guid>
-      <description>First week of official coding is over. What do I have to show for it?
- Moved code from Github to GNOME Git (Thanks fargiolas!) Learnt how to use GTKBuilder, and how to autoconnect signals to vala callback functions. Learnt some of the intricacies of Gtk+ Layouts (They still have a lot to teach me!) Got a very basic version of the basic Cheese window up and running. Learnt how to embed Clutter into the Gtk+ base of Cheese.</description>
+      <description>First week of official coding is over. What do I have to show for it?&#xA;Moved code from Github to GNOME Git (Thanks fargiolas!) Learnt how to use GTKBuilder, and how to autoconnect signals to vala callback functions. Learnt some of the intricacies of Gtk+ Layouts (They still have a lot to teach me!) Got a very basic version of the basic Cheese window up and running. Learnt how to embed Clutter into the Gtk+ base of Cheese.</description>
     </item>
-    
     <item>
       <title>Vala, GTKBuilder and Autoconnecting Signal Handlers</title>
       <link>https://words.yuvi.in/vala-gtkbuilder-and-autoconnecting-signal-handlers/</link>
       <pubDate>Sun, 30 May 2010 02:22:41 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/vala-gtkbuilder-and-autoconnecting-signal-handlers/</guid>
-      <description>Note: I’m not an expert on Vala, GTK+, or anything else for that matter. If I am off base someplace, comment.
-I spent quite a some time today trying to get GTKBuilder to automagically connect all my signals to their handlers. I tripped up at a few places, and so recording them here for posterity.
-  If you are using instance methods (like most of us are), you’ve to decorate your handler function with the attribute [CCode (instance_pos=-1)].</description>
+      <description>Note: I’m not an expert on Vala, GTK+, or anything else for that matter. If I am off base someplace, comment.&#xA;I spent quite a some time today trying to get GTKBuilder to automagically connect all my signals to their handlers. I tripped up at a few places, and so recording them here for posterity.&#xA;If you are using instance methods (like most of us are), you’ve to decorate your handler function with the attribute [CCode (instance_pos=-1)].</description>
     </item>
-    
     <item>
       <title>GSoC Milestones – Vala Build using AutoTools</title>
       <link>https://words.yuvi.in/gsoc-milestones-vala-build-using-autotools/</link>
       <pubDate>Thu, 06 May 2010 07:00:20 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/gsoc-milestones-vala-build-using-autotools/</guid>
-      <description>I’m using a RTM List to track my milestones for this my GSoC this year. I’ll be making a blog post for each item ticked off that list, to share what I’ve learnt in my journey from n00b to someone whose code is good enough to be included in GNOME. This is part 1 in the series, where I tell you about autotools
-My GSoC project involves, moving major parts (UI) of Cheese to a new language – Vala.</description>
+      <description>I’m using a RTM List to track my milestones for this my GSoC this year. I’ll be making a blog post for each item ticked off that list, to share what I’ve learnt in my journey from n00b to someone whose code is good enough to be included in GNOME. This is part 1 in the series, where I tell you about autotools&#xA;My GSoC project involves, moving major parts (UI) of Cheese to a new language – Vala.</description>
     </item>
-    
     <item>
       <title>GSoC Milestone 0 – What does my project do?</title>
       <link>https://words.yuvi.in/gsoc-milestone-0-what-does-my-project-do/</link>
       <pubDate>Tue, 04 May 2010 00:48:06 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/gsoc-milestone-0-what-does-my-project-do/</guid>
       <description>I’m using a RTM List to track my milestones for this my GSoC this year. I’ll be making a blog post for each item ticked off that list, to share what I’ve learnt in my journey from n00b to someone whose code is good enough to be included in GNOME. This is part 0 in the series, where I tell you what my project is all about and how Cheese is going to become awesomer.</description>
     </item>
-    
     <item>
       <title>My First Accepted Patch!</title>
       <link>https://words.yuvi.in/my-first-accepted-patch/</link>
       <pubDate>Sat, 01 May 2010 19:04:18 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/my-first-accepted-patch/</guid>
-      <description>As part of my GSoC preparations, I wrote a few patches for Cheese. One of them (a one liner to fix a crash) has made it to GNOME 2.30.1 – the other two (1 and 2) are slightly more significant and involve UI changes, and so will be integrated later.
-Free beer to everyone who can catch me in a bar! Free Pepsi/Sprite/Egg Puff to anyone who can catch me in the College Stores ;)</description>
+      <description>As part of my GSoC preparations, I wrote a few patches for Cheese. One of them (a one liner to fix a crash) has made it to GNOME 2.30.1 – the other two (1 and 2) are slightly more significant and involve UI changes, and so will be integrated later.&#xA;Free beer to everyone who can catch me in a bar! Free Pepsi/Sprite/Egg Puff to anyone who can catch me in the College Stores ;)</description>
     </item>
-    
     <item>
       <title>GSoC 2010 – The Beginning</title>
       <link>https://words.yuvi.in/gsoc-2010-the-beginning/</link>
       <pubDate>Sat, 01 May 2010 18:53:43 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/gsoc-2010-the-beginning/</guid>
-      <description>I mentioned this in passing in my earlier post, and was tweeting about it quite furiously – I’ve been selected to work on Cheese for this year’s Google Summer of Code :D
-Link to my, uhm, cheesy proposal
-What Now? Getting accepted doesn’t mean shit. Actually finishing whatever I was supposed to within 3 months does mean something – especially since I’ve taken on quite a bit of stuff to do (Move to new language + 2 new features).</description>
+      <description>I mentioned this in passing in my earlier post, and was tweeting about it quite furiously – I’ve been selected to work on Cheese for this year’s Google Summer of Code :D&#xA;Link to my, uhm, cheesy proposal&#xA;What Now? Getting accepted doesn’t mean shit. Actually finishing whatever I was supposed to within 3 months does mean something – especially since I’ve taken on quite a bit of stuff to do (Move to new language + 2 new features).</description>
     </item>
-    
     <item>
       <title>Hacking more!</title>
       <link>https://words.yuvi.in/hacking-more/</link>
       <pubDate>Wed, 21 Apr 2010 20:08:24 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/hacking-more/</guid>
-      <description>Quoting from Steven Levy‘s Hackers:
- [..] a project undertaken or a product built not solely to fulfill
-  some constructive goal, but with some wild pleasure taken in mere
-  involvement, was called a “hack.”
- Building things for the fun of building them is hacking. And hacking is not illegally breaking into computers.
-I like hacking. I want to be a real hacker. I can’t call myself one yet.</description>
+      <description>Quoting from Steven Levy‘s Hackers:&#xA;[..] a project undertaken or a product built not solely to fulfill&#xA;some constructive goal, but with some wild pleasure taken in mere&#xA;involvement, was called a “hack.”&#xA;Building things for the fun of building them is hacking. And hacking is not illegally breaking into computers.&#xA;I like hacking. I want to be a real hacker. I can’t call myself one yet.&#xA;I’m putting this up as a reminder to myself – about what is important and what isn’t.</description>
     </item>
-    
     <item>
       <title>Dokuwiki plugin to easily embed Gists</title>
       <link>https://words.yuvi.in/dokuwiki-plugin-to-easily-embed-gists/</link>
       <pubDate>Mon, 19 Apr 2010 19:33:03 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/dokuwiki-plugin-to-easily-embed-gists/</guid>
-      <description>I love Gist.
-I recently started a project that required me to embed gists in Dokuwiki. I hunted around and found no plugins, so created my own. Needs the superawesome command plugin too. Released under the 3 clause BSD License.</description>
+      <description>I love Gist.&#xA;I recently started a project that required me to embed gists in Dokuwiki. I hunted around and found no plugins, so created my own. Needs the superawesome command plugin too. Released under the 3 clause BSD License.</description>
     </item>
-    
     <item>
       <title>Block cursor vs Post Cursor (gVim vs Emacs)</title>
       <link>https://words.yuvi.in/block-cursor-vs-post-cursor-gvim-vs-emacs/</link>
       <pubDate>Wed, 28 Oct 2009 00:40:41 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/block-cursor-vs-post-cursor-gvim-vs-emacs/</guid>
-      <description>Here is an approximate timeline of the editors I’ve used so far:
- Turbo C++ (4th grade to 8th grade) Visual Basic 6 (8th grade to 10th grade) Visual Studio 2005 (10th grade to 11th grade) Visual Studio 2008 (11th grade to 1st year of college) gVim (1st year of college) GNU Emacs (after gVim)  Now, the one thing, maybe even the only thing I miss is the fact that gVim gives me the I-Bar cursor, while Emacs by default gave me the block cursor.</description>
+      <description>Here is an approximate timeline of the editors I’ve used so far:&#xA;Turbo C++ (4th grade to 8th grade) Visual Basic 6 (8th grade to 10th grade) Visual Studio 2005 (10th grade to 11th grade) Visual Studio 2008 (11th grade to 1st year of college) gVim (1st year of college) GNU Emacs (after gVim) Now, the one thing, maybe even the only thing I miss is the fact that gVim gives me the I-Bar cursor, while Emacs by default gave me the block cursor.</description>
     </item>
-    
     <item>
       <title>Anatomy of an impromptu hackathon (Git vs SVN)</title>
       <link>https://words.yuvi.in/anatomy-of-an-impromptu-hackathon-git-vs-svn/</link>
       <pubDate>Wed, 21 Oct 2009 12:46:45 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/anatomy-of-an-impromptu-hackathon-git-vs-svn/</guid>
-      <description>One of the (good) things that came out of the IIT Hackfest was me hanging out on the #hackers-india IRC channel. It is wild, swingy and usually fun. Usually.
-So yesterday night, ideamonk casually mentioned that he was working on something called pymos. It was a python script that made mosiacs. Now that was something I was totally interested in – I tried making a similar ‘script’ a long time back (in C#), and totally utterly failed, simply because I was so caught up with the part that downloaded pictures from flickr that I didn’t do the part that generated the actual Mosaic.</description>
+      <description>One of the (good) things that came out of the IIT Hackfest was me hanging out on the #hackers-india IRC channel. It is wild, swingy and usually fun. Usually.&#xA;So yesterday night, ideamonk casually mentioned that he was working on something called pymos. It was a python script that made mosiacs. Now that was something I was totally interested in – I tried making a similar ‘script’ a long time back (in C#), and totally utterly failed, simply because I was so caught up with the part that downloaded pictures from flickr that I didn’t do the part that generated the actual Mosaic.</description>
     </item>
-    
     <item>
       <title>Why I got rid of my fork of Waffle</title>
       <link>https://words.yuvi.in/why-i-got-rid-of-my-fork-of-waffle/</link>
       <pubDate>Wed, 21 Oct 2009 00:27:55 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/why-i-got-rid-of-my-fork-of-waffle/</guid>
-      <description>For those of you who didn’t know, Waffle is a schemaless storage layer that sits on top of SQLAlchemy. Something that I was initially very interested in.
-Not anymore.
-Why?
-Because I found MongoDB.
-And fell in love.
-Yes, I do know they both are different, but MongoDB has the things that attracted me to Waffle (very flexible schema, great querying, indexes) and is just as easy to set up (maybe not as easy as Waffle over SQLite, but only slightly less easier).</description>
+      <description>For those of you who didn’t know, Waffle is a schemaless storage layer that sits on top of SQLAlchemy. Something that I was initially very interested in.&#xA;Not anymore.&#xA;Why?&#xA;Because I found MongoDB.&#xA;And fell in love.&#xA;Yes, I do know they both are different, but MongoDB has the things that attracted me to Waffle (very flexible schema, great querying, indexes) and is just as easy to set up (maybe not as easy as Waffle over SQLite, but only slightly less easier).</description>
     </item>
-    
     <item>
       <title>What I learnt from the Hackfest at IITM</title>
       <link>https://words.yuvi.in/what-i-learnt-from-the-hackfest-at-iitm/</link>
       <pubDate>Wed, 07 Oct 2009 23:10:41 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/what-i-learnt-from-the-hackfest-at-iitm/</guid>
-      <description>I was about to just type a list of stuff here, but that doesn’t do the topic justice. So here I am, at 3:30 in the morning, sleep cycle screwed up by the Hackfest, typing out a post on what all I learnt from there. I spent pretty much my entire awake-time at the IIT, so it helped me a lot.
-Your college doesn’t matter much IIT Envy. Every non-IITian has that.</description>
+      <description>I was about to just type a list of stuff here, but that doesn’t do the topic justice. So here I am, at 3:30 in the morning, sleep cycle screwed up by the Hackfest, typing out a post on what all I learnt from there. I spent pretty much my entire awake-time at the IIT, so it helped me a lot.&#xA;Your college doesn’t matter much IIT Envy. Every non-IITian has that.</description>
     </item>
-    
     <item>
       <title>Hackfest ’09 – Expectations</title>
       <link>https://words.yuvi.in/hackfest-09-expectations/</link>
       <pubDate>Thu, 01 Oct 2009 01:27:12 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/hackfest-09-expectations/</guid>
-      <description>I’m going to participate in Hackfest at IITM’s Shaastra, starting tomorrow. Will hopefully be a lot of fun – and may I be able to contribute my first ever patch during the event ;) Got permission to not get back home – but wondering, where would I stay? Probably pass out in front of the computers :)
-I’ll be hackin on GNOME Apps – hopefully Banshee (since that’s one app I love), or write a newish, smallish app with PyGTK.</description>
+      <description>I’m going to participate in Hackfest at IITM’s Shaastra, starting tomorrow. Will hopefully be a lot of fun – and may I be able to contribute my first ever patch during the event ;) Got permission to not get back home – but wondering, where would I stay? Probably pass out in front of the computers :)&#xA;I’ll be hackin on GNOME Apps – hopefully Banshee (since that’s one app I love), or write a newish, smallish app with PyGTK.</description>
     </item>
-    
     <item>
       <title>Code I’ve written so far</title>
       <link>https://words.yuvi.in/code-ive-written-so-far/</link>
       <pubDate>Thu, 01 Oct 2009 00:52:30 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/code-ive-written-so-far/</guid>
-      <description>Code I have written so far:
- HiSlain: A static blog publishing system (NOT A DJANGO BLOG!). Runs this blog wtfimb: The code that powers Busroutes.in frailgrey: Markov Chain based page generator (pretty lame, actually) GoodFather: Collection of utils for web data scraping and storing reappy: A Twitter Search Application Framework SadIvy: A pure WSGI URL Shortener  Now, I’ve been doing a shit job of documenting them – none exists.</description>
+      <description>Code I have written so far:&#xA;HiSlain: A static blog publishing system (NOT A DJANGO BLOG!). Runs this blog wtfimb: The code that powers Busroutes.in frailgrey: Markov Chain based page generator (pretty lame, actually) GoodFather: Collection of utils for web data scraping and storing reappy: A Twitter Search Application Framework SadIvy: A pure WSGI URL Shortener Now, I’ve been doing a shit job of documenting them – none exists. Nor of writing tests – none exists.</description>
     </item>
-    
     <item>
       <title>3hours of code &amp; 1 blog post per day</title>
       <link>https://words.yuvi.in/3hours-of-code-1-blog-post-per-day/</link>
       <pubDate>Fri, 28 Aug 2009 00:39:22 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/3hours-of-code-1-blog-post-per-day/</guid>
-      <description>Those are my new goals.
-I’ve got a mechanism to track the code accomplishments (will make that public soon), and maybe I’ll write a widget for HiSlain for the blog post/day accomplishment.
-I’m liking it so far – 7 hours of code yesterday, along with 2 blog posts. Couldn’t hit my code target today – but am hitting my blog target. I should figure out more ways to make this work better.</description>
+      <description>Those are my new goals.&#xA;I’ve got a mechanism to track the code accomplishments (will make that public soon), and maybe I’ll write a widget for HiSlain for the blog post/day accomplishment.&#xA;I’m liking it so far – 7 hours of code yesterday, along with 2 blog posts. Couldn’t hit my code target today – but am hitting my blog target. I should figure out more ways to make this work better.</description>
     </item>
-    
     <item>
       <title>AutoKrish: Because we don’t get enough jilpa</title>
       <link>https://words.yuvi.in/autokrish-because-we-dont-get-enough-jilpa/</link>
       <pubDate>Fri, 14 Aug 2009 02:03:12 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/autokrish-because-we-dont-get-enough-jilpa/</guid>
-      <description>I dig KrishAshok‘s writing. Been lurking there for a long time.
-Only problem is, he doesn’t write often. Nor does he tweet often.
-Only solution is, ofcourse, to create a bot that writes like him, and another bot that tweets like him.
-UPDATE: Some of my favorites: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, etc. Too many to list :)
-UPDATE 2: Absolute Ripper</description>
+      <description>I dig KrishAshok‘s writing. Been lurking there for a long time.&#xA;Only problem is, he doesn’t write often. Nor does he tweet often.&#xA;Only solution is, ofcourse, to create a bot that writes like him, and another bot that tweets like him.&#xA;UPDATE: Some of my favorites: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, etc. Too many to list :)&#xA;UPDATE 2: Absolute Ripper</description>
     </item>
-    
     <item>
       <title>The Automatic Quote Generators (aka AutoPeople)</title>
       <link>https://words.yuvi.in/the-automatic-quote-generators-aka-autopeople/</link>
       <pubDate>Fri, 14 Aug 2009 01:30:59 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/the-automatic-quote-generators-aka-autopeople/</guid>
-      <description>An Automatic Quote Generator – generates sound bites that almost sound like someone else, and are somtimes funny as hell:
- AutoFreya, emulating the doubtfully-anonymous-teen Freya AutoLG, for popular blogger Louis Gray AutoMona, for, well, I can’t describe who Mona is yet. I haven’t figured out. Just someone cool, maybe? AutoAtwood, for one of the few for-the-masses dev coder Jeff Atwood  A few of them (@AutoLG &amp;amp; @AutoMona) also have twiwtter bots for them, posting short tweets once every seven minutes.</description>
+      <description>An Automatic Quote Generator – generates sound bites that almost sound like someone else, and are somtimes funny as hell:&#xA;AutoFreya, emulating the doubtfully-anonymous-teen Freya AutoLG, for popular blogger Louis Gray AutoMona, for, well, I can’t describe who Mona is yet. I haven’t figured out. Just someone cool, maybe? AutoAtwood, for one of the few for-the-masses dev coder Jeff Atwood A few of them (@AutoLG &amp;amp; @AutoMona) also have twiwtter bots for them, posting short tweets once every seven minutes.</description>
     </item>
-    
     <item>
       <title>Picks from autogenerated Freya Quotes (NSFW?)</title>
       <link>https://words.yuvi.in/picks-from-autogenerated-freya-quotes-nsfw/</link>
       <pubDate>Mon, 20 Jul 2009 23:47:58 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/picks-from-autogenerated-freya-quotes-nsfw/</guid>
-      <description>I love autogenerating text.
-So I ran Freya’s Blog through a markov chain text generator, and it came up with a ton of potentially funny quotes that had me in splits for a while. Here are the best:
- They say its gonna kill me But still, his eyes are in no way good. Thank God I never pick it up. But hello, which parent accompanies a full-grown daughter to her lover When you win, nobody knows that she’s thinking of marriage.</description>
+      <description>I love autogenerating text.&#xA;So I ran Freya’s Blog through a markov chain text generator, and it came up with a ton of potentially funny quotes that had me in splits for a while. Here are the best:&#xA;They say its gonna kill me But still, his eyes are in no way good. Thank God I never pick it up. But hello, which parent accompanies a full-grown daughter to her lover When you win, nobody knows that she’s thinking of marriage.</description>
     </item>
-    
     <item>
       <title>Code Highligting Plugin for HiSlain</title>
       <link>https://words.yuvi.in/code-highligting-plugin-for-hislain/</link>
       <pubDate>Fri, 17 Jul 2009 23:44:21 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/code-highligting-plugin-for-hislain/</guid>
-      <description>I’ve been hacking ’round with HiSlain, and wrote a syntax highlighting plugin for it. Nothing fancy – just uses Pygments, but the process of modifying the plugin architecture to support this has been an awesome ride. I’ll probably open up a new GitHub project just for HiSlain Themes and Plugins.
-And since I’ve to test out Syntax Highlighting,</description>
+      <description>I’ve been hacking ’round with HiSlain, and wrote a syntax highlighting plugin for it. Nothing fancy – just uses Pygments, but the process of modifying the plugin architecture to support this has been an awesome ride. I’ll probably open up a new GitHub project just for HiSlain Themes and Plugins.&#xA;And since I’ve to test out Syntax Highlighting,&#xA;print &#34;I kinda like Python :)&#34; </description>
     </item>
-    
     <item>
       <title>Progress on HiSlain #1</title>
       <link>https://words.yuvi.in/progress-on-hislain-1/</link>
       <pubDate>Wed, 15 Jul 2009 23:35:18 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/progress-on-hislain-1/</guid>
-      <description>Small status update on my blogging platform‘s progress.
-I’ve got the plugin infrastructure (mostly) in. Google Analytics Plugin and the RSS link plugin are working :)
-Next Step is to make DISQUS a plugin too, and then I can start on porting themes!</description>
+      <description>Small status update on my blogging platform‘s progress.&#xA;I’ve got the plugin infrastructure (mostly) in. Google Analytics Plugin and the RSS link plugin are working :)&#xA;Next Step is to make DISQUS a plugin too, and then I can start on porting themes!</description>
     </item>
-    
     <item>
       <title>My involvement in Novelrace</title>
       <link>https://words.yuvi.in/my-involvement-in-novelrace/</link>
       <pubDate>Thu, 02 Jul 2009 19:49:12 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/my-involvement-in-novelrace/</guid>
-      <description>It started when @msnarain pinged me one day and asked if I could help out with a small project involving twitter. I asked how small – and he described what would later on become http://novelrace.in. It ended up being pretty small – about 150 lines of code, excluding styles and stuff. Not bad, eh?
-Oh, and if you have no idea what novelrace is – this post should clear things up.</description>
+      <description>It started when @msnarain pinged me one day and asked if I could help out with a small project involving twitter. I asked how small – and he described what would later on become http://novelrace.in. It ended up being pretty small – about 150 lines of code, excluding styles and stuff. Not bad, eh?&#xA;Oh, and if you have no idea what novelrace is – this post should clear things up.</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>workreport on Yuvi</title>
+    <link>https://words.yuvi.in/categories/workreport/</link>
+    <description>Recent content in workreport on Yuvi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 20 Jun 2023 10:25:11 -0700</lastBuildDate>
+    <atom:link href="https://words.yuvi.in/categories/workreport/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Devlog 2023-06-20</title>
+      <link>https://words.yuvi.in/post/work-report-2023-06-20/</link>
+      <pubDate>Tue, 20 Jun 2023 10:25:11 -0700</pubDate>
+      <guid>https://words.yuvi.in/post/work-report-2023-06-20/</guid>
+      <description>Trying to start these back up, as a list of the kind of &amp;lsquo;work&amp;rsquo; I have done the last few weeks. Let&amp;rsquo;s see if this works!&#xA;Last 2 weeks Spent a good chunk of time investigating and fixing issues with AzureAD auth for the UToronto hub. &amp;ldquo;Fixing&amp;rdquo; it meant moving off AzureAD, so we only have CILogon &amp;amp; GitHub in the 2i2c infrastructure as authentication providers! This is now explicitly mentioned in our docs.</description>
+    </item>
+  </channel>
+</rss>

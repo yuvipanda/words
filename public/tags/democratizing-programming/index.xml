@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>democratizing-programming on Yuvi Panda</title>
+    <title>democratizing-programming on Yuvi</title>
     <link>https://words.yuvi.in/tags/democratizing-programming/</link>
-    <description>Recent content in democratizing-programming on Yuvi Panda</description>
+    <description>Recent content in democratizing-programming on Yuvi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 26 Mar 2017 22:45:36 -0700</lastBuildDate><atom:link href="https://words.yuvi.in/tags/democratizing-programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Mar 2017 22:45:36 -0700</lastBuildDate>
+    <atom:link href="https://words.yuvi.in/tags/democratizing-programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>liberal software</title>
       <link>https://words.yuvi.in/post/liberal-software/</link>
       <pubDate>Sun, 26 Mar 2017 22:45:36 -0700</pubDate>
-      
       <guid>https://words.yuvi.in/post/liberal-software/</guid>
-      <description>I ran into this thought provoking though when randomly attempting to relax this weekend. There&amp;rsquo;s a summary at LWN if you do not want to watch the talk - but as the lwn summarizer admits, the video definitely conveys things that are hard to capture on text.
-The core takeaway for me is to think about:
- what is the future of free and open-source software? The answer was: it has no future.</description>
+      <description>I ran into this thought provoking though when randomly attempting to relax this weekend. There&amp;rsquo;s a summary at LWN if you do not want to watch the talk - but as the lwn summarizer admits, the video definitely conveys things that are hard to capture on text.&#xA;The core takeaway for me is to think about:&#xA;what is the future of free and open-source software? The answer was: it has no future.</description>
     </item>
-    
   </channel>
 </rss>

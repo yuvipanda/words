@@ -1,111 +1,82 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>events on Yuvi Panda</title>
+    <title>events on Yuvi</title>
     <link>https://words.yuvi.in/categories/events/</link>
-    <description>Recent content in events on Yuvi Panda</description>
+    <description>Recent content in events on Yuvi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 10 Apr 2011 23:02:48 +0000</lastBuildDate><atom:link href="https://words.yuvi.in/categories/events/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Apr 2011 23:02:48 +0000</lastBuildDate>
+    <atom:link href="https://words.yuvi.in/categories/events/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GStreamer 101 at GNOME Asia 2011</title>
       <link>https://words.yuvi.in/gstreamer-101-at-gnome-asia-2011/</link>
       <pubDate>Sun, 10 Apr 2011 23:02:48 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/gstreamer-101-at-gnome-asia-2011/</guid>
-      <description>My GStreamer 101 presentation at GNOME.asia was very wel received. I was quite happy with the way it turned out. Thanks to Ford_Prefect and Bharath Acharya for pulling me in :)
-My very minimal slides are here. You can reuse them if you want to.
-Sadly, missed the week long hackfest :( Next time!</description>
+      <description>My GStreamer 101 presentation at GNOME.asia was very wel received. I was quite happy with the way it turned out. Thanks to Ford_Prefect and Bharath Acharya for pulling me in :)&#xA;My very minimal slides are here. You can reuse them if you want to.&#xA;Sadly, missed the week long hackfest :( Next time!</description>
     </item>
-    
     <item>
       <title>Functional Programming Geekweekend at Thoughtworks</title>
       <link>https://words.yuvi.in/functional-programming-geekweekend-at-thoughtworks/</link>
       <pubDate>Tue, 25 Jan 2011 18:51:26 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/functional-programming-geekweekend-at-thoughtworks/</guid>
-      <description>[Note: I’ve a rather large backlog of blog posts to do, will push them out as soon as I can]
-Saturday (22 Jan 2011) was spent at Geekweekend, organized at Thougtworks Chennai. The event had awesomeness written all over it, even before it started – how can any event where you register through a (rather limited, but still) command line interface on a website be not good? :D
-I was late as usual (damn living so far away from everywhere) – and found my way walking through the underbelly of the Kathipara junction thanks to Google Maps’ Walking Directions :P</description>
+      <description>[Note: I’ve a rather large backlog of blog posts to do, will push them out as soon as I can]&#xA;Saturday (22 Jan 2011) was spent at Geekweekend, organized at Thougtworks Chennai. The event had awesomeness written all over it, even before it started – how can any event where you register through a (rather limited, but still) command line interface on a website be not good? :D&#xA;I was late as usual (damn living so far away from everywhere) – and found my way walking through the underbelly of the Kathipara junction thanks to Google Maps’ Walking Directions :P</description>
     </item>
-    
     <item>
       <title>Trip to Kerala</title>
       <link>https://words.yuvi.in/trip-to-kerala/</link>
       <pubDate>Sat, 16 Oct 2010 21:19:07 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/trip-to-kerala/</guid>
       <description>I, along with about a 100 other classmates of mine, went on an Industrial Visit to Kerala a few weeks back. It was a 3 day, 4 night affair – and was incredibly fun and refreshing. New friendships were forged, old ones rekindled, temptations resisted, a thousand pictures clicked (thanks to @RohitP’s camera), group dynamics studied and incredible fun had. It was very refreshing (for the most part), and I realized just why vacations are important.</description>
     </item>
-    
     <item>
       <title>“Room Full of People Like Me”</title>
       <link>https://words.yuvi.in/room-full-of-people-like-me/</link>
       <pubDate>Thu, 22 Jul 2010 03:02:02 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/room-full-of-people-like-me/</guid>
-      <description>I would give an arm, a leg, an eye and other assorted body parts if I could find such a room. And live there.
-Hackerpace Chennai or The Startup Center better turn up fast :)</description>
+      <description>&#34;I can&amp;#39;t tell you how wonderful it was - I walked into this room, and it was full of people like me&#34; I would give an arm, a leg, an eye and other assorted body parts if I could find such a room. And live there.&#xA;Hackerpace Chennai or The Startup Center better turn up fast :)</description>
     </item>
-    
     <item>
       <title>PyCon India 2009</title>
       <link>https://words.yuvi.in/pycon-india-2009/</link>
       <pubDate>Mon, 19 Apr 2010 17:15:12 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/pycon-india-2009/</guid>
-      <description>Warning: Rambling, unedited, 7 month old recollection ahead. Proceed at your own risk.
-Ah, PyCon India 2009. My first solo bit of travel outside Chennai. What fun it was :) Though it was almost 7 months ago, most of the memories are still fresh. Compare that to college, where I struggle to remember what happened last week…
-Anyway, it was fun. I went off by bus with the rather interesting Anirudh – a profitable startupeer and someone I met when working with Busroutes.</description>
+      <description>Warning: Rambling, unedited, 7 month old recollection ahead. Proceed at your own risk.&#xA;Ah, PyCon India 2009. My first solo bit of travel outside Chennai. What fun it was :) Though it was almost 7 months ago, most of the memories are still fresh. Compare that to college, where I struggle to remember what happened last week…&#xA;Anyway, it was fun. I went off by bus with the rather interesting Anirudh – a profitable startupeer and someone I met when working with Busroutes.</description>
     </item>
-    
     <item>
       <title>The Python Workshop</title>
       <link>https://words.yuvi.in/the-python-workshop/</link>
       <pubDate>Tue, 08 Dec 2009 02:53:15 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/the-python-workshop/</guid>
-      <description>We had a python workshop at college a week back.
-One hellova workshop it was! Kausik conducted it, and about 14 people turned up (We picked 15, one girl had to miss it ‘coz of fever). Every single one of them was there because they wanted to be there. This happened during semester holidays, so they came to college just for this. And from the feedback (and the actions that followed it) I got, it was worth their while.</description>
+      <description>We had a python workshop at college a week back.&#xA;One hellova workshop it was! Kausik conducted it, and about 14 people turned up (We picked 15, one girl had to miss it ‘coz of fever). Every single one of them was there because they wanted to be there. This happened during semester holidays, so they came to college just for this. And from the feedback (and the actions that followed it) I got, it was worth their while.</description>
     </item>
-    
     <item>
       <title>What I learnt from the Hackfest at IITM</title>
       <link>https://words.yuvi.in/what-i-learnt-from-the-hackfest-at-iitm/</link>
       <pubDate>Wed, 07 Oct 2009 23:10:41 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/what-i-learnt-from-the-hackfest-at-iitm/</guid>
-      <description>I was about to just type a list of stuff here, but that doesn’t do the topic justice. So here I am, at 3:30 in the morning, sleep cycle screwed up by the Hackfest, typing out a post on what all I learnt from there. I spent pretty much my entire awake-time at the IIT, so it helped me a lot.
-Your college doesn’t matter much IIT Envy. Every non-IITian has that.</description>
+      <description>I was about to just type a list of stuff here, but that doesn’t do the topic justice. So here I am, at 3:30 in the morning, sleep cycle screwed up by the Hackfest, typing out a post on what all I learnt from there. I spent pretty much my entire awake-time at the IIT, so it helped me a lot.&#xA;Your college doesn’t matter much IIT Envy. Every non-IITian has that.</description>
     </item>
-    
     <item>
       <title>Hackfest ’09 – Expectations</title>
       <link>https://words.yuvi.in/hackfest-09-expectations/</link>
       <pubDate>Thu, 01 Oct 2009 01:27:12 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/hackfest-09-expectations/</guid>
-      <description>I’m going to participate in Hackfest at IITM’s Shaastra, starting tomorrow. Will hopefully be a lot of fun – and may I be able to contribute my first ever patch during the event ;) Got permission to not get back home – but wondering, where would I stay? Probably pass out in front of the computers :)
-I’ll be hackin on GNOME Apps – hopefully Banshee (since that’s one app I love), or write a newish, smallish app with PyGTK.</description>
+      <description>I’m going to participate in Hackfest at IITM’s Shaastra, starting tomorrow. Will hopefully be a lot of fun – and may I be able to contribute my first ever patch during the event ;) Got permission to not get back home – but wondering, where would I stay? Probably pass out in front of the computers :)&#xA;I’ll be hackin on GNOME Apps – hopefully Banshee (since that’s one app I love), or write a newish, smallish app with PyGTK.</description>
     </item>
-    
     <item>
       <title>Lessons learnt from working with the Symposium</title>
       <link>https://words.yuvi.in/lessons-learnt-from-working-with-the-symposium/</link>
       <pubDate>Sun, 20 Sep 2009 23:24:28 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/lessons-learnt-from-working-with-the-symposium/</guid>
       <description>Document Everything! On paper. Will save you from hell later. There is never enough time. Start earlier than you think is early enough. Sell people things. Make them want it. Think from their point of view. Prioritize. Delegate. Responsibly. And follow up. Know when to stop. Recognize when something is good enough. Printing takes a long time. Very long timeE. And is boring. People often do not mean what they say.</description>
     </item>
-    
     <item>
       <title>PyCon 2009 – Are you coming?</title>
       <link>https://words.yuvi.in/pycon-2009-are-you-coming/</link>
       <pubDate>Fri, 28 Aug 2009 00:39:22 +0000</pubDate>
-      
       <guid>https://words.yuvi.in/pycon-2009-are-you-coming/</guid>
       <description>I’m going to PyCon India 2009. Are you?</description>
     </item>
-    
   </channel>
 </rss>
