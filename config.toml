@@ -171,7 +171,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   [params.social]                                         # 社交链接
     a-fas-envelope = "mailto:yuvipanda@gmail.com"
     #b-stack-overflow = "http://localhost:1313"
-    c-fab-twitter = "https://hachyderm.io/@yuvipanda"
+    # c-fab-twitter = "https://hachyderm.io/@yuvipanda"
     #d-facebook = "http://localhost:1313"
     #e-linkedin = "http://localhost:1313"
     #f-google = "http://localhost:1313"
