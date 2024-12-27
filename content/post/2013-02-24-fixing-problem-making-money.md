@@ -2,7 +2,7 @@
 title: Solving a Problem vs Making Money
 author: yuvipanda
 type: post
-date: -001-11-30T00:00:00+00:00
+date: 2013-02-24
 draft: true
 url: /?p=485
 aktt_notify_twitter:

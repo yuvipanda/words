@@ -2,7 +2,7 @@
 title: Discover content in your local language with yenWikipedia
 author: yuvipanda
 type: post
-date: -001-11-30T00:00:00+00:00
+date: 2011-11-16
 draft: true
 url: /?p=206
 aktt_notify_twitter:

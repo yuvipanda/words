@@ -2,7 +2,7 @@
 title: Why I quit InterviewStreet
 author: yuvipanda
 type: post
-date: -001-11-30T00:00:00+00:00
+date: 2012-02-04
 draft: true
 url: /?p=387
 aktt_notify_twitter:

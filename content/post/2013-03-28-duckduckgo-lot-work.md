@@ -2,7 +2,7 @@
 title: DuckDuckGo – needs a lot more work
 author: yuvipanda
 type: post
-date: -001-11-30T00:00:00+00:00
+date: 2013-03-28
 draft: true
 url: /?p=529
 categories:

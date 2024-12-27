@@ -2,7 +2,7 @@
 title: Star Trek Marathon at CIS
 author: yuvipanda
 type: post
-date: -001-11-30T00:00:00+00:00
+date: 2012-04-28
 draft: true
 url: /?p=408
 aktt_notify_twitter:

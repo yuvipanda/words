@@ -2,7 +2,7 @@
 title: On Moving off PhoneGap
 author: yuvipanda
 type: post
-date: -001-11-30T00:00:00+00:00
+date: 2013-01-09
 draft: true
 url: /?p=472
 aktt_notify_twitter:
