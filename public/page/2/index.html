@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Yuvi" /><meta name="description" content="Recovering overachieving child, now trying to achieve the correct amount" /><meta name="keywords" content="yuvi, yuvipanda" />
+<meta name="author" content="" /><meta name="description" content="Recovering overachieving child, now trying to achieve the correct amount" /><meta name="keywords" content="yuvi, yuvipanda" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.121.2 with theme even" />
+<meta name="generator" content="Hugo 0.138.0 with theme even" />
 
 
 <link rel="canonical" href="https://words.yuvi.in/" />
@@ -37,21 +37,27 @@
 
 
 
-<link href="/sass/main.min.5cd638ef09e6be2c903018f2f2bfacabe243faf0dc08773cdc9c2da41e81e4cc.css" rel="stylesheet">
+<link href="/sass/main.min.eaa67a77b500546a647c1792cf4e709a829067f265bb543827f6130724f8f27b.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 
 <link rel="stylesheet" href="/lib/fontawesome-free-5.13.1-web/css/all.min.css">
 
-<meta property="og:title" content="Yuvi" />
-<meta property="og:description" content="Recovering overachieving child, now trying to achieve the correct amount" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://words.yuvi.in/" />
+<meta property="og:url" content="https://words.yuvi.in/">
+  <meta property="og:site_name" content="Yuvi">
+  <meta property="og:title" content="Yuvi">
+  <meta property="og:description" content="Recovering overachieving child, now trying to achieve the correct amount">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
 
-<meta itemprop="name" content="Yuvi">
-<meta itemprop="description" content="Recovering overachieving child, now trying to achieve the correct amount"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Yuvi"/>
-<meta name="twitter:description" content="Recovering overachieving child, now trying to achieve the correct amount"/>
+  <meta itemprop="name" content="Yuvi">
+  <meta itemprop="description" content="Recovering overachieving child, now trying to achieve the correct amount">
+  <meta itemprop="datePublished" content="2024-12-27T11:40:00-08:00">
+  <meta itemprop="dateModified" content="2024-12-27T11:40:00-08:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Yuvi">
+  <meta name="twitter:description" content="Recovering overachieving child, now trying to achieve the correct amount">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -77,12 +83,65 @@
       <a href="https://github.com/yuvipanda" class="fab fa-github" title="github"></a>
   <a href="https://words.yuvi.in/index.xml" type="application/rss+xml" class="fas fa-rss" title="rss"></a>
 </div>
+
     </header>
 
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/show-hide-terminal-vscode/">Shortcut to Show / Hide Terminal in Visual Studio Code</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2022-01-06 </span>
+      <div class="post-category">
+          <a href="/categories/code/"> code </a>
+          <a href="/categories/vscode/"> vscode </a>
+          <a href="/categories/customization/"> customization </a>
+          </div>
+        <span class="more-meta"> 144 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+      <p>I wanted a single keyboard shortcut that would let me switch between the built-in
+terminal and the editor in vscode. I couldn&rsquo;t find any, so I made a short macro
+using the <a href="https://marketplace.visualstudio.com/items?itemName=geddski.macros">VSCode Macros Extension</a></p>
+<p>First, you define your macros in <code>settings.json</code>. You can open up vscode settings
+with <code>Cmd+,</code>, search for <code>macros</code>, and edit this under <code>Macros: List</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#d88200">&#34;macros.list&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;showTerminal&#34;</span><span style="color:#111">:</span> <span style="color:#111">[</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#d88200">&#34;workbench.action.terminal.toggleTerminal&#34;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#d88200">&#34;workbench.action.terminal.focus&#34;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#d88200">&#34;workbench.action.toggleMaximizedPanel&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">],</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;hideTerminal&#34;</span><span style="color:#111">:</span> <span style="color:#111">[</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#d88200">&#34;workbench.action.toggleMaximizedPanel&#34;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#d88200">&#34;workbench.action.terminal.toggleTerminal&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span></code></pre></div><p>Then you can bind a keyboard shortcut to it. Open <code>Preferences: Open Keyboard Shortcuts (JSON)</code>
+from the command palette, and add this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>    <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;key&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;cmd+t&#34;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;command&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;macros.showTerminal&#34;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;when&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;!terminalFocus&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span><span style="color:#960050;background-color:#1e0010">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;key&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;cmd+t&#34;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;command&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;macros.hideTerminal&#34;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;when&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;terminalFocus&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span><span style="color:#960050;background-color:#1e0010">,</span>
+</span></span></code></pre></div><p><code>showTerminal</code> gets called when you are focused anywhere in the editor except
+your terminal, and <code>hideTerminal</code> gets called when you are focused on your
+terminal. This gives me the &rsquo;toggle&rsquo; behavior I want.</p>
+
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/jupyterlab-settings-z2jh/">Disabling JupyterLab extensions on your z2jh JupyterHub installations</a></h1>
@@ -242,8 +301,9 @@ share it with someone else&rdquo;.</p>
 <p>Ryan Abernathey captures the current frustration, and lays out a possible glorious
 future for what a &lsquo;share a notebook I am working on&rsquo; workflow might look like. NotebookSharing.space
 is a start in tackling part of this. I highly recommend reading this thread.</p>
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Someone on Twitter asked me to share a notebook. I&#39;m frustrated that in late 2021 we still don&#39;t have a simple, open-science-approved way to do this. A 🧵 about some of the options (cc <a href="https://twitter.com/choldgraf?ref_src=twsrc%5Etfw">@choldgraf</a>, <a href="https://twitter.com/yuvipanda?ref_src=twsrc%5Etfw">@yuvipanda</a>) ... /1 <a href="https://t.co/mnd3K68JgV">https://t.co/mnd3K68JgV</a></p>&mdash; Ryan Abernathey (@rabernat) <a href="https://twitter.com/rabernat/status/1446495829397839875?ref_src=twsrc%5Etfw">October 8, 2021</a></blockquote>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Someone on Twitter asked me to share a notebook. I&#39;m frustrated that in late 2021 we still don&#39;t have a simple, open-science-approved way to do this. A 🧵 about some of the options (cc <a href="https://twitter.com/choldgraf?ref_src=twsrc%5Etfw">@choldgraf</a>, @yuvipanda) ... /1 <a href="https://t.co/mnd3K68JgV">https://t.co/mnd3K68JgV</a></p>&mdash; Ryan Abernathey (@rabernat) <a href="https://twitter.com/rabernat/status/1446495829397839875?ref_src=twsrc%5Etfw">October 8, 2021</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 
 <h2 id="just-upload-no-signup-necessary">Just upload, no signup necessary</h2>
 <p>As the goal is to have the fastest way to upload your notebook and share it with
@@ -315,6 +375,7 @@ can immediately put the notebook back into an interactive mode?</p>
 <p>Tweets from here on in Ryan&rsquo;s twitter thread sell this vision well.</p>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">But neither of these options has a link to execution.<br><br>However, I made the notebook on a cloud-based <a href="https://twitter.com/ProjectJupyter?ref_src=twsrc%5Etfw">@ProjectJupyter</a> Hub run by <a href="https://twitter.com/2i2c_org?ref_src=twsrc%5Etfw">@2i2c_org</a>, so I know the exact environment it was run in. The environment was built automatically by <a href="https://t.co/vf7xPeQwqv">https://t.co/vf7xPeQwqv</a> 4/</p>&mdash; Ryan Abernathey (@rabernat) <a href="https://twitter.com/rabernat/status/1446495833290051586?ref_src=twsrc%5Etfw">October 8, 2021</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 
 <h2 id="feedback">Feedback</h2>
 <p>I <em>love</em> feedback! That&rsquo;s why I spend my time building these. <a href="https://github.com/notebook-sharing-space/nbss/issues">Open an issue</a>
@@ -758,36 +819,6 @@ knows!</p>
   </div>
 </article>
 
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/google-domain/">Check if an organization is using GSuite</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-06-18 </span>
-      <div class="post-category">
-          <a href="/categories/code/"> code </a>
-          </div>
-        <span class="more-meta"> 150 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-      <p>I needed to find out if an organization was using <a href="https://gsuite.google.com/">GSuite</a> for their emails, so I can allow their users to login to a <a href="https://github.com/berkeley-dsep-infra/datahub/tree/ab2bf49be680480cf9de07968561257e7810850f/deployments/buds-2020">JupyterHub</a> I was setting up. I use Google Auth in other places, so I wanted to find out if this organization was using GSuite.</p>
-<p>I could&rsquo;ve just <em>asked</em> them, but where&rsquo;s the fun in that? Instead, you can use <code>dig</code> to find out!</p>
-<p>For example, if I were to test <code>berkeley.edu</code>, I can run:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ dig -t mx berkeley.edu
-</span></span></code></pre></div><p>This gives me a bunch of output, the important bits of which are:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>;; ANSWER SECTION:
-</span></span><span style="display:flex;"><span>berkeley.edu.		242	IN	MX	5 alt1.aspmx.l.google.com.
-</span></span><span style="display:flex;"><span>berkeley.edu.		242	IN	MX	10 alt3.aspmx.l.google.com.
-</span></span><span style="display:flex;"><span>berkeley.edu.		242	IN	MX	10 alt4.aspmx.l.google.com.
-</span></span><span style="display:flex;"><span>berkeley.edu.		242	IN	MX	1 aspmx.l.google.com.
-</span></span><span style="display:flex;"><span>berkeley.edu.		242	IN	MX	5 alt2.aspmx.l.google.com.
-</span></span></code></pre></div><p>This means that mail to <code>anyone@berkeley.edu</code> is routed via Google, so I know this organization is using GSuite for their users!</p>
-
-  </div>
-</article>
-
     </section>
   
   <nav class="pagination">
@@ -822,13 +853,10 @@ knows!</p>
   <span class="copyright-year">
     &copy;
     2005 -
-    2024
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">Yuvi</span>
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span></span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -842,14 +870,14 @@ knows!</p>
 
 
 
-<script type="text/javascript" src="/js/main.min.1c70606d1b733282f06230615f5561b5894924b6f9930ba2ab99cf1254f75a1a.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
   <script type="text/javascript">
     window.MathJax = {
-      showProcessingMessages: false,
-      messageStyle: 'none'
+      tex: {
+        }
     };
   </script>
-  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
 
 
 

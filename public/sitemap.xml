@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://words.yuvi.in/post/tech-serve-me/</loc>
+    <lastmod>2024-12-27T11:40:00-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/post/</loc>
+    <lastmod>2024-12-27T11:40:00-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://words.yuvi.in/</loc>
+    <lastmod>2024-12-27T11:40:00-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://words.yuvi.in/tags/docker/</loc>
     <lastmod>2023-11-29T14:27:25-08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -16,13 +37,6 @@
   </url>
   
   <url>
-    <loc>https://words.yuvi.in/post/</loc>
-    <lastmod>2023-11-29T14:27:25-08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://words.yuvi.in/post/pre-compiling-julia-docker/</loc>
     <lastmod>2023-11-29T14:27:25-08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -31,13 +45,6 @@
   
   <url>
     <loc>https://words.yuvi.in/tags/</loc>
-    <lastmod>2023-11-29T14:27:25-08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://words.yuvi.in/</loc>
     <lastmod>2023-11-29T14:27:25-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1670,34 +1677,6 @@
   <url>
     <loc>https://words.yuvi.in/greatest-fear-flash-fade/</loc>
     <lastmod>2011-10-21T03:14:16+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://words.yuvi.in/tags/interview/</loc>
-    <lastmod>2011-08-26T15:50:55+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://words.yuvi.in/interview-sriram-krishnan-5-years-old/</loc>
-    <lastmod>2011-08-26T15:50:55+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://words.yuvi.in/tags/reprint/</loc>
-    <lastmod>2011-08-26T15:50:55+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://words.yuvi.in/tags/sriram/</loc>
-    <lastmod>2011-08-26T15:50:55+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

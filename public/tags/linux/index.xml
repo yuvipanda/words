@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>linux on Yuvi</title>
+    <title>Linux on Yuvi</title>
     <link>https://words.yuvi.in/tags/linux/</link>
-    <description>Recent content in linux on Yuvi</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Linux on Yuvi</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Tue, 18 Apr 2017 00:01:26 -0700</lastBuildDate>
     <atom:link href="https://words.yuvi.in/tags/linux/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://words.yuvi.in/post/learning-selinux/</link>
       <pubDate>Tue, 18 Apr 2017 00:01:26 -0700</pubDate>
       <guid>https://words.yuvi.in/post/learning-selinux/</guid>
-      <description>I am trying to understand SELinux and AppArmor, and collecting resources here as I learn. k&#xA;SELinux for mere mortals (2014) This was the first video I watched, and it helped me understanding what SELinux does at a fundamental basic level. It&amp;rsquo;s probably useless in a container-filled world (where I doubt Fedora shipes pre-configured SELinux rules for my containers), but it helped me think I understood types / labels, so that seems like a positive step?</description>
+      <description>&lt;p&gt;I am trying to understand SELinux and AppArmor, and collecting resources here as I learn. k&lt;/p&gt;&#xA;&lt;h2 id=&#34;selinux-for-mere-mortals-2014&#34;&gt;SELinux for mere mortals (2014)&lt;/h2&gt;&#xA;&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/MxjenQ31b70&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;&#xA;&lt;p&gt;This was the first video I watched, and it helped me understanding what SELinux does at a fundamental basic level. It&amp;rsquo;s probably useless in a container-filled world (where I doubt Fedora shipes pre-configured SELinux rules for my containers), but it helped me think I understood types / labels, so that seems like a positive step?&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

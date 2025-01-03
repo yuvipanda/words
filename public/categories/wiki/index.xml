@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>wiki on Yuvi</title>
+    <title>Wiki on Yuvi</title>
     <link>https://words.yuvi.in/categories/wiki/</link>
-    <description>Recent content in wiki on Yuvi</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Wiki on Yuvi</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 06 Jul 2015 20:58:35 +0000</lastBuildDate>
     <atom:link href="https://words.yuvi.in/categories/wiki/index.xml" rel="self" type="application/rss+xml" />
@@ -13,126 +13,126 @@
       <link>https://words.yuvi.in/green-stuff/</link>
       <pubDate>Mon, 06 Jul 2015 20:58:35 +0000</pubDate>
       <guid>https://words.yuvi.in/green-stuff/</guid>
-      <description>“Green Stuff”&#xA;TIL that Gregory Kohs was actually allowed to post on wikimedia-l at some point in the past.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://lists.wikimedia.org/pipermail/foundation-l/2009-May/051656.html&#34;&gt;“Green Stuff”&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;TIL that Gregory Kohs was actually allowed to post on wikimedia-l at some point in the past.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Global merge of accounts at Wikimedia</title>
       <link>https://words.yuvi.in/global-merge-accounts-wikimedia/</link>
       <pubDate>Sat, 04 Jul 2015 12:49:15 +0000</pubDate>
       <guid>https://words.yuvi.in/global-merge-accounts-wikimedia/</guid>
-      <description>is now slowly happening, and I am the test subject!</description>
+      <description>&lt;p&gt;is now slowly happening, and &lt;a href=&#34;https://meta.wikimedia.org/wiki/Special:GlobalRenameProgress/YuviPanda&#34;&gt;I am the test subject!&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Wikipedia Apps reboot taking shape nicely</title>
       <link>https://words.yuvi.in/wikipedia-apps-reboot-taking-shape-nicely/</link>
       <pubDate>Sat, 14 Dec 2013 15:06:28 +0000</pubDate>
       <guid>https://words.yuvi.in/wikipedia-apps-reboot-taking-shape-nicely/</guid>
-      <description>Prettier, faster and more feature packed! Native Wikipedia app for Android coming real soon!</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://yuvi.in/blog/wp-content/uploads/2013/12/wpid-Screenshot_2013-12-14-20-33-57.png&#34;&gt;&lt;img title=&#34;Screenshot_2013-12-14-20-33-57.png&#34; class=&#34;alignnone size-full&#34; alt=&#34;image&#34; src=&#34;http://yuvi.in/blog/wp-content/uploads/2013/12/wpid-Screenshot_2013-12-14-20-33-57.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Prettier, faster and more feature packed! Native Wikipedia app for Android coming real soon!&lt;/p&gt;</description>
     </item>
     <item>
       <title>PHP being insane, part 5832</title>
       <link>https://words.yuvi.in/php-insane-part-5832/</link>
       <pubDate>Fri, 13 Dec 2013 17:58:15 +0000</pubDate>
       <guid>https://words.yuvi.in/php-insane-part-5832/</guid>
-      <description>Somehow: ( $a &amp;amp;&amp;amp; $b ) || ( $b &amp;amp;&amp;amp; $c ) || ( $a &amp;amp;&amp;amp; $c )&#xA;Became: $a ? ( $b || $c ) : ( $b &amp;amp;&amp;amp; $c )&#xA;Became: count( array_filter( array( $a, $b, $c ) ) ) &amp;gt;= 2&#xA;Became: &amp;quot;$a$b$c&amp;quot; &amp;gt; 1&#xA;God dammit PHP…&#xA;(from discussion among me, ^d, ori-l, bd808 and anomie on #mediawiki-core about how to represent ‘if at least 2 of three conditions are true’)</description>
+      <description>&lt;p&gt;Somehow: &lt;code&gt;( $a &amp;amp;&amp;amp; $b ) || ( $b &amp;amp;&amp;amp; $c ) || ( $a &amp;amp;&amp;amp; $c )&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Became: &lt;code&gt;$a ? ( $b || $c ) : ( $b &amp;amp;&amp;amp; $c )&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Became: &lt;code&gt;count( array_filter( array( $a, $b, $c ) ) ) &amp;gt;= 2&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Became: &lt;code&gt;&amp;quot;$a$b$c&amp;quot; &amp;gt; 1&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;God dammit PHP…&lt;/p&gt;&#xA;&lt;p&gt;(from discussion among me, ^d, ori-l, bd808 and anomie on &lt;code&gt;#mediawiki-core&lt;/code&gt; about how to represent ‘if at least 2 of three conditions are true’)&lt;/p&gt;</description>
     </item>
     <item>
       <title>Lots of discussion over tiny things that do not matter in the long run, part 5321</title>
       <link>https://words.yuvi.in/lots-discussion-tiny-matter-long-run-part-5321/</link>
       <pubDate>Tue, 03 Dec 2013 21:00:36 +0000</pubDate>
       <guid>https://words.yuvi.in/lots-discussion-tiny-matter-long-run-part-5321/</guid>
-      <description>On gerrit this time&#xA;Sigh.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://gerrit.wikimedia.org/r/#/c/97185/&#34;&gt;On gerrit this time&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Sigh.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Devlog for Tuesday, September 24, 2013</title>
       <link>https://words.yuvi.in/devlog-tuesday-september-24-2013/</link>
       <pubDate>Tue, 24 Sep 2013 11:29:47 +0000</pubDate>
       <guid>https://words.yuvi.in/devlog-tuesday-september-24-2013/</guid>
-      <description>I’ve given up on trying to make DevLogs really comprehensive and complete, and just try to make them – even if they are incomplete. Perhaps this will help me actually write more devlogs, and thus make it more comprehensive…&#xA;I started on the Functional Programming in Scala course today. I wanted to do it the last time, but did not find the time. This time will be different – I’m in a different spot mentally, and a big drain on my emotional / time resources (“college”) is no longer a factor.</description>
+      <description>&lt;p&gt;I’ve given up on trying to make DevLogs really comprehensive and complete, and just try to make them – even if they are incomplete. Perhaps this will help me actually write more devlogs, and thus make it more comprehensive…&lt;/p&gt;&#xA;&lt;p&gt;I started on the &lt;a href=&#34;https://www.coursera.org/course/progfun&#34;&gt;Functional Programming in Scala&lt;/a&gt; course today. I wanted to do it the last time, but did not find the time. This time will be different – I’m in a different spot mentally, and a big drain on my emotional / time resources (“college”) is no longer a factor. I’ve already gone through the first week’s lectures (most seem straight ports from &lt;a href=&#34;https://mitpress.mit.edu/sicp/&#34;&gt;SICP&lt;/a&gt;), and am 2/3 of my way through the assignments for the first week. Though I’m normally not fond of the typical types of exercises (“How many ways can you make change for this scenario?”), doing them functionally seems to be enough of a twist to keep me interested. The regular languages I seem to work with these days (Java, PHP, Puppet, Python and a bit of JS) aren’t exactly well tuned to the functional style of programming (except JS, but I don’t really do that much JS these days) – so going through this course and hopefully building something in Scala can exercise my ‘OMG HOLY SHIT THIS NEW THING IS AWESOME!!1’ muscles.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Devlog for Monday, Aug 26, 2013</title>
       <link>https://words.yuvi.in/devlog-for-monday-aug-26-2013/</link>
       <pubDate>Tue, 27 Aug 2013 13:55:31 +0000</pubDate>
       <guid>https://words.yuvi.in/devlog-for-monday-aug-26-2013/</guid>
-      <description>Nothing new started. The UploadCampaigns API patch I talked about yesterday was fixed and merged. I also helped merge some of MarkTraceur&amp;rsquo;s JS cleanup patches to UploadWizard. And Brion&amp;rsquo;s big detail view patch for Android Commons app. Also another cleanup/api feature patch to UploadWizard.</description>
+      <description>&lt;p&gt;Nothing new started. The UploadCampaigns &lt;a href=&#34;https://gerrit.wikimedia.org/r/#/c/80782/&#34;&gt;API patch&lt;/a&gt; I &lt;a href=&#34;http://yuvi.in/blog/devlog-for-sun-aug-25-2013/&#34;&gt;talked about&lt;/a&gt; yesterday was fixed and merged. I also helped merge some of &lt;a href=&#34;http://marktraceur.info/&#34;&gt;MarkTraceur&amp;rsquo;s&lt;/a&gt; JS cleanup patches to UploadWizard. And &lt;a href=&#34;https://brionv.com/log/&#34;&gt;Brion&lt;/a&gt;&amp;rsquo;s big &lt;a href=&#34;https://gerrit.wikimedia.org/r/#/c/81139/&#34;&gt;detail view patch&lt;/a&gt; for Android Commons app. Also another cleanup/api &lt;a href=&#34;https://gerrit.wikimedia.org/r/#/c/81162/&#34;&gt;feature patch&lt;/a&gt; to UploadWizard.&lt;/p&gt;</description>
     </item>
     <item>
       <title>DevLog for Sun, Aug 25, 2013</title>
       <link>https://words.yuvi.in/devlog-for-sun-aug-25-2013/</link>
       <pubDate>Sun, 25 Aug 2013 23:44:25 +0000</pubDate>
       <guid>https://words.yuvi.in/devlog-for-sun-aug-25-2013/</guid>
-      <description>DevLogs have been something I&amp;rsquo;ve not been writing much of of late. Time to fix that!&#xA;WLM Android App Spent some time reviving the WLM Android App. Wasn&amp;rsquo;t too hard, and am surprised at how well it still runs :) Some work still needed to update the templates and other metadata to refer to WLM2013 rather than WLM2012 – but that should not be too hard. The fact that it is an issue at all is simply because I ripped out all the Campaign related APIs a few weeks ago with my UploadCampaign rewrite.</description>
+      <description>&lt;p&gt;DevLogs have been something I&amp;rsquo;ve not been writing much of of late. Time to fix that!&lt;/p&gt;&#xA;&lt;h2 id=&#34;wlm-android-app&#34;&gt;WLM Android App&lt;/h2&gt;&#xA;&lt;p&gt;Spent some time &lt;a href=&#34;http://lists.wikimedia.org/pipermail/wikilovesmonuments/2013-August/006249.html&#34;&gt;reviving the WLM Android App&lt;/a&gt;. Wasn&amp;rsquo;t too hard, and am surprised at how well it still runs :) Some work still needed to update the &lt;a href=&#34;https://github.com/wikimedia/WLMMobile/commit/113d9abf7b675b147ece3f2be005ef1b6ba0e4cf#assets/www/js/campaigns-data.js&#34;&gt;templates&lt;/a&gt; and other metadata to refer to WLM2013 rather than WLM2012 – but that should not be too hard. The fact that it is an issue at all is simply because I ripped out all the Campaign related APIs a few weeks ago with my UploadCampaign rewrite.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Nitpicking about the Order of Cards</title>
       <link>https://words.yuvi.in/nitpicking-about-the-order-of-cards/</link>
       <pubDate>Mon, 29 Jul 2013 01:18:42 +0000</pubDate>
       <guid>https://words.yuvi.in/nitpicking-about-the-order-of-cards/</guid>
-      <description>Someone pointed out this happening on Gerrit…</description>
+      <description>&lt;p&gt;Someone pointed out &lt;a href=&#34;https://gerrit.wikimedia.org/r/#/c/76342/4/wmf-config/InitialiseSettings.php&#34;&gt;this&lt;/a&gt; happening on Gerrit…&lt;/p&gt;</description>
     </item>
     <item>
       <title>First major feature to Commons deployed</title>
       <link>https://words.yuvi.in/first-major-feature-to-commons-deployed/</link>
       <pubDate>Tue, 23 Jul 2013 00:40:26 +0000</pubDate>
       <guid>https://words.yuvi.in/first-major-feature-to-commons-deployed/</guid>
-      <description>My UploadWizard work has just been deployed to Wikimedia Commons and my name is listed in the on site credits. Special thanks to Mark Traceur for code review!&#xA;This feels very, very nice :) Now to sneak more code into other extensions…</description>
+      <description>&lt;p&gt;My &lt;a href=&#34;https://mediawiki.org/wiki/User:Yuvipanda/Campaigns_namespace_proposal&#34;&gt;UploadWizard work&lt;/a&gt; has just been deployed to &lt;a href=&#34;https://commons.wikimedia.org&#34;&gt;Wikimedia Commons&lt;/a&gt; and my name is listed in the on site &lt;a href=&#34;https://commons.wikimedia.org/wiki/Special:Version&#34;&gt;credits&lt;/a&gt;. Special thanks to &lt;a href=&#34;http://marktraceur.info/&#34;&gt;Mark Traceur&lt;/a&gt; for code review!&lt;/p&gt;&#xA;&lt;p&gt;This feels very, &lt;em&gt;very&lt;/em&gt; nice :) Now to sneak more code into other extensions…&lt;/p&gt;</description>
     </item>
     <item>
       <title>Bikeshedding on Gerrit #1</title>
       <link>https://words.yuvi.in/bikeshedding-on-gerrit-1/</link>
       <pubDate>Mon, 22 Jul 2013 14:00:17 +0000</pubDate>
       <guid>https://words.yuvi.in/bikeshedding-on-gerrit-1/</guid>
-      <description>First there was this.&#xA;I was bored, and so there was this. That of course, brought a swift end to the bikeshed. I&amp;rsquo;m only slightly ashamed.</description>
+      <description>&lt;p&gt;First there was &lt;a href=&#34;https://gerrit.wikimedia.org/r/#/c/74079/&#34;&gt;this&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;I was bored, and so there was &lt;a href=&#34;https://gerrit.wikimedia.org/r/#/c/75056/&#34;&gt;this&lt;/a&gt;. That of course, brought a swift end to the bikeshed. I&amp;rsquo;m only &lt;em&gt;slightly&lt;/em&gt; ashamed.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Attempting to Secure Redis in a Multi Tenant environment</title>
       <link>https://words.yuvi.in/attempting-to-secure-redis-in-a-multi-tenant-environment/</link>
       <pubDate>Sat, 20 Jul 2013 23:48:43 +0000</pubDate>
       <guid>https://words.yuvi.in/attempting-to-secure-redis-in-a-multi-tenant-environment/</guid>
-      <description>When running Redis in a shared cluster/hosting environment (such as Wikimedia Tool Labs, on which I&amp;rsquo;ve been having fun doing a lot of work on), you would want to try to provide at least some guarantee of isolation for your keys from everyone else&amp;rsquo;s keys. Since Redis doesn&amp;rsquo;t do ACLs, this is problematic.&#xA;This can be solved in a couple of ways&#xA;Run a Redis instance for each user This is simple enough to do – each user runs their own Redis instance, and has full access to it.</description>
+      <description>&lt;p&gt;When running &lt;a href=&#34;http://redis.io/&#34;&gt;Redis&lt;/a&gt; in a shared cluster/hosting environment (such as &lt;a href=&#34;https://wikitech.wikimedia.org/wiki/Nova_Resource:Tools/Help&#34;&gt;Wikimedia Tool Labs&lt;/a&gt;, on which I&amp;rsquo;ve been having fun doing a lot of work on), you would want to try to provide at least &lt;em&gt;some&lt;/em&gt; guarantee of isolation for your keys from everyone else&amp;rsquo;s keys. Since Redis doesn&amp;rsquo;t do ACLs, this is problematic.&lt;/p&gt;&#xA;&lt;p&gt;This can be solved in a couple of ways&lt;/p&gt;&#xA;&lt;h2 id=&#34;run-a-redis-instance-for-each-user&#34;&gt;Run a Redis instance for each user&lt;/h2&gt;&#xA;&lt;p&gt;This is simple enough to do – each user runs their own Redis instance, and has full access to it. Security is handled by setting a secret password, and running &lt;code&gt;redis-server&lt;/code&gt; as the user in question. Boom, secure!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Wikipedia has a new Favicon!</title>
       <link>https://words.yuvi.in/wikipedia-favicon/</link>
       <pubDate>Thu, 18 Apr 2013 12:56:08 +0000</pubDate>
       <guid>https://words.yuvi.in/wikipedia-favicon/</guid>
-      <description>Not sure if you’ve noticed, but over the last few days Wikipedia has a new Favicon – featuring (according to the commit message), “Multi-resolution, new render, rounded corners, very confused and angry graphic designer” :)&#xA;New Favicon:&#xA;Old Favicon:&#xA;Looks much nicer when not on a light background.</description>
+      <description>&lt;p&gt;Not sure if you’ve noticed, but over the last few days Wikipedia has a new Favicon – featuring (&lt;a href=&#34;https://github.com/wikimedia/operations-mediawiki-config/commit/3f8ee12b8429e0f37316edb7a161ec51e9ebfc47&#34;&gt;according to the commit message&lt;/a&gt;), “Multi-resolution, new render, rounded corners, &lt;a href=&#34;https://en.wikipedia.org/wiki/User:Isarra&#34;&gt;very confused and angry graphic designer&lt;/a&gt;” :)&lt;/p&gt;&#xA;&lt;p&gt;New Favicon:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://yuvi.in/blog/wp-content/uploads/2013/04/wiki-new-favicon.png&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-569&#34; alt=&#34;Wikipedia new Favicon&#34; src=&#34;http://yuvi.in/blog/wp-content/uploads/2013/04/wiki-new-favicon.png&#34; width=&#34;32&#34; height=&#34;32&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Old Favicon:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://yuvi.in/blog/wp-content/uploads/2013/04/wikipedia-old-favicon.png&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-571&#34; alt=&#34;wikipedia-old-favicon&#34; src=&#34;http://yuvi.in/blog/wp-content/uploads/2013/04/wikipedia-old-favicon.png&#34; width=&#34;16&#34; height=&#34;16&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Looks much nicer when not on a light background.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Bugs RESOLVED HUMOROUS</title>
       <link>https://words.yuvi.in/bugs-resolved-humorous/</link>
       <pubDate>Sun, 07 Apr 2013 14:49:24 +0000</pubDate>
       <guid>https://words.yuvi.in/bugs-resolved-humorous/</guid>
-      <description>Mediawiki has a number of humorous bug reports, though not as many as I’d like. Still, they’re quite funny.&#xA;I think my favorites are the request for RESOLVED MURDERED, the real reason why MediaWiki runs on MySQL, someone asking where the community consensus is to stop Volcanoes exploding, offers of shamanic help, a ground breaking report on US Government corruption, and a warning about zoning laws required for shipping Ponies,</description>
+      <description>&lt;p&gt;Mediawiki has a &lt;a href=&#34;https://bugzilla.wikimedia.org/showdependencytree.cgi?id=29079&amp;amp;hide_resolved=0&#34;&gt;number of humorous bug reports&lt;/a&gt;, though not as many as I’d like. Still, they’re quite funny.&lt;/p&gt;&#xA;&lt;p&gt;I think my favorites are the &lt;a href=&#34;https://bugzilla.wikimedia.org/show_bug.cgi?id=42595&#34;&gt;request for RESOLVED MURDERED&lt;/a&gt;, the &lt;a href=&#34;https://bugzilla.wikimedia.org/show_bug.cgi?id=30561#c1&#34;&gt;real reason why MediaWiki runs on MySQL&lt;/a&gt;, someone asking &lt;a href=&#34;https://bugzilla.wikimedia.org/show_bug.cgi?id=23223#c53&#34;&gt;where the community consensus is&lt;/a&gt; to stop Volcanoes exploding, &lt;a href=&#34;https://bugzilla.wikimedia.org/show_bug.cgi?id=23223#c66&#34;&gt;offers of shamanic help&lt;/a&gt;, a &lt;a href=&#34;https://bugzilla.wikimedia.org/show_bug.cgi?id=25236&#34;&gt;ground breaking report&lt;/a&gt; on US Government corruption, and a warning about &lt;a href=&#34;https://bugzilla.wikimedia.org/show_bug.cgi?id=23029#c2&#34;&gt;zoning laws required for shipping Ponies&lt;/a&gt;,&lt;/p&gt;</description>
     </item>
     <item>
       <title>Puppy pregnancy syndrome</title>
       <link>https://words.yuvi.in/puppy-pregnancy-syndrome/</link>
       <pubDate>Thu, 04 Apr 2013 12:58:53 +0000</pubDate>
       <guid>https://words.yuvi.in/puppy-pregnancy-syndrome/</guid>
-      <description>Today’s share of well sourced but WTF wikipedia article is the Puppy pregnancy syndrome, a psychosomatic illness in humans that makes them believe that they’re pregnant with a puppy.</description>
+      <description>&lt;p&gt;Today’s share of well sourced but WTF wikipedia article is the &lt;a href=&#34;https://en.wikipedia.org/wiki/Puppy_pregnancy_syndrome&#34;&gt;Puppy pregnancy syndrome&lt;/a&gt;, a psychosomatic illness in humans that makes them believe that they’re pregnant with a puppy.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Death by toilet</title>
       <link>https://words.yuvi.in/death-by-toile/</link>
       <pubDate>Wed, 03 Apr 2013 12:28:34 +0000</pubDate>
       <guid>https://words.yuvi.in/death-by-toile/</guid>
-      <description>I will start posting amusing but fairly well sourced wiki articles here occasionally.&#xA;Starting with the article on Toilet related deaths &amp;amp; injuries. I love the caption for the photograph :)&#xA;Also has fun part about how Elvis probably died. Highly recommended read :)</description>
+      <description>&lt;p&gt;I will start posting amusing but fairly well sourced wiki articles here occasionally.&lt;/p&gt;&#xA;&lt;p&gt;Starting with the article on &lt;a href=&#34;https://en.wikipedia.org/wiki/Toilet-related_injuries_and_deaths&#34;&gt;Toilet related deaths &amp;amp; injuries&lt;/a&gt;. I love the caption for the photograph :)&lt;/p&gt;&#xA;&lt;p&gt;Also has fun part about how Elvis probably died. Highly recommended read :)&lt;/p&gt;</description>
     </item>
     <item>
       <title>Calculating the population of India on Wikipedia</title>
       <link>https://words.yuvi.in/calculating-population-india-wikipedia/</link>
       <pubDate>Sun, 31 Mar 2013 01:47:40 +0000</pubDate>
       <guid>https://words.yuvi.in/calculating-population-india-wikipedia/</guid>
-      <description>Exploring the English Wikipedia randomly, I encountered this template used to approximate the current live population of India. It uses the following simple formula:&#xA;(1176242 + 42.197260273969 * days_since(2010,1,26)) * 000 It’s based on population at a specific data + projected growth. The ‘update’ is done by (best guess) some bot hitting action=purge every night to re-do the calculation.&#xA;And where is this used? After looking at the template’s info page, the only article this seems to be used in is the India article, and that too only for population density statistics, rather than actual population statistics.</description>
+      <description>&lt;p&gt;Exploring the English Wikipedia randomly, I encountered &lt;a href=&#34;https://en.wikipedia.org/wiki/Template:Indian_population_clock&#34;&gt;this template&lt;/a&gt; used to approximate the current live population of India. It uses the following simple formula:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;pre&gt;(1176242 + 42.197260273969 * days_since(2010,1,26)) * 000&lt;/pre&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;It’s based on population at a specific data + projected growth. The ‘update’ is done by (best guess) some bot hitting &lt;a href=&#34;https://www.mediawiki.org/wiki/Manual:Purge&#34;&gt;action=purge&lt;/a&gt; every night to re-do the calculation.&lt;/p&gt;&#xA;&lt;p&gt;And where is this used? After looking at the template’s &lt;a href=&#34;https://en.wikipedia.org/wiki/Template:Indian_population_clock?action=info&#34;&gt;info page&lt;/a&gt;, the only article this seems to be used in is the India article, and that too only for population density statistics, rather than actual population statistics. Weird, since if Density can be calculated based on projection, I guess population could be too.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mediawiki Bugzilla quips, aka ‘Behind the Scenes (sortof)’</title>
       <link>https://words.yuvi.in/mediawiki-bugzilla-quips-aka-behind-scenes-sortof/</link>
       <pubDate>Fri, 22 Mar 2013 22:37:00 +0000</pubDate>
       <guid>https://words.yuvi.in/mediawiki-bugzilla-quips-aka-behind-scenes-sortof/</guid>
-      <description>You might have heard of bash.org. If not, do go there! (And I am sorry about your afternoon)&#xA;Mediawiki maintains something similar, but much shorter in size &amp;amp; form, at Bugzilla quips. I already appear a few times, but will try to appear some more!</description>
+      <description>&lt;p&gt;You might have heard of &lt;a href=&#34;http://bash.org&#34;&gt;bash.org&lt;/a&gt;. If not, do go there! (And I am sorry about your afternoon)&lt;/p&gt;&#xA;&lt;p&gt;Mediawiki maintains something similar, but much shorter in size &amp;amp; form, at &lt;a href=&#34;https://bugzilla.wikimedia.org/quips.cgi?action=show&#34;&gt;Bugzilla quips&lt;/a&gt;. I already appear a few times, but will try to appear some more!&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

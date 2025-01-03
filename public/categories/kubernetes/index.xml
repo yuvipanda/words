@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>kubernetes on Yuvi</title>
+    <title>Kubernetes on Yuvi</title>
     <link>https://words.yuvi.in/categories/kubernetes/</link>
-    <description>Recent content in kubernetes on Yuvi</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Kubernetes on Yuvi</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 11 Jan 2018 15:15:58 -0800</lastBuildDate>
     <atom:link href="https://words.yuvi.in/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://words.yuvi.in/post/kubectl-rbac/</link>
       <pubDate>Thu, 11 Jan 2018 15:15:58 -0800</pubDate>
       <guid>https://words.yuvi.in/post/kubectl-rbac/</guid>
-      <description>Recently I had to write some code that had to call the kubernetes API directly, without any language wrappers. While there is pretty good reference docs, I didn&amp;rsquo;t want to go and construct all the JSON manually in my programming language.&#xA;I discovered that kubectl&amp;rsquo;s -v parameter is very useful for this! With this, I can do the following:&#xA;Perform the actions I need to perform with just kubectl commands Pass -v=8 to kubectl when doing this, and this will print all the HTTP traffic (requests and responses!</description>
+      <description>&lt;p&gt;Recently I had to write some code that had to call the kubernetes API directly,&#xA;without any language wrappers. While there is pretty good &lt;a href=&#34;https://kubernetes.io/docs/reference/&#34;&gt;reference docs&lt;/a&gt;,&#xA;I didn&amp;rsquo;t want to go and construct all the JSON manually in my programming language.&lt;/p&gt;&#xA;&lt;p&gt;I discovered that &lt;code&gt;kubectl&lt;/code&gt;&amp;rsquo;s &lt;code&gt;-v&lt;/code&gt; parameter is very useful for this! With this,&#xA;I can do the following:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Perform the actions I need to perform with just &lt;code&gt;kubectl&lt;/code&gt; commands&lt;/li&gt;&#xA;&lt;li&gt;Pass &lt;code&gt;-v=8&lt;/code&gt; to kubectl when doing this, and this will print all the HTTP traffic&#xA;(requests and responses!) in an easy to read way&lt;/li&gt;&#xA;&lt;li&gt;Copy paste the JSON requests and template them as needed!&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;This was very useful! The fact you can see the response bodies is also nice,&#xA;since it gives you a good intuition of how to handle this in your own code.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

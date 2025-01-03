@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>dask on Yuvi</title>
+    <title>Dask on Yuvi</title>
     <link>https://words.yuvi.in/categories/dask/</link>
-    <description>Recent content in dask on Yuvi</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Dask on Yuvi</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sat, 27 Jun 2020 13:27:49 +0530</lastBuildDate>
     <atom:link href="https://words.yuvi.in/categories/dask/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://words.yuvi.in/post/dask-local-kubernetes/</link>
       <pubDate>Sat, 27 Jun 2020 13:27:49 +0530</pubDate>
       <guid>https://words.yuvi.in/post/dask-local-kubernetes/</guid>
-      <description>You can run your Jupyter Notebook locally, and connect easily to a remote dask-kubernetes cluster on a cloud-based Kubernetes Cluster with the help of kubefwd. This notebook will show you an example of how to do so. While this example is a Jupyter Notebook, the code will work any local python medium - REPL, IDE (vscode), or just plain ol&amp;rsquo; .py files&#xA;Latest executable version of this notebook can be found in this repository</description>
+      <description>&lt;p&gt;You can run your Jupyter Notebook locally, and connect easily to a remote &lt;code&gt;dask-kubernetes&lt;/code&gt; cluster&#xA;on a cloud-based Kubernetes Cluster with the help of &lt;a href=&#34;https://kubefwd.com/&#34;&gt;kubefwd&lt;/a&gt;. This notebook&#xA;will show you an example of how to do so. While this example is a Jupyter Notebook, the code will work&#xA;any local python medium - REPL, IDE (vscode), or just plain ol&amp;rsquo; &lt;code&gt;.py&lt;/code&gt; files&lt;/p&gt;&#xA;&lt;p&gt;Latest executable version of this notebook can be found in &lt;a href=&#34;https://github.com/yuvipanda/cloud-local-dask-kubernetes&#34;&gt;this repository&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>devlog on Yuvi</title>
+    <title>Devlog on Yuvi</title>
     <link>https://words.yuvi.in/tags/devlog/</link>
-    <description>Recent content in devlog on Yuvi</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Devlog on Yuvi</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 05 Dec 2011 20:31:14 +0000</lastBuildDate>
     <atom:link href="https://words.yuvi.in/tags/devlog/index.xml" rel="self" type="application/rss+xml" />
@@ -13,49 +13,49 @@
       <link>https://words.yuvi.in/devlog-december-5-2011/</link>
       <pubDate>Mon, 05 Dec 2011 20:31:14 +0000</pubDate>
       <guid>https://words.yuvi.in/devlog-december-5-2011/</guid>
-      <description>Am migrating to per-day posts now. More granularity + I can fit more info in. The ultimate aim of the DevLog is to keep me on my toes and make sure I don’t relapse into no-productivity hellholes. Daily DevLogs should do a better job at them.&#xA;Spent some more time trying to get Kiwix to compile under OS X. Macports issue fixed, but more issues persist. It’s one damn complicated build system :| Not to mention that OS X sucks balls.</description>
+      <description>&lt;p&gt;Am migrating to per-day posts now. More granularity + I can fit more info in. The ultimate aim of the DevLog is to keep me on my toes and make sure I don’t relapse into no-productivity hellholes. Daily DevLogs should do a better job at them.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Spent some more time trying to get Kiwix to compile under OS X. Macports issue fixed, but more issues persist. It’s one damn complicated build system :| Not to mention that OS X sucks balls. Still no luck.&lt;/li&gt;&#xA;&lt;li&gt;Moved my extension from GPoC to SelectionSifter, as picked by Sumanah (and remembered by Siebrand)&lt;/li&gt;&#xA;&lt;li&gt;Added more content to my ‘&lt;a href=&#34;http://www.mediawiki.org/wiki/User:Yuvipanda/How_to_become_a_mediaWiki_hacker&#34;&gt;How to become a mediawiki hacker&lt;/a&gt;‘ page. Outline in shape, needs content. (&lt;a href=&#34;http://www.mediawiki.org/wiki/How_to_become_a_MediaWiki_hacker&#34;&gt;This&lt;/a&gt; is the page I am rewriting)&lt;/li&gt;&#xA;&lt;li&gt;Cleaned up my Mediawiki.org &lt;a href=&#34;http://www.mediawiki.org/wiki/User:Yuvipanda&#34;&gt;userpage&lt;/a&gt;. Added stuff I’m working on there. Archived lots of older pages.&lt;/li&gt;&#xA;&lt;li&gt;Published &lt;a href=&#34;http://github.com/yuvipanda/livetrains&#34;&gt;livetrains&lt;/a&gt; to GitHub. As expected Kishore cleaned it up a bit. Have figured out how to do the time modelling (Thanks lifeeth!). Should finish up when I get time&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Need.To.Be.More.Productive!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Devlog December 2011</title>
       <link>https://words.yuvi.in/devlog-december-2011/</link>
       <pubDate>Sun, 04 Dec 2011 21:19:50 +0000</pubDate>
       <guid>https://words.yuvi.in/devlog-december-2011/</guid>
-      <description>With me back to a place where I can be completely open about what code I am writing (yay!), I think it’s time I restart my devlog :)&#xA;Last time, I was using my old blogging engine, and hand-wrote them in a markdown file on my netbook. Things have changed a lot since then, and this time I’ll be directly writing/publishing them daily from WordPress&#xA;–&#xA;Dec 4 I finally grokked Indexes in databases.</description>
+      <description>&lt;p&gt;With me back to a place where I can be completely open about what code I am writing (yay!), I think it’s time I restart &lt;a href=&#34;http://yuvi.in/blog/tag/devlog/&#34;&gt;my devlog&lt;/a&gt; :)&lt;/p&gt;&#xA;&lt;p&gt;Last time, I was using my old blogging engine, and hand-wrote them in a markdown file on my netbook. Things have changed a lot since then, and this time I’ll be directly writing/publishing them daily from WordPress&lt;/p&gt;&#xA;&lt;p&gt;–&lt;/p&gt;&#xA;&lt;h4 id=&#34;dec-4&#34;&gt;Dec 4&lt;/h4&gt;&#xA;&lt;p&gt;I finally grokked Indexes in databases. It all makes perfect sense now. Yay! (And this was thanks to being able to read on the Kindle, so yay for that too). Nothing productive done though.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Devlog May 2011</title>
       <link>https://words.yuvi.in/devlog-may-2011/</link>
       <pubDate>Tue, 14 Jun 2011 13:27:41 +0000</pubDate>
       <guid>https://words.yuvi.in/devlog-may-2011/</guid>
-      <description>May 25-June 13 Loads of things happened.&#xA;Finished/polished up ShortUrl. Pending review. Would go into not just tawiki, but possibly all wmf wikis. YAY!&#xA;Moved to a dual monitor setup. Dual 23″ Monitors, one Samsung LED and one Acer LCD. Also moved to 8G of RAM. VMs are much less painful now.&#xA;Did a few back/forths with the GSoC extension architecture. It’s still blocking, so working with the non-blocking parts of GSoC now.</description>
+      <description>&lt;h3 id=&#34;may-25-june-13&#34;&gt;May 25-June 13&lt;/h3&gt;&#xA;&lt;p&gt;Loads of things happened.&lt;/p&gt;&#xA;&lt;p&gt;Finished/polished up ShortUrl. Pending review. Would go into not just tawiki, but possibly all wmf wikis. YAY!&lt;/p&gt;&#xA;&lt;p&gt;Moved to a dual monitor setup. Dual 23″ Monitors, one Samsung LED and one Acer LCD. Also moved to 8G of RAM. VMs are much less painful now.&lt;/p&gt;&#xA;&lt;p&gt;Did a few back/forths with the GSoC extension architecture. It’s still blocking, so working with the non-blocking parts of GSoC now.&lt;/p&gt;</description>
     </item>
     <item>
       <title>DevLog: April 2011</title>
       <link>https://words.yuvi.in/devlog-april-2011/</link>
       <pubDate>Mon, 02 May 2011 01:50:17 +0000</pubDate>
       <guid>https://words.yuvi.in/devlog-april-2011/</guid>
-      <description>I’ve started keeping devlogs, recording productive activity every day in an attempt to publicly shame myself into doing productive things. This is the delayed april edition&#xA;Apr 30 Impromptu talk at ChennaiPy meet. Then fun discussions at Nerd Dinner. No code, sadly.&#xA;Apr 29 Google Instant mostly works on yenWikipedia. Made a release. More exams.&#xA;Apr 22 – 28 Nothing much done. Exams and stuff.&#xA;Tecoholic forked yenWikipedia and created a Firefox extension.</description>
+      <description>&lt;p&gt;&lt;em&gt;I’ve started keeping devlogs, recording productive activity every day in an attempt to publicly shame myself into doing productive things. This is the delayed april edition&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;apr-30&#34;&gt;Apr 30&lt;/h3&gt;&#xA;&lt;p&gt;Impromptu talk at ChennaiPy meet. Then fun discussions at Nerd Dinner. No code, sadly.&lt;/p&gt;&#xA;&lt;h3 id=&#34;apr-29&#34;&gt;Apr 29&lt;/h3&gt;&#xA;&lt;p&gt;Google Instant mostly works on yenWikipedia. Made a release. More exams.&lt;/p&gt;&#xA;&lt;h3 id=&#34;apr-22-8211-28&#34;&gt;Apr 22 – 28&lt;/h3&gt;&#xA;&lt;p&gt;Nothing much done. Exams and stuff.&lt;/p&gt;&#xA;&lt;p&gt;Tecoholic forked yenWikipedia and created a Firefox extension. Adding features faster than me. Yay! :)&lt;/p&gt;</description>
     </item>
     <item>
       <title>DevLog: Mar 2011</title>
       <link>https://words.yuvi.in/devlog-mar-2011/</link>
       <pubDate>Mon, 11 Apr 2011 21:45:12 +0000</pubDate>
       <guid>https://words.yuvi.in/devlog-mar-2011/</guid>
-      <description>I’ve started keeping devlogs, recording productive activity every day in an attempt to publicly shame myself into doing productive things. This is the delayed march edition&#xA;Mar 20 – 31 More contract work for more money.&#xA;My dump patch to meidawiki got commited, then blasted during Code Review. This is what I get for trusting other people’s code blindly, especially after 5 years. Lesson learnt. Fixed all issues, and now waiting for a review before commit.</description>
+      <description>&lt;p&gt;&lt;em&gt;I’ve started keeping devlogs, recording productive activity every day in an attempt to publicly shame myself into doing productive things. This is the delayed march edition&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;mar-20-8211-31&#34;&gt;Mar 20 – 31&lt;/h3&gt;&#xA;&lt;p&gt;More contract work for more money.&lt;/p&gt;&#xA;&lt;p&gt;My dump patch to meidawiki got commited, then blasted during Code Review. This is what I get for trusting other people’s code blindly, especially after 5 years. Lesson learnt. Fixed all issues, and now waiting for a review before commit.&lt;/p&gt;</description>
     </item>
     <item>
       <title>DevLog: Feb 2011</title>
       <link>https://words.yuvi.in/devlog-feb-2011/</link>
       <pubDate>Mon, 11 Apr 2011 21:24:26 +0000</pubDate>
       <guid>https://words.yuvi.in/devlog-feb-2011/</guid>
-      <description>I’ve started keeping devlogs, recording everyday productive activity in an attempt to publicly shaming myselfinto doing something productive everyday. This is the delayed february editin&#xA;Links: 32HourStartup, PiTiVi, TEDxSSN&#xA;Feb 26 Initial work on Busroutes.in wiki import script.&#xA;Feb 25 Audio Save Dialog mostly works now.&#xA;Feb 23 Started implementing Audio Name dialog box in PiTiVi. Dad fixed laptop – new Ethernet port, and working speakers.&#xA;Feb 22 Started doing layouts for WhyKCGRocks.</description>
+      <description>&lt;p&gt;&lt;em&gt;I’ve started keeping devlogs, recording everyday productive activity in an attempt to publicly shaming myselfinto doing something productive everyday. This is the delayed february editin&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Links: &lt;a href=&#34;http://32hourstartup.com/&#34;&gt;32HourStartup&lt;/a&gt;, &lt;a href=&#34;http://pitivi.org&#34;&gt;PiTiVi&lt;/a&gt;, &lt;a href=&#34;http://tedxssn.com&#34;&gt;TEDxSSN&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;feb-26&#34;&gt;Feb 26&lt;/h3&gt;&#xA;&lt;p&gt;Initial work on Busroutes.in wiki import script.&lt;/p&gt;&#xA;&lt;h3 id=&#34;feb-25&#34;&gt;Feb 25&lt;/h3&gt;&#xA;&lt;p&gt;Audio Save Dialog mostly works now.&lt;/p&gt;&#xA;&lt;h3 id=&#34;feb-23&#34;&gt;Feb 23&lt;/h3&gt;&#xA;&lt;p&gt;Started implementing Audio Name dialog box in PiTiVi. Dad fixed laptop – new Ethernet port, and working speakers.&lt;/p&gt;&#xA;&lt;h3 id=&#34;feb-22&#34;&gt;Feb 22&lt;/h3&gt;&#xA;&lt;p&gt;Started doing layouts for WhyKCGRocks.com&lt;/p&gt;</description>
     </item>
     <item>
       <title>DevLog: Jan 2011</title>
       <link>https://words.yuvi.in/devlog-jan-2011/</link>
       <pubDate>Tue, 01 Feb 2011 12:37:06 +0000</pubDate>
       <guid>https://words.yuvi.in/devlog-jan-2011/</guid>
-      <description>I’ve started keeping devlogs, recording everyday ‘productive’ activity I do everyday. Publicly shaming myself into doing something productive every day. Just records for this month, next month on should provide time spent as well. There’s an entry for every day when I’ve touched a computer. I’ll be continuously refining this format, so feedback welcome&#xA;Links: 32HourStartup, Busroutes.in Wiki, PiTiVi, Geekweekend&#xA;27 Jan More of nothing productive. 32HourStartup is eating into my dev time.</description>
+      <description>&lt;p&gt;&lt;em&gt;I’ve started keeping devlogs, recording everyday ‘productive’ activity I do everyday. Publicly shaming myself into doing something productive every day. Just records for this month, next month on should provide time spent as well. There’s an entry for every day when I’ve touched a computer. I’ll be continuously refining this format, so feedback welcome&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Links: &lt;a href=&#34;http://32hourstartup.com&#34;&gt;32HourStartup&lt;/a&gt;, &lt;a href=&#34;http://wiki.busroutes.in&#34;&gt;Busroutes.in Wiki&lt;/a&gt;, &lt;a href=&#34;http://github.com/yuvipanda/PiTiVi&#34;&gt;PiTiVi&lt;/a&gt;, &lt;a href=&#34;http://geekweekend.in&#34;&gt;Geekweekend&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;27-jan&#34;&gt;27 Jan&lt;/h3&gt;&#xA;&lt;p&gt;More of nothing productive. 32HourStartup is eating into my dev time.&lt;/p&gt;&#xA;&lt;h3 id=&#34;26-jan&#34;&gt;26 Jan&lt;/h3&gt;&#xA;&lt;p&gt;Nothing productive. Ugh. 32hourstartup website.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

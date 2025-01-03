@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>binder on Yuvi</title>
+    <title>Binder on Yuvi</title>
     <link>https://words.yuvi.in/tags/binder/</link>
-    <description>Recent content in binder on Yuvi</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Binder on Yuvi</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 03 Dec 2017 01:23:54 -0800</lastBuildDate>
     <atom:link href="https://words.yuvi.in/tags/binder/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://words.yuvi.in/post/why-not-s2i/</link>
       <pubDate>Sun, 03 Dec 2017 01:23:54 -0800</pubDate>
       <guid>https://words.yuvi.in/post/why-not-s2i/</guid>
-      <description>The wonderful Graham Dumpleton asked on twitter why we built an entirely new tool (repo2docker) instead of using OpenShift&amp;rsquo;s cool source2image tool.&#xA;This is a very good question, and not a decision we made lightly. This post lays out some history, and explains the reasons we decided to stop using s2i. s2i is still a great tool for most production use cases, and you should use it if you&amp;rsquo;re building anything like a PaaS!</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://imgs.xkcd.com/comics/standards.png&#34; alt=&#34;https://xkcd.com/927/&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;The wonderful &lt;a href=&#34;https://twitter.com/GrahamDumpleton&#34;&gt;Graham Dumpleton&lt;/a&gt; asked &lt;a href=&#34;https://twitter.com/GrahamDumpleton/status/936740552304836608&#34;&gt;on twitter&lt;/a&gt; why we built an entirely new tool (&lt;a href=&#34;https://github.com/jupyter/repo2docker&#34;&gt;repo2docker&lt;/a&gt;) instead of using OpenShift&amp;rsquo;s cool &lt;a href=&#34;https://github.com/openshift/source-to-image&#34;&gt;source2image&lt;/a&gt; tool.&lt;/p&gt;&#xA;&lt;p&gt;This is a very good question, and not a decision we made lightly. This post lays out some history, and explains the reasons we decided to stop using s2i. s2i is still a great tool for most production use cases, and you should use it if you&amp;rsquo;re building anything like a PaaS!&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

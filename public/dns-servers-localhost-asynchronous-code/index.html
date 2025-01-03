@@ -17,14 +17,15 @@
 
 
 <meta name="author" content="yuvipanda" /><meta name="description" content="localhost is always 127.0.0.1, right? Nope, can also be ::1 if your system only has IPV6 (apparently).
-Asking a DNS server for an A record for localhost should give you back 127.0.0.1 right? Nope – it varies wildly! 8.8.8.8 gives me an NXDOMAIN which means it tells you straight up THIS DOMAIN DOES NOT EXIST! Which is true, since localhost isn’t a domain. But if you ask the same thing of any dnsmasq server, it’ll tell you localhost is 127." /><meta name="keywords" content="yuvi, yuvipanda" />
+Asking a DNS server for an A record for localhost should give you back 127.0.0.1 right? Nope – it varies wildly! 8.8.8.8 gives me an NXDOMAIN which means it tells you straight up THIS DOMAIN DOES NOT EXIST! Which is true, since localhost isn’t a domain. But if you ask the same thing of any dnsmasq server, it’ll tell you localhost is 127.0.0.1. Other servers vary wildly – I found one that returned an NXDOMAIN for AAAA but 127.0.0.1 for A (which is pretty wild, since NXDOMAIN makes most software treat the domain as not existing and not attempt other lookups). So localhost and DNS servers don’t mix very well.
+" /><meta name="keywords" content="yuvi, yuvipanda" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.121.2 with theme even" />
+<meta name="generator" content="Hugo 0.138.0 with theme even" />
 
 
 <link rel="canonical" href="https://words.yuvi.in/dns-servers-localhost-asynchronous-code/" />
@@ -36,29 +37,35 @@ Asking a DNS server for an A record for localhost should give you back 127.0.0.1
 
 
 
-<link href="/sass/main.min.5cd638ef09e6be2c903018f2f2bfacabe243faf0dc08773cdc9c2da41e81e4cc.css" rel="stylesheet">
+<link href="/sass/main.min.eaa67a77b500546a647c1792cf4e709a829067f265bb543827f6130724f8f27b.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 
 <link rel="stylesheet" href="/lib/fontawesome-free-5.13.1-web/css/all.min.css">
 
-<meta property="og:title" content="DNS servers, localhost and asynchronous code" />
-<meta property="og:description" content="localhost is always 127.0.0.1, right? Nope, can also be ::1 if your system only has IPV6 (apparently).
-Asking a DNS server for an A record for localhost should give you back 127.0.0.1 right? Nope – it varies wildly! 8.8.8.8 gives me an NXDOMAIN which means it tells you straight up THIS DOMAIN DOES NOT EXIST! Which is true, since localhost isn’t a domain. But if you ask the same thing of any dnsmasq server, it’ll tell you localhost is 127." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://words.yuvi.in/dns-servers-localhost-asynchronous-code/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2016-02-04T02:38:03+00:00" />
-<meta property="article:modified_time" content="2016-02-04T02:38:03+00:00" />
+<meta property="og:url" content="https://words.yuvi.in/dns-servers-localhost-asynchronous-code/">
+  <meta property="og:site_name" content="Yuvi">
+  <meta property="og:title" content="DNS servers, localhost and asynchronous code">
+  <meta property="og:description" content="localhost is always 127.0.0.1, right? Nope, can also be ::1 if your system only has IPV6 (apparently).
+Asking a DNS server for an A record for localhost should give you back 127.0.0.1 right? Nope – it varies wildly! 8.8.8.8 gives me an NXDOMAIN which means it tells you straight up THIS DOMAIN DOES NOT EXIST! Which is true, since localhost isn’t a domain. But if you ask the same thing of any dnsmasq server, it’ll tell you localhost is 127.0.0.1. Other servers vary wildly – I found one that returned an NXDOMAIN for AAAA but 127.0.0.1 for A (which is pretty wild, since NXDOMAIN makes most software treat the domain as not existing and not attempt other lookups). So localhost and DNS servers don’t mix very well.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2016-02-04T02:38:03+00:00">
+    <meta property="article:modified_time" content="2016-02-04T02:38:03+00:00">
 
-<meta itemprop="name" content="DNS servers, localhost and asynchronous code">
-<meta itemprop="description" content="localhost is always 127.0.0.1, right? Nope, can also be ::1 if your system only has IPV6 (apparently).
-Asking a DNS server for an A record for localhost should give you back 127.0.0.1 right? Nope – it varies wildly! 8.8.8.8 gives me an NXDOMAIN which means it tells you straight up THIS DOMAIN DOES NOT EXIST! Which is true, since localhost isn’t a domain. But if you ask the same thing of any dnsmasq server, it’ll tell you localhost is 127."><meta itemprop="datePublished" content="2016-02-04T02:38:03+00:00" />
-<meta itemprop="dateModified" content="2016-02-04T02:38:03+00:00" />
-<meta itemprop="wordCount" content="225">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="DNS servers, localhost and asynchronous code"/>
-<meta name="twitter:description" content="localhost is always 127.0.0.1, right? Nope, can also be ::1 if your system only has IPV6 (apparently).
-Asking a DNS server for an A record for localhost should give you back 127.0.0.1 right? Nope – it varies wildly! 8.8.8.8 gives me an NXDOMAIN which means it tells you straight up THIS DOMAIN DOES NOT EXIST! Which is true, since localhost isn’t a domain. But if you ask the same thing of any dnsmasq server, it’ll tell you localhost is 127."/>
+  <meta itemprop="name" content="DNS servers, localhost and asynchronous code">
+  <meta itemprop="description" content="localhost is always 127.0.0.1, right? Nope, can also be ::1 if your system only has IPV6 (apparently).
+Asking a DNS server for an A record for localhost should give you back 127.0.0.1 right? Nope – it varies wildly! 8.8.8.8 gives me an NXDOMAIN which means it tells you straight up THIS DOMAIN DOES NOT EXIST! Which is true, since localhost isn’t a domain. But if you ask the same thing of any dnsmasq server, it’ll tell you localhost is 127.0.0.1. Other servers vary wildly – I found one that returned an NXDOMAIN for AAAA but 127.0.0.1 for A (which is pretty wild, since NXDOMAIN makes most software treat the domain as not existing and not attempt other lookups). So localhost and DNS servers don’t mix very well.">
+  <meta itemprop="datePublished" content="2016-02-04T02:38:03+00:00">
+  <meta itemprop="dateModified" content="2016-02-04T02:38:03+00:00">
+  <meta itemprop="wordCount" content="225">
+  <meta itemprop="keywords" content="Code">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="DNS servers, localhost and asynchronous code">
+  <meta name="twitter:description" content="localhost is always 127.0.0.1, right? Nope, can also be ::1 if your system only has IPV6 (apparently).
+Asking a DNS server for an A record for localhost should give you back 127.0.0.1 right? Nope – it varies wildly! 8.8.8.8 gives me an NXDOMAIN which means it tells you straight up THIS DOMAIN DOES NOT EXIST! Which is true, since localhost isn’t a domain. But if you ask the same thing of any dnsmasq server, it’ll tell you localhost is 127.0.0.1. Other servers vary wildly – I found one that returned an NXDOMAIN for AAAA but 127.0.0.1 for A (which is pretty wild, since NXDOMAIN makes most software treat the domain as not existing and not attempt other lookups). So localhost and DNS servers don’t mix very well.">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -82,8 +89,9 @@ Asking a DNS server for an A record for localhost should give you back 127.0.0.1
 <div class="logo-social">
       <a href="mailto:yuvipanda@gmail.com" class="fas fa-envelope" title="envelope"></a>
       <a href="https://github.com/yuvipanda" class="fab fa-github" title="github"></a>
-  <a href="https://words.yuvi.in/index.xml" type="application/rss+xml" class="fas fa-rss" title="rss"></a>
+  
 </div>
+
     </header>
 
     <main id="main" class="main">
@@ -177,13 +185,10 @@ Asking a DNS server for an A record for localhost should give you back 127.0.0.1
   <span class="copyright-year">
     &copy;
     2005 -
-    2024
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">Yuvi</span>
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span></span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -197,14 +202,14 @@ Asking a DNS server for an A record for localhost should give you back 127.0.0.1
 
 
 
-<script type="text/javascript" src="/js/main.min.1c70606d1b733282f06230615f5561b5894924b6f9930ba2ab99cf1254f75a1a.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
   <script type="text/javascript">
     window.MathJax = {
-      showProcessingMessages: false,
-      messageStyle: 'none'
+      tex: {
+        }
     };
   </script>
-  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
 
 
 

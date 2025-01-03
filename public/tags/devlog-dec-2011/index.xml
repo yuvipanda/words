@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>devlog-dec-2011 on Yuvi</title>
+    <title>Devlog-Dec-2011 on Yuvi</title>
     <link>https://words.yuvi.in/tags/devlog-dec-2011/</link>
-    <description>Recent content in devlog-dec-2011 on Yuvi</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Devlog-Dec-2011 on Yuvi</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 05 Dec 2011 20:31:14 +0000</lastBuildDate>
     <atom:link href="https://words.yuvi.in/tags/devlog-dec-2011/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://words.yuvi.in/devlog-december-5-2011/</link>
       <pubDate>Mon, 05 Dec 2011 20:31:14 +0000</pubDate>
       <guid>https://words.yuvi.in/devlog-december-5-2011/</guid>
-      <description>Am migrating to per-day posts now. More granularity + I can fit more info in. The ultimate aim of the DevLog is to keep me on my toes and make sure I don’t relapse into no-productivity hellholes. Daily DevLogs should do a better job at them.&#xA;Spent some more time trying to get Kiwix to compile under OS X. Macports issue fixed, but more issues persist. It’s one damn complicated build system :| Not to mention that OS X sucks balls.</description>
+      <description>&lt;p&gt;Am migrating to per-day posts now. More granularity + I can fit more info in. The ultimate aim of the DevLog is to keep me on my toes and make sure I don’t relapse into no-productivity hellholes. Daily DevLogs should do a better job at them.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Spent some more time trying to get Kiwix to compile under OS X. Macports issue fixed, but more issues persist. It’s one damn complicated build system :| Not to mention that OS X sucks balls. Still no luck.&lt;/li&gt;&#xA;&lt;li&gt;Moved my extension from GPoC to SelectionSifter, as picked by Sumanah (and remembered by Siebrand)&lt;/li&gt;&#xA;&lt;li&gt;Added more content to my ‘&lt;a href=&#34;http://www.mediawiki.org/wiki/User:Yuvipanda/How_to_become_a_mediaWiki_hacker&#34;&gt;How to become a mediawiki hacker&lt;/a&gt;‘ page. Outline in shape, needs content. (&lt;a href=&#34;http://www.mediawiki.org/wiki/How_to_become_a_MediaWiki_hacker&#34;&gt;This&lt;/a&gt; is the page I am rewriting)&lt;/li&gt;&#xA;&lt;li&gt;Cleaned up my Mediawiki.org &lt;a href=&#34;http://www.mediawiki.org/wiki/User:Yuvipanda&#34;&gt;userpage&lt;/a&gt;. Added stuff I’m working on there. Archived lots of older pages.&lt;/li&gt;&#xA;&lt;li&gt;Published &lt;a href=&#34;http://github.com/yuvipanda/livetrains&#34;&gt;livetrains&lt;/a&gt; to GitHub. As expected Kishore cleaned it up a bit. Have figured out how to do the time modelling (Thanks lifeeth!). Should finish up when I get time&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Need.To.Be.More.Productive!&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

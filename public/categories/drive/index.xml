@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>drive on Yuvi</title>
+    <title>Drive on Yuvi</title>
     <link>https://words.yuvi.in/categories/drive/</link>
-    <description>Recent content in drive on Yuvi</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Drive on Yuvi</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sat, 25 Feb 2023 10:49:48 -0800</lastBuildDate>
     <atom:link href="https://words.yuvi.in/categories/drive/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://words.yuvi.in/post/drive/</link>
       <pubDate>Sat, 25 Feb 2023 10:49:48 -0800</pubDate>
       <guid>https://words.yuvi.in/post/drive/</guid>
-      <description>I&amp;rsquo;ve had a bit of a slump the last few months, working through what feels like deep mental fog for totally unclear reasons. The lack of clarity on causation is one of the most frustrating parts of this, and one of the most familiar too - this isn&amp;rsquo;t the first time I&amp;rsquo;ve felt like this, and I know (rationally at least, if not emotionally) it won&amp;rsquo;t be the last. Probably a combination of intensely avoiding making some decision that seems too big to be made by me without actually knowing what it is and fun brain chemicals stuff.</description>
+      <description>&lt;p&gt;I&amp;rsquo;ve had a bit of a slump the last few months, working through what feels&#xA;like deep mental fog for totally unclear reasons. The lack of clarity on&#xA;causation is one of the most frustrating parts of this, and one of the&#xA;most familiar too - this isn&amp;rsquo;t the first time I&amp;rsquo;ve felt like this, and I know&#xA;(rationally at least, if not emotionally) it won&amp;rsquo;t be the last. Probably a&#xA;combination of intensely avoiding making some decision that seems too big&#xA;to be made by me without actually knowing what it is and fun brain chemicals&#xA;stuff. Who knows, I&amp;rsquo;ve given up on trying to figure out causality for these&#xA;things for the most part.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

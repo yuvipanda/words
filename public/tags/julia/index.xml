@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>julia on Yuvi</title>
+    <title>Julia on Yuvi</title>
     <link>https://words.yuvi.in/tags/julia/</link>
-    <description>Recent content in julia on Yuvi</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Julia on Yuvi</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 29 Nov 2023 14:27:25 -0800</lastBuildDate>
     <atom:link href="https://words.yuvi.in/tags/julia/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://words.yuvi.in/post/pre-compiling-julia-docker/</link>
       <pubDate>Wed, 29 Nov 2023 14:27:25 -0800</pubDate>
       <guid>https://words.yuvi.in/post/pre-compiling-julia-docker/</guid>
-      <description>Julia pre-compiles packages on first load, allowing them to deeply optimize the generated code for the particular CPU architecture the user is running on for maximum performance. However, it does take some time, so there&amp;rsquo;s a startup latency penalty here. If you make docker images with precompiled Julia packages, you can pay this pre-compilation penalty at image build time, rather than at image startup time. Much better for your users!</description>
+      <description>&lt;p&gt;Julia &lt;a href=&#34;https://julialang.org/blog/2021/01/precompile_tutorial/&#34;&gt;pre-compiles&lt;/a&gt; packages on first load, allowing them to deeply optimize the generated code for the particular CPU architecture the user is running on for maximum performance. However, it &lt;em&gt;does&lt;/em&gt; take some time, so there&amp;rsquo;s a startup latency penalty here. If you make docker images with precompiled Julia packages, you can pay this pre-compilation penalty at &lt;em&gt;image build time&lt;/em&gt;, rather than at &lt;em&gt;image startup time&lt;/em&gt;. Much better for your users!&lt;/p&gt;&#xA;&lt;p&gt;If you look at the &lt;a href=&#34;https://julialang.org/blog/2021/01/precompile_tutorial/&#34;&gt;tutorial&lt;/a&gt; for pre-compilation, it may sound like all you need to do is call &lt;a href=&#34;https://pkgdocs.julialang.org/v1/api/#Pkg.precompile&#34;&gt;&lt;code&gt;Pkg.precompile&lt;/code&gt;&lt;/a&gt;. And if you actually build and test your docker image, it will work fine - your precompiled libraries are loaded, and startup is fast. Yay!&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

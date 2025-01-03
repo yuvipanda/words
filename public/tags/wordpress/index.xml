@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>wordpress on Yuvi</title>
+    <title>Wordpress on Yuvi</title>
     <link>https://words.yuvi.in/tags/wordpress/</link>
-    <description>Recent content in wordpress on Yuvi</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Wordpress on Yuvi</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 06 Jun 2011 18:21:40 +0000</lastBuildDate>
     <atom:link href="https://words.yuvi.in/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://words.yuvi.in/moving-back-to-wordpress/</link>
       <pubDate>Mon, 06 Jun 2011 18:21:40 +0000</pubDate>
       <guid>https://words.yuvi.in/moving-back-to-wordpress/</guid>
-      <description>A while back, I moved my blog (from a wordpress install whose data I lost) to my own platform (HiSlain).&#xA;After several close calls, I’m officially moving from HiSlain back to WordPress. I just don’t have enough time to maintain all the things I wanted in a blog platform in HiSlain, hence the move back. However, it satisfied it’s purpose – I learnt to write code I could use, others could use, and others could contribute to.</description>
+      <description>&lt;p&gt;A while back, I &lt;a href=&#34;http://yuvi.in/blog/hello-world-again/&#34;&gt;moved my blog&lt;/a&gt; (from a wordpress install whose data I lost) to my own platform (&lt;a href=&#34;http://github.com/yuvipanda/HiSlain&#34;&gt;HiSlain&lt;/a&gt;).&lt;/p&gt;&#xA;&lt;p&gt;After several close calls, I’m officially moving from HiSlain back to WordPress. I just don’t have enough time to maintain all the things I wanted in a blog platform in HiSlain, hence the move back. However, it satisfied it’s purpose – I learnt to write code I could use, others could use, and &lt;a href=&#34;https://github.com/tamizhgeek/HiSlain&#34;&gt;others could contribute to&lt;/a&gt;. The &lt;a href=&#34;http://yuvi.in/blog/oldindex.html&#34;&gt;old blog&lt;/a&gt; is still around (all permalinks would work) if you’re interested.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>opensource on Yuvi</title>
+    <title>Opensource on Yuvi</title>
     <link>https://words.yuvi.in/tags/opensource/</link>
-    <description>Recent content in opensource on Yuvi</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Opensource on Yuvi</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 16 Sep 2020 17:09:42 +0530</lastBuildDate>
     <atom:link href="https://words.yuvi.in/tags/opensource/index.xml" rel="self" type="application/rss+xml" />
@@ -13,21 +13,21 @@
       <link>https://words.yuvi.in/post/production-tljh/</link>
       <pubDate>Wed, 16 Sep 2020 17:09:42 +0530</pubDate>
       <guid>https://words.yuvi.in/post/production-tljh/</guid>
-      <description>The Littlest JupyterHub is an extremely capable hub distribution that I&amp;rsquo;d recommend for situations where you expect, on average, under 100 active users.&#xA;Why not Kubernetes? The primary reason to use Zero to JupyterHub on k8s over TLJH in cases with smaller number of users would be to reduce costs - Kubernetes can spin down nodes when not in use. However, you&amp;rsquo;ll always have at least one node running - for the hub / proxy pods.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://tljh.jupyter.org/&#34;&gt;The Littlest JupyterHub&lt;/a&gt; is an extremely&#xA;capable hub distribution that I&amp;rsquo;d recommend for situations where you&#xA;expect, on average, under 100 active users.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-not-kubernetes&#34;&gt;Why not Kubernetes?&lt;/h2&gt;&#xA;&lt;p&gt;The primary reason to use Zero to JupyterHub on k8s over TLJH in cases with smaller&#xA;number of users would be to reduce costs - Kubernetes can spin down nodes when&#xA;not in use. However, you&amp;rsquo;ll always have at least one node running - for the hub&#xA;/ proxy pods. The extra complexity that comes with it is not worth it - particulary&#xA;around needing to build your own docker images - is not worth it. TLJH works perfectly&#xA;well for these cases!&lt;/p&gt;</description>
     </item>
     <item>
       <title>On Being an &#39;Entitled User&#39;</title>
       <link>https://words.yuvi.in/post/on-being-entitled-user/</link>
       <pubDate>Thu, 28 May 2020 12:34:19 +0530</pubDate>
       <guid>https://words.yuvi.in/post/on-being-entitled-user/</guid>
-      <description>Entitled users burn out maintainers. While my massive burning out wasn&amp;rsquo;t directly related, it didn&amp;rsquo;t help either. For a lot of other maintainers, it has been a primary source of burnout. This is an unfortunate reality of our time. There are a ton of stories from maintainers out there -see this for a recent example. Not going to rehash that.&#xA;However, I&amp;rsquo;ve recently found myself on the &amp;lsquo;other side&amp;rsquo; of this coin.</description>
+      <description>&lt;p&gt;Entitled users burn out maintainers. While my massive burning out wasn&amp;rsquo;t directly related, it didn&amp;rsquo;t help either. For a &lt;strong&gt;lot&lt;/strong&gt; of other maintainers, it has been a primary source of burnout. This is an unfortunate reality of our time. There are a ton of stories from maintainers out there -see &lt;a href=&#34;https://twitter.com/michaelwaskom/status/1264295556475731969?s=20&#34;&gt;this&lt;/a&gt; for a recent example. Not going to rehash that.&lt;/p&gt;&#xA;&lt;p&gt;However, I&amp;rsquo;ve recently found myself on the &amp;lsquo;other side&amp;rsquo; of this coin. I exhibited the following symptoms&lt;/p&gt;</description>
     </item>
     <item>
       <title>maintainerati 2017</title>
       <link>https://words.yuvi.in/post/maintainerati-2017/</link>
       <pubDate>Tue, 10 Oct 2017 23:15:01 -0700</pubDate>
       <guid>https://words.yuvi.in/post/maintainerati-2017/</guid>
-      <description>I was at maintainerati today, which was super fun &amp;amp; quite intense! I highly appreciate GitHub &amp;amp; the individuals involved in making it happen!&#xA;Here&amp;rsquo;s my key takeaways from this (and several other conversations over the last few weeks leading up to this):&#xA;I am now a maintainer, which is quite a different thing from a core contributor or just a contributor. The power dynamics are very different, and so are the responsibilities.</description>
+      <description>&lt;p&gt;I was at &lt;a href=&#34;http://maintainerati.org/&#34;&gt;maintainerati&lt;/a&gt; today, which was super fun &amp;amp; quite intense! I highly appreciate GitHub &amp;amp; the individuals involved in making it happen!&lt;/p&gt;&#xA;&lt;p&gt;Here&amp;rsquo;s my key takeaways from this (and several other conversations over the last few weeks leading up to this):&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;I am now a &lt;em&gt;maintainer&lt;/em&gt;, which is quite a different thing from a &lt;em&gt;core contributor&lt;/em&gt; or just a &lt;em&gt;contributor&lt;/em&gt;. The power dynamics are very different, and so are the responsibilities. I can not ostrich myself into thinking I can just keep writing code and not do anything else - that&amp;rsquo;s a disservice to not just other folks in the project, but also myself.&lt;/li&gt;&#xA;&lt;li&gt;Being a maintainer is quite hard emotionally &amp;amp; mentally. I&amp;rsquo;ve a lot more respect for long running OSS maintainers now than I did before. I have a lot of personal work to do before I become anything like a decent maintainer.&lt;/li&gt;&#xA;&lt;li&gt;Lots of people love Gerrit, and they also hate Gerrit :D Gerrit is very powerful, but the UX is so user hostile - I don&amp;rsquo;t think these are unrelated. I hope that some of the power of Gerrit transfers to GitHub, but at the same time GitHub does not become anything like Gerrit! Also, people have very strong opinions about how their git histories should look like - perhaps they spend a lot more time looking through it than I do?&lt;/li&gt;&#xA;&lt;li&gt;We are slowly developing better ways of dealing with Trolls in projects, but still have a long, long way to go. &amp;ldquo;Look for the helpers&amp;rdquo; here.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;It was also great to go to a short, well organized (un)conference targeted at diverse group of people who are still like me in some sense! Would go again, A+++!&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

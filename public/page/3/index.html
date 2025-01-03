@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Yuvi" /><meta name="description" content="Recovering overachieving child, now trying to achieve the correct amount" /><meta name="keywords" content="yuvi, yuvipanda" />
+<meta name="author" content="" /><meta name="description" content="Recovering overachieving child, now trying to achieve the correct amount" /><meta name="keywords" content="yuvi, yuvipanda" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.121.2 with theme even" />
+<meta name="generator" content="Hugo 0.138.0 with theme even" />
 
 
 <link rel="canonical" href="https://words.yuvi.in/" />
@@ -37,21 +37,27 @@
 
 
 
-<link href="/sass/main.min.5cd638ef09e6be2c903018f2f2bfacabe243faf0dc08773cdc9c2da41e81e4cc.css" rel="stylesheet">
+<link href="/sass/main.min.eaa67a77b500546a647c1792cf4e709a829067f265bb543827f6130724f8f27b.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 
 <link rel="stylesheet" href="/lib/fontawesome-free-5.13.1-web/css/all.min.css">
 
-<meta property="og:title" content="Yuvi" />
-<meta property="og:description" content="Recovering overachieving child, now trying to achieve the correct amount" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://words.yuvi.in/" />
+<meta property="og:url" content="https://words.yuvi.in/">
+  <meta property="og:site_name" content="Yuvi">
+  <meta property="og:title" content="Yuvi">
+  <meta property="og:description" content="Recovering overachieving child, now trying to achieve the correct amount">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
 
-<meta itemprop="name" content="Yuvi">
-<meta itemprop="description" content="Recovering overachieving child, now trying to achieve the correct amount"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Yuvi"/>
-<meta name="twitter:description" content="Recovering overachieving child, now trying to achieve the correct amount"/>
+  <meta itemprop="name" content="Yuvi">
+  <meta itemprop="description" content="Recovering overachieving child, now trying to achieve the correct amount">
+  <meta itemprop="datePublished" content="2024-12-27T11:40:00-08:00">
+  <meta itemprop="dateModified" content="2024-12-27T11:40:00-08:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Yuvi">
+  <meta name="twitter:description" content="Recovering overachieving child, now trying to achieve the correct amount">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -77,12 +83,43 @@
       <a href="https://github.com/yuvipanda" class="fab fa-github" title="github"></a>
   <a href="https://words.yuvi.in/index.xml" type="application/rss+xml" class="fas fa-rss" title="rss"></a>
 </div>
+
     </header>
 
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/google-domain/">Check if an organization is using GSuite</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-06-18 </span>
+      <div class="post-category">
+          <a href="/categories/code/"> code </a>
+          </div>
+        <span class="more-meta"> 150 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+      <p>I needed to find out if an organization was using <a href="https://gsuite.google.com/">GSuite</a> for their emails, so I can allow their users to login to a <a href="https://github.com/berkeley-dsep-infra/datahub/tree/ab2bf49be680480cf9de07968561257e7810850f/deployments/buds-2020">JupyterHub</a> I was setting up. I use Google Auth in other places, so I wanted to find out if this organization was using GSuite.</p>
+<p>I could&rsquo;ve just <em>asked</em> them, but where&rsquo;s the fun in that? Instead, you can use <code>dig</code> to find out!</p>
+<p>For example, if I were to test <code>berkeley.edu</code>, I can run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ dig -t mx berkeley.edu
+</span></span></code></pre></div><p>This gives me a bunch of output, the important bits of which are:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>;; ANSWER SECTION:
+</span></span><span style="display:flex;"><span>berkeley.edu.		242	IN	MX	5 alt1.aspmx.l.google.com.
+</span></span><span style="display:flex;"><span>berkeley.edu.		242	IN	MX	10 alt3.aspmx.l.google.com.
+</span></span><span style="display:flex;"><span>berkeley.edu.		242	IN	MX	10 alt4.aspmx.l.google.com.
+</span></span><span style="display:flex;"><span>berkeley.edu.		242	IN	MX	1 aspmx.l.google.com.
+</span></span><span style="display:flex;"><span>berkeley.edu.		242	IN	MX	5 alt2.aspmx.l.google.com.
+</span></span></code></pre></div><p>This means that mail to <code>anyone@berkeley.edu</code> is routed via Google, so I know this organization is using GSuite for their users!</p>
+
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/on-being-entitled-user/">On Being an &#39;Entitled User&#39;</a></h1>
@@ -564,74 +601,6 @@ freedoms.</p>
   </div>
 </article>
 
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/aug-2018-plan/">Aug 2018 Work Plan</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2018-07-21 </span>
-      <div class="post-category">
-          <a href="/categories/work-plan/"> work-plan </a>
-          <a href="/categories/code/"> code </a>
-          </div>
-        <span class="more-meta"> 543 words </span>
-        <span class="more-meta"> 3 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-      <p>I&rsquo;m writing up monthly &lsquo;work plans&rsquo; to plan what work I&rsquo;m trying to do every
-month, and do a retrospective after to see how much I got done. I work across
-a variety of open source projects with ambiguous responsibilities, so work
-planning isn&rsquo;t very set. This has proven to be somewhat quite stressful for
-everyone involved. Let&rsquo;s see if this helps!</p>
-<h2 id="jupytercon">JupyterCon</h2>
-<p>JupyterCon is in NYC towards the end of August, and it is going to set the pace
-for a bunch of stuff. I have 2.5-ish talks to give. Need to prepare for those and
-do a good job.</p>
-<h2 id="matomo-formerly-piwiki-on-mybinderorg">Matomo (formerly Piwiki) on mybinder.org</h2>
-<p>mybinder.org currently uses Google Analytics. I am not a big fan. It has troubling
-privacy implications, and we don&rsquo;t get data as granularly as we want to. I am going
-to try deploying <a href="https://matomo.org/">Matomo</a> (formerly Piwiki) and using that
-instead. Run both together for a while and see how we like it! Matomo requires
-a MySQL database &amp; is written in PHP - let&rsquo;s see how this goes ;)</p>
-<h2 id="the-littlest-jupyterhub-01-release">The Littlest JupyterHub 0.1 release</h2>
-<p><a href="https://github.com/jupyterhub/the-littlest-jupyterhub">The Littlest JupyterHub</a> is
-doing great! I&rsquo;ve done a <strong>lot</strong> of user tests, and the distribution has changed
-drastically over time. It&rsquo;s also the first time I&rsquo;m putting my newly found
-strong convictions around testing, CI &amp; documentation to practice. You can already
-check it out <a href="https://github.com/jupyterhub/the-littlest-jupyterhub">on GitHub</a>. I
-want to make sure we (the JupyterHub team) gets out a 0.1 release early August.</p>
-<h2 id="pangeo-workshop">Pangeo Workshop</h2>
-<p>I despair about climate change and how little agency I seem to have around it
-quite a bit. I&rsquo;m excited to go to the <a href="https://www2.cisl.ucar.edu/events/workshops/2018-pangeo-workshop/2018/2018-pangeo-workshop">PANGEO workshop</a>
-in Colorado. I&rsquo;m mostly hoping to listen &amp; understand their world some more.</p>
-<h2 id="berkeley-datahub-deployment">Berkeley DataHub deployment</h2>
-<p>Aug 20-ish is when next semester starts at UC Berkeley. I need to have a pretty
-solid JupyterHub running there by then. I&rsquo;d like it to have good CI/CD set up
-in a generic way, rather than something super specific to Berkeley. However,
-I&rsquo;m happy to shortcut this if needed, since there&rsquo;s already so many things on
-my plate haha.</p>
-<h2 id="uc-davis">UC Davis</h2>
-<p>I&rsquo;m trying to spend a day or two a month at UC Davis. Partially because I like
-being on Amtrak! I also think there&rsquo;s a lot of cool work happening there,
-and I&rsquo;d like to hang out with all the cool people doing all the cool work.</p>
-<h2 id="personal">Personal</h2>
-<p>On top of this, there&rsquo;s ongoing medical conditions to be managed. I&rsquo;m getting
-Carpel Tunnel Release surgery sometime in October, so need to make sure I do
-not super fuck up my hands before then. I&rsquo;m also getting a cortisone shot
-for my back in early August to deal with Sciatica. Fun!</p>
-<h2 id="things-im-not-doing">Things I&rsquo;m not doing!</h2>
-<p>The grading related stuff I&rsquo;ve been working on is going to the backburner
-for a while. I think I bit off far more than I can chew, so time to back off.
-I also do not have a good intuition for the problem domain since I&rsquo;ve never
-written grading keys nor have I been a student in a class that got autograded.</p>
-<h2 id="in-conclusion">In conclusion&hellip;</h2>
-<p>Shit, I&rsquo;ve a lot of things to do lol! I&rsquo;m sure I&rsquo;m forgetting some things
-here that I&rsquo;ve promised people. Let&rsquo;s see how this goes!</p>
-
-  </div>
-</article>
-
     </section>
   
   <nav class="pagination">
@@ -666,13 +635,10 @@ here that I&rsquo;ve promised people. Let&rsquo;s see how this goes!</p>
   <span class="copyright-year">
     &copy;
     2005 -
-    2024
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">Yuvi</span>
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span></span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -686,14 +652,14 @@ here that I&rsquo;ve promised people. Let&rsquo;s see how this goes!</p>
 
 
 
-<script type="text/javascript" src="/js/main.min.1c70606d1b733282f06230615f5561b5894924b6f9930ba2ab99cf1254f75a1a.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
   <script type="text/javascript">
     window.MathJax = {
-      showProcessingMessages: false,
-      messageStyle: 'none'
+      tex: {
+        }
     };
   </script>
-  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
 
 
 

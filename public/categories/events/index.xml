@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>events on Yuvi</title>
+    <title>Events on Yuvi</title>
     <link>https://words.yuvi.in/categories/events/</link>
-    <description>Recent content in events on Yuvi</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Events on Yuvi</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 10 Apr 2011 23:02:48 +0000</lastBuildDate>
     <atom:link href="https://words.yuvi.in/categories/events/index.xml" rel="self" type="application/rss+xml" />
@@ -13,70 +13,70 @@
       <link>https://words.yuvi.in/gstreamer-101-at-gnome-asia-2011/</link>
       <pubDate>Sun, 10 Apr 2011 23:02:48 +0000</pubDate>
       <guid>https://words.yuvi.in/gstreamer-101-at-gnome-asia-2011/</guid>
-      <description>My GStreamer 101 presentation at GNOME.asia was very wel received. I was quite happy with the way it turned out. Thanks to Ford_Prefect and Bharath Acharya for pulling me in :)&#xA;My very minimal slides are here. You can reuse them if you want to.&#xA;Sadly, missed the week long hackfest :( Next time!</description>
+      <description>&lt;p&gt;My &lt;code&gt;GStreamer 101&lt;/code&gt; presentation at &lt;a href=&#34;http://gnome.asia&#34;&gt;GNOME.asia&lt;/a&gt; was &lt;em&gt;very&lt;/em&gt; wel received. I was quite happy with the way it turned out. Thanks to &lt;a href=&#34;http://arunraghavan.net/&#34;&gt;Ford_Prefect&lt;/a&gt; and &lt;a href=&#34;http://abharath.wordpress.com/&#34;&gt;Bharath Acharya&lt;/a&gt; for pulling me in :)&lt;/p&gt;&#xA;&lt;p&gt;My very minimal slides are &lt;a href=&#34;http://www.slideshare.net/yuvipanda/gstreamer-101&#34;&gt;here&lt;/a&gt;. You can reuse them if you want to.&lt;/p&gt;&#xA;&lt;p&gt;Sadly, missed the week long hackfest :( Next time!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Functional Programming Geekweekend at Thoughtworks</title>
       <link>https://words.yuvi.in/functional-programming-geekweekend-at-thoughtworks/</link>
       <pubDate>Tue, 25 Jan 2011 18:51:26 +0000</pubDate>
       <guid>https://words.yuvi.in/functional-programming-geekweekend-at-thoughtworks/</guid>
-      <description>[Note: I’ve a rather large backlog of blog posts to do, will push them out as soon as I can]&#xA;Saturday (22 Jan 2011) was spent at Geekweekend, organized at Thougtworks Chennai. The event had awesomeness written all over it, even before it started – how can any event where you register through a (rather limited, but still) command line interface on a website be not good? :D&#xA;I was late as usual (damn living so far away from everywhere) – and found my way walking through the underbelly of the Kathipara junction thanks to Google Maps’ Walking Directions :P</description>
+      <description>&lt;p&gt;&lt;em&gt;[Note: I’ve a rather large backlog of blog posts to do, will push them out as soon as I can]&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Saturday (22 Jan 2011) was spent at &lt;a href=&#34;http://www.geekweekend.in/index.html&#34;&gt;Geekweekend&lt;/a&gt;, organized at &lt;a href=&#34;http://www.thoughtworks.com/other-offices&#34;&gt;Thougtworks Chennai&lt;/a&gt;. The event had awesomeness written all over it, even before it started – how can &lt;em&gt;any&lt;/em&gt; event where you register through a (rather limited, but still) command line interface on a website be not good? :D&lt;/p&gt;&#xA;&lt;p&gt;I was late as usual (damn living so far away from everywhere) – and found my way walking through the underbelly of the Kathipara junction thanks to &lt;a href=&#34;http://maps.google.co.in&#34;&gt;Google Maps’ Walking Directions&lt;/a&gt; :P&lt;/p&gt;</description>
     </item>
     <item>
       <title>Trip to Kerala</title>
       <link>https://words.yuvi.in/trip-to-kerala/</link>
       <pubDate>Sat, 16 Oct 2010 21:19:07 +0000</pubDate>
       <guid>https://words.yuvi.in/trip-to-kerala/</guid>
-      <description>I, along with about a 100 other classmates of mine, went on an Industrial Visit to Kerala a few weeks back. It was a 3 day, 4 night affair – and was incredibly fun and refreshing. New friendships were forged, old ones rekindled, temptations resisted, a thousand pictures clicked (thanks to @RohitP’s camera), group dynamics studied and incredible fun had. It was very refreshing (for the most part), and I realized just why vacations are important.</description>
+      <description>&lt;p&gt;I, along with about a 100 other classmates of mine, went on an &lt;em&gt;Industrial Visit&lt;/em&gt; to Kerala a few weeks back. It was a 3 day, 4 night affair – and was incredibly fun and refreshing. New friendships were forged, old ones rekindled, temptations resisted, a thousand pictures clicked (thanks to @RohitP’s camera), group dynamics studied and incredible fun had. It was very refreshing (for the most part), and I realized just why vacations are important.&lt;/p&gt;</description>
     </item>
     <item>
       <title>“Room Full of People Like Me”</title>
       <link>https://words.yuvi.in/room-full-of-people-like-me/</link>
       <pubDate>Thu, 22 Jul 2010 03:02:02 +0000</pubDate>
       <guid>https://words.yuvi.in/room-full-of-people-like-me/</guid>
-      <description>&#34;I can&amp;#39;t tell you how wonderful it was - I walked into this room, and it was full of people like me&#34; I would give an arm, a leg, an eye and other assorted body parts if I could find such a room. And live there.&#xA;Hackerpace Chennai or The Startup Center better turn up fast :)</description>
+      <description>&lt;div class=&#34;codehilite&#34;&gt;&#xA;  &lt;pre&gt;    &lt;span class=&#34;s&#34;&gt;&#34;I can&amp;#39;t tell you how wonderful it was - I walked into this room, and it was full of people like me&#34;&lt;/span&gt;&#xA;                &lt;/pre&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;I would give an arm, a leg, an eye and other assorted body parts if I could find such a room. And live there.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://blog.senthil.me/hackerspace-talk-presentation-for-barcampchen&#34;&gt;Hackerpace Chennai&lt;/a&gt; or &lt;a href=&#34;http://www.thestartupcentre.in/&#34;&gt;The Startup Center&lt;/a&gt; better turn up fast :)&lt;/p&gt;</description>
     </item>
     <item>
       <title>PyCon India 2009</title>
       <link>https://words.yuvi.in/pycon-india-2009/</link>
       <pubDate>Mon, 19 Apr 2010 17:15:12 +0000</pubDate>
       <guid>https://words.yuvi.in/pycon-india-2009/</guid>
-      <description>Warning: Rambling, unedited, 7 month old recollection ahead. Proceed at your own risk.&#xA;Ah, PyCon India 2009. My first solo bit of travel outside Chennai. What fun it was :) Though it was almost 7 months ago, most of the memories are still fresh. Compare that to college, where I struggle to remember what happened last week…&#xA;Anyway, it was fun. I went off by bus with the rather interesting Anirudh – a profitable startupeer and someone I met when working with Busroutes.</description>
+      <description>&lt;p&gt;&lt;strong&gt;Warning&lt;/strong&gt;: Rambling, &lt;em&gt;unedited&lt;/em&gt;, 7 month old recollection ahead. Proceed at your own risk.&lt;/p&gt;&#xA;&lt;p&gt;Ah, PyCon India 2009. My first solo bit of travel outside Chennai. What fun it was :) Though it was almost 7 months ago, most of the memories are still fresh. Compare that to college, where I struggle to remember what happened last week…&lt;/p&gt;&#xA;&lt;p&gt;Anyway, it was fun. I went off by bus with the rather interesting Anirudh – a profitable startupeer and someone I met when working with &lt;a href=&#34;http://busroutes.in&#34;&gt;Busroutes.in&lt;/a&gt;. He has a finances related degree and his startup deals with (rather cool) car electronics. He was also a KDE contributor, and is a very interesting travel partner for reasons too numerous to mention here.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Python Workshop</title>
       <link>https://words.yuvi.in/the-python-workshop/</link>
       <pubDate>Tue, 08 Dec 2009 02:53:15 +0000</pubDate>
       <guid>https://words.yuvi.in/the-python-workshop/</guid>
-      <description>We had a python workshop at college a week back.&#xA;One hellova workshop it was! Kausik conducted it, and about 14 people turned up (We picked 15, one girl had to miss it ‘coz of fever). Every single one of them was there because they wanted to be there. This happened during semester holidays, so they came to college just for this. And from the feedback (and the actions that followed it) I got, it was worth their while.</description>
+      <description>&lt;p&gt;We had a python &lt;em&gt;workshop&lt;/em&gt; at college a week back.&lt;/p&gt;&#xA;&lt;p&gt;One hellova workshop it was! &lt;a href=&#34;http://kausikram.net/&#34;&gt;Kausik&lt;/a&gt; conducted it, and about 14 people turned up (We picked 15, one girl had to miss it ‘coz of fever). Every single one of them was there because they wanted to be there. This happened during semester holidays, so they came to college just for this. And from the feedback (and the actions that followed it) I got, it was worth their while.&lt;/p&gt;</description>
     </item>
     <item>
       <title>What I learnt from the Hackfest at IITM</title>
       <link>https://words.yuvi.in/what-i-learnt-from-the-hackfest-at-iitm/</link>
       <pubDate>Wed, 07 Oct 2009 23:10:41 +0000</pubDate>
       <guid>https://words.yuvi.in/what-i-learnt-from-the-hackfest-at-iitm/</guid>
-      <description>I was about to just type a list of stuff here, but that doesn’t do the topic justice. So here I am, at 3:30 in the morning, sleep cycle screwed up by the Hackfest, typing out a post on what all I learnt from there. I spent pretty much my entire awake-time at the IIT, so it helped me a lot.&#xA;Your college doesn’t matter much IIT Envy. Every non-IITian has that.</description>
+      <description>&lt;p&gt;I was about to just type a list of stuff here, but that doesn’t do the topic justice. So here I am, at 3:30 in the morning, sleep cycle screwed up by the Hackfest, typing out a post on what all I learnt from there. I spent pretty much my entire awake-time at the IIT, so it helped me a lot.&lt;/p&gt;&#xA;&lt;h4 id=&#34;your-college-doesn8217t-matter-much&#34;&gt;Your college doesn’t matter much&lt;/h4&gt;&#xA;&lt;p&gt;IIT Envy. Every non-IITian has that. I spent a lot of time at IITM during the Hackfest, and while my IITEnvy did go up during the first few hours, it initially came down well below normal as I got to know the people better. What was cool about them was not &lt;em&gt;where they were studying&lt;/em&gt;, but &lt;em&gt;what they were doing&lt;/em&gt;. I could do what these guys were doing. Anyone can do what these guys were doing – there is nothing special about the IIT except maybe for the fact that it aggregates naturally dedicated people into pools. You don’t need an IIT for that – IRC will do :) I’m from a teeny college that nobody has heard of – that would have been a problem when people judged people by where they studied, rather than by what they did. Should not be a problem for me now :)&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hackfest ’09 – Expectations</title>
       <link>https://words.yuvi.in/hackfest-09-expectations/</link>
       <pubDate>Thu, 01 Oct 2009 01:27:12 +0000</pubDate>
       <guid>https://words.yuvi.in/hackfest-09-expectations/</guid>
-      <description>I’m going to participate in Hackfest at IITM’s Shaastra, starting tomorrow. Will hopefully be a lot of fun – and may I be able to contribute my first ever patch during the event ;) Got permission to not get back home – but wondering, where would I stay? Probably pass out in front of the computers :)&#xA;I’ll be hackin on GNOME Apps – hopefully Banshee (since that’s one app I love), or write a newish, smallish app with PyGTK.</description>
+      <description>&lt;p&gt;I’m going to participate in &lt;a href=&#34;http://www.shaastra.org/2009/site/events/coding/hackfest&#34;&gt;Hackfest&lt;/a&gt; at IITM’s Shaastra, starting tomorrow. Will hopefully be a lot of fun – and may I be able to contribute my first ever patch during the event ;) Got permission to not get back home – but wondering, where would I stay? Probably pass out in front of the computers :)&lt;/p&gt;&#xA;&lt;p&gt;I’ll be hackin on GNOME Apps – hopefully &lt;a href=&#34;http://banshee-project.org/&#34;&gt;Banshee&lt;/a&gt; (since that’s one app I &lt;strong&gt;love&lt;/strong&gt;), or write a newish, smallish app with PyGTK. Anything would do but :)&lt;/p&gt;</description>
     </item>
     <item>
       <title>Lessons learnt from working with the Symposium</title>
       <link>https://words.yuvi.in/lessons-learnt-from-working-with-the-symposium/</link>
       <pubDate>Sun, 20 Sep 2009 23:24:28 +0000</pubDate>
       <guid>https://words.yuvi.in/lessons-learnt-from-working-with-the-symposium/</guid>
-      <description>Document Everything! On paper. Will save you from hell later. There is never enough time. Start earlier than you think is early enough. Sell people things. Make them want it. Think from their point of view. Prioritize. Delegate. Responsibly. And follow up. Know when to stop. Recognize when something is good enough. Printing takes a long time. Very long timeE. And is boring. People often do not mean what they say.</description>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;em&gt;Document Everything&lt;/em&gt;! On paper. Will save you from hell later.&lt;/li&gt;&#xA;&lt;li&gt;There is never enough time. Start earlier than you think is early enough.&lt;/li&gt;&#xA;&lt;li&gt;Sell people things. Make them want it. Think from their point of view.&lt;/li&gt;&#xA;&lt;li&gt;Prioritize.&lt;/li&gt;&#xA;&lt;li&gt;Delegate. Responsibly. And &lt;em&gt;follow up&lt;/em&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Know when to stop. Recognize when something is good enough.&lt;/li&gt;&#xA;&lt;li&gt;Printing takes a long time. &lt;em&gt;Very long timeE&lt;/em&gt;. And is boring.&lt;/li&gt;&#xA;&lt;li&gt;People often do not mean what they say. &lt;em&gt;Very often&lt;/em&gt;&lt;/li&gt;&#xA;&lt;li&gt;Indoor photography requires a good camera.&lt;/li&gt;&#xA;&lt;li&gt;Old people think in weird ways.&lt;/li&gt;&#xA;&lt;li&gt;Different people prioritize differently.&lt;/li&gt;&#xA;&lt;li&gt;Promises are worth shit. Usually.&lt;/li&gt;&#xA;&lt;li&gt;Fight. It’s worth it.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>PyCon 2009 – Are you coming?</title>
       <link>https://words.yuvi.in/pycon-2009-are-you-coming/</link>
       <pubDate>Fri, 28 Aug 2009 00:39:22 +0000</pubDate>
       <guid>https://words.yuvi.in/pycon-2009-are-you-coming/</guid>
-      <description>I’m going to PyCon India 2009. Are you?</description>
+      <description>&lt;p&gt;&lt;img src=&#34;http://in.pycon.org/sitemedia/pics/logo_image.gif&#34; alt=&#34;Pycon India Logo&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;I’m going to &lt;a href=&#34;http://in.pycon.org/2009/&#34;&gt;PyCon India 2009&lt;/a&gt;. Are you?&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

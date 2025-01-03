@@ -16,16 +16,17 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Yuvi" /><meta name="description" content="I earlier had a vaguely working setup for making sure browsers, shells and other applications don&amp;rsquo;t eat all RAM / CPU on my machine with systemd &#43; sudo &#43; shell scripts.
-It was a hacky solution, and also had complications when used to launch shells. It wasn&amp;rsquo;t passing in all the environment varialbes it should, causing interesting-to-debug issues. sudo rules were complex, and hard to do securely.
-I had also been looking for an excuse to learn more Golang, so I ended up writing systemd-simple-containment or ssc." /><meta name="keywords" content="yuvi, yuvipanda" />
+<meta name="author" content="" /><meta name="description" content="I earlier had a vaguely working setup for making sure browsers, shells and other applications don&rsquo;t eat all RAM / CPU on my machine with systemd &#43; sudo &#43; shell scripts.
+It was a hacky solution, and also had complications when used to launch shells. It wasn&rsquo;t passing in all the environment varialbes it should, causing interesting-to-debug issues. sudo rules were complex, and hard to do securely.
+I had also been looking for an excuse to learn more Golang, so I ended up writing systemd-simple-containment or ssc.
+" /><meta name="keywords" content="yuvi, yuvipanda" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.121.2 with theme even" />
+<meta name="generator" content="Hugo 0.138.0 with theme even" />
 
 
 <link rel="canonical" href="https://words.yuvi.in/post/systemd-simple-containment/" />
@@ -37,32 +38,41 @@ I had also been looking for an excuse to learn more Golang, so I ended up writin
 
 
 
-<link href="/sass/main.min.5cd638ef09e6be2c903018f2f2bfacabe243faf0dc08773cdc9c2da41e81e4cc.css" rel="stylesheet">
+<link href="/sass/main.min.eaa67a77b500546a647c1792cf4e709a829067f265bb543827f6130724f8f27b.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 
 <link rel="stylesheet" href="/lib/fontawesome-free-5.13.1-web/css/all.min.css">
 
-<meta property="og:title" content="systemd simple containment for GUI applications &amp; shells" />
-<meta property="og:description" content="I earlier had a vaguely working setup for making sure browsers, shells and other applications don&rsquo;t eat all RAM / CPU on my machine with systemd &#43; sudo &#43; shell scripts.
-It was a hacky solution, and also had complications when used to launch shells. It wasn&rsquo;t passing in all the environment varialbes it should, causing interesting-to-debug issues. sudo rules were complex, and hard to do securely.
-I had also been looking for an excuse to learn more Golang, so I ended up writing systemd-simple-containment or ssc." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://words.yuvi.in/post/systemd-simple-containment/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2017-03-31T23:23:52-07:00" />
-<meta property="article:modified_time" content="2017-03-31T23:23:52-07:00" />
+<meta property="og:url" content="https://words.yuvi.in/post/systemd-simple-containment/">
+  <meta property="og:site_name" content="Yuvi">
+  <meta property="og:title" content="systemd simple containment for GUI applications & shells">
+  <meta property="og:description" content="I earlier had a vaguely working setup for making sure browsers, shells and other applications don’t eat all RAM / CPU on my machine with systemd &#43; sudo &#43; shell scripts.
+It was a hacky solution, and also had complications when used to launch shells. It wasn’t passing in all the environment varialbes it should, causing interesting-to-debug issues. sudo rules were complex, and hard to do securely.
+I had also been looking for an excuse to learn more Golang, so I ended up writing systemd-simple-containment or ssc.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2017-03-31T23:23:52-07:00">
+    <meta property="article:modified_time" content="2017-03-31T23:23:52-07:00">
+    <meta property="article:tag" content="Systemd">
+    <meta property="article:tag" content="Learning">
+    <meta property="article:tag" content="Code">
 
-<meta itemprop="name" content="systemd simple containment for GUI applications &amp; shells">
-<meta itemprop="description" content="I earlier had a vaguely working setup for making sure browsers, shells and other applications don&rsquo;t eat all RAM / CPU on my machine with systemd &#43; sudo &#43; shell scripts.
-It was a hacky solution, and also had complications when used to launch shells. It wasn&rsquo;t passing in all the environment varialbes it should, causing interesting-to-debug issues. sudo rules were complex, and hard to do securely.
-I had also been looking for an excuse to learn more Golang, so I ended up writing systemd-simple-containment or ssc."><meta itemprop="datePublished" content="2017-03-31T23:23:52-07:00" />
-<meta itemprop="dateModified" content="2017-03-31T23:23:52-07:00" />
-<meta itemprop="wordCount" content="463">
-<meta itemprop="keywords" content="systemd,learning,code," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="systemd simple containment for GUI applications &amp; shells"/>
-<meta name="twitter:description" content="I earlier had a vaguely working setup for making sure browsers, shells and other applications don&rsquo;t eat all RAM / CPU on my machine with systemd &#43; sudo &#43; shell scripts.
-It was a hacky solution, and also had complications when used to launch shells. It wasn&rsquo;t passing in all the environment varialbes it should, causing interesting-to-debug issues. sudo rules were complex, and hard to do securely.
-I had also been looking for an excuse to learn more Golang, so I ended up writing systemd-simple-containment or ssc."/>
+  <meta itemprop="name" content="systemd simple containment for GUI applications & shells">
+  <meta itemprop="description" content="I earlier had a vaguely working setup for making sure browsers, shells and other applications don’t eat all RAM / CPU on my machine with systemd &#43; sudo &#43; shell scripts.
+It was a hacky solution, and also had complications when used to launch shells. It wasn’t passing in all the environment varialbes it should, causing interesting-to-debug issues. sudo rules were complex, and hard to do securely.
+I had also been looking for an excuse to learn more Golang, so I ended up writing systemd-simple-containment or ssc.">
+  <meta itemprop="datePublished" content="2017-03-31T23:23:52-07:00">
+  <meta itemprop="dateModified" content="2017-03-31T23:23:52-07:00">
+  <meta itemprop="wordCount" content="463">
+  <meta itemprop="keywords" content="Systemd,Learning,Code">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="systemd simple containment for GUI applications & shells">
+  <meta name="twitter:description" content="I earlier had a vaguely working setup for making sure browsers, shells and other applications don’t eat all RAM / CPU on my machine with systemd &#43; sudo &#43; shell scripts.
+It was a hacky solution, and also had complications when used to launch shells. It wasn’t passing in all the environment varialbes it should, causing interesting-to-debug issues. sudo rules were complex, and hard to do securely.
+I had also been looking for an excuse to learn more Golang, so I ended up writing systemd-simple-containment or ssc.">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -86,8 +96,9 @@ I had also been looking for an excuse to learn more Golang, so I ended up writin
 <div class="logo-social">
       <a href="mailto:yuvipanda@gmail.com" class="fas fa-envelope" title="envelope"></a>
       <a href="https://github.com/yuvipanda" class="fab fa-github" title="github"></a>
-  <a href="https://words.yuvi.in/index.xml" type="application/rss+xml" class="fas fa-rss" title="rss"></a>
+  
 </div>
+
     </header>
 
     <main id="main" class="main">
@@ -134,7 +145,7 @@ I had also been looking for an excuse to learn more Golang, so I ended up writin
     <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">Author</span>
-    <span class="item-content">Yuvi</span>
+    <span class="item-content"></span>
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
@@ -192,13 +203,10 @@ I had also been looking for an excuse to learn more Golang, so I ended up writin
   <span class="copyright-year">
     &copy;
     2005 -
-    2024
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">Yuvi</span>
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span></span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -212,14 +220,14 @@ I had also been looking for an excuse to learn more Golang, so I ended up writin
 
 
 
-<script type="text/javascript" src="/js/main.min.1c70606d1b733282f06230615f5561b5894924b6f9930ba2ab99cf1254f75a1a.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
   <script type="text/javascript">
     window.MathJax = {
-      showProcessingMessages: false,
-      messageStyle: 'none'
+      tex: {
+        }
     };
   </script>
-  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
 
 
 

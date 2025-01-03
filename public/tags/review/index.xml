@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>review on Yuvi</title>
+    <title>Review on Yuvi</title>
     <link>https://words.yuvi.in/tags/review/</link>
-    <description>Recent content in review on Yuvi</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Review on Yuvi</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 08 Jun 2011 04:21:33 +0000</lastBuildDate>
     <atom:link href="https://words.yuvi.in/tags/review/index.xml" rel="self" type="application/rss+xml" />
@@ -13,14 +13,14 @@
       <link>https://words.yuvi.in/infosys-tcs-or-wipro-none/</link>
       <pubDate>Wed, 08 Jun 2011 04:21:33 +0000</pubDate>
       <guid>https://words.yuvi.in/infosys-tcs-or-wipro-none/</guid>
-      <description>Succinctly written post that every engineering college student should read.&#xA;Ofcourse, someone should write a post called “CS, EC or EEE?” “Neither” for high school students, because for a lot of people the answer to the question “Should you do Engineering?” is a huge “No”.&#xA;The comments section is even more awesome. Choice quotes:&#xA;A sympathizer/astroturfer/cognitively dissonant person writes:&#xA;Are you saying that anybody who can browse the internet and knows about the computer can do our jobs?</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://blog.susam.in/2011/05/infosys-tcs-or-wipro.html&#34;&gt;Succinctly written post that every engineering college student should read&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Ofcourse, someone should write a post called “CS, EC or EEE?” “Neither” for high school students, because for a lot of people the answer to the question “Should you do Engineering?” is a huge “No”.&lt;/p&gt;&#xA;&lt;p&gt;The comments section is even more awesome. Choice quotes:&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;A sympathizer/astroturfer/cognitively dissonant person writes:&lt;/em&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Are you saying that anybody who can browse the internet and knows about the computer can do our jobs? Don’t you think we would find that a bit insulting? It might be true in many cases where the proper training can make a monkey do our jobs, but isn’t that true for many fields? Aren’t monkeys being trained to pilot airships?&lt;/p&gt;</description>
     </item>
     <item>
       <title>Belated Samsung Galaxy 3 Review</title>
       <link>https://words.yuvi.in/belated-samsung-galaxy-3-review/</link>
       <pubDate>Tue, 07 Jun 2011 02:50:05 +0000</pubDate>
       <guid>https://words.yuvi.in/belated-samsung-galaxy-3-review/</guid>
-      <description>Very late one. I’ve been using this since last September (as those of you on twitter and following me would know).&#xA;It was on 2.1 for a long, long time – and even after 2.2 came out (first unofficially and then officially) I didn’t upgrade for almost a month (thanks to a missing usb cable and some laziness). I then upgraded to official 2.2, then one of the ‘Stock’ bootloaderless ROMs, and then to InDroid 3.</description>
+      <description>&lt;p&gt;Very late one. I’ve been using this since last September (as those of you on twitter and following me would know).&lt;/p&gt;&#xA;&lt;p&gt;It was on 2.1 for a long, long time – and even after 2.2 came out (first unofficially and then officially) I didn’t upgrade for almost a month (thanks to a missing usb cable and some laziness). I then upgraded to official 2.2, then one of the ‘Stock’ bootloaderless ROMs, and then to InDroid 3.0, then semi-bricked my phone (trying to install InDroid 4.0) and finally settled on Kyrillos.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

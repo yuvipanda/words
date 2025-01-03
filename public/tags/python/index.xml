@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>python on Yuvi</title>
+    <title>Python on Yuvi</title>
     <link>https://words.yuvi.in/tags/python/</link>
-    <description>Recent content in python on Yuvi</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Python on Yuvi</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 05 Apr 2017 23:18:19 -0700</lastBuildDate>
     <atom:link href="https://words.yuvi.in/tags/python/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://words.yuvi.in/post/python-gil-resources/</link>
       <pubDate>Wed, 05 Apr 2017 23:18:19 -0700</pubDate>
       <guid>https://words.yuvi.in/post/python-gil-resources/</guid>
-      <description>I was in a conversation about the Python GIL with friends a few days ago, and realized that my understanding of the specifics of the GIL problem were super hand-wavy &amp;amp; unstructured. So I spent some time collecting resources to learn more, and now have a better understanding!&#xA;Python&amp;rsquo;s Infamous GIL (Larry Hastings) This was a great introduction to the history of the GIL, why it was necessary &amp;amp; reasons why getting rid of it is complicated.</description>
+      <description>&lt;p&gt;I was in a conversation about the Python GIL with friends a few days ago, and realized that my understanding of the specifics of the GIL problem were super hand-wavy &amp;amp; unstructured. So I spent some time collecting resources to learn more, and now have a better understanding!&lt;/p&gt;&#xA;&lt;h4 id=&#34;pythons-infamous-gil-larry-hastings&#34;&gt;Python&amp;rsquo;s Infamous GIL (Larry Hastings)&lt;/h4&gt;&#xA;&lt;p&gt;This was a &lt;em&gt;great&lt;/em&gt; introduction to the history of the GIL, why it was necessary &amp;amp; reasons why getting rid of it is complicated.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

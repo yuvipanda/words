@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>jupyter on Yuvi</title>
+    <title>Jupyter on Yuvi</title>
     <link>https://words.yuvi.in/categories/jupyter/</link>
-    <description>Recent content in jupyter on Yuvi</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Jupyter on Yuvi</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 18 Jun 2018 13:14:59 -0700</lastBuildDate>
     <atom:link href="https://words.yuvi.in/categories/jupyter/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://words.yuvi.in/post/the-littlest-jupyterhub/</link>
       <pubDate>Mon, 18 Jun 2018 13:14:59 -0700</pubDate>
       <guid>https://words.yuvi.in/post/the-littlest-jupyterhub/</guid>
-      <description>This idea comes from brainstorming along with Lindsey Heagy, Carol Willing, Tim Head &amp;amp; Nick Bollweg at the Jupyter Team Meeting 2018. Most of the good ideas are theirs! The name is inspired by one of favorite TV series of one of my favorite people.&#xA;I really love the idea of JupyterHub distributions - opinionated combination of components that target a specific use case. The Zero to JupyterHub distribution is awesome &amp;amp; works for most people.</description>
+      <description>&lt;p&gt;This idea comes from brainstorming along with &lt;a href=&#34;https://lindseyjh.ca/&#34;&gt;Lindsey&#xA;Heagy&lt;/a&gt;, &lt;a href=&#34;https://www.willingconsulting.com/&#34;&gt;Carol&#xA;Willing&lt;/a&gt;, &lt;a href=&#34;https://github.com/betatim&#34;&gt;Tim&#xA;Head&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://github.com/bollwyvl&#34;&gt;Nick&#xA;Bollweg&lt;/a&gt; at the Jupyter Team Meeting 2018. Most&#xA;of the good ideas are theirs! The name is inspired by &lt;a href=&#34;https://en.wikipedia.org/wiki/The_Littlest_Hobo&#34;&gt;one of favorite TV&#xA;series&lt;/a&gt; of one of my&#xA;favorite people.&lt;/p&gt;&#xA;&lt;p&gt;I really love the idea of &lt;a href=&#34;https://github.com/jupyterhub/jupyterhub&#34;&gt;JupyterHub&lt;/a&gt; distributions - opinionated combination&#xA;of components that target a specific use case. The &lt;a href=&#34;https://z2jh.jupyter.org&#34;&gt;Zero to JupyterHub&lt;/a&gt;&#xA;distribution is awesome &amp;amp; works for most people. However, it requires&#xA;&lt;a href=&#34;https://kubernetes.io&#34;&gt;Kubernetes&lt;/a&gt; - a distributed system with inherent complexities that is not&#xA;worth it below a certain threshold.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>algorithm on Yuvi</title>
+    <title>Algorithm on Yuvi</title>
     <link>https://words.yuvi.in/tags/algorithm/</link>
-    <description>Recent content in algorithm on Yuvi</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Algorithm on Yuvi</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 19 Jun 2011 01:40:36 +0000</lastBuildDate>
     <atom:link href="https://words.yuvi.in/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://words.yuvi.in/sleepsort-4chan/</link>
       <pubDate>Sun, 19 Jun 2011 01:40:36 +0000</pubDate>
       <guid>https://words.yuvi.in/sleepsort-4chan/</guid>
-      <description>4Chan isn’t exactly what you’d associate with ‘shit, that’s a cool piece of code!’, but look what I found!&#xA;(via HN)&#xA;Nice hack. And it is O(N) in bitsize of largest number (Ignoring all the overhead of forking new processes, the problem with the race conditions(Sort 0 and 0.1? How about 0.01 and 0.011?), processor contention, etc,.) They basically delegated the sorting to the process scheduler, treating it as a sort of priority queue.</description>
+      <description>&lt;p&gt;4Chan isn’t exactly what you’d associate with ‘shit, that’s a cool piece of code!’, but look &lt;a href=&#34;http://dis.4chan.org/read/prog/1295544154&#34;&gt;what I found&lt;/a&gt;!&lt;/p&gt;&#xA;&lt;p&gt;(&lt;a href=&#34;http://news.ycombinator.com/item?id=2657277&#34;&gt;via HN&lt;/a&gt;)&lt;/p&gt;&#xA;&lt;p&gt;Nice hack. And it &lt;strong&gt;is&lt;/strong&gt; &lt;code&gt;O(N)&lt;/code&gt; in bitsize of largest number (Ignoring all the overhead of forking new processes, the problem with the race conditions(Sort 0 and 0.1? How about 0.01 and 0.011?), processor contention, etc,.) They basically delegated the sorting to the process scheduler, treating it as a sort of priority queue.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

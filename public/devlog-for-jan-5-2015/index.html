@@ -18,14 +18,15 @@
 
 <meta name="author" content="yuvipanda" /><meta name="description" content="DevLog for Jan 5, 2015
 Trying out the ByWord app, since it has MarkDown support and also publishes to WordPress. Paid Rs. 900 for it, let’s hope it is useful. Hate the default font, though.
-Need to parse View definitions on labsdb public databases and verify that we aren’t leaking any info (https://phabricator.wikimedia.org/T85783). Was going to use the sqlparse library, but that doesn’t seem very complete or useful. Will attempt to use regexes now." /><meta name="keywords" content="yuvi, yuvipanda" />
+Need to parse View definitions on labsdb public databases and verify that we aren’t leaking any info (https://phabricator.wikimedia.org/T85783). Was going to use the sqlparse library, but that doesn’t seem very complete or useful. Will attempt to use regexes now. Wish I had learnt how to build parsers properly easily. Ignore lament ^, I spent some time learning to use PyParsing, and ended up with a very simple parser that parsed the small subset of SQL I cared about! Yay :) Still need to set aside some time at some point to fully understand parsers/parsing. Fixed wikdidata beta not resolving (https://phabricator.wikimedia.org/T85793). Of course, problem was caused by me as well, not verifying that DNS changes I was making didn’t have unintended consequences. It’s also somewhat surprising that it was down for 6 days before someone noticed. Add labsdb-auditor report that verifies views have appropriately done definitions that do not expose private information (https://gerrit.wikimedia.org/r/#/c/182848/). This was fun to write. I should definitely learn more parsing things and seek out other simpel things I can write a parser for. Code quality is getting better, although could still be better if I can remove the regex part entirely – it currently cleans up the SQL via a regex and then parses it with pyparsing. Fixed a consistency bug in the perl script that maintians public view replicas (https://gerrit.wikimedia.org/r/#/c/182819/). Reading list: * What most young programmers need to learn was nice. I just feel lucky to have been gifted a copy of Code Complete and Pragmatic Programmer when I was 15 (by Colinizer).
+" /><meta name="keywords" content="yuvi, yuvipanda" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.121.2 with theme even" />
+<meta name="generator" content="Hugo 0.138.0 with theme even" />
 
 
 <link rel="canonical" href="https://words.yuvi.in/devlog-for-jan-5-2015/" />
@@ -37,32 +38,38 @@ Need to parse View definitions on labsdb public databases and verify that we are
 
 
 
-<link href="/sass/main.min.5cd638ef09e6be2c903018f2f2bfacabe243faf0dc08773cdc9c2da41e81e4cc.css" rel="stylesheet">
+<link href="/sass/main.min.eaa67a77b500546a647c1792cf4e709a829067f265bb543827f6130724f8f27b.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 
 <link rel="stylesheet" href="/lib/fontawesome-free-5.13.1-web/css/all.min.css">
 
-<meta property="og:title" content="DevLog for Jan 5, 2015" />
-<meta property="og:description" content="DevLog for Jan 5, 2015
+<meta property="og:url" content="https://words.yuvi.in/devlog-for-jan-5-2015/">
+  <meta property="og:site_name" content="Yuvi">
+  <meta property="og:title" content="DevLog for Jan 5, 2015">
+  <meta property="og:description" content="DevLog for Jan 5, 2015
 Trying out the ByWord app, since it has MarkDown support and also publishes to WordPress. Paid Rs. 900 for it, let’s hope it is useful. Hate the default font, though.
-Need to parse View definitions on labsdb public databases and verify that we aren’t leaking any info (https://phabricator.wikimedia.org/T85783). Was going to use the sqlparse library, but that doesn’t seem very complete or useful. Will attempt to use regexes now." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://words.yuvi.in/devlog-for-jan-5-2015/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2015-01-05T21:52:08+00:00" />
-<meta property="article:modified_time" content="2015-01-05T21:52:08+00:00" />
+Need to parse View definitions on labsdb public databases and verify that we aren’t leaking any info (https://phabricator.wikimedia.org/T85783). Was going to use the sqlparse library, but that doesn’t seem very complete or useful. Will attempt to use regexes now. Wish I had learnt how to build parsers properly easily. Ignore lament ^, I spent some time learning to use PyParsing, and ended up with a very simple parser that parsed the small subset of SQL I cared about! Yay :) Still need to set aside some time at some point to fully understand parsers/parsing. Fixed wikdidata beta not resolving (https://phabricator.wikimedia.org/T85793). Of course, problem was caused by me as well, not verifying that DNS changes I was making didn’t have unintended consequences. It’s also somewhat surprising that it was down for 6 days before someone noticed. Add labsdb-auditor report that verifies views have appropriately done definitions that do not expose private information (https://gerrit.wikimedia.org/r/#/c/182848/). This was fun to write. I should definitely learn more parsing things and seek out other simpel things I can write a parser for. Code quality is getting better, although could still be better if I can remove the regex part entirely – it currently cleans up the SQL via a regex and then parses it with pyparsing. Fixed a consistency bug in the perl script that maintians public view replicas (https://gerrit.wikimedia.org/r/#/c/182819/). Reading list: * What most young programmers need to learn was nice. I just feel lucky to have been gifted a copy of Code Complete and Pragmatic Programmer when I was 15 (by Colinizer).">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2015-01-05T21:52:08+00:00">
+    <meta property="article:modified_time" content="2015-01-05T21:52:08+00:00">
 
-<meta itemprop="name" content="DevLog for Jan 5, 2015">
-<meta itemprop="description" content="DevLog for Jan 5, 2015
+  <meta itemprop="name" content="DevLog for Jan 5, 2015">
+  <meta itemprop="description" content="DevLog for Jan 5, 2015
 Trying out the ByWord app, since it has MarkDown support and also publishes to WordPress. Paid Rs. 900 for it, let’s hope it is useful. Hate the default font, though.
-Need to parse View definitions on labsdb public databases and verify that we aren’t leaking any info (https://phabricator.wikimedia.org/T85783). Was going to use the sqlparse library, but that doesn’t seem very complete or useful. Will attempt to use regexes now."><meta itemprop="datePublished" content="2015-01-05T21:52:08+00:00" />
-<meta itemprop="dateModified" content="2015-01-05T21:52:08+00:00" />
-<meta itemprop="wordCount" content="293">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="DevLog for Jan 5, 2015"/>
-<meta name="twitter:description" content="DevLog for Jan 5, 2015
+Need to parse View definitions on labsdb public databases and verify that we aren’t leaking any info (https://phabricator.wikimedia.org/T85783). Was going to use the sqlparse library, but that doesn’t seem very complete or useful. Will attempt to use regexes now. Wish I had learnt how to build parsers properly easily. Ignore lament ^, I spent some time learning to use PyParsing, and ended up with a very simple parser that parsed the small subset of SQL I cared about! Yay :) Still need to set aside some time at some point to fully understand parsers/parsing. Fixed wikdidata beta not resolving (https://phabricator.wikimedia.org/T85793). Of course, problem was caused by me as well, not verifying that DNS changes I was making didn’t have unintended consequences. It’s also somewhat surprising that it was down for 6 days before someone noticed. Add labsdb-auditor report that verifies views have appropriately done definitions that do not expose private information (https://gerrit.wikimedia.org/r/#/c/182848/). This was fun to write. I should definitely learn more parsing things and seek out other simpel things I can write a parser for. Code quality is getting better, although could still be better if I can remove the regex part entirely – it currently cleans up the SQL via a regex and then parses it with pyparsing. Fixed a consistency bug in the perl script that maintians public view replicas (https://gerrit.wikimedia.org/r/#/c/182819/). Reading list: * What most young programmers need to learn was nice. I just feel lucky to have been gifted a copy of Code Complete and Pragmatic Programmer when I was 15 (by Colinizer).">
+  <meta itemprop="datePublished" content="2015-01-05T21:52:08+00:00">
+  <meta itemprop="dateModified" content="2015-01-05T21:52:08+00:00">
+  <meta itemprop="wordCount" content="293">
+  <meta itemprop="keywords" content="Devlog">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="DevLog for Jan 5, 2015">
+  <meta name="twitter:description" content="DevLog for Jan 5, 2015
 Trying out the ByWord app, since it has MarkDown support and also publishes to WordPress. Paid Rs. 900 for it, let’s hope it is useful. Hate the default font, though.
-Need to parse View definitions on labsdb public databases and verify that we aren’t leaking any info (https://phabricator.wikimedia.org/T85783). Was going to use the sqlparse library, but that doesn’t seem very complete or useful. Will attempt to use regexes now."/>
+Need to parse View definitions on labsdb public databases and verify that we aren’t leaking any info (https://phabricator.wikimedia.org/T85783). Was going to use the sqlparse library, but that doesn’t seem very complete or useful. Will attempt to use regexes now. Wish I had learnt how to build parsers properly easily. Ignore lament ^, I spent some time learning to use PyParsing, and ended up with a very simple parser that parsed the small subset of SQL I cared about! Yay :) Still need to set aside some time at some point to fully understand parsers/parsing. Fixed wikdidata beta not resolving (https://phabricator.wikimedia.org/T85793). Of course, problem was caused by me as well, not verifying that DNS changes I was making didn’t have unintended consequences. It’s also somewhat surprising that it was down for 6 days before someone noticed. Add labsdb-auditor report that verifies views have appropriately done definitions that do not expose private information (https://gerrit.wikimedia.org/r/#/c/182848/). This was fun to write. I should definitely learn more parsing things and seek out other simpel things I can write a parser for. Code quality is getting better, although could still be better if I can remove the regex part entirely – it currently cleans up the SQL via a regex and then parses it with pyparsing. Fixed a consistency bug in the perl script that maintians public view replicas (https://gerrit.wikimedia.org/r/#/c/182819/). Reading list: * What most young programmers need to learn was nice. I just feel lucky to have been gifted a copy of Code Complete and Pragmatic Programmer when I was 15 (by Colinizer).">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -86,8 +93,9 @@ Need to parse View definitions on labsdb public databases and verify that we are
 <div class="logo-social">
       <a href="mailto:yuvipanda@gmail.com" class="fas fa-envelope" title="envelope"></a>
       <a href="https://github.com/yuvipanda" class="fab fa-github" title="github"></a>
-  <a href="https://words.yuvi.in/index.xml" type="application/rss+xml" class="fas fa-rss" title="rss"></a>
+  
 </div>
+
     </header>
 
     <main id="main" class="main">
@@ -186,13 +194,10 @@ Need to parse View definitions on labsdb public databases and verify that we are
   <span class="copyright-year">
     &copy;
     2005 -
-    2024
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">Yuvi</span>
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span></span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -206,14 +211,14 @@ Need to parse View definitions on labsdb public databases and verify that we are
 
 
 
-<script type="text/javascript" src="/js/main.min.1c70606d1b733282f06230615f5561b5894924b6f9930ba2ab99cf1254f75a1a.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
   <script type="text/javascript">
     window.MathJax = {
-      showProcessingMessages: false,
-      messageStyle: 'none'
+      tex: {
+        }
     };
   </script>
-  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
 
 
 

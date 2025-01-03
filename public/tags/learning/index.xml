@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>learning on Yuvi</title>
+    <title>Learning on Yuvi</title>
     <link>https://words.yuvi.in/tags/learning/</link>
-    <description>Recent content in learning on Yuvi</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Learning on Yuvi</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 02 Jul 2017 22:47:06 -0700</lastBuildDate>
     <atom:link href="https://words.yuvi.in/tags/learning/index.xml" rel="self" type="application/rss+xml" />
@@ -13,56 +13,56 @@
       <link>https://words.yuvi.in/post/designing-data-intensive-applications/</link>
       <pubDate>Sun, 02 Jul 2017 22:47:06 -0700</pubDate>
       <guid>https://words.yuvi.in/post/designing-data-intensive-applications/</guid>
-      <description>I&amp;rsquo;ve been reading Designing Data Intensive Applications book &amp;amp; am using this post to keep notes!&#xA;I&amp;rsquo;ve picked up ideas on scaling systems through the years, but never actually sat down to actually study them semi-formally. This seems like a great start to it!&#xA;It&amp;rsquo;s a pretty big book, and it&amp;rsquo;s gonna take me a while to go through it :) Will update these notes as I go! Trying to do a chapter a week!</description>
+      <description>&lt;p&gt;I&amp;rsquo;ve been reading &lt;a href=&#34;http://dataintensive.net/&#34;&gt;Designing Data Intensive Applications&lt;/a&gt; book &amp;amp; am using this post to keep notes!&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve picked up ideas on scaling systems through the years, but never actually sat down to actually study them semi-formally. This seems like a great start to it!&lt;/p&gt;&#xA;&lt;p&gt;It&amp;rsquo;s a pretty big book, and it&amp;rsquo;s gonna take me a while to go through it :) Will update these notes as I go! Trying to do a chapter a week!&lt;/p&gt;</description>
     </item>
     <item>
       <title>think os</title>
       <link>https://words.yuvi.in/post/think-os/</link>
       <pubDate>Sat, 13 May 2017 11:41:20 -0700</pubDate>
       <guid>https://words.yuvi.in/post/think-os/</guid>
-      <description>Following a trail from a wonderful Julia Evans post led me to Allen Downey&amp;rsquo;s nice textbook manifesto. Also led me to the nice Think OS book, which seems like a super nice introduction to Operating System principles.&#xA;It is short enough (~100 pages) that I wanted to read through it. I&amp;rsquo;ve spent a good chunk of time absorbing how Operating Systems work by dint of diving into things and working through them, but it would be nice to get a refresher on the basics.</description>
+      <description>&lt;p&gt;Following a trail from a &lt;a href=&#34;http://jvns.ca/blog/2017/04/17/statistics-for-programmers/&#34;&gt;wonderful Julia Evans post&lt;/a&gt; led me to Allen Downey&amp;rsquo;s nice &lt;a href=&#34;http://greenteapress.com/wp/textbook-manifesto/&#34;&gt;textbook manifesto&lt;/a&gt;. Also led me to the nice &lt;a href=&#34;http://greenteapress.com/thinkos/index.html&#34;&gt;Think OS&lt;/a&gt; book, which seems like a super nice introduction to Operating System principles.&lt;/p&gt;&#xA;&lt;p&gt;It is short enough (~100 pages) that I wanted to read through it. I&amp;rsquo;ve spent a good chunk of time absorbing how Operating Systems work by dint of diving into things and working through them, but it would be nice to get a refresher on the basics. There are clearly basic things I do not understand, and this seemed like a good way to explore.&lt;/p&gt;</description>
     </item>
     <item>
       <title>learning selinux and apparmor</title>
       <link>https://words.yuvi.in/post/learning-selinux/</link>
       <pubDate>Tue, 18 Apr 2017 00:01:26 -0700</pubDate>
       <guid>https://words.yuvi.in/post/learning-selinux/</guid>
-      <description>I am trying to understand SELinux and AppArmor, and collecting resources here as I learn. k&#xA;SELinux for mere mortals (2014) This was the first video I watched, and it helped me understanding what SELinux does at a fundamental basic level. It&amp;rsquo;s probably useless in a container-filled world (where I doubt Fedora shipes pre-configured SELinux rules for my containers), but it helped me think I understood types / labels, so that seems like a positive step?</description>
+      <description>&lt;p&gt;I am trying to understand SELinux and AppArmor, and collecting resources here as I learn. k&lt;/p&gt;&#xA;&lt;h2 id=&#34;selinux-for-mere-mortals-2014&#34;&gt;SELinux for mere mortals (2014)&lt;/h2&gt;&#xA;&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/MxjenQ31b70&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;&#xA;&lt;p&gt;This was the first video I watched, and it helped me understanding what SELinux does at a fundamental basic level. It&amp;rsquo;s probably useless in a container-filled world (where I doubt Fedora shipes pre-configured SELinux rules for my containers), but it helped me think I understood types / labels, so that seems like a positive step?&lt;/p&gt;</description>
     </item>
     <item>
       <title>things to build</title>
       <link>https://words.yuvi.in/post/things-to-build/</link>
       <pubDate>Sat, 15 Apr 2017 13:24:23 -0700</pubDate>
       <guid>https://words.yuvi.in/post/things-to-build/</guid>
-      <description>This is a running list of things I want to build!&#xA;There&amp;rsquo;s an analogous running list of things I want to learn. Things move between them :) I also have higher standards of documentation (other people should be able to use it) before marking these as complete.&#xA;kubernetes-login A helper to openssh that allows users to log in to a configurable user pod running on a kubernetes cluster. Should ideally support scp / sftp too.</description>
+      <description>&lt;p&gt;This is a running list of things I want to build!&lt;/p&gt;&#xA;&lt;p&gt;There&amp;rsquo;s an analogous running list of &lt;a href=&#34;http://words.yuvi.in/post/things-to-learn/&#34;&gt;things I want to learn&lt;/a&gt;. Things move between them :) I also have higher standards of documentation (other people should be able to use it) before marking these as complete.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;kubernetes-login&lt;/strong&gt;&#xA;A helper to openssh that allows users to log in to a configurable user pod&#xA;running on a kubernetes cluster. Should ideally support scp / sftp too.&#xA;Helps get rid of SPOF login nodes&lt;/p&gt;</description>
     </item>
     <item>
       <title>python gil resources</title>
       <link>https://words.yuvi.in/post/python-gil-resources/</link>
       <pubDate>Wed, 05 Apr 2017 23:18:19 -0700</pubDate>
       <guid>https://words.yuvi.in/post/python-gil-resources/</guid>
-      <description>I was in a conversation about the Python GIL with friends a few days ago, and realized that my understanding of the specifics of the GIL problem were super hand-wavy &amp;amp; unstructured. So I spent some time collecting resources to learn more, and now have a better understanding!&#xA;Python&amp;rsquo;s Infamous GIL (Larry Hastings) This was a great introduction to the history of the GIL, why it was necessary &amp;amp; reasons why getting rid of it is complicated.</description>
+      <description>&lt;p&gt;I was in a conversation about the Python GIL with friends a few days ago, and realized that my understanding of the specifics of the GIL problem were super hand-wavy &amp;amp; unstructured. So I spent some time collecting resources to learn more, and now have a better understanding!&lt;/p&gt;&#xA;&lt;h4 id=&#34;pythons-infamous-gil-larry-hastings&#34;&gt;Python&amp;rsquo;s Infamous GIL (Larry Hastings)&lt;/h4&gt;&#xA;&lt;p&gt;This was a &lt;em&gt;great&lt;/em&gt; introduction to the history of the GIL, why it was necessary &amp;amp; reasons why getting rid of it is complicated.&lt;/p&gt;</description>
     </item>
     <item>
       <title>systemd simple containment for GUI applications &amp; shells</title>
       <link>https://words.yuvi.in/post/systemd-simple-containment/</link>
       <pubDate>Fri, 31 Mar 2017 23:23:52 -0700</pubDate>
       <guid>https://words.yuvi.in/post/systemd-simple-containment/</guid>
-      <description>I earlier had a vaguely working setup for making sure browsers, shells and other applications don&amp;rsquo;t eat all RAM / CPU on my machine with systemd + sudo + shell scripts.&#xA;It was a hacky solution, and also had complications when used to launch shells. It wasn&amp;rsquo;t passing in all the environment varialbes it should, causing interesting-to-debug issues. sudo rules were complex, and hard to do securely.&#xA;I had also been looking for an excuse to learn more Golang, so I ended up writing systemd-simple-containment or ssc.</description>
+      <description>&lt;p&gt;I earlier had &lt;a href=&#34;http://words.yuvi.in/post/systemd-gui-applications/&#34;&gt;a vaguely working setup&lt;/a&gt; for making sure browsers, shells and other applications don&amp;rsquo;t eat all RAM / CPU on my machine with systemd + sudo + shell scripts.&lt;/p&gt;&#xA;&lt;p&gt;It was a hacky solution, and also had complications when used to launch shells. It wasn&amp;rsquo;t passing in all the environment varialbes it should, causing interesting-to-debug issues. &lt;code&gt;sudo&lt;/code&gt; rules were complex, and hard to do securely.&lt;/p&gt;&#xA;&lt;p&gt;I had also been looking for an excuse to learn more Golang, so I ended up writing &lt;a href=&#34;https://github.com/yuvipanda/systemd-simple-containment&#34;&gt;&lt;code&gt;systemd-simple-containment&lt;/code&gt;&lt;/a&gt; or &lt;code&gt;ssc&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>systemd gui applications</title>
       <link>https://words.yuvi.in/post/systemd-gui-applications/</link>
       <pubDate>Wed, 29 Mar 2017 20:47:10 -0700</pubDate>
       <guid>https://words.yuvi.in/post/systemd-gui-applications/</guid>
-      <description>Update: There&amp;rsquo;s a follow-up post with a simpler solution now.&#xA;Ever since I read Jessie Frazelle&amp;rsquo;s amazing setup (1, 2, 3) for running GUI applications in docker containers, I&amp;rsquo;ve wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&amp;rsquo;m also not as awesome (or knowledgeable!</description>
+      <description>&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: There&amp;rsquo;s a &lt;a href=&#34;//words.yuvi.in/post/systemd-simple-containment/&#34;&gt;follow-up post&lt;/a&gt; with a simpler solution now.&lt;/p&gt;&#xA;&lt;p&gt;Ever since I read &lt;a href=&#34;https://blog.jessfraz.com&#34;&gt;Jessie Frazelle&lt;/a&gt;&amp;rsquo;s amazing setup (&lt;a href=&#34;https://blog.jessfraz.com/post/ultimate-linux-on-the-desktop/&#34;&gt;1&lt;/a&gt;, &lt;a href=&#34;https://blog.jessfraz.com/post/docker-containers-on-the-desktop/&#34;&gt;2&lt;/a&gt;, &lt;a href=&#34;https://blog.jessfraz.com/post/runc-containers-on-the-desktop/&#34;&gt;3&lt;/a&gt;) for running GUI applications in docker containers, I&amp;rsquo;ve wanted to do something similar. However, I want to install things on my computer - not in docker images. So what I wanted was just isolation (no more Chrome / Firefox freezing my laptop), not images. I&amp;rsquo;m also not as awesome (or knowledgeable!) as Jess, so will have to naturally settle for less&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
       <title>things to learn</title>
       <link>https://words.yuvi.in/post/things-to-learn/</link>
       <pubDate>Wed, 29 Mar 2017 15:27:57 -0700</pubDate>
       <guid>https://words.yuvi.in/post/things-to-learn/</guid>
-      <description>Keeping a running list of things I want to learn!&#xA;There&amp;rsquo;s also a list of things I want to build.&#xA;How to use org mode properly? Should I use it for notes over markdown? Develop a deep understanding of how networks work. How do linux network namespaces work? How to run GUI apps with systemd? I did learn! Both a hacky version and a much better version that also taught me some Go!</description>
+      <description>&lt;p&gt;Keeping a running list of things I want to learn!&lt;/p&gt;&#xA;&lt;p&gt;There&amp;rsquo;s also a list of &lt;a href=&#34;http://words.yuvi.in/post/things-to-learn/&#34;&gt;things I want to build&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;How to use org mode properly? Should I use it for notes over markdown?&lt;/li&gt;&#xA;&lt;li&gt;Develop a deep understanding of how networks work.&lt;/li&gt;&#xA;&lt;li&gt;How do linux network namespaces work?&lt;/li&gt;&#xA;&lt;li&gt;How to run GUI apps with systemd?&#xA;&lt;ul&gt;&#xA;&lt;li&gt;I did learn! Both a &lt;a href=&#34;http://words.yuvi.in/post/systemd-gui-applications/&#34;&gt;hacky version&lt;/a&gt; and a &lt;a href=&#34;http://words.yuvi.in/post/systemd-simple-containment/&#34;&gt;much better version&lt;/a&gt; that also taught me some Go!&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;What exactly is a &amp;rsquo;tty&#39;?&lt;/li&gt;&#xA;&lt;li&gt;How does HTTP2 actually work?&lt;/li&gt;&#xA;&lt;li&gt;How do X509 / TLS certificates work?&lt;/li&gt;&#xA;&lt;li&gt;How to use cgroups directly?&lt;/li&gt;&#xA;&lt;li&gt;Can I just use emacs terminals for all my terminal needs?&lt;/li&gt;&#xA;&lt;li&gt;How does NFS work, and why is it so crappy?&lt;/li&gt;&#xA;&lt;li&gt;How does ssh work?&lt;/li&gt;&#xA;&lt;li&gt;How does mosh work?&lt;/li&gt;&#xA;&lt;li&gt;How do contact lenses work? HOW DO LENSES WORK?&lt;/li&gt;&#xA;&lt;li&gt;Can I simply run a local DNS recursor on my laptop for performance &amp;amp; blocking me from visiting the orange website?&lt;/li&gt;&#xA;&lt;li&gt;What is SELinux? Why and how would I use it?&lt;/li&gt;&#xA;&lt;li&gt;What is AppArmor? Why and how would I use it, over SELinux?&lt;/li&gt;&#xA;&lt;li&gt;What is seccomp, and when/why/how would I use it?&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;If you know of resources that&amp;rsquo;ll help me learn these things, do let me know!&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

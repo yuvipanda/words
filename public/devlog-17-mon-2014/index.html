@@ -18,14 +18,14 @@
 
 <meta name="author" content="yuvipanda" /><meta name="description" content="Devlogs again! Let’s see how long I can keep this one up.
 Been a whirlwind few months. I’m moving to the Wikimedia Ops team soon! The Wikipedia app has been released! Lots of excitement around, should do a bigger post sometime with details. This should just follow usual devlog format of stuff for the day
-Completed deployment of changing the results backend of Quarry to SQLite. That was a fun exercise, and I should write about that separately." /><meta name="keywords" content="yuvi, yuvipanda" />
+Completed deployment of changing the results backend of Quarry to SQLite. That was a fun exercise, and I should write about that separately. Still have some unicode issues left (mostly from the MySQL side) that I’ve hacked around for now. Quarry now uses a cron based query killer instead of relying on Celery. The day before I had force killed the celery deamons and this meant the query kill tasks didn’t run, leaving zombie queries behind. The simpler cron based killer won’t have this issue, since it’s super simple and does only one thing. The only reason I didn’t do this before was that I had not known about SHOW PROCESSLIST before (yes, I suck). It seems to be working fine now, but doesn’t kill superseeded queries immediately. Should be interesting to figure out how to get that done properly. I’ve started trying out Atom again. My previous attempt ended quickly when I ran into a bug which didn’t wrap text at all. A restart seems to have fixed that. The Vim keybindings are ‘ok’ – there’s no hlsearch, which is painful, but I can live with it. I prefer the fuzzy finder in it to Ctrl-P in Vim. Started working on making labs monitoring with graphite possible again. Our graphite / txstatsd roles weren’t meant to be run on trusty, so working on porting things to make sure they work fine on both. I’ve immensely come to appreciate ops over the last year or so, and am quite enjoying my work in that area :) I’ll probably be doing more of these over the next week, since Quarry has reached a nice state now and I await more usage before I spend more time on it. Also did some code review on the Android app. It’s been chugging along quite happily these days :) Ran into a awake-when-he-should-not-have been Oliver Keyes and we have conspired to start some researchy things. I cleaned up some of the python code, and am writing out things to do. This should be fun! " /><meta name="keywords" content="yuvi, yuvipanda" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.121.2 with theme even" />
+<meta name="generator" content="Hugo 0.138.0 with theme even" />
 
 
 <link rel="canonical" href="https://words.yuvi.in/devlog-17-mon-2014/" />
@@ -37,32 +37,38 @@ Completed deployment of changing the results backend of Quarry to SQLite. That w
 
 
 
-<link href="/sass/main.min.5cd638ef09e6be2c903018f2f2bfacabe243faf0dc08773cdc9c2da41e81e4cc.css" rel="stylesheet">
+<link href="/sass/main.min.eaa67a77b500546a647c1792cf4e709a829067f265bb543827f6130724f8f27b.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 
 <link rel="stylesheet" href="/lib/fontawesome-free-5.13.1-web/css/all.min.css">
 
-<meta property="og:title" content="DevLog for 17 Aug 2014" />
-<meta property="og:description" content="Devlogs again! Let’s see how long I can keep this one up.
+<meta property="og:url" content="https://words.yuvi.in/devlog-17-mon-2014/">
+  <meta property="og:site_name" content="Yuvi">
+  <meta property="og:title" content="DevLog for 17 Aug 2014">
+  <meta property="og:description" content="Devlogs again! Let’s see how long I can keep this one up.
 Been a whirlwind few months. I’m moving to the Wikimedia Ops team soon! The Wikipedia app has been released! Lots of excitement around, should do a bigger post sometime with details. This should just follow usual devlog format of stuff for the day
-Completed deployment of changing the results backend of Quarry to SQLite. That was a fun exercise, and I should write about that separately." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://words.yuvi.in/devlog-17-mon-2014/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2014-08-18T12:37:51+00:00" />
-<meta property="article:modified_time" content="2014-08-18T12:37:51+00:00" />
+Completed deployment of changing the results backend of Quarry to SQLite. That was a fun exercise, and I should write about that separately. Still have some unicode issues left (mostly from the MySQL side) that I’ve hacked around for now. Quarry now uses a cron based query killer instead of relying on Celery. The day before I had force killed the celery deamons and this meant the query kill tasks didn’t run, leaving zombie queries behind. The simpler cron based killer won’t have this issue, since it’s super simple and does only one thing. The only reason I didn’t do this before was that I had not known about SHOW PROCESSLIST before (yes, I suck). It seems to be working fine now, but doesn’t kill superseeded queries immediately. Should be interesting to figure out how to get that done properly. I’ve started trying out Atom again. My previous attempt ended quickly when I ran into a bug which didn’t wrap text at all. A restart seems to have fixed that. The Vim keybindings are ‘ok’ – there’s no hlsearch, which is painful, but I can live with it. I prefer the fuzzy finder in it to Ctrl-P in Vim. Started working on making labs monitoring with graphite possible again. Our graphite / txstatsd roles weren’t meant to be run on trusty, so working on porting things to make sure they work fine on both. I’ve immensely come to appreciate ops over the last year or so, and am quite enjoying my work in that area :) I’ll probably be doing more of these over the next week, since Quarry has reached a nice state now and I await more usage before I spend more time on it. Also did some code review on the Android app. It’s been chugging along quite happily these days :) Ran into a awake-when-he-should-not-have been Oliver Keyes and we have conspired to start some researchy things. I cleaned up some of the python code, and am writing out things to do. This should be fun!">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2014-08-18T12:37:51+00:00">
+    <meta property="article:modified_time" content="2014-08-18T12:37:51+00:00">
 
-<meta itemprop="name" content="DevLog for 17 Aug 2014">
-<meta itemprop="description" content="Devlogs again! Let’s see how long I can keep this one up.
+  <meta itemprop="name" content="DevLog for 17 Aug 2014">
+  <meta itemprop="description" content="Devlogs again! Let’s see how long I can keep this one up.
 Been a whirlwind few months. I’m moving to the Wikimedia Ops team soon! The Wikipedia app has been released! Lots of excitement around, should do a bigger post sometime with details. This should just follow usual devlog format of stuff for the day
-Completed deployment of changing the results backend of Quarry to SQLite. That was a fun exercise, and I should write about that separately."><meta itemprop="datePublished" content="2014-08-18T12:37:51+00:00" />
-<meta itemprop="dateModified" content="2014-08-18T12:37:51+00:00" />
-<meta itemprop="wordCount" content="395">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="DevLog for 17 Aug 2014"/>
-<meta name="twitter:description" content="Devlogs again! Let’s see how long I can keep this one up.
+Completed deployment of changing the results backend of Quarry to SQLite. That was a fun exercise, and I should write about that separately. Still have some unicode issues left (mostly from the MySQL side) that I’ve hacked around for now. Quarry now uses a cron based query killer instead of relying on Celery. The day before I had force killed the celery deamons and this meant the query kill tasks didn’t run, leaving zombie queries behind. The simpler cron based killer won’t have this issue, since it’s super simple and does only one thing. The only reason I didn’t do this before was that I had not known about SHOW PROCESSLIST before (yes, I suck). It seems to be working fine now, but doesn’t kill superseeded queries immediately. Should be interesting to figure out how to get that done properly. I’ve started trying out Atom again. My previous attempt ended quickly when I ran into a bug which didn’t wrap text at all. A restart seems to have fixed that. The Vim keybindings are ‘ok’ – there’s no hlsearch, which is painful, but I can live with it. I prefer the fuzzy finder in it to Ctrl-P in Vim. Started working on making labs monitoring with graphite possible again. Our graphite / txstatsd roles weren’t meant to be run on trusty, so working on porting things to make sure they work fine on both. I’ve immensely come to appreciate ops over the last year or so, and am quite enjoying my work in that area :) I’ll probably be doing more of these over the next week, since Quarry has reached a nice state now and I await more usage before I spend more time on it. Also did some code review on the Android app. It’s been chugging along quite happily these days :) Ran into a awake-when-he-should-not-have been Oliver Keyes and we have conspired to start some researchy things. I cleaned up some of the python code, and am writing out things to do. This should be fun!">
+  <meta itemprop="datePublished" content="2014-08-18T12:37:51+00:00">
+  <meta itemprop="dateModified" content="2014-08-18T12:37:51+00:00">
+  <meta itemprop="wordCount" content="395">
+  <meta itemprop="keywords" content="Devlog">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="DevLog for 17 Aug 2014">
+  <meta name="twitter:description" content="Devlogs again! Let’s see how long I can keep this one up.
 Been a whirlwind few months. I’m moving to the Wikimedia Ops team soon! The Wikipedia app has been released! Lots of excitement around, should do a bigger post sometime with details. This should just follow usual devlog format of stuff for the day
-Completed deployment of changing the results backend of Quarry to SQLite. That was a fun exercise, and I should write about that separately."/>
+Completed deployment of changing the results backend of Quarry to SQLite. That was a fun exercise, and I should write about that separately. Still have some unicode issues left (mostly from the MySQL side) that I’ve hacked around for now. Quarry now uses a cron based query killer instead of relying on Celery. The day before I had force killed the celery deamons and this meant the query kill tasks didn’t run, leaving zombie queries behind. The simpler cron based killer won’t have this issue, since it’s super simple and does only one thing. The only reason I didn’t do this before was that I had not known about SHOW PROCESSLIST before (yes, I suck). It seems to be working fine now, but doesn’t kill superseeded queries immediately. Should be interesting to figure out how to get that done properly. I’ve started trying out Atom again. My previous attempt ended quickly when I ran into a bug which didn’t wrap text at all. A restart seems to have fixed that. The Vim keybindings are ‘ok’ – there’s no hlsearch, which is painful, but I can live with it. I prefer the fuzzy finder in it to Ctrl-P in Vim. Started working on making labs monitoring with graphite possible again. Our graphite / txstatsd roles weren’t meant to be run on trusty, so working on porting things to make sure they work fine on both. I’ve immensely come to appreciate ops over the last year or so, and am quite enjoying my work in that area :) I’ll probably be doing more of these over the next week, since Quarry has reached a nice state now and I await more usage before I spend more time on it. Also did some code review on the Android app. It’s been chugging along quite happily these days :) Ran into a awake-when-he-should-not-have been Oliver Keyes and we have conspired to start some researchy things. I cleaned up some of the python code, and am writing out things to do. This should be fun!">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -86,8 +92,9 @@ Completed deployment of changing the results backend of Quarry to SQLite. That w
 <div class="logo-social">
       <a href="mailto:yuvipanda@gmail.com" class="fas fa-envelope" title="envelope"></a>
       <a href="https://github.com/yuvipanda" class="fab fa-github" title="github"></a>
-  <a href="https://words.yuvi.in/index.xml" type="application/rss+xml" class="fas fa-rss" title="rss"></a>
+  
 </div>
+
     </header>
 
     <main id="main" class="main">
@@ -186,13 +193,10 @@ Completed deployment of changing the results backend of Quarry to SQLite. That w
   <span class="copyright-year">
     &copy;
     2005 -
-    2024
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">Yuvi</span>
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span></span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -206,14 +210,14 @@ Completed deployment of changing the results backend of Quarry to SQLite. That w
 
 
 
-<script type="text/javascript" src="/js/main.min.1c70606d1b733282f06230615f5561b5894924b6f9930ba2ab99cf1254f75a1a.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
   <script type="text/javascript">
     window.MathJax = {
-      showProcessingMessages: false,
-      messageStyle: 'none'
+      tex: {
+        }
     };
   </script>
-  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
 
 
 

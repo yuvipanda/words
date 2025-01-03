@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>books on Yuvi</title>
+    <title>Books on Yuvi</title>
     <link>https://words.yuvi.in/categories/books/</link>
-    <description>Recent content in books on Yuvi</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Books on Yuvi</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 15 Jan 2014 18:54:34 +0000</lastBuildDate>
     <atom:link href="https://words.yuvi.in/categories/books/index.xml" rel="self" type="application/rss+xml" />
@@ -13,28 +13,28 @@
       <link>https://words.yuvi.in/book-4-2014-small-gods-2014/</link>
       <pubDate>Wed, 15 Jan 2014 18:54:34 +0000</pubDate>
       <guid>https://words.yuvi.in/book-4-2014-small-gods-2014/</guid>
-      <description>Another nice, one off Discworld book. Nice bits about how Gods are created by us, and need us more than the other way around. The philosophers are incredibly funny wherever they turn up too. The Desert after you Die bit was… beautiful – Judgement happens, but by yourself. Fun digs at governments and organized religion throughout made it rather enjoyable :)&#xA;4/5</description>
+      <description>&lt;p&gt;Another nice, one off Discworld book. Nice bits about how Gods are created by us, and need us more than the other way around. The philosophers are incredibly funny wherever they turn up too. The Desert after you Die bit was… beautiful – Judgement happens, but by yourself. Fun digs at governments and organized religion throughout made it rather enjoyable :)&lt;/p&gt;&#xA;&lt;p&gt;4/5&lt;/p&gt;</description>
     </item>
     <item>
       <title>Book 3 of 2014: Pyramids (Discworld)</title>
       <link>https://words.yuvi.in/book-3-2014-pyramids-discworld/</link>
       <pubDate>Mon, 13 Jan 2014 06:24:15 +0000</pubDate>
       <guid>https://words.yuvi.in/book-3-2014-pyramids-discworld/</guid>
-      <description>Finished that yesterday. Fun digs at war, and fun digs at people (literally) stuck in a paste despite being in the present. The bit with the Greek philosophers was also nice. No memorable recurring characters, however.&#xA;3/5</description>
+      <description>&lt;p&gt;Finished that yesterday. Fun digs at war, and fun digs at people (literally) stuck in a paste despite being in the present. The bit with the Greek philosophers was also nice. No memorable recurring characters, however.&lt;/p&gt;&#xA;&lt;p&gt;3/5&lt;/p&gt;</description>
     </item>
     <item>
       <title>Book 2 of 2014: Pro Git</title>
       <link>https://words.yuvi.in/book-2-2014-pro-git/</link>
       <pubDate>Sun, 05 Jan 2014 17:30:03 +0000</pubDate>
       <guid>https://words.yuvi.in/book-2-2014-pro-git/</guid>
-      <description>Pro Git is a nice book I recommend to newbies – yet I hadn’t fully read it once. I decided to do so, and I think it was reasonably useful. Most of the stuff in here I already knew, and the treatment of the stuff I did not (Git Internals, mostly) wasn’t deep enough to be useful. Nevertheless, reinforced some useful concepts in my head and probably gave me enough strong foundations for when I decide to dive into the actual internals of git more (probably by reading the source code?</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://git-scm.com/book/en/&#34;&gt;Pro Git&lt;/a&gt; is a nice book I recommend to newbies – yet I hadn’t fully read it once. I decided to do so, and I think it was reasonably useful. Most of the stuff in here I already knew, and the treatment of the stuff I did not (Git Internals, mostly) wasn’t deep enough to be useful. Nevertheless, reinforced some useful concepts in my head and probably gave me enough strong foundations for when I decide to dive into the actual internals of git more (probably by reading the source code?). Also looked very newbie friendly, so I’ll continue recommending this to people who want to learn about Git.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Book 1 of 2014: Hogfather (Discworld)</title>
       <link>https://words.yuvi.in/book-1-2014-hogfather-discworld/</link>
       <pubDate>Thu, 02 Jan 2014 14:47:39 +0000</pubDate>
       <guid>https://words.yuvi.in/book-1-2014-hogfather-discworld/</guid>
-      <description>I’ve been reading a lot over the last few months (Discworld + Foundation gives me about 24 books in the last 3 months), and figured I’d extend that for the next year with a little more underlying planning. So along with Bala, Arun &amp;amp; Surya, I’ll try to read a hundred books this year, and also do a blog post each about them.&#xA;Hogfather is the 21st book in the Discworld series I’ve read.</description>
+      <description>&lt;p&gt;I’ve been reading a lot over the last few months (&lt;a href=&#34;http://yuvi.in/blog/discworld-series-progress/&#34;&gt;Discworld&lt;/a&gt; + Foundation gives me about 24 books in the last 3 months), and figured I’d extend that for the next year with a little more underlying planning. So &lt;a href=&#34;https://www.facebook.com/yuvipanda/posts/10151752346096191&#34;&gt;along&lt;/a&gt; with Bala, Arun &amp;amp; Surya, I’ll try to read a hundred books this year, and also do a blog post each about them.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://wiki.lspace.org/mediawiki/index.php/Book:Hogfather&#34;&gt;Hogfather&lt;/a&gt; is the 21st book in the Discworld series I’ve read. Rather wonderful commentary on rampant consumerization of… everything, incredibly well placed (and funny!) &lt;a href=&#34;http://en.wikipedia.org/wiki/ELIZA&#34;&gt;ELIZA&lt;/a&gt; references and an undercurrent of ‘importance of belief’. The God of Hangovers was a nice touch.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

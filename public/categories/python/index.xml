@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>python on Yuvi</title>
+    <title>Python on Yuvi</title>
     <link>https://words.yuvi.in/categories/python/</link>
-    <description>Recent content in python on Yuvi</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Python on Yuvi</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Tue, 01 Nov 2022 23:04:56 -0700</lastBuildDate>
     <atom:link href="https://words.yuvi.in/categories/python/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://words.yuvi.in/post/python-in-github-actions/</link>
       <pubDate>Tue, 01 Nov 2022 23:04:56 -0700</pubDate>
       <guid>https://words.yuvi.in/post/python-in-github-actions/</guid>
-      <description>I am not smart enough to consistently write and debug shell scripts that use any conditional or looping constructs. So as soon as I&amp;rsquo;m writing something in bash that requires use of those, I switch to python. This works fine when writing scripts, but what to do when writing GitHub Actions workflows? You can only write bash in run: stanzas in your steps, right?&#xA;Not at all! You can set the shell parameter to anything you want, and the contents of run will be passed to the shell in the form of a file.</description>
+      <description>&lt;p&gt;I am not smart enough to consistently write &lt;em&gt;and&lt;/em&gt; debug shell scripts that use &lt;em&gt;any&lt;/em&gt;&#xA;conditional or looping constructs. So as soon as I&amp;rsquo;m writing something in bash that&#xA;requires use of those, I switch to python. This works fine when writing scripts, but&#xA;what to do when writing &lt;a href=&#34;https://github.com/features/actions&#34;&gt;GitHub Actions&lt;/a&gt; workflows?&#xA;You can only write bash in &lt;code&gt;run:&lt;/code&gt; stanzas in your &lt;code&gt;step&lt;/code&gt;s, right?&lt;/p&gt;&#xA;&lt;p&gt;Not at all! You can set the &lt;a href=&#34;https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsshell&#34;&gt;shell&lt;/a&gt;&#xA;parameter to anything you want, and the contents of &lt;code&gt;run&lt;/code&gt; will be passed to the shell in the&#xA;form of a file. This allows you to use not just Python, but basically any langauge when writing&#xA;your GitHub actions workflows.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

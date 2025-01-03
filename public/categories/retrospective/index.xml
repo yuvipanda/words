@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>retrospective on Yuvi</title>
+    <title>Retrospective on Yuvi</title>
     <link>https://words.yuvi.in/categories/retrospective/</link>
-    <description>Recent content in retrospective on Yuvi</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Retrospective on Yuvi</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Fri, 29 Dec 2017 16:29:00 -0800</lastBuildDate>
     <atom:link href="https://words.yuvi.in/categories/retrospective/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://words.yuvi.in/post/2017/</link>
       <pubDate>Fri, 29 Dec 2017 16:29:00 -0800</pubDate>
       <guid>https://words.yuvi.in/post/2017/</guid>
-      <description>I haven&amp;rsquo;t done a &amp;lsquo;year in retrospective&amp;rsquo; publicly for a long time, but after reading Alice Goldfuss&amp;rsquo; 2017 year in review decided to do one for me too!&#xA;This is a very filtered view - there are lots of important people &amp;amp; events in 2017 that are not contained here, and that is ok.&#xA;Professional New Job&#xA;I finished around 6-ish years at the Wikimedia Foundation, and joined UC Berkeley&amp;rsquo;s Data Science Division early in the year.</description>
+      <description>&lt;p&gt;I haven&amp;rsquo;t done a &amp;lsquo;year in retrospective&amp;rsquo; publicly for a long time, but after reading&#xA;Alice Goldfuss&amp;rsquo; &lt;a href=&#34;http://blog.alicegoldfuss.com/2017-year-in-review/&#34;&gt;2017 year in review&lt;/a&gt; decided&#xA;to do one for me too!&lt;/p&gt;&#xA;&lt;p&gt;This is a very filtered view - there are lots of important people &amp;amp; events in 2017&#xA;that are not contained here, and that is ok.&lt;/p&gt;&#xA;&lt;h2 id=&#34;professional&#34;&gt;Professional&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;New Job&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;I finished around 6-ish years at the Wikimedia Foundation, and joined UC Berkeley&amp;rsquo;s&#xA;&lt;a href=&#34;http://data.berkeley.edu/&#34;&gt;Data Science Division&lt;/a&gt; early in the year. I grew&#xA;immensely as a person &amp;amp; programmer in that time. The new job gives me a lot more&#xA;responsibility and it is quite fun.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

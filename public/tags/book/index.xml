@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>book on Yuvi</title>
+    <title>Book on Yuvi</title>
     <link>https://words.yuvi.in/tags/book/</link>
-    <description>Recent content in book on Yuvi</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Book on Yuvi</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 28 Nov 2011 10:40:50 +0000</lastBuildDate>
     <atom:link href="https://words.yuvi.in/tags/book/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://words.yuvi.in/learnt-reading-javascript-good-parts/</link>
       <pubDate>Mon, 28 Nov 2011 10:40:50 +0000</pubDate>
       <guid>https://words.yuvi.in/learnt-reading-javascript-good-parts/</guid>
-      <description>Just finished reading ‘Javascript – The Good Parts’. Here is what I learnt:&#xA;I knew jack shit about JavaScript. I was able to get along so far simply because I knew jQuery and understood how closures work. Holy shit that’s one fucked up language. Quite schizophrenic, saved by almost limitless extensibility/monkey-patchability/watcha-gonna-do-write-a-java-applet-hahaha . If you’re going to write Javascript, you’ll have to subset. Subsetting/augmenting has its own share of problems – primarily that map in your code might not be the same as map in someone else’s code, even if they seem to be working on the same ‘type’ jQuery is incredible.</description>
+      <description>&lt;p&gt;Just finished reading ‘Javascript – The Good Parts’. Here is what I learnt:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;I knew jack shit about JavaScript. I was able to get along so far simply because I knew jQuery and understood how closures work.&lt;/li&gt;&#xA;&lt;li&gt;Holy shit that’s one fucked up language. Quite schizophrenic, saved by almost limitless extensibility/monkey-patchability/watcha-gonna-do-write-a-java-applet-hahaha .&lt;/li&gt;&#xA;&lt;li&gt;If you’re going to write Javascript, you’ll have to subset. Subsetting/augmenting has its own share of problems – primarily that &lt;code&gt;map&lt;/code&gt; in your code might not be the same as &lt;code&gt;map&lt;/code&gt; in someone else’s code, even if they seem to be working on the same ‘type’&lt;/li&gt;&#xA;&lt;li&gt;jQuery is incredible. I guess it is sort of like a ‘Standard Library’ of sorts, atleast on the client side. I’m sure there exists something similar on the server side as well (underscore.js, perhaps?)&lt;/li&gt;&#xA;&lt;li&gt;I haven’t written any sufficiently large Javascript program yet. Need to fix that.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;defensive-programming&#34;&gt;Defensive Programming&lt;/h3&gt;&#xA;&lt;p&gt;When you’re writing PHP, you program &lt;em&gt;defensively&lt;/em&gt;. The language is out to get you. Make one wrong step and it’ll fuck you over. Never assume anything, make sure you always check the documentation. You can’t trust the language. It’s not stupid, it’s schizophrenic.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

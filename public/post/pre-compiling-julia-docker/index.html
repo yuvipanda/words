@@ -16,14 +16,16 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Yuvi" /><meta name="description" content="Julia pre-compiles packages on first load, allowing them to deeply optimize the generated code for the particular CPU architecture the user is running on for maximum performance. However, it does take some time, so there&amp;rsquo;s a startup latency penalty here. If you make docker images with precompiled Julia packages, you can pay this pre-compilation penalty at image build time, rather than at image startup time. Much better for your users!" /><meta name="keywords" content="yuvi, yuvipanda" />
+<meta name="author" content="" /><meta name="description" content="Julia pre-compiles packages on first load, allowing them to deeply optimize the generated code for the particular CPU architecture the user is running on for maximum performance. However, it does take some time, so there&rsquo;s a startup latency penalty here. If you make docker images with precompiled Julia packages, you can pay this pre-compilation penalty at image build time, rather than at image startup time. Much better for your users!
+If you look at the tutorial for pre-compilation, it may sound like all you need to do is call Pkg.precompile. And if you actually build and test your docker image, it will work fine - your precompiled libraries are loaded, and startup is fast. Yay!
+" /><meta name="keywords" content="yuvi, yuvipanda" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.121.2 with theme even" />
+<meta name="generator" content="Hugo 0.138.0 with theme even" />
 
 
 <link rel="canonical" href="https://words.yuvi.in/post/pre-compiling-julia-docker/" />
@@ -35,26 +37,37 @@
 
 
 
-<link href="/sass/main.min.5cd638ef09e6be2c903018f2f2bfacabe243faf0dc08773cdc9c2da41e81e4cc.css" rel="stylesheet">
+<link href="/sass/main.min.eaa67a77b500546a647c1792cf4e709a829067f265bb543827f6130724f8f27b.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 
 <link rel="stylesheet" href="/lib/fontawesome-free-5.13.1-web/css/all.min.css">
 
-<meta property="og:title" content="Precompiling Julia Packages in Docker Images" />
-<meta property="og:description" content="Julia pre-compiles packages on first load, allowing them to deeply optimize the generated code for the particular CPU architecture the user is running on for maximum performance. However, it does take some time, so there&rsquo;s a startup latency penalty here. If you make docker images with precompiled Julia packages, you can pay this pre-compilation penalty at image build time, rather than at image startup time. Much better for your users!" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://words.yuvi.in/post/pre-compiling-julia-docker/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2023-11-29T14:27:25-08:00" />
-<meta property="article:modified_time" content="2023-11-29T14:27:25-08:00" />
+<meta property="og:url" content="https://words.yuvi.in/post/pre-compiling-julia-docker/">
+  <meta property="og:site_name" content="Yuvi">
+  <meta property="og:title" content="Precompiling Julia Packages in Docker Images">
+  <meta property="og:description" content="Julia pre-compiles packages on first load, allowing them to deeply optimize the generated code for the particular CPU architecture the user is running on for maximum performance. However, it does take some time, so there’s a startup latency penalty here. If you make docker images with precompiled Julia packages, you can pay this pre-compilation penalty at image build time, rather than at image startup time. Much better for your users!
+If you look at the tutorial for pre-compilation, it may sound like all you need to do is call Pkg.precompile. And if you actually build and test your docker image, it will work fine - your precompiled libraries are loaded, and startup is fast. Yay!">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2023-11-29T14:27:25-08:00">
+    <meta property="article:modified_time" content="2023-11-29T14:27:25-08:00">
+    <meta property="article:tag" content="Julia">
+    <meta property="article:tag" content="Docker">
 
-<meta itemprop="name" content="Precompiling Julia Packages in Docker Images">
-<meta itemprop="description" content="Julia pre-compiles packages on first load, allowing them to deeply optimize the generated code for the particular CPU architecture the user is running on for maximum performance. However, it does take some time, so there&rsquo;s a startup latency penalty here. If you make docker images with precompiled Julia packages, you can pay this pre-compilation penalty at image build time, rather than at image startup time. Much better for your users!"><meta itemprop="datePublished" content="2023-11-29T14:27:25-08:00" />
-<meta itemprop="dateModified" content="2023-11-29T14:27:25-08:00" />
-<meta itemprop="wordCount" content="556">
-<meta itemprop="keywords" content="julia,docker," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Precompiling Julia Packages in Docker Images"/>
-<meta name="twitter:description" content="Julia pre-compiles packages on first load, allowing them to deeply optimize the generated code for the particular CPU architecture the user is running on for maximum performance. However, it does take some time, so there&rsquo;s a startup latency penalty here. If you make docker images with precompiled Julia packages, you can pay this pre-compilation penalty at image build time, rather than at image startup time. Much better for your users!"/>
+  <meta itemprop="name" content="Precompiling Julia Packages in Docker Images">
+  <meta itemprop="description" content="Julia pre-compiles packages on first load, allowing them to deeply optimize the generated code for the particular CPU architecture the user is running on for maximum performance. However, it does take some time, so there’s a startup latency penalty here. If you make docker images with precompiled Julia packages, you can pay this pre-compilation penalty at image build time, rather than at image startup time. Much better for your users!
+If you look at the tutorial for pre-compilation, it may sound like all you need to do is call Pkg.precompile. And if you actually build and test your docker image, it will work fine - your precompiled libraries are loaded, and startup is fast. Yay!">
+  <meta itemprop="datePublished" content="2023-11-29T14:27:25-08:00">
+  <meta itemprop="dateModified" content="2023-11-29T14:27:25-08:00">
+  <meta itemprop="wordCount" content="556">
+  <meta itemprop="keywords" content="Julia,Docker">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Precompiling Julia Packages in Docker Images">
+  <meta name="twitter:description" content="Julia pre-compiles packages on first load, allowing them to deeply optimize the generated code for the particular CPU architecture the user is running on for maximum performance. However, it does take some time, so there’s a startup latency penalty here. If you make docker images with precompiled Julia packages, you can pay this pre-compilation penalty at image build time, rather than at image startup time. Much better for your users!
+If you look at the tutorial for pre-compilation, it may sound like all you need to do is call Pkg.precompile. And if you actually build and test your docker image, it will work fine - your precompiled libraries are loaded, and startup is fast. Yay!">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -78,8 +91,9 @@
 <div class="logo-social">
       <a href="mailto:yuvipanda@gmail.com" class="fas fa-envelope" title="envelope"></a>
       <a href="https://github.com/yuvipanda" class="fab fa-github" title="github"></a>
-  <a href="https://words.yuvi.in/index.xml" type="application/rss+xml" class="fas fa-rss" title="rss"></a>
+  
 </div>
+
     </header>
 
     <main id="main" class="main">
@@ -133,7 +147,7 @@
     <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">Author</span>
-    <span class="item-content">Yuvi</span>
+    <span class="item-content"></span>
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
@@ -151,7 +165,11 @@
           <a href="/tags/docker/">docker</a>
           </div>
       <nav class="post-nav">
-        
+        <a class="prev" href="/post/tech-serve-me/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">I don&#39;t want to fight with the tools I use</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
         <a class="next" href="/post/adhd-and-me/">
             <span class="next-text nav-default">ADHD and Me</span>
             <span class="next-text nav-mobile">Next</span>
@@ -186,13 +204,10 @@
   <span class="copyright-year">
     &copy;
     2005 -
-    2024
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">Yuvi</span>
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span></span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -206,14 +221,14 @@
 
 
 
-<script type="text/javascript" src="/js/main.min.1c70606d1b733282f06230615f5561b5894924b6f9930ba2ab99cf1254f75a1a.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
   <script type="text/javascript">
     window.MathJax = {
-      showProcessingMessages: false,
-      messageStyle: 'none'
+      tex: {
+        }
     };
   </script>
-  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
 
 
 

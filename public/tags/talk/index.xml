@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>talk on Yuvi</title>
+    <title>Talk on Yuvi</title>
     <link>https://words.yuvi.in/tags/talk/</link>
-    <description>Recent content in talk on Yuvi</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Talk on Yuvi</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 10 Apr 2011 23:02:48 +0000</lastBuildDate>
     <atom:link href="https://words.yuvi.in/tags/talk/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://words.yuvi.in/gstreamer-101-at-gnome-asia-2011/</link>
       <pubDate>Sun, 10 Apr 2011 23:02:48 +0000</pubDate>
       <guid>https://words.yuvi.in/gstreamer-101-at-gnome-asia-2011/</guid>
-      <description>My GStreamer 101 presentation at GNOME.asia was very wel received. I was quite happy with the way it turned out. Thanks to Ford_Prefect and Bharath Acharya for pulling me in :)&#xA;My very minimal slides are here. You can reuse them if you want to.&#xA;Sadly, missed the week long hackfest :( Next time!</description>
+      <description>&lt;p&gt;My &lt;code&gt;GStreamer 101&lt;/code&gt; presentation at &lt;a href=&#34;http://gnome.asia&#34;&gt;GNOME.asia&lt;/a&gt; was &lt;em&gt;very&lt;/em&gt; wel received. I was quite happy with the way it turned out. Thanks to &lt;a href=&#34;http://arunraghavan.net/&#34;&gt;Ford_Prefect&lt;/a&gt; and &lt;a href=&#34;http://abharath.wordpress.com/&#34;&gt;Bharath Acharya&lt;/a&gt; for pulling me in :)&lt;/p&gt;&#xA;&lt;p&gt;My very minimal slides are &lt;a href=&#34;http://www.slideshare.net/yuvipanda/gstreamer-101&#34;&gt;here&lt;/a&gt;. You can reuse them if you want to.&lt;/p&gt;&#xA;&lt;p&gt;Sadly, missed the week long hackfest :( Next time!&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

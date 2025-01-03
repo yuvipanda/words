@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>bigco on Yuvi</title>
+    <title>Bigco on Yuvi</title>
     <link>https://words.yuvi.in/tags/bigco/</link>
-    <description>Recent content in bigco on Yuvi</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Bigco on Yuvi</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 09 Jun 2011 13:11:47 +0000</lastBuildDate>
     <atom:link href="https://words.yuvi.in/tags/bigco/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://words.yuvi.in/working-big-co-unsatisfying/</link>
       <pubDate>Thu, 09 Jun 2011 13:11:47 +0000</pubDate>
       <guid>https://words.yuvi.in/working-big-co-unsatisfying/</guid>
-      <description>Update: As usual, good comments at HN.&#xA;I’ve been trying to put it in words for a while, and failing utterly every time. swombat gets to the crux of it wonderfully:&#xA;At the same time, something really bothered me about my work. It felt pointless. One project I did (whose output was basically a PPT and Word document outlining the successes and failures of a client project), which took two and a half months, had, as its only apparent purpose, the promotion of the person who had led the project.</description>
+      <description>&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; As usual, &lt;a href=&#34;http://news.ycombinator.com/item?id=2636486&#34;&gt;good comments at HN&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;I’ve been trying to put it in words for a while, and failing utterly every time. &lt;a href=&#34;http://swombat.com/&#34;&gt;swombat&lt;/a&gt; gets to the crux of it wonderfully:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;At the same time, something really bothered me about my work. &lt;strong&gt;It felt pointless.&lt;/strong&gt; One project I did (whose output was basically a PPT and Word document outlining the successes and failures of a client project), which took two and a half months, had, as its only apparent purpose, the promotion of the person who had led the project. Accenture was paid (quite well) so that I would sit there and produce a piece of paper that justified this person’s promotion.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

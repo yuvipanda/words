@@ -4,7 +4,7 @@
     <title>Uncategorized on Yuvi</title>
     <link>https://words.yuvi.in/categories/uncategorized/</link>
     <description>Recent content in Uncategorized on Yuvi</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sat, 19 Dec 2015 07:55:01 +0000</lastBuildDate>
     <atom:link href="https://words.yuvi.in/categories/uncategorized/index.xml" rel="self" type="application/rss+xml" />
@@ -13,91 +13,84 @@
       <link>https://words.yuvi.in/devlog-2015-dec-18/</link>
       <pubDate>Sat, 19 Dec 2015 07:55:01 +0000</pubDate>
       <guid>https://words.yuvi.in/devlog-2015-dec-18/</guid>
-      <description>Haven’t done these in a while, let’s see if I can get this back on the wagon!&#xA;Discovered the WikiChatter library (thanks to @halfak!), and using that in my Teahouse analysis notebook. Far better than writing my own parser and fighting with that. Lets me get on with the actual fun stuff I wanted to do (which is the actual analysis) Learning about pandas, checking out matplotlib, bokeh and wordcloud libraries to use in the analysis.</description>
+      <description>&lt;p&gt;Haven’t done these in a while, let’s see if I can get this back on the wagon!&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Discovered the &lt;a href=&#34;https://github.com/kjschiroo/WikiChatter&#34;&gt;WikiChatter&lt;/a&gt; library (thanks to @halfak!), and using that in my Teahouse analysis notebook. Far better than writing my own parser and fighting with that. Lets me get on with the actual fun stuff I wanted to do (which is the actual analysis)&lt;/li&gt;&#xA;&lt;li&gt;Learning about pandas, checking out matplotlib, bokeh and wordcloud libraries to use in the analysis. Have included matplotlib and bokeh (and with it, pandas and numpy) in the default libraries list for PAWS, and also fixed permissions so users can pip install stuff themselves too.&lt;/li&gt;&#xA;&lt;li&gt;For context, I’m trying to do an analysis of the &lt;a href=&#34;https://en.wikipedia.org/wiki/Wikipedia:Teahouse&#34;&gt;English Wikipedia Teahouse&lt;/a&gt; questions archive, mostly as a way of showing off what &lt;a href=&#34;https://tools.wmflabs.org/paws&#34;&gt;PAWS&lt;/a&gt; makes possible.&lt;/li&gt;&#xA;&lt;li&gt;Also spent a good chunk of the day regretting previous life decisions. All temporary however – nothing irreversible was done, which is wonderful. Should figure out how to reduce likeliness of similar events happening in the future.&lt;/li&gt;&#xA;&lt;li&gt;Docker build times on my machine are pathetic, both because of slow network (USA! USA! USA!) and cheap laptop. Need to find a proper solution to this soon.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Global merge of accounts at Wikimedia</title>
       <link>https://words.yuvi.in/global-merge-accounts-wikimedia/</link>
       <pubDate>Sat, 04 Jul 2015 12:49:15 +0000</pubDate>
       <guid>https://words.yuvi.in/global-merge-accounts-wikimedia/</guid>
-      <description>is now slowly happening, and I am the test subject!</description>
+      <description>&lt;p&gt;is now slowly happening, and &lt;a href=&#34;https://meta.wikimedia.org/wiki/Special:GlobalRenameProgress/YuviPanda&#34;&gt;I am the test subject!&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Terry Prachett on the word ‘synergistically’</title>
       <link>https://words.yuvi.in/terry-prachett-word-synergistically/</link>
       <pubDate>Mon, 30 Dec 2013 15:14:12 +0000</pubDate>
       <guid>https://words.yuvi.in/terry-prachett-word-synergistically/</guid>
-      <description>You had to admire the way perfectly innocent words were mugged, ravished, stripped of all true meaning and decency and then sent to walk the gutter for Reacher Gilt, although ‘synergistically’ had probably been a whore from the start Going Postal, Terry Prachett</description>
-    </item>
-    <item>
-      <title>Interview with Sriram Krishnan (5 years old)</title>
-      <link>https://words.yuvi.in/interview-sriram-krishnan-5-years-old/</link>
-      <pubDate>Fri, 26 Aug 2011 15:50:55 +0000</pubDate>
-      <guid>https://words.yuvi.in/interview-sriram-krishnan-5-years-old/</guid>
-      <description>5 years ago, I was in my 10th and new on the Internet. I had been coding for about 5-6 years already, but mostly with TurboC and VB6/C# (thanks to MSDN CDs I steal from Sudar). And then this interview happened and pushed me farther out into geekland :)&#xA;Presenting a reprint from 2006, my interview with Sriram Krishnan, then Microsoftie. Note that the opinions here are of a Sriram 5 years ago, and do not necessarily represent what he thinks now :D And the questions are obviously the questions a younger, naiver (and stupider) Yuvi would’ve asked, so bear with that.</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;You had to admire the way perfectly innocent words were mugged, ravished, stripped of all true meaning and decency and then sent to walk the gutter for Reacher Gilt, although ‘synergistically’ had probably been a whore from the start&#xA;&lt;em&gt;Going Postal&lt;/em&gt;, Terry Prachett&lt;/p&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
     </item>
     <item>
       <title>“What is the best way to stop your child becoming an athiest?”</title>
       <link>https://words.yuvi.in/what-stop-child-athiest/</link>
       <pubDate>Sun, 26 Jun 2011 13:59:49 +0000</pubDate>
       <guid>https://words.yuvi.in/what-stop-child-athiest/</guid>
-      <description>From the usually boring Yahoo answers, we have this gem of a question:&#xA;What is the best way to stop your child becoming an athiest?&#xA;I don’t want any of my children to be punished by God.&#xA;However, it also had this gem of an answer:&#xA;Do not educate them, or expose them to critical thinking, logic or science.&#xA;Lie to them constantly about how the world works. Feed them a steady diet of mumbo jumbo dressed up like real knowledge – the jumbo jet in the whirlwind for example – and pretend that it is deep wisdom.</description>
+      <description>&lt;p&gt;From the usually boring Yahoo answers, we have this &lt;a href=&#34;http://answers.yahoo.com/question/index;_ylt=AsrKG62JfeU5scqqMv6mO0ojzKIX;_ylv=3?qid=20090208040536AAHBrYH&#34;&gt;gem of a question&lt;/a&gt;:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;What is the best way to stop your child becoming an athiest?&lt;/p&gt;&#xA;&lt;p&gt;I don’t want any of my children to be punished by God.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;However, it also had this gem of an answer:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Do not educate them, or expose them to critical thinking, logic or science.&lt;/p&gt;&#xA;&lt;p&gt;Lie to them constantly about how the world works. Feed them a steady diet of mumbo jumbo dressed up like real knowledge – the jumbo jet in the whirlwind for example – and pretend that it is deep wisdom.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Belated Samsung Galaxy 3 Review</title>
       <link>https://words.yuvi.in/belated-samsung-galaxy-3-review/</link>
       <pubDate>Tue, 07 Jun 2011 02:50:05 +0000</pubDate>
       <guid>https://words.yuvi.in/belated-samsung-galaxy-3-review/</guid>
-      <description>Very late one. I’ve been using this since last September (as those of you on twitter and following me would know).&#xA;It was on 2.1 for a long, long time – and even after 2.2 came out (first unofficially and then officially) I didn’t upgrade for almost a month (thanks to a missing usb cable and some laziness). I then upgraded to official 2.2, then one of the ‘Stock’ bootloaderless ROMs, and then to InDroid 3.</description>
+      <description>&lt;p&gt;Very late one. I’ve been using this since last September (as those of you on twitter and following me would know).&lt;/p&gt;&#xA;&lt;p&gt;It was on 2.1 for a long, long time – and even after 2.2 came out (first unofficially and then officially) I didn’t upgrade for almost a month (thanks to a missing usb cable and some laziness). I then upgraded to official 2.2, then one of the ‘Stock’ bootloaderless ROMs, and then to InDroid 3.0, then semi-bricked my phone (trying to install InDroid 4.0) and finally settled on Kyrillos.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Moving back to WordPress</title>
       <link>https://words.yuvi.in/moving-back-to-wordpress/</link>
       <pubDate>Mon, 06 Jun 2011 18:21:40 +0000</pubDate>
       <guid>https://words.yuvi.in/moving-back-to-wordpress/</guid>
-      <description>A while back, I moved my blog (from a wordpress install whose data I lost) to my own platform (HiSlain).&#xA;After several close calls, I’m officially moving from HiSlain back to WordPress. I just don’t have enough time to maintain all the things I wanted in a blog platform in HiSlain, hence the move back. However, it satisfied it’s purpose – I learnt to write code I could use, others could use, and others could contribute to.</description>
+      <description>&lt;p&gt;A while back, I &lt;a href=&#34;http://yuvi.in/blog/hello-world-again/&#34;&gt;moved my blog&lt;/a&gt; (from a wordpress install whose data I lost) to my own platform (&lt;a href=&#34;http://github.com/yuvipanda/HiSlain&#34;&gt;HiSlain&lt;/a&gt;).&lt;/p&gt;&#xA;&lt;p&gt;After several close calls, I’m officially moving from HiSlain back to WordPress. I just don’t have enough time to maintain all the things I wanted in a blog platform in HiSlain, hence the move back. However, it satisfied it’s purpose – I learnt to write code I could use, others could use, and &lt;a href=&#34;https://github.com/tamizhgeek/HiSlain&#34;&gt;others could contribute to&lt;/a&gt;. The &lt;a href=&#34;http://yuvi.in/blog/oldindex.html&#34;&gt;old blog&lt;/a&gt; is still around (all permalinks would work) if you’re interested.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Webfaction Review</title>
       <link>https://words.yuvi.in/webfaction-review/</link>
       <pubDate>Mon, 22 Mar 2010 16:45:50 +0000</pubDate>
       <guid>https://words.yuvi.in/webfaction-review/</guid>
-      <description>I’ve been running yuvi.in and busroutes.in on my [Webfaction][3] account for a while. I got the account for free – after Remi Delon from Webfaction noticed one of my tweets.&#xA;Review: I’m going to save that when my free one year plan expires, I can upgrade to one of their better plans. It is so good :)&#xA;Highly Reccomended!</description>
+      <description>&lt;p&gt;I’ve been running &lt;a href=&#34;http://yuvi.in&#34;&gt;yuvi.in&lt;/a&gt; and &lt;a href=&#34;http://busroutes.in&#34;&gt;busroutes.in&lt;/a&gt; on my [Webfaction][3] account for a while. I got the account for free – after Remi Delon from Webfaction noticed one of my tweets.&lt;/p&gt;&#xA;&lt;p&gt;Review: I’m going to save that when my free one year plan expires, I can &lt;em&gt;upgrade&lt;/em&gt; to one of their better plans. It is &lt;em&gt;so&lt;/em&gt; good :)&lt;/p&gt;&#xA;&lt;p&gt;Highly Reccomended!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Samsung N210 Review</title>
       <link>https://words.yuvi.in/samsung-n210-review/</link>
       <pubDate>Fri, 12 Mar 2010 20:41:32 +0000</pubDate>
       <guid>https://words.yuvi.in/samsung-n210-review/</guid>
-      <description>I bought a brand new Samsung N210 Netbook about two weeks back – and have been using it almost non-stop since. I’ve been taking it to college every day, using it at every oportunity I get – on the college bus, on MTC buses, on the train, while waiting for the train, hell even during a rather very boring class!&#xA;The Great The Screen! The matte screen is totally awesome. Viewable under all conditions – full on sunlight during a train commute or at a weird angle snuggled under the desk during class.</description>
+      <description>&lt;p&gt;I bought a brand new Samsung N210 Netbook about two weeks back – and have been using it almost non-stop since. I’ve been taking it to college every day, using it at every oportunity I get – on the college bus, on MTC buses, on the train, while waiting for the train, hell even &lt;em&gt;during&lt;/em&gt; a rather very boring class!&lt;/p&gt;&#xA;&lt;h3 id=&#34;the-great&#34;&gt;The Great&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;The Screen! The &lt;strong&gt;matte&lt;/strong&gt; screen is totally awesome. Viewable under all conditions – full on sunlight during a train commute or at a weird angle snuggled under the desk during class. It is sharp, and IMO has enough resolution (1024×600). The bezel is small and not very distracting.&lt;/li&gt;&#xA;&lt;li&gt;The Keyboard. 94% of a full size keyboard, I’m told. It is extremely comfortable, and I don’t miss too many keys. I do find the right shift absolutely useless though. The chicklet keys look great too&lt;/li&gt;&#xA;&lt;li&gt;The Looks. One guy asked me if I was carrying a white MacBook.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;the-good&#34;&gt;The Good&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;The Touchpad. It is large and the mouse buttons are not bad. I don’t know if it supports two button finger scroll on Linux – but it does work on Windows. My hands do accidentally touch it often while typing, moving my cursor unexpectedly – but I have been able to stop that by using my right thumb for space instead of my left.&lt;/li&gt;&#xA;&lt;li&gt;The Battery. I seem to get around 8 hours of usage under varying circumstances and conditions – while nothing to laugh at, I was expecting more. Might be because I haven’t been able to figure out a way to turn off the wifi chip from Linux.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;the-bad&#34;&gt;The Bad&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;The Heat. The fan isn’t very noisy, but the heat buildup is appreciable. I can’t really work with it directly on my lap.&lt;/li&gt;&#xA;&lt;li&gt;The inbuilt webcam. 0.3 Megapixels. Bleh!&lt;/li&gt;&#xA;&lt;li&gt;WiFi. Drops &lt;em&gt;very&lt;/em&gt; often, and not very sensitive. Ubuntu Autodetected it though.&lt;/li&gt;&#xA;&lt;li&gt;The SD Card Slot. It has a cover that comes right off, and I guarentee I’ll lose it in a while.&lt;/li&gt;&#xA;&lt;li&gt;Many of the Function Key functions aren’t supported on Linux. Was able to make the Brightness keys work after a hack though.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;the-awful&#34;&gt;The Awful&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;The ugly black sticker ad for &lt;em&gt;“Phoenix Hyperspace(tm) Instant-on”&lt;/em&gt;. Ewww! Atleast there is only one big sticker spoiling this white beauty&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Was it worth the 20k bucks I paid for it? I’m typing out this blog post while waiting at my Doctor’s, so I’d say it &lt;em&gt;is&lt;/em&gt; well worth the 20k bucks paid :)&lt;/p&gt;</description>
     </item>
     <item>
       <title>“We must take [India] as it is” – Jules Verne</title>
       <link>https://words.yuvi.in/we-must-take-india-as-it-is-jules-verne/</link>
       <pubDate>Thu, 11 Mar 2010 22:20:39 +0000</pubDate>
       <guid>https://words.yuvi.in/we-must-take-india-as-it-is-jules-verne/</guid>
-      <description>I’ve gotten back to reading fiction ever since I got my netbook (review comin up!). Project Gutenberg has been very helpful. Jules Verne’s Adventures of a Special Correspondent was the first one I completed. It is a good book – but not phenomenal. It does have a few very good moments, and one of them hit extremely close to home.&#xA;Towards the end, when Claudius Bombarnac rumbles about how the Chinese do not make full use of the engine’s power – always keeping it running at 40 mph even though it could be pushed to do way more.</description>
+      <description>&lt;p&gt;I’ve gotten back to reading fiction ever since I got my netbook (review comin up!). &lt;a href=&#34;http://gutenberg.org&#34;&gt;Project Gutenberg&lt;/a&gt; has been very helpful. Jules Verne’s &lt;em&gt;Adventures of a Special Correspondent&lt;/em&gt; was the first one I completed. It is a good book – but not phenomenal. It does have a few very good moments, and one of them hit extremely close to home.&lt;/p&gt;&#xA;&lt;p&gt;Towards the end, when &lt;em&gt;Claudius Bombarnac&lt;/em&gt; rumbles about how the Chinese do not make full use of the engine’s power – always keeping it running at 40 mph even though it could be pushed to do way more.&lt;/p&gt;</description>
     </item>
     <item>
       <title>ICC Rules for Backyard Cricket</title>
       <link>https://words.yuvi.in/icc-rules-for-backyard-cricket/</link>
       <pubDate>Mon, 07 Sep 2009 18:42:42 +0000</pubDate>
       <guid>https://words.yuvi.in/icc-rules-for-backyard-cricket/</guid>
-      <description>ICC’s Code of Conduct for Backyard Cricket. We followed every single one of them religiously :)</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.cricket.mailliw.com/archives/2006/11/03/icc-release-code-of-conduct-for-backyard-cricket/&#34;&gt;ICC’s Code of Conduct for Backyard Cricket&lt;/a&gt;. We followed every single one of them religiously :)&lt;/p&gt;</description>
     </item>
     <item>
       <title>ABigger, binary heart</title>
       <link>https://words.yuvi.in/abigger-binary-heart/</link>
       <pubDate>Mon, 10 Aug 2009 23:25:38 +0000</pubDate>
       <guid>https://words.yuvi.in/abigger-binary-heart/</guid>
-      <description> </description>
+      <description>&lt;p style=&#34;overflow: auto; padding-right: 5px; width: 400px; height: 340px;&#34;&gt;&#xA;  &lt;a href=&#34;http://www.toondoo.com/View.toon?param=897627&#34;&gt;&lt;img src=&#34;http://static.toondoo.com/public/r/a/j/rajendran/toons/cool-cartoon-897627.png&#34; border=&#34;0&#34; alt=&#34;\Toon\&#34; title=&#34;\Toon\&#34; longdesc=&#34;\toon\&#34; /&gt;&lt;/a&gt;&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hello World, Again!</title>
       <link>https://words.yuvi.in/hello-world-again/</link>
       <pubDate>Sun, 28 Jun 2009 10:47:18 +0000</pubDate>
       <guid>https://words.yuvi.in/hello-world-again/</guid>
-      <description>I’m Yuvi. This is my second blog. My old one has been retired because, well, it’s old! It contained too much ranting. It has content from me since I was 14 – a lot of that is just plain stupid, and a few are even embarassingly inaccurate &amp;amp; naive. You can still possibly checkout the old blog – if I manage to get the content back :)&#xA;This new blog will be about me.</description>
+      <description>&lt;p&gt;I’m Yuvi. This is my second blog. My old one has been retired because, well, it’s old! It contained too much ranting. It has content from me since I was 14 – a lot of that is just plain stupid, and a few are even embarassingly inaccurate &amp;amp; naive. You can still possibly checkout the &lt;a href=&#34;http://blog.yuvisense.net&#34;&gt;old blog&lt;/a&gt; – if I manage to get the content back :)&lt;/p&gt;&#xA;&lt;p&gt;This new blog will be about me. My Code. .NET. Python. Mono. Maybe some Linux, and perhaps Ruby. My College. Human Stupidity. Fun. My Life. My Pictures. Possibly my Stories. Ofcourse, stuff too short for this will be over at &lt;a href=&#34;http://twitter.com/yuvipanda&#34;&gt;my twitterstream&lt;/a&gt; :)&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

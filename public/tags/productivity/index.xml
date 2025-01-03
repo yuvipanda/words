@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>productivity on Yuvi</title>
+    <title>Productivity on Yuvi</title>
     <link>https://words.yuvi.in/tags/productivity/</link>
-    <description>Recent content in productivity on Yuvi</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Productivity on Yuvi</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Tue, 26 May 2020 14:05:29 +0530</lastBuildDate>
     <atom:link href="https://words.yuvi.in/tags/productivity/index.xml" rel="self" type="application/rss+xml" />
@@ -13,21 +13,21 @@
       <link>https://words.yuvi.in/post/note-taking-why/</link>
       <pubDate>Tue, 26 May 2020 14:05:29 +0530</pubDate>
       <guid>https://words.yuvi.in/post/note-taking-why/</guid>
-      <description>Talking to Ankur Sethi made me think more clearly about why I want note-taking, bookmarking setups.&#xA;I am trying to stop feeling so overwhelmed by moving things out of my puny brain.&#xA;The solution to this is two fold.&#xA;Commit to and do fewer things. Already working on this. Be more efficient in the things you are doing. A few years ago I gave up on chasing efficiency gains because they were all so marginal (hello, maintaining a super customized .</description>
+      <description>&lt;p&gt;Talking to &lt;a href=&#34;https://ankursethi.in/&#34;&gt;Ankur Sethi&lt;/a&gt; made me think more clearly about &lt;strong&gt;why&lt;/strong&gt; I want &lt;a href=&#34;http://words.yuvi.in/post/note-taking-part-i/&#34;&gt;note-taking&lt;/a&gt;, &lt;a href=&#34;http://words.yuvi.in/post/note-taking-ii-bookmarks/&#34;&gt;bookmarking setups&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;I am &lt;strong&gt;trying to stop feeling so overwhelmed by moving things out of my puny brain&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The solution to this is two fold.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Commit to and do fewer things. Already working on this.&lt;/li&gt;&#xA;&lt;li&gt;Be more efficient in the things you are doing.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;A few years ago I gave up on chasing efficiency gains because they were all&#xA;so marginal (hello, maintaining a super customized &lt;code&gt;.vimrc&lt;/code&gt;). But I think I&#xA;threw out the baby with the bathwater there, by focusing on the wrong kinds&#xA;of efficiency. So am trying again!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Note Taking II - Retaining consumed content</title>
       <link>https://words.yuvi.in/post/note-taking-ii-bookmarks/</link>
       <pubDate>Sun, 24 May 2020 11:13:57 +0530</pubDate>
       <guid>https://words.yuvi.in/post/note-taking-ii-bookmarks/</guid>
-      <description>In conversation with Nirbheek about my blog post on note taking, he said something like &amp;lsquo;my system of knowledge has holes, and I lose track of stuff I learnt because of that&amp;rsquo;. This was slightly complementary to my earlier quest - the outliner helped me in structuring how I thought and produced content. However, a bookmarking system will help me consume and retain knowledge. Both need to be integrated, but I currently had only one half of the puzzle.</description>
+      <description>&lt;p&gt;In conversation with &lt;a href=&#34;https://nirbheek.in/&#34;&gt;Nirbheek&lt;/a&gt; about &lt;a href=&#34;http://words.yuvi.in/post/note-taking-part-i/&#34;&gt;my blog post on note taking&lt;/a&gt;, he said something like &amp;lsquo;my system of knowledge has holes, and I lose track of stuff I learnt because of that&amp;rsquo;. This was slightly complementary to my earlier quest - the outliner helped me in structuring how I thought and produced content. However, a bookmarking system will help me consume and &lt;strong&gt;retain&lt;/strong&gt; knowledge. Both need to be integrated, but I currently had only one half of the puzzle.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Note Taking Part I</title>
       <link>https://words.yuvi.in/post/note-taking-part-i/</link>
       <pubDate>Sun, 17 May 2020 13:59:46 +0530</pubDate>
       <guid>https://words.yuvi.in/post/note-taking-part-i/</guid>
-      <description>I am trying to find a nice way to keep thoughts, ideas and notes outside my head for a few months now. I worked my way through many applications, trying to use the system they promote as the basis for my own. Along the journey, I got a better sense of what was important to me in such an application. I&amp;rsquo;ll walk through the various applications I&amp;rsquo;ve tried, along with the criteria I&amp;rsquo;ve developed by the end</description>
+      <description>&lt;p&gt;I am trying to find a nice way to keep thoughts, ideas and notes outside my head for a few months now.&#xA;I worked my way through many applications, trying to use the system they promote as the basis for my own. Along the journey, I got a better sense of what was important to me in such an application. I&amp;rsquo;ll walk through the various applications I&amp;rsquo;ve tried, along with the criteria I&amp;rsquo;ve developed by the end&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
