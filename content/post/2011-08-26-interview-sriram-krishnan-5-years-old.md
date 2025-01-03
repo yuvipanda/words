@@ -4,6 +4,7 @@ author: yuvipanda
 type: post
 date: 2011-08-26T15:50:55+00:00
 url: /interview-sriram-krishnan-5-years-old/
+draft: true
 aktt_notify_twitter:
   - no
 dsq_thread_id:
