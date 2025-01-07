@@ -6,7 +6,7 @@ draft: false
 keywords: ["community"]
 ---
 
-[Jeff Nippard](https://jeffnippard.com/) (the science communicator you watch if you can't decide if you should spend your evening scientific papers *or* go to the gym) wrote [a beautiful post](https://www.youtube.com/post/Ugkx7vhxRmNQgZaS6CKAOC-TRAgou7aALrv3) recently about handling harassment and bullying at Gyms. One part that really stuck out to me was:
+[Jeff Nippard](https://jeffnippard.com/) (the science communicator you [watch](https://www.youtube.com/@JeffNippard) if you want to spend your evening reading scientific papers **and** going to the gym) wrote [a beautiful post](https://www.youtube.com/post/Ugkx7vhxRmNQgZaS6CKAOC-TRAgou7aALrv3) recently about handling harassment and bullying at Gyms. One part that really stuck out to me was:
 
 > Also, every gym has at least one “big [person]”. Almost every big [person] I know is a good person. I’m sure big [person] already all know this, but people find you intimidating. Even a simple smile toward new members can do a LOT.
 
