@@ -13,7 +13,7 @@ During the JupyterHub leadership meeting (North America) of June 2025, the break
 
 ![image](/images/what-is-jupyterhub.png)
 
-This document is Yuvi's interpretation of one of the technosocial changes required to achieve this aspiration. It's also heavily influenced by prior conversations with MinRK, Carol Willing, Ryan Lovett, Carl Boettiger, Rick Wagner, Sanjay Bhangar and Tarashish Mishra.
+This document is Yuvi's interpretation of one of the technosocial changes required to achieve this aspiration. It's also heavily influenced by prior conversations with MinRK, Carol Willing, Ryan Lovett, Carl Boettiger, Rick Wagner, Sanjay Bhangar and Tarashish Mishra, as well as the experiences of the [2i2c Team](https://2i2c.org/) in managing a lot of user images.
 
 ## Essential Complexities
 
